@@ -1,0 +1,20 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CORSConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CORSRule">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="ID"/>
+              <xs:element type="xs:anyURI" name="AllowedOrigin"/>
+              <xs:element type="xs:string" name="AllowedMethod"/>
+              <xs:element type="xs:short" name="MaxAgeSeconds"/>
+              <xs:element type="xs:string" name="ExposeHeader"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

@@ -1,0 +1,28 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DeleteResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Deleted">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Key"/>
+              <xs:element type="xs:string" name="VersionId"/>
+              <xs:element type="xs:boolean" name="DeleteMarker"/>
+              <xs:element type="xs:string" name="DeleteMarkerVersionId"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Error">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Key"/>
+              <xs:element type="xs:string" name="VersionId"/>
+              <xs:element type="xs:string" name="Code"/>
+              <xs:element type="xs:string" name="Message"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+  <xsd:element name="ListPartsResult">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Bucket" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="Key" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="UploadId" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="Initiator" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="ID" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="DisplayName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Owner" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="ID" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="DisplayName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="StorageClass" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="PartNumberMarker" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="NextPartNumberMarker" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="MaxParts" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="IsTruncated" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+        <xsd:element name="Part" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="PartNumber" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="LastModified" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="ETag" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="Size" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

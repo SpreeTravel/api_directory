@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Delete>
+    <Quiet>true</Quiet>
+    <Object>
+         <Key>sample1.txt</Key>
+         <VersionId>1.2</VersionId>
+    </Object>
+    <Object>
+         <Key>sample2.txt</Key>
+         <VersionId>2.4</VersionId>
+    </Object>
+</Delete>

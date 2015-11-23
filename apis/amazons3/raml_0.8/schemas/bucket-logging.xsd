@@ -1,0 +1,48 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://doc.s3.amazonaws.com/2006-03-01" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://doc.s3.amazonaws.com/2006-03-01">
+  <xs:element name="BucketLoggingStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="LoggingEnabled">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="TargetBucket"/>
+              <xs:element type="xs:string" name="TargetPrefix"/>
+              <xs:element name="TargetGrants">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Grant">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Grantee" type="GranteeType" form="qualified">
+                          </xs:element>
+                          <xs:element type="xs:string" name="Permission"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="GranteeType" abstract="true" xmlns="http://doc.s3.amazonaws.com/2006-03-01">
+    <xs:sequence>
+      <xs:element type="xs:string" name="EmailAddress"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="AmazonCustomerByEmail">
+  	<xs:complexContent>
+  	  <xs:restriction base="GranteeType">
+  		<xs:sequence>
+  	      <xs:element type="xs:string" name="EmailAddress">
+  	      </xs:element>
+  	    </xs:sequence>
+  	  </xs:restriction>
+  	</xs:complexContent>
+  </xs:complexType>
+</xs:schema>

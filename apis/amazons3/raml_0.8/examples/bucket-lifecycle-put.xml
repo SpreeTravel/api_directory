@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LifecycleConfiguration>
+  <Rule>
+    <ID>archive-objects-glacier-immediately-upon-creation</ID>
+    <Prefix>glacierobjects/</Prefix>
+    <Status>Enabled</Status>
+    <Transition>
+      <Days>0</Days>
+      <StorageClass>GLACIER</StorageClass>
+    </Transition>
+  </Rule>
+</LifecycleConfiguration>

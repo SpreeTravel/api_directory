@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="CompleteMultipartUpload">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Part" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="PartNumber" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="ETag" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

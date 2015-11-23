@@ -1,0 +1,245 @@
+#%RAML 0.8
+---
+usage: |
+  Use this type for working with object's operations.
+description: |
+  This is extented resource type for resources involved in operation with object.
+  Inherits base resource and contains additonal headers
+type: baseResource
+get?:
+  headers: &commonHeaders
+    Range:
+      description: |
+        Downloads the specified range bytes of an object.
+      type: string
+    If-Modified-Since:
+      description: |
+        Return the object only if it has been modified since the specified time, otherwise return a 304 (not modified).
+      type: string
+    If-Unmodified-Since:
+      description: |
+        Return the object only if it has not been modified since the specified time, otherwise return a 412 (precondition failed).
+      type: string
+    If-Match:
+      description: |
+        Return the object only if its entity tag (ETag) is the same as the one specified, otherwise return a 412 (precondition failed).
+      type: string
+    If-None-Match:
+      description: |
+        Return the object only if its entity tag (ETag) is different from the one specified, otherwise return a 304 (not modified).
+      type: string
+  # responses:
+  #   headers:
+  #     x-amz-expiration:
+  #       description: |
+  #         If the object expiration is configured (see PUT Bucket lifecycle), the response includes this header.
+  #         It includes the expiry-date and rule-id key value pairs providing object expiration information.
+  #         The value of the rule-id is URL encoded.
+  #       type: string
+  #     x-amz-server-side-encryption:
+  #       description: |
+  #         If the object is stored using server-side encryption, response includes this header with value of the
+  #         encryption algorithm used.
+  #       type: string
+  #       enum: [AES256]
+  #     x-amz-restore:
+  #       description: |
+  #         Provides information about object restoration operation and expiration time of the restored object copy.
+  #       type: string
+  #     x-amz-website-redirect-location:
+  #       description: |
+  #         When a bucket is configured as a website, you can set this metadata on the object so the website endpoint will
+  #         evaluate the request for the object as a 301 redirect to another object in the same bucket or an external URL.
+  #       type: string
+put?:
+  headers:
+    Cache-Control:
+      description: |
+        Can be used to specify caching behavior along the request/reply chain
+      type: string
+    Content-Disposition:
+      description: |
+        Specifies presentational information for the object.
+      type: string
+    Content-Encoding:
+      description: |
+        Specifies what content encodings have been applied to the object and
+        thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field.
+      type: string
+    Content-Length:
+      description: |
+        The size of the object, in bytes.
+      type: string
+    Content-MD5:
+      description: |
+        The base64-encoded 128-bit MD5 digest of the message (without the headers) according to RFC 1864. This header can be
+        used as a message integrity check to verify that the data is the same data that was originally sent. Although it is optional,
+        we recommend using the Content-MD5 mechanism as an end-to-end integrity check.
+      type: string
+    Expires:
+      description: |
+        The date and time at which the object is no longer cacheable.
+      type: string
+    x-amz-meta-{*}:
+      description: |
+        Any header starting with this prefix is considered user metadata. It will be stored with the object and returned when you
+        retrieve the object. The PUT request header is limited to 8 KB in size. Within the PUT request header, the user-defined
+        metadata is limited to 2 KB in size. User-defined metadata is a set of key-value pairs. The size of user-defined metadata
+        is measured by taking the sum of the number of bytes in the UTF-8 encoding of each key and value.
+      type: string
+    x-amz-server-side-encryption:
+      description: |
+        Specifies a server-side encryption algorithm to use when Amazon S3 creates an object.
+      type: string
+      enum: [AES256]
+    x-amz-storage-class:
+      description: |
+        RRS enables customers to reduce their costs by storing non-critical, reproducible data at lower levels of redundancy
+        than Amazon S3's standard storage.
+      type: string
+      enum: [STANDARD, REDUCED_REDUNDANCY]
+      default: STANDARD
+    x-amz-website-redirect-location:
+      description: |
+        If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an
+        external URL. Amazon S3 stores the value of this header in the object metadata.
+      type: string
+      pattern: ^(https?://|/).*$
+      maxLength: 2042
+  # responses:
+  #   headers:
+  #     x-amz-expiration:
+  #       description: |
+  #         If the object expiration is configured (see PUT Bucket lifecycle), the response includes this header.
+  #         It includes the expiry-date and rule-id key value pairs providing object expiration information.
+  #         The value of the rule-id is URL encoded.
+  #       type: string
+  #     x-amz-server-side-encryption:
+  #       description: |
+  #         If the object is stored using server-side encryption, response includes this header with value of the
+  #         encryption algorithm used.
+  #       type: string
+  #       enum: [AES256]
+  #     x-amz-version-id:
+  #       description: |
+  #         Version of the object.
+  #       type: string
+delete?:
+  headers:
+    x-amz-mfa:
+      description: |
+        The value is the concatenation of the authentication device's serial number, a space, and the value displayed on your authentication device.
+        Condition: Required to configure the versioning state if versioning is configured with MFA Delete enabled.
+      type: string
+      # TODO: currently there is no ability implement condition from description
+head?:
+  headers: *commonHeaders
+  # responses:
+  #   headers:
+  #     x-amz-expiration:
+  #       description: |
+  #         If the object expiration is configured (see PUT Bucket lifecycle), the response includes this header.
+  #         It includes the expiry-date and rule-id key value pairs providing object expiration information.
+  #         The value of the rule-id is URL encoded.
+  #       type: string
+  #     x-amz-missing-meta:
+  #       description: |
+  #         This header is set to the number of metadata entries that were not returned in x-amz-meta headers.
+  #         This can happen if you create metadata using an API like SOAP that supports more flexible metadata than the REST API.
+  #         For example, with SOAP, you can create metadata with values that are not valid HTTP headers.
+  #       type: string
+  #     x-amz-restore:
+  #       description: |
+  #         If the object is an archived object (an object whose storage class is Glacier), the response includes this header if either
+  #         the archive restoration is in progress (see POST Object restore) or an archive copy is already restored.
+
+  #         If an archive copy is already restored, the header value indicates when Amazon S3 is scheduled to delete the object copy. For example,
+  #         x-amz-restore: ongoing-request="false", expiry-date="Fri, 23 Dec 2012 00:00:00 GMT"
+
+  #         If the object restoration is in progress, the header will return value ongoing-request="true".
+  #       type: string
+  #     x-amz-server-side-encryption:
+  #       description: |
+  #         If the object is stored using server-side encryption, response includes this header with value of the
+  #         encryption algorithm used.
+  #       type: string
+  #       enum: [AES256]
+  #     x-amz-version-id:
+  #       description: |
+  #         Version of the object.
+  #       type: string
+  #     x-amz-meta-{*}:
+  #       description: |
+  #         If you supplied user metadata in a PUT object operation, that metadata is returned in one or more response headers prefixed
+  #         with x-amz-meta- and with the suffix name that you provided on storage. For example, for family, the response header would
+  #         be x-amz-meta-family. Amazon S3 returns this metadata verbatim; Amazon S3 does not interpret it.
+  #       type: string
+
+options?:
+  headers:
+    Origin:
+      description: |
+        Identifies the origin of the cross-origin request to Amazon S3.
+      type: string
+      required: true
+      example: http://www.example.com
+    Access-Control-Request-Method:
+      description: |
+        Identifies what HTTP method will be used in the actual request.
+      type: string
+    Access-Control-Request-Headers:
+      description: |
+        A comma-delimited list of HTTP headers that will be sent in the actual request.
+        For example, to put an object with server-side encryption, this preflight request will determine if it can include the
+        x-amz-server-side-encryption header with the request.
+      type: string
+  # responses:
+  #   headers:
+  #     Access-Control-Allow-Origin:
+  #       description: |
+  #         The origin you sent in your request. If the origin in your request is not allowed, Amazon S3 will not include this
+  #         header in the response.
+  #       type: string
+  #     Access-Control-Max-Age:
+  #       description: |
+  #         How long, in seconds, the results of the preflight request can be cached.
+  #       type: string
+  #     Access-Control-Allow-Methods:
+  #       description: |
+  #         The HTTP method that was sent in the original request. If the method in the request is not allowed, Amazon S3 will no
+  #         include this header in the response.
+  #       type: string
+  #     Access-Control-Allow-Headers:
+  #       description: |
+  #         A comma-delimited list of HTTP headers that the browser can send in the actual request. If any of the requested headers is
+  #         not allowed, Amazon S3 will not include that header in the response, nor will the response contain any of the headers with
+  #         the Access-Control prefix.
+  #       type: string
+  #     Access-Control-Expose-Headers:
+  #       description: |
+  #         A comma-delimited list of HTTP headers. This header provides the JavaScript client with access to these headers in the
+  #         response to the actual request.
+  #       type: string
+post?:
+  # responses:
+  #   headers:
+  #     x-amz-expiration:
+  #       description: |
+  #         If the object expiration is configured (see PUT Bucket lifecycle), the response includes this header.
+  #         It includes the expiry-date and rule-id key value pairs providing object expiration information.
+  #         The value of the rule-id is URL encoded.
+  #       type: string
+  #     x-amz-server-side-encryption:
+  #       description: |
+  #         If the object is stored using server-side encryption, response includes this header with value of the
+  #         encryption algorithm used.
+  #       type: string
+  #       enum: [AES256]
+  #     x-amz-version-id:
+  #       description: |
+  #         Version of the object.
+  #       type: string
+  #     success_action_redirect:
+  #       description: |
+  #           The URL to which the client is redirected on successful upload.
+  #       type: string

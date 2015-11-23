@@ -1,0 +1,39 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AccessControlPolicy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Owner">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="ID"/>
+              <xs:element type="xs:string" name="DisplayName"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AccessControlList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Grant" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Grantee">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="ID" minOccurs="0"/>
+                          <xs:element type="xs:string" name="DisplayName" minOccurs="0"/>
+                          <xs:element type="xs:anyURI" name="URI" minOccurs="0"/>
+                          <xs:element type="xs:string" name="EmailAddress" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="Permission"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

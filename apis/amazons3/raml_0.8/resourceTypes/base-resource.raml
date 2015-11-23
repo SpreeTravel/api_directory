@@ -1,0 +1,742 @@
+#%RAML 0.8
+---
+usage: |
+  All Amazon resources should use i
+description: |
+  This is base resource type described common request and response headers and error response codes
+get?: &common
+  headers:
+    Content-Type:
+      description: |
+        The content type of the resource in case the request content in the body. Example: text/plain
+      type: string
+    Expect:
+      description: |
+        When your application uses 100-continue, it does not send the request body until it receives an acknowledgment.
+        If the message is rejected based on the headers, the body of the message is not sent.
+        This header can be used only if you are sending a body.
+      type: string
+      enum: [100-continue]
+    Host:
+      description: |
+        For path-style requests, the value is s3.amazonaws.com.
+        For virtual-style requests, the value is BucketName.s3.amazonaws.com.
+        This header is required for HTTP 1.1 (most toolkits add this header automatically); optional for HTTP/1.0 requests.
+      type: string
+    x-amz-security-token:
+      description: |
+        This header can be used in the following scenarios:
+        * Provide security tokens for Amazon DevPay operations. Each request that uses Amazon DevPay
+          requires two x-amz-security-token headers: one for the product token and one for the user token.
+          When Amazon S3 receives an authenticated request, it compares the computed signature with the provided signature.
+          Improperly formatted multi-value headers used to calculate a signature can cause authentication issues
+        * Provide security token when using temporary security credentials. When making requests using temporary security
+          credentials you obtained from IAM you must provide a security token using this header.
+        This header is required for requests that use Amazon DevPay and requests that are signed using temporary
+        security credentials.
+      type: string
+  responses:
+    200: &commonResponseHeaders
+      headers:
+        Content-Length:
+          description: |
+            The length in bytes of the body in the response.
+          type: string
+        Connection:
+          description: |
+            specifies whether the connection to the server is open or closed.
+          type: string
+          enum: [open, close]
+        Date:
+          description: |
+            The date and time Amazon S3 responded, for example, Wed, 01 Mar 2009 12:00:00 GMT.
+          type: string
+        ETag:
+          description: |
+            The entity tag is a hash of the object. The ETag only reflects changes to the contents of an
+            object, not its metadata. The ETag is determined when an object is created.
+            For objects created by the PUT Object operation and the POST Object operation, the ETag is a quoted,
+            32-digit hexadecimal string representing the MD5 digest of the object data.
+            For other objects, the ETag may or may not be an MD5 digest of the object data. If the ETag is not an MD5
+            digest of the object data, it will contain one or more non-hexadecimal characters and/or will consis
+            of less than 32 or more than 32 hexadecimal digits.
+          type: string
+        Server:
+          description: |
+            The name of the server that created the response
+          type: string
+          default: AmazonS3
+        x-amz-delete-marker:
+          description: |
+            Specifies whether the object returned was (true) or was not (false) a Delete Marker.
+          type: boolean
+          default: false
+        x-amz-id-2:
+          description: |
+            A special token that helps AWS troubleshoot problems.
+          type: string
+        x-amz-request-id:
+          description: |
+            A value created by Amazon S3 that uniquely identifies the request. In the unlikely event that you have problems with Amazon S3,
+            AWS can use this value to troubleshoot the problem.
+          type: string
+        x-amz-version-id:
+          description: |
+            The version of the object. When you enable versioning, Amazon S3 generates a random number for objects added to a bucket.
+            The value is UTF-8 encoded and URL ready. When you PUT an object in a bucket where versioning has been suspended,
+            the version ID is always null.
+          type: string
+    204: *commonResponseHeaders
+    301:
+      headers:
+        Content-Length:
+          description: |
+            The length in bytes of the body in the response.
+          type: string
+        Connection:
+          description: |
+            specifies whether the connection to the server is open or closed.
+          type: string
+          enum: [open, close]
+        Date:
+          description: |
+            The date and time Amazon S3 responded, for example, Wed, 01 Mar 2009 12:00:00 GMT.
+          type: string
+        ETag:
+          description: |
+            The entity tag is a hash of the object. The ETag only reflects changes to the contents of an
+            object, not its metadata. The ETag is determined when an object is created.
+            For objects created by the PUT Object operation and the POST Object operation, the ETag is a quoted,
+            32-digit hexadecimal string representing the MD5 digest of the object data.
+            For other objects, the ETag may or may not be an MD5 digest of the object data. If the ETag is not an MD5
+            digest of the object data, it will contain one or more non-hexadecimal characters and/or will consis
+            of less than 32 or more than 32 hexadecimal digits.
+          type: string
+        Server:
+          description: |
+            The name of the server that created the response
+          type: string
+          default: AmazonS3
+        x-amz-delete-marker:
+          description: |
+            Specifies whether the object returned was (true) or was not (false) a Delete Marker.
+          type: boolean
+          default: false
+        x-amz-id-2:
+          description: |
+            A special token that helps AWS troubleshoot problems.
+          type: string
+        x-amz-request-id:
+          description: |
+            A value created by Amazon S3 that uniquely identifies the request. In the unlikely event that you have problems with Amazon S3,
+            AWS can use this value to troubleshoot the problem.
+          type: string
+        x-amz-version-id:
+          description: |
+            The version of the object. When you enable versioning, Amazon S3 generates a random number for objects added to a bucket.
+            The value is UTF-8 encoded and URL ready. When you PUT an object in a bucket where versioning has been suspended,
+            the version ID is always null.
+          type: string
+      description: |
+        Moved Permanently, see error code on http://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html
+      body:
+        schema: !include ../schemas/error.xsd
+    307:
+      headers:
+        Content-Length:
+          description: |
+            The length in bytes of the body in the response.
+          type: string
+        Connection:
+          description: |
+            specifies whether the connection to the server is open or closed.
+          type: string
+          enum: [open, close]
+        Date:
+          description: |
+            The date and time Amazon S3 responded, for example, Wed, 01 Mar 2009 12:00:00 GMT.
+          type: string
+        ETag:
+          description: |
+            The entity tag is a hash of the object. The ETag only reflects changes to the contents of an
+            object, not its metadata. The ETag is determined when an object is created.
+            For objects created by the PUT Object operation and the POST Object operation, the ETag is a quoted,
+            32-digit hexadecimal string representing the MD5 digest of the object data.
+            For other objects, the ETag may or may not be an MD5 digest of the object data. If the ETag is not an MD5
+            digest of the object data, it will contain one or more non-hexadecimal characters and/or will consis
+            of less than 32 or more than 32 hexadecimal digits.
+          type: string
+        Server:
+          description: |
+            The name of the server that created the response
+          type: string
+          default: AmazonS3
+        x-amz-delete-marker:
+          description: |
+            Specifies whether the object returned was (true) or was not (false) a Delete Marker.
+          type: boolean
+          default: false
+        x-amz-id-2:
+          description: |
+            A special token that helps AWS troubleshoot problems.
+          type: string
+        x-amz-request-id:
+          description: |
+            A value created by Amazon S3 that uniquely identifies the request. In the unlikely event that you have problems with Amazon S3,
+            AWS can use this value to troubleshoot the problem.
+          type: string
+        x-amz-version-id:
+          description: |
+            The version of the object. When you enable versioning, Amazon S3 generates a random number for objects added to a bucket.
+            The value is UTF-8 encoded and URL ready. When you PUT an object in a bucket where versioning has been suspended,
+            the version ID is always null.
+          type: string
+      description: |
+        Moved Temporarily, see error code on http://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html
+      body:
+        schema: !include ../schemas/error.xsd
+    400:
+      headers:
+        Content-Length:
+          description: |
+            The length in bytes of the body in the response.
+          type: string
+        Connection:
+          description: |
+            specifies whether the connection to the server is open or closed.
+          type: string
+          enum: [open, close]
+        Date:
+          description: |
+            The date and time Amazon S3 responded, for example, Wed, 01 Mar 2009 12:00:00 GMT.
+          type: string
+        ETag:
+          description: |
+            The entity tag is a hash of the object. The ETag only reflects changes to the contents of an
+            object, not its metadata. The ETag is determined when an object is created.
+            For objects created by the PUT Object operation and the POST Object operation, the ETag is a quoted,
+            32-digit hexadecimal string representing the MD5 digest of the object data.
+            For other objects, the ETag may or may not be an MD5 digest of the object data. If the ETag is not an MD5
+            digest of the object data, it will contain one or more non-hexadecimal characters and/or will consis
+            of less than 32 or more than 32 hexadecimal digits.
+          type: string
+        Server:
+          description: |
+            The name of the server that created the response
+          type: string
+          default: AmazonS3
+        x-amz-delete-marker:
+          description: |
+            Specifies whether the object returned was (true) or was not (false) a Delete Marker.
+          type: boolean
+          default: false
+        x-amz-id-2:
+          description: |
+            A special token that helps AWS troubleshoot problems.
+          type: string
+        x-amz-request-id:
+          description: |
+            A value created by Amazon S3 that uniquely identifies the request. In the unlikely event that you have problems with Amazon S3,
+            AWS can use this value to troubleshoot the problem.
+          type: string
+        x-amz-version-id:
+          description: |
+            The version of the object. When you enable versioning, Amazon S3 generates a random number for objects added to a bucket.
+            The value is UTF-8 encoded and URL ready. When you PUT an object in a bucket where versioning has been suspended,
+            the version ID is always null.
+          type: string
+      description: |
+        Bad Request, see error code on http://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html
+      body:
+        schema: !include ../schemas/error.xsd
+    403:
+      headers:
+        Content-Length:
+          description: |
+            The length in bytes of the body in the response.
+          type: string
+        Connection:
+          description: |
+            specifies whether the connection to the server is open or closed.
+          type: string
+          enum: [open, close]
+        Date:
+          description: |
+            The date and time Amazon S3 responded, for example, Wed, 01 Mar 2009 12:00:00 GMT.
+          type: string
+        ETag:
+          description: |
+            The entity tag is a hash of the object. The ETag only reflects changes to the contents of an
+            object, not its metadata. The ETag is determined when an object is created.
+            For objects created by the PUT Object operation and the POST Object operation, the ETag is a quoted,
+            32-digit hexadecimal string representing the MD5 digest of the object data.
+            For other objects, the ETag may or may not be an MD5 digest of the object data. If the ETag is not an MD5
+            digest of the object data, it will contain one or more non-hexadecimal characters and/or will consis
+            of less than 32 or more than 32 hexadecimal digits.
+          type: string
+        Server:
+          description: |
+            The name of the server that created the response
+          type: string
+          default: AmazonS3
+        x-amz-delete-marker:
+          description: |
+            Specifies whether the object returned was (true) or was not (false) a Delete Marker.
+          type: boolean
+          default: false
+        x-amz-id-2:
+          description: |
+            A special token that helps AWS troubleshoot problems.
+          type: string
+        x-amz-request-id:
+          description: |
+            A value created by Amazon S3 that uniquely identifies the request. In the unlikely event that you have problems with Amazon S3,
+            AWS can use this value to troubleshoot the problem.
+          type: string
+        x-amz-version-id:
+          description: |
+            The version of the object. When you enable versioning, Amazon S3 generates a random number for objects added to a bucket.
+            The value is UTF-8 encoded and URL ready. When you PUT an object in a bucket where versioning has been suspended,
+            the version ID is always null.
+          type: string
+      description: |
+        Forbidden, see error code on http://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html
+      body:
+        schema: !include ../schemas/error.xsd
+    404:
+      headers:
+        Content-Length:
+          description: |
+            The length in bytes of the body in the response.
+          type: string
+        Connection:
+          description: |
+            specifies whether the connection to the server is open or closed.
+          type: string
+          enum: [open, close]
+        Date:
+          description: |
+            The date and time Amazon S3 responded, for example, Wed, 01 Mar 2009 12:00:00 GMT.
+          type: string
+        ETag:
+          description: |
+            The entity tag is a hash of the object. The ETag only reflects changes to the contents of an
+            object, not its metadata. The ETag is determined when an object is created.
+            For objects created by the PUT Object operation and the POST Object operation, the ETag is a quoted,
+            32-digit hexadecimal string representing the MD5 digest of the object data.
+            For other objects, the ETag may or may not be an MD5 digest of the object data. If the ETag is not an MD5
+            digest of the object data, it will contain one or more non-hexadecimal characters and/or will consis
+            of less than 32 or more than 32 hexadecimal digits.
+          type: string
+        Server:
+          description: |
+            The name of the server that created the response
+          type: string
+          default: AmazonS3
+        x-amz-delete-marker:
+          description: |
+            Specifies whether the object returned was (true) or was not (false) a Delete Marker.
+          type: boolean
+          default: false
+        x-amz-id-2:
+          description: |
+            A special token that helps AWS troubleshoot problems.
+          type: string
+        x-amz-request-id:
+          description: |
+            A value created by Amazon S3 that uniquely identifies the request. In the unlikely event that you have problems with Amazon S3,
+            AWS can use this value to troubleshoot the problem.
+          type: string
+        x-amz-version-id:
+          description: |
+            The version of the object. When you enable versioning, Amazon S3 generates a random number for objects added to a bucket.
+            The value is UTF-8 encoded and URL ready. When you PUT an object in a bucket where versioning has been suspended,
+            the version ID is always null.
+          type: string
+      description: |
+        Not Found, see error code on http://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html
+      body:
+        schema: !include ../schemas/error.xsd
+    405:
+      headers:
+        Content-Length:
+          description: |
+            The length in bytes of the body in the response.
+          type: string
+        Connection:
+          description: |
+            specifies whether the connection to the server is open or closed.
+          type: string
+          enum: [open, close]
+        Date:
+          description: |
+            The date and time Amazon S3 responded, for example, Wed, 01 Mar 2009 12:00:00 GMT.
+          type: string
+        ETag:
+          description: |
+            The entity tag is a hash of the object. The ETag only reflects changes to the contents of an
+            object, not its metadata. The ETag is determined when an object is created.
+            For objects created by the PUT Object operation and the POST Object operation, the ETag is a quoted,
+            32-digit hexadecimal string representing the MD5 digest of the object data.
+            For other objects, the ETag may or may not be an MD5 digest of the object data. If the ETag is not an MD5
+            digest of the object data, it will contain one or more non-hexadecimal characters and/or will consis
+            of less than 32 or more than 32 hexadecimal digits.
+          type: string
+        Server:
+          description: |
+            The name of the server that created the response
+          type: string
+          default: AmazonS3
+        x-amz-delete-marker:
+          description: |
+            Specifies whether the object returned was (true) or was not (false) a Delete Marker.
+          type: boolean
+          default: false
+        x-amz-id-2:
+          description: |
+            A special token that helps AWS troubleshoot problems.
+          type: string
+        x-amz-request-id:
+          description: |
+            A value created by Amazon S3 that uniquely identifies the request. In the unlikely event that you have problems with Amazon S3,
+            AWS can use this value to troubleshoot the problem.
+          type: string
+        x-amz-version-id:
+          description: |
+            The version of the object. When you enable versioning, Amazon S3 generates a random number for objects added to a bucket.
+            The value is UTF-8 encoded and URL ready. When you PUT an object in a bucket where versioning has been suspended,
+            the version ID is always null.
+          type: string
+      description: |
+        Method Not Allowed, see error code on http://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html
+      body:
+        schema: !include ../schemas/error.xsd
+    409:
+      headers:
+        Content-Length:
+          description: |
+            The length in bytes of the body in the response.
+          type: string
+        Connection:
+          description: |
+            specifies whether the connection to the server is open or closed.
+          type: string
+          enum: [open, close]
+        Date:
+          description: |
+            The date and time Amazon S3 responded, for example, Wed, 01 Mar 2009 12:00:00 GMT.
+          type: string
+        ETag:
+          description: |
+            The entity tag is a hash of the object. The ETag only reflects changes to the contents of an
+            object, not its metadata. The ETag is determined when an object is created.
+            For objects created by the PUT Object operation and the POST Object operation, the ETag is a quoted,
+            32-digit hexadecimal string representing the MD5 digest of the object data.
+            For other objects, the ETag may or may not be an MD5 digest of the object data. If the ETag is not an MD5
+            digest of the object data, it will contain one or more non-hexadecimal characters and/or will consis
+            of less than 32 or more than 32 hexadecimal digits.
+          type: string
+        Server:
+          description: |
+            The name of the server that created the response
+          type: string
+          default: AmazonS3
+        x-amz-delete-marker:
+          description: |
+            Specifies whether the object returned was (true) or was not (false) a Delete Marker.
+          type: boolean
+          default: false
+        x-amz-id-2:
+          description: |
+            A special token that helps AWS troubleshoot problems.
+          type: string
+        x-amz-request-id:
+          description: |
+            A value created by Amazon S3 that uniquely identifies the request. In the unlikely event that you have problems with Amazon S3,
+            AWS can use this value to troubleshoot the problem.
+          type: string
+        x-amz-version-id:
+          description: |
+            The version of the object. When you enable versioning, Amazon S3 generates a random number for objects added to a bucket.
+            The value is UTF-8 encoded and URL ready. When you PUT an object in a bucket where versioning has been suspended,
+            the version ID is always null.
+          type: string
+      description: |
+        Conflict, see error code on http://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html
+      body:
+        schema: !include ../schemas/error.xsd
+    411:
+      headers:
+        Content-Length:
+          description: |
+            The length in bytes of the body in the response.
+          type: string
+        Connection:
+          description: |
+            specifies whether the connection to the server is open or closed.
+          type: string
+          enum: [open, close]
+        Date:
+          description: |
+            The date and time Amazon S3 responded, for example, Wed, 01 Mar 2009 12:00:00 GMT.
+          type: string
+        ETag:
+          description: |
+            The entity tag is a hash of the object. The ETag only reflects changes to the contents of an
+            object, not its metadata. The ETag is determined when an object is created.
+            For objects created by the PUT Object operation and the POST Object operation, the ETag is a quoted,
+            32-digit hexadecimal string representing the MD5 digest of the object data.
+            For other objects, the ETag may or may not be an MD5 digest of the object data. If the ETag is not an MD5
+            digest of the object data, it will contain one or more non-hexadecimal characters and/or will consis
+            of less than 32 or more than 32 hexadecimal digits.
+          type: string
+        Server:
+          description: |
+            The name of the server that created the response
+          type: string
+          default: AmazonS3
+        x-amz-delete-marker:
+          description: |
+            Specifies whether the object returned was (true) or was not (false) a Delete Marker.
+          type: boolean
+          default: false
+        x-amz-id-2:
+          description: |
+            A special token that helps AWS troubleshoot problems.
+          type: string
+        x-amz-request-id:
+          description: |
+            A value created by Amazon S3 that uniquely identifies the request. In the unlikely event that you have problems with Amazon S3,
+            AWS can use this value to troubleshoot the problem.
+          type: string
+        x-amz-version-id:
+          description: |
+            The version of the object. When you enable versioning, Amazon S3 generates a random number for objects added to a bucket.
+            The value is UTF-8 encoded and URL ready. When you PUT an object in a bucket where versioning has been suspended,
+            the version ID is always null.
+          type: string
+      description: |
+        Length Required, see error code on http://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html
+      body:
+        schema: !include ../schemas/error.xsd
+    416:
+      headers:
+        Content-Length:
+          description: |
+            The length in bytes of the body in the response.
+          type: string
+        Connection:
+          description: |
+            specifies whether the connection to the server is open or closed.
+          type: string
+          enum: [open, close]
+        Date:
+          description: |
+            The date and time Amazon S3 responded, for example, Wed, 01 Mar 2009 12:00:00 GMT.
+          type: string
+        ETag:
+          description: |
+            The entity tag is a hash of the object. The ETag only reflects changes to the contents of an
+            object, not its metadata. The ETag is determined when an object is created.
+            For objects created by the PUT Object operation and the POST Object operation, the ETag is a quoted,
+            32-digit hexadecimal string representing the MD5 digest of the object data.
+            For other objects, the ETag may or may not be an MD5 digest of the object data. If the ETag is not an MD5
+            digest of the object data, it will contain one or more non-hexadecimal characters and/or will consis
+            of less than 32 or more than 32 hexadecimal digits.
+          type: string
+        Server:
+          description: |
+            The name of the server that created the response
+          type: string
+          default: AmazonS3
+        x-amz-delete-marker:
+          description: |
+            Specifies whether the object returned was (true) or was not (false) a Delete Marker.
+          type: boolean
+          default: false
+        x-amz-id-2:
+          description: |
+            A special token that helps AWS troubleshoot problems.
+          type: string
+        x-amz-request-id:
+          description: |
+            A value created by Amazon S3 that uniquely identifies the request. In the unlikely event that you have problems with Amazon S3,
+            AWS can use this value to troubleshoot the problem.
+          type: string
+        x-amz-version-id:
+          description: |
+            The version of the object. When you enable versioning, Amazon S3 generates a random number for objects added to a bucket.
+            The value is UTF-8 encoded and URL ready. When you PUT an object in a bucket where versioning has been suspended,
+            the version ID is always null.
+          type: string
+      description: |
+        Requested Range Not Satisfiable, see error code on http://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html
+      body:
+        schema: !include ../schemas/error.xsd
+    500:
+      headers:
+        Content-Length:
+          description: |
+            The length in bytes of the body in the response.
+          type: string
+        Connection:
+          description: |
+            specifies whether the connection to the server is open or closed.
+          type: string
+          enum: [open, close]
+        Date:
+          description: |
+            The date and time Amazon S3 responded, for example, Wed, 01 Mar 2009 12:00:00 GMT.
+          type: string
+        ETag:
+          description: |
+            The entity tag is a hash of the object. The ETag only reflects changes to the contents of an
+            object, not its metadata. The ETag is determined when an object is created.
+            For objects created by the PUT Object operation and the POST Object operation, the ETag is a quoted,
+            32-digit hexadecimal string representing the MD5 digest of the object data.
+            For other objects, the ETag may or may not be an MD5 digest of the object data. If the ETag is not an MD5
+            digest of the object data, it will contain one or more non-hexadecimal characters and/or will consis
+            of less than 32 or more than 32 hexadecimal digits.
+          type: string
+        Server:
+          description: |
+            The name of the server that created the response
+          type: string
+          default: AmazonS3
+        x-amz-delete-marker:
+          description: |
+            Specifies whether the object returned was (true) or was not (false) a Delete Marker.
+          type: boolean
+          default: false
+        x-amz-id-2:
+          description: |
+            A special token that helps AWS troubleshoot problems.
+          type: string
+        x-amz-request-id:
+          description: |
+            A value created by Amazon S3 that uniquely identifies the request. In the unlikely event that you have problems with Amazon S3,
+            AWS can use this value to troubleshoot the problem.
+          type: string
+        x-amz-version-id:
+          description: |
+            The version of the object. When you enable versioning, Amazon S3 generates a random number for objects added to a bucket.
+            The value is UTF-8 encoded and URL ready. When you PUT an object in a bucket where versioning has been suspended,
+            the version ID is always null.
+          type: string
+      description: |
+        Internal Server Error, see error code on http://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html
+      body:
+        schema: !include ../schemas/error.xsd
+    501:
+      headers:
+        Content-Length:
+          description: |
+            The length in bytes of the body in the response.
+          type: string
+        Connection:
+          description: |
+            specifies whether the connection to the server is open or closed.
+          type: string
+          enum: [open, close]
+        Date:
+          description: |
+            The date and time Amazon S3 responded, for example, Wed, 01 Mar 2009 12:00:00 GMT.
+          type: string
+        ETag:
+          description: |
+            The entity tag is a hash of the object. The ETag only reflects changes to the contents of an
+            object, not its metadata. The ETag is determined when an object is created.
+            For objects created by the PUT Object operation and the POST Object operation, the ETag is a quoted,
+            32-digit hexadecimal string representing the MD5 digest of the object data.
+            For other objects, the ETag may or may not be an MD5 digest of the object data. If the ETag is not an MD5
+            digest of the object data, it will contain one or more non-hexadecimal characters and/or will consis
+            of less than 32 or more than 32 hexadecimal digits.
+          type: string
+        Server:
+          description: |
+            The name of the server that created the response
+          type: string
+          default: AmazonS3
+        x-amz-delete-marker:
+          description: |
+            Specifies whether the object returned was (true) or was not (false) a Delete Marker.
+          type: boolean
+          default: false
+        x-amz-id-2:
+          description: |
+            A special token that helps AWS troubleshoot problems.
+          type: string
+        x-amz-request-id:
+          description: |
+            A value created by Amazon S3 that uniquely identifies the request. In the unlikely event that you have problems with Amazon S3,
+            AWS can use this value to troubleshoot the problem.
+          type: string
+        x-amz-version-id:
+          description: |
+            The version of the object. When you enable versioning, Amazon S3 generates a random number for objects added to a bucket.
+            The value is UTF-8 encoded and URL ready. When you PUT an object in a bucket where versioning has been suspended,
+            the version ID is always null.
+          type: string
+      description: |
+        Not Implemented, see error code on http://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html
+      body:
+        schema: !include ../schemas/error.xsd
+    503:
+      headers:
+        Content-Length:
+          description: |
+            The length in bytes of the body in the response.
+          type: string
+        Connection:
+          description: |
+            specifies whether the connection to the server is open or closed.
+          type: string
+          enum: [open, close]
+        Date:
+          description: |
+            The date and time Amazon S3 responded, for example, Wed, 01 Mar 2009 12:00:00 GMT.
+          type: string
+        ETag:
+          description: |
+            The entity tag is a hash of the object. The ETag only reflects changes to the contents of an
+            object, not its metadata. The ETag is determined when an object is created.
+            For objects created by the PUT Object operation and the POST Object operation, the ETag is a quoted,
+            32-digit hexadecimal string representing the MD5 digest of the object data.
+            For other objects, the ETag may or may not be an MD5 digest of the object data. If the ETag is not an MD5
+            digest of the object data, it will contain one or more non-hexadecimal characters and/or will consis
+            of less than 32 or more than 32 hexadecimal digits.
+          type: string
+        Server:
+          description: |
+            The name of the server that created the response
+          type: string
+          default: AmazonS3
+        x-amz-delete-marker:
+          description: |
+            Specifies whether the object returned was (true) or was not (false) a Delete Marker.
+          type: boolean
+          default: false
+        x-amz-id-2:
+          description: |
+            A special token that helps AWS troubleshoot problems.
+          type: string
+        x-amz-request-id:
+          description: |
+            A value created by Amazon S3 that uniquely identifies the request. In the unlikely event that you have problems with Amazon S3,
+            AWS can use this value to troubleshoot the problem.
+          type: string
+        x-amz-version-id:
+          description: |
+            The version of the object. When you enable versioning, Amazon S3 generates a random number for objects added to a bucket.
+            The value is UTF-8 encoded and URL ready. When you PUT an object in a bucket where versioning has been suspended,
+            the version ID is always null.
+          type: string
+      description: |
+        Service Unavailable, see error code on http://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html
+      body:
+        schema: !include ../schemas/error.xsd
+put?: *common
+post?: *common
+delete?: *common
+head?: *common
+options?: *common

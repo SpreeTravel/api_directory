@@ -1,0 +1,44 @@
+#%RAML 0.8
+---
+usage: |
+  Use this trait for addition ACL headers to method
+description: |
+  These headers enable you to set access permissions using one of the following methods:
+  * Specify canned ACL, or
+  * Specify the permission for each grantee explicitly
+  # TODO: current RAML version can't satisfy this clause
+headers:
+  x-amz-acl:
+    description: |
+      The canned ACL to apply to the bucket you are creating.
+      Amazon S3 supports a set of predefined ACLs, known as canned ACLs. Each canned ACL has a predefined a set of grantees and permissions.
+      To grant access permissions by specifying canned ACLs, you use the following header and specify the canned ACL name as its value.
+      If you use this header, you cannot use other access control-specific headers in your request.
+    type: string
+    enum: [private, public-read, public-read-write, authenticated-read, bucket-owner-read, bucket-owner-full-control]
+    example: bucket-owner-full-control
+  x-amz-grant-read:
+    description: |
+      Allows grantee to list the objects in the bucket.
+    type: string
+    example: emailAddress="xyz@amazon.com", emailAddress="abc@amazon.com"
+  x-amz-grant-write:
+    description: |
+      Allows grantee to create, overwrite, and delete any object in the bucket.
+    type: string
+    example: emailAddress="xyz@amazon.com", emailAddress="abc@amazon.com"
+  x-amz-grant-read-acp:
+    description: |
+      Allows grantee to read the bucket ACL.
+    type: string
+    example: emailAddress="xyz@amazon.com", emailAddress="abc@amazon.com"
+  x-amz-grant-write-acp:
+    description: |
+      Allows grantee to write the ACL for the applicable bucket.
+    type: string
+    example: emailAddress="xyz@amazon.com", emailAddress="abc@amazon.com"
+  x-amz-grant-full-control:
+    description: |
+      Allows grantee the READ, WRITE, READ_ACP, and WRITE_ACP permissions on the bucket.
+    type: string
+    example: emailAddress="xyz@amazon.com", emailAddress="abc@amazon.com"

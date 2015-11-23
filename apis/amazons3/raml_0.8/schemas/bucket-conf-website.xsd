@@ -1,0 +1,22 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://s3.amazonaws.com/doc/2006-03-01/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="WebsiteConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IndexDocument">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Suffix"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ErrorDocument">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Key"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

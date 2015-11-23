@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeleteResult>
+  <Deleted>
+    <Key>sample1.txt</Key>
+    <VersionId>1.2</VersionId>
+    <DeleteMarker>true</DeleteMarker>
+    <DeleteMarkerVersionId>1.2</DeleteMarkerVersionId>
+  </Deleted>
+  <Error>
+    <Key>sample2.txt</Key>
+    <VersionId>2.3</VersionId>
+    <Code>AccessDenied</Code>
+    <Message>Access Denied</Message>
+  </Error>
+</DeleteResult>

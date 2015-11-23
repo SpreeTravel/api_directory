@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CORSConfiguration>
+     <CORSRule>
+       <ID>Rule_1</ID>
+       <AllowedOrigin>http://www.example.com</AllowedOrigin>
+       <AllowedMethod>GET</AllowedMethod>
+       <MaxAgeSeconds>3000</MaxAgeSeconds>
+       <ExposeHeader>x-amz-server-side-encryption</ExposeHeader>
+     </CORSRule>
+</CORSConfiguration>

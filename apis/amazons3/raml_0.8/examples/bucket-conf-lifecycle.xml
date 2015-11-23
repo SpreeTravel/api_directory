@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LifecycleConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+<Rule>
+   <ID>Archive and then delete rule</ID>
+   <Prefix>projectdocs/</Prefix>
+   <Status>Enabled</Status>
+   <Transition>
+      <Days>365</Days>
+      <StorageClass>GLACIER</StorageClass>
+   </Transition>
+   <Expiration>
+      <Days>3650</Days>
+   </Expiration>
+   </Rule>
+</LifecycleConfiguration>

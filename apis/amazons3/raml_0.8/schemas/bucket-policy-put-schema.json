@@ -1,0 +1,81 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":false,
+	"properties":{
+		"Id": {
+			"type":"string",
+			"id": "http://jsonschema.net/Id",
+			"required":false
+		},
+		"Statement": {
+			"type":"array",
+			"id": "http://jsonschema.net/Statement",
+			"required":false,
+			"items":
+				{
+					"type":"object",
+					"id": "http://jsonschema.net/Statement/0",
+					"required":false,
+					"properties":{
+						"Action": {
+							"type":"array",
+							"id": "http://jsonschema.net/Statement/0/Action",
+							"required":false,
+							"items":
+								{
+									"type":"string",
+									"id": "http://jsonschema.net/Statement/0/Action/0",
+									"required":false
+								}
+							
+
+						},
+						"Effect": {
+							"type":"string",
+							"id": "http://jsonschema.net/Statement/0/Effect",
+							"required":false
+						},
+						"Principal": {
+							"type":"object",
+							"id": "http://jsonschema.net/Statement/0/Principal",
+							"required":false,
+							"properties":{
+								"AWS": {
+									"type":"array",
+									"id": "http://jsonschema.net/Statement/0/Principal/AWS",
+									"required":false,
+									"items":
+										{
+											"type":"string",
+											"id": "http://jsonschema.net/Statement/0/Principal/AWS/0",
+											"required":false
+										}
+									
+
+								}
+							}
+						},
+						"Resource": {
+							"type":"string",
+							"id": "http://jsonschema.net/Statement/0/Resource",
+							"required":false
+						},
+						"Sid": {
+							"type":"string",
+							"id": "http://jsonschema.net/Statement/0/Sid",
+							"required":false
+						}
+					}
+				}
+			
+
+		},
+		"Version": {
+			"type":"string",
+			"id": "http://jsonschema.net/Version",
+			"required":false
+		}
+	}
+}

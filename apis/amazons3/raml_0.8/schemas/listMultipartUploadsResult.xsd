@@ -1,0 +1,41 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://s3.amazonaws.com/doc/2006-03-01/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ListMultipartUploadsResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="Bucket"/>
+        <xs:element type="xs:string" name="KeyMarker"/>
+        <xs:element type="xs:string" name="UploadIdMarker"/>
+        <xs:element type="xs:string" name="NextKeyMarker"/>
+        <xs:element type="xs:string" name="NextUploadIdMarker"/>
+        <xs:element type="xs:byte" name="MaxUploads"/>
+        <xs:element type="xs:string" name="IsTruncated"/>
+        <xs:element name="Upload" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Key"/>
+              <xs:element type="xs:string" name="UploadId"/>
+              <xs:element name="Initiator">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="ID"/>
+                    <xs:element type="xs:string" name="DisplayName"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Owner">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="ID"/>
+                    <xs:element type="xs:string" name="DisplayName"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="StorageClass"/>
+              <xs:element type="xs:dateTime" name="Initiated"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

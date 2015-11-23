@@ -1,0 +1,41 @@
+#%RAML 0.8
+title: Amazon S3 Services
+version: 2006-03-01
+baseUri: https://s3.amazonaws.com/
+mediaType: application/xml
+schemas:
+  - error: !include schemas/error.xsd
+  - buckets-list: !include schemas/buckets-list.xsd
+resourceTypes:
+  - objectResource: !include resourceTypes/objectResource.raml
+  - baseResource: !include resourceTypes/baseResource.raml
+traits:
+  - authorized: !include traits/authorized.raml
+  - hasContentIntegrityCheck: !include traits/hasContentIntegrityCheck.raml
+  - acl: !include traits/acl.raml
+  - hasContent: !include traits/hasContent.raml
+/: 
+  displayName: GET Service
+  type: baseResource
+  is: [ authorized ]
+  get: 
+    description: |
+      This implementation of the GET operation returns a list of all buckets owned by the authenticated sender of the request.
+      To authenticate a request, you must use a valid AWS Access Key ID that is registered with Amazon S3.
+      Anonymous requests cannot list buckets, and you cannot list buckets that you did not create.
+      Syntax
+      ------
+      GET / HTTP/1.1
+      Host: s3.amazonaws.com
+      Date: date
+      Region: us-east-1
+      Authorization: signatureValue
+    body: 
+      application/xml: 
+        schema: buckets-list
+        example: !include examples/buckets-list.xml
+    responses: 
+      200: 
+documentation: 
+  - title: Headline
+    content: !include docs/amazonS3Services/headline.md

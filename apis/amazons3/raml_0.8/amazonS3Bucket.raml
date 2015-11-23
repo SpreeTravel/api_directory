@@ -1,0 +1,1414 @@
+#%RAML 0.8
+title: Amazon S3 Buckets
+version: 2006-03-01
+baseUri: https://{bucketName}.{region}.amazonaws.com/
+baseUriParameters: 
+  bucketName: 
+    description: Bucket name
+  region: 
+    description: |
+      Select parameter value according to region your bucket is located in
+      |Region name|Region|Parameter value|
+      |---|---|---|
+      |US Standard|us-east-1|s3, s3-external-1(Northern Virginia only)|
+      |US West (Oregon)|us-west-2|s3-us-west-2|
+      |US West (N. California)|us-west-1|s3-us-west-1|
+      |EU (Ireland)|eu-west-1|s3-eu-west-1|    
+      |Asia Pacific (Singapore)|ap-southeast-1|s3-ap-southeast-1|
+      |Asia Pacific (Sydney)|ap-southeast-2|s3-ap-southeast-2|
+      |Asia Pacific (Tokyo)|ap-northeast-1|s3-ap-northeast-1|
+      |South America (Sao Paulo)|sa-east-1|s3-sa-east-1|
+mediaType: application/xml
+schemas:
+  - error: !include schemas/error.xsd
+  - bucket: !include schemas/bucket.xsd
+  - bucket-list-objects: !include schemas/bucket-list-objects.xsd
+  - bucket-conf-cors: !include schemas/bucket-conf-cors.xsd
+  - bucket-conf-lifecycle: !include schemas/bucket-conf-lifecycle.xsd
+  - bucket-lifecycle-put: !include schemas/bucket-lifecycle-put.xsd
+  - bucket-conf-policy-schema: !include schemas/bucket-conf-policy-schema.json
+  - bucket-policy-put-schema: !include schemas/bucket-policy-put-schema.json
+  - bucket-conf-tagging: !include schemas/bucket-conf-tagging.xsd
+  - bucket-conf-website: !include schemas/bucket-conf-website.xsd
+  - bucket-object-versions: !include schemas/bucket-object-versions.xsd
+  - bucket-acl: !include schemas/bucket-acl.xsd
+  - bucket-grant-acl: !include schemas/bucket-grant-acl.xsd
+  - bucket-versioning: !include schemas/bucket-versioning.xsd
+  - bucket-delete-multiple: !include schemas/bucket-delete-multiple.xsd
+  - bucket-delete-multiple-response: !include schemas/bucket-delete-multiple-response.xsd
+  - location-constraint: !include schemas/location-constraint.xsd
+  - object-acl-response: !include schemas/object-acl-response.xsd
+  - bucket-logging: !include schemas/bucket-logging.xsd
+  - notification-configuration: !include schemas/notification-configuration.xsd
+  - requestPayement-configuration: !include schemas/requestPayement-configuration.xsd
+  - listMultipartUploadsResult: !include schemas/listMultipartUploadsResult.xsd
+  - objectRestore: !include schemas/objectRestore-schema.xsd
+  - upladParts: !include schemas/upladParts-schema.xsd
+  - complete-multipart-upload: !include schemas/complete-multipart-upload-schema.xsd
+resourceTypes:
+  - objectResource: !include resourceTypes/objectResource.raml
+  - baseResource: !include resourceTypes/baseResource.raml
+traits:
+  - authorized: !include traits/authorized.raml
+  - hasContentIntegrityCheck: !include traits/hasContentIntegrityCheck.raml
+  - acl: !include traits/acl.raml
+  - hasContent: !include traits/hasContent.raml
+/: 
+  displayName: Operations on Buckets
+  type: baseResource
+  is: [ authorized ]
+  delete: 
+    description: |
+      This implementation of the DELETE operation deletes the bucket named in the URI. All objects (including all object versions and Delete Markers)
+      in the bucket must be deleted before the bucket itself can be deleted.
+      
+      Syntax
+      ------
+          DELETE /BucketName/ HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          Authorization: signatureValue
+    responses: 
+      204: 
+        description: |
+          The bucket has been removed.
+  get: 
+    description: |
+      This implementation of the GET operation returns some or all (up to 1000) of the objects in a bucket.
+      You can use the request parameters as selection criteria to return a subset of the objects in a bucket.
+      
+      To use this implementation of the operation, you must have READ access to the bucket.
+      
+      Syntax
+      ------
+          GET /BucketName/ HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          Authorization: signatureValue
+    queryParameters: 
+      delimiter: 
+        description: |
+          A delimiter is a character you use to group keys.
+          
+          All keys that contain the same string between the prefix, if specified, and the first occurrence
+          of the delimiter after the prefix are grouped under a single result element, CommonPrefixes. If you don'
+          specify the prefix parameter, then the substring starts at the beginning of the key. The keys that are
+          grouped under CommonPrefixes result element are not returned elsewhere in the response.
+      marker: 
+        description: |
+          Specifies the key to start with when listing objects in a bucket. Amazon S3 lists objects in alphabetical order.
+      max-keys: 
+        description: |
+          Sets the maximum number of keys returned in the response body. The response might contain fewer keys but will
+          never contain more. If there are additional keys that satisfy the search criteria but were not returned because
+          max-keys was exceeded, the response contains <IsTruncated>true</IsTruncated>. To return the additional keys, see marker.
+        default: 1000
+      prefix: 
+        description: |
+          Limits the response to keys that begin with the specified prefix. You can use prefixes to separate a bucket into
+          different groupings of keys. (You can think of using prefix to make groups in the same way you'd use a
+          folder in a file system.)
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: bucket-list-objects
+            example: !include examples/bucket-list-objects.xml
+  head: 
+    description: |
+      HEAD Bucket
+      This operation is useful to determine if a bucket exists and you have permission to access it. The operation returns a
+      200 OK if the bucket exists and you have permission to access it. Otherwise, the operation might return responses such
+      as 404 Not Found and 403 Forbidden.
+      
+      Syntax
+      ------
+          HEAD /BucketName/ HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          Authorization: signatureValue
+    responses: 
+      200: 
+        description: |
+          The bucket exists and you have permission to access it.
+  post: 
+    is: [ hasContent ]
+    description: |
+      The POST operation adds an object to a specified bucket using HTML forms. POST is an alternate form of PUT that enables browser-based
+      uploads as a way of putting objects in buckets. Parameters that are passed to PUT via HTTP Headers are instead passed as form fields to
+      POST in the multipart/form-data encoded message body. You must have WRITE access on a bucket to add an object to it. Amazon S3 never
+      stores partial objects: if you receive a successful response, you can be confident the entire object was stored.
+      
+      Amazon S3 is a distributed system. If Amazon S3 receives multiple write requests for the same object simultaneously, all but the las
+      object written will be overwritten.
+      
+      To ensure that data is not corrupted traversing the network, use the Content-MD5 form field. When you use the Content-MD5 form field,
+      Amazon S3 checks the object against the provided MD5 value. If they do not match, Amazon S3 returns an error. Additionally, you can
+      calculate the MD5 while posting an object to Amazon S3 and compare the returned ETag to the calculated MD5 value. The ETag only reflects
+      changes to the contents of an object, not its metadata.
+    body: 
+      multipart/form-data: 
+        formParameters: 
+          AWSAccessKeyId: 
+            description: |
+              The AWS Access Key ID of the owner of the bucket who grants an Anonymous user access for a request that satisfies the set of
+              constraints in the Policy.
+              Constraints: Required if a policy document is included with the request.
+          acl: 
+            description: |
+              Specifies an Amazon S3 access control list. If an invalid access control list is specified, an error is generated
+            enum: 
+              - private
+              - public-read
+              - public-read-write
+              - authenticated-read
+              - bucket-owner-read
+              - bucket-owner-full-control
+            default: private
+          file: 
+            - 
+              description: |
+                File to upload.
+                The file or text content must be the last field in the form.
+                You cannot upload more than one file at a time.
+              type: file
+              required: true
+            - 
+              description: |
+                Text content.
+                The file or text content must be the last field in the form.
+                You cannot upload more than one file at a time.
+              required: true
+          key: 
+            description: |
+              The name of the uploaded key.
+              
+              To use the filename provided by the user, use the ${filename} variable. For example, if the user Betty uploads the file
+              lolcatz.jpg and you specify /user/betty/${filename}, the key name will be /user/betty/lolcatz.jpg.
+            required: true
+          policy: 
+            description: |
+              Security Policy describing what is permitted in the request. Requests without a security policy are considered anonymous
+              and only work on publicly writable buckets.
+          success_action_redirect: 
+            description: |
+              The URL to which the client is redirected upon successful upload.
+              If success_action_redirect is not specified, Amazon S3 returns the empty document type specified in the success_action_status field.
+              If Amazon S3 cannot interpret the URL, it acts as if the field is not present.
+              If the upload fails, Amazon S3 displays an error and does not redirect the user to a URL.
+          redirect: 
+            description: |
+              The redirect field name is deprecated and support for the redirect field name will be removed in the future.
+          success_action_status: 
+            description: |
+              The status code returned to the client upon successful upload if success_action_redirect is not specified.
+              Accepts the values 200, 201, or 204 (default).
+              If the value is set to 200 or 204, Amazon S3 returns an empty document with a 200 or 204 status code.
+              If the value is set to 201, Amazon S3 returns an XML document with a 201 status code.
+              If the value is not set or if it is set to an invalid value, Amazon S3 returns an empty document with a 204 status code.
+          x-amz-storage-class: 
+            description: |
+              Storage class to use for storing the object.
+            enum: [ STANDARD , REDUCED_REDUNDANCY ]
+            default: STANDARD
+          "x-amz-meta-{*}": 
+            description: |
+              Field names prefixed with x-amz-meta- contain user-specified metadata.
+              Amazon S3 does not validate or use this data.
+          x-amz-security-token: 
+            description: |
+              Amazon DevPay security token.
+              Each request that uses Amazon DevPay requires two x-amz-security-token form fields: one for the product token and one for the user token.
+          x-amz-server-side-encryption: 
+            description: |
+              Specifies server-side encryption algorithm to use when Amazon S3 creates an object.
+            enum: [ AES256 ]
+          x-amz-website-redirect-location: 
+            description: |
+              If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an external URL.
+              Amazon S3 stores the value of this header in the object metadata.
+            pattern: "^(https?://|/).*$"
+    responses: 
+      200: 
+        description: |
+          Ok
+      100: 
+        description: Continue
+  put: 
+    is: [ hasContent , acl ]
+    description: |
+      This implementation of the PUT operation creates a new bucket. To create a bucket, you must register with Amazon S3 and have
+            a valid AWS Access Key ID to authenticate requests. Anonymous requests are never allowed to create buckets.
+            By creating the bucket, you become the bucket owner.
+            
+            Not every string is an acceptable bucket name. For information on bucket naming restrictions, see Working with Amazon S3 Buckets.
+            
+            By default, the bucket is created in the US Standard region. You can optionally specify a region in the request body.
+            You might choose a Region to optimize latency, minimize costs, or address regulatory requirements. For example, if you reside
+            in Europe, you will probably find it advantageous to create buckets in the EU (Ireland) Region.
+            
+            **Note**
+            
+            If you create a bucket in a region other than US Standard, your application must be able to handle 307 redirect.
+            
+            When creating a bucket using this operation, you can optionally specify the accounts or groups that should be granted specific
+            permissions on the bucket. There are two ways to grant the appropriate permissions using the request headers.
+            
+            * Specify a canned ACL using the x-amz-acl request header.
+            * Specify access permissions explicitly using the x-amz-grant-read, x-amz-grant-write, x-amz-grant-read-acp, x-amz-grant-write-acp,
+              x-amz-grant-full-control headers. These headers map to the set of permissions Amazon S3 supports in an ACL.
+            
+            **Note**
+            You can use either a canned ACL or specify access permissions explicitly. You cannot do both.
+            
+            Syntax
+            ------
+                PUT /BucketName/ HTTP/1.1
+                Host: s3.amazonaws.com
+                Content-Length: length
+                Date: date
+                Authorization: signatureValue
+            
+                <CreateBucketConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+                  <LocationConstraint>BucketRegion</LocationConstraint>
+                </CreateBucketConfiguration>
+    body: 
+      application/xml: 
+        schema: bucket
+        example: !include examples/bucket.xml
+    responses: 
+      200: 
+/?cors: 
+  type: baseResource
+  is: [ authorized ]
+  delete: 
+    description: |
+      Deletes the cors configuration information set for the bucket.
+      
+      To use this operation, you must have permission to perform the s3:PutCORSConfiguration action.
+      The bucket owner has this permission by default and can grant this permission to others.
+      Syntax
+      ------
+          DELETE /BucketName/?cors HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          Authorization: signatureValue
+    responses: 
+      204: 
+        description: |
+          The cors configuration for the bucket has been removed.
+  get: 
+    description: |
+      Returns the cors configuration information set for the bucket.
+      
+      To use this operation, you must have permission to perform the s3:GetBucketCORS action.
+      By default, the bucket owner has this permission and can grant it to others.
+      
+      Syntax
+      ------
+          GET /BucketName/?cors HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          Authorization: signatureValue
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: bucket-conf-cors
+            example: !include examples/bucket-conf-cors.xml
+  put: 
+    description: |
+      Sets the cors configuration for your bucket. If the configuration exists, Amazon S3 replaces it.
+      
+      To use this operation, you must be allowed to perform the s3:PutBucketCORS action. By default, the bucket owner has this permission and can grant it to others.
+      
+      You set this configuration on a bucket so that the bucket can service cross-origin requests. For example, you might want to enable a request whose origin is http://www.example.com to access your Amazon S3 bucket at my.example.bucket.com by using the browser's XMLHttpRequest capability.
+      
+      To enable cross-origin resource sharing (CORS) on a bucket, you add the cors subresource to the bucket. The cors subresource is an XML document in which you configure rules that identify origins and the HTTP methods that can be executed on your bucket. The document is limited to 64 KB in size.
+    body: 
+      application/xml: 
+        schema: bucket-conf-cors
+        example: !include examples/bucket-conf-cors.xml
+    responses: 
+      200: 
+/?lifecycle: 
+  type: baseResource
+  is: [ authorized ]
+  delete: 
+    description: |
+      Deletes the lifecycle configuration from the specified bucket. Amazon S3 removes all the lifecycle configuration rules in the
+      lifecycle subresource associated with the bucket. Your objects never expire, and Amazon S3 no longer automatically deletes any
+      objects on the basis of rules contained in the deleted lifecycle configuration.
+      
+      To use this operation, you must have permission to perform the s3:PutLifecycleConfiguration action.
+      By default, the bucket owner has this permission and the bucket owner can grant this permission to others.
+      
+      There is usually some time lag before lifecycle configuration deletion is fully propagated to all the Amazon S3 systems.
+      Syntax
+      ------
+          DELETE /BucketName/?lifecycle HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          Authorization: signatureValue
+    responses: 
+      204: 
+        description: |
+          The lifecycle configuration for the bucket has been removed.
+  get: 
+    description: |
+      Returns the lifecycle configuration information set on the bucket.
+      
+      To use this operation, you must have permission to perform the s3:GetLifecycleConfiguration action. The bucket owner
+      has this permission, by default. The bucket owner can grant this permission to others.
+      
+      Syntax
+      ------
+          GET /BucketName/?lifecycle HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          Authorization: signatureValue
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: bucket-conf-lifecycle
+            example: !include examples/bucket-conf-lifecycle.xml
+  put: 
+    is: [ hasContentIntegrityCheck ]
+    description: |
+      Creates a new lifecycle configuration for the bucket or replaces an existing lifecycle configuration.
+      
+      To use this operation, you must be allowed to perform the s3:PutLifecycleConfiguration action. By default,
+      the bucket owner has this permission and can grant this permission to others.
+      
+      **Note**
+      If your bucket is version-enabled or versioning is suspended, you cannot add a lifecycle configuration.
+      
+      If you want to block users or accounts from removing or deleting objects from your bucket, you must deny them
+      permissions for the following actions:
+      * s3:DeleteObjec
+      * s3:DeleteObjectVersion and
+      * s3:PutLifecycleConfiguration
+      
+      If you want to block users or accounts from managing lifecycle configurations, you must deny permission
+      for the s3:PutLifecycleConfiguration action.
+      
+      Syntax
+      ------
+          PUT /bucketname/?lifecycle HTTP/1.1
+          Host: s3.amazonaws.com
+          Content-Length: length
+          Date: date
+          Authorization: signatureValue
+          Content-MD5: MD5
+      
+          Lifecycle configuration in the request body
+    body: 
+      application/xml: 
+        schema: bucket-lifecycle-put
+        example: !include examples/bucket-lifecycle-put.xml
+    responses: 
+      200: 
+        description: |
+          Lifecycle created.
+/?policy: 
+  type: baseResource
+  is: [ authorized ]
+  delete: 
+    description: |
+      This implementation of the DELETE operation uses the policy subresource to delete the policy on a specified bucket.
+      To use the operation, you must have DeletePolicy permissions on the specified bucket and be the bucket owner.
+      
+      If you do not have DeletePolicy permissions, Amazon S3 returns a 403 Access Denied error. If you have the correct permissions,
+      but are not the bucket owner , Amazon S3 returns a 405 Method Not Allowed error. If the bucket doesn't have a policy, Amazon S3
+      returns a 204 No Content error. There are restrictions about who can create bucket policies and which objects in a bucket they can apply to.
+      Syntax
+      ------
+          DELETE /BucketName/?policy HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          Authorization: signatureValue
+    responses: 
+      204: 
+        description: |
+          The policy for the bucket has been removed.
+  get: 
+    description: |
+      This implementation of the GET operation uses the policy subresource to return the policy of a specified bucket. To use this operation,
+      you must have GetPolicy permissions on the specified bucket, and you must be the bucket owner.
+      
+      If you don't have GetPolicy permissions, Amazon S3 returns a 403 Access Denied error. If you have the correct permissions, but you're
+      not the bucket owner, Amazon S3 returns a 405 Method Not Allowed error. If the bucket does not have a policy, Amazon S3 returns a 404
+      Policy Not found error. There are restrictions about who can create bucket policies and which objects in a bucket they can apply to.
+      
+      Syntax
+      ------
+          GET /BucketName/?policy HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          Authorization: signatureValue
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: bucket-conf-policy-schema
+            example: !include examples/bucket-conf-policy.json
+  put: 
+    is: [ hasContent ]
+    description: |
+      This implementation of the PUT operation uses the policy subresource to add to or replace a policy on a bucket. If the
+      bucket already has a policy, the one in this request completely replaces it. To perform this operation,
+      you must be the bucket owner.
+      
+      If you are not the bucket owner but have PutBucketPolicy permissions on the bucket, Amazon S3 returns a 405 Method Not Allowed.
+      In all other cases for a PUT bucket policy request that is not from the bucket owner, Amazon S3 returns 403 Access Denied.
+      There are restrictions about who can create bucket policies and which objects in a bucket they can apply to.
+      
+      Syntax
+      ------
+          PUT /bucketname/?policy HTTP/1.1
+          Host: s3.amazonaws.com
+          Content-Length: length
+          Date: date
+          Authorization: signatureValue
+      
+          Policy written in JSON
+    body: 
+      application/json: 
+        schema: bucket-policy-put-schema
+        example: !include examples/bucket-policy-put.json
+    responses: 
+      204: 
+        description: |
+          Policy added.
+/?tagging: 
+  type: baseResource
+  is: [ authorized ]
+  delete: 
+    description: |
+      This implementation of the DELETE operation uses the tagging subresource to remove a tag set from the specified bucket.
+      
+      To use this operation, you must have permission to perform the s3:PutBucketTagging action. By default, the bucke
+      owner has this permission and can grant this permission to others.
+      Syntax
+      ------
+          DELETE /BucketName/?tagging HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          Authorization: signatureValue
+    responses: 
+      204: 
+        description: |
+          The tag set for the bucket has been removed.
+  get: 
+    description: |
+      This implementation of the GET operation uses the tagging subresource to return the tag set associated with the bucket.
+      
+      To use this operation, you must have permission to perform the s3:GetBucketTagging action. By default, the bucket owner
+      has this permission and can grant this permission to others.
+      
+      Syntax
+      ------
+          GET /BucketName/?tagging HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          Authorization: signatureValue
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: bucket-conf-tagging
+            example: !include examples/bucket-conf-tagging.xml
+  put: 
+    description: |
+      This implementation of the PUT operation uses the tagging subresource to add a set of tags to an existing bucket.
+      
+      Use tags to organize your AWS bill to reflect your own cost structure. To do this, sign up to get your AWS account bill with tag key values included. Then, to see the cost of combined resources, organize your billing information according to resources with the same tag key values. For example, you can tag several resources with a specific application name, and then organize your billing information to see the total cost of that application across several services. For more information, see Cost Allocation and Tagging in About AWS Billing and Cost Management.
+      
+      To use this operation, you must have permission to perform the s3:PutBucketTagging action. By default, the bucket owner has this permission and can grant this permission to others.
+    body: 
+      application/xml: 
+        schema: bucket-conf-tagging
+        example: !include examples/bucket-conf-tagging.xml
+    responses: 
+      200: 
+/?website: 
+  type: baseResource
+  is: [ authorized ]
+  delete: 
+    description: |
+      This operation removes the website configuration for a bucket. Amazon S3 returns a 200 OK response upon
+      successfully deleting a website configuration on the specified bucket. You will get a 200 OK response if
+      the website configuration you are trying to delete does not exist on the bucket. Amazon S3 returns a 404
+      response if the bucket specified in the request does not exist.
+      
+      This DELETE operation requires the S3:DeleteBucketWebsite permission. By default, only the bucket owner
+      can delete the website configuration attached to a bucket. However, bucket owners can grant other users
+      permission to delete the website configuration by writing a bucket policy granting them the
+      S3:DeleteBucketWebsite permission.
+      
+      Syntax
+      ------
+          DELETE /BucketName/?website HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          Authorization: signatureValue
+    responses: 
+      204: 
+        description: |
+          The website configuration for the bucket has been removed.
+  get: 
+    description: |
+      This implementation of the GET operation returns the website configuration associated with a bucket.
+      To host website on Amazon S3, you can configure a bucket as website by adding a website configuration.
+      
+      This GET operation requires the S3:GetBucketWebsite permission. By default, only the bucket owner can read
+      the bucket website configuration. However, bucket owners can allow other users to read the website configuration
+      by writing a bucket policy granting them the S3:GetBucketWebsite permission.
+      
+      Syntax
+      ------
+          GET /BucketName/?website HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          Authorization: signatureValue
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: bucket-conf-website
+            example: !include examples/bucket-conf-website.xml
+  put: 
+    description: |
+      Sets the configuration of the website that is specified in the website subresource. To configure a bucket as a website, you can add this subresource on the bucket with website configuration information such as the file name of the index document and any redirect rules. For more information, go to Hosting Websites on Amazon S3 in the Amazon Simple Storage Service Developer Guide.
+      
+      This PUT operation requires the S3:PutBucketWebsite permission. By default, only the bucket owner can configure the website attached to a bucket; however, bucket owners can allow other users to set the website configuration by writing a bucket policy that grants them the S3:PutBucketWebsite permission.
+    body: 
+      application/xml: 
+        schema: bucket-conf-website
+        example: !include examples/bucket-conf-website.xml
+    responses: 
+      200: 
+/?versions: 
+  type: baseResource
+  is: [ authorized ]
+  get: 
+    description: |
+      You can use the versions subresource to list metadata about all of the versions of objects in a bucket.
+      You can also use request parameters as selection criteria to return metadata about a subset of all the object versions.
+      
+      To use this operation, you must have READ access to the bucket.
+      
+      Syntax
+      ------
+          GET /BucketName/?versions HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          Authorization: signatureValue
+    queryParameters: 
+      delimiter: 
+        description: |
+          A delimiter is a character that you specify to group keys. All keys that contain the same string between
+          the prefix and the first occurrence of the delimiter are grouped under a single result element in CommonPrefixes.
+          These groups are counted as one result against the max-keys limitation. These keys are not returned elsewhere
+          in the response. Also, see prefix.
+      key-marker: 
+        description: |
+          Specifies the key in the bucket that you want to start listing from. Also, see version-id-marker.
+      max-keys: 
+        description: |
+          Sets the maximum number of keys returned in the response body. The response might contain fewer keys,
+          but will never contain more. If additional keys satisfy the search criteria, but were not returned
+          because max-keys was exceeded, the response contains <isTruncated>true</isTruncated>.
+          To return the additional keys, see key-marker and version-id-marker.
+        default: 1000
+      prefix: 
+        description: |
+          Use this parameter to select only those keys that begin with the specified prefix. You can use prefixes
+          to separate a bucket into different groupings of keys. (You can think of using prefix to make groups in the
+          same way you'd use a folder in a file system.) You can use prefix with delimiter to roll up numerous objects
+          into a single result under CommonPrefixes. Also, see delimiter.
+      version-id-marker: 
+        description: |
+          Specifies the object version you want to start listing from. Also, see key-marker.
+        minLength: 1
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: bucket-object-versions
+            example: !include examples/bucket-object-versions.xml
+/?acl: 
+  type: baseResource
+  is: [ authorized ]
+  get: 
+    description: |
+      This implementation of the GET operation uses the acl subresource to return the access control list (ACL)
+      of a bucket. To use GET to return the ACL of the bucket, you must have READ_ACP access to the bucket.
+      If READ_ACP permission is granted to the anonymous user, you can return the ACL of the bucket withou
+      using an authorization header.
+      
+      Syntax
+      ------
+          GET /BucketName/?acl HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          Authorization: signatureValue
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: bucket-acl
+            example: !include examples/bucket-acl.xml
+  put: 
+    is: [ hasContent , acl ]
+    description: |
+      This implementation of the PUT operation uses the acl subresource to set the permissions on an existing
+      bucket using access control lists (ACL). For more information, go to Using ACLs. To set the ACL of a bucket,
+      you must have WRITE_ACP permission.
+      
+      You can use one of the following two ways to set a bucket's permissions:
+      * Specify the ACL in the request body
+      * Specify permissions using request headers
+      
+      **Note**
+      You cannot specify access permission using both the body and the request headers.
+      
+      Depending on your application needs, you may choose to set the ACL on a bucket using either the request body or
+      the headers. For example, if you have an existing application that updates a bucket ACL using the request body,
+      then you can continue to use that approach.
+      
+      Syntax
+      ------
+      With request body
+      
+          PUT /BucketName/?acl HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          Authorization: signatureValue
+      
+          <AccessControlPolicy>
+            <Owner>
+              <ID>ID</ID>
+              <DisplayName>EmailAddress</DisplayName>
+            </Owner>
+            <AccessControlList>
+              <Grant>
+                <Grantee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CanonicalUser">
+                  <ID>ID</ID>
+                  <DisplayName>EmailAddress</DisplayName>
+                </Grantee>
+                <Permission>Permission</Permission>
+              </Grant>
+            ...
+            </AccessControlList>
+          </AccessControlPolicy>
+      
+      With headers
+      
+          PUT /BucketName/?acl HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          x-amz-grant-write: uri="uri1", emailAddress="email"
+          x-amz-grant-read: uri="uri2"
+          Authorization: signatureValue
+    body: 
+      application/xml: 
+        schema: bucket-grant-acl
+        example: !include examples/bucket-grant-acl.xml
+    responses: 
+      200: 
+        description: |
+          ACL granted.
+/?versioning: 
+  type: baseResource
+  is: [ authorized ]
+  get: 
+    description: |
+      This implementation of the GET operation uses the versioning subresource to return the versioning state of a bucket.
+      To retrieve the versioning state of a bucket, you must be the bucket owner.
+      
+       This implementation also returns the MFA Delete status of the versioning state, i.e., if the MFA Delete status
+       is enabled, the bucket owner must use an authentication device to change the versioning state of the bucket.
+      
+       There are three versioning states:
+       * If you enabled versioning on a bucket, the response is:
+           <VersioningConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+             <Status>Enabled</Status>
+           </VersioningConfiguration>
+       * If you suspended versioning on a bucket, the response is:
+           <VersioningConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+             <Status>Suspended</Status>
+           </VersioningConfiguration>
+       * If you never enabled (or suspended) versioning on a bucket, the response is:
+           <VersioningConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/"/>
+      
+      Syntax
+      ------
+          GET /BucketName/?versioning HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          Authorization: signatureValue
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: bucket-versioning
+            example: !include examples/bucket-versioning.xml
+  put: 
+    is: [ hasContent ]
+    description: |
+      This implementation of the PUT operation uses the versioning subresource to set the versioning state of an existing bucket.
+      To set the versioning state, you must be the bucket owner.
+      
+      You can set the versioning state with one of the following values:
+      * **Enabled** Enables versioning for the objects in the bucke
+        All objects added to the bucket receive a unique version ID.
+      * **Suspended** Disables versioning for the objects in the bucke
+        All objects added to the bucket receive the version ID null.
+      
+      If the versioning state has never been set on a bucket, it has no versioning state; a GET versioning request does no
+      return a versioning state value.
+      
+      If the bucket owner enables MFA Delete in the bucket versioning configuration, the bucket owner must include the x-amz-mfa
+      request header and the Status and the MfaDelete request elements in a request to set the versioning state of the bucket.
+      
+      Syntax
+      ------
+          PUT /?versioning HTTP/1.1
+          Host: BucketName.s3.amazonaws.com
+          Content-Length: length
+          Date: date
+          Authorization: signatureValue
+          x-amz-mfa: [SerialNumber] [TokenCode]
+      
+          <VersioningConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+            <Status>VersioningState</Status>
+            <MfaDelete>MfaDeleteState</MfaDelete>
+          </VersioningConfiguration>
+    headers: 
+      x-amz-mfa: 
+        description: |
+          The value is the concatenation of the authentication device's serial number, a space, and the value displayed on your
+          authentication device.
+          Condition: Required to configure the versioning state if versioning is configured with MFA Delete enabled.
+        pattern: ^[a-zA-Z_0-9]+ [a-zA-Z_0-9]+$
+    body: 
+      application/xml: 
+        schema: bucket-versioning
+        example: !include examples/bucket-versioning-put.xml
+    responses: 
+      200: 
+        description: |
+          Versioning state changed.
+/?delete: 
+  type: baseResource
+  is: [ authorized ]
+  post: 
+    is: [ hasContentIntegrityCheck ]
+    description: |
+      The Multi-Object Delete operation enables you to delete multiple objects from a bucket using a single HTTP request.
+      If you know the object keys that you want to delete, then this operation provides a suitable alternative to sending
+      individual delete requests (see DELETE Object), reducing per-request overhead.
+      
+      The Multi-Object Delete request contains a list of up to 1000 keys that you want to delete. In the XML, you provide the
+      object key names, and optionally, version IDs if you want to delete a specific version of the object from a versioning-enabled
+      bucket. For each key, Amazon S3 performs a delete operation and returns the result of that delete, success, or failure, in the
+      response. Note that, if the object specified in the request is not found, Amazon S3 returns the result as deleted.
+      
+      The Multi-Object Delete operation supports two modes for the response; verbose and quiet. By default, the operation uses
+      verbose mode in which the response includes the result of deletion of each key in your request. In quiet mode the response
+      includes only keys where the delete operation encountered an error. For a successful deletion, the operation does not return any
+      information about the delete in the response body.
+      
+      When performing a Multi-Object Delete operation on an MFA Delete enabled bucket, that attempts to delete any versioned objects,
+      you must include an MFA token. If you do not provide one, the entire request will fail, even if there are non versioned objects
+      you are attempting to delete. If you provide an invalid token, whether there are versioned keys in the request or not, the
+      entire Multi-Object Delete request will fail.
+      
+      Finally, the Content-MD5 header is required for all Multi-Object Delete requests. Amazon S3 uses the header value to ensure that your reques
+      body has not be altered in transit.
+      
+      Syntax
+      ------
+          POST /bucketname/?delete HTTP/1.1
+          Host: s3.amazonaws.com
+          Authorization: Signature
+          Content-Length: Size
+          Content-MD5: MD5
+      
+          <?xml version="1.0" encoding="UTF-8"?>
+            <Delete>
+              <Quiet>true</Quiet>
+              <Object>
+                <Key>Key</Key>
+                <VersionId>VersionId</VersionId>
+              </Object>
+              <Object>
+                <Key>Key</Key>
+              </Object>
+              ...
+            </Delete>
+    headers: 
+      x-amz-mfa: 
+        description: |
+          The value is the concatenation of the authentication device's serial number, a space, and the value that is displayed on
+          your authentication device.
+          Condition: Required to permanently delete a versioned object if versioning is configured with MFA Delete enabled.
+    body: 
+      application/xml: 
+        schema: bucket-delete-multiple
+        example: !include examples/bucket-delete-multiple.xml
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: bucket-delete-multiple-response
+            example: !include examples/bucket-delete-multiple-response.xml
+/?location: 
+  type: baseResource
+  is: [ authorized ]
+  get: 
+    description: |
+      This implementation of the GET operation uses the location subresource to return a bucket's Region. You set the bucket's Region using the LocationContraint request parameter in a PUT Bucket request. For more information, see PUT Bucket. To use this implementation of the operation, you must be the bucket owner.
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: location-constraint
+            example: !include examples/location-constraint.xml
+/?logging: 
+  type: baseResource
+  is: [ authorized ]
+  description: ""
+  get: 
+    description: |
+      This implementation of the GET operation uses the logging subresource to return the logging status of a bucket and the permissions users have to view and modify that status. To use GET, you must be the bucket owner.
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: bucket-logging
+            example: !include examples/bucket-logging.xml
+  put: 
+    description: |
+      This implementation of the PUT operation uses the logging subresource to set the logging parameters for a bucket and to specify permissions for who can view and modify the logging parameters. To set the logging status of a bucket, you must be the bucket owner.
+      
+      The bucket owner is automatically granted FULL_CONTROL to all logs. You use the Grantee request element to grant access to other people. The Permissions request element specifies the kind of access the grantee has to the logs.
+    body: 
+      application/xml: 
+        schema: bucket-logging
+        example: !include examples/bucket-logging.xml
+    responses: 
+      200: 
+/?notification: 
+  type: baseResource
+  is: [ authorized ]
+  get: 
+    description: |
+      This implementation of the GET operation uses the notification subresource to return the notification configuration of a bucket. Currently, the s3:ReducedRedundancyLostObject event is the only event supported for notifications. The s3:ReducedRedundancyLostObject event is triggered when Amazon S3 detects that it has lost all replicas of a Reduced Redundancy Storage object and can no longer service requests for that object.
+      If notifications are not enabled on the bucket, the operation returns an empty NotificatonConfiguration element.
+      By default, you must be the bucket owner to read the notification configuration of a bucket. However, the bucket owner can use a bucket policy to grant permission to other users to read this configuration with the s3:GetBucketNotification permission.
+      For more information about setting and reading the notification configuration on a bucket, see Setting Up Notification of Bucket Events. For more information about bucket policies, see Using Bucket Policies.
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: notification-configuration
+            example: !include examples/notification-configuration.xml
+  put: 
+    description: |
+      This implementation of the PUT operation uses the notification subresource to enable notifications of specified events for a bucket. Currently, the s3:ReducedRedundancyLostObject event is the only event supported for notifications. The s3:ReducedRedundancyLostObject event is triggered when Amazon S3 detects that it has lost all replicas of an object and can no longer service requests for that object.
+      
+      If the bucket owner and Amazon SNS topic owner are the same, the bucket owner has permission to publish notifications to the topic by default. Otherwise, the owner of the topic must create a policy to enable the bucket owner to publish to the topic. For more information about creating this policy, go to Example Cases for Amazon SNS Access Control.
+      
+      By default, only the bucket owner can configure notifications on a bucket. However, bucket owners can use a bucket policy to grant permission to other users to set this configuration with s3:PutBucketNotification permission.
+      
+      After you call the PUT operation to configure notifications on a bucket, Amazon S3 publishes a test notification to ensure that the topic exists and that the bucket owner has permission to publish to the specified topic. If the notification is successfully published to the SNS topic, the PUT operation updates the bucket configuration and returns the 200 OK response with a x-amz-sns-test-message-id header containing the message ID of the test notification sent to topic.
+      
+      To turn off notifications on a bucket, you specify an empty NotificationConfiguration element in your request: <NotificationConfiguration />
+      
+      For more information about setting and reading the notification configuration on a bucket, see Setting Up Notification of Bucket Events. For more information about bucket policies, see Using Bucket Policies.
+    body: 
+      application/xml: 
+        schema: notification-configuration
+        example: !include examples/notification-configuration.xml
+    responses: 
+      200: 
+/?requestPayment: 
+  type: baseResource
+  is: [ authorized ]
+  get: 
+    description: |
+      This implementation of the GET operation uses the requestPayment subresource to return the request payment configuration of a bucket. To use this version of the operation, you must be the bucket owner. For more information, see Requester Pays Buckets.
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: requestPayement-configuration
+            example: !include examples/requestPayement-configuration.xml
+  put: 
+    description: This implementation of the PUT operation uses the requestPayment subresource to set the request payment configuration of a bucket. By default, the bucket owner pays for downloads from the bucket. This configuration parameter enables the bucket owner (only) to specify that the person requesting the download will be charged for the download. For more information, see Requester Pays Buckets.
+    body: 
+      application/xml: 
+        schema: requestPayement-configuration
+        example: !include examples/requestPayement-configuration.xml
+    responses: 
+      200: 
+/?uploads: 
+  type: baseResource
+  is: [ authorized ]
+  get: 
+    description: |
+      This operation lists in-progress multipart uploads. An in-progress multipart upload is a multipart upload that has been initiated, using the Initiate Multipart Upload request, but has not yet been completed or aborted.
+      
+      This operation returns at most 1,000 multipart uploads in the response. 1,000 multipart uploads is the maximum number of uploads a response can include, which is also the default value. You can further limit the number of uploads in a response by specifying the max-uploads parameter in the response. If additional multipart uploads satisfy the list criteria, the response will contain an IsTruncated element with the value true. To list the additional multipart uploads, use the key-marker and upload-id-marker request parameters.
+      
+      In the response, the uploads are sorted by key. If your application has initiated more than one multipart upload using the same object key, then uploads in the response are first sorted by key. Additionally, uploads are sorted in ascending order within each key by the upload initiation time.
+    queryParameters: 
+      delimeter: 
+        description: |
+          Character you use to group keys.  All keys that contain the same string between the prefix, if specified, and the first occurrence of the delimiter after the prefix are grouped under a single result element, CommonPrefixes. If you don't specify the prefix parameter, then the substring starts at the beginning of the key. The keys that are grouped under CommonPrefixes result element are not returned elsewhere in the response.
+      encoding-type: 
+        description: |
+          Requests Amazon S3 to encode the response and specifies the encoding method to use. An object key can contain any Unicode character; however, XML 1.0 parser cannot parse some characters, such as characters with an ASCII value from 0 to 10. For characters that are not supported in XML 1.0, you can add this parameter to request that Amazon S3 encode the keys in the response.
+      max-uploads: 
+        description: |
+          Sets the maximum number of multipart uploads, from 1 to 1,000, to return in the response body. 1,000 is the maximum number of uploads that can be returned in a response.
+        type: integer
+        minimum: 0
+        default: 1000
+      key-marker: 
+        description: |
+          Together with upload-id-marker, this parameter specifies the multipart upload after which listing should begin. If upload-id-marker is not specified, only the keys lexicographically greater than the specified key-marker will be included in the list.
+          If upload-id-marker is specified, any multipart uploads for a key equal to the key-marker might also be included, provided those multipart uploads have upload IDs lexicographically greater than the specified upload-id-marker.
+      prefix: 
+        description: |
+          Lists in-progress uploads only for those keys that begin with the specified prefix. You can use prefixes to separate a bucket into different grouping of keys. (You can think of using prefix to make groups in the same way you'd use a folder in a file system.)
+      upload-id-marker: 
+        description: |
+          Together with key-marker, specifies the multipart upload after which listing should begin. If key-marker is not specified, the upload-id-marker parameter is ignored. Otherwise, any multipart uploads for a key equal to the key-marker might be included in the list only if they have an upload ID lexicographically greater than the specified upload-id-marker.
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: listMultipartUploadsResult
+            example: !include examples/listMultipartUploadsResult.xml
+/{objectName}: 
+  displayName: Operations on Objects
+  type: objectResource
+  is: [ authorized ]
+  uriParameters: 
+    objectName: 
+      description: |
+        Object name
+  get: 
+    description: |
+      This implementation of the GET operation retrieves objects from Amazon S3. To use GET, you must have READ access to the object.
+      If you grant READ access to the anonymous user, you can return the object without using an authorization header.
+      
+      An Amazon S3 bucket has no directory hierarchy such as you would find in a typical computer file system. You can, however,
+      create a logical hierarchy by using object key names that imply a folder structure. For example, instead of naming an
+      object sample.jpg , you can name it photos/2006/February/sample.jpg.
+      
+      To get an object from such a logical hierarchy, specify the full key name for the object in the GET operation. For a virtual
+      hosted-style request example, if you have the object photos/2006/February/sample.jpg, specify the resource as
+      /photos/2006/February/sample.jpg. For a path-style request example, if you have the object photos/2006/February/sample.jpg in
+      the bucket named examplebucket, specify the resource as /examplebucket/photos/2006/February/sample.jpg.
+      
+      To distribute large files to many people, you can save bandwidth costs using BitTorrent.
+      
+      If the object you are retrieving is a GLACIER storage class object, the object is archived in Amazon Glacier. You must firs
+      restore a copy using the POST Object restore API before you can retrieve the object. Otherwise, this operation returns
+      InvalidObjectStateError error.
+      
+      Syntax
+      ------
+          GET /BucketName/ObjectName HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          Authorization: signatureValue
+          Range:bytes=byte_range
+    queryParameters: 
+      response-content-type: 
+        description: |
+          Sets the Content-Type header of the response.
+      response-content-language: 
+        description: |
+          Sets the Content-Language header of the response.
+      response-expires: 
+        description: |
+          Sets the Expires header of the response.
+      response-cache-control: 
+        description: |
+          Sets the Cache-Control header of the response.
+      response-content-disposition: 
+        description: |
+          Sets the Content-Disposition header of the response.
+      response-content-encoding: 
+        description: |
+          Sets the Content-Encoding header of the response.
+    responses: 
+      200: 
+        body: 
+          "*/*": 
+  put: 
+    is: [ hasContent , acl ]
+    description: |
+      This implementation of the PUT operation adds an object to a bucket. You must have WRITE permissions on a bucket to add an object to it.
+      
+      Amazon S3 never adds partial objects; if you receive a success response, Amazon S3 added the entire object to the bucket.
+      
+      Amazon S3 is a distributed system. If it receives multiple write requests for the same object simultaneously, it overwrites all but the
+      last object written. Amazon S3 does not provide object locking; if you need this, make sure to build it into your application
+      layer or use versioning instead.
+      
+      To ensure that data is not corrupted traversing the network, use the Content-MD5 header. When you use this header, Amazon S3 checks
+      the object against the provided MD5 value and, if they do not match, returns an error. Additionally, you can calculate the MD5 while
+      putting an object to Amazon S3 and compare the returned ETag to the calculated MD5 value.
+      
+      **Note**
+      To configure your application to send the Request Headers prior to sending the request body, use the 100-continue HTTP status code.
+      For PUT operations, this helps you avoid sending the message body if the message is rejected based on the headers (e.g., because of
+      authentication failure or redirect).
+      
+      Syntax
+      ------
+          PUT /BucketName/ObjectName HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          Authorization: signatureValue
+    body: 
+      "*/*": 
+    responses: 
+      200: 
+        description: |
+          Object added.
+  delete: 
+    description: |
+      The DELETE operation removes the null version (if there is one) of an object and inserts a delete marker, which becomes the lates
+      version of the object. If there isn't a null version, Amazon S3 does not remove any objects.
+      To remove a specific version, you must be the bucket owner and you must use the versionId subresource. Using this subresource permanently
+      deletes the version. If the object deleted is a Delete Marker, Amazon S3 sets the response header, x-amz-delete-marker, to true.
+      
+      If the object you want to delete is in a bucket where the bucket versioning configuration is MFA Delete enabled, you must include the
+      x-amz-mfa request header in the DELETE versionId request. Requests that include x-amz-mfa must use HTTPS.
+      
+      Syntax
+      ------
+          DELETE /BucketName/ObjectName HTTP/1.1
+          Host: s3.amazonaws.com
+          Date: date
+          Authorization: signatureValue
+    responses: 
+      204: 
+        description: |
+          Object deleted.
+  head: 
+    description: |
+      The HEAD operation retrieves metadata from an object without returning the object itself. This operation is useful if you are interested
+      only in an object's metadata. To use HEAD, you must have READ access to the object.
+      
+      A HEAD request has the same options as a GET operation on an object. The response is identical to the GET response except tha
+      there is no response body.
+      
+      Syntax
+      ------
+          HEAD /BucketName/ObjectName HTTP/1.1
+          Host: s3.amazonaws.com
+          Authorization: signatureValue
+          Date: date
+    responses: 
+      200: 
+        description: OK
+  /?acl: 
+    type: objectResource
+    is: [ authorized ]
+    get: 
+      description: |
+        This implementation of the GET operation uses the acl subresource to return the access control list (ACL) of an object.
+        To use this operation, you must have READ_ACP access to the object.
+        
+        Syntax
+        ------
+            GET /BucketName/ObjectName?acl HTTP/1.1
+            Host: s3.amazonaws.com
+            Date: date
+            Authorization: signatureValue
+            Range:bytes=byte_range
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: object-acl-response
+              example: !include examples/object-acl-response.xml
+    put: 
+      is: [ hasContent , acl ]
+      description: |
+        This implementation of the PUT operation uses the acl subresource to set the access control list (ACL) permissions for an
+        object that already exists in a bucket. You must have WRITE_ACP permission to set the ACL of an object.
+        
+        You can use one of the following two ways to set an object's permissions:
+        * Specify the ACL in the request body, or
+        * Specify permissions using request headers
+        
+        Depending on your application needs, you may choose to set the ACL on an object using either the request body or the headers.
+        For example, if you have an existing application that updates an object ACL using the request body, then you can continue to use that approach.
+        
+        Syntax
+        ------
+        With request body
+        
+            PUT /BucketName/ObjectName?acl HTTP/1.1
+            Host: s3.amazonaws.com
+            Date: date
+            Authorization: signatureValue
+        
+            <AccessControlPolicy>
+              <Owner>
+                <ID>ID</ID>
+                <DisplayName>EmailAddress</DisplayName>
+              </Owner>
+              <AccessControlList>
+                <Grant>
+                  <Grantee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CanonicalUser">
+                    <ID>ID</ID>
+                    <DisplayName>EmailAddress</DisplayName>
+                  </Grantee>
+                  <Permission>Permission</Permission>
+                </Grant>
+              ...
+              </AccessControlList>
+            </AccessControlPolicy>
+        
+        With headers
+        
+            PUT /BucketName/ObjectName?acl HTTP/1.1
+            Host: s3.amazonaws.com
+            Date: date
+            x-amz-grant-write: uri="uri1", emailAddress="email"
+            x-amz-grant-read: uri="uri2"
+            Authorization: signatureValue
+      headers: 
+        x-amz-version-id: 
+          description: |
+            Version of the object whose ACL is being set.
+      body: 
+        application/xml: 
+          schema: bucket-grant-acl
+          example: !include examples/bucket-grant-acl.xml
+      responses: 
+        200: 
+          description: |
+            ACL granted.
+  /?torrent: 
+    type: objectResource
+    is: [ authorized ]
+    description: ""
+    get: 
+      description: |
+        This implementation of the GET operation uses the torrent subresource to return torrent files from a bucket. BitTorrent can save you bandwidth when you're distributing large files. For more information about BitTorrent, see Amazon S3 Torrent.
+        
+        Note
+        You can get torrent only for objects that are less than 5 GB in size and that are not encrypted using server-side encryption with customer-provided encryption key.
+        To use GET, you must have READ access to the object.
+      responses: 
+        200: 
+          description: |
+            returns Bencoded dictionary as defined by the BitTorrent specification
+  /?restore: 
+    type: objectResource
+    is: [ authorized ]
+    post: 
+      description: |
+        Restores a temporary copy of an archived object. You can optionally provide version ID to restore specific object version. If version ID is not provided, it will restore the current version.
+        
+        In the request, you specify the number of days that you want the restored copy to exist. After the specified period, Amazon S3 deletes the temporary copy. Note that the object remains archived; Amazon S3 deletes only the restored copy.
+        
+        An object in the Glacier storage class is an archived object. To access the object, you must first initiate a restore request, which restores a copy of the archived object. Restore jobs typically complete in three to five hours.
+        
+        For more information about archiving objects, go to Object Lifecycle Management in Amazon Simple Storage Service Developer Guide.
+        
+        You can obtain restoration status by sending a HEAD request. In the response, these operations return the x-amz-restore header with restoration status information.
+        
+        After restoring an object copy, you can update the restoration period by reissuing this request with the new period. Amazon S3 updates the restoration period relative to the current time and charges only for the request, and there are no data transfer charges.
+        
+        You cannot issue another restore request when Amazon S3 is actively processing your first restore request for the same object; however, after Amazon S3 restores a copy of the object, you can send restore requests to update the expiration period of the restored object copy.
+        
+        If your bucket has a lifecycle configuration with a rule that includes an expiration action, the object expiration overrides the life span that you specify in a restore request. For example, if you restore an object copy for 10 days but the object is scheduled to expire in 3 days, Amazon S3 deletes the object in 3 days. For more information about lifecycle configuration, see PUT Bucket lifecycle.
+        
+        To use this action, you must have s3:RestoreObject permissions on the specified object. For more information, go to Access Control section in the Amazon S3 Developer Guide.
+      body: 
+        application/xml: 
+          schema: objectRestore
+          example: !include examples/objectRestore-example.xml
+  /?uploads: 
+    type: objectResource
+    is: [ authorized ]
+    description: ""
+    post: 
+      description: |
+        This operation initiates a multipart upload and returns an upload ID. This upload ID is used to associate all the parts in the specific multipart upload. You specify this upload ID in each of your subsequent upload part requests (see Upload Part). You also include this upload ID in the final request to either complete or abort the multipart upload request.
+        Note: After you initiate multipart upload and upload one or more parts, you must either complete or abort multipart upload in order to stop getting charged for storage of the uploaded parts. Only after you either complete or abort multipart upload, Amazon S3 frees up the parts storage and stops charging you for the parts storage.
+      headers: 
+        Cache-Control: 
+          description: |
+            Can be used to specify caching behavior along the request/reply chain. For more information, go to http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9.
+            Type: String
+            Default: None
+        Content-Disposition: 
+          description: |
+            Specifies presentational information for the object. For more information, go to http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1.
+            Type: String
+            Default: None
+        Content-Encoding: 
+          description: |
+            Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. For more information, go to http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11.
+            Type: String
+            Default: None
+        Content-Type: 
+          description: |
+            A standard MIME type describing the format of the object data. For more information, go to http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17.
+            Type: String
+            Default: binary/octel-stream
+            Constraints: MIME types only
+        Expires: 
+          description: |
+            The date and time at which the object is no longer cacheable. For more information, go to http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.21.
+            Type: String
+            Default: None
+        x-amz-meta-: 
+          description: |
+            Any header starting with this prefix is considered user metadata. It will be stored with the object and returned when you retrieve the object.
+            Type: String
+            Default: None
+        x-amz-server-side-encryption: 
+          description: |
+            Specifies the server-side encryption algorithm to use. As you uploads individual object parts, Amazon S3 applies server-side encryption to each part you upload.
+            Type: String
+            Valid Value: AES256
+        x-amz-storage-class: 
+          description: |
+            The type of storage to use for the object that is created after successful multipart upload.
+            Type: String
+            Valid Values: STANDARD | REDUCED_REDUNDANCY
+            Default: STANDARD
+            Constraints: You cannot specify GLACIER as the storage class. To transition objects to the GLACIER storage class you can use lifecycle configuration.
+        x-amz-website-redirect-location: 
+          description: |
+            If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an external URL. Amazon S3 stores the value of this header in the object metadata. For information about object metadata, go to Object Key and Metadata.
+            In the following example, the request header sets the redirect to an object (anotherPage.html) in the same bucket:
+            x-amz-website-redirect-location: /anotherPage.html
+            In the following example, the request header sets the object redirect to another website:
+            x-amz-website-redirect-location: http://www.example.com/
+            For more information about website hosting in Amazon S3, go to sections Hosting Websites on Amazon S3 and How to Configure Website Page Redirects in the Amazon Simple Storage Service Developer Guide.
+            Type: String
+            Default: None
+            Constraints: The value must be prefixed by, "/", "http://" or "https://". The length of the value is limited to 2 K.
+      responses: 
+        200: 
+          description: |
+            This operation initiates a multipart upload for the example-object object.
+          body: 
+            application/xml: 
+              example: !include examples/initiates-multipart-upload-resp.xml
+  /?partNumber={partNumber}&uploadId={uploadId}: 
+    type: objectResource
+    is: [ authorized ]
+    description: ""
+    put: 
+      description: |
+        This operation uploads a part in a multipart upload.
+        Note: In this operation you provide part data in your request. However, you have an option to specify your existing Amazon S3 object as data source for the part your are uploading. To upload a part from an existing object you use the Upload Part (Copy) operation. For more information, see Upload Part - Copy.
+        You must initiate a multipart upload (see Initiate Multipart Upload) before you can upload any part. In response to your initiate request. Amazon S3 returns an upload ID, a unique identifier, that you must include in your upload part request.
+        Part numbers can be any number from 1 to 10,000, inclusive. A part number uniquely identifies a part and also defines its position within the object being created. If you upload a new part using the same part number that was used with a previous part, the previously uploaded part is overwritten. Each part must be at least 5 MB in size, except the last part. There is no size limit on the last part of your multipart upload.
+        To ensure that data is not corrupted when traversing the network, specify the Content-MD5 header in the upload part request. Amazon S3 checks the part data against the provided MD5 value. If they do not match, Amazon S3 returns an error.
+        Note: After you initiate multipart upload and upload one or more parts, you must either complete or abort multipart upload in order to stop getting charged for storage of the uploaded parts. Only after you either complete or abort multipart upload, Amazon S3 frees up the parts storage and stops charging you for the parts storage.
+      headers: 
+        Content-Length: 
+          description: |
+            The size of the part, in bytes. For more information, go to http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.13.
+            Type: Integer
+            Default: None
+        Content-MD5: 
+          description: |
+            The base64-encoded 128-bit MD5 digest of the part data. This header can be used as a message integrity check to verify that the part data is the same data that was originally sent. Although it is optional, we recommend using the Content-MD5 mechanism as an end-to-end integrity check. For more information, see RFC 1864.
+            Type: String
+            Default: None
+        Expect: 
+          description: |
+            When your application uses 100-continue, it does not send the request body until it receives an acknowledgment. If the message is rejected based on the headers, the body of the message is not sent. For more information, go to RFC 2616.
+            Type: String
+            Default: None
+            Valid Values: 100-continue
+        x-amz-copy-source: 
+          description: |
+            The name of the source bucket and the source object key name separated by a slash ('/').
+            Type: String
+            Default: None
+        x-amz-copy-source-range: 
+          description: |
+            The range of bytes to copy from the source object. The range value must use the form bytes=first-last, where the first and last are the zero-based byte offsets to copy. For example, bytes=0-9 indicates that you want to copy the first ten bytes of the source.
+            You can copy a range only if the source object is greater than 5 GB.
+            This request header is not required when copying an entire source object.
+            Type: Integer
+            Default: None
+      responses: 
+        200: 
+        404: 
+          description: The specified multipart upload does not exist. The upload ID might be invalid, or the multipart upload might have been aborted or completed.
+  /?uploadId={UploadId}: 
+    type: objectResource
+    is: [ authorized ]
+    delete: 
+      description: |
+        This operation aborts a multipart upload. After a multipart upload is aborted, no additional parts can be uploaded using that upload ID. The storage consumed by any previously uploaded parts will be freed. However, if any part uploads are currently in progress, those part uploads might or might not succeed. As a result, it might be necessary to abort a given multipart upload multiple times in order to completely free all storage consumed by all parts. To verify that all parts have been removed, so you don't get charged for the part storage, you should call the List Parts operation and ensure the parts list is empty.
+      responses: 
+        204: 
+        404: 
+          description: The specified multipart upload does not exist. The upload ID might be invalid, or the multipart upload might have been aborted or completed.
+    post: 
+      description: |
+        This operation completes a multipart upload by assembling previously uploaded parts.
+      body: 
+        application/xml: 
+          schema: complete-multipart-upload
+          example: !include examples/complete-multipart-upload.xml
+      responses: 
+        200: 
+          description: |
+            The following response indicates that an object was successfully assembled.
+          body: 
+            application/xml: 
+              example: !include examples/complete-multipart-upload-resp.xml
+        400: 
+          description: |
+            EntityTooSmall - Your proposed upload is smaller than the minimum allowed object size. Each part must be at least 5 MB in size, except the last part.
+            InvalidPart    - One or more of the specified parts could not be found. The part might not have been uploaded, or the specified entity tag might not have matched the part's entity tag.
+        403: 
+          description: |
+            The following response indicates that an error occurred before the HTTP response header was sent.
+          body: 
+            application/xml: 
+              example: !include examples/complete-multipart-upload-resp-err.xml
+        404: 
+          description: |
+            NoSuchUpload - The specified multipart upload does not exist. The upload ID might be invalid, or the multipart upload might have been aborted or completed.
+    get: 
+      description: |
+        This operation lists the parts that have been uploaded for a specific multipart upload.
+        
+        This operation must include the upload ID, which you obtain by sending the initiate multipart upload request (see Initiate Multipart Upload). This request returns a maximum of 1,000 uploaded parts. The default number of parts returned is 1,000 parts. You can restrict the number of parts returned by specifying the max-parts request parameter. If your multipart upload consists of more than 1,000 parts, the response returns an IsTruncated field with the value of true, and a NextPartNumberMarker element. In subsequent List Parts requests you can include the part-number-marker query string parameter and set its value to the NextPartNumberMarker field value from the previous response.
+        
+        For more information on multipart uploads, go to Uploading Objects Using Multipart Upload in the Amazon Simple Storage Service Developer Guide .
+        
+        For information on permissions required to use the multipart upload API, go to Multipart Upload API and Permissions in the Amazon Simple Storage Service Developer Guide .
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: upladParts
+              example: !include examples/upladParts-example.xml
+documentation: 
+  - title: Headline
+    content: !include docs/amazonS3Bucket/headline.md
