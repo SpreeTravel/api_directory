@@ -1,0 +1,15 @@
+queryParameters: 
+  format: 
+    description: |
+      The format to return the message in. 
+      
+      Acceptable values are
+      full - Returns the parsed email message content in the payload field and the raw field is not used. (default)
+      
+      minimal - Only returns email message metadata such as identifiers and labels, it does not return the email headers, body, or payload.
+      
+      raw - Returns the entire email message content in the raw field as a string and the payload field is not used. This includes the identifiers, labels, metadata, MIME structure, and small body parts (typically less than 2KB).
+    enum: 
+      - raw
+      - full
+      - minimal

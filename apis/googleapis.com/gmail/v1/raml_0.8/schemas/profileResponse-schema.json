@@ -1,0 +1,23 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "emailAddress" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "messagesTotal" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "threadsTotal" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "historyId" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id" : "146df2af95fffcf2" ,
+  "threadId" : "146df2af95fffcf2" ,
+  "labelIds" : [
+    "SENT"
+  ] ,
+  "snippet" : "This message is intended for tests with GMail API Notebooks." ,
+  "historyId" : "535336" ,
+  "payload" : {
+    "mimeType" : "multipart/mixed" ,
+    "filename" : "" ,
+    "headers" : [
+      {
+        "name" : "Received" ,
+        "value" : "from -0700"
+      } , {
+        "name" : "MIMEVersion" ,
+        "value" : "10"
+      } , {
+        "name" : "Received" ,
+        "value" : "asdad"
+      } , {
+        "name" : "Date" ,
+        "value" : "Fri 27 Jun 2014 14:11:13 -0700"
+      } , {
+        "name" : "Delivered-To" ,
+        "value" : "some.other.account@gmail.com"
+      } , {
+        "name" : "Message-Id" ,
+        "value" : "003 ___NOT A VALID VALUE__ aTOdfg@mail.gmail.com>"
+      } , {
+        "name" : "Subject" ,
+        "value" : "GMail NotebooksTest Message"
+      } , {
+        "name" : "From" ,
+        "value" : "some.account@gmail.com"
+      } , {
+        "name" : "To" ,
+        "value" : "Jack Jackson <some.other.account@gmail.com>"
+      } , {
+        "name" : "Content-Type" ,
+        "value" : "multipart/mixed; boundary=001a11c359f06e359f04fcd5d347"
+      }
+    ] ,
+    "body" : {
+      "size" : 0
+    } ,
+    "parts" : [
+      {
+        "mimeType" : "multipart/alternative" ,
+        "filename" : "" ,
+        "headers" : [
+          {
+            "name" : "Content-Type" ,
+            "value" : "multipart/alternative; boundary=001a11c359f06e358b04fcd5d345"
+          }
+        ] ,
+        "body" : {
+          "size" : 0
+        } ,
+        "parts" : [
+         
+        ]
+      } , {
+        "partId" : "1" ,
+        "mimeType" : "text/plain" ,
+        "filename" : "attachment.txt" ,
+        "headers" : [
+          {
+            "name" : "Content-Type" ,
+            "value" : "text/plain; charset=US-ASCII; name=attachment.txt"
+          } , {
+            "name" : "Content-Disposition" ,
+            "value" : "attachment; filename=attachment.txt"
+          } , {
+            "name" : "Content-Transfer-Encoding" ,
+            "value" : "base64"
+          } , {
+            "name" : "X-Attachment-Id" ,
+            "value" : "f_hwxuybym0"
+          }
+        ] ,
+        "body" : {
+          "attachmentId" : "ANGj ___NOT A VALID VALUE__ 2pfAA" ,
+          "size" : 82
+        }
+      }
+    ]
+  } ,
+  "sizeEstimate" : 1502
+}

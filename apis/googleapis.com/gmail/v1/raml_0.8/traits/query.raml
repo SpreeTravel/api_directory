@@ -1,0 +1,12 @@
+queryParameters: 
+  includeSpamTrash: 
+    description: |
+      Include <<type|!pluralize>> from SPAM and TRASH in the results.
+    type: boolean
+    default: false
+  labelIds: 
+    description: |
+      Only return objects with labels that match all of the specified label IDs.
+  q: 
+    description: |
+      Only return objects matching the specified query. Supports the same query format as the Gmail search box. For example, "from:someuser@example.com rfc822msgid: is:unread".

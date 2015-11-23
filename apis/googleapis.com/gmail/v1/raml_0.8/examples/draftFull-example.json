@@ -1,0 +1,122 @@
+{
+  "id" : "r3089453976128281045" ,
+  "message" : {
+    "id" : "146df5663490d72f" ,
+    "threadId" : "146df5663490d72f" ,
+    "labelIds" : [
+      "DRAFT"
+    ] ,
+    "snippet" : "This message is intended for tests with GMail API Notebooks." ,
+    "historyId" : "535352" ,
+    "payload" : {
+      "mimeType" : "multipart/mixed" ,
+      "filename" : "" ,
+      "headers" : [
+        {
+          "name" : "Received" ,
+          "value" : "from 833522106252-kj93b6c68h8dq0438mjuasrvm6bsfjvm.apps.googleusercontent.com named unknown by gmailapi.google.com with HTTPREST; Fri, 27 Jun 2014 14:58:39 -0700"
+        } , {
+          "name" : "MIME-Version" ,
+          "value" : "1.0"
+        } , {
+          "name" : "Received" ,
+          "value" : "by 10.64.9.232 with HTTP; Fri, 27 Jun 2014 11:53:32 -0700 (PDT)"
+        } , {
+          "name" : "Date" ,
+          "value" : "Fri, 27 Jun 2014 14:58:39 -0700"
+        } , {
+          "name" : "Delivered-To" ,
+          "value" : "some.other.account@gmail.com"
+        } , {
+          "name" : "Message-Id" ,
+          "value" : "<CAEzS4YByT-cDzjGeizmy=zVkgpKnemvvUayfN4EO16tUW9D9Vg@mail.gmail.com>"
+        } , {
+          "name" : "Subject" ,
+          "value" : "GMail NotebooksTest Message"
+        } , {
+          "name" : "From" ,
+          "value" : "some.account@gmail.com"
+        } , {
+          "name" : "To" ,
+          "value" : "Jack Jackson <some.other.account@gmail.com>"
+        } , {
+          "name" : "Content-Type" ,
+          "value" : "multipart/mixed; boundary=001a11c359f06e359f04fcd5d347"
+        }
+      ] ,
+      "body" : {
+        "size" : 0
+      } ,
+      "parts" : [
+        {
+          "mimeType" : "multipart/alternative" ,
+          "filename" : "" ,
+          "headers" : [
+            {
+              "name" : "Content-Type" ,
+              "value" : "multipart/alternative; boundary=001a11c359f06e358b04fcd5d345"
+            }
+          ] ,
+          "body" : {
+            "size" : 0
+          } ,
+          "parts" : [
+            {
+              "partId" : "0.0" ,
+              "mimeType" : "text/plain" ,
+              "filename" : "" ,
+              "headers" : [
+                {
+                  "name" : "Content-Type" ,
+                  "value" : "text/plain; charset=UTF-8"
+                }
+              ] ,
+              "body" : {
+                "size" : 62 ,
+                "data" : "VGhpcyBtZXNzYWdlIGlzIGludGVuZGVkIGZvciB0ZXN0cyB3aXRoIEdNYWlsIEFQSSBOb3RlYm9va3MuDQo="
+              }
+            } , {
+              "partId" : "0.1" ,
+              "mimeType" : "text/html" ,
+              "filename" : "" ,
+              "headers" : [
+                {
+                  "name" : "Content-Type" ,
+                  "value" : "text/html; charset=UTF-8"
+                }
+              ] ,
+              "body" : {
+                "size" : 152 ,
+                "data" : "PGRpdiBkaXI9Imx0ciI-PHNwYW4gc3R5bGU9ImZvbnQtZmFtaWx5OmFyaWFsLHNhbnMtc2VyaWY7Zm9udC1zaXplOjEzcHgiPlRoaXMgbWVzc2FnZSBpcyBpbnRlbmRlZCBmb3IgdGVzdHMgd2l0aCBHTWFpbCBBUEkgTm90ZWJvb2tzLjwvc3Bhbj48YnI-PC9kaXY-DQo="
+              }
+            }
+          ]
+        } , {
+          "partId" : "1" ,
+          "mimeType" : "text/plain" ,
+          "filename" : "attachment.txt" ,
+          "headers" : [
+            {
+              "name" : "Content-Type" ,
+              "value" : "text/plain; charset=US-ASCII; name=attachment.txt"
+            } , {
+              "name" : "Content-Disposition" ,
+              "value" : "attachment; filename=attachment.txt"
+            } , {
+              "name" : "Content-Transfer-Encoding" ,
+              "value" : "base64"
+            } , {
+              "name" : "X-Attachment-Id" ,
+              "value" : "f_hwxuybym0"
+            }
+          ] ,
+          "body" : {
+            "attachmentId" : "ANGjdJ-foNW8gRk2isBDOUCrQYihN4d5bI4Ow2XmIc6CbfLMtnolkw654O7JVwdbXrQZ8YHNYlIUfQVsH8ywpGJpaefpFO6imZKemAoDXZjP8NhrUI6aZ9AT89apJYumcxeyK5gGXc0rRnCTo2o8863w2Y0UTww-Vu4O8Ct0OHx5pYsTUF56q3KVaP2zsHI3_4JOr1N7tWFam7gD8sEDDPl17xqKVGJ_4HIJGGq0wAKeS9w4_l_Ssot73zc-_fMaZyCsoWwdguag8m5eFGKEinaEpqrL5vS8K90-H7iEaw" ,
+            "size" : 82
+          }
+        }
+      ]
+    } ,
+    "sizeEstimate" : 1502
+  }
+}

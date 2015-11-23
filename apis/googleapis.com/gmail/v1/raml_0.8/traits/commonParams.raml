@@ -1,0 +1,30 @@
+queryParameters: 
+  callback: 
+    description: |
+      Callback function. Name of the JavaScript callback function that handles the response. Used in JavaScript JSON-P requests.
+  fields: 
+    description: |
+      Selector specifying a subset of fields to include in the response. For more information, see the partial response section in the Performance Tips document. Use for better performance.
+  prettyPrint: 
+    description: |
+      Returns response with indentations and line breaks. Returns the response in a human-readable format if 'true'. When this is 'false', it can reduce the response payload size, which might lead to better performance in some environments.    
+    type: boolean
+    default: true
+  quotaUser: 
+    description: |
+      Alternative to 'userIp'. Lets you enforce per-user quotas from a server-side application even in cases when the user's IP address is unknown. This can occur, for example, with applications that run cron jobs on App Engine on a user's behalf. You can choose any arbitrary string that uniquely identifies a user, but it is limited to 40 characters. Overrides 'userIp' if both are provided.
+      Learn more about capping usage.
+  userIp: 
+    description: |
+      IP address of the end user for whom the API call is being made. Lets you enforce per-user quotas when calling the API from a server-side application. Learn more about capping usage.
+responses: 
+  401: 
+    body: 
+      application/json: 
+        schema: invalidCredentials
+        example: !include ../examples/invalidCredentials-example.json
+  404: 
+    body: 
+      application/json: 
+        schema: notFound
+        example: !include ../examples/notFound-example.json

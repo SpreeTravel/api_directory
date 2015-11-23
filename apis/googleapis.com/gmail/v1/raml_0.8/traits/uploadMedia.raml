@@ -1,0 +1,10 @@
+queryParameters: 
+  uploadType: 
+    description: |
+      The type of upload request to the /upload URI. Acceptable values are
+      
+      media - Simple upload. Upload the media only, without any metadata.
+      
+      multipart - Multipart upload. Upload both the media and its metadata, in a single request.
+    required: true
+    enum: [ multipart , media ]

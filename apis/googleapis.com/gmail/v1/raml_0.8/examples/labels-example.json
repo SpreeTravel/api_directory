@@ -1,0 +1,19 @@
+{
+  "labels" : [
+    {
+      "id" : "DRAFT" ,
+      "name" : "DRAFT" ,
+      "messageListVisibility" : "hide" ,
+      "labelListVisibility" : "labelShow" ,
+      "type" : "system"
+    } , {
+      "id" : "CATEGORY_UPDATES" ,
+      "name" : "CATEGORY_UPDATES" ,
+      "type" : "system"
+    } , {
+      "id" : "UNREAD" ,
+      "name" : "UNREAD" ,
+      "type" : "system"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+queryParameters: 
+  uploadType: 
+    description: |
+      The type of upload request to the /upload URI. Acceptable values are
+      
+      multipart - Multipart upload. Upload both the media and its metadata, in a single request.
+      
+      resumable - Resumable upload. Upload the file in a resumable fashion, using a series of at least two requests where the first request includes the metadata.
+    required: true
+    enum: [ resumable , multipart ]

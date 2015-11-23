@@ -1,0 +1,6 @@
+{
+  "emailAddress" : "string" ,
+  "messagesTotal" : "integer" ,
+  "threadsTotal" : "integer" ,
+  "historyId" : "unsigned long"
+}

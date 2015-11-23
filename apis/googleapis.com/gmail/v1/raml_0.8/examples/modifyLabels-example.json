@@ -1,0 +1,8 @@
+{
+  "addLabelIds" : [
+    "TRASH"
+  ] ,
+  "removeLabelIds" : [
+    "DRAFT"
+  ]
+}

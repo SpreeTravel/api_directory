@@ -1,0 +1,343 @@
+#%RAML 0.8
+title: GMail
+version: v1
+baseUri: https://www.googleapis.com/gmail/{version}/users
+mediaType: application/json
+securitySchemes:
+  - oauth_2_0: !include securitySchemes/oauth_2_0.raml
+schemas:
+  - messageFull: !include schemas/messageFull-schema.json
+  - invalidCredentials: !include schemas/invalidCredentials-schema.json
+  - message: !include schemas/message-schema.json
+  - notFound: !include schemas/notFound-schema.json
+  - messages: !include schemas/messages-schema.json
+  - messageCreate: !include schemas/messageCreate-schema.json
+  - messageCreated: !include schemas/messageCreated-schema.json
+  - messageImported: !include schemas/messageImported-schema.json
+  - modifyLabels: !include schemas/modifyLabels-schema.json
+  - attachment: !include schemas/attachment-schema.json
+  - drafts: !include schemas/drafts-schema.json
+  - draftCreate: !include schemas/draftCreate-schema.json
+  - draft: !include schemas/draft-schema.json
+  - draftFull: !include schemas/draftFull-schema.json
+  - history: !include schemas/history-schema.json
+  - labels: !include schemas/labels-schema.json
+  - labelCreate: !include schemas/labelCreate-schema.json
+  - label: !include schemas/label-schema.json
+  - threads: !include schemas/threads-schema.json
+  - thread: !include schemas/thread-schema.json
+  - profileResponse: !include schemas/profileResponse-schema.json
+resourceTypes:
+  - base: !include resourceTypes/base.raml
+traits:
+  - formatted: !include traits/formatted.raml
+  - query: !include traits/query.raml
+  - paginated: !include traits/paginated.raml
+  - uploadMetadata: !include traits/uploadMetadata.raml
+  - commonParams: !include traits/commonParams.raml
+securedBy: [ oauth_2_0 ]
+/{userId}: 
+  /messages: 
+    get: 
+      is: [ paginated: { type: message } , query: { type: message } ]
+      description: "Lists the messages in the user's mailbox."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: messages
+              example: !include examples/messages-example.json
+    post: 
+      is: [ uploadMetadata ]
+      description: "Metadata-only request. Directly inserts a message into only this user's mailbox. Does not send a message."
+      body: 
+        application/json: 
+          schema: messageCreate
+          example: !include examples/messageCreate-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: messageCreated
+              example: !include examples/messageCreated-example.json
+    /send: 
+      type: base
+      post: 
+        is: [ uploadMetadata ]
+        description: "Metadata-only request. Sends the specified message to the recipients in the 'To', 'Cc', and 'Bcc' headers."
+        body: 
+          application/json: 
+            schema: messageCreate
+            example: !include examples/messageCreate-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: message
+                example: !include examples/message-example.json
+    /import: 
+      type: base
+      post: 
+        is: [ uploadMetadata ]
+        description: "Metadata-only request. Directly imports a message into only this user's mailbox, similar to receiving via SMTP. Does not send a message."
+        body: 
+          application/json: 
+            schema: messageCreate
+            example: !include examples/messageCreate-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: messageImported
+                example: !include examples/messageImported-example.json
+    /{messageId}: 
+      get: 
+        is: [ formatted ]
+        description: Gets the specified message.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: messageFull
+                example: !include examples/messageFull-example.json
+      delete: 
+        description: "Immediately and permanently deletes the specified message. This operation cannot be undone. Prefer 'messages.trash' instead."
+      /modify: 
+        type: base
+        post: 
+          description: Modifies the labels on the specified message.
+          body: 
+            application/json: 
+              schema: modifyLabels
+              example: !include examples/modifyLabels-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: message
+                  example: !include examples/message-example.json
+      /untrash: 
+        type: base
+        post: 
+          description: Removes the specified message from the trash.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  example: !include examples/message-example.json
+      /trash: 
+        type: base
+        post: 
+          description: Moves the specified message to the trash.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  example: !include examples/message-example.json
+      /attachments/{id}: 
+        type: base
+        get: 
+          description: Gets the specified message attachment.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: attachment
+                  example: !include examples/attachment-example.json
+  /drafts: 
+    type: base
+    get: 
+      is: [ paginated: { type: draft } ]
+      description: "Lists the drafts in the user's mailbox."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: drafts
+              example: !include examples/drafts-example.json
+    post: 
+      is: [ uploadMetadata ]
+      description: Metadata-only request. Creates a new draft with the DRAFT label.
+      body: 
+        application/json: 
+          schema: draftCreate
+          example: !include examples/draftCreate-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: draft
+              example: !include examples/draft-example.json
+    /{id}: 
+      type: base
+      get: 
+        is: [ formatted ]
+        description: Gets the specified draft.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: draftFull
+                example: !include examples/draftFull-example.json
+      delete: 
+        description: Immediately and permanently deletes the specified draft. Does not simply trash it.
+      put: 
+        is: [ uploadMetadata ]
+        description: "Metadata-only request. Replaces a draft's content."
+        body: 
+          application/json: 
+            schema: draftCreate
+            example: !include examples/draftCreate-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: draft
+                example: !include examples/draft-example.json
+    /send: 
+      type: base
+      post: 
+        is: [ uploadMetadata ]
+        description: "Metadata-only request. Sends the specified, existing draft to the recipients in the 'To', 'Cc', and 'Bcc' headers."
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: draft
+                example: !include examples/draft-example.json
+  /history: 
+    type: base
+    get: 
+      is: [ paginated: { type: history record } ]
+      description: "Lists the history of all changes to the given mailbox. History results are returned in chronological order (increasing 'historyId')."
+      queryParameters: 
+        labelId: 
+          description: Only return messages with a label matching the ID.
+        startHistoryId: 
+          description: "Returns history records after the specified startHistoryId. The supplied 'startHistoryId' should be obtained from the 'historyId' of a message, thread, or previous 'list' response. History IDs increase chronologically but are not contiguous with random gaps in between valid IDs. Supplying an invalid or out of date 'startHistoryId' typically returns an HTTP 404 error code. A 'historyId' is typically valid for at least a week, but in some circumstances may be valid for only a few hours. If you receive an HTTP 404 error response, your application should perform a full sync. If you receive no 'nextPageToken' in the response, there are no updates to retrieve and you can store the returned 'historyId' for a future request."
+          required: true
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: history
+              example: !include examples/history-example.json
+  /labels: 
+    type: base
+    get: 
+      description: "Lists all labels in the user's mailbox."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: labels
+              example: !include examples/labels-example.json
+    post: 
+      description: Creates a new label.
+      body: 
+        application/json: 
+          schema: labelCreate
+          example: !include examples/labelCreate-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: label
+              example: !include examples/label-example.json
+    /{id}: 
+      type: base
+      get: 
+        description: Gets the specified label.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: label
+                example: !include examples/label-example.json
+      delete: 
+        description: Immediately and permanently deletes the specified label and removes it from any messages and threads that it is applied to.
+      patch: 
+        description: Updates the specified label. This method supports patch semantics.
+        body: 
+          application/json: 
+            schema: labelCreate
+            example: !include examples/labelCreate-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                example: !include examples/label-example.json
+      put: 
+        description: Updates the specified label.
+        body: 
+          application/json: 
+            example: !include examples/labelCreate-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                example: !include examples/label-example.json
+  /threads: 
+    get: 
+      is: [ paginated: { type: thread } , query: { type: thread } ]
+      description: "Lists the threads in the user's mailbox."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: threads
+              example: !include examples/threads-example.json
+    /{id}: 
+      get: 
+        description: Gets the specified thread.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: thread
+                example: !include examples/thread-example.json
+      delete: 
+        description: "Immediately and permanently deletes the specified thread. This operation cannot be undone. Prefer 'threads.trash' instead."
+      /modify: 
+        type: base
+        post: 
+          description: Modifies the labels applied to the thread. This applies to all messages in the thread.
+          body: 
+            application/json: 
+              schema: modifyLabels
+              example: !include examples/modifyLabels-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: thread
+                  example: !include examples/thread-example.json
+      /trash: 
+        type: base
+        post: 
+          description: Moves the specified thread to the trash.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  example: !include examples/thread-example.json
+      /untrash: 
+        type: base
+        post: 
+          description: Removes the specified thread from the trash.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  example: !include examples/thread-example.json
+  /profile: 
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: profileResponse
+              example: !include examples/profileResponse-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/api/headline.md
