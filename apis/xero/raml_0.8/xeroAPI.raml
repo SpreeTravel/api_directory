@@ -1,0 +1,987 @@
+#%RAML 0.8
+title: Xero.com API
+version: 2.35
+baseUri: https://api.xero.com/api.xro/2.0
+mediaType: application/xml
+securitySchemes:
+  - public: !include securitySchemes/public.raml
+  - private: !include securitySchemes/private.raml
+schemas:
+  - account: !include schemas/account-schema.xsd
+  - accounts: !include schemas/accounts.xsd
+  - allocationsCollection: !include schemas/allocationsCollection.xsd
+  - attachmentSummariesCollection: !include schemas/attachmentSummariesCollection.xsd
+  - bankStatementReport: !include schemas/bankStatementReport.xsd
+  - bankTransactions: !include schemas/bankTransactions.xsd
+  - bankTransaction: !include schemas/bankTransaction.xsd
+  - bankTransactionDetailsCollection: !include schemas/bankTransactionDetailsCollection.xsd
+  - brandingThemes: !include schemas/brandingThemes.xsd
+  - contacts: !include schemas/contacts.xsd
+  - contactDetailsCollection: !include schemas/contactDetailsCollection.xsd
+  - contact: !include schemas/contact.xsd
+  - creditNote: !include schemas/creditNote.xsd
+  - creditNotes: !include schemas/creditNotes.xsd
+  - currenciesCollection: !include schemas/currenciesCollection.xsd
+  - employee: !include schemas/employee.xsd
+  - employees: !include schemas/employees.xsd
+  - employeeDetails: !include schemas/employeeDetails.xsd
+  - expenseClaim: !include schemas/expenseClaim.xsd
+  - expenseClaims: !include schemas/expenseClaims.xsd
+  - expenseClaimStatusCollection: !include schemas/expenseClaimStatusCollection.xsd
+  - expenseClaimDetails: !include schemas/expenseClaimDetails.xsd
+  - invoice: !include schemas/invoice.xsd
+  - invoices: !include schemas/invoices.xsd
+  - invoiceDetailsCollection: !include schemas/invoiceDetailsCollection.xsd
+  - item: !include schemas/item.xsd
+  - items: !include schemas/items.xsd
+  - journal: !include schemas/journal.xsd
+  - journals: !include schemas/journals.xsd
+  - manualJournal: !include schemas/manualJournal.xsd
+  - manualJournals: !include schemas/manualJournals.xsd
+  - organisations: !include schemas/organisations.xsd
+  - payment: !include schemas/payment.xsd
+  - payments: !include schemas/payments.xsd
+  - receiptDetailsCollection: !include schemas/receiptDetailsCollection.xsd
+  - receipt: !include schemas/receipt.xsd
+  - receipts: !include schemas/receipts.xsd
+  - reports: !include schemas/reports.xsd
+  - taxRate: !include schemas/taxRate.xsd
+  - taxRateDetailsCollection: !include schemas/taxRateDetailsCollection.xsd
+  - trackingCategoriesCollection: !include schemas/trackingCategoriesCollection.xsd
+  - trialBalanceReportsCollection: !include schemas/trialBalanceReportsCollection.xsd
+  - users: !include schemas/users.xsd
+resourceTypes:
+  - xeroResource: !include resourceTypes/xeroResource.raml
+  - collection: !include resourceTypes/collection.raml
+traits:
+  - filtered: !include traits/filtered.raml
+  - ordered: !include traits/ordered.raml
+  - filterableByDate: !include traits/filterableByDate.raml
+  - errorSummarized: !include traits/errorSummarized.raml
+  - supportsStandardLayout: !include traits/supportsStandardLayout.raml
+  - requiresContactId: !include traits/requiresContactId.raml
+  - paginated: !include traits/paginated.raml
+  - modifiedAfter: !include traits/modifiedAfter.raml
+  - date: !include traits/date.raml
+securedBy: [ public , private ]
+/Accounts: 
+  displayName: Accounts
+  type: { collection: { name: account } }
+  description: |
+    The accounts in the Chart of Accounts for a Xero organisation
+  get: 
+    is: [ filtered , ordered , modifiedAfter ]
+    description: Returns the Chart of Accounts for a Xero organisation
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include examples/accounts-example.xml
+  put: 
+    description: |
+      Use this method to create new accounts
+      Current Limitations:
+      Adding accounts of type BANK will be supported in a future release
+      You can only add accounts one at a time (i.e. youâ€™ll need to do multiple API calls to add many accounts)
+      Updating accounts is not currently supported
+      Replacing the entire chart of accounts is not currently supported
+    body:
+      application/xml:
+        example: !include examples/account-example.xml
+  /{accountId}: 
+    type: xeroResource
+    uriParameters: 
+      accountId: 
+        description: The Xero identifier for an account
+        example: 297c2dc5-cc47-4afd-8ec8-74990b8761e9
+    get: 
+      description: |
+        Returns a single account from the Chart of Accounts in a Xero organisation
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: accounts
+              example: !include examples/accounts-example.xml
+/BankTransactions: 
+  displayName: Bank Transactions
+  type: { collection: { name: bankTransaction } }
+  description: |
+    Allows you to retrieve any spend or receive money transactions.
+    Allows you to add or update spend or receive money transactions.
+  get: 
+    is: [ filtered , ordered , modifiedAfter ]
+    description: |
+      Use this method to retrieve either one or many bank transactions.
+      As many bank transactions are being returned only a summary of the contact is returned and no line details are returned - this is to keep the response more compact.
+      NB This endpoint does not return payments applied to invoices or transfers between bank accounts
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include examples/bankTransactions-example.xml
+  post: 
+    is: [ errorSummarized ]
+    description: |
+      Use this method to create or update a SPEND MONEY or RECEIVE MONEY transaction.
+      Note - you cannot create overpayments, prepayments or transfers using PUT/POST BankTranasctions at this time. Support for these will be added in a future release
+    body:
+      application/xml:
+        example: !include examples/bankTransaction-example.xml
+  put: 
+    is: [ errorSummarized ]
+    description: |
+      The PUT method is similar to the POST BankTransactions method, however you can only create new bank transactions with this method
+    body:
+      application/xml:
+        example: !include examples/bankTransaction-example.xml
+  /{invoiceId}: 
+    type: xeroResource
+    description: |
+      Apply a filter to request just a single bank transaction.
+      NB The response format is more detailed compared with when bank transactions are returned. This response includes full line item details.
+    uriParameters: 
+      invoiceId: 
+        description: The Xero identifier for a Bank Transaction
+        example: 297c2dc5-cc47-4afd-8ec8-74990b8761e9
+    get: 
+      description: The response about a single bank transaction.
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: bankTransactionDetailsCollection
+              example: !include examples/bankTransactionDetailsCollection-example.xml
+/BrandingThemes: 
+  displayName: Branding Themes
+  type: { collection: { name: brandingTheme } }
+  description: |
+    Returns a list of branding themes defined for a Xero organisation
+  get: 
+  /{brandingThemeId}: 
+    type: xeroResource
+    description: |
+      Apply a filter to request just a single branding theme.
+    uriParameters: 
+      brandingThemeId: 
+        description: Xero identifier
+        example: a94a78db-5cc6-4e26-a52b-045237e56e6e
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: brandingThemes
+              example: !include examples/brandingThemes-example.xml
+/Contacts: 
+  type: { collection: { name: contact } }
+  description: |
+    Allows you to retrieve, add and update contacts in a Xero organisation
+  get: 
+    is: [ filtered , ordered , modifiedAfter , paginated ]
+    description: |
+      Retrieves contacts in a Xero organisation
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include examples/contacts-example.xml
+  post: 
+    description: |
+      Use this method to create or update one or more contact records.
+      When you are updating a contact you don't need to specify every element. If you exclude an element then the existing value of that field will be preserved. For example in the example above the existing phone numbers will be preserved as they were not specified.
+      If you are updating contacts to match those of another system we recommend that you try and update as many fields as possible.
+    body:
+      application/xml:
+        example: !include examples/contact-example.xml
+  put: 
+    description: |
+      Use this method to create one or more contact records. This method works very similar to POST Contacts but if an existing contact matches your ContactName or ContactNumber then you will receive an error.
+    body:
+      application/xml:
+        example: !include examples/contact-example.xml
+  /{contactId}: 
+    type: xeroResource
+    description: |
+      Apply a filter to request just a single bank transaction.
+    uriParameters: 
+      contactId: 
+        description: |
+          ContactID is a read only identifier which is generated by Xero when a contact is created either in the application or via the API. i.e. You cannot specify this element when creating a new contact
+          example 297c2dc5-cc47-4afd-8ec8-74990b8761e9
+          OR
+          ContactNumber is a custom identifier specified from another system
+          example CUST100
+        example: 297c2dc5-cc47-4afd-8ec8-74990b8761e9
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: contactDetailsCollection
+              example: !include examples/contactDetailsCollection-example.xml
+    post: 
+      description: |
+        Use this method to create or update a contact record.
+        When you are updating a contact you don't need to specify every element. If you exclude an element then the existing value of that field will be preserved. If you are updating contacts to match those of another system we recommend that you try and update as many fields as possible.
+      body: 
+        application/xml: 
+          schema: contact
+          example: !include examples/contact-example.xml
+/CreditNotes: 
+  type: { collection: { name: creditNote } }
+  description: |
+    Allows you to retrieve any credit notes, add, update or delete draft credit notes, add approved credit notes, allocate part or full amounts of credit notes to outstanding invoices, void approved credit notes.
+    Note: To refund credit notes use the payments endpoint
+  post: 
+    is: [ errorSummarized ]
+    description: |
+      Use this method to create or update a standalone credit note with either a DRAFT, SUBMITTED or AUTHORISED status by specifying the Status element in your request.
+    body:
+      application/xml:
+        example: !include examples/creditNote-example.xml
+  put: 
+    is: [ errorSummarized ]
+    description: |
+      The PUT method is similar to the POST CreditNotes method, however you can only create new credit notes with this method (i.e. no edits).
+    body:
+      application/xml:
+        example: !include examples/creditNote-example.xml
+  get: 
+    is: [ filtered , ordered , modifiedAfter ]
+    description: |
+      Allows you to retrieve credit notes.
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include examples/creditNotes-example.xml
+  /{creditNoteId}: 
+    type: xeroResource
+    description: |
+      Allows you to retrieve an specific credit note, specifying an individual record (CreditNoteID or CreditNoteNumber)
+    uriParameters: 
+      creditNoteId: 
+        description: |
+          The Xero identifier for a Credit Note
+          example 297c2dc5-cc47-4afd-8ec8-74990b8761e9
+          OR
+          Identifier for Credit Note
+          example CN-100
+        example: 297c2dc5-cc47-4afd-8ec8-74990b8761e9
+    get: 
+      is: [ filtered , ordered , modifiedAfter ]
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: creditNote
+              example: !include examples/creditNote-example.xml
+    /Allocations: 
+      type: xeroResource
+      description: |
+        You can allocate part or full amounts of credit notes to outstanding invoices.
+      put: 
+        description: |
+          Allows you to allocate part or full amounts of credit notes to outstanding invoices
+        body: 
+          application/xml: 
+            schema: allocationsCollection
+            example: !include examples/allocationsCollection-example.xml
+/Currencies: 
+  type: xeroResource
+  description: |
+    Allows you to retrieve currencies for your organisation
+  get: 
+    is: [ filtered , ordered , modifiedAfter ]
+    description: Returns code and name of the currencies for your organisation
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: currenciesCollection
+            example: !include examples/currenciesCollection-example.xml
+/Employees: 
+  type: { collection: { name: employee } }
+  description: |
+    Allows you to retrieve, add and update employees in a Xero organisation
+  post: 
+    description: |
+      Use this method to create or update one or more employee records.
+      When you are updating an employee you don't need to specify every element.
+      If you exclude an element then the existing value of that field will be preserved.
+    body:
+      application/xml:
+        example: !include examples/employee-example.xml
+  put: 
+    description: |
+      Use this method to create one or more employee records.
+      This method works very similar to POST Employees
+      but if an existing employee matches your FirstName and LastName then you will receive an error.
+    body:
+      application/xml:
+        example: !include examples/employee-example.xml
+  get: 
+    is: [ filtered , ordered , modifiedAfter ]
+    description: |
+      Use this method to retrieve employees in a Xero organisation
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include examples/employees-example.xml
+  /{employeeId}: 
+    type: xeroResource
+    description: |
+      Allows you to retrieve a specific employee
+    uriParameters: 
+      employeeId: 
+        description: The Xero identifier for an employee
+        example: 297c2dc5-cc47-4afd-8ec8-74990b8761e9
+    get: 
+      is: [ filtered , ordered , modifiedAfter ]
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: employeeDetails
+              example: !include examples/employeeDetails-example.xml
+/ExpenseClaims: 
+  displayName: Expense Claims
+  type: { collection: { name: expenseClaim } }
+  description: |
+    Allows you to submit expense claims for approval or to retrieve expense claims to see their status
+  post: 
+    is: [ errorSummarized ]
+    description: |
+      Use this method to submit one or many expense claims.
+      Note that you cannot authorise or pay and expense claim via the Xero API at this time.
+      Authorisation and payment needs to be done in the Xero app.
+    body:
+      application/xml:
+        example: !include examples/expenseClaim-example.xml
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: expenseClaimStatusCollection
+            example: !include examples/expenseClaimStatusCollection-example.xml
+  put: 
+    is: [ errorSummarized ]
+    description: |
+      The PUT method is similar to the POST ExpenseClaims method.
+    body:
+      application/xml:
+        example: !include examples/expenseClaim-example.xml
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: expenseClaimStatusCollection
+            example: !include examples/expenseClaimStatusCollection-example.xml
+  get: 
+    is: [ filtered , ordered , modifiedAfter ]
+    description: |
+      Use this method to retrieve many expense claims.
+      As many expense claims are being returned only a summary of the contact is returned
+      and no line details are returned - this is to keep the response more compact.
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include examples/expenseClaims-example.xml
+  /{expenseClaimId}: 
+    type: xeroResource
+    description: |
+      Allows you to retrieve an expense claim to see its status
+    uriParameters: 
+      expenseClaimId: 
+        description: The Xero identifier for an Expense Claim
+        example: 297c2dc5-cc47-4afd-8ec8-74990b8761e9
+    get: 
+      is: [ filtered , ordered , modifiedAfter ]
+      description: |
+        Use this method to retrieve an specific expense claim.
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: expenseClaimDetails
+              example: !include examples/expenseClaimDetails-example.xml
+/Invoices: 
+  type: { collection: { name: invoice } }
+  description: |
+    Allows you to retrieve any invoices, add update or delete draft invoices,
+    add or update submitted invoices, add or void approved invoices.
+  post: 
+    is: [ errorSummarized ]
+    description: |
+      Use this method to create or update an invoice.
+      When creating new invoices  or modifying existing invoices, you can optionally specify a Status element.
+      New invoices can have either one of the following three status codes :
+       - DRAFT: The default status if this element is not provided with your API call
+       - SUBMITTED
+       - AUTHORISED
+      For existing invoices, the valid state changes for invoices are:
+       - From DRAFT to DRAFT
+       - From DRAFT to SUBMITTED
+       - From DRAFT to AUTHORISED
+       - From DRAFT to DELETED
+    body:
+      application/xml:
+        example: !include examples/invoice-example.xml
+  put: 
+    is: [ errorSummarized ]
+    description: |
+      The PUT method is similar to the POST Invoices method, however you can only create new invoices with this method.
+    body:
+      application/xml:
+        example: !include examples/invoice-example.xml
+  get: 
+    is: [ filtered , ordered , modifiedAfter ]
+    description: |
+      Use this method to retrieve many invoices.
+      When you retrieve multiple invoices, only a summary of the contact is returned
+      and no line details are returned - this is to keep the response more compact.
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include examples/invoices-example.xml
+  /{invoiceId}: 
+    type: xeroResource
+    is: [ filtered , ordered , modifiedAfter ]
+    description: |
+      Allows you to retrieve an invoice, by appending the identifier (InvoiceID or InvoiceNumber) to the endpoint
+    uriParameters: 
+      invoiceId: 
+        description: |
+          The Xero identifier for an Invoice (UUID)
+          example 297c2dc5-cc47-4afd-8ec8-74990b8761e9
+          OR
+          The invoice number
+          example INV-01514
+        example: 297c2dc5-cc47-4afd-8ec8-74990b8761e9
+    get: 
+      description: Use this method to retrieve an specific invoice
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: invoiceDetailsCollection
+              example: !include examples/invoiceDetailsCollection-example.xml
+/Items: 
+  type: { collection: { name: item } }
+  description: |
+    Allows you to retrieve, add or update an item for use on invoices and credit notes
+  post: 
+    description: Use this method to create or update an item.
+    body:
+      application/xml:
+        example: !include examples/item-example.xml
+  put: 
+    description: |
+      The PUT method is similar to the POST Items method,
+      however you can only create new items with this method.
+    body:
+      application/xml:
+        example: !include examples/item-example.xml
+  get: 
+    is: [ filtered , ordered , modifiedAfter ]
+    description: Use this method to retrieve many items.
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include examples/items-example.xml
+  /{itemId}: 
+    type: xeroResource
+    description: |
+      Allows you to retrieve an item, by appending the identifier (itemId or Code) to the endpoint
+    uriParameters: 
+      itemId: 
+        description: |
+          The Xero identifier for an Item
+          example SCS-100
+          OR
+          The item Code
+          example 297c2dc5-cc47-4afd-8ec8-74990b8761e9
+        example: 297c2dc5-cc47-4afd-8ec8-74990b8761e9
+    get: 
+      is: [ filtered , ordered , modifiedAfter ]
+      description: Use this method to retrieve an specific item
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: item
+              example: !include examples/item-example.xml
+/Journals: 
+  type: { collection: { name: journal } }
+  description: Allows you to retrieve any journals.
+  get: 
+    is: [ filtered , ordered , modifiedAfter ]
+    description: |
+      Use this method to retrieve many journals
+      A maximum of 100 journals will be returned in any response.
+      Use the offset or If-Modified-Since filters with multiple API calls to retrieve larger sets of journals.
+      Journals are ordered oldest to newest.
+    queryParameters: 
+      offset: 
+        description: |
+          Offset by a specified journal number.
+          e.g. journals with a JournalNumber greater than the offset will be returned.
+        type: integer
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include examples/journals-example.xml
+  /{journalId}: 
+    type: xeroResource
+    description: Allows you to retrieve a Journal by appending the identifier (JournalID or JournalCode) to the endpoint
+    uriParameters: 
+      journalId: 
+        description: |
+          The Xero identifier for an Journal
+          example 297c2dc5-cc47-4afd-8ec8-74990b8761e9
+          OR
+          The journal number (integer)
+          example 100
+        example: 297c2dc5-cc47-4afd-8ec8-74990b8761e9
+    get: 
+      is: [ filtered , ordered , modifiedAfter ]
+      description: Use this method to retrieve am specific journal
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: journal
+              example: !include examples/journal-example.xml
+/ManualJournals: 
+  type: { collection: { name: manualJournal } }
+  description: |
+    Allows you to retrieve any manual journals and add or update draft or posted manual journals
+  post: 
+    description: Use this method to create or update a manual journal with a DRAFT status or POSTED status.
+    body:
+      application/xml:
+        example: !include examples/manualJournal-example.xml
+    responses: 
+      400: 
+        description: |
+          Validation error. You will receive a 400 validation error if you try and use reserved accounts. These include system accounts (accounts receivable, accounts payable & retained earnings) and bank accounts
+  put: 
+    description: |
+      The PUT method is similar to the POST ManualJournals method,
+      however you can only create new manual journals with this method.
+    body:
+      application/xml:
+        example: !include examples/manualJournal-example.xml
+    responses: 
+      400: 
+        description: |
+          Validation error
+          You will receive a 400 validation error if you try and use reserved accounts. These include system accounts (accounts receivable, accounts payable & retained earnings) and bank accounts
+  get: 
+    is: [ filtered , ordered , modifiedAfter ]
+    description: Use this method to retrieve many manual journals.
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include examples/manualJournals-example.xml
+  /{journalId}: 
+    type: xeroResource
+    description: Allows you to retrieve a Journal by appending the JournalID to the endpoint.
+    uriParameters: 
+      journalId: 
+        description: The Xero identifier for a Manual Journal
+        example: 297c2dc5-cc47-4afd-8ec8-74990b8761e9
+    get: 
+      is: [ filtered , ordered , modifiedAfter ]
+      description: Use this method to retrieve an specific manual journal
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: manualJournal
+              example: !include examples/manualJournal-example.xml
+/Organisation: 
+  type: { collection: { name: organisation } }
+  description: |
+    Returns information about a Xero organisation  
+  get: 
+    description: Returns information about a Xero organisation
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include examples/organisations-example.xml
+/Payments: 
+  type: { collection: { name: payment } }
+  description: |
+    Retrieve either one or many payments for invoices and credit notes
+    Apply payments to approved AR and AP invoices
+    Allow you to refund credit notes
+  put: 
+    description: Use this method to apply payments to approved AR and AP invoices or refund AR or AP credit notes.
+    body:
+      application/xml:
+        example: !include examples/payment-example.xml
+  get: 
+    is: [ filtered , ordered , modifiedAfter ]
+    description: Retrieve either many payments for invoices and credit notes
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include examples/payments-example.xml
+  /{paymentId}: 
+    type: xeroResource
+    description: Allows you to retrieve an specific payment
+    uriParameters: 
+      paymentId: 
+        description: The Xero identifier for an Payment
+        example: 297c2dc5-cc47-4afd-8ec8-74990b8761e9
+    get: 
+      is: [ filtered , ordered , modifiedAfter ]
+      description: Retrieve either one  payment for invoices and credit notes
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: payments
+              example: !include examples/payments-example.xml
+/Receipts: 
+  type: { collection: { name: receipt } }
+  description: |
+    Allows you to retrieve, add, update or delete draft expense claim receipts for any user
+    Allows you to attach images to draft expense claim receipts
+  post: 
+    description: Use this method to create or update a DRAFT receipt.
+    body:
+      application/xml:
+        example: !include examples/receipt-example.xml
+  put: 
+    description: |
+      The PUT method is similar to the POST Invoices method, however you can only create new receipts with this method.
+    body:
+      application/xml:
+        example: !include examples/receipt-example.xml
+  get: 
+    is: [ filtered , ordered , modifiedAfter ]
+    description: |
+      Use this method to retrieve many draft receipts.
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include examples/receipts-example.xml
+  /{receiptId}: 
+    type: xeroResource
+    description: |
+      Allows you to retrieve a specific receipt
+    uriParameters: 
+      receiptId: 
+        description: The Xero identifier for an Receipt
+        example: 297c2dc5-cc47-4afd-8ec8-74990b8761e9
+    get: 
+      is: [ filtered , ordered , modifiedAfter ]
+      description: Use this method to retrieve one draft receipt.
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: receiptDetailsCollection
+              example: !include examples/receiptDetailsCollection-example.xml
+/Reports: 
+  type: { collection: { name: report } }
+  description: |
+    Xero's most commonly viewed reports (listed below) can be retrieved using the Xero API. These reports typically contain a summary of data that may be useful for your own application. e.g. it may be more easier and more efficient to use a Report endpoint to fetch data rather than retrieve individual invoices and total these yourself.
+  get: 
+    description: |
+      Returns a list of published BAS reports for Australia based organisations only or a list of GST reports for New Zealand based organizations only.
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include examples/reports-example.xml
+  /{reportId}: 
+    type: xeroResource
+    uriParameters: 
+      reportId: 
+        description: The identifier of the report
+        example: 2BE4A28B-467A-4BD1-BAF8-8D6622A5B930
+    get: 
+      description: |
+        You can retrieve an individual published BAS or GST Report by specifying the identifier of the report
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: reports
+              example: !include examples/reports-example.xml
+  /TenNinetyNine: 
+    type: xeroResource
+    get: 
+      description: Returns the 1099 report as configured by the rules in the Xero app
+      queryParameters: 
+        reportYear: 
+          description: Specify the page that you want to retrieve
+          example: 2013
+  /AgedPayablesByContact: 
+    type: xeroResource
+    get: 
+      is: [ date: { name: payments } , filterableByDate: { name: payable invoices, for: contact } , requiresContactId ]
+      description: Returns aged payables up to the end of the current month by default
+  /AgedReceivablesByContact: 
+    type: xeroResource
+    get: 
+      is: [ date: { name: payments } , filterableByDate: { name: receivable invoices, for: contact } , requiresContactId ]
+      description: Returns aged receivables up to the end of the current month by default
+  /BalanceSheet: 
+    type: xeroResource
+    get: 
+      is: [ date: { name: balance sheet } , supportsStandardLayout ]
+      description: |
+        Returns a balance sheet for the current month up to the date specified. YTD values are shown too.
+      queryParameters: 
+        trackingOptionID1: 
+          description: |
+            The balance sheet will be filtered by this option if supplied. Note you cannot filter just by the TrackingCategory.
+        trackingOptionID2: 
+          description: |
+            If you want to filter by more than one tracking category option then you can specify a second option too. See the Balance Sheet report in Xero learn more about this behavior when filtering by tracking category options
+  /BankStatement: 
+    type: xeroResource
+    get: 
+      is: [ filterableByDate: { name: statement lines, for: bank account } ]
+      description: Returns the statement lines for a specified bank account
+      queryParameters: 
+        bankAccountID: 
+          description: bankAccountID
+          required: true
+          example: 5040915e-8ce7-4177-8d08-fde416232f18
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: bankStatementReport
+              example: !include examples/bankStatementReport-example.xml
+  /BankSummary: 
+    type: xeroResource
+    get: 
+      is: [ filterableByDate: { name: balances and cash movements, for: bank account } ]
+      description: Returns the balances and cash movements for each bank account
+  /BudgetSummary: 
+    type: xeroResource
+    get: 
+      is: [ date: { name: summary of your mounthly budget } ]
+      description: Returns a summary of your monthly budget
+      queryParameters: 
+        periods: 
+          description: The number of periods to compare (integer between 1 and 12)
+          type: integer
+        timeframe: 
+          description: The period size to compare to (1=month, 3=quarter, 12=year)
+  /ExecutiveSummary: 
+    type: xeroResource
+    get: 
+      is: [ date: { name: summary } ]
+      description: A summary including monthly totals and some common business ratios
+  /ProfitAndLoss: 
+    type: xeroResource
+    get: 
+      is: [ filterableByDate: { name: profit and loss, for: bank account } , supportsStandardLayout ]
+      description: |
+        Returns a profit and loss for the current month by default. An alternate date range can also be specified using the optional parameters listed below.
+        For example:
+        GET /api.xro/2.0/Reports/ProfitAndLoss?fromDate=2011-09-30&toDate=2011-10-31
+      queryParameters: 
+        trackingCategoryID: 
+          description: |
+            If you specify the trackingCategoryID parameter then the Profit and Loss Report will show figures for each of the options in the category as separate columns. See the Profit and Loss Report in Xero to learn more about this behavior when filtering by a tracking category.
+        trackingOptionID: 
+          description: If you specify this parameter in addition to the trackingCategoryID then just one option will be returned
+          example: 1 column only
+  /TrialBalance: 
+    type: xeroResource
+    get: 
+      is: [ date: { name: trial balance } ]
+      description: |
+        Returns a trial balance for the current month up to the date specified. YTD values are shown too.
+      queryParameters: 
+        paymentsOnly: 
+          description: Set this to true to get cash transactions only
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: trialBalanceReportsCollection
+              example: !include examples/trialBalanceReportsCollection-example.xml
+/TaxRates: 
+  type: xeroResource
+  description: |
+    Returns tax rates for a Xero organisation.
+    Allows you to add new tax rates for a Xero organisation
+  put: 
+    description: |
+      Use this method to create new tax rates.
+      Current limitations:
+      - You can only add tax rates one at a time (i.e. you'll need to do multiple API calls to add many tax rates.
+      - Updating tax rates is not currently supported via the Xero API.
+    body: 
+      application/xml: 
+        schema: taxRate
+        example: !include examples/taxRate-example.xml
+  get: 
+    is: [ filtered , ordered ]
+    description: Returns tax rates for a Xero organisation.
+    queryParameters: 
+      taxType: 
+        description: Filter by a Tax Type
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: taxRateDetailsCollection
+            example: !include examples/taxRateDetailsCollection-example.xml
+/TrackingCategories: 
+  type: xeroResource
+  get: 
+    is: [ filtered , ordered ]
+    description: Returns the list of tracking categories and tracking options for a Xero organisation
+    queryParameters: 
+      trackingCategoryID: 
+        description: Filter by a tracking category
+        example: 297c2dc5-cc47-4afd-8ec8-74990b8761e9
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: trackingCategoriesCollection
+            example: !include examples/trackingCategoriesCollection-example.xml
+/Users: 
+  type: { collection: { name: user } }
+  get: 
+    is: [ filtered , ordered , modifiedAfter ]
+    description: Returns the users for a Xero organisation
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include examples/users-example.xml
+  /{userId}: 
+    type: xeroResource
+    description: |
+      The Xero identifier for an user - specified as a string following the endpoint name
+    get: 
+      queryParameters: 
+        userId: 
+          description: The Xero identifier for an user
+          example: 297c2dc5-cc47-4afd-8ec8-74990b8761e9
+      body: 
+        application/xml: 
+          schema: users
+          example: !include examples/users-example.xml
+/{Endpoint}/{Guid}/Attachments: 
+  type: xeroResource
+  uriParameters: 
+    Guid: 
+      displayName: Guid
+      description: The guid of the document that that attachment belongs to (e.g. ReceiptID or InvoiceID)
+      required: true
+      enum: 
+        - employeeId
+        - accountId
+        - journalId
+        - invoiceId
+        - paymentId
+        - itemId
+        - reportId
+        - brandingThemeId
+        - contactId
+        - userId
+        - expenseClaimId
+        - receiptId
+        - creditNoteId
+      example: ReceiptID
+    Endpoint: 
+      displayName: Endpoint
+      description: The name of the parent endpoint (e.g. Receipts, Invoices)
+      required: true
+      enum: 
+        - Accounts
+        - Items
+        - Users
+        - Employees
+        - BrandingThemes
+        - Payments
+        - " Invoices"
+        - CreditNotes
+        - Reports
+        - Invoices
+        - Journals
+        - Contacts
+        - ManualJournals
+        - ExpenseClaims
+        - Receipts
+        - BankTransactions
+      example: Receipts
+  get: 
+    description: |
+      The GET method supports retrieving a list of attachments or receiving the content of a single attachments.
+      To retrieve a list of attachments that have been uploaded against a document, you will need to construct a url that contains the Guid of the document. This URL is in the format: https://api.xero.com/api.xro/2.0/{Endpoint}/{Guid}/Attachments/
+      For example:
+      GET /api.xro/2.0/Receipts/e59a2c7f-4078-a0f3-73537afcbba9/Attachments/
+    responses: 
+      200: 
+        description: |
+          The response message will contain an xml or json summary of the attachments against the specified document
+        body: 
+          application/xml: 
+            schema: attachmentSummariesCollection
+            example: !include examples/attachmentSummariesCollection-example.xml
+  /{filename}: 
+    type: xeroResource
+    uriParameters: 
+      filename: 
+        description: The file name
+        type: file
+        required: true
+        example: Image00394.png
+    get: 
+      description: |
+        To retrieve the content of an attachment, the Url element shown in the response of a 'GET Attachments' will retrieve the file.
+        The url will typically be in the following format:
+        https://api.xero.com/api.xro/2.0/{Endpoint}/{Guid}/Attachments/{Filename}
+        For example,
+        GET /api.xro/2.0/Receipts/e59a2c7f-4078-a0f3-73537afcbba9/Attachments/Image00394.png
+      responses: 
+        200: 
+          description: |
+            The response message will contain the raw file content rather that was originally uploaded. The response won't contain any xml or json encoded information:
+            HTTP/1.1  200 OK
+            Content-Type: image/png
+            Content-Disposition: attachment; Image00394.png
+            {RAW-IMAGE-CONTENT}
+    post: 
+      description: |
+        Attachments can be uploaded to Xero using the PUT or POST method. To upload an attachment, a PUT or POST http request is made to a specific url created for the each attachment. The body of the http request contains the raw attachment content, not xml or json data that is normally used to upload data to Xero. Attachments can only be attached to documents that are of status DRAFT.
+        When uploading an attachment to Xero, the url that you're posting to will typically be in the following format:
+        https://api.xero.com/api.xro/2.0/{Endpoint}/{Guid}/Attachments/{Filename}
+        Note: 10 attachments can be uploaded per document. You can replace any attachment already uploaded by specifying the URL of the existing attachment e.g.
+        https://api.xero.com/api.xro/2.0/{Endpoint}/{Guid}/Attachments/{Filename}
+      body: 
+        "*/*": 
+          example: image/png
+    put: 
+      description: |
+        The PUT method is identical to the POST method. If an attachment already exists on the specified document, then the attachment being uploaded will overwrite it.
+      body: 
+        "*/*": 
+          example: image/png
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

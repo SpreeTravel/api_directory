@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://docs.openstack.org/api/openstack-block-storage/2.0/content" xmlns:atom="http://www.w3.org/2005/Atom">
+  <xsd:element name="volumes">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="volume" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="attachments" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="metadata" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:normalizedString" use="required"/>
+            <xsd:attribute name="id" type="xsd:normalizedString" use="required"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

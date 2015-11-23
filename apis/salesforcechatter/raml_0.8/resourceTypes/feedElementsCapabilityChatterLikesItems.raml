@@ -1,0 +1,23 @@
+post: 
+  description: Add a like to a feed element.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: likeResponse
+get: 
+  description: Access a page of likes for a feed element.
+  queryParameters: 
+    page: 
+      description: Specifies the number of the page you want returned. If you don’t specify a value, the first page is returned.
+      type: integer
+    pageSize: 
+      description: "Specifies the number of likes per page. Valid values are between 1 and 100. If you don't specify a size, the default is 25."
+      type: integer
+      default: 25
+      example: 5
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: likePageResponse

@@ -1,0 +1,46 @@
+{
+  "results": [
+    {
+      "zip": "zip 0",
+      "phone": 0,
+      "lon": 1.0,
+      "fax": "fax 0",
+      "address_3": "address_3 0",
+      "state": 0,
+      "address_1": "address_1 0",
+      "address_2": "address_2 0",
+      "venue_url": "venue_url 0",
+      "city": "city 0",
+      "country": "country 0",
+      "id": 0,
+      "taglist": "taglist 0",
+      "distance": 1.0,
+      "rating_count": 0,
+      "email": 0,
+      "name": "name 0",
+      "rating": "rating 0",
+      "lat": 1.0
+    },
+    {
+      "zip": "zip 1",
+      "phone": 1,
+      "lon": 1.0,
+      "fax": "fax 1",
+      "address_3": "address_3 1",
+      "state": 1,
+      "address_1": "address_1 1",
+      "address_2": "address_2 1",
+      "venue_url": "venue_url 1",
+      "city": "city 1",
+      "country": "country 1",
+      "id": 1,
+      "taglist": "taglist 1",
+      "distance": 1.0,
+      "rating_count": 1,
+      "email": 1,
+      "name": "name 1",
+      "rating": "rating 1",
+      "lat": 1.0
+    }
+  ]
+}

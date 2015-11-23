@@ -1,0 +1,25 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "_links" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "self" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "emoticons" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "badges" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

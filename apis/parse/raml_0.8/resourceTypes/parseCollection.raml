@@ -1,0 +1,12 @@
+usage: This resourceType should be used for any collection of items
+is: [ allowsBasicAuthentication ]
+description: The collection of <<resourceName>>
+get: 
+  is: [ allowsQuery ]
+  description: Get all <<resourceName>>, optionally filtered
+  responses: 
+    200: 
+  securedBy: [ commonSchema ]
+post: 
+  description: Create a new <<resourceName | !singularize>>
+  securedBy: [ commonSchema ]

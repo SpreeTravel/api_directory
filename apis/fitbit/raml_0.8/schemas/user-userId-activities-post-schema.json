@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+		"activityLog": {
+			"properties": {
+				"activityId": {
+					"type": "integer"
+				},
+				"activityName": {
+					"type": "string"
+				},
+				"manualCalories": {
+					"type": "integer"
+				},
+				"startTime": {
+					"type": "string"
+				},
+				"durationMillis": {
+					"type": "integer"
+				},
+				"date": {
+					"type": "string"
+				},
+				"distance": {
+					"type": "string"
+				},
+				"distanceUnit": {
+					"type": "string"
+				}
+			},
+			"type": "object"
+		}
+	}
+}

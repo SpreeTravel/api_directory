@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "friends": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "dateTime": {
+            "type": "string"
+          },
+          "user": {
+            "type": "object",
+            "properties": {
+              "aboutMe": {
+                "type": "string"
+              },
+              "avatar": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "dateOfBirth": {
+                "type": "string"
+              },
+              "displayName": {
+                "type": "string"
+              },
+              "encodedId": {
+                "type": "string"
+              },
+              "fullName": {
+                "type": "string"
+              },
+              "gender": {
+                "enum": [
+                  "MALE",
+                  "FEMALE"
+                ]
+              },
+              "height": {
+                "type": "number"
+              },
+              "nickname": {
+                "type": "string"
+              },
+              "offsetFromUTCMillis": {
+                "type": "integer"
+              },
+              "state": {
+                "type": "string",
+                "maxLength": 2,
+                "minLength": 2
+              },
+              "timezone": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

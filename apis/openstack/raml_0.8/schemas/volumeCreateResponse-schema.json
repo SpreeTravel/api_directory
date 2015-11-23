@@ -1,0 +1,67 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "volume" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "status" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "attachments" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+          ]
+        } ,
+        "availability_zone" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "bootable" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "created_at" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "description" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "volume_type" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "snapshot_id" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "source_volid" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "metadata" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "size" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

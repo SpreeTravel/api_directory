@@ -1,0 +1,102 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "node_group_template" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "auto_security_group" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "availability_zone" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "created_at" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "flavor_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "floating_ip_pool" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "hadoop_version" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "is_default" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "is_proxy_gateway" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "node_configs" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "node_processes" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "string"
+            }
+          ]
+        } ,
+        "plugin_name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "security_groups" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "tenant_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "volume_local_to_instance" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "volume_mount_prefix" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "volume_type" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "volumes_availability_zone" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "volumes_per_node" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "volumes_size" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

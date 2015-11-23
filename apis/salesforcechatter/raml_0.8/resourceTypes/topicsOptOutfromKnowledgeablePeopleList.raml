@@ -1,0 +1,15 @@
+head: 
+  description: Topic opt out. After hiding yourself from the Knowledgeable People list, show yourself again.
+  responses: 
+    200: 
+get: 
+  description: Topic opt out. After hiding yourself from the Knowledgeable People list, show yourself again.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: topicOptOutResponse
+delete: 
+  description: When you opt out of the knowledgeable people list for a topic, a topic opt out record is created with the key prefix 0eb. To show yourself in the knowledgeable people list after you’ve opted out, delete the topic opt out record.
+  responses: 
+    200: 

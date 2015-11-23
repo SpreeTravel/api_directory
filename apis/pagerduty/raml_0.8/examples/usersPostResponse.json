@@ -1,0 +1,15 @@
+{
+	"user" : {
+		"time_zone" : "Eastern Time (US & Canada)" ,
+		"color" : "dark-slate-grey" ,
+		"email" : "bart@example.com" ,
+		"avatar_url" :
+		"https://secure.gravatar.com/avatar/6e1b6fc29a03fc3c13756bd594e314f7.png?d=mm&r=PG"
+		,
+		"user_url" : "/users/PIJ90N7" ,
+		"invitation_sent" : true ,
+		"role" : "admin" ,
+		"name" : "Bart Simpson" ,
+		"id" : "PIJ90N7"
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"airports": [{
+		"fs": "CLO",
+		"iata": "CLO",
+		"icao": "SKCL",
+		"name": "Alfonso B. Aragon Airport",
+		"city": "Cali",
+		"cityCode": "CLO",
+		"countryCode": "CO",
+		"countryName": "Colombia",
+		"regionName": "South America",
+		"timeZoneRegionName": "America/Bogota",
+		"localTime": "2015-04-24T03:14:37.827",
+		"utcOffsetHours": -5.0,
+		"latitude": 3.543056,
+		"longitude": -76.381389,
+		"elevationFeet": 3162,
+		"classification": 3,
+		"active": true,
+		"delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/CLO?codeType=fs",
+		"weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/CLO?codeType=fs"
+	}]
+}

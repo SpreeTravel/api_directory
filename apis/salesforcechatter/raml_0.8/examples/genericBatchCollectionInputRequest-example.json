@@ -1,0 +1,11 @@
+{
+  "batchRequests" : [
+    {
+      "method" : "Get" ,
+      "url" : "/v34.0/chatter/feeds/news/me"
+    } , {
+      "method" : "Get" ,
+      "url" : "/v34.0/chatter/feeds/user-profile/me"
+    }
+  ]
+}

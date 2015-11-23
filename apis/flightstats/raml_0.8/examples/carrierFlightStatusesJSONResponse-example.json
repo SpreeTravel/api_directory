@@ -1,0 +1,245 @@
+{
+  "request" : {
+    "airline" : {
+      "requestedCode" : "AA" ,
+      "fsCode" : "AA"
+    } ,
+    "flight" : {
+      "requested" : "1113" ,
+      "interpreted" : "1113"
+    } ,
+    "date" : {
+      "year" : "2015" ,
+      "month" : "4" ,
+      "day" : "29" ,
+      "interpreted" : "2015-04-29"
+    } ,
+    "utc" : {
+      "interpreted" : false
+    } ,
+    "airport" : {
+    } ,
+    "codeType" : {
+    } ,
+    "extendedOptions" : {
+    } ,
+    "url" : "https://api.flightstats.com/flex/flightstatus/rest/v2/json/flight/status/AA/1113/arr/2015/4/29"
+  } ,
+  "appendix" : {
+    "airlines" : [
+      {
+        "fs" : "AA" ,
+        "iata" : "AA" ,
+        "icao" : "AAL" ,
+        "name" : "American Airlines" ,
+        "phoneNumber" : "1-800-433-7300" ,
+        "active" : true
+      } , {
+        "fs" : "AS" ,
+        "iata" : "AS" ,
+        "icao" : "ASA" ,
+        "name" : "Alaska Airlines" ,
+        "phoneNumber" : "1-800-252-7522" ,
+        "active" : true
+      } , {
+        "fs" : "EY" ,
+        "iata" : "EY" ,
+        "icao" : "ETD" ,
+        "name" : "Etihad Airways" ,
+        "active" : true
+      } , {
+        "fs" : "MH" ,
+        "iata" : "MH" ,
+        "icao" : "MAS" ,
+        "name" : "Malaysia Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "US" ,
+        "iata" : "US" ,
+        "icao" : "AWE" ,
+        "name" : "US Airways" ,
+        "phoneNumber" : "1-800-943-5436" ,
+        "active" : true
+      }
+    ] ,
+    "airports" : [
+      {
+        "fs" : "ORD" ,
+        "iata" : "ORD" ,
+        "icao" : "KORD" ,
+        "faa" : "ORD" ,
+        "name" : "O'Hare International Airport" ,
+        "street1" : "10000 West O'Hare" ,
+        "city" : "Chicago" ,
+        "cityCode" : "CHI" ,
+        "stateCode" : "IL" ,
+        "postalCode" : "60666" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Chicago" ,
+        "weatherZone" : "ILZ014" ,
+        "localTime" : "2015-04-29T06:30:01.313" ,
+        "utcOffsetHours" : -5 ,
+        "latitude" : 41.976912 ,
+        "longitude" : -87.904876 ,
+        "elevationFeet" : 668 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/ORD?codeType=fs" ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/ORD?codeType=fs"
+      } , {
+        "fs" : "LAX" ,
+        "iata" : "LAX" ,
+        "icao" : "KLAX" ,
+        "faa" : "LAX" ,
+        "name" : "Los Angeles International Airport" ,
+        "street1" : "One World Way" ,
+        "street2" : "" ,
+        "city" : "Los Angeles" ,
+        "cityCode" : "LAX" ,
+        "stateCode" : "CA" ,
+        "postalCode" : "90045-5803" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Los_Angeles" ,
+        "weatherZone" : "CAZ041" ,
+        "localTime" : "2015-04-29T04:30:01.313" ,
+        "utcOffsetHours" : -7 ,
+        "latitude" : 33.943399 ,
+        "longitude" : -118.408279 ,
+        "elevationFeet" : 126 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/LAX?codeType=fs" ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/LAX?codeType=fs"
+      }
+    ] ,
+    "equipments" : [
+      {
+        "iata" : "738" ,
+        "name" : "Boeing 737-800 Passenger" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : false ,
+        "regional" : false
+      }
+    ]
+  } ,
+  "flightStatuses" : [
+    {
+      "flightId" : 534404114 ,
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "1113" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T01:30:00.000" ,
+        "dateUtc" : "2015-04-29T08:30:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T07:38:00.000" ,
+        "dateUtc" : "2015-04-29T12:38:00.000Z"
+      } ,
+      "status" : "A" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FY" ,
+        "restrictions" : ""
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T01:30:00.000" ,
+          "dateUtc" : "2015-04-29T08:30:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T07:38:00.000" ,
+          "dateUtc" : "2015-04-29T12:38:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T01:30:00.000" ,
+          "dateUtc" : "2015-04-29T08:30:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T01:37:00.000" ,
+          "dateUtc" : "2015-04-29T08:37:00.000Z"
+        } ,
+        "actualGateDeparture" : {
+          "dateLocal" : "2015-04-29T01:37:00.000" ,
+          "dateUtc" : "2015-04-29T08:37:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T01:51:00.000" ,
+          "dateUtc" : "2015-04-29T08:51:00.000Z"
+        } ,
+        "estimatedRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T01:50:00.000" ,
+          "dateUtc" : "2015-04-29T08:50:00.000Z"
+        } ,
+        "actualRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T01:50:00.000" ,
+          "dateUtc" : "2015-04-29T08:50:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T07:38:00.000" ,
+          "dateUtc" : "2015-04-29T12:38:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T07:56:00.000" ,
+          "dateUtc" : "2015-04-29T12:56:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T07:24:00.000" ,
+          "dateUtc" : "2015-04-29T12:24:00.000Z"
+        } ,
+        "estimatedRunwayArrival" : {
+          "dateLocal" : "2015-04-29T07:43:00.000" ,
+          "dateUtc" : "2015-04-29T12:43:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AS" ,
+          "flightNumber" : "1359" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "EY" ,
+          "flightNumber" : "3105" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "MH" ,
+          "flightNumber" : "9348" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "US" ,
+          "flightNumber" : "1113" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "delays" : {
+        "departureGateDelayMinutes" : 7 ,
+        "arrivalGateDelayMinutes" : 18 ,
+        "arrivalRunwayDelayMinutes" : 19
+      } ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 248 ,
+        "scheduledAirMinutes" : 213 ,
+        "scheduledTaxiOutMinutes" : 21 ,
+        "taxiOutMinutes" : 13 ,
+        "scheduledTaxiInMinutes" : 14
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "4" ,
+        "departureGate" : "46B" ,
+        "arrivalTerminal" : "3" ,
+        "arrivalGate" : "H9" ,
+        "baggage" : "4"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "738" ,
+        "tailNumber" : "N959NN"
+      }
+    }
+  ]
+}

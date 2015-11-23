@@ -1,0 +1,81 @@
+{
+	"schedule" : {
+		"schedule_layers" : [ {
+			"restriction_type" : null ,
+			"priority" : 0 ,
+			"start" : "2012-08-05T00:00:00-04:00" ,
+			"rotation_turn_length_seconds" : 604800 ,
+			"rotation_virtual_start" : "2012-08-05T00:00:00-04:00" ,
+			"users" : [ {
+				"user" : {
+					"email" : "hailie_hansen@shieldsfarrell.biz" ,
+					"color" : "orange" ,
+					"id" : "P2BI1SS" ,
+					"name" : "Hailie Hansen"
+				} ,
+				"member_order" : 1
+			} , {
+				"user" : {
+					"email" : "rogahn.karl@cole.info" ,
+					"color" : "orange-red" ,
+					"id" : "PX3ILJ6" ,
+					"name" : "Karl Rogahn"
+				} ,
+				"member_order" : 2
+			} ] ,
+			"end" : null ,
+			"id" : "PZGJA4R" ,
+			"restrictions" : [ ] ,
+			"name" : "Schedule Layer 1"
+		} , {
+			"restriction_type" : "Daily" ,
+			"priority" : 1 ,
+			"start" : "2012-08-05T00:00:00-04:00" ,
+			"rotation_turn_length_seconds" : 86400 ,
+			"rotation_virtual_start" : "2012-08-05T00:00:00-04:00" ,
+			"users" : [ {
+				"user" : {
+					"email" : "gabrielle_glover@mertz.biz" ,
+					"color" : "cayenne" ,
+					"id" : "PAD6MYW" ,
+					"name" : "Gabrielle Glover"
+				} ,
+				"member_order" : 1
+			} , {
+				"user" : {
+					"email" : "gerhard.abernathy@kulas.us" ,
+					"color" : "red" ,
+					"id" : "PU6348I" ,
+					"name" : "Gerhard Abernathy"
+				} ,
+				"member_order" : 2
+			} , {
+				"user" : {
+					"email" : "gregory_hilll@deckow.us" ,
+					"color" : "teal" ,
+					"id" : "P6O624F" ,
+					"name" : "Gregory Hilll"
+				} ,
+				"member_order" : 3
+			} ] ,
+			"end" : null ,
+			"id" : "PW7YZS1" ,
+			"restrictions" : [ {
+				"duration_seconds" : 43200 ,
+				"start_time_of_day" : "00:00:00"
+			} ] ,
+			"name" : "Schedule Layer 2"
+		} ] ,
+		"final_schedule" : {
+			"name" : "Final Schedule"
+		} ,
+		"time_zone" : "Eastern Time (US & Canada)" ,
+		"escalation_policies" : [ ] ,
+		"today" : "2012-08-08" ,
+		"overrides_subschedule" : {
+			"name" : "Overrides"
+		} ,
+		"name" : "Primary On-Call Schedule"
+	} ,
+	"id" : "P2BI1SS"
+}

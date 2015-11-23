@@ -1,0 +1,13 @@
+get: 
+  description: |
+    Get information about an action link group including state for the context user.
+    All action links must belong to a group. Action links in a group are mutually exclusive and share some properties. Note that action link groups are accessible by clients, unlike action link group definitions.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: platformActionGroupResponse
+head: 
+  description: All action links must belong to a group. Action links in a group are mutually exclusive and share some properties. Note that action link groups are accessible by clients, unlike action link group definitions.
+  responses: 
+    200: 

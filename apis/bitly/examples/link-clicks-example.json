@@ -1,0 +1,32 @@
+{
+  "data": {
+    "link_clicks": [
+      {
+        "clicks": 1,
+        "dt": 1360299600
+      },
+      {
+        "clicks": 2,
+        "dt": 1360213200
+      },
+      {
+        "clicks": 2,
+        "dt": 1360126800
+      },
+      {
+        "clicks": 3,
+        "dt": 1360040400
+      },
+      {
+        "clicks": 10,
+        "dt": 1359954000
+      }
+    ],
+    "tz_offset": -5,
+    "unit": "day",
+    "unit_reference_ts": 1360351157,
+    "units": 5
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

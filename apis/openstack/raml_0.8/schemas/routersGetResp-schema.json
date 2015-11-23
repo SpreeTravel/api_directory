@@ -1,0 +1,76 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "routers" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "status" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "external_gateway_info" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "admin_state_up" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "tenant_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "status" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "external_gateway_info" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "network_id" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "admin_state_up" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "tenant_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "add_tenant_access" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "tenant_id" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

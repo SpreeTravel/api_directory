@@ -1,0 +1,32 @@
+{
+  "total" : 2 ,
+  "interactions" : [
+    {
+      "_id" : "50f98310c5ac415d7f2e74fd" ,
+      "created_at" : 1358509258 ,
+      "event" : "favorite" ,
+      "id" : "50f98310c5ac415d7f2e74fd" ,
+      "interaction_id" : "292235127847788544" ,
+      "user" : {
+        "username" : "Crispy Potatoes" ,
+        "followers" : 160 ,
+        "avatar" : "http://si0.twimg.com/profile_images/..." ,
+        "avatar_https" : "https://si0.twimg.com/profile_images/..." ,
+        "twitter_id" : "70712344376"
+      }
+    } , {
+      "_id" : "50f8623ac5ac415d7f1d4f77" ,
+      "created_at" : 1358454592 ,
+      "event" : "retweet" ,
+      "id" : "50f8623ac5ac415d7f1d4f77" ,
+      "interaction_id" : "292005842654461953" ,
+      "user" : {
+        "username" : "Lucky Number 8" ,
+        "followers" : 36079 ,
+        "avatar" : "http://si0.twimg.com/profile_images/2901468678/..." ,
+        "avatar_https" : "https://si0.twimg.com/profile_images/2901468678/..." ,
+        "twitter_id" : "1423444249"
+      }
+    }
+  ]
+}

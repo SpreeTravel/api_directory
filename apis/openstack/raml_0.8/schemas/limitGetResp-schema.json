@@ -1,0 +1,63 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "limits" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "rate" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "limit" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                    {
+                      "type" : "object" ,
+                      "properties" : {
+                        "next-available" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "remaining" : {
+                          "type" : "number" ,
+                          "required" : false
+                        } ,
+                        "unit" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "value" : {
+                          "type" : "number" ,
+                          "required" : false
+                        } ,
+                        "verb" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    }
+                  ]
+                } ,
+                "regex" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "uri" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

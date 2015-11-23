@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+		"weightLog": {
+        	"properties": {
+        		"bmi": {
+        			"type": "number"
+        		},
+		        "date": {
+		        	"type": "string"
+		        },
+		        "logId": {
+		        	"type": "integer"
+		        },
+		        "time": {
+		        	"type": "string"
+		        },
+		        "weight": {
+		        	"type": "number"
+		        }
+        	},
+        	"type": "object"
+    	}
+	}
+}

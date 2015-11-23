@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "results": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "bio": {
+            "required": false,
+            "type": "string"
+          },
+          "country": {
+            "required": false,
+            "type": "string"
+          },
+          "city": {
+            "required": false,
+            "type": "string"
+          },
+          "state": {
+            "required": false,
+            "type": "integer"
+          },
+          "email": {
+            "required": false,
+            "type": "integer"
+          },
+          "id": {
+            "required": false,
+            "type": "integer"
+          },
+          "joined": {
+            "required": false,
+            "type": "string"
+          },
+          "lang": {
+            "required": false,
+            "type": "string"
+          },
+          "lat": {
+            "required": false,
+            "type": "number"
+          },
+          "lon": {
+            "required": false,
+            "type": "number"
+          },
+          "link": {
+            "required": false,
+            "type": "string"
+          },
+          "messaging_pref": {
+            "required": false,
+            "type": "string"
+          },
+          "name": {
+            "required": false,
+            "type": "string"
+          },
+          "other_services": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "[service-name]": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "required": false,
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "photo_url": {
+            "required": false,
+            "type": "string"
+          },
+          "topics": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "id": {
+                "required": false,
+                "type": "integer"
+              },
+              "name": {
+                "required": false,
+                "type": "string"
+              },
+              "urlkey": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "visited": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

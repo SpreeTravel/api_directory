@@ -1,0 +1,443 @@
+#%RAML 0.8
+title: OpenStack Data Processing API
+version: v1.1
+baseUri: https://servers.api.openstack.com
+schemas:
+  - hadoopOrSparkVersionResponse: !include /schemas/hadoopOrSparkVersionResponse-schema.json
+  - pluginInfoResponse: !include /schemas/pluginInfoResponse-schema.json
+  - detailedPluginInformationResponse: !include /schemas/detailedPluginInformationResponse-schema.json
+  - listImagesResponse: !include /schemas/listImagesResponse-schema.json
+  - imageDetailsResponse: !include /schemas/imageDetailsResponse-schema.json
+  - registerImageResponse: !include /schemas/registerImageResponse-schema.json
+  - registerImageRequest: !include /schemas/registerImageRequest-schema.json
+  - addTagsToImageRequest: !include /schemas/addTagsToImageRequest-schema.json
+  - addTagsToImageResponse: !include /schemas/addTagsToImageResponse-schema.json
+  - removeTagsFromImageRequest: !include /schemas/removeTagsFromImageRequest-schema.json
+  - removeTagsFromImageResponse: !include /schemas/removeTagsFromImageResponse-schema.json
+  - listJobsResponse: !include /schemas/listJobsResponse-schema.json
+  - createJobRequest: !include /schemas/createJobRequest-schema.json
+  - createJobResponse: !include /schemas/createJobResponse-schema.json
+  - jobDetailsResponse: !include /schemas/jobDetailsResponse-schema.json
+  - runJobRequest: !include /schemas/runJobRequest-schema.json
+  - runJobResponse: !include /schemas/runJobResponse-schema.json
+  - listJobTypesResponse: !include /schemas/listJobTypesResponse-schema.json
+  - listJobExecutionsResponse: !include /schemas/listJobExecutionsResponse-schema.json
+  - jobExecutionDetailsResponse: !include /schemas/jobExecutionDetailsResponse-schema.json
+  - refreshJobStatusResoponse: !include /schemas/refreshJobStatusResoponse-schema.json
+  - cancelJobExecutionResponse: !include /schemas/cancelJobExecutionResponse-schema.json
+  - listDataSourcesResponse: !include /schemas/listDataSourcesResponse-schema.json
+  - createDataSourceRequest: !include /schemas/createDataSourceRequest-schema.json
+  - createDataSourceResponse: !include /schemas/createDataSourceResponse-schema.json
+  - dataSourceDetails: !include /schemas/dataSourceDetails-schema.json
+  - listNodeGroupTemplatesResponse: !include /schemas/listNodeGroupTemplatesResponse-schema.json
+  - createNodeGroupTemplateRequest: !include /schemas/createNodeGroupTemplateRequest-schema.json
+  - createNodeGroupTemplateResponse: !include /schemas/createNodeGroupTemplateResponse-schema.json
+  - showNodeGroupTemplateDetails: !include /schemas/showNodeGroupTemplateDetails-schema.json
+  - updateNodeGroupTemplate: !include /schemas/updateNodeGroupTemplate-schema.json
+  - updateNodeGroupTemplateResponse: !include /schemas/updateNodeGroupTemplateResponse-schema.json
+  - listJobBinaryResponse: !include /schemas/listJobBinaryResponse-schema.json
+  - createJobBinaryInternalRequest: !include /schemas/createJobBinaryInternalRequest-schema.json
+  - listsAvailableJobBinary: !include /schemas/listsAvailableJobBinary-schema.json
+  - createJobBinaryRequest: !include /schemas/createJobBinaryRequest-schema.json
+  - showJobBinaryDetailsResponse: !include /schemas/showJobBinaryDetailsResponse-schema.json
+  - listAvailableClusterTemplatesResponse: !include /schemas/listAvailableClusterTemplatesResponse-schema.json
+  - createClusterTemplatesRequest: !include /schemas/createClusterTemplatesRequest-schema.json
+  - createClusterTemplatesResponse: !include /schemas/createClusterTemplatesResponse-schema.json
+  - showClusterTemplate: !include /schemas/showClusterTemplate-schema.json
+  - updateClasterTemplateRequest: !include /schemas/updateClasterTemplateRequest-schema.json
+  - updateClasterTemplateResponse: !include /schemas/updateClasterTemplateResponse-schema.json
+/{version}: 
+  /{tenant_id}: 
+    /cluster-templates: 
+      get: 
+        description: List available cluster templates
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: listAvailableClusterTemplatesResponse
+                example: !include examples/listAvailableClusterTemplatesResponse-example.json
+      post: 
+        description: Create cluster templates
+        body: 
+          application/json: 
+            schema: createClusterTemplatesRequest
+            example: !include examples/createClusterTemplatesRequest-example.json
+        responses: 
+          202: 
+            body: 
+              application/json: 
+                schema: createClusterTemplatesResponse
+                example: !include examples/createClusterTemplatesResponse-example.json
+      /{cluster_template_id}: 
+        get: 
+          description: Show cluster template
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: showClusterTemplate
+                  example: !include examples/showClusterTemplate-example.json
+        put: 
+          description: Update cluster templates
+          body: 
+            application/json: 
+              schema: updateClasterTemplateRequest
+              example: !include examples/updateClasterTemplateRequest-example.json
+          responses: 
+            202: 
+              body: 
+                application/json: 
+                  schema: updateClasterTemplateResponse
+                  example: !include examples/updateClasterTemplateResponse-example.json
+        delete: 
+          description: Delete cluster template
+          responses: 
+            204: 
+    /data-sources: 
+      get: 
+        description: List data sources
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: listDataSourcesResponse
+                example: !include examples/listDataSourcesResponse-example.json
+      post: 
+        description: Create data source
+        body: 
+          application/json: 
+            schema: createDataSourceRequest
+            example: !include examples/createDataSourceRequest-example.json
+        responses: 
+          202: 
+            body: 
+              application/json: 
+                schema: createDataSourceResponse
+                example: !include examples/createDataSourceResponse-example.json
+      /{data_source_id}: 
+        get: 
+          description: Show data source details
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: dataSourceDetails
+                  example: !include examples/dataSourceDetails-example.json
+        delete: 
+          description: Delete data source
+          responses: 
+            204: 
+    /images: 
+      get: 
+        description: List Images
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: listImagesResponse
+                example: !include examples/listImagesResponse-example.json
+      /{image_id}: 
+        get: 
+          description: Show image information
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: imageDetailsResponse
+                  example: !include examples/imageDetailsResponse-example.json
+        post: 
+          description: Register Image
+          body: 
+            application/json: 
+              schema: registerImageRequest
+              example: !include examples/registerImageRequest-example.json
+          responses: 
+            202: 
+              body: 
+                application/json: 
+                  schema: registerImageResponse
+                  example: !include examples/registerImageResponse-example.json
+        delete: 
+          description: Unregister Image
+          responses: 
+            204: 
+        /tag: 
+          post: 
+            description: Add tags
+            body: 
+              application/json: 
+                schema: addTagsToImageRequest
+                example: !include examples/addTagsToImageRequest-example.json
+            responses: 
+              202: 
+                body: 
+                  application/json: 
+                    schema: addTagsToImageResponse
+                    example: !include examples/addTagsToImageResponse-example.json
+        /untag: 
+          post: 
+            description: Remove tags
+            body: 
+              application/json: 
+                schema: removeTagsFromImageRequest
+                example: !include examples/removeTagsFromImageRequest-example.json
+            responses: 
+              202: 
+                body: 
+                  application/json: 
+                    schema: removeTagsFromImageResponse
+                    example: !include examples/removeTagsFromImageResponse-example.json
+    /job-binaries: 
+      get: 
+        description: List job binaries
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: listJobBinariesResponse
+                example: !include examples/listJobBinaryResponse-example.json
+      post: 
+        description: Create job binary
+        body: 
+          application/json: 
+            schema: createJobBinaryRequest
+            example: !include examples/createJobBinaryRequest-example.json
+        responses: 
+          202: 
+            body: 
+              application/json: 
+                schema: createJobBinaryRequest
+                example: !include examples/createJobBinaryRequest-example.json
+      /{job_binaries_id}: 
+        get: 
+          description: Show job binary details
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: showJobBinaryDetailsResponse
+                  example: !include examples/showJobBinaryDetailsResponse-example.json
+        delete: 
+          description: Delete job binary
+          responses: 
+            204: 
+        /data: 
+          get: 
+            description: Get job binary data
+            responses: 
+              200: 
+                body: 
+                  "": 
+                    schema: ""
+                headers: 
+                  Content-Length: 
+    /job-executions: 
+      get: 
+        description: List job executions
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: listJobExecutionsResponse
+                example: !include examples/listJobExecutionsResponse-example.json
+      /{job_execution_id}: 
+        get: 
+          description: Job execution details
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: jobExecutionDetailsResponse
+                  example: !include examples/jobExecutionDetailsResponse-example.json
+        delete: 
+          description: Delete job execution
+          responses: 
+            204: 
+        /cancel: 
+          get: 
+            description: Cancel job execution
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: cancelJobExecutionResponse
+                    example: !include examples/cancelJobExecutionResponse-example.json
+        /refresh-status: 
+          get: 
+            description: Refresh job execution status
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: refreshJobStatusResoponse
+                    example: !include examples/refreshJobStatusResoponse-example.json
+    /job-binary-internals: 
+      get: 
+        description: List job binary internals
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: listsAvailableJobBinary
+                example: !include examples/listsAvailableJobBinary-example.json
+      /{job_binary_internals_id}: 
+        get: 
+          description: Show job binary internal details
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: createJobBinaryInternalRequest
+                  example: !include examples/createJobBinaryInternalRequest-example.json
+        delete: 
+          description: Delete job binary internal
+          responses: 
+            204: 
+        /data: 
+          get: 
+            description: Get job binary internal data
+            responses: 
+              200: 
+                body: 
+                  "": 
+                    schema: ""
+                headers: 
+                  Content-Length: 
+      /{name}: 
+        put: 
+          description: Create job binary internal
+          responses: 
+            202: 
+              body: 
+                application/json: 
+                  example: !include examples/createJobBinaryInternalRequest-example.json
+    /jobs: 
+      get: 
+        description: List jobs
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: listJobsResponse
+                example: !include examples/listJobsResponse-example.json
+      post: 
+        description: Create job
+        body: 
+          application/json: 
+            schema: createJobRequest
+            example: !include examples/createJobRequest-example.json
+        responses: 
+          202: 
+            body: 
+              application/json: 
+                schema: createJobResponse
+                example: !include examples/createJobResponse-example.json
+      /{job_id}: 
+        get: 
+          description: Show job details
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: jobDetailsResponse
+                  example: !include examples/jobDetailsResponse-example.json
+        delete: 
+          description: Remove job
+          responses: 
+            204: 
+        /execute: 
+          post: 
+            description: Run job
+            body: 
+              application/json: 
+                schema: runJobRequest
+                example: !include examples/runJobRequest-example.json
+            responses: 
+              202: 
+                body: 
+                  application/json: 
+                    schema: runJobResponse
+                    example: !include examples/runJobResponse-example.json
+    /job-types: 
+      get: 
+        description: List job types
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: listJobTypesResponse
+                example: !include examples/listJobTypesResponse-example.json
+    /node-group-templates: 
+      get: 
+        description: List available node group templates
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: listNodeGroupTemplatesResponse
+                example: !include examples/listNodeGroupTemplatesResponse-example.json
+      post: 
+        description: Create node group template
+        body: 
+          application/json: 
+            schema: createNodeGroupTemplateRequest
+            example: !include examples/createNodeGroupTemplateRequest-example.json
+        responses: 
+          202: 
+            body: 
+              application/json: 
+                schema: createNodeGroupTemplateResponse
+                example: !include examples/createNodeGroupTemplateResponse-example.json
+      /{node_group_template_id}: 
+        get: 
+          description: Show details of a node group template
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: showNodeGroupTemplateDetails
+                  example: !include examples/showNodeGroupTemplateDetails-example.json
+        delete: 
+          description: Delete a node group template
+          responses: 
+            204: 
+        put: 
+          description: Updates node group template
+          body: 
+            application/json: 
+              schema: updateNodeGroupTemplate
+              example: !include examples/updateNodeGroupTemplate-example.json
+          responses: 
+            202: 
+              body: 
+                application/json: 
+                  schema: updateNodeGroupTemplateResponse
+                  example: !include examples/updateNodeGroupTemplateResponse-example.json
+    /plugins: 
+      get: 
+        description: List plugins
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: hadoopOrSparkVersionResponse
+                example: !include examples/hadoopOrSparkVersionResponse-example.json
+      /{plugin_name}: 
+        get: 
+          description: Show plugin information
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: pluginInfoResponse
+                  example: !include examples/pluginInfoResponse-example.json
+        /{version}: 
+          get: 
+            description: Show detailed plugin information
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: detailedPluginInformationResponse
+                    example: !include examples/detailedPluginInformationResponse-example.json

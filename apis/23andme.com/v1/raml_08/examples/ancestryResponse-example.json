@@ -1,0 +1,31 @@
+{
+  "id" : "7ad467ea509080fb" ,
+  "ancestry" : {
+    "label" : "Total" ,
+    "proportion" : 1 ,
+    "unassigned" : 0 ,
+    "sub_populations" : [
+      {
+        "label" : "Sub-Saharan African" ,
+        "proportion" : 0.8227
+      } , {
+        "label" : "European" ,
+        "proportion" : 0.1773 ,
+        "unassigned" : 0.0193 ,
+        "sub_populations" : [
+          {
+            "label" : "Northern European" ,
+            "proportion" : 0.1579 ,
+            "unassigned" : 0.0725 ,
+            "sub_populations" : [
+              {
+                "label" : "French and German" ,
+                "proportion" : 0.0676
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

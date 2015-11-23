@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="values">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="value" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="avg" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="count" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="duration" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="duration_end" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="duration_start" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="max" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="min" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="period" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="period_end" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="period_start" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="sum" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="unit" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

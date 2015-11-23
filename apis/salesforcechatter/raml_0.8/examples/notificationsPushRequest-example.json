@@ -1,0 +1,9 @@
+{
+  "appName" : "TestApp" ,
+  "namespace" : "abc" ,
+  "userIds" : [
+    "005x00000013dPK" ,
+    "005x00000013dPL"
+  ] ,
+  "payload" : "{'aps':{'alert':'test', 'badge':0, 'sound':'default'}}"
+}

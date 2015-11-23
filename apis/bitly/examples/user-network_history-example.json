@@ -1,0 +1,49 @@
+{
+  "data": {
+    "entries": [
+      {
+        "global_hash": "789",
+        "saves": [
+          {
+            "aggregate_link": "http://bit.ly/789",
+            "archived": false,
+            "client_id": "a5a2e024b030d6a594be866c7be57b5e2dff9972",
+            "created_at": 1337892044,
+            "global_hash": "789",
+            "link": "http://bit.ly/123",
+            "long_url": "http://fakewebsite.com/something",
+            "modified_at": 1337892044,
+            "private": false,
+            "title": "This is a page about exciting things!",
+            "user": "somebitlyuser",
+            "user_ts": 1337892044
+          }
+        ]
+      },
+      {
+        "global_hash": "234",
+        "saves": [
+          {
+            "aggregate_link": "http://bit.ly/234",
+            "archived": false,
+            "client_id": "a5a2e024b030d6a594be866c7be57b5e2dff9972",
+            "created_at": 1337892044,
+            "global_hash": "234",
+            "link": "http://bit.ly/567",
+            "long_url": "http://something.com/blahblahblah",
+            "modified_at": 1337892044,
+            "private": false,
+            "title": "This is an article about something!",
+            "user": "anotherbitlyuser",
+            "user_ts": 1337892044
+          }
+        ]
+      }
+    ],
+    "limit": 20,
+    "offset": 0,
+    "total": 2
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

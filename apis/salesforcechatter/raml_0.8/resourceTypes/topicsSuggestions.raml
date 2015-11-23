@@ -1,0 +1,23 @@
+head: 
+  description: List of suggested topics for a specified string of text, feed item, or record.
+  responses: 
+    200: 
+get: 
+  description: List of suggested topics for a specified string of text, feed item, or record.
+  queryParameters: 
+    maxResults: 
+      description: Maximum number of topic suggestions that get returned. The default is 5. Value must be greater than 0 and less than or equal to 25.
+      type: integer
+      default: 25
+      example: 5
+    recordId: 
+      description: 18-character ID of a feed item or record from which to extract topics. Administrators must enable topics for objects to see topic suggestions for records of that object type. Topics for objects is available in version 30.0.
+      required: true
+    text: 
+      description: Text from which to extract topics.
+      required: true
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: topicSuggestionCollectionResponse

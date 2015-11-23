@@ -1,0 +1,65 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "address" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "postalcode" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "adminCode2" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "adminCode1" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "street" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "countryCode" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "lng" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "placename" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "adminName2" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "distance" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "streetNumber" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "mtfcc" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "lat" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "adminName1" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

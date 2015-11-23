@@ -1,0 +1,188 @@
+<geonames>
+<streetSegment>
+<line>
+-122.17979 37.451908,-122.18 37.45166,-122.180631 37.4509,-122.180842 37.450649
+</line>
+<distance>0.041</distance>
+<mtfcc>S1400</mtfcc>
+<name>Roble Ave</name>
+<fraddl>601</fraddl>
+<fraddr>600</fraddr>
+<toaddl>697</toaddl>
+<toaddr>698</toaddr>
+<postalcode>94025</postalcode>
+<placename>Menlo Park</placename>
+<adminCode2>081</adminCode2>
+<adminName2>San Mateo</adminName2>
+<adminCode1>CA</adminCode1>
+<adminName1>California</adminName1>
+<countryCode>US</countryCode>
+</streetSegment>
+<streetSegment>
+<line>
+-122.180842 37.450649,-122.181005 37.450735,-122.181494 37.450994,-122.181658 37.451081
+</line>
+<distance>0.084</distance>
+<mtfcc>S1400</mtfcc>
+<name>Curtis St</name>
+<fraddl>801</fraddl>
+<fraddr>800</fraddr>
+<toaddl>899</toaddl>
+<toaddr>898</toaddr>
+<postalcode>94025</postalcode>
+<placename>Menlo Park</placename>
+<adminCode2>081</adminCode2>
+<adminName2>San Mateo</adminName2>
+<adminCode1>CA</adminCode1>
+<adminName1>California</adminName1>
+<countryCode>US</countryCode>
+</streetSegment>
+<streetSegment>
+<line>
+-122.180842 37.450649,-122.180874 37.45061,-122.180971 37.450493,-122.181004 37.450455
+</line>
+<distance>0.084</distance>
+<mtfcc>S1400</mtfcc>
+<name>Roble Ave</name>
+<fraddl>699</fraddl>
+<fraddr>700</fraddr>
+<toaddl>707</toaddl>
+<toaddr>718</toaddr>
+<postalcode>94025</postalcode>
+<placename>Menlo Park</placename>
+<adminCode2>081</adminCode2>
+<adminName2>San Mateo</adminName2>
+<adminCode1>CA</adminCode1>
+<adminName1>California</adminName1>
+<countryCode>US</countryCode>
+</streetSegment>
+<streetSegment>
+<line>
+-122.177228 37.450394,-122.177732 37.450711,-122.177754 37.450727,-122.178287 37.451052,-122.178827 37.45137,-122.179268 37.45162,-122.179373 37.45168,-122.17979 37.451908
+</line>
+<distance>0.095</distance>
+<mtfcc>S1200</mtfcc>
+<name>el Camino Real</name>
+<fraddl>501</fraddl>
+<fraddr/>
+<toaddl>799</toaddl>
+<toaddr/>
+<postalcode>94025</postalcode>
+<placename>Menlo Park</placename>
+<adminCode2>081</adminCode2>
+<adminName2>San Mateo</adminName2>
+<adminCode1>CA</adminCode1>
+<adminName1>California</adminName1>
+<countryCode>US</countryCode>
+</streetSegment>
+<streetSegment>
+<line>
+-122.18045 37.450172,-122.18056 37.450228,-122.180893 37.4504,-122.181004 37.450455
+</line>
+<distance>0.1</distance>
+<mtfcc>S1400</mtfcc>
+<name>Curtis Way</name>
+<fraddl>701</fraddl>
+<fraddr>700</fraddr>
+<toaddl>799</toaddl>
+<toaddr>798</toaddr>
+<postalcode>94025</postalcode>
+<placename>Menlo Park</placename>
+<adminCode2>081</adminCode2>
+<adminName2>San Mateo</adminName2>
+<adminCode1>CA</adminCode1>
+<adminName1>California</adminName1>
+<countryCode>US</countryCode>
+</streetSegment>
+<streetSegment>
+<line>-122.17979 37.451908,-122.179722 37.451994</line>
+<distance>0.103</distance>
+<mtfcc>S1400</mtfcc>
+<name>Roble Ave</name>
+<fraddl/>
+<fraddr/>
+<toaddl/>
+<toaddr/>
+<postalcode/>
+<placename>Menlo Park</placename>
+<adminCode2>081</adminCode2>
+<adminName2>San Mateo</adminName2>
+<adminCode1>CA</adminCode1>
+<adminName1>California</adminName1>
+<countryCode>US</countryCode>
+</streetSegment>
+<streetSegment>
+<line>-122.17979 37.451908,-122.180622 37.452321</line>
+<distance>0.103</distance>
+<mtfcc>S1200</mtfcc>
+<name>el Camino Real</name>
+<fraddl>801</fraddl>
+<fraddr/>
+<toaddl>899</toaddl>
+<toaddr/>
+<postalcode>94025</postalcode>
+<placename>Menlo Park</placename>
+<adminCode2>081</adminCode2>
+<adminName2>San Mateo</adminName2>
+<adminCode1>CA</adminCode1>
+<adminName1>California</adminName1>
+<countryCode>US</countryCode>
+</streetSegment>
+<streetSegment>
+<line>
+-122.181004 37.450455,-122.181147 37.450283,-122.181577 37.449769,-122.181721 37.449598
+</line>
+<distance>0.107</distance>
+<mtfcc>S1400</mtfcc>
+<name>Roble Ave</name>
+<fraddl>709</fraddl>
+<fraddr>720</fraddr>
+<toaddl>783</toaddl>
+<toaddr>798</toaddr>
+<postalcode>94025</postalcode>
+<placename>Menlo Park</placename>
+<adminCode2>081</adminCode2>
+<adminName2>San Mateo</adminName2>
+<adminCode1>CA</adminCode1>
+<adminName1>California</adminName1>
+<countryCode>US</countryCode>
+</streetSegment>
+<streetSegment>
+<line>
+-122.177159 37.450486,-122.177713 37.450825,-122.17907 37.451651,-122.179722 37.451994
+</line>
+<distance>0.108</distance>
+<mtfcc>S1200</mtfcc>
+<name>el Camino Real</name>
+<fraddl/>
+<fraddr/>
+<toaddl/>
+<toaddr/>
+<postalcode/>
+<placename>Menlo Park</placename>
+<adminCode2>081</adminCode2>
+<adminName2>San Mateo</adminName2>
+<adminCode1>CA</adminCode1>
+<adminName1>California</adminName1>
+<countryCode>US</countryCode>
+</streetSegment>
+<streetSegment>
+<line>
+-122.179722 37.451994,-122.180568 37.452419,-122.181309 37.45281,-122.181687 37.452996
+</line>
+<distance>0.113</distance>
+<mtfcc>S1200</mtfcc>
+<name>el Camino Real</name>
+<fraddl/>
+<fraddr/>
+<toaddl/>
+<toaddr/>
+<postalcode/>
+<placename>Menlo Park</placename>
+<adminCode2>081</adminCode2>
+<adminName2>San Mateo</adminName2>
+<adminCode1>CA</adminCode1>
+<adminName1>California</adminName1>
+<countryCode>US</countryCode>
+</streetSegment>
+</geonames>

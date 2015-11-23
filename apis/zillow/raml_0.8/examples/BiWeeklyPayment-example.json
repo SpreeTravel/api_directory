@@ -1,0 +1,411 @@
+cb({
+  "request" : {
+    "amount" : "10000000" ,
+    "callback" : "cb" ,
+    "output" : "json" ,
+    "terminmonths" : "360" ,
+    "schedule" : "yearly" ,
+    "rate" : "6.504"
+  } ,
+  "message" : {
+    "text" : "Request successfully processed" ,
+    "code" : "0"
+  } ,
+  "response" : {
+    "monthlyPrincipalAndInterest" : "63233" ,
+    "interestSavings" : "2912352" ,
+    "payOffInYears" : "24.17" ,
+    "result" : "If you pay half of your mortgage payment every two weeks instead of paying the whole payment every month, at the end of the year you would make the equivalent of one extra payment ($63,233) toward principal. This will save you $2,912,352 in interest and you will pay off your home in 24.17 years rather than the scheduled 30.00 years." ,
+    "annualAmortizationSchedule" : [
+      {
+        "period" : "1" ,
+        "beginningBalance" : "10000000" ,
+        "payment" : "758797" ,
+        "principal" : "111688" ,
+        "interest" : "647109" ,
+        "endingBalance" : "9888312"
+      } , {
+        "period" : "2" ,
+        "beginningBalance" : "9888312" ,
+        "payment" : "758797" ,
+        "principal" : "119173" ,
+        "interest" : "639624" ,
+        "endingBalance" : "9769139"
+      } , {
+        "period" : "3" ,
+        "beginningBalance" : "9769139" ,
+        "payment" : "758797" ,
+        "principal" : "127159" ,
+        "interest" : "631638" ,
+        "endingBalance" : "9641980"
+      } , {
+        "period" : "4" ,
+        "beginningBalance" : "9641980" ,
+        "payment" : "758797" ,
+        "principal" : "135681" ,
+        "interest" : "623116" ,
+        "endingBalance" : "9506299"
+      } , {
+        "period" : "5" ,
+        "beginningBalance" : "9506299" ,
+        "payment" : "758797" ,
+        "principal" : "144773" ,
+        "interest" : "614024" ,
+        "endingBalance" : "9361526"
+      } , {
+        "period" : "6" ,
+        "beginningBalance" : "9361526" ,
+        "payment" : "758797" ,
+        "principal" : "154475" ,
+        "interest" : "604322" ,
+        "endingBalance" : "9207051"
+      } , {
+        "period" : "7" ,
+        "beginningBalance" : "9207051" ,
+        "payment" : "758797" ,
+        "principal" : "164827" ,
+        "interest" : "593970" ,
+        "endingBalance" : "9042224"
+      } , {
+        "period" : "8" ,
+        "beginningBalance" : "9042224" ,
+        "payment" : "758797" ,
+        "principal" : "175873" ,
+        "interest" : "582924" ,
+        "endingBalance" : "8866351"
+      } , {
+        "period" : "9" ,
+        "beginningBalance" : "8866351" ,
+        "payment" : "758797" ,
+        "principal" : "187659" ,
+        "interest" : "571138" ,
+        "endingBalance" : "8678692"
+      } , {
+        "period" : "10" ,
+        "beginningBalance" : "8678692" ,
+        "payment" : "758797" ,
+        "principal" : "200235" ,
+        "interest" : "558562" ,
+        "endingBalance" : "8478457"
+      } , {
+        "period" : "11" ,
+        "beginningBalance" : "8478457" ,
+        "payment" : "758797" ,
+        "principal" : "213653" ,
+        "interest" : "545144" ,
+        "endingBalance" : "8264804"
+      } , {
+        "period" : "12" ,
+        "beginningBalance" : "8264804" ,
+        "payment" : "758797" ,
+        "principal" : "227971" ,
+        "interest" : "530826" ,
+        "endingBalance" : "8036833"
+      } , {
+        "period" : "13" ,
+        "beginningBalance" : "8036833" ,
+        "payment" : "758797" ,
+        "principal" : "243248" ,
+        "interest" : "515549" ,
+        "endingBalance" : "7793585"
+      } , {
+        "period" : "14" ,
+        "beginningBalance" : "7793585" ,
+        "payment" : "758797" ,
+        "principal" : "259549" ,
+        "interest" : "499248" ,
+        "endingBalance" : "7534036"
+      } , {
+        "period" : "15" ,
+        "beginningBalance" : "7534036" ,
+        "payment" : "758797" ,
+        "principal" : "276943" ,
+        "interest" : "481854" ,
+        "endingBalance" : "7257093"
+      } , {
+        "period" : "16" ,
+        "beginningBalance" : "7257093" ,
+        "payment" : "758797" ,
+        "principal" : "295502" ,
+        "interest" : "463295" ,
+        "endingBalance" : "6961591"
+      } , {
+        "period" : "17" ,
+        "beginningBalance" : "6961591" ,
+        "payment" : "758797" ,
+        "principal" : "315305" ,
+        "interest" : "443492" ,
+        "endingBalance" : "6646286"
+      } , {
+        "period" : "18" ,
+        "beginningBalance" : "6646286" ,
+        "payment" : "758797" ,
+        "principal" : "336435" ,
+        "interest" : "422362" ,
+        "endingBalance" : "6309851"
+      } , {
+        "period" : "19" ,
+        "beginningBalance" : "6309851" ,
+        "payment" : "758797" ,
+        "principal" : "358981" ,
+        "interest" : "399816" ,
+        "endingBalance" : "5950870"
+      } , {
+        "period" : "20" ,
+        "beginningBalance" : "5950870" ,
+        "payment" : "758797" ,
+        "principal" : "383038" ,
+        "interest" : "375759" ,
+        "endingBalance" : "5567832"
+      } , {
+        "period" : "21" ,
+        "beginningBalance" : "5567832" ,
+        "payment" : "758797" ,
+        "principal" : "408707" ,
+        "interest" : "350090" ,
+        "endingBalance" : "5159125"
+      } , {
+        "period" : "22" ,
+        "beginningBalance" : "5159125" ,
+        "payment" : "758797" ,
+        "principal" : "436096" ,
+        "interest" : "322701" ,
+        "endingBalance" : "4723029"
+      } , {
+        "period" : "23" ,
+        "beginningBalance" : "4723029" ,
+        "payment" : "758797" ,
+        "principal" : "465321" ,
+        "interest" : "293476" ,
+        "endingBalance" : "4257708"
+      } , {
+        "period" : "24" ,
+        "beginningBalance" : "4257708" ,
+        "payment" : "758797" ,
+        "principal" : "496504" ,
+        "interest" : "262293" ,
+        "endingBalance" : "3761204"
+      } , {
+        "period" : "25" ,
+        "beginningBalance" : "3761204" ,
+        "payment" : "758797" ,
+        "principal" : "529777" ,
+        "interest" : "229020" ,
+        "endingBalance" : "3231427"
+      } , {
+        "period" : "26" ,
+        "beginningBalance" : "3231427" ,
+        "payment" : "758797" ,
+        "principal" : "565279" ,
+        "interest" : "193518" ,
+        "endingBalance" : "2666148"
+      } , {
+        "period" : "27" ,
+        "beginningBalance" : "2666148" ,
+        "payment" : "758797" ,
+        "principal" : "603161" ,
+        "interest" : "155636" ,
+        "endingBalance" : "2062987"
+      } , {
+        "period" : "28" ,
+        "beginningBalance" : "2062987" ,
+        "payment" : "758797" ,
+        "principal" : "643581" ,
+        "interest" : "115216" ,
+        "endingBalance" : "1419406"
+      } , {
+        "period" : "29" ,
+        "beginningBalance" : "1419406" ,
+        "payment" : "758797" ,
+        "principal" : "686711" ,
+        "interest" : "72086" ,
+        "endingBalance" : "732695"
+      } , {
+        "period" : "30" ,
+        "beginningBalance" : "732695" ,
+        "payment" : "758797" ,
+        "principal" : "732730" ,
+        "interest" : "26067" ,
+        "endingBalance" : "-35"
+      }
+    ] ,
+    "annualBiWeeklyAmortizationSchedule" : [
+      {
+        "period" : "1" ,
+        "beginningBalance" : "10000000" ,
+        "payment" : "822030" ,
+        "principal" : "176841" ,
+        "interest" : "645189" ,
+        "endingBalance" : "9823159"
+      } , {
+        "period" : "2" ,
+        "beginningBalance" : "9823159" ,
+        "payment" : "822030" ,
+        "principal" : "188691" ,
+        "interest" : "633339" ,
+        "endingBalance" : "9634468"
+      } , {
+        "period" : "3" ,
+        "beginningBalance" : "9634468" ,
+        "payment" : "822030" ,
+        "principal" : "201336" ,
+        "interest" : "620694" ,
+        "endingBalance" : "9433132"
+      } , {
+        "period" : "4" ,
+        "beginningBalance" : "9433132" ,
+        "payment" : "822030" ,
+        "principal" : "214829" ,
+        "interest" : "607201" ,
+        "endingBalance" : "9218303"
+      } , {
+        "period" : "5" ,
+        "beginningBalance" : "9218303" ,
+        "payment" : "822030" ,
+        "principal" : "229225" ,
+        "interest" : "592805" ,
+        "endingBalance" : "8989078"
+      } , {
+        "period" : "6" ,
+        "beginningBalance" : "8989078" ,
+        "payment" : "822030" ,
+        "principal" : "244587" ,
+        "interest" : "577443" ,
+        "endingBalance" : "8744491"
+      } , {
+        "period" : "7" ,
+        "beginningBalance" : "8744491" ,
+        "payment" : "822030" ,
+        "principal" : "260978" ,
+        "interest" : "561052" ,
+        "endingBalance" : "8483513"
+      } , {
+        "period" : "8" ,
+        "beginningBalance" : "8483513" ,
+        "payment" : "822030" ,
+        "principal" : "278467" ,
+        "interest" : "543563" ,
+        "endingBalance" : "8205046"
+      } , {
+        "period" : "9" ,
+        "beginningBalance" : "8205046" ,
+        "payment" : "822030" ,
+        "principal" : "297128" ,
+        "interest" : "524902" ,
+        "endingBalance" : "7907918"
+      } , {
+        "period" : "10" ,
+        "beginningBalance" : "7907918" ,
+        "payment" : "822030" ,
+        "principal" : "317040" ,
+        "interest" : "504990" ,
+        "endingBalance" : "7590878"
+      } , {
+        "period" : "11" ,
+        "beginningBalance" : "7590878" ,
+        "payment" : "822030" ,
+        "principal" : "338286" ,
+        "interest" : "483744" ,
+        "endingBalance" : "7252592"
+      } , {
+        "period" : "12" ,
+        "beginningBalance" : "7252592" ,
+        "payment" : "822030" ,
+        "principal" : "360956" ,
+        "interest" : "461074" ,
+        "endingBalance" : "6891636"
+      } , {
+        "period" : "13" ,
+        "beginningBalance" : "6891636" ,
+        "payment" : "822030" ,
+        "principal" : "385145" ,
+        "interest" : "436885" ,
+        "endingBalance" : "6506491"
+      } , {
+        "period" : "14" ,
+        "beginningBalance" : "6506491" ,
+        "payment" : "822030" ,
+        "principal" : "410956" ,
+        "interest" : "411074" ,
+        "endingBalance" : "6095535"
+      } , {
+        "period" : "15" ,
+        "beginningBalance" : "6095535" ,
+        "payment" : "822030" ,
+        "principal" : "438496" ,
+        "interest" : "383534" ,
+        "endingBalance" : "5657039"
+      } , {
+        "period" : "16" ,
+        "beginningBalance" : "5657039" ,
+        "payment" : "822030" ,
+        "principal" : "467881" ,
+        "interest" : "354149" ,
+        "endingBalance" : "5189158"
+      } , {
+        "period" : "17" ,
+        "beginningBalance" : "5189158" ,
+        "payment" : "822030" ,
+        "principal" : "499236" ,
+        "interest" : "322794" ,
+        "endingBalance" : "4689922"
+      } , {
+        "period" : "18" ,
+        "beginningBalance" : "4689922" ,
+        "payment" : "822030" ,
+        "principal" : "532692" ,
+        "interest" : "289338" ,
+        "endingBalance" : "4157230"
+      } , {
+        "period" : "19" ,
+        "beginningBalance" : "4157230" ,
+        "payment" : "822030" ,
+        "principal" : "568390" ,
+        "interest" : "253640" ,
+        "endingBalance" : "3588840"
+      } , {
+        "period" : "20" ,
+        "beginningBalance" : "3588840" ,
+        "payment" : "822030" ,
+        "principal" : "606480" ,
+        "interest" : "215550" ,
+        "endingBalance" : "2982360"
+      } , {
+        "period" : "21" ,
+        "beginningBalance" : "2982360" ,
+        "payment" : "822030" ,
+        "principal" : "647123" ,
+        "interest" : "174907" ,
+        "endingBalance" : "2335237"
+      } , {
+        "period" : "22" ,
+        "beginningBalance" : "2335237" ,
+        "payment" : "822030" ,
+        "principal" : "690489" ,
+        "interest" : "131541" ,
+        "endingBalance" : "1644748"
+      } , {
+        "period" : "23" ,
+        "beginningBalance" : "1644748" ,
+        "payment" : "822030" ,
+        "principal" : "736762" ,
+        "interest" : "85268" ,
+        "endingBalance" : "907986"
+      } , {
+        "period" : "24" ,
+        "beginningBalance" : "907986" ,
+        "payment" : "822030" ,
+        "principal" : "786136" ,
+        "interest" : "35894" ,
+        "endingBalance" : "121850"
+      } , {
+        "period" : "25" ,
+        "beginningBalance" : "121850" ,
+        "payment" : "137005" ,
+        "principal" : "136052" ,
+        "interest" : "953" ,
+        "endingBalance" : "-14202"
+      }
+    ]
+  }
+});

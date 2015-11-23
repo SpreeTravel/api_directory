@@ -1,0 +1,45 @@
+{
+  "total_count" : 443 ,
+  "has_more" : true ,
+  "object" : "list" ,
+  "data" : [
+    {
+      "object" : "company" ,
+      "id" : "54d956c06230620003760500" ,
+      "created_at" : 1423529664 ,
+      "updated_at" : 1423529664 ,
+      "status" : "valid" ,
+      "livemode" : false ,
+      "entity_name" : "BlockScore" ,
+      "tax_id" : "123410000" ,
+      "incorporation_day" : 23 ,
+      "incorporation_month" : 8 ,
+      "incorporation_year" : 1993 ,
+      "incorporation_state" : "DE" ,
+      "incorporation_country_code" : "US" ,
+      "incorporation_type" : "corporation" ,
+      "dbas" : "BitRemit" ,
+      "registration_number" : "123123123" ,
+      "email" : "test@example.com" ,
+      "url" : "https://blockscore.com" ,
+      "phone_number" : "6505555555" ,
+      "note" : "ref-id:12345" ,
+      "ip_address" : "67.160.8.182" ,
+      "address_street1" : "123 Fake Streets" ,
+      "address_street2" : null ,
+      "address_city" : "Stanford" ,
+      "address_subdivision" : "CA" ,
+      "address_postal_code" : "94305" ,
+      "address_country_code" : "US" ,
+      "details" : {
+        "ofac" : "no_match" ,
+        "state" : "match" ,
+        "tax_id" : "match" ,
+        "address" : "no_match" ,
+        "entity_name" : "mismatch" ,
+        "incorp_date" : "no_match" ,
+        "country_code" : "match"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "resultCode" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "message" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

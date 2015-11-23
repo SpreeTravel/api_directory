@@ -1,0 +1,129 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "security_groups" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "security_group_rules" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "direction" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "ethertype" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "id" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "port_range_max" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "port_range_min" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "protocol" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "remote_group_id" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "remote_ip_prefix" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "security_group_id" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "tenant_id" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                } , {
+                  "type" : "object" ,
+                  "properties" : {
+                    "direction" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "ethertype" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "id" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "port_range_max" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "port_range_min" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "protocol" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "remote_group_id" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "remote_ip_prefix" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "security_group_id" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "tenant_id" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            } ,
+            "tenant_id" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

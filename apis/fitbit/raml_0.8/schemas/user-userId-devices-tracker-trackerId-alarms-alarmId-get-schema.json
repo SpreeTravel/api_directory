@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "trackerAlarms": {
+      "type": "array",
+      "items": {
+        "alarmId": {
+          "type": "integer"
+        },
+        "deleted": {
+          "type": "boolean"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "label": {
+          "type": "string"
+        },
+        "recurring": {
+          "type": "boolean"
+        },
+        "snoozeCount": {
+          "type": "integer"
+        },
+        "snoozeLength": {
+          "type": "integer"
+        },
+        "syncedToDevice": {
+          "type": "boolean"
+        },
+        "time": {
+          "type": "string"
+        },
+        "vibe": {
+          "type": "string"
+        },
+        "weekDays": [
+          {
+            "enum": [
+              "SUNDAY",
+              "MONDAY",
+              "TUESDAY",
+              "WEDNESDAY",
+              "THURSDAY",
+              "FRIDAY",
+              "SATURDAY"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

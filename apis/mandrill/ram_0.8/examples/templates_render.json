@@ -1,0 +1,16 @@
+{
+  "key": "example key",
+  "template_name": "Example Template",
+  "template_content": [
+    {
+      "name": "editable",
+      "content": "<div>content to inject *|MERGE1|*</div>"
+    }
+  ],
+  "merge_vars": [
+    {
+      "name": "merge1",
+      "content": "merge1 content"
+    }
+  ]
+}

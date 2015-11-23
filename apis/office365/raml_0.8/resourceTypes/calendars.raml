@@ -1,0 +1,12 @@
+post: 
+  description: You can create a calendar by sending a POST request with a JSON representation of a Calendar entity to the Calendars property on a CalendarGroup entity (to create a calendar in that calendar group).
+  body: 
+    application/json: 
+      schema: addCalendarGroup
+      example: !include ../examples/addCalendarGroup-example.json
+  responses: 
+    201: 
+get: 
+  description: "You can request all the user's calendars (or a filtered list by using the $filter OData query parameter) via the Calendars property on the User entity, or request all calendars just in a specific calendar group via the Calendars property on the CalendarGroup entity."
+  responses: 
+    200: 

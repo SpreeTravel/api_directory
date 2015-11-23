@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Journals>
+  <Journal>
+    <JournalID>0d926df3-459f-4264-a3a3-49ac065eb0ed</JournalID>
+    <JournalDate>2010-06-29T00:00:00</JournalDate>
+    <JournalNumber>388</JournalNumber>
+    <CreatedDateUTC>2010-09-16T23:00:33.613</CreatedDateUTC>
+    <Reference>Web</Reference>
+    <JournalLines>
+      <JournalLine>
+        <JournalLineID>8f99fb82-46b6-496d-864e-f8e0bc3e2922</JournalLineID>
+        <AccountID>5040915e-8ce7-4177-8d08-fde416232f18</AccountID>
+        <AccountCode>1100</AccountCode>
+        <AccountType>REVENUE</AccountType>
+        <AccountName>Sales</AccountName>
+        <NetAmount>-300.00</NetAmount>
+        <GrossAmount>-337.50</GrossAmount>
+        <TaxAmount>-37.50</TaxAmount>
+        <TaxType>OUTPUT</TaxType>
+        <TaxName>12.5% GST on Income</TaxName>
+        <TrackingCategories>
+          <TrackingCategory>
+            <Name>Region</Name>
+            <Option>Central</Option>
+            <TrackingCategoryID>e2f2f732-e92a-4f3a-9c4d-ee4da0182a13</TrackingCategoryID>
+          </TrackingCategory>
+        </TrackingCategories>
+      </JournalLine>
+      <JournalLine>
+        <JournalLineID>45db4370-3eed-4394-93bb-e83f1d54691d</JournalLineID>
+        <AccountID>9fef6d9d-4bce-4bcc-8679-f50e5ebd12e5</AccountID>
+        <AccountCode>820</AccountCode>
+        <AccountType>CURRLIAB</AccountType>
+        <AccountName>GST</AccountName>
+        <NetAmount>-37.50</NetAmount>
+        <GrossAmount>-37.50</GrossAmount>
+        <TaxAmount>0.00</TaxAmount>
+        <TrackingCategories>
+          <TrackingCategory>
+            <Name>Region</Name>
+            <Option>Central</Option>
+            <TrackingCategoryID>e2f2f732-e92a-4f3a-9c4d-ee4da0182a13</TrackingCategoryID>
+          </TrackingCategory>
+        </TrackingCategories>
+      </JournalLine>
+      <JournalLine>
+        <JournalLineID>0696bb65-d23c-4bc7-b693-71c30b448dc9</JournalLineID>
+        <AccountID>240c0528-24ef-42f6-82ed-dab806c79440</AccountID>
+        <AccountCode>610</AccountCode>
+        <AccountType>CURRENT</AccountType>
+        <AccountName>Accounts Receivable</AccountName>
+        <NetAmount>337.50</NetAmount>
+        <GrossAmount>337.50</GrossAmount>
+        <TaxAmount>0.00</TaxAmount>
+        <TrackingCategories>
+          <TrackingCategory>
+            <Name>Region</Name>
+            <Option>Central</Option>
+            <TrackingCategoryID>e2f2f732-e92a-4f3a-9c4d-ee4da0182a13</TrackingCategoryID>
+          </TrackingCategory>
+        </TrackingCategories>
+      </JournalLine>
+    </JournalLines>
+  </Journal>
+</Journals>

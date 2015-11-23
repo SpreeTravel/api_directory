@@ -1,0 +1,90 @@
+{
+  "type": "object",
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "categories": {
+      "type": "array",
+      "required": false,
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "published": {
+      "type": "boolean",
+      "required": false
+    },
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "lang": {
+      "type": "string",
+      "required": false
+    },
+    "layout": {
+      "type": "string",
+      "required": false
+    },
+    "meta-title": {
+      "type": "string",
+      "required": false
+    },
+    "meta-description": {
+      "type": "string",
+      "required": false
+    },
+    "seo-keywords": {
+      "type": "string",
+      "required": false
+    },
+    "topics": {
+      "type": "array",
+      "required": false,
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    },
+    "content": {
+      "type": "string",
+      "required": false
+    },
+    "date": {
+      "type": "string",
+      "required": false
+    },
+    "tags": {
+      "type": "array",
+      "required": false,
+      "items": {
+        "type": "array"
+      }
+    },
+    "sort": {
+      "type": "number",
+      "required": false
+    },
+    "id": {
+      "type": "string",
+      "required": false
+    },
+    "excerpt": {
+      "type": "string",
+      "required": false
+    },
+    "path": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

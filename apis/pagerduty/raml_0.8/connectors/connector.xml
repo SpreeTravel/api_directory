@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:scripting="http://www.mulesoft.org/schema/mule/scripting" xmlns:data-mapper="http://www.mulesoft.org/schema/mule/ee/data-mapper" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:oauth2="http://www.mulesoft.org/schema/mule/oauth2" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" version="EE-3.6.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/oauth2 http://www.mulesoft.org/schema/mule/oauth2/current/mule-oauth2.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/ee/data-mapper http://www.mulesoft.org/schema/mule/ee/data-mapper/current/mule-data-mapper.xsd
+http://www.mulesoft.org/schema/mule/scripting http://www.mulesoft.org/schema/mule/scripting/current/mule-scripting.xsd">
+    <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration"/>
+    <oauth2:token-manager-config name="Token_Manager_Config" doc:name="Token Manager Config"/>
+    <http:request-config name="HTTP_Request_Pagerduty" protocol="HTTPS" host="{Your PagerDuty domain}" port="443" basePath="/api/v1" doc:name="HTTP Request Configuration">
+        <http:basic-authentication username="{registration email}" password="{password}"/>
+        <http:raml-api-configuration location="100apis/pagerduty/pagerduty.raml"/>
+    </http:request-config>
+    <http:request-config name="HTTP_Request_Pagerdutyintegration" protocol="HTTPS" host="events.pagerduty.com" port="443" basePath="/generic/2010-04-15" doc:name="HTTP Request Configuration">
+        <http:basic-authentication username="{registration email}" password="{password}"/>
+        <http:raml-api-configuration location="100apis/pagerduty/integration.raml"/>
+    </http:request-config>
+    <flow name="raml-test-pagerdutyFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/pagerduty" doc:name="HTTP"/>
+        <http:request config-ref="HTTP_Request_Pagerduty" path="/users" method="GET" doc:name="HTTP"/>
+        <logger message="#[payload]" level="INFO" doc:name="Logger"/>
+    </flow>
+    <flow name="raml-test-pagerdutyintegationFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/pagerdutyIntegration" doc:name="HTTP"/>
+        <custom-transformer returnClass="org.mule.api.MuleMessage" mimeType="application/json" class="prueba.PagerDutyIntegrationTransformer" doc:name="Java" encoding="UTF-8"/>
+        <http:request config-ref="HTTP_Request_Pagerdutyintegration" path="/create_event.json" method="POST" doc:name="HTTP">
+        </http:request>
+        <logger message="#[payload]" level="INFO" doc:name="Logger"/>
+    </flow>
+</mule>

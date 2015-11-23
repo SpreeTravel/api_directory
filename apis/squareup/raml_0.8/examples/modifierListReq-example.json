@@ -1,0 +1,13 @@
+{
+  "name" : "Toppings" ,
+  "selection_type" : "MULTIPLE" ,
+  "modifier_options" : [
+    {
+      "name" : "Whipped Cream" ,
+      "price_money" : {
+        "currency_code" : "USD" ,
+        "amount" : 50
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+	"type" : "object" ,
+	"required" : true ,
+	"$schema" : "http://json-schema.org/draft-03/schema" ,
+	"properties" : {
+		"requester_id" : {
+			"type" : "string" ,
+			"required" : false
+		} ,
+		"note" : {
+			"type" : "object" ,
+			"required" : false
+		}
+	}
+}

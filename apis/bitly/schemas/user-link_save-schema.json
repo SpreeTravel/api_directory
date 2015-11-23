@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "link": {
+          "description": "The bitly short URL for the provided longUrl, specific to this user.",
+          "type": "string"
+        },
+        "aggregate_link": {
+          "description": "A bitly short URL for the provided longUrl, which can be used to track aggregate stats across all bitly links that point to the same longUrl.",
+          "type": "string"
+        },
+        "new_link": {
+          "description": "Returns 1 if the authenticated user is saving this link for the first time, 0 if the user has previously saved it.",
+          "type": "integer"
+        },
+        "long_url": {
+          "description": "An echo back of the longUrl request parameter. This may not always be equal to the URL requested, as some URL normalization may occur (e.g., due to encoding differences, or case differences in the domain). This long_url will always be functionally identical the the request parameter.",
+          "type": "string"
+        }
+      }
+    },
+    "status_code": {
+      "type": "integer",
+      "required": true
+    },
+    "status_txt": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

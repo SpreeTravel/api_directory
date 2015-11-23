@@ -1,0 +1,28 @@
+{
+  "created_at" : "2014-07-22T12:00:00Z" ,
+  "current_state" : "rejected" ,
+  "description" : "ray shielded, that is." ,
+  "estimate" : 3 ,
+  "id" : 558 ,
+  "kind" : "story" ,
+  "labels" : [
+    {
+      "kind" : "label" ,
+      "id" : 2008 ,
+      "project_id" : 99 ,
+      "name" : "plans" ,
+      "created_at" : "2014-07-22T12:00:00Z" ,
+      "updated_at" : "2014-07-22T12:00:00Z"
+    }
+  ] ,
+  "name" : "All exhaust ports should be shielded" ,
+  "owned_by_id" : 104 ,
+  "owner_ids" : [
+    104
+  ] ,
+  "project_id" : 99 ,
+  "requested_by_id" : 102 ,
+  "story_type" : "feature" ,
+  "updated_at" : "2014-07-22T12:00:00Z" ,
+  "url" : "http://localhost/story/show/558"
+}

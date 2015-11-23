@@ -1,0 +1,11 @@
+{
+	"email_filter" : {
+		"subject_mode" : "always" ,
+		"subject_regex" : null ,
+		"body_mode" : "no-match" ,
+		"body_regex" : "sev 3" ,
+		"from_email_mode" : "match" ,
+		"from_email_regex" : "[rR]yan" ,
+		"id" : "PM1H1PY"
+	}
+}

@@ -1,0 +1,139 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "intent" : {
+      "type" : "string" ,
+      "required" : true
+    } ,
+    "payer" : {
+      "type" : "object" ,
+      "required" : true ,
+      "properties" : {
+        "payment_method" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "funding_instruments" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "credit_card" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "number" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "type" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "expire_month" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "expire_year" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "cvv2" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "first_name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "last_name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "billing_address" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "line1" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "city" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "state" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "postal_code" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "country_code" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    } ,
+    "transactions" : {
+      "type" : "array" ,
+      "required" : true ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "amount" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "total" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "currency" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "details" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "subtotal" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "tax" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "shipping" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              }
+            } ,
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

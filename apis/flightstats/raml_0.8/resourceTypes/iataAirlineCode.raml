@@ -1,0 +1,15 @@
+get: 
+  description: Returns a listing of airlines that have had the given IATA code
+  queryParameters: 
+    appId: 
+    appKey: 
+    extendedOptions: 
+  responses: 
+    200: 
+      body: 
+        application/xml: 
+          schema: airlineIATACodeXMLResponse
+          example: !include ../examples/airlineICAOCodeXMLResponse-example.xml
+        application/json: 
+          schema: airlineIATACodeJSONResponse
+          example: !include ../examples/airlineIATACodeJSONResponse-example.json

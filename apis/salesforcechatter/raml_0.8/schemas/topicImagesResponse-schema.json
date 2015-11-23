@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "coverImageUrl": {
+      "type": "string",
+      "required": false
+    },
+    "featuredImageUrl": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

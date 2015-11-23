@@ -1,0 +1,203 @@
+[
+  {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "MS" ,
+    "LocalizedName" : "Mississippi" ,
+    "EnglishName" : "Mississippi"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "MT" ,
+    "LocalizedName" : "Montana" ,
+    "EnglishName" : "Montana"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "NC" ,
+    "LocalizedName" : "North Carolina" ,
+    "EnglishName" : "North Carolina"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "ND" ,
+    "LocalizedName" : "North Dakota" ,
+    "EnglishName" : "North Dakota"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "NE" ,
+    "LocalizedName" : "Nebraska" ,
+    "EnglishName" : "Nebraska"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "NH" ,
+    "LocalizedName" : "New Hampshire" ,
+    "EnglishName" : "New Hampshire"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "NJ" ,
+    "LocalizedName" : "New Jersey" ,
+    "EnglishName" : "New Jersey"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "NM" ,
+    "LocalizedName" : "New Mexico" ,
+    "EnglishName" : "New Mexico"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "NV" ,
+    "LocalizedName" : "Nevada" ,
+    "EnglishName" : "Nevada"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "NY" ,
+    "LocalizedName" : "New York" ,
+    "EnglishName" : "New York"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "OH" ,
+    "LocalizedName" : "Ohio" ,
+    "EnglishName" : "Ohio"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "OK" ,
+    "LocalizedName" : "Oklahoma" ,
+    "EnglishName" : "Oklahoma"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "OR" ,
+    "LocalizedName" : "Oregon" ,
+    "EnglishName" : "Oregon"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "PA" ,
+    "LocalizedName" : "Pennsylvania" ,
+    "EnglishName" : "Pennsylvania"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "RI" ,
+    "LocalizedName" : "Rhode Island" ,
+    "EnglishName" : "Rhode Island"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "SC" ,
+    "LocalizedName" : "South Carolina" ,
+    "EnglishName" : "South Carolina"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "SD" ,
+    "LocalizedName" : "South Dakota" ,
+    "EnglishName" : "South Dakota"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "TN" ,
+    "LocalizedName" : "Tennessee" ,
+    "EnglishName" : "Tennessee"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "TX" ,
+    "LocalizedName" : "Texas" ,
+    "EnglishName" : "Texas"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "UT" ,
+    "LocalizedName" : "Utah" ,
+    "EnglishName" : "Utah"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "VA" ,
+    "LocalizedName" : "Virginia" ,
+    "EnglishName" : "Virginia"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "VT" ,
+    "LocalizedName" : "Vermont" ,
+    "EnglishName" : "Vermont"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "WA" ,
+    "LocalizedName" : "Washington" ,
+    "EnglishName" : "Washington"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "WI" ,
+    "LocalizedName" : "Wisconsin" ,
+    "EnglishName" : "Wisconsin"
+  } , {
+    "Level" : 1 ,
+    "LocalizedType" : "State" ,
+    "EnglishType" : "State" ,
+    "CountryID" : "US" ,
+    "ID" : "WV" ,
+    "LocalizedName" : "West Virginia" ,
+    "EnglishName" : "West Virginia"
+  }
+]

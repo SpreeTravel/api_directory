@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Receipts>
+  <Receipt>
+    <ReceiptID>e59a2c7f-1306-4078-a0f3-73537afcbba9</ReceiptID>
+    <ReceiptNumber>6</ReceiptNumber>
+    <Status>DRAFT</Status>
+    <User>
+      <UserID>c81045b2-5740-4aea-bf8a-3956941af387</UserID>
+      <FirstName>John</FirstName>
+      <LastName>Smith</LastName>
+    </User>
+    <Contact>
+      <ContactID>ee9619df-7419-446d-af3d-6becf72d9e64</ContactID>
+      <ContactStatus>ACTIVE</ContactStatus>
+      <Name>Faster Taxis</Name>
+      <Addresses>
+        <Address>
+          <AddressType>POBOX</AddressType>
+        </Address>
+        <Address>
+          <AddressType>STREET</AddressType>
+        </Address>
+      </Addresses>
+      <Phones>
+        <Phone>
+          <PhoneType>MOBILE</PhoneType>
+        </Phone>
+        <Phone>
+          <PhoneType>FAX</PhoneType>
+        </Phone>
+        <Phone>
+          <PhoneType>DDI</PhoneType>
+        </Phone>
+        <Phone>
+          <PhoneType>DEFAULT</PhoneType>
+        </Phone>
+      </Phones>
+      <UpdatedDateUTC>2011-10-02T19:41:43.817</UpdatedDateUTC>
+    </Contact>
+    <Date>2011-09-30T00:00:00</Date>
+    <UpdatedDateUTC>2011-10-02T20:09:09.067</UpdatedDateUTC>
+    <LineAmountTypes>Inclusive</LineAmountTypes>
+    <LineItems>
+      <LineItem>
+        <Description>Cab to Airport</Description>
+        <UnitAmount>18.62</UnitAmount>
+        <TaxType>INPUT2</TaxType>
+        <TaxAmount>2.43</TaxAmount>
+        <LineAmount>18.62</LineAmount>
+        <AccountCode>420</AccountCode>
+        <Quantity>1.0000</Quantity>
+      </LineItem>
+    </LineItems>
+    <SubTotal>16.19</SubTotal>
+    <TotalTax>2.43</TotalTax>
+    <Total>18.62</Total>
+    <HasAttachments>false</HasAttachments>
+  </Receipt>
+</Receipts>

@@ -1,0 +1,25 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "amount" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "total" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "currency" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "is_final_capture" : {
+      "type" : "boolean" ,
+      "required" : false
+    }
+  }
+}

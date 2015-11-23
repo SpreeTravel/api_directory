@@ -1,0 +1,68 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "ikepolicies" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "tenant_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "auth_algorithm" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "encryption_algorithm" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "pfs" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "phase1_negotiation_mode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "lifetime" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "units" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "value" : {
+                  "type" : "number" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "ike_version" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

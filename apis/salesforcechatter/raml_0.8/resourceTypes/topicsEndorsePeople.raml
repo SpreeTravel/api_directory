@@ -1,0 +1,37 @@
+post: 
+  description: Endorsements on knowledgeable people for the specified topic. Endorse a user for the specified topic.
+  body: 
+    application/json: 
+      schema: topicEndorseRequest
+      example: !include examples/topicEndorseRequest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: topicEndorsementResponse
+head: 
+  description: Endorsements on knowledgeable people for the specified topic. Get endorsements for a specified topic.
+  responses: 
+    200: 
+get: 
+  description: Endorsements on knowledgeable people for the specified topic. Get endorsements for a specified topic.
+  queryParameters: 
+    endorseeId: 
+      description: Specifies the ID of the user who received endorsements.
+    endorserId: 
+      description: Specifies the ID of the user who endorsed others.
+    page: 
+      description: An integer greater than 0 specifying a page of endorsements. The default value is zero.
+      type: integer
+      default: 0
+      example: 5
+    pageSize: 
+      description: Specifies the number of items per page. Valid values are between 1 and 100. The default value is 25.
+      type: integer
+      default: 25
+      example: 5
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: topicEndorsementCollectionResponse

@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "bundle_owner": {
+          "description": "The bitly user who owns this bundle (the authenticated user on whose behalf the bundle was created).",
+          "type": "string"
+        },
+        "created_ts": {
+          "description": "A timestamp representing the time at which this bundle was created.",
+          "type": "string"
+        },
+        "description": {
+          "description": "A description of this bundle.",
+          "type": "string"
+        },
+        "bundle_link": {
+          "description": "A URL pointing directly to this bundle.",
+          "type": "string"
+        },
+        "last_modified_ts": {
+          "description": "A timestamp representing the last time this bundle was modified.",
+          "type": "string"
+        },
+        "private": {
+          "description": "A true/false value indicating whether this bundle is set to be private.",
+          "type": "boolean"
+        }
+      }
+    },
+    "status_code": {
+      "type": "integer",
+      "required": true
+    },
+    "status_txt": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

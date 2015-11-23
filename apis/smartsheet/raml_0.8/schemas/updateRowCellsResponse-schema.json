@@ -1,0 +1,42 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "message" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "result" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "columnId" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "displayValue" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "value" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    } ,
+    "resultCode" : {
+      "type" : "number" ,
+      "required" : false
+    }
+  }
+}

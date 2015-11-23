@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "type": "array",
+    "items": 
+			{
+				"properties": {
+					"activityId": {
+						"type": "integer"
+					},
+			        "description": {
+			        	"type": "string"
+			        },
+			        "mets": {
+			        	"type": "integer"
+			        },
+			        "name": {
+			        	"type": "string"
+			        }
+				},
+				"type": "object"
+			}
+}

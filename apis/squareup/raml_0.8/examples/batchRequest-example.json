@@ -1,0 +1,13 @@
+{
+  "requests" : [
+    {
+      "method" : "POST" ,
+      "relative_path" : "/v1/me/categories" ,
+      "access_token" : "ACCESS_TOKEN" ,
+      "body" : {
+        "name" : "Beverages"
+      } ,
+      "request_id" : "MyRequestID"
+    }
+  ]
+}

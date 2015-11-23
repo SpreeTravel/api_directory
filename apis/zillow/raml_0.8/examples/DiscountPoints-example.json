@@ -1,0 +1,26 @@
+cb({
+  "request" : {
+    "amount" : "1000000" ,
+    "callback" : "cb" ,
+    "output" : "json" ,
+    "terminmonths" : "360" ,
+    "points" : "2.543" ,
+    "points2" : "3.0" ,
+    "rate2" : "5.454" ,
+    "rate" : "6.504"
+  } ,
+  "message" : {
+    "text" : "Request successfully processed" ,
+    "code" : "0"
+  } ,
+  "response" : {
+    "monthlyPrincipalAndInterest" : "6323" ,
+    "monthlyPrincipalAndInterest2" : "5649" ,
+    "costOfPoints" : "25430" ,
+    "costOfPoints2" : "30000" ,
+    "monthlySavings" : "674" ,
+    "result" : "It will take you 7 months (0.58 years) to break even from buying discount points. So if you plan to stay in your house for more than 7 months and you have cash available, you may want to consider buying down your rate with points. If you stay in your home the entire time, you could save as much as $242,640." ,
+    "breakEven" : "7" ,
+    "totalSavings" : "242640"
+  }
+});

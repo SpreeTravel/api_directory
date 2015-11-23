@@ -1,0 +1,198 @@
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "properties": {
+        "AuthorisationCode": {
+            "type": "string",
+            "maxLength": 6
+        },
+        "BeagleScore": {
+            "type": "number",
+            "maxLength": 6
+        },
+        "Customer": {
+            "type": "object",
+            "properties": {
+                "CardDetails": {
+                    "type": "object",
+                    "properties": {
+                        "CVN": {
+                            "type": "string",
+                            "maxLength": 10
+                        },
+                        "ExpiryMonth": {
+                            "type": "string",
+                            "maxLength": 10
+                        },
+                        "ExpiryYear": {
+                            "type": "string",
+                            "maxLength": 10
+                        },
+                        "IssueNumber": {
+                            "type": "string",
+                            "maxLength": 10
+                        },
+                        "Name": {
+                            "type": "string",
+                            "maxLength": 10
+                        },
+                        "Number": {
+                            "type": "string",
+                            "maxLength": 10
+                        },
+                        "StartMonth": {
+                            "type": "string",
+                            "maxLength": 10
+                        },
+                        "StartYear": {
+                            "type": "string",
+                            "maxLength": 10
+                        }
+                    }
+                },
+                "City": {
+                    "type": "string"
+                },
+                "Comments": {
+                    "type": "string"
+                },
+                "CompanyName": {
+                    "type": "string"
+                },
+                "Country": {
+                    "type": "string"
+                },
+                "Email": {
+                    "type": "string"
+                },
+                "Fax": {
+                    "type": "string"
+                },
+                "FirstName": {
+                    "type": "string"
+                },
+                "IsActive": {
+                    "type": "boolean"
+                },
+                "JobDescription": {
+                    "type": "string"
+                },
+                "LastName": {
+                    "type": "string"
+                },
+                "Mobile": {
+                    "type": "string"
+                },
+                "Phone": {
+                    "type": "string"
+                },
+                "PostalCode": {
+                    "type": "string"
+                },
+                "Reference": {
+                    "type": "string"
+                },
+                "State": {
+                    "type": "string"
+                },
+                "Street1": {
+                    "type": "string"
+                },
+                "Street2": {
+                    "type": "string"
+                },
+                "Title": {
+                    "type": "string"
+                },
+                "TokenCustomerID": {
+                    "type": "string"
+                },
+                "Url": {
+                    "type": "string"
+                }
+            }
+        },
+        "Errors": {
+            "type": "null"
+        },
+        "Options": {
+            "type": "array",
+            "required": false,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "Value": {
+                        "type": "string",
+                        "maxLength": 254,
+                        "required": false
+                    }
+                }
+            }
+        },
+        "Payment": {
+            "type": "object",
+            "properties": {
+                "CurrencyCode": {
+                    "type": "string"
+                },
+                "InvoiceDescription": {
+                    "type": "string"
+                },
+                "InvoiceNumber": {
+                    "type": "string",
+                    "maxLength": 64
+                },
+                "InvoiceReference": {
+                    "type": "string",
+                    "maxLength": 64
+                },
+                "TotalAmount": {
+                    "type": "number",
+                    "maxLength": 10
+                }
+            }
+        },
+        "ResponseCode": {
+            "type": "string",
+            "maxLength": 2
+        },
+        "ResponseMessage": {
+            "type": "string",
+            "maxLength": 512
+        },
+        "TransactionID": {
+            "type": "number",
+            "maxLength": 8
+        },
+        "TransactionStatus": {
+            "type": "boolean"
+        },
+        "TransactionType": {
+            "enum": [
+                "Purchase",
+                "MOTO",
+                "Recurring"
+            ]
+        },
+        "Verification": {
+            "type": "object",
+            "properties": {
+                "Address": {
+                    "type": "number"
+                },
+                "CVN": {
+                    "type": "number"
+                },
+                "Email": {
+                    "type": "number"
+                },
+                "Mobile": {
+                    "type": "number"
+                },
+                "Phone": {
+                    "type": "number"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+  "results": [
+    {
+      "zip": "zip 0",
+      "lon": 1.0,
+      "meetup_count": 0,
+      "past_meetup_count": 0,
+      "state": 0,
+      "city": "city 0",
+      "country": "country 0",
+      "id": 0,
+      "updated": 0,
+      "udf_{varname}": "udf_{varname} 0",
+      "created": 0,
+      "container": {
+        "id": 0,
+        "name": "name 0",
+        "urlname": "urlname 0"
+      },
+      "name": "name 0",
+      "meetup_url": "meetup_url 0",
+      "urlname": "urlname 0",
+      "lat": 1.0
+    },
+    {
+      "zip": "zip 1",
+      "lon": 1.0,
+      "meetup_count": 1,
+      "past_meetup_count": 1,
+      "state": 1,
+      "city": "city 1",
+      "country": "country 1",
+      "id": 1,
+      "updated": 1,
+      "udf_{varname}": "udf_{varname} 1",
+      "created": 1,
+      "container": {
+        "id": 1,
+        "name": "name 1",
+        "urlname": "urlname 1"
+      },
+      "name": "name 1",
+      "meetup_url": "meetup_url 1",
+      "urlname": "urlname 1",
+      "lat": 1.0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+usage: |
+  This resourceType should be used for any collection of items (a resource that has 'get' and 'post' or 'put' (or both) and (maybe) inner resource that allows to get an element by id).
+post?: 
+  body: 
+    application/xml: 
+      schema: <<name>>
+put?: 
+  body: 
+    application/xml: 
+      schema: <<name>>
+type: xeroResource
+get: 
+  responses: 
+    200: 
+      body: 
+        application/xml: 
+          schema: <<name|!pluralize>>

@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "_id": {
+      "required": false,
+      "type": "string"
+    },
+    "created_at": {
+      "required": false,
+      "type": "string"
+    },
+    "send_at": {
+      "required": false,
+      "type": "string"
+    },
+    "from_email": {
+      "required": false,
+      "type": "string"
+    },
+    "to": {
+      "required": false,
+      "type": "string"
+    },
+    "subject": {
+      "required": false,
+      "type": "string"
+    }
+  }
+}

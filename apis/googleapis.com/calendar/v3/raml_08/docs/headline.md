@@ -1,0 +1,1 @@
+The Google Calendar API lets you develop client applications that create new events, edit or delete existing events, and search for events. This document describes how to use RESTful calling style and client libraries for various programming languages (currently Java, Python, PHP, .NET and Ruby) to access and edit Google Calendar data.

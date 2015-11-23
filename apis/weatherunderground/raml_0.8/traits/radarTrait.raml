@@ -1,0 +1,12 @@
+description: |
+  Returns a static or animated radar image for a given location.
+  
+  Response formats include GIF, PNG and SWF (Flash).
+  
+  #Request URL Format
+  Radar requests follow may follow either of the following formats:
+  
+  GET http://api.wunderground.com/api/Your_Key/feature/image.format?params
+  or
+  GET http://api.wunderground.com/api/Your_Key/feature/q/query.format?params
+  In the first format, you specify the geographical location of the radar image via the params options. In the second format, you may specify the location of the radar image by using the standard API location query format. If you use this second format, then you may override the location query via the position-oriented params options. For example, you may specify a city via query, but append a radius option to expand the scope of the radar image.

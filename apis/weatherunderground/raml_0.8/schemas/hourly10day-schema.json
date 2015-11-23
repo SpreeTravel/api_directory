@@ -1,0 +1,323 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "response": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "version": {
+          "required": false,
+          "type": "string"
+        },
+        "termsofService": {
+          "required": false,
+          "type": "string"
+        },
+        "features": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "hourly10day": {
+              "required": false,
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "hourly_forecast": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "FCTTIME": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "hour": {
+                "required": false,
+                "type": "string"
+              },
+              "hour_padded": {
+                "required": false,
+                "type": "string"
+              },
+              "min": {
+                "required": false,
+                "type": "string"
+              },
+              "sec": {
+                "required": false,
+                "type": "string"
+              },
+              "year": {
+                "required": false,
+                "type": "string"
+              },
+              "mon": {
+                "required": false,
+                "type": "string"
+              },
+              "mon_padded": {
+                "required": false,
+                "type": "string"
+              },
+              "mon_abbrev": {
+                "required": false,
+                "type": "string"
+              },
+              "mday": {
+                "required": false,
+                "type": "string"
+              },
+              "mday_padded": {
+                "required": false,
+                "type": "string"
+              },
+              "yday": {
+                "required": false,
+                "type": "string"
+              },
+              "isdst": {
+                "required": false,
+                "type": "string"
+              },
+              "epoch": {
+                "required": false,
+                "type": "string"
+              },
+              "pretty": {
+                "required": false,
+                "type": "string"
+              },
+              "civil": {
+                "required": false,
+                "type": "string"
+              },
+              "month_name": {
+                "required": false,
+                "type": "string"
+              },
+              "month_name_abbrev": {
+                "required": false,
+                "type": "string"
+              },
+              "weekday_name": {
+                "required": false,
+                "type": "string"
+              },
+              "weekday_name_night": {
+                "required": false,
+                "type": "string"
+              },
+              "weekday_name_abbrev": {
+                "required": false,
+                "type": "string"
+              },
+              "weekday_name_unlang": {
+                "required": false,
+                "type": "string"
+              },
+              "weekday_name_night_unlang": {
+                "required": false,
+                "type": "string"
+              },
+              "ampm": {
+                "required": false,
+                "type": "string"
+              },
+              "tz": {
+                "required": false,
+                "type": "string"
+              },
+              "age": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "temp": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "english": {
+                "required": false,
+                "type": "string"
+              },
+              "metric": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "dewpoint": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "english": {
+                "required": false,
+                "type": "string"
+              },
+              "metric": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "condition": {
+            "required": false,
+            "type": "string"
+          },
+          "icon": {
+            "required": false,
+            "type": "string"
+          },
+          "icon_url": {
+            "required": false,
+            "type": "string"
+          },
+          "fctcode": {
+            "required": false,
+            "type": "string"
+          },
+          "sky": {
+            "required": false,
+            "type": "string"
+          },
+          "wspd": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "english": {
+                "required": false,
+                "type": "string"
+              },
+              "metric": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "wdir": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "dir": {
+                "required": false,
+                "type": "string"
+              },
+              "degrees": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "wx": {
+            "required": false,
+            "type": "string"
+          },
+          "uvi": {
+            "required": false,
+            "type": "string"
+          },
+          "humidity": {
+            "required": false,
+            "type": "string"
+          },
+          "windchill": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "english": {
+                "required": false,
+                "type": "string"
+              },
+              "metric": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "heatindex": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "english": {
+                "required": false,
+                "type": "string"
+              },
+              "metric": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "feelslike": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "english": {
+                "required": false,
+                "type": "string"
+              },
+              "metric": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "qpf": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "english": {
+                "required": false,
+                "type": "string"
+              },
+              "metric": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "snow": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "english": {
+                "required": false,
+                "type": "string"
+              },
+              "metric": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "pop": {
+            "required": false,
+            "type": "string"
+          },
+          "mslp": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "english": {
+                "required": false,
+                "type": "string"
+              },
+              "metric": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

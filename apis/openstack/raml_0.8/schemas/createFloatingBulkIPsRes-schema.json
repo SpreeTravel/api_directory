@@ -1,0 +1,25 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "floating_ips_bulk_create" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "interface" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "ip_range" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "pool" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

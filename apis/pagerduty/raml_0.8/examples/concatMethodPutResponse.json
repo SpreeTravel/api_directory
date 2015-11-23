@@ -1,0 +1,12 @@
+{
+	"contact_method" : {
+		"id" : "P6W4C77" ,
+		"label" : "Island Lair" ,
+		"address" : "5558888888" ,
+		"user_id" : "PPSFHH7" ,
+		"type" : "phone" ,
+		"country_code" : 1 ,
+		"phone_number" : "5558888888" ,
+		"blacklisted" : false
+	}
+}

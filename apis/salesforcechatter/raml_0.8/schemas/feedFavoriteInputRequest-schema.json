@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "searchText": {
+      "type": "string",
+      "required": false
+    },
+    "targetId": {
+      "type": "string",
+      "required": false
+    },
+    "updateLastViewDate": {
+      "type": "boolean",
+      "required": false
+    }
+  }
+}

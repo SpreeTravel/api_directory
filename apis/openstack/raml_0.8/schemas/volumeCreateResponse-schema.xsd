@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://docs.openstack.org/volume/api/v1" xmlns:atom="http://www.w3.org/2005/Atom">
+  <xsd:element name="volume">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="attachments" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="metadata" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+      </xsd:sequence>
+      <xsd:attribute name="status" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="name" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="availability_zone" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="bootable" type="xsd:boolean" use="required"/>
+      <xsd:attribute name="created_at" type="xsd:string" use="required"/>
+      <xsd:attribute name="description" type="xsd:string" use="required"/>
+      <xsd:attribute name="volume_type" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="snapshot_id" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="source_volid" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="id" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="size" type="xsd:int" use="required"/>
+    </xsd:complexType>
+    <xsd:attribute name="status" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="name" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="availability_zone" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="bootable" type="xsd:boolean" use="required"/>
+    <xsd:attribute name="created_at" type="xsd:string" use="required"/>
+    <xsd:attribute name="description" type="xsd:string" use="required"/>
+    <xsd:attribute name="volume_type" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="snapshot_id" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="source_volid" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="id" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="size" type="xsd:int" use="required"/>
+  </xsd:element>
+</xsd:schema>

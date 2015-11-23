@@ -1,0 +1,31 @@
+get: 
+  description: Returns information about all users in an organization.
+  queryParameters: 
+    page: 
+      description: An integer specifying a page of items. The default value is 0, which returns the first page.
+      default: 0
+      example: 5
+    pageSize: 
+      description: The number of items per page. Valid values are between 1 and 250. The default value is 25.
+      type: integer
+      default: 25
+      example: 5
+    q: 
+      description: |
+        Specifies the string to search. The search string must contain at least two characters, not including any wildcards. For more information about wildcards, see Wildcards.
+        This parameter searches user names, not email addresses, titles, and so on.
+    searchContextId: 
+      description: |
+        Specify a feed item ID that provides context for the search results.
+        Use this parameter for @mention completion. Passing a feed item ID for searchContextId matches users already mentioned in the thread earlier in the returned collection.
+        
+        When using this parameter, you can’t query more than 500 results and you can’t use wildcards in the search term.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: userPageResponse
+head: 
+  description: Returns information about all users in an organization.
+  responses: 
+    200: 

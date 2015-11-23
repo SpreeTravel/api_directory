@@ -1,0 +1,37 @@
+description: |
+  #OAuth 2 Requests over HTTPS
+  The Meetup API implements rfc6749, the superseding specification for OAuth 1, OAuth 2. This protocol requires all communication with the Meetup servers to use HTTPS. If your application does not, you will receive an error.
+  
+  We provide implementations of both the server and implicit protocol flows. We provide the following endpoints for both where necessary.
+  
+  Authorization https://secure.meetup.com/oauth2/authorize
+  Access Tokens https://secure.meetup.com/oauth2/access
+  Before you can use OAuth 2 for user authorization, you need to either register a new OAuth consumer or add a redirect_uri to your existing consumer by clicking the edit link next to you consumer's listing. The redirect_uri you register for a given client will be used to validate future oauth2 requests. Any redirect_uri parameter that starts with the registered uri will be considered valid. For instance if you register the uri http://foo.com, http://foo.com/authed will be considered valid while http://bar.foo.com will not.
+  
+  OAuth 2 consumers are also valid OAuth 1.0a consumers.
+type: OAuth 2.0
+describedBy: 
+  headers: 
+    Authorization: 
+      description: |
+        Used to send a valid OAuth 2 access token. Do not use
+        with the "access_token" query string parameter.
+  queryParameters: 
+    access_token: 
+      description: |
+        Used to send a valid OAuth 2 access token. Do not use together with
+        the "Authorization" header
+  responses: 
+    401: 
+      description: |
+        Bad or expired token. This can happen if the user or Dropbox
+        revoked or expired an access token. To fix, you should re-
+        authenticate the user.
+    403: 
+      description: |
+        Bad OAuth request (wrong consumer key, bad nonce, expired
+        timestamp...). Unfortunately, re-authenticating the user won't help here.
+settings: 
+  authorizationUri: https://secure.meetup.com/oauth2/authorize
+  accessTokenUri: https://secure.meetup.com/oauth2/access
+  authorizationGrants: [ code ]

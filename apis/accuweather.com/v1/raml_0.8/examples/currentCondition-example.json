@@ -1,0 +1,123 @@
+[
+  {
+    "LocalObservationDateTime" : "2012-09-24T13:00:00-04:00" ,
+    "EpochTime" : 1348506000 ,
+    "WeatherText" : "Mostly Cloudy" ,
+    "WeatherIcon" : 6 ,
+    "IsDayTime" : true ,
+    "Temperature" : {
+      "Metric" : {
+        "Value" : "12.8" ,
+        "Unit" : "C" ,
+        "UnitType" : 17
+      } ,
+      "Imperial" : {
+        "Value" : "55" ,
+        "Unit" : "F" ,
+        "UnitType" : 18
+      }
+    } ,
+    "MobileLink" : "http://m.accuweather.com/en/us/state-college-pa/16801/current-weather/335315?lang=en-us" ,
+    "Link" : "http://www.accuweather.com/en/us/state-college-pa/16801/current-weather/335315?lang=en-us"
+  } , {
+    "LocalObservationDateTime" : "2012-09-24T12:03:00-04:00" ,
+    "EpochTime" : 1348502580 ,
+    "WeatherText" : "Mostly Cloudy" ,
+    "WeatherIcon" : 6 ,
+    "IsDayTime" : true ,
+    "Temperature" : {
+      "Metric" : {
+        "Value" : "12.8" ,
+        "Unit" : "C" ,
+        "UnitType" : 17
+      } ,
+      "Imperial" : {
+        "Value" : "55" ,
+        "Unit" : "F" ,
+        "UnitType" : 18
+      }
+    } ,
+    "MobileLink" : "http://m.accuweather.com/en/us/state-college-pa/16801/current-weather/335315?lang=en-us" ,
+    "Link" : "http://www.accuweather.com/en/us/state-college-pa/16801/current-weather/335315?lang=en-us"
+  } , {
+    "LocalObservationDateTime" : "2012-09-24T11:00:00-04:00" ,
+    "EpochTime" : 1348498800 ,
+    "WeatherText" : "Cloudy" ,
+    "WeatherIcon" : 7 ,
+    "IsDayTime" : true ,
+    "Temperature" : {
+      "Metric" : {
+        "Value" : "12.2" ,
+        "Unit" : "C" ,
+        "UnitType" : 17
+      } ,
+      "Imperial" : {
+        "Value" : "54" ,
+        "Unit" : "F" ,
+        "UnitType" : 18
+      }
+    } ,
+    "MobileLink" : "http://m.accuweather.com/en/us/state-college-pa/16801/current-weather/335315?lang=en-us" ,
+    "Link" : "http://www.accuweather.com/en/us/state-college-pa/16801/current-weather/335315?lang=en-us"
+  } , {
+    "LocalObservationDateTime" : "2012-09-24T10:03:00-04:00" ,
+    "EpochTime" : 1348495380 ,
+    "WeatherText" : "Cloudy" ,
+    "WeatherIcon" : 7 ,
+    "IsDayTime" : true ,
+    "Temperature" : {
+      "Metric" : {
+        "Value" : "11.1" ,
+        "Unit" : "C" ,
+        "UnitType" : 17
+      } ,
+      "Imperial" : {
+        "Value" : "52" ,
+        "Unit" : "F" ,
+        "UnitType" : 18
+      }
+    } ,
+    "MobileLink" : "http://m.accuweather.com/en/us/state-college-pa/16801/current-weather/335315?lang=en-us" ,
+    "Link" : "http://www.accuweather.com/en/us/state-college-pa/16801/current-weather/335315?lang=en-us"
+  } , {
+    "LocalObservationDateTime" : "2012-09-24T09:00:00-04:00" ,
+    "EpochTime" : 1348491600 ,
+    "WeatherText" : "Partly Sunny" ,
+    "WeatherIcon" : 3 ,
+    "IsDayTime" : true ,
+    "Temperature" : {
+      "Metric" : {
+        "Value" : "8.9" ,
+        "Unit" : "C" ,
+        "UnitType" : 17
+      } ,
+      "Imperial" : {
+        "Value" : "48" ,
+        "Unit" : "F" ,
+        "UnitType" : 18
+      }
+    } ,
+    "MobileLink" : "http://m.accuweather.com/en/us/state-college-pa/16801/current-weather/335315?lang=en-us" ,
+    "Link" : "http://www.accuweather.com/en/us/state-college-pa/16801/current-weather/335315?lang=en-us"
+  } , {
+    "LocalObservationDateTime" : "2012-09-24T08:00:00-04:00" ,
+    "EpochTime" : 1348488000 ,
+    "WeatherText" : "Partly Sunny" ,
+    "WeatherIcon" : 3 ,
+    "IsDayTime" : true ,
+    "Temperature" : {
+      "Metric" : {
+        "Value" : "6.1" ,
+        "Unit" : "C" ,
+        "UnitType" : 17
+      } ,
+      "Imperial" : {
+        "Value" : "43" ,
+        "Unit" : "F" ,
+        "UnitType" : 18
+      }
+    } ,
+    "MobileLink" : "http://m.accuweather.com/en/us/state-college-pa/16801/current-weather/335315?lang=en-us" ,
+    "Link" : "http://www.accuweather.com/en/us/state-college-pa/16801/current-weather/335315?lang=en-us"
+  }
+]

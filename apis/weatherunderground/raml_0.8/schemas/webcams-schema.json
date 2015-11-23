@@ -1,0 +1,129 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "response": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "version": {
+          "required": false,
+          "type": "string"
+        },
+        "termsofService": {
+          "required": false,
+          "type": "string"
+        },
+        "features": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "webcams": {
+              "required": false,
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "webcams": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "handle": {
+            "required": false,
+            "type": "string"
+          },
+          "camid": {
+            "required": false,
+            "type": "string"
+          },
+          "camindex": {
+            "required": false,
+            "type": "string"
+          },
+          "assoc_station_id": {
+            "required": false,
+            "type": "string"
+          },
+          "link": {
+            "required": false,
+            "type": "string"
+          },
+          "linktext": {
+            "required": false,
+            "type": "string"
+          },
+          "cameratype": {
+            "required": false,
+            "type": "string"
+          },
+          "organization": {
+            "required": false,
+            "type": "string"
+          },
+          "neighborhood": {
+            "required": false,
+            "type": "string"
+          },
+          "zip": {
+            "required": false,
+            "type": "string"
+          },
+          "city": {
+            "required": false,
+            "type": "string"
+          },
+          "state": {
+            "required": false,
+            "type": "string"
+          },
+          "country": {
+            "required": false,
+            "type": "string"
+          },
+          "tzname": {
+            "required": false,
+            "type": "string"
+          },
+          "lat": {
+            "required": false,
+            "type": "string"
+          },
+          "lon": {
+            "required": false,
+            "type": "string"
+          },
+          "updated": {
+            "required": false,
+            "type": "string"
+          },
+          "downloaded": {
+            "required": false,
+            "type": "string"
+          },
+          "isrecent": {
+            "required": false,
+            "type": "string"
+          },
+          "CURRENTIMAGEURL": {
+            "required": false,
+            "type": "string"
+          },
+          "WIDGETCURRENTIMAGEURL": {
+            "required": false,
+            "type": "string"
+          },
+          "CAMURL": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

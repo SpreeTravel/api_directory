@@ -1,0 +1,36 @@
+--changesetresponse_8a28b620-b4bb-458c-a177-0959fb14c977
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+Content-ID: 1
+Cache-Control: no-cache
+Preference-Applied: return-no-content
+ETag: W/"datetime'2013-08-30T20%3A44%3A09.5789464Z'"
+Location: https://myaccount.table.core.windows.net/Blogs(PartitionKey='Channel_19',RowKey='1')
+DataServiceVersion: 3.0;
+
+--changesetresponse_8a28b620-b4bb-458c-a177-0959fb14c977
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+Content-ID: 2
+Cache-Control: no-cache
+Preference-Applied: return-no-content
+ETag: W/"datetime'2013-08-30T20%3A44%3A09.5789464Z'"
+Location: https://myaccount.table.core.windows.net/Blogs(PartitionKey='Channel_19',RowKey='2')
+DataServiceVersion: 3.0;
+
+--changesetresponse_8a28b620-b4bb-458c-a177-0959fb14c977
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+Content-ID: 3
+Cache-Control: no-cache
+ETag: W/"datetime'2013-08-30T20%3A44%3A10.0019041Z'"
+DataServiceVersion: 3.0;
+
+--changesetresponse_8a28b620-b4bb-458c-a177-0959fb14c977--
+--batchresponse_4c637ba4-b2f8-40f8-8856-c2d10d163a83--

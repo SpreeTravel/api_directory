@@ -1,0 +1,19 @@
+get: 
+  description: |
+    Returns details about a user’s profile. The user profile data populates the profile page (also called the Chatter profile page). This data includes user information (such as address, manager, and phone number), some user capabilities (permissions), and a set of subtab apps, which are custom tabs on the profile page.
+    For information about subtab apps, search for “subtab apps” at help.salesforce.com.
+    
+    The capabilities information provides some information about the context user’s capabilities in relation to another user, called the subject user. For example, the capabilities information indicates whether the context user can chat with the subject user and whether the context user can direct message the subject user. Specify the subject user as the userID.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: userProfileResponse
+head: 
+  description: |
+    Returns details about a user’s profile. The user profile data populates the profile page (also called the Chatter profile page). This data includes user information (such as address, manager, and phone number), some user capabilities (permissions), and a set of subtab apps, which are custom tabs on the profile page.
+    For information about subtab apps, search for “subtab apps” at help.salesforce.com.
+    
+    The capabilities information provides some information about the context user’s capabilities in relation to another user, called the subject user. For example, the capabilities information indicates whether the context user can chat with the subject user and whether the context user can direct message the subject user. Specify the subject user as the userID.
+  responses: 
+    200: 

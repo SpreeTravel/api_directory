@@ -1,0 +1,42 @@
+head: 
+  description: |
+    Get information about the photo for a recommendation definition.
+    Only community managers (users with the “Create and Set Up Communities” or “Manage Communities” permission) and users with the “Modify All Data” permission can access, create, and delete recommendation definitions and scheduled recommendations. These recommendations appear directly in the feed in communities in the Salesforce1 mobile browser app. They also appear, by default, on the right side of the home page in communities using the Summer ’15 or later version of the Napili template.
+    
+    To use an image from the Files page as a recommendation definition photo (existing content), pass the file ID in the fileId property of the request body or in the fileId request parameter.
+  responses: 
+    200: 
+get: 
+  description: |
+    Get information about the photo for a recommendation definition.
+    Only community managers (users with the “Create and Set Up Communities” or “Manage Communities” permission) and users with the “Modify All Data” permission can access, create, and delete recommendation definitions and scheduled recommendations. These recommendations appear directly in the feed in communities in the Salesforce1 mobile browser app. They also appear, by default, on the right side of the home page in communities using the Summer ’15 or later version of the Napili template.
+    
+    To use an image from the Files page as a recommendation definition photo (existing content), pass the file ID in the fileId property of the request body or in the fileId request parameter.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: photoResponse
+put: 
+  description: |
+    Upload the photo for a recommendation definition.
+    Only community managers (users with the “Create and Set Up Communities” or “Manage Communities” permission) and users with the “Modify All Data” permission can access, create, and delete recommendation definitions and scheduled recommendations. These recommendations appear directly in the feed in communities in the Salesforce1 mobile browser app. They also appear, by default, on the right side of the home page in communities using the Summer ’15 or later version of the Napili template.
+    
+    To use an image from the Files page as a recommendation definition photo (existing content), pass the file ID in the fileId property of the request body or in the fileId request parameter.
+  body: 
+    application/json: 
+      schema: recommendationDefinitionPhotoRequest
+      example: !include examples/recommendationDefinitionPhotoRequest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: photoResponse
+delete: 
+  description: |
+    Delete the photo for a recommendation definition.
+    Only community managers (users with the “Create and Set Up Communities” or “Manage Communities” permission) and users with the “Modify All Data” permission can access, create, and delete recommendation definitions and scheduled recommendations. These recommendations appear directly in the feed in communities in the Salesforce1 mobile browser app. They also appear, by default, on the right side of the home page in communities using the Summer ’15 or later version of the Napili template.
+    
+    To use an image from the Files page as a recommendation definition photo (existing content), pass the file ID in the fileId property of the request body or in the fileId request parameter.
+  responses: 
+    204: 

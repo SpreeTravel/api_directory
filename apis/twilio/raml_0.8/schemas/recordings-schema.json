@@ -1,0 +1,71 @@
+{
+  "type": "object",
+  "": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "start": {
+      "type": "integer"
+    },
+    "end": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    },
+    "num_pages": {
+      "type": "integer"
+    },
+    "page": {
+      "type": "integer"
+    },
+    "page_size": {
+      "type": "integer"
+    },
+    "uri": {
+      "type": "string"
+    },
+    "first_page_uri": {
+      "type": "string"
+    },
+    "last_page_uri": {
+      "type": "string"
+    },
+    "previous_page_uri": {
+      "type": "string"
+    },
+    "next_page_uri": {
+      "type": "string"
+    },
+    "recordings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "account_sid": {
+            "type": "string"
+          },
+          "api_version": {
+            "type": "string"
+          },
+          "call_sid": {
+            "type": "string"
+          },
+          "date_created": {
+            "type": "string"
+          },
+          "date_updated": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "string"
+          },
+          "sid": {
+            "type": "string"
+          },
+          "uri": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

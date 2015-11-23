@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice>
+  <Type>ACCREC</Type>
+  <Contact>
+    <Name>ABC Limited</Name>
+  </Contact>
+  <Date>2009-08-30</Date>
+  <DueDate>2009-09-20</DueDate>
+  <LineAmountTypes>Exclusive</LineAmountTypes>
+  <LineItems>
+    <LineItem>
+      <Description>Consulting services as agreed</Description>
+      <Quantity>5.0000</Quantity>
+      <UnitAmount>120.00</UnitAmount>
+      <AccountCode>200</AccountCode> 
+    </LineItem>
+  </LineItems>
+</Invoice>

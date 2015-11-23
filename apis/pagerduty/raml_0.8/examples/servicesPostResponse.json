@@ -1,0 +1,23 @@
+{
+	"service" : {
+		"id" : "PY944Y7" ,
+		"name" : "default-email" ,
+		"service_url" : "/services/PY944Y7" ,
+		"service_key" : "default-email@acme.pagerduty.com" ,
+		"auto_resolve_timeout" : 14400 ,
+		"acknowledgement_timeout" : 1800 ,
+		"created_at" : "2012-11-15T21:29:54-05:00" ,
+		"status" : "active" ,
+		"last_incident_timestamp" : null ,
+		"email_incident_creation" : "on_new_email_subject" ,
+		"incident_counts" : {
+			"triggered" : 0 ,
+			"acknowledged" : 0 ,
+			"resolved" : 0 ,
+			"total" : 0
+		} ,
+		"email_filter_mode" : "all-email" ,
+		"type" : "generic_email" ,
+		"description" : "default email service"
+	}
+}

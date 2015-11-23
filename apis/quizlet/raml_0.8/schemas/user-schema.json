@@ -1,0 +1,261 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "username" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "account_type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "sign_up_date" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "profile_image" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "statistics" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "study_session_count" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "message_count" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "total_answer_count" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "public_sets_created" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "public_terms_entered" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "total_sets_created" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "total_terms_entered" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    } ,
+    "sets" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "id" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "url" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "title" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "created_by" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "term_count" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "created_date" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "modified_date" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "has_images" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "subjects" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            }
+          }
+        }
+      ]
+    } ,
+    "favorite_sets" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "id" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "url" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "title" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "created_by" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "term_count" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "created_date" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "modified_date" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "has_images" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "subjects" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            }
+          }
+        }
+      ]
+    } ,
+    "studied" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "mode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "last_studied_date" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "finished_date" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "score" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "set" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "id" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "url" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "title" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "created_by" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "term_count" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "created_date" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "modified_date" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "has_images" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                } ,
+                "subjects" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ]
+    } ,
+    "classes" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "id" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "set_count" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "user_count" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "created_date" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "is_public" : {
+              "type" : "boolean" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

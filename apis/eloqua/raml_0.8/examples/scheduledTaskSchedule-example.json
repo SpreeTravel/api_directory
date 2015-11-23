@@ -1,0 +1,12 @@
+{
+  "displayTimeZoneId" : "undefined" ,
+  "details" : {
+    "dailyStartTime" : "undefined" ,
+    "dailyEndTime" : "undefined" ,
+    "days" : [
+      null ,
+      null
+    ]
+  } ,
+  "executionInterval" : "undefined"
+}

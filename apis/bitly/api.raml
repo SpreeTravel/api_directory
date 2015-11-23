@@ -1,0 +1,1711 @@
+#%RAML 0.8
+title: Bitly
+version: v3
+baseUri: https://api-ssl.bitly.com/{version}/
+mediaType: application/json
+securitySchemes:
+  - oauth_2_0: !include securitySchemes/oauth_2_0.raml
+schemas:
+  - link-shares: !include schemas/link-shares-schema.json
+  - link-encoders: !include schemas/link-encoders-schema.json
+  - link-countries: !include schemas/link-countries-schema.json
+  - link-encoders_count: !include schemas/link-encoders_count-schema.json
+  - link-clicks: !include schemas/link-clicks-schema.json
+  - link-referrers: !include schemas/link-referrers-schema.json
+  - link-referrers-schema: !include schemas/link-referrers-schema.json
+  - link-lookup: !include schemas/link-lookup-schema.json
+  - link-referring_domains: !include schemas/link-referring_domains-schema.json
+  - expand: !include schemas/expand-schema.json
+  - user-network_history: !include schemas/user-network_history-schema.json
+  - user-tracking_domain_clicks: !include schemas/user-tracking_domain_clicks-schema.json
+  - user-shorten_counts: !include schemas/user-shorten_counts-schema.json
+  - user-info-enterprise_user: !include schemas/user-info-enterprise_user-schema.json
+  - user-share_counts: !include schemas/user-share_counts-schema.json
+  - user-countries: !include schemas/user-countries-schema.json
+  - user-link_history: !include schemas/user-link_history-schema.json
+  - user-popular_links: !include schemas/user-popular_links-schema.json
+  - user-tracking_domain_shorten_counts: !include schemas/user-tracking_domain_shorten_counts-schema.json
+  - user-clicks: !include schemas/user-clicks-schema.json
+  - user-link_save: !include schemas/user-link_save-schema.json
+  - user-referrers: !include schemas/user-referrers-schema.json
+  - user-tracking_domain_list: !include schemas/user-tracking_domain_list-schema.json
+  - user-referring_domains: !include schemas/user-referring_domains-schema.json
+  - user-link_edit: !include schemas/user-link_edit-schema.json
+  - user-link_lookup: !include schemas/user-link_lookup-schema.json
+  - info: !include schemas/info-schema.json
+  - shorten: !include schemas/shorten-schema.json
+  - bundle-clone: !include schemas/bundle-clone-schema.json
+  - bundle-clone-schema: !include schemas/bundle-clone-schema.json
+  - bundle-view_count: !include schemas/bundle-view_count-schema.json
+  - bundle-bundles_by_user: !include schemas/bundle-bundles_by_user-schema.json
+  - bitly_pro_domain: !include schemas/bitly_pro_domain-schema.json
+resourceTypes:
+  - base: !include resourceTypes/base.raml
+securedBy: [ oauth_2_0 ]
+/highvalue: 
+  type: base
+  get: 
+    description: |
+      Returns a specified number of "high-value" bitly links that are popular
+      across bitly at this particular moment.
+      
+      Deprecated endpoint.
+    queryParameters: 
+      limit: 
+        description: The maximum number of high-value links to return.
+        type: integer
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            example: !include examples/highvalue-example.json
+/search: 
+  type: base
+  get: 
+    description: |
+      Search links receiving clicks across bitly by content, language, location,
+      and more.
+      
+      Deprecated endpoint.
+    queryParameters: 
+      limit: 
+        description: The maximum number of high-value links to return.
+        type: integer
+      offset: 
+        description: Which result to start with
+        type: integer
+        default: 0
+      query: 
+        description: String to query for.
+        required: true
+      lang: 
+        description: Favor results in this language (two letter ISO code).
+        maxLength: 2
+      cities: 
+        description: |
+          Show links active in this city (ordered like country-state-city, e.g.
+          us-il-chicago).
+      domain: 
+        description: Restrict results to this web domain.
+      fields: 
+        description: |
+          Which fields to return in the response (comma-separated).
+          By default, all will be returned.
+        enum: 
+          - domain
+          - initial_epoch
+          - h2
+          - h3
+          - site
+          - lastindexed
+          - keywords
+          - last_indexed_epoch
+          - title
+          - initial
+          - summaryText
+          - content
+          - score
+          - summaryTitle
+          - type
+          - description
+          - cities
+          - lang
+          - url
+          - referrer
+          - aggregate_link
+          - lastseen
+          - page
+          - ogtitle
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            example: !include examples/search-example.json
+/realtime: 
+  /bursting_phrases: 
+    type: base
+    get: 
+      description: |
+        Returns phrases that are receiving an uncharacteristically high volume of
+        click traffic, and the individual links (hashes) driving traffic to pages
+        containing these phrases.
+        
+        Deprecated endpoint.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/realtime-bursting_phrases-example.json
+  /hot_phrases: 
+    type: base
+    get: 
+      description: |
+        Returns phrases that are receiving a consistently high volume of click
+        traffic, and the individual links (hashes) driving traffic to pages
+        containing these phrases.
+        
+        Deprecated endpoint.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/realtime-hot_phrases-example.json
+  /clickrate: 
+    type: base
+    get: 
+      description: |
+        Returns the click rate for content containing a specified phrase.
+        
+        Deprecated endpoint.
+      queryParameters: 
+        phrase: 
+          description: "The phrase for which you'd like to get the click rate."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/realtime-clickrate-example.json
+/link: 
+  /language: 
+    type: base
+    get: 
+      description: |
+        Returns the significant languages for the bitly link. Note that languages
+        are highly dependent upon activity (clicks) occurring on the bitly link.
+        If there have not been clicks on a bitly link within the last 24 hours, i
+        is possible that language data for that link does not exist.
+        
+        Deprecated endpoint.
+      queryParameters: 
+        link: 
+          description: A bitly link.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/link-language.json
+  /content: 
+    type: base
+    get: 
+      description: |
+        Returns the "main article" from the linked page, as determined by the conten
+        extractor, in either HTML or plain text format.
+        
+        Deprecated endpoint.
+      queryParameters: 
+        link: 
+          description: A bitly link.
+          required: true
+        content_type: 
+          description: |
+            Specifies whether to return the content as html or plain text.
+          enum: [ html , plain_text ]
+          default: html
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/link-content-example.json
+  /shares: 
+    type: base
+    get: 
+      description: |
+        Returns metrics about a shares of a single link.
+      queryParameters: 
+        link: 
+          description: A bitly link.
+        unit: 
+          description: |
+            minute, hour, day, week or month, default: day
+            Note: when unit is minute the maximum value for units is 60.
+          enum: 
+            - minute
+            - hour
+            - day
+            - week
+            - month
+          default: day
+        units: 
+          description: |
+            An integer representing the time units to query data for. Pass -1 to
+            return all units of time.
+          type: integer
+        timezone: 
+          description: |
+            An integer hour offset from UTC (-14 to 14), or a timezone string
+            default: America/New_York.
+          type: integer
+          default: -4
+        rollup: 
+          description: |
+            Return data for multiple units rolled up to a single result instead of
+            a separate value for each period of time.
+          type: boolean
+        limit: 
+          description: 1 to 1000
+          type: integer
+          default: 100
+        unit_reference_ts: 
+          description: |
+            An epoch timestamp, indicating the most recent time for which to pull
+            metrics, default: now.
+            The value of unit_reference_ts rounds to the nearest unit.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: link-shares
+              example: !include examples/link-shares-example.json
+  /encoders: 
+    type: base
+    get: 
+      description: |
+        Returns users who have encoded this link (optionally only those in the
+        requesting user's social graph).
+        Note: Some users may not be returned from this call depending on link
+        privacy settings.
+      queryParameters: 
+        link: 
+          description: A bitly link.
+          required: true
+        my_network: 
+          description: True or false - restrict to my network.
+          type: boolean
+        limit: 
+          description: |
+            Integer in the range of 1 to 25 that specifies the number of records
+            to return.
+          type: integer
+          default: 10
+        expand_user: 
+          description: True or false - include display names of encoders.
+          type: boolean
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: link-encoders
+              example: !include examples/link-encoders-example.json
+  /category: 
+    type: base
+    get: 
+      description: |
+        Returns the detected categories for a document, in descending order of
+        confidence.
+        
+        Deprecated endpoint.
+      queryParameters: 
+        link: 
+          description: A bitly link.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/link-category-example.json
+  /info: 
+    type: base
+    get: 
+      description: |
+        Returns metadata about a single bitly link.
+      queryParameters: 
+        link: 
+          description: A bitly link.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/link-info-example.json
+  /countries: 
+    type: base
+    get: 
+      description: Returns metrics about the countries referring click traffic to a single bitly link.
+      queryParameters: 
+        link: 
+          description: A bitly link.
+        unit: 
+          description: |
+            minute, hour, day, week or month, default: day
+            Note: when unit is minute the maximum value for units is 60.
+          enum: 
+            - minute
+            - hour
+            - day
+            - week
+            - month
+          default: day
+        units: 
+          description: |
+            An integer representing the time units to query data for. Pass -1 to
+            return all units of time.
+          type: integer
+        timezone: 
+          description: |
+            An integer hour offset from UTC (-14 to 14), or a timezone string
+            default: America/New_York.
+          type: integer
+          default: -4
+        rollup: 
+          description: |
+            Return data for multiple units rolled up to a single result instead of
+            a separate value for each period of time.
+          type: boolean
+        limit: 
+          description: 1 to 1000
+          type: integer
+          default: 100
+        unit_reference_ts: 
+          description: |
+            An epoch timestamp, indicating the most recent time for which to pull
+            metrics, default: now.
+            The value of unit_reference_ts rounds to the nearest unit.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: link-countries
+              example: !include examples/link-countries-example.json
+  /encoders_count: 
+    type: base
+    get: 
+      description: |
+        Returns the number of users who have shortened (encoded) a single bitly link.
+      queryParameters: 
+        link: 
+          description: A bitly link.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: link-encoders_count
+              example: !include examples/link-encoders_count-example.json
+  /social: 
+    type: base
+    get: 
+      description: |
+        Returns the "social score" for a specified bitly link. Note that the social
+        score are highly dependent upon activity (clicks) occurring on the bitly
+        link. If there have not been clicks on a bitly link within the last 24
+        hours, it is possible a social score for that link does not exist.
+        
+        Deprecated endpoint.
+      queryParameters: 
+        link: 
+          description: A bitly link.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/link-social-example.json
+  /clicks: 
+    type: base
+    get: 
+      description: |
+        Returns the number of clicks on a single bitly link.
+        Note: historical data is stored hourly beyond the most recent 60 minutes.
+        If a unit_reference_ts is specified, unit cannot be minute.
+      queryParameters: 
+        link: 
+          description: A bitly link.
+        unit: 
+          description: |
+            minute, hour, day, week or month, default: day
+            Note: when unit is minute the maximum value for units is 60.
+          enum: 
+            - minute
+            - hour
+            - day
+            - week
+            - month
+          default: day
+        units: 
+          description: |
+            An integer representing the time units to query data for. Pass -1 to
+            return all units of time.
+          type: integer
+        timezone: 
+          description: |
+            An integer hour offset from UTC (-14 to 14), or a timezone string
+            default: America/New_York.
+          type: integer
+          default: -4
+        rollup: 
+          description: |
+            Return data for multiple units rolled up to a single result instead of
+            a separate value for each period of time.
+          type: boolean
+        limit: 
+          description: 1 to 1000
+          type: integer
+          default: 100
+        unit_reference_ts: 
+          description: |
+            An epoch timestamp, indicating the most recent time for which to pull
+            metrics, default: now.
+            The value of unit_reference_ts rounds to the nearest unit.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: link-clicks
+              example: !include examples/link-clicks-example.json
+  /location: 
+    type: base
+    get: 
+      description: |
+        Returns the significant locations for the bitly link or None if locations
+        do not exist. Note that locations are highly dependent upon activity
+        (clicks) occurring on the bitly link. If there have not been clicks on a
+        bitly link within the last 24 hours, it is possible that location data for
+        that link does not exist.
+        
+        Deprecated endpoint.
+      queryParameters: 
+        link: 
+          description: A bitly link.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/link-location.json
+  /referrers_by_domain: 
+    type: base
+    get: 
+      description: |
+        Returns metrics about the pages referring click traffic to a single bitly
+        link, grouped by referring domain.
+      queryParameters: 
+        link: 
+          description: A bitly link.
+        unit: 
+          description: |
+            minute, hour, day, week or month, default: day
+            Note: when unit is minute the maximum value for units is 60.
+          enum: 
+            - minute
+            - hour
+            - day
+            - week
+            - month
+          default: day
+        units: 
+          description: |
+            An integer representing the time units to query data for. Pass -1 to
+            return all units of time.
+          type: integer
+        timezone: 
+          description: |
+            An integer hour offset from UTC (-14 to 14), or a timezone string
+            default: America/New_York.
+          type: integer
+          default: -4
+        limit: 
+          description: 1 to 1000
+          type: integer
+          default: 100
+        unit_reference_ts: 
+          description: |
+            An epoch timestamp, indicating the most recent time for which to pull
+            metrics, default: now.
+            The value of unit_reference_ts rounds to the nearest unit.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: link-referrers
+              example: !include examples/link-referrers_by_domain-example.json
+  /referrers: 
+    type: base
+    get: 
+      description: |
+        Returns metrics about the pages referring click traffic to a single bitly link.
+      queryParameters: 
+        link: 
+          description: A bitly link.
+        unit: 
+          description: |
+            minute, hour, day, week or month, default: day
+            Note: when unit is minute the maximum value for units is 60.
+          enum: 
+            - minute
+            - hour
+            - day
+            - week
+            - month
+          default: day
+        units: 
+          description: |
+            An integer representing the time units to query data for. Pass -1 to
+            return all units of time.
+          type: integer
+        timezone: 
+          description: |
+            An integer hour offset from UTC (-14 to 14), or a timezone string
+            default: America/New_York.
+          type: integer
+          default: -4
+        limit: 
+          description: 1 to 1000
+          type: integer
+          default: 100
+        unit_reference_ts: 
+          description: |
+            An epoch timestamp, indicating the most recent time for which to pull
+            metrics, default: now.
+            The value of unit_reference_ts rounds to the nearest unit.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: link-referrers-schema
+              example: !include examples/link-referrers-example.json
+  /lookup: 
+    type: base
+    get: 
+      description: |
+        This is used to query for a bitly link based on a long URL.
+      queryParameters: 
+        url: 
+          description: One or more long URLs to lookup.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: link-lookup
+              example: !include examples/link-lookup-example.json
+  /referring_domains: 
+    type: base
+    get: 
+      description: |
+        Returns metrics about the domains referring click traffic to a single bitly link.
+      queryParameters: 
+        link: 
+          description: A bitly link.
+        unit: 
+          description: |
+            minute, hour, day, week or month, default: day
+            Note: when unit is minute the maximum value for units is 60.
+          enum: 
+            - minute
+            - hour
+            - day
+            - week
+            - month
+          default: day
+        units: 
+          description: |
+            An integer representing the time units to query data for. Pass -1 to
+            return all units of time.
+          type: integer
+        timezone: 
+          description: |
+            An integer hour offset from UTC (-14 to 14), or a timezone string
+            default: America/New_York.
+          type: integer
+          default: -4
+        limit: 
+          description: 1 to 1000
+          type: integer
+          default: 100
+        unit_reference_ts: 
+          description: |
+            An epoch timestamp, indicating the most recent time for which to pull
+            metrics, default: now.
+            The value of unit_reference_ts rounds to the nearest unit.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: link-referring_domains
+              example: !include examples/link-referring_domains-example.json
+/expand: 
+  type: base
+  get: 
+    description: |
+      Given a bitly URL or hash (or multiple), returns the target (long) URL.
+      Note: either shortUrl or hash must be given as a parameter.
+    queryParameters: 
+      shortUrl: 
+        description: |
+          Refers to one or more bitly links. e.g.: http://bit.ly/1RmnUT or
+          http://j.mp/1RmnUT.
+      hash: 
+        description: |
+          Refers to one or more bitly hashes. e.g.: 2bYgqR or a-custom-name.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: expand
+            example: !include examples/expand-example.json
+/user: 
+  /bundle_history: 
+    type: base
+    get: 
+      description: Returns all bundles this user has access to (public + private + collaborator).
+      queryParameters: 
+        expand_user: 
+          description: True or false - include extra user info in response.
+          type: boolean
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/bundle-bundle_history-example.json
+  /network_history: 
+    type: base
+    get: 
+      description: |
+        Returns entries from a user's network history in reverse chronogical order.
+        (A user's network history includes publicly saved links from Twitter and
+        Facebook connections.)
+      queryParameters: 
+        offset: 
+          description: Integer that specifies the first record to return.
+          type: integer
+        expand_client_id: 
+          description: |
+            True or false whether to provide additional information about encoding
+            application.
+          type: boolean
+          required: true
+          default: false
+        limit: 
+          description: |
+            Integer in the range of 1 to 100 that specifies the number of records
+            to return (default: 20).
+          type: integer
+          default: 20
+        expand_user: 
+          description: |
+            True or false - include extra user info in response (login, avatar_url,
+            display_name, profile_url, full_name
+          type: boolean
+          default: false
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: user-network_history
+              example: !include examples/user-network_history-example.json
+  /tracking_domain_clicks: 
+    type: base
+    get: 
+      description: |
+        Returns the number of clicks on bitly links pointing to the specified
+        tracking domain that have occured in a given time period.
+        Users can register a tracking domain from their bitly settings page.
+      queryParameters: 
+        domain: 
+          description: |
+            A tracking domain as returned from /v3/user/tracking_domain_list.
+        unit: 
+          description: |
+            minute, hour, day, week or month, default: day
+            Note: when unit is minute the maximum value for units is 60.
+          enum: 
+            - minute
+            - hour
+            - day
+            - week
+            - month
+          default: day
+        units: 
+          description: |
+            An integer representing the time units to query data for. Pass -1 to
+            return all units of time.
+          type: integer
+        timezone: 
+          description: |
+            An integer hour offset from UTC (-14 to 14), or a timezone string
+            default: America/New_York.
+          type: integer
+          default: -4
+        rollup: 
+          description: |
+            Return data for multiple units rolled up to a single result instead of
+            a separate value for each period of time.
+          type: boolean
+        limit: 
+          description: 1 to 1000
+          type: integer
+          default: 100
+        unit_reference_ts: 
+          description: |
+            An epoch timestamp, indicating the most recent time for which to pull
+            metrics, default: now.
+            The value of unit_reference_ts rounds to the nearest unit.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: user-tracking_domain_clicks
+              example: !include examples/user-tracking_domain_clicks-example.json
+  /shorten_counts: 
+    type: base
+    get: 
+      description: |
+        Returns the number of links shortened (encoded) in a given time period by
+        the authenticated user.
+      queryParameters: 
+        unit: 
+          description: |
+            minute, hour, day, week or month, default: day
+            Note: when unit is minute the maximum value for units is 60.
+          enum: 
+            - minute
+            - hour
+            - day
+            - week
+            - month
+          default: day
+        units: 
+          description: |
+            An integer representing the time units to query data for. Pass -1 to
+            return all units of time.
+          type: integer
+        timezone: 
+          description: |
+            An integer hour offset from UTC (-14 to 14), or a timezone string
+            default: America/New_York.
+          type: integer
+          default: -4
+        rollup: 
+          description: |
+            Return data for multiple units rolled up to a single result instead of
+            a separate value for each period of time.
+          type: boolean
+        limit: 
+          description: 1 to 1000
+          type: integer
+          default: 100
+        unit_reference_ts: 
+          description: |
+            An epoch timestamp, indicating the most recent time for which to pull
+            metrics, default: now.
+            The value of unit_reference_ts rounds to the nearest unit.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: user-shorten_counts
+              example: !include examples/user-shorten_counts-example.json
+  /info: 
+    type: base
+    get: 
+      description: Return or update information about a user.
+      queryParameters: 
+        login: 
+          description: |
+            The bitly login of the user whose info to look up. If not given, the
+            authenticated user will be used.
+        full_name: 
+          description: |
+            Set the users full name value. (only available for the authenticated user.)
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: user-info-enterprise_user
+              example: !include examples/user-info-example.json
+  /share_counts: 
+    type: base
+    get: 
+      description: |
+        Returns the number of shares by the authenticated user in a given time period.
+      queryParameters: 
+        unit: 
+          description: |
+            minute, hour, day, week or month, default: day
+            Note: when unit is minute the maximum value for units is 60.
+          enum: 
+            - minute
+            - hour
+            - day
+            - week
+            - month
+          default: day
+        units: 
+          description: |
+            An integer representing the time units to query data for. Pass -1 to
+            return all units of time.
+          type: integer
+        timezone: 
+          description: |
+            An integer hour offset from UTC (-14 to 14), or a timezone string
+            default: America/New_York.
+          type: integer
+          default: -4
+        rollup: 
+          description: |
+            Return data for multiple units rolled up to a single result instead of
+            a separate value for each period of time.
+          type: boolean
+        limit: 
+          description: 1 to 1000
+          type: integer
+          default: 100
+        unit_reference_ts: 
+          description: |
+            An epoch timestamp, indicating the most recent time for which to pull
+            metrics, default: now.
+            The value of unit_reference_ts rounds to the nearest unit.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: user-share_counts
+              example: !include examples/user-share_counts-example.json
+  /countries: 
+    type: base
+    get: 
+      description: "Returns aggregate metrics about the countries referring click traffic to all of the authenticated user's bitly links."
+      queryParameters: 
+        unit: 
+          description: |
+            minute, hour, day, week or month, default: day
+            Note: when unit is minute the maximum value for units is 60.
+          enum: 
+            - minute
+            - hour
+            - day
+            - week
+            - month
+          default: day
+        units: 
+          description: |
+            An integer representing the time units to query data for. Pass -1 to
+            return all units of time.
+          type: integer
+        timezone: 
+          description: |
+            An integer hour offset from UTC (-14 to 14), or a timezone string
+            default: America/New_York.
+          type: integer
+          default: -4
+        rollup: 
+          description: |
+            Return data for multiple units rolled up to a single result instead of
+            a separate value for each period of time.
+          type: boolean
+        limit: 
+          description: 1 to 1000
+          type: integer
+          default: 100
+        unit_reference_ts: 
+          description: |
+            An epoch timestamp, indicating the most recent time for which to pull
+            metrics, default: now.
+            The value of unit_reference_ts rounds to the nearest unit.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: user-countries
+              example: !include examples/user-countries-example.json
+  /link_history: 
+    type: base
+    get: 
+      description: |
+        Returns entries from a user's link history in reverse chronological order.
+        Note: Entries will be sorted by the user_ts field found in the response data.
+      queryParameters: 
+        link: 
+          description: |
+            The bitly link to return metadata for (when specified, overrides all
+            other options).
+        limit: 
+          description: |
+            Integer in the range 1 to 100 default: 50, specifying the max number of
+            results to return.
+          type: integer
+          default: 50
+        offset: 
+          description: |
+            Integer specifying the numbered result at which to start (for pagination).
+          type: integer
+        created_before: 
+          description: Timestamp as an integer unix epoch.
+        created_after: 
+          description: Timestamp as an integer unix epoch.
+        modified_after: 
+          description: Timestamp as an integer unix epoch.
+        expand_client_id: 
+          description: |
+            true or false whether to provide additional information about encoding
+            application. default: false.
+          type: boolean
+        archived: 
+          description: |
+            On, off or both whether to include or exclude archived history entries.
+            (on = return only archived history entries)
+          enum: [ on , off ]
+          default: off
+        private: 
+          description: |
+            on, off and both whether to include or exclude private history entries.
+            (on = return only private history entries) default: both.
+          enum: [ on , off ]
+        user: 
+          description: |
+            The user for whom to retrieve history entries (if different from
+            authenticated user).
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: user-link_history
+              example: !include examples/user-link_history-example.json
+  /popular_links: 
+    type: base
+    get: 
+      description: |
+        Returns the authenticated user's most-clicked bitly links (ordered by number
+        of clicks) in a given time period.
+        Note: This replaces the realtime_links endpoint.
+      queryParameters: 
+        unit: 
+          description: |
+            minute, hour, day, week or month, default: day
+            Note: when unit is minute the maximum value for units is 60.
+          enum: 
+            - minute
+            - hour
+            - day
+            - week
+            - month
+          default: day
+        units: 
+          description: |
+            An integer representing the time units to query data for. Pass -1 to
+            return all units of time.
+          type: integer
+        timezone: 
+          description: |
+            An integer hour offset from UTC (-14 to 14), or a timezone string
+            default: America/New_York.
+          type: integer
+          default: -4
+        limit: 
+          description: 1 to 1000
+          type: integer
+          default: 100
+        unit_reference_ts: 
+          description: |
+            An epoch timestamp, indicating the most recent time for which to pull
+            metrics, default: now.
+            The value of unit_reference_ts rounds to the nearest unit.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: user-popular_links
+              example: !include examples/user-popular_links-example.json
+  /tracking_domain_shorten_counts: 
+    type: base
+    get: 
+      description: |
+        Returns the number of links, pointing to a specified tracking domain, shortened
+        (encoded) in a given time period by all bitly users.
+        Users can register a tracking domain from their bitly settings page.
+      queryParameters: 
+        domain: 
+          description: |
+            A tracking domain as returned from /v3/user/tracking_domain_list.
+        unit: 
+          description: |
+            minute, hour, day, week or month, default: day
+            Note: when unit is minute the maximum value for units is 60.
+          enum: 
+            - minute
+            - hour
+            - day
+            - week
+            - month
+          default: day
+        units: 
+          description: |
+            An integer representing the time units to query data for. Pass -1 to
+            return all units of time.
+          type: integer
+        timezone: 
+          description: |
+            An integer hour offset from UTC (-14 to 14), or a timezone string
+            default: America/New_York.
+          type: integer
+          default: -4
+        rollup: 
+          description: |
+            Return data for multiple units rolled up to a single result instead of
+            a separate value for each period of time.
+          type: boolean
+        limit: 
+          description: 1 to 1000
+          type: integer
+          default: 100
+        unit_reference_ts: 
+          description: |
+            An epoch timestamp, indicating the most recent time for which to pull
+            metrics, default: now.
+            The value of unit_reference_ts rounds to the nearest unit.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: user-tracking_domain_shorten_counts
+              example: !include examples/user-tracking_domain_shorten_counts-example.json
+  /clicks: 
+    type: base
+    get: 
+      description: |
+        Returns the aggregate number of clicks on all of the authenticated user's
+        bitly links.
+      queryParameters: 
+        unit: 
+          description: |
+            minute, hour, day, week or month, default: day
+            Note: when unit is minute the maximum value for units is 60.
+          enum: 
+            - minute
+            - hour
+            - day
+            - week
+            - month
+          default: day
+        units: 
+          description: |
+            An integer representing the time units to query data for. Pass -1 to
+            return all units of time.
+          type: integer
+        timezone: 
+          description: |
+            An integer hour offset from UTC (-14 to 14), or a timezone string
+            default: America/New_York.
+          type: integer
+          default: -4
+        rollup: 
+          description: |
+            Return data for multiple units rolled up to a single result instead of
+            a separate value for each period of time.
+          type: boolean
+        limit: 
+          description: 1 to 1000
+          type: integer
+          default: 100
+        unit_reference_ts: 
+          description: |
+            An epoch timestamp, indicating the most recent time for which to pull
+            metrics, default: now.
+            The value of unit_reference_ts rounds to the nearest unit.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: user-clicks
+              example: !include examples/user-clicks-example.json
+  /link_save: 
+    type: base
+    get: 
+      description: |
+        Saves a link as a bitmark in a user's history, with optional pre-set metadata.
+        (Also returns a short URL for that link.)
+      queryParameters: 
+        longUrl: 
+          description: The URL to be saved as a bitmark.
+          required: true
+        title: 
+          description: The title of this bitmark.
+        note: 
+          description: A description of, or note about, this bitmark.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: user-link_save
+              example: !include examples/user-link_save-example.json
+  /referrers: 
+    type: base
+    get: 
+      description: |
+        Returns aggregate metrics about the pages referring click traffic to all
+        of the authenticated user's bitly links.
+      queryParameters: 
+        unit: 
+          description: |
+            minute, hour, day, week or month, default: day
+            Note: when unit is minute the maximum value for units is 60.
+          enum: 
+            - minute
+            - hour
+            - day
+            - week
+            - month
+          default: day
+        units: 
+          description: |
+            An integer representing the time units to query data for. Pass -1 to
+            return all units of time.
+          type: integer
+        timezone: 
+          description: |
+            An integer hour offset from UTC (-14 to 14), or a timezone string
+            default: America/New_York.
+          type: integer
+          default: -4
+        rollup: 
+          description: |
+            Return data for multiple units rolled up to a single result instead of
+            a separate value for each period of time.
+          type: boolean
+        limit: 
+          description: 1 to 1000
+          type: integer
+          default: 100
+        unit_reference_ts: 
+          description: |
+            An epoch timestamp, indicating the most recent time for which to pull
+            metrics, default: now.
+            The value of unit_reference_ts rounds to the nearest unit.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: user-referrers
+              example: !include examples/user-referrers-example.json
+  /tracking_domain_list: 
+    type: base
+    get: 
+      description: Returns a list of tracking domains a user has configured.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: user-tracking_domain_list
+              example: !include examples/user-tracking_domain_list-example.json
+  /referring_domains: 
+    type: base
+    get: 
+      description: |
+        Returns aggregate metrics about the domains referring click traffic to all of the authenticated user's bitly links.
+        If the user is a master account, or is a subaccount with full_reports permission,
+        the user may choose to view the metrics of any account belonging to the master account.
+      queryParameters: 
+        unit: 
+          description: |
+            minute, hour, day, week or month, default: day
+            Note: when unit is minute the maximum value for units is 60.
+          enum: 
+            - minute
+            - hour
+            - day
+            - week
+            - month
+          default: day
+        units: 
+          description: |
+            An integer representing the time units to query data for. Pass -1 to
+            return all units of time.
+          type: integer
+        timezone: 
+          description: |
+            An integer hour offset from UTC (-14 to 14), or a timezone string
+            default: America/New_York.
+          type: integer
+          default: -4
+        rollup: 
+          description: |
+            Return data for multiple units rolled up to a single result instead of
+            a separate value for each period of time.
+          type: boolean
+        limit: 
+          description: 1 to 1000
+          type: integer
+          default: 100
+        unit_reference_ts: 
+          description: |
+            An epoch timestamp, indicating the most recent time for which to pull
+            metrics, default: now.
+            The value of unit_reference_ts rounds to the nearest unit.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: user-referring_domains
+              example: !include examples/user-referring_domains-example.json
+  /link_edit: 
+    type: base
+    get: 
+      description: |
+        Changes link metadata in a user's history.
+        Because link metadata is modified asynchronously, it may take a few moments
+        for changes made via this API method to update.
+      queryParameters: 
+        link: 
+          description: The bitly link to be edited.
+        edit: 
+          description: |
+            A comma separated string of fields to be edited. ie: to edit the note
+            field you also need to pass edit=note.
+          required: true
+        title: 
+          description: The title of this bitmark.
+        note: 
+          description: A description of, or note about, this bitmark.
+        private: 
+          description: |
+            Boolean true or false indicating privacy setting (defaults to user-level
+            setting).
+          type: boolean
+        user_ts: 
+          description: Timestamp as an integer epoch.
+          type: integer
+        archived: 
+          description: Boolean true or false indicating whether or not link is to be archived.
+          type: boolean
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: user-link_edit
+              example: !include examples/user-link_edit-example.json
+  /link_lookup: 
+    type: base
+    get: 
+      description: |
+        This is used to query for a bitly link shortened by the authenticated user
+        based on a long URL.
+      queryParameters: 
+        url: 
+          description: One or more long URLs to lookup.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: user-link_lookup
+              example: !include examples/user-link_lookup-example.json
+/info: 
+  type: base
+  get: 
+    description: |
+      This is used to return the page title for a given bitly link.
+    queryParameters: 
+      hash: 
+        description: |
+          Refers to one or more bitly hashes. e.g.: 2bYgqR or a-custom-name.
+        required: true
+      shortUrl: 
+        description: |
+          Refers to one or more bitly links. e.g.: http://bit.ly/1RmnUT or
+          http://j.mp/1RmnUT.
+      expand_user: 
+        description: Include extra user info in response.
+        type: boolean
+        required: true
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: info
+            example: !include examples/info-example.json
+/shorten: 
+  type: base
+  get: 
+    description: Given a long URL, returns a bitly short URL.
+    queryParameters: 
+      longUrl: 
+        description: |
+          A long URL to be shortened (example: http://betaworks.com/).
+          Long URLs should be URL-encoded. You can not include a longUrl in the
+          request that has &, ?, or other reserved parameters without firs
+          encoding it.
+          Long URLs should not contain spaces: any longUrl with spaces will be
+          rejected. All spaces should be either percent encoded %20 or plus
+          encoded +. Note that tabs, newlines and trailing spaces are all
+          indications of errors. Please remember to strip leading and trailing
+          whitespace from any user input before shortening.
+          Long URLs must have a slash between the domain and the path component.
+          For example, http://example.com?query=parameter is invalid, and instead
+          should be formatted as http://example.com/?query=parameter.
+        required: true
+      domain: 
+        description: |
+          Refers to a preferred domain; either bit.ly, j.mp, or bitly.com, for
+          users who do NOT have a custom short domain set up with bitly. This
+          affects the output value of url. The default for this parameter is the
+          short domain selected by each user in his/her bitly account settings.
+          Passing a specific domain via this parameter will override the defaul
+          settings for users who do NOT have a custom short domain set up with
+          bitly. For users who have implemented a custom short domain, bitly
+          will always return short links according to the user's account-level
+          preference.
+          The default value for the domain parameter is selected by each user from
+          within his/her bitly account settings at http://bitly.com/a/account.
+        enum: 
+          - bit.ly
+          - j.mp
+          - bitly.com
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: shorten
+            example: !include examples/shorten-example.json
+/bundle: 
+  /pending_collaborator_remove: 
+    type: base
+    get: 
+      description: Removes a pending/invited collaborator from a bundle.
+      queryParameters: 
+        bundle_link: 
+          description: The URL of the bundle.
+        collaborator: 
+          description: Bitly login or email address of the collaborator to remove.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: bundle-clone
+  /edit: 
+    type: base
+    get: 
+      description: Edit a bundle for the authenticated user.
+      queryParameters: 
+        bundle_link: 
+          description: The URL corresponding to the bundle to be modified.
+        edit: 
+          description: |
+            A field designating which properties (e.g., 'title', 'description') are
+            to be edited, allowing for these fields to be updated with empty values.
+        title: 
+          description: A title for the specified bundle.
+        description: 
+          description: A description for the specified bundle.
+        private: 
+          description: |
+            A true or false value representing whether or not the specified bundle
+            should set to private.
+          type: boolean
+        preview: 
+          description: |
+            A true or false value representing whether or not content previews should
+            be shown for the specified bundle's links.
+          type: boolean
+        og_image: 
+          description: "The URL to the bundle's cover image."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: bundle-clone-schema
+              example: !include examples/bundle-edit-example.json
+  /collaborator_add: 
+    type: base
+    get: 
+      description: Add a collaborator to a bundle.
+      queryParameters: 
+        bundle_link: 
+          description: The URL of the bundle to add.
+        collaborator: 
+          description: Bitly login or email address of the collaborator to add.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: bundle-clone-schema
+  /link_remove: 
+    type: base
+    get: 
+      description: Remove a link from a bitly bundle
+      queryParameters: 
+        bundle_link: 
+          description: |
+            The URL corresponding to the bundle from which the link will be removed.
+        link: 
+          description: The bitly link to be removed from this bundle.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: bundle-clone-schema
+              example: !include examples/bundle-link_remove-example.json
+  /archive: 
+    type: base
+    get: 
+      description: |
+        Archive a bundle for the authenticated user. Only a bundle's owner is
+        allowed to archive a bundle.
+      queryParameters: 
+        bundle_link: 
+          description: The URL corresponding to the bundle to be archived.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/bundle-archive-example.json
+  /link_reorder: 
+    type: base
+    get: 
+      description: Change the position of a link in a bitly bundle.
+      queryParameters: 
+        bundle_link: 
+          description: |
+            The URL corresponding to the bundle in which the link will be reordered.
+        link: 
+          description: The bitly link to be reordered in this bundle.
+        display_order: 
+          description: |
+            The new display_order value to be assigned to the the specified link. (A
+            value of -1 moves to end, 0 to the front, any other number moves it to
+            that spot, bumping everythign else down.)
+          type: integer
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: bundle-clone-schema
+              example: !include examples/bundle-link_reorder-example.json
+  /view_count: 
+    type: base
+    get: 
+      description: Get the number of views for a bundle.
+      queryParameters: 
+        bundle_link: 
+          description: The URL of the bundle.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: bundle-view_count
+  /create: 
+    type: base
+    get: 
+      description: Create a new bundle for the authenticated user.
+      queryParameters: 
+        private: 
+          description: |
+            A value true or false designating the privacy setting of the bundle to be created.
+          type: boolean
+          default: false
+        title: 
+          description: The title of the bundle to be created.
+        description: 
+          description: A description of the bundle to be created.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: bundle-clone-schema
+              example: !include examples/bundle-create-example.json
+  /link_comment_remove: 
+    type: base
+    get: 
+      description: |
+        Remove a comment from a bundle item. Only the original commenter and the
+        bundles owner may perform this action.
+      queryParameters: 
+        bundle_link: 
+          description: |
+            The URL corresponding to the bundle in which the link will be edited.
+        link: 
+          description: The bitly link to be edited.
+        comment_id: 
+          description: The ID of the comment to be removed.
+          type: integer
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: bundle-clone-schema
+  /link_comment_edit: 
+    type: base
+    get: 
+      description: Edit a comment.
+      queryParameters: 
+        bundle_link: 
+          description: |
+            The URL corresponding to the bundle in which the link will be edited.
+        link: 
+          description: The bitly link on which the comment exists.
+        comment_id: 
+          description: The id of the comment to edit.
+          type: integer
+        comment: 
+          description: The edited comment.
+          maxLength: 512
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: bundle-clone-schema
+  /link_add: 
+    type: base
+    get: 
+      description: Adds a link to a bitly bundle. Links are automatically added to the top (position 0) of a bundle.
+      queryParameters: 
+        bundle_link: 
+          description: |
+            The URL corresponding to the bundle to which the link will be added.
+        link: 
+          description: |
+            the URL to be added to the specified bundle. (This can be a bitly shor
+            URL or a long URL. If it is a long URL, it will be automatically saved
+            to the authenticated user's account.)
+          required: true
+        title: 
+          description: The title to use for this link in this bundle.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: bundle-clone-schema
+              example: !include examples/bundle-link_add-example.json
+  /reorder: 
+    type: base
+    get: 
+      description: |
+        Re-order the links in a bundle.
+        The link parameter should be repeated for each link to be reordered, and each link should be given in the order in which it should appear in the bundle.
+      queryParameters: 
+        bundle_link: 
+          description: |
+            The URL corresponding to the bundle in which the link will be reordered.
+        link: 
+          description: |
+            One ore more bitly links to be reordered.
+            The link parameter should be repeated for each link to be reordered,
+            and each link should be given in the order in which it should appear in the bundle.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: bundle-clone-schema
+              example: !include examples/bundle-reorder-example.json
+  /clone: 
+    type: base
+    get: 
+      description: Clone a bundle for the authenticated user.
+      queryParameters: 
+        bundle_link: 
+          description: The URL of the bundle to clone.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: bundle-clone-schema
+              example: !include examples/bundle-clone-example.json
+  /contents: 
+    type: base
+    get: 
+      description: Returns information about a bundle.
+      queryParameters: 
+        bundle_link: 
+          description: The URL corresponding to the bundle to be returned.
+        expand_user: 
+          description: True or false - include extra user info in response.
+          type: boolean
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: bundle-clone-schema
+              example: !include examples/bundle-contents-example.json
+  /link_comment_add: 
+    type: base
+    get: 
+      description: Add a comment to bundle item.
+      queryParameters: 
+        bundle_link: 
+          description: |
+            The URL corresponding to the bundle to which the link will be added.
+        link: 
+          description: |
+            the URL to be added to the specified bundle. (This can be a bitly shor
+            URL or a long URL. If it is a long URL, it will be automatically saved
+            to the authenticated user's account.)
+        comment: 
+          description: The comment to add.
+          maxLength: 512
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: bundle-clone-schema
+  /collaborator_remove: 
+    type: base
+    get: 
+      description: Remove a collaborator from a bundle.
+      queryParameters: 
+        bundle_link: 
+          description: The URL of the bundle to remove.
+        collaborator: 
+          description: Bitly login of the collaborator to remove.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: bundle-clone-schema
+  /link_edit: 
+    type: base
+    get: 
+      description: Edit the title for a link.
+      queryParameters: 
+        bundle_link: 
+          description: |
+            The URL corresponding to the bundle in which the link will be edited.
+          required: true
+        link: 
+          description: The bitly link to be edited.
+          required: true
+        edit: 
+          description: |
+            A field designating which properties (title, preview) are to be edited,
+            allowing for these fields to be updated with empty values.
+        title: 
+          description: A title for the specified link.
+        preview: 
+          description: |
+            A true or false value representing whether a content preview should be
+            displayed for this item (overrides the per-bundle flag of the same name).
+          type: boolean
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: bundle-clone-schema
+              example: !include examples/bundle-link_edit-example.json
+  /bundles_by_user: 
+    type: base
+    get: 
+      description: Returns a list of public bundles created by a user.
+      queryParameters: 
+        user: 
+          description: The user to get a list of bundles for.
+          required: true
+        expand_user: 
+          description: Include extra user info in response.
+          type: boolean
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: bundle-bundles_by_user
+              example: !include examples/bundle-bundles_by_user-example.json
+/bitly_pro_domain: 
+  type: base
+  get: 
+    description: |
+      Query whether a given domain is a valid bitly pro domain. Keep in mind tha
+      bitly custom short domains are restricted to less than 15 characters in
+      length.
+    queryParameters: 
+      domain: 
+        description: |
+          A short domain. ie: nyti.ms.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: bitly_pro_domain
+            example: !include examples/bitly_pro_domain-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

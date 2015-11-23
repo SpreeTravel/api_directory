@@ -1,0 +1,16 @@
+post?: 
+type: base
+get: 
+  description: "Returns the full details of all the sets in a class."
+  queryParameters: 
+    modified_since: 
+      displayName: "Modified Since"
+      description: |
+        Limits results to sets that have been modified since the specified [UNIX timestamp](http://en.wikipedia.org/wiki/Unix_time)
+      type: date
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: setsGet
+          example: !include ../examples/setsGet-example.json

@@ -1,0 +1,19 @@
+head: 
+  responses: 
+    200: 
+get: 
+  queryParameters: 
+    page: 
+      description: A page token that indicates where retrieval begins. Get this token from the NextPageUrl property in the response body.
+    pageSize: 
+      description: "Specifies the number of items per page. Valid values are from 1 through 100. If you don't specify a size, the default is 25."
+      type: integer
+      default: 25
+      example: 5
+    q: 
+      description: Specifies the string to search. The search string must contain at least two characters, not including any wildcards. For more information about wildcards, see Wildcards. This parameter is optional.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: conversationSummaryCollectionResponse

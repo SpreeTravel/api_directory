@@ -1,0 +1,19 @@
+<geonames>
+<observation>
+<observation>LESO 140900Z VRB01KT CAVOK 12/06 Q1027</observation>
+<observationTime>2014-03-14 09:00:00</observationTime>
+<stationName>San Sebastian / Fuenterrabia</stationName>
+<ICAO>LESO</ICAO>
+<countryCode>ES</countryCode>
+<elevation>8</elevation>
+<lat>43.35</lat>
+<lng>-1.8</lng>
+<temperature>12</temperature>
+<dewPoint>6</dewPoint>
+<humidity>66</humidity>
+<clouds code="CAVOK">clouds and visibility OK</clouds>
+<weatherCondition>n/a</weatherCondition>
+<hectoPascAltimeter>1027.0</hectoPascAltimeter>
+<windSpeed>01</windSpeed>
+</observation>
+</geonames>

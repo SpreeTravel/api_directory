@@ -1,0 +1,29 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "source_commit" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "commit_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "message" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "url" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "author" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

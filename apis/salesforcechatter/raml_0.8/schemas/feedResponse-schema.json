@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "feedElementPostUrl": {
+      "type": "string",
+      "required": false
+    },
+    "feedElementsUrl": {
+      "type": "string",
+      "required": false
+    },
+    "feedItemsUrl": {
+      "type": "string",
+      "required": false
+    },
+    "isModifiedUrl": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

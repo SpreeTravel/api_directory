@@ -1,0 +1,31 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "additionalLabel": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "string",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "photoUrl": {
+      "type": "string",
+      "required": false
+    },
+    "recordId": {
+      "type": "string",
+      "required": false
+    },
+    "userType": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

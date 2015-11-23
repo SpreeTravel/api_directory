@@ -1,0 +1,41 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "aggregate" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "availability_zone" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "created_at" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "deleted" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "deleted_at" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "updated_at" : {
+          "type" : "object" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

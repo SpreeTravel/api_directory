@@ -1,0 +1,143 @@
+delete?: 
+  body: 
+    application/json: 
+  responses: 
+    200?: 
+      description: Request OK
+    401?: 
+      description: Unauthorized request
+      body: 
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    402?: 
+      description: Failed request
+      body: 
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    403?: 
+      description: Forbidden
+      body: 
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    404?: 
+      description: Resource was not found
+      body: 
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    500?: 
+      description: PayPal server error
+      body: 
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+post?: 
+  body: 
+    application/json: 
+  responses: 
+    201?: 
+      description: Resource created
+    200?: 
+      description: Request OK
+    401?: 
+      description: Unauthorized request
+      body: 
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    402?: 
+      description: Failed request
+      body: 
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    403?: 
+      description: Forbidden
+      body: 
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    404?: 
+      description: Resource was not found
+      body: 
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    500?: 
+      description: PayPal server error
+      body: 
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+get?: 
+  responses: 
+    200: 
+      description: Request OK
+    401?: 
+      description: Unauthorized request
+      body: 
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    402?: 
+      description: Failed request
+      body: 
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    403?: 
+      description: Forbidden
+      body: 
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    404?: 
+      description: Resource was not found
+      body: 
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    500?: 
+      description: PayPal server error
+      body: 
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+put?: 
+  body: 
+    application/json: 
+  responses: 
+    200?: 
+    401?: 
+      description: Unauthorized request
+      body: 
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    402?: 
+      description: Failed request
+      body: 
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    403?: 
+      description: Forbidden
+      body: 
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    404?: 
+      description: Resource was not found
+      body: 
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    500?: 
+      description: PayPal server error
+      body: 
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json

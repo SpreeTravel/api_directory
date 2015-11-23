@@ -1,0 +1,13 @@
+{
+  "users" : [
+    {
+      "email" : "john.doe@smartsheet.com"
+    } , {
+      "email" : "jane.doe@smartsheet.com"
+    }
+  ] ,
+  "subject" : "My new Smartsheet" ,
+  "message" : "I have shared a Smartsheet with you. Please review it for the latest updates" ,
+  "accessLevel" : "ADMIN" ,
+  "ccMe" : false
+}

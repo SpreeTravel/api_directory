@@ -1,0 +1,38 @@
+head: 
+  description: Get information about a scheduled recommendation.
+  responses: 
+    200: 
+get: 
+  description: Get information about a scheduled recommendation.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+patch: 
+  description: Update a scheduled recommendation.
+  queryParameters: 
+    enabled: 
+      description: Indicates whether scheduling is enabled. If true, the recommendation is enabled and appears in communities. If false, recommendations in feeds in the Salesforce1 mobile browser app aren’t removed, but no new recommendations appear. In communities using the Summer ’15 or later version of the Napili template, disabled recommendations no longer appear.
+      type: boolean
+    rank: 
+      description: |
+        Relative rank of the scheduled recommendation indicated by ascending whole numbers starting with 1.
+        Setting the rank is comparable to an insertion into an ordered list. The scheduled recommendation is inserted into the position specified by the rank. The rank of all the scheduled recommendations after it is pushed down. See Ranking scheduled recommendations example.
+        
+        If the specified rank is larger than the size of the list, the scheduled recommendation is put at the end of the list. The rank of the scheduled recommendation is the size of the list, instead of the one specified.
+        
+        If a rank is not specified, the scheduled recommendation is put at the end of the list.
+      type: integer
+  body: 
+    application/json: 
+      schema: scheduledRecommendationRequest
+      example: !include examples/scheduledRecommendationRequest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: scheduledRecommendationResponse
+delete: 
+  description: Delete a scheduled recommendation.
+  responses: 
+    204: 

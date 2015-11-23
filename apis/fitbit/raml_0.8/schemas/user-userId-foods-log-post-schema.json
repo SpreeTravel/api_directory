@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "foodLog": {
+      "type": "object",
+      "properties": {
+        "oneOf": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "foodId": {
+                "type": "integer"
+              },
+              "favorite": {
+                "description": "Add food to favorites",
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "mealTypeId": {
+          "description": "1 – Breakfast; 2 – Morning Snack; 3 – Lunch; 4 – Afternoon Snack; 5 – Dinner; 7 – Anytime",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 7
+        },
+        "unitId": {
+          "description": "Unit id; typically retrieved via a previous calls to Get Foods (Recent, Frequent, Favorite), Search Foods or Get Food Units",
+          "type": "integer"
+        },
+        "amount": {
+          "description": "Amount consumed; in the format X.XX, in a selected unit (unitId).",
+          "type": "number"
+        },
+        "date": {
+          "description": "Log entry date; in the format yyyy-MM-dd",
+          "type": "string"
+        }
+      }
+    }
+  }
+}

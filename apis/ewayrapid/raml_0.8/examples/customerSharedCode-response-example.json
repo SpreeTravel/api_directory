@@ -1,0 +1,42 @@
+{
+    "SharedPaymentUrl": "https://secure.ewaypayments.com/sharedpayment?AccessCode=44DD7e-qP7_hsSutx0YH_b0F-9sESnxeDU0tTmFnoTgGbTi4F8XYkElxKjtnU8xYUdd6ucUFB8-er3wlxDuV91LvA7OgKCxKlXeO1JRDrf_2Z017DdPtHvYhx5hDMOgMJLEDnTI-fPlUYE4gcSMWzcNhKwg==",
+    "AccessCode": "44DD7e-qP7_hsSutx0YH_b0F-9sESnxeDU0tTmFnoTgGbTi4F8XYkElxKjtnU8xYUdd6ucUFB8-er3wlxDuV91LvA7OgKCxKlXeO1JRDrf_2Z017DdPtHvYhx5hDMOgMJLEDnTI-fPlUYE4gcSMWzcNhKwg==",
+    "Customer": {
+        "CardNumber": "",
+        "CardStartMonth": "",
+        "CardStartYear": "",
+        "CardIssueNumber": "",
+        "CardName": "",
+        "CardExpiryMonth": "",
+        "CardExpiryYear": "",
+        "IsActive": false,
+        "TokenCustomerID": null,
+        "Reference": "A12345",
+        "Title": "Mr.",
+        "FirstName": "John",
+        "LastName": "Smith",
+        "CompanyName": "Demo Shop 123",
+        "JobDescription": "Developer",
+        "Street1": "Level 5",
+        "Street2": "369 Queen Street",
+        "City": "Melbourne",
+        "State": "",
+        "PostalCode": "3010",
+        "Country": "au",
+        "Email": "",
+        "Phone": "09 889 0986",
+        "Mobile": "09 889 0986",
+        "Comments": "",
+        "Fax": "",
+        "Url": ""
+    },
+    "Payment": {
+        "TotalAmount": 1000,
+        "InvoiceNumber": "Inv 21540",
+        "InvoiceDescription": "Individual Invoice Description",
+        "InvoiceReference": "513456",
+        "CurrencyCode": "AUD"
+    },
+    "FormActionURL": "https://secure.ewaypayments.com/AccessCode/44DD7e-qP7_hsSutx0YH_b0F-9sESnxeDU0tTmFnoTgGbTi4F8XYkElxKjtnU8xYUdd6ucUFB8-er3wlxDuV91LvA7OgKCxKlXeO1JRDrf_2Z017DdPtHvYhx5hDMOgMJLEDnTI-fPlUYE4gcSMWzcNhKwg==",
+    "Errors": null
+}

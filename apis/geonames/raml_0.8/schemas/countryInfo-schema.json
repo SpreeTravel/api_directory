@@ -1,0 +1,86 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "geonames" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "countryName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "currencyCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "fipsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "countryCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "isoNumeric" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "north" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "capital" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "continentName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "areaInSqKm" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "languages" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "isoAlpha3" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "continent" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "south" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "east" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "geonameId" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "west" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "population" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

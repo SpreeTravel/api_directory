@@ -1,0 +1,1 @@
+Jobvite is the leading social recruiting and applicant tracking system for companies with the highest expectations in recruiting software.

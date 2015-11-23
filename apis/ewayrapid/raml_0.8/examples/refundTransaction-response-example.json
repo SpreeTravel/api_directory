@@ -1,0 +1,47 @@
+{
+    "AuthorisationCode": "",
+    "ResponseCode": null,
+    "ResponseMessage": null,
+    "TransactionID": "999999",
+    "TransactionStatus": true,
+    "Verification": null,
+    "Customer": {
+        "CardDetails": {
+            "Number": "444433XXXXXX1111",
+            "Name": "John Smith",
+            "ExpiryMonth": "12",
+            "ExpiryYear": "16",
+            "StartMonth": null,
+            "StartYear": null,
+            "IssueNumber": null
+        },
+        "TokenCustomerID": null,
+        "Reference": "A12345",
+        "Title": "Mr.",
+        "FirstName": "John",
+        "LastName": "Smith",
+        "CompanyName": "Demo Shop 123",
+        "JobDescription": "Developer",
+        "Street1": "Level 5",
+        "Street2": "369 Queen Street",
+        "City": "Auckland",
+        "State": null,
+        "PostalCode": "1010",
+        "Country": "au",
+        "Email": null,
+        "Phone": "09 889 0986",
+        "Mobile": "09 889 0986",
+        "Comments": null,
+        "Fax": null,
+        "Url": null
+    },
+    "Refund": {
+        "TransactionID": null,
+        "TotalAmount": 100,
+        "InvoiceNumber": null,
+        "InvoiceDescription": null,
+        "InvoiceReference": null,
+        "CurrencyCode": null
+    },
+    "Errors": null
+}

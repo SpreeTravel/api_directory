@@ -1,0 +1,49 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "member" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "status" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "protocol_port" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "weight" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "admin_state_up" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "tenant_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "pool_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "address" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "status_description" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "direction": {
+      "type": "string",
+      "required": false
+    },
+    "emailMessageId": {
+      "type": "string",
+      "required": false
+    },
+    "subject": {
+      "type": "string",
+      "required": false
+    },
+    "textBody": {
+      "type": "string",
+      "required": false
+    },
+    "toAddresses": {
+      "type": "array",
+      "required": false,
+      "items": [{
+        "type": "object",
+        "required": false,
+        "properties": {
+          "displayName": {
+            "type": "string",
+            "required": false
+          },
+          "emailAddress": {
+            "type": "string",
+            "required": false
+          }
+        }
+      }]
+    },
+    "type": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

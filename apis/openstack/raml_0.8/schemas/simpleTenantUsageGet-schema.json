@@ -1,0 +1,46 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "tenant_usages" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "start" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "stop" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "tenant_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "total_hours" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "total_local_gb_usage" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "total_memory_mb_usage" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "total_vcpus_usage" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

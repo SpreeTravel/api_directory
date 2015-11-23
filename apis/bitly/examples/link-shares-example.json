@@ -1,0 +1,17 @@
+{
+  "data": {
+    "shares": [
+      {
+        "share_type": "tw",
+        "shares": 1
+      }
+    ],
+    "total_shares": 1,
+    "tz_offset": -4,
+    "unit": "day",
+    "unit_reference_ts": null,
+    "units": -1
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

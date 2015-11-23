@@ -1,0 +1,34 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="geonames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:byte" name="totalResultsCount"/>
+        <xs:element name="code" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="postalcode"/>
+              <xs:element type="xs:string" name="name"/>
+              <xs:element type="xs:string" name="countryCode"/>
+              <xs:element type="xs:float" name="lat"/>
+              <xs:element type="xs:float" name="lng"/>
+              <xs:element name="adminCode1">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:byte" name="ISO3166-2" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="adminName1"/>
+              <xs:element type="xs:string" name="adminCode2"/>
+              <xs:element type="xs:string" name="adminName2"/>
+              <xs:element type="xs:string" name="adminCode3"/>
+              <xs:element type="xs:string" name="adminName3"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

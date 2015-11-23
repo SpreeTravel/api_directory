@@ -1,0 +1,154 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "loginName" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "company" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "emailAddress" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "loggedInAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "preferences" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "timezoneId" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "isMasterViewDocked" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "typePermissions" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "objectType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "permissions" : {
+              "type" : "object" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    } ,
+    "capabilities" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object"
+        }
+      ]
+    } ,
+    "betaAccess" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object"
+        }
+      ]
+    } ,
+    "defaultContactViewId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "defaultAccountViewId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "interfacePermissions" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object"
+        }
+      ]
+    } ,
+    "productPermissions" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "productCode" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "description" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "permissions" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "folderId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "sourceTemplateId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "createdBy" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "createdAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "updatedBy" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "updatedAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "accessedAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "scheduledFor" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "depth" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

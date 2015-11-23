@@ -1,0 +1,23 @@
+{
+  "folders" : [
+    {
+      "id" : 5709073300645764 ,
+      "name" : "folder 1"
+    }
+  ] ,
+  "sheets" : [
+    {
+      "accessLevel" : "OWNER" ,
+      "id" : 4583173393803140 ,
+      "name" : "sheet 1"
+    } , {
+      "accessLevel" : "OWNER" ,
+      "id" : 2331373580117892 ,
+      "name" : "sheet 2"
+    }
+  ] ,
+  "templates" : [
+  ] ,
+  "workspaces" : [
+  ]
+}

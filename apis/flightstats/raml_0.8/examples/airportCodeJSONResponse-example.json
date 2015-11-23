@@ -1,0 +1,28 @@
+{
+  "airport" : {
+    "fs" : "PDX" ,
+    "iata" : "PDX" ,
+    "icao" : "KPDX" ,
+    "faa" : "PDX" ,
+    "name" : "Portland International Airport" ,
+    "street1" : "7000 NE Airport Way" ,
+    "city" : "Portland" ,
+    "cityCode" : "PDX" ,
+    "stateCode" : "OR" ,
+    "postalCode" : "97218" ,
+    "countryCode" : "US" ,
+    "countryName" : "United States" ,
+    "regionName" : "North America" ,
+    "timeZoneRegionName" : "America/Los_Angeles" ,
+    "weatherZone" : "ORZ006" ,
+    "localTime" : "2015-04-24T02:47:02.382" ,
+    "utcOffsetHours" : -7 ,
+    "latitude" : 45.588995 ,
+    "longitude" : -122.592901 ,
+    "elevationFeet" : 30 ,
+    "classification" : 1 ,
+    "active" : true ,
+    "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/PDX?codeType=fs" ,
+    "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/PDX?codeType=fs"
+  }
+}

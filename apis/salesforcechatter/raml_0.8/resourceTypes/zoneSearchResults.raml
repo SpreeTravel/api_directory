@@ -1,0 +1,18 @@
+get: 
+  description: Search results from a search in a Chatter Answers zone.
+  queryParameters: 
+    page: 
+      description: An integer specifying a page of items. The default value is 0, which returns the first page.
+      type: integer
+      default: 0
+      example: 5
+    pageSize: 
+      description: Specifies the number of items per page. Valid values are between 1 and 100. The default value is 20.
+      type: integer
+      default: 20
+      example: 5
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: zoneSearchResultResponse

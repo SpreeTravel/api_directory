@@ -1,0 +1,99 @@
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "properties": {
+        "AccessCode": {
+            "type": "string",
+            "maxLength": 512
+        },
+        "AuthorisationCode": {
+            "type": "string",
+            "maxLength": 6
+        },
+        "BeagleScore": {
+            "type": "string",
+            "maxLength": 6
+        },
+        "BeagleVerification": {
+            "type": "object",
+            "properties": {
+                "Email": {
+                    "type": "string",
+                    "maxLength": 11
+                },
+                "Phone": {
+                    "type": "string",
+                    "maxLength": 11
+                }
+            }
+        },
+        "Errors": {
+            "type": "null"
+        },
+        "InvoiceNumber": {
+            "type": "string",
+            "maxLength": 64
+        },
+        "InvoiceReference": {
+            "type": "string",
+            "maxLength": 64
+        },
+        "Options": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "Value": {
+                        "type": "string",
+                        "maxLength": 255
+                    }
+                }
+            }
+        },
+        "ResponseCode": {
+            "type": "string",
+            "maxLength": 2
+        },
+        "ResponseMessage": {
+            "type": "string",
+            "maxLength": 512
+        },
+        "TokenCustomerID": {
+            "type": "string"
+        },
+        "TotalAmount": {
+            "type": "number"
+        },
+        "TransactionID": {
+            "type": "number"
+        },
+        "TransactionStatus": {
+            "type": "boolean"
+        },
+        "Verification": {
+            "type": "object",
+            "properties": {
+                "Address": {
+                    "type": "number",
+                    "maxLength": 10
+                },
+                "CVN": {
+                    "type": "number",
+                    "maxLength": 10
+                },
+                "Email": {
+                    "type": "number",
+                    "maxLength": 10
+                },
+                "Mobile": {
+                    "type": "number",
+                    "maxLength": 10
+                },
+                "Phone": {
+                    "type": "number",
+                    "maxLength": 10
+                }
+            }
+        }
+    }
+}

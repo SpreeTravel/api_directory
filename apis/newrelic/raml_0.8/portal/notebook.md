@@ -1,0 +1,11 @@
+The API notebooks are all executable! Hit "enter" in any code cell to execute it (and all cells before it that have not executed yet), or scroll to the bottom of the notebook and click "Play notebook". For more information, see [http://apinotebook.com](http://apinotebook.com).
+
+#Considerations
+
+- In order to run these notebooks you will need a NewRelic account.
+- In the "Integrations/Data Sharing" tab inside your account settings you must enable API access. At some point of notebook execution you'll be prompted to enter your API key. It can be found in the same "Integrations/Data Sharing" tab.
+- You will also need a New Relic application. Move to the "Applications" dashboard for this purpose and fulfill the proposed instruction (if you already have some applications, press "Add more" in order to pass to the instruction). Get ensured that the server is configured an running. For example, in Windows you may use Tomcat: [ https://docs.newrelic.com/docs/java/tomcat-installation-for-java]( https://docs.newrelic.com/docs/java/tomcat-installation-for-java).
+- Get ensured that you have monitoring enabled for your server. Move to the "Servers" dashboard for this purpose and fulfill the proposed instruction (if you already have some servers, press "Add more" in order to pass to the instruction). Finally, get ensured that you have your server visible in the "Servers" dashboard.
+- In order to test methods related with metrics and key transactions you need a pro New Relic account. Note that after setting up an applicatios/java/tomcat-installation-for-javan in your newly registered account you receive a free pro status for some period.
+- In order to call methods related with key transactions you should track at least one key transaction inside the "Transactions" dashboard of your account.
+- Optional. As we are not allowed to create objects via REST and we deal with what the user's account provides, we always ask the user if he whishes to edit this or that object and allow to seletct an alternative. The updating methods are: UPDATE application, server and alert polycy; DELETE server and application. If you wish to call these methods with certain test objects, you should create each of them manually and select it when the notebook asks to do so.

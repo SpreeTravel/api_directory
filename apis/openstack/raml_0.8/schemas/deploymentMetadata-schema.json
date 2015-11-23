@@ -1,0 +1,116 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "metadata" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "inputs" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "default" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "type" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "value" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "description" : {
+                      "type" : "object" ,
+                      "required" : false
+                    }
+                  }
+                } , {
+                  "type" : "object" ,
+                  "properties" : {
+                    "type" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "value" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "description" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            } ,
+            "group" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "outputs" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "type" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "error_output" : {
+                      "type" : "boolean" ,
+                      "required" : false
+                    } ,
+                    "description" : {
+                      "type" : "object" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            } ,
+            "options" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "config" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

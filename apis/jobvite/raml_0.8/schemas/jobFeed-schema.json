@@ -1,0 +1,330 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "total" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "jobs" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "hiringManager" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "preInterviewForm" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "location" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "jobState" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "salaryHigh" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "jobSource" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "endDate" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "primaryHiringManagerId" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "approvalRequired" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "salaryLow" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "recruiterAccess" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "agencyHiringManager" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "userName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "eEOCategory" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "notified" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "doNotCall" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "openings" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "companyName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "category" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "parsed" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "createdBy" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "carrerSiteScrapeUrl" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "clientsDepartmentId" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "clientsRegionId" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "applyUrl" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "availableTo" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "region" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "startDate" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "jobType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "department" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "date" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "subsidiaryName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "private" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "holdTimeSpan" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "title" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "briefDescription" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "filledOn2" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "approveDate" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "notification" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "workFlowTitle" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "careerSite" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "showSalary" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "clientsLocationId" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "detailUrl" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "zip" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "jobLinkUrl" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "contactInformation" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "closeDate" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "areaCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "jobType2" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "approval" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "filledOn" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "putOnHoldDate" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "filledBy" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "interviewEvaluation" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "agencyCompany" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "sentdate" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "companyId" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "requisitionId" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "needsRequired" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "eQuest" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "recruiter" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "customFields" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "field1" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "field2" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        }
+      ]
+    } ,
+    "filterCriteria" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "availableTo" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "region" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "category" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "count" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "start" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "location" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "department" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "type" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+	<fidsData>
+		<flightNumber>1731</flightNumber>
+		<airlineLogoUrlPng>http://d3o54sf0907rz4.cloudfront.net/airline-logos/v2/centered/logos/png/300x100/dl-logo.png</airlineLogoUrlPng>
+		<isCodeshare>false</isCodeshare>
+		<remarks>On-Time</remarks>
+		<city>Atlanta</city>
+		<currentTime>01:15 AM</currentTime>
+	</fidsData>
+	<fidsData>
+		<flightNumber>6682</flightNumber>
+		<airlineLogoUrlPng>http://d3o54sf0907rz4.cloudfront.net/airline-logos/v2/centered/logos/png/300x100/va-logo.png</airlineLogoUrlPng>
+		<isCodeshare>true</isCodeshare>
+		<remarks>On-Time</remarks>
+		<city>Atlanta</city>
+		<currentTime>01:15 AM</currentTime>
+	</fidsData>
+	</response>

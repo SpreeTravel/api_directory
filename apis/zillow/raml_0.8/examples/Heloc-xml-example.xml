@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Heloc:heloc xsi:schemaLocation="http://www.zillow.com/static/xsd/Heloc.xsd http://www.zillow.com/vstatic/b6056a4bb80057099e3a3d751accac26/static/xsd/Heloc.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Heloc="http://www.zillow.com/static/xsd/Heloc.xsd">
+    <request>
+        <value>10000000</value>
+        <balance>20000</balance>
+        <ltv>6.5</ltv>
+    </request>
+    <message>
+        <text>Request successfully processed</text>
+        <code>0</code>
+    </message>
+    <response>
+        <loanamount>630000</loanamount>
+        <loanamountpairs>
+            <pairs>
+                <ltv>-3.5</ltv>
+                <loanamount>0</loanamount>
+            </pairs>
+            <pairs>
+                <ltv>1.5</ltv>
+                <loanamount>130000</loanamount>
+            </pairs>
+            <pairs>
+                <ltv>6.5</ltv>
+                <loanamount>630000</loanamount>
+            </pairs>
+            <pairs>
+                <ltv>11.5</ltv>
+                <loanamount>1130000</loanamount>
+            </pairs>
+            <pairs>
+                <ltv>16.5</ltv>
+                <loanamount>1630000</loanamount>
+            </pairs>
+        </loanamountpairs>
+        <result>If you can qualify for a loan at 6.5% loan-to-value, you may be able to borrow $630,000 in a home equity line of credit.</result>
+    </response>
+</Heloc:heloc>

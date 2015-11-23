@@ -1,0 +1,3321 @@
+{
+  "request" : {
+    "departureAirport" : {
+      "requestedCode" : "ORD" ,
+      "fsCode" : "ORD"
+    } ,
+    "arrivalAirport" : {
+      "requestedCode" : "LAX" ,
+      "fsCode" : "LAX"
+    } ,
+    "date" : {
+      "year" : "2015" ,
+      "month" : "4" ,
+      "day" : "29" ,
+      "interpreted" : "2015-04-29"
+    } ,
+    "hourOfDay" : {
+      "interpreted" : 0
+    } ,
+    "utc" : {
+      "interpreted" : false
+    } ,
+    "numHours" : {
+      "interpreted" : 24
+    } ,
+    "codeType" : {
+    } ,
+    "maxFlights" : {
+    } ,
+    "extendedOptions" : {
+    } ,
+    "url" : "https://api.flightstats.com/flex/flightstatus/rest/v2/json/route/status/ORD/LAX/arr/2015/4/29"
+  } ,
+  "appendix" : {
+    "airlines" : [
+      {
+        "fs" : "JL" ,
+        "iata" : "JL" ,
+        "icao" : "JAL" ,
+        "name" : "JAL" ,
+        "active" : true
+      } , {
+        "fs" : "VX" ,
+        "iata" : "VX" ,
+        "icao" : "VRD" ,
+        "name" : "Virgin America" ,
+        "active" : true
+      } , {
+        "fs" : "FJ" ,
+        "iata" : "FJ" ,
+        "icao" : "FJI" ,
+        "name" : "Fiji Airways" ,
+        "phoneNumber" : "1-800-227-4446" ,
+        "active" : true
+      } , {
+        "fs" : "UA" ,
+        "iata" : "UA" ,
+        "icao" : "UAL" ,
+        "name" : "United Airlines" ,
+        "phoneNumber" : "1-800-864-8331" ,
+        "active" : true
+      } , {
+        "fs" : "NZ" ,
+        "iata" : "NZ" ,
+        "icao" : "ANZ" ,
+        "name" : "Air New Zealand" ,
+        "phoneNumber" : "1-800-262-1234" ,
+        "active" : true
+      } , {
+        "fs" : "BR" ,
+        "iata" : "BR" ,
+        "icao" : "EVA" ,
+        "name" : "EVA Air" ,
+        "active" : true
+      } , {
+        "fs" : "QF" ,
+        "iata" : "QF" ,
+        "icao" : "QFA" ,
+        "name" : "Qantas" ,
+        "active" : true
+      } , {
+        "fs" : "SK" ,
+        "iata" : "SK" ,
+        "icao" : "SAS" ,
+        "name" : "SAS" ,
+        "active" : true
+      } , {
+        "fs" : "IB" ,
+        "iata" : "IB" ,
+        "icao" : "IBE" ,
+        "name" : "Iberia" ,
+        "active" : true
+      } , {
+        "fs" : "MH" ,
+        "iata" : "MH" ,
+        "icao" : "MAS" ,
+        "name" : "Malaysia Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "SN" ,
+        "iata" : "SN" ,
+        "icao" : "BEL" ,
+        "name" : "Brussels Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "US" ,
+        "iata" : "US" ,
+        "icao" : "AWE" ,
+        "name" : "US Airways" ,
+        "phoneNumber" : "1-800-943-5436" ,
+        "active" : true
+      } , {
+        "fs" : "CA" ,
+        "iata" : "CA" ,
+        "icao" : "CCA" ,
+        "name" : "Air China" ,
+        "phoneNumber" : "1-800-986-1985" ,
+        "active" : true
+      } , {
+        "fs" : "SQ" ,
+        "iata" : "SQ" ,
+        "icao" : "SIA" ,
+        "name" : "Singapore Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "GF" ,
+        "iata" : "GF" ,
+        "icao" : "GFA" ,
+        "name" : "Gulf Air" ,
+        "active" : true
+      } , {
+        "fs" : "AA" ,
+        "iata" : "AA" ,
+        "icao" : "AAL" ,
+        "name" : "American Airlines" ,
+        "phoneNumber" : "1-800-433-7300" ,
+        "active" : true
+      } , {
+        "fs" : "AB" ,
+        "iata" : "AB" ,
+        "icao" : "BER" ,
+        "name" : "Air Berlin" ,
+        "active" : true
+      } , {
+        "fs" : "QR" ,
+        "iata" : "QR" ,
+        "icao" : "QTR" ,
+        "name" : "Qatar Airways" ,
+        "active" : true
+      } , {
+        "fs" : "AC" ,
+        "iata" : "AC" ,
+        "icao" : "ACA" ,
+        "name" : "Air Canada" ,
+        "phoneNumber" : "1-800-247-2262" ,
+        "active" : true
+      } , {
+        "fs" : "EI" ,
+        "iata" : "EI" ,
+        "icao" : "EIN" ,
+        "name" : "Aer Lingus" ,
+        "phoneNumber" : "1-800-IRISHAIR" ,
+        "active" : true
+      } , {
+        "fs" : "OS" ,
+        "iata" : "OS" ,
+        "icao" : "AUA" ,
+        "name" : "Austrian" ,
+        "active" : true
+      } , {
+        "fs" : "CI" ,
+        "iata" : "CI" ,
+        "icao" : "CAL" ,
+        "name" : "China Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "MU" ,
+        "iata" : "MU" ,
+        "icao" : "CES" ,
+        "name" : "China Eastern Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "OZ" ,
+        "iata" : "OZ" ,
+        "icao" : "AAR" ,
+        "name" : "Asiana Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "VA" ,
+        "iata" : "VA" ,
+        "icao" : "VOZ" ,
+        "name" : "Virgin Australia" ,
+        "active" : true
+      } , {
+        "fs" : "AS" ,
+        "iata" : "AS" ,
+        "icao" : "ASA" ,
+        "name" : "Alaska Airlines" ,
+        "phoneNumber" : "1-800-252-7522" ,
+        "active" : true
+      } , {
+        "fs" : "F9" ,
+        "iata" : "F9" ,
+        "icao" : "FFT" ,
+        "name" : "Frontier Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "EY" ,
+        "iata" : "EY" ,
+        "icao" : "ETD" ,
+        "name" : "Etihad Airways" ,
+        "active" : true
+      } , {
+        "fs" : "RJ" ,
+        "iata" : "RJ" ,
+        "icao" : "RJA" ,
+        "name" : "Royal Jordanian" ,
+        "active" : true
+      } , {
+        "fs" : "HA" ,
+        "iata" : "HA" ,
+        "icao" : "HAL" ,
+        "name" : "Hawaiian Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "TN" ,
+        "iata" : "TN" ,
+        "icao" : "THT" ,
+        "name" : "Air Tahiti Nui" ,
+        "active" : true
+      } , {
+        "fs" : "LH" ,
+        "iata" : "LH" ,
+        "icao" : "DLH" ,
+        "name" : "Lufthansa" ,
+        "active" : true
+      } , {
+        "fs" : "NK" ,
+        "iata" : "NK" ,
+        "icao" : "NKS" ,
+        "name" : "Spirit Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "BA" ,
+        "iata" : "BA" ,
+        "icao" : "BAW" ,
+        "name" : "British Airways" ,
+        "phoneNumber" : "1-800-AIRWAYS" ,
+        "active" : true
+      }
+    ] ,
+    "airports" : [
+      {
+        "fs" : "ORD" ,
+        "iata" : "ORD" ,
+        "icao" : "KORD" ,
+        "faa" : "ORD" ,
+        "name" : "O'Hare International Airport" ,
+        "street1" : "10000 West O'Hare" ,
+        "city" : "Chicago" ,
+        "cityCode" : "CHI" ,
+        "stateCode" : "IL" ,
+        "postalCode" : "60666" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Chicago" ,
+        "weatherZone" : "ILZ014" ,
+        "localTime" : "2015-04-29T07:50:51.747" ,
+        "utcOffsetHours" : -5 ,
+        "latitude" : 41.976912 ,
+        "longitude" : -87.904876 ,
+        "elevationFeet" : 668 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/ORD?codeType=fs" ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/ORD?codeType=fs"
+      } , {
+        "fs" : "EWR" ,
+        "iata" : "EWR" ,
+        "icao" : "KEWR" ,
+        "faa" : "EWR" ,
+        "name" : "Newark Liberty International Airport" ,
+        "street1" : "Building 1, Conrad Road" ,
+        "street2" : "" ,
+        "city" : "Newark" ,
+        "cityCode" : "EWR" ,
+        "stateCode" : "NJ" ,
+        "postalCode" : "07114" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/New_York" ,
+        "weatherZone" : "NJZ006" ,
+        "localTime" : "2015-04-29T08:50:52.012" ,
+        "utcOffsetHours" : -4 ,
+        "latitude" : 40.689071 ,
+        "longitude" : -74.178753 ,
+        "elevationFeet" : 18 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/EWR?codeType=fs" ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/EWR?codeType=fs"
+      } , {
+        "fs" : "LAX" ,
+        "iata" : "LAX" ,
+        "icao" : "KLAX" ,
+        "faa" : "LAX" ,
+        "name" : "Los Angeles International Airport" ,
+        "street1" : "One World Way" ,
+        "street2" : "" ,
+        "city" : "Los Angeles" ,
+        "cityCode" : "LAX" ,
+        "stateCode" : "CA" ,
+        "postalCode" : "90045-5803" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Los_Angeles" ,
+        "weatherZone" : "CAZ041" ,
+        "localTime" : "2015-04-29T05:50:51.747" ,
+        "utcOffsetHours" : -7 ,
+        "latitude" : 33.943399 ,
+        "longitude" : -118.408279 ,
+        "elevationFeet" : 126 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/LAX?codeType=fs" ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/LAX?codeType=fs"
+      } , {
+        "fs" : "DCA" ,
+        "iata" : "DCA" ,
+        "icao" : "KDCA" ,
+        "faa" : "DCA" ,
+        "name" : "Ronald Reagan National Airport" ,
+        "street1" : "1 Aviation Circle" ,
+        "street2" : "" ,
+        "city" : "Washington" ,
+        "cityCode" : "WAS" ,
+        "stateCode" : "DC" ,
+        "postalCode" : "20001-6000" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/New_York" ,
+        "weatherZone" : "DCZ001" ,
+        "localTime" : "2015-04-29T08:50:52.009" ,
+        "utcOffsetHours" : -4 ,
+        "latitude" : 38.853434 ,
+        "longitude" : -77.043457 ,
+        "elevationFeet" : 15 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/DCA?codeType=fs" ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/DCA?codeType=fs"
+      } , {
+        "fs" : "TPA" ,
+        "iata" : "TPA" ,
+        "icao" : "KTPA" ,
+        "faa" : "TPA" ,
+        "name" : "Tampa International Airport" ,
+        "street1" : "5507 West Spruce Street" ,
+        "city" : "Tampa" ,
+        "cityCode" : "TPA" ,
+        "stateCode" : "FL" ,
+        "postalCode" : "33607" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/New_York" ,
+        "weatherZone" : "FLZ251" ,
+        "localTime" : "2015-04-29T08:50:52.014" ,
+        "utcOffsetHours" : -4 ,
+        "latitude" : 27.979869 ,
+        "longitude" : -82.535415 ,
+        "elevationFeet" : 26 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/TPA?codeType=fs" ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/TPA?codeType=fs"
+      } , {
+        "fs" : "HNL" ,
+        "iata" : "HNL" ,
+        "icao" : "PHNL" ,
+        "faa" : "PHNL" ,
+        "name" : "Honolulu International Airport" ,
+        "street1" : "300 Rodgers Blvd., #12" ,
+        "street2" : "" ,
+        "city" : "Honolulu" ,
+        "cityCode" : "HNL" ,
+        "stateCode" : "HI" ,
+        "postalCode" : "96819" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "Pacific/Honolulu" ,
+        "weatherZone" : "HIZ002" ,
+        "localTime" : "2015-04-29T02:50:52.014" ,
+        "utcOffsetHours" : -10 ,
+        "latitude" : 21.325833 ,
+        "longitude" : -157.921667 ,
+        "elevationFeet" : 13 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/HNL?codeType=fs" ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/HNL?codeType=fs"
+      } , {
+        "fs" : "DEN" ,
+        "iata" : "DEN" ,
+        "icao" : "KDEN" ,
+        "faa" : "DEN" ,
+        "name" : "Denver International Airport" ,
+        "street1" : "8500 Pena Boulevard" ,
+        "city" : "Denver" ,
+        "cityCode" : "DEN" ,
+        "stateCode" : "CO" ,
+        "postalCode" : "80249-6340" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Denver" ,
+        "weatherZone" : "COZ040" ,
+        "localTime" : "2015-04-29T06:50:52.011" ,
+        "utcOffsetHours" : -6 ,
+        "latitude" : 39.851382 ,
+        "longitude" : -104.673098 ,
+        "elevationFeet" : 5389 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/DEN?codeType=fs" ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/DEN?codeType=fs"
+      } , {
+        "fs" : "IAD" ,
+        "iata" : "IAD" ,
+        "icao" : "KIAD" ,
+        "faa" : "IAD" ,
+        "name" : "Washington Dulles International Airport" ,
+        "street1" : "1 Aviation Circle" ,
+        "city" : "Washington" ,
+        "cityCode" : "WAS" ,
+        "stateCode" : "DC" ,
+        "postalCode" : "20001-6000" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/New_York" ,
+        "weatherZone" : "DCZ001" ,
+        "localTime" : "2015-04-29T08:50:52.008" ,
+        "utcOffsetHours" : -4 ,
+        "latitude" : 38.95315 ,
+        "longitude" : -77.447735 ,
+        "elevationFeet" : 313 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/IAD?codeType=fs" ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/IAD?codeType=fs"
+      } , {
+        "fs" : "IAH" ,
+        "iata" : "IAH" ,
+        "icao" : "KIAH" ,
+        "faa" : "IAH" ,
+        "name" : "George Bush Intercontinental Airport" ,
+        "street1" : "16930 JFK Boulevard" ,
+        "street2" : "" ,
+        "city" : "Houston" ,
+        "cityCode" : "HOU" ,
+        "stateCode" : "TX" ,
+        "postalCode" : "77032" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Chicago" ,
+        "weatherZone" : "TXZ213" ,
+        "localTime" : "2015-04-29T07:50:52.010" ,
+        "utcOffsetHours" : -5 ,
+        "latitude" : 29.983333 ,
+        "longitude" : -95.34 ,
+        "elevationFeet" : 97 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/IAH?codeType=fs" ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/IAH?codeType=fs"
+      } , {
+        "fs" : "BUF" ,
+        "iata" : "BUF" ,
+        "icao" : "KBUF" ,
+        "faa" : "BUF" ,
+        "name" : "Buffalo Niagara International Airport" ,
+        "street1" : "Genesee Street" ,
+        "street2" : "" ,
+        "city" : "Buffalo" ,
+        "cityCode" : "BUF" ,
+        "stateCode" : "NY" ,
+        "postalCode" : "14225" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/New_York" ,
+        "weatherZone" : "NYZ010" ,
+        "localTime" : "2015-04-29T08:50:52.013" ,
+        "utcOffsetHours" : -4 ,
+        "latitude" : 42.933828 ,
+        "longitude" : -78.731804 ,
+        "elevationFeet" : 724 ,
+        "classification" : 2 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/BUF?codeType=fs" ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/BUF?codeType=fs"
+      } , {
+        "fs" : "FRA" ,
+        "iata" : "FRA" ,
+        "icao" : "EDDF" ,
+        "name" : "Frankfurt am Main Airport" ,
+        "city" : "Frankfurt" ,
+        "cityCode" : "FRA" ,
+        "countryCode" : "DE" ,
+        "countryName" : "Germany" ,
+        "regionName" : "Europe" ,
+        "timeZoneRegionName" : "Europe/Berlin" ,
+        "localTime" : "2015-04-29T14:50:52.008" ,
+        "utcOffsetHours" : 2 ,
+        "latitude" : 50.048952 ,
+        "longitude" : 8.573678 ,
+        "elevationFeet" : 381 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/FRA?codeType=fs" ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/FRA?codeType=fs"
+      } , {
+        "fs" : "MCO" ,
+        "iata" : "MCO" ,
+        "icao" : "KMCO" ,
+        "faa" : "MCO" ,
+        "name" : "Orlando International Airport" ,
+        "street1" : "One Airport Boulevard" ,
+        "street2" : "" ,
+        "city" : "Orlando" ,
+        "cityCode" : "ORL" ,
+        "stateCode" : "FL" ,
+        "postalCode" : "32827-4399" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/New_York" ,
+        "weatherZone" : "FLZ045" ,
+        "localTime" : "2015-04-29T08:50:52.012" ,
+        "utcOffsetHours" : -4 ,
+        "latitude" : 28.432177 ,
+        "longitude" : -81.308301 ,
+        "elevationFeet" : 96 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/MCO?codeType=fs" ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/MCO?codeType=fs"
+      } , {
+        "fs" : "KOA" ,
+        "iata" : "KOA" ,
+        "icao" : "PHKO" ,
+        "faa" : "PHKO" ,
+        "name" : "Kona International Airport at Keahole" ,
+        "city" : "Kailua-Kona" ,
+        "cityCode" : "KOA" ,
+        "stateCode" : "HI" ,
+        "postalCode" : "96734" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "Pacific/Honolulu" ,
+        "weatherZone" : "HIZ002" ,
+        "localTime" : "2015-04-29T02:50:52.005" ,
+        "utcOffsetHours" : -10 ,
+        "latitude" : 19.736174 ,
+        "longitude" : -156.041077 ,
+        "elevationFeet" : 47 ,
+        "classification" : 3 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/KOA?codeType=fs" ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/KOA?codeType=fs"
+      } , {
+        "fs" : "SFO" ,
+        "iata" : "SFO" ,
+        "icao" : "KSFO" ,
+        "faa" : "SFO" ,
+        "name" : "San Francisco International Airport" ,
+        "city" : "San Francisco" ,
+        "cityCode" : "SFO" ,
+        "stateCode" : "CA" ,
+        "postalCode" : "94128" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Los_Angeles" ,
+        "weatherZone" : "CAZ508" ,
+        "localTime" : "2015-04-29T05:50:52.012" ,
+        "utcOffsetHours" : -7 ,
+        "latitude" : 37.615215 ,
+        "longitude" : -122.389881 ,
+        "elevationFeet" : 11 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/SFO?codeType=fs" ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/SFO?codeType=fs"
+      } , {
+        "fs" : "SYD" ,
+        "iata" : "SYD" ,
+        "icao" : "YSSY" ,
+        "name" : "Sydney (Kingsford Smith) Airport" ,
+        "city" : "Sydney" ,
+        "cityCode" : "SYD" ,
+        "stateCode" : "NSW" ,
+        "countryCode" : "AU" ,
+        "countryName" : "Australia" ,
+        "regionName" : "Oceania" ,
+        "timeZoneRegionName" : "Australia/Sydney" ,
+        "localTime" : "2015-04-29T22:50:52.014" ,
+        "utcOffsetHours" : 10 ,
+        "latitude" : -33.932922 ,
+        "longitude" : 151.179898 ,
+        "elevationFeet" : 21 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/SYD?codeType=fs" ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/SYD?codeType=fs"
+      }
+    ] ,
+    "equipments" : [
+      {
+        "iata" : "B739" ,
+        "name" : "??" ,
+        "turboProp" : false ,
+        "jet" : false ,
+        "widebody" : false ,
+        "regional" : false
+      } , {
+        "iata" : "77F" ,
+        "name" : "Boeing 777 Freighter" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : true ,
+        "regional" : false
+      } , {
+        "iata" : "A320" ,
+        "name" : "??" ,
+        "turboProp" : false ,
+        "jet" : false ,
+        "widebody" : false ,
+        "regional" : false
+      } , {
+        "iata" : "320" ,
+        "name" : "Airbus Industrie A320" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : false ,
+        "regional" : false
+      } , {
+        "iata" : "752" ,
+        "name" : "Boeing 757-200 Passenger" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : false ,
+        "regional" : false
+      } , {
+        "iata" : "738" ,
+        "name" : "Boeing 737-800 Passenger" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : false ,
+        "regional" : false
+      } , {
+        "iata" : "74Y" ,
+        "name" : "Boeing 747-400 Freighter" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : true ,
+        "regional" : false
+      } , {
+        "iata" : "739" ,
+        "name" : "Boeing 737-900 Passenger" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : false ,
+        "regional" : false
+      }
+    ]
+  } ,
+  "flightStatuses" : [
+    {
+      "flightId" : 533961476 ,
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "2279" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-28T21:35:00.000" ,
+        "dateUtc" : "2015-04-29T02:35:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T00:06:00.000" ,
+        "dateUtc" : "2015-04-29T07:06:00.000Z"
+      } ,
+      "status" : "L" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FY" ,
+        "restrictions" : ""
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-28T21:35:00.000" ,
+          "dateUtc" : "2015-04-29T02:35:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T00:06:00.000" ,
+          "dateUtc" : "2015-04-29T07:06:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-28T21:35:00.000" ,
+          "dateUtc" : "2015-04-29T02:35:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-28T21:51:00.000" ,
+          "dateUtc" : "2015-04-29T02:51:00.000Z"
+        } ,
+        "actualGateDeparture" : {
+          "dateLocal" : "2015-04-28T21:51:00.000" ,
+          "dateUtc" : "2015-04-29T02:51:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-28T22:12:00.000" ,
+          "dateUtc" : "2015-04-29T03:12:00.000Z"
+        } ,
+        "estimatedRunwayDeparture" : {
+          "dateLocal" : "2015-04-28T22:11:00.000" ,
+          "dateUtc" : "2015-04-29T03:11:00.000Z"
+        } ,
+        "actualRunwayDeparture" : {
+          "dateLocal" : "2015-04-28T22:11:00.000" ,
+          "dateUtc" : "2015-04-29T03:11:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T00:06:00.000" ,
+          "dateUtc" : "2015-04-29T07:06:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-28T23:42:00.000" ,
+          "dateUtc" : "2015-04-29T06:42:00.000Z"
+        } ,
+        "actualGateArrival" : {
+          "dateLocal" : "2015-04-28T23:42:00.000" ,
+          "dateUtc" : "2015-04-29T06:42:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-28T23:31:00.000" ,
+          "dateUtc" : "2015-04-29T06:31:00.000Z"
+        } ,
+        "estimatedRunwayArrival" : {
+          "dateLocal" : "2015-04-28T23:36:00.000" ,
+          "dateUtc" : "2015-04-29T06:36:00.000Z"
+        } ,
+        "actualRunwayArrival" : {
+          "dateLocal" : "2015-04-28T23:36:00.000" ,
+          "dateUtc" : "2015-04-29T06:36:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AS" ,
+          "flightNumber" : "1256" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "GF" ,
+          "flightNumber" : "4154" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "US" ,
+          "flightNumber" : "2279" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "delays" : {
+        "departureGateDelayMinutes" : 16 ,
+        "arrivalRunwayDelayMinutes" : 5
+      } ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 271 ,
+        "blockMinutes" : 231 ,
+        "scheduledAirMinutes" : 199 ,
+        "airMinutes" : 205 ,
+        "scheduledTaxiOutMinutes" : 37 ,
+        "taxiOutMinutes" : 20 ,
+        "scheduledTaxiInMinutes" : 35 ,
+        "taxiInMinutes" : 6
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "3" ,
+        "departureGate" : "K12" ,
+        "arrivalTerminal" : "4" ,
+        "arrivalGate" : "48B"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "738" ,
+        "tailNumber" : "N931NN"
+      }
+    } , {
+      "flightId" : 534419756 ,
+      "carrierFsCode" : "UA" ,
+      "flightNumber" : "1296" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T06:00:00.000" ,
+        "dateUtc" : "2015-04-29T11:00:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T08:35:00.000" ,
+        "dateUtc" : "2015-04-29T15:35:00.000Z"
+      } ,
+      "status" : "A" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FJY" ,
+        "restrictions" : "" ,
+        "downlines" : [
+          {
+            "fsCode" : "KOA" ,
+            "flightId" : 534403936
+          }
+        ]
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T06:00:00.000" ,
+          "dateUtc" : "2015-04-29T11:00:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T08:35:00.000" ,
+          "dateUtc" : "2015-04-29T15:35:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T06:00:00.000" ,
+          "dateUtc" : "2015-04-29T11:00:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T05:56:00.000" ,
+          "dateUtc" : "2015-04-29T10:56:00.000Z"
+        } ,
+        "actualGateDeparture" : {
+          "dateLocal" : "2015-04-29T05:56:00.000" ,
+          "dateUtc" : "2015-04-29T10:56:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T06:10:00.000" ,
+          "dateUtc" : "2015-04-29T11:10:00.000Z"
+        } ,
+        "estimatedRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T06:12:00.000" ,
+          "dateUtc" : "2015-04-29T11:12:00.000Z"
+        } ,
+        "actualRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T06:12:00.000" ,
+          "dateUtc" : "2015-04-29T11:12:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T08:35:00.000" ,
+          "dateUtc" : "2015-04-29T15:35:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T08:04:00.000" ,
+          "dateUtc" : "2015-04-29T15:04:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T07:43:00.000" ,
+          "dateUtc" : "2015-04-29T14:43:00.000Z"
+        } ,
+        "estimatedRunwayArrival" : {
+          "dateLocal" : "2015-04-29T07:51:00.000" ,
+          "dateUtc" : "2015-04-29T14:51:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AC" ,
+          "flightNumber" : "5142" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "CA" ,
+          "flightNumber" : "7292" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "NZ" ,
+          "flightNumber" : "9007" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "delays" : {
+        "departureRunwayDelayMinutes" : 2 ,
+        "arrivalRunwayDelayMinutes" : 8
+      } ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 275 ,
+        "scheduledAirMinutes" : 213 ,
+        "scheduledTaxiOutMinutes" : 10 ,
+        "taxiOutMinutes" : 16 ,
+        "scheduledTaxiInMinutes" : 52
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "1" ,
+        "departureGate" : "C16" ,
+        "arrivalTerminal" : "7" ,
+        "arrivalGate" : "72" ,
+        "baggage" : "3"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "738" ,
+        "tailNumber" : "N76522"
+      }
+    } , {
+      "flightId" : 534419749 ,
+      "carrierFsCode" : "NK" ,
+      "flightNumber" : "737" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T06:25:00.000" ,
+        "dateUtc" : "2015-04-29T11:25:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T08:45:00.000" ,
+        "dateUtc" : "2015-04-29T15:45:00.000Z"
+      } ,
+      "status" : "A" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "RY" ,
+        "restrictions" : ""
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T06:25:00.000" ,
+          "dateUtc" : "2015-04-29T11:25:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T08:45:00.000" ,
+          "dateUtc" : "2015-04-29T15:45:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T06:25:00.000" ,
+          "dateUtc" : "2015-04-29T11:25:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T06:25:00.000" ,
+          "dateUtc" : "2015-04-29T11:25:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T06:52:00.000" ,
+          "dateUtc" : "2015-04-29T11:52:00.000Z"
+        } ,
+        "estimatedRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T06:52:00.000" ,
+          "dateUtc" : "2015-04-29T11:52:00.000Z"
+        } ,
+        "actualRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T06:52:00.000" ,
+          "dateUtc" : "2015-04-29T11:52:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T08:45:00.000" ,
+          "dateUtc" : "2015-04-29T15:45:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T08:23:00.000" ,
+          "dateUtc" : "2015-04-29T15:23:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T08:18:00.000" ,
+          "dateUtc" : "2015-04-29T15:18:00.000Z"
+        } ,
+        "estimatedRunwayArrival" : {
+          "dateLocal" : "2015-04-29T08:18:00.000" ,
+          "dateUtc" : "2015-04-29T15:18:00.000Z"
+        }
+      } ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 260 ,
+        "scheduledAirMinutes" : 206 ,
+        "scheduledTaxiOutMinutes" : 27 ,
+        "scheduledTaxiInMinutes" : 27
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "3" ,
+        "departureGate" : "L9" ,
+        "arrivalTerminal" : "3" ,
+        "arrivalGate" : "33A"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "320" ,
+        "actualEquipmentIataCode" : "A320" ,
+        "tailNumber" : "N630NK"
+      }
+    } , {
+      "flightId" : 534419770 ,
+      "carrierFsCode" : "UA" ,
+      "flightNumber" : "1587" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T07:32:00.000" ,
+        "dateUtc" : "2015-04-29T12:32:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T10:05:00.000" ,
+        "dateUtc" : "2015-04-29T17:05:00.000Z"
+      } ,
+      "status" : "A" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FJY" ,
+        "restrictions" : ""
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T07:32:00.000" ,
+          "dateUtc" : "2015-04-29T12:32:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T10:05:00.000" ,
+          "dateUtc" : "2015-04-29T17:05:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T07:32:00.000" ,
+          "dateUtc" : "2015-04-29T12:32:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T07:28:00.000" ,
+          "dateUtc" : "2015-04-29T12:28:00.000Z"
+        } ,
+        "actualGateDeparture" : {
+          "dateLocal" : "2015-04-29T07:28:00.000" ,
+          "dateUtc" : "2015-04-29T12:28:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T07:45:00.000" ,
+          "dateUtc" : "2015-04-29T12:45:00.000Z"
+        } ,
+        "estimatedRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T07:44:00.000" ,
+          "dateUtc" : "2015-04-29T12:44:00.000Z"
+        } ,
+        "actualRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T07:44:00.000" ,
+          "dateUtc" : "2015-04-29T12:44:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T10:05:00.000" ,
+          "dateUtc" : "2015-04-29T17:05:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T09:26:00.000" ,
+          "dateUtc" : "2015-04-29T16:26:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T09:11:00.000" ,
+          "dateUtc" : "2015-04-29T16:11:00.000Z"
+        } ,
+        "estimatedRunwayArrival" : {
+          "dateLocal" : "2015-04-29T09:11:00.000" ,
+          "dateUtc" : "2015-04-29T16:11:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AC" ,
+          "flightNumber" : "5063" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "NZ" ,
+          "flightNumber" : "9205" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "OZ" ,
+          "flightNumber" : "6271" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 273 ,
+        "scheduledAirMinutes" : 206 ,
+        "scheduledTaxiOutMinutes" : 13 ,
+        "taxiOutMinutes" : 16 ,
+        "scheduledTaxiInMinutes" : 54
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "1" ,
+        "departureGate" : "C22" ,
+        "arrivalTerminal" : "8" ,
+        "arrivalGate" : "85" ,
+        "baggage" : "3"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "739" ,
+        "actualEquipmentIataCode" : "B739" ,
+        "tailNumber" : "N66837"
+      }
+    } , {
+      "flightId" : 534419759 ,
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "1243" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T07:40:00.000" ,
+        "dateUtc" : "2015-04-29T12:40:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T10:16:00.000" ,
+        "dateUtc" : "2015-04-29T17:16:00.000Z"
+      } ,
+      "status" : "A" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FY" ,
+        "restrictions" : ""
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T07:40:00.000" ,
+          "dateUtc" : "2015-04-29T12:40:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T10:16:00.000" ,
+          "dateUtc" : "2015-04-29T17:16:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T07:40:00.000" ,
+          "dateUtc" : "2015-04-29T12:40:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T07:32:00.000" ,
+          "dateUtc" : "2015-04-29T12:32:00.000Z"
+        } ,
+        "actualGateDeparture" : {
+          "dateLocal" : "2015-04-29T07:32:00.000" ,
+          "dateUtc" : "2015-04-29T12:32:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T08:06:00.000" ,
+          "dateUtc" : "2015-04-29T13:06:00.000Z"
+        } ,
+        "estimatedRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T07:58:00.000" ,
+          "dateUtc" : "2015-04-29T12:58:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T10:16:00.000" ,
+          "dateUtc" : "2015-04-29T17:16:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T09:41:00.000" ,
+          "dateUtc" : "2015-04-29T16:41:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T09:38:00.000" ,
+          "dateUtc" : "2015-04-29T16:38:00.000Z"
+        } ,
+        "estimatedRunwayArrival" : {
+          "dateLocal" : "2015-04-29T09:30:00.000" ,
+          "dateUtc" : "2015-04-29T16:30:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AS" ,
+          "flightNumber" : "1300" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "BA" ,
+          "flightNumber" : "4348" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "FJ" ,
+          "flightNumber" : "5008" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "MH" ,
+          "flightNumber" : "9349" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "US" ,
+          "flightNumber" : "1243" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 276 ,
+        "scheduledAirMinutes" : 212 ,
+        "scheduledTaxiOutMinutes" : 26 ,
+        "scheduledTaxiInMinutes" : 38
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "3" ,
+        "departureGate" : "K10" ,
+        "arrivalTerminal" : "4" ,
+        "arrivalGate" : "40" ,
+        "baggage" : "2"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "738" ,
+        "tailNumber" : "N966NN"
+      }
+    } , {
+      "flightId" : 534419760 ,
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "1081" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T09:10:00.000" ,
+        "dateUtc" : "2015-04-29T14:10:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T11:48:00.000" ,
+        "dateUtc" : "2015-04-29T18:48:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FY" ,
+        "restrictions" : ""
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T09:10:00.000" ,
+          "dateUtc" : "2015-04-29T14:10:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T11:48:00.000" ,
+          "dateUtc" : "2015-04-29T18:48:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T09:10:00.000" ,
+          "dateUtc" : "2015-04-29T14:10:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T09:10:00.000" ,
+          "dateUtc" : "2015-04-29T14:10:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T09:14:00.000" ,
+          "dateUtc" : "2015-04-29T14:14:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T11:48:00.000" ,
+          "dateUtc" : "2015-04-29T18:48:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T11:48:00.000" ,
+          "dateUtc" : "2015-04-29T18:48:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T10:48:00.000" ,
+          "dateUtc" : "2015-04-29T17:48:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AS" ,
+          "flightNumber" : "1322" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "JL" ,
+          "flightNumber" : "7523" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "MH" ,
+          "flightNumber" : "9351" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "QF" ,
+          "flightNumber" : "3160" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "TN" ,
+          "flightNumber" : "1145" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "US" ,
+          "flightNumber" : "1081" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 278 ,
+        "scheduledAirMinutes" : 214 ,
+        "scheduledTaxiOutMinutes" : 4 ,
+        "scheduledTaxiInMinutes" : 60
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "3" ,
+        "departureGate" : "K5" ,
+        "arrivalTerminal" : "4" ,
+        "arrivalGate" : "47A" ,
+        "baggage" : "2"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "738" ,
+        "tailNumber" : "N926NN"
+      }
+    } , {
+      "flightId" : 534419751 ,
+      "carrierFsCode" : "UA" ,
+      "flightNumber" : "772" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T09:15:00.000" ,
+        "dateUtc" : "2015-04-29T14:15:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T11:44:00.000" ,
+        "dateUtc" : "2015-04-29T18:44:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FJY" ,
+        "restrictions" : "" ,
+        "downlines" : [
+          {
+            "fsCode" : "IAD" ,
+            "flightId" : 534403864
+          }
+        ]
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T09:15:00.000" ,
+          "dateUtc" : "2015-04-29T14:15:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T11:44:00.000" ,
+          "dateUtc" : "2015-04-29T18:44:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T09:15:00.000" ,
+          "dateUtc" : "2015-04-29T14:15:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T09:15:00.000" ,
+          "dateUtc" : "2015-04-29T14:15:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T09:24:00.000" ,
+          "dateUtc" : "2015-04-29T14:24:00.000Z"
+        } ,
+        "estimatedRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T09:24:00.000" ,
+          "dateUtc" : "2015-04-29T14:24:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T11:44:00.000" ,
+          "dateUtc" : "2015-04-29T18:44:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T11:44:00.000" ,
+          "dateUtc" : "2015-04-29T18:44:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T10:56:00.000" ,
+          "dateUtc" : "2015-04-29T17:56:00.000Z"
+        } ,
+        "estimatedRunwayArrival" : {
+          "dateLocal" : "2015-04-29T10:56:00.000" ,
+          "dateUtc" : "2015-04-29T17:56:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AC" ,
+          "flightNumber" : "5475" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "CA" ,
+          "flightNumber" : "7291" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "NZ" ,
+          "flightNumber" : "9201" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 269 ,
+        "scheduledAirMinutes" : 212 ,
+        "scheduledTaxiOutMinutes" : 9 ,
+        "scheduledTaxiInMinutes" : 48
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "1" ,
+        "departureGate" : "C15" ,
+        "arrivalTerminal" : "7" ,
+        "arrivalGate" : "75B" ,
+        "baggage" : "3"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "752" ,
+        "tailNumber" : "N537UA"
+      }
+    } , {
+      "flightId" : 534419772 ,
+      "carrierFsCode" : "VX" ,
+      "flightNumber" : "231" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T09:20:00.000" ,
+        "dateUtc" : "2015-04-29T14:20:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T11:45:00.000" ,
+        "dateUtc" : "2015-04-29T18:45:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FJY" ,
+        "restrictions" : ""
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T09:20:00.000" ,
+          "dateUtc" : "2015-04-29T14:20:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T11:45:00.000" ,
+          "dateUtc" : "2015-04-29T18:45:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T09:20:00.000" ,
+          "dateUtc" : "2015-04-29T14:20:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T09:34:00.000" ,
+          "dateUtc" : "2015-04-29T14:34:00.000Z"
+        } ,
+        "estimatedRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T09:34:00.000" ,
+          "dateUtc" : "2015-04-29T14:34:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T11:45:00.000" ,
+          "dateUtc" : "2015-04-29T18:45:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T11:04:00.000" ,
+          "dateUtc" : "2015-04-29T18:04:00.000Z"
+        } ,
+        "estimatedRunwayArrival" : {
+          "dateLocal" : "2015-04-29T11:04:00.000" ,
+          "dateUtc" : "2015-04-29T18:04:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "CI" ,
+          "flightNumber" : "9605" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "HA" ,
+          "flightNumber" : "2525" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "MU" ,
+          "flightNumber" : "3897" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "SQ" ,
+          "flightNumber" : "1313" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "VA" ,
+          "flightNumber" : "5213" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 265 ,
+        "scheduledAirMinutes" : 210 ,
+        "scheduledTaxiOutMinutes" : 14 ,
+        "scheduledTaxiInMinutes" : 41
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "3" ,
+        "departureGate" : "L3" ,
+        "arrivalTerminal" : "3" ,
+        "arrivalGate" : "37B" ,
+        "baggage" : " "
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "320" ,
+        "tailNumber" : "N629VA"
+      }
+    } , {
+      "flightId" : 534419747 ,
+      "carrierFsCode" : "LH" ,
+      "flightNumber" : "8230" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T10:15:00.000" ,
+        "dateUtc" : "2015-04-29T15:15:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T12:35:00.000" ,
+        "dateUtc" : "2015-04-29T19:35:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "F" ,
+        "serviceClasses" : "F" ,
+        "restrictions" : "A" ,
+        "uplines" : [
+          {
+            "fsCode" : "FRA" ,
+            "flightId" : 534387305
+          }
+        ]
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T10:15:00.000" ,
+          "dateUtc" : "2015-04-29T15:15:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T12:35:00.000" ,
+          "dateUtc" : "2015-04-29T19:35:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T10:15:00.000" ,
+          "dateUtc" : "2015-04-29T15:15:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T12:35:00.000" ,
+          "dateUtc" : "2015-04-29T19:35:00.000Z"
+        }
+      } ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 260
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "77F"
+      }
+    } , {
+      "flightId" : 534419763 ,
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "990" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T10:30:00.000" ,
+        "dateUtc" : "2015-04-29T15:30:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T13:04:00.000" ,
+        "dateUtc" : "2015-04-29T20:04:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FY" ,
+        "restrictions" : ""
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T10:30:00.000" ,
+          "dateUtc" : "2015-04-29T15:30:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T13:04:00.000" ,
+          "dateUtc" : "2015-04-29T20:04:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T10:30:00.000" ,
+          "dateUtc" : "2015-04-29T15:30:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T10:30:00.000" ,
+          "dateUtc" : "2015-04-29T15:30:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T10:36:00.000" ,
+          "dateUtc" : "2015-04-29T15:36:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T13:04:00.000" ,
+          "dateUtc" : "2015-04-29T20:04:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T13:04:00.000" ,
+          "dateUtc" : "2015-04-29T20:04:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T12:10:00.000" ,
+          "dateUtc" : "2015-04-29T19:10:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AS" ,
+          "flightNumber" : "1017" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "BA" ,
+          "flightNumber" : "4342" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "MH" ,
+          "flightNumber" : "9430" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "QF" ,
+          "flightNumber" : "3056" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "US" ,
+          "flightNumber" : "990" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 274 ,
+        "scheduledAirMinutes" : 214 ,
+        "scheduledTaxiOutMinutes" : 6 ,
+        "scheduledTaxiInMinutes" : 54
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "3" ,
+        "departureGate" : "K5" ,
+        "arrivalTerminal" : "4" ,
+        "arrivalGate" : "45"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "738" ,
+        "tailNumber" : "N832NN"
+      }
+    } , {
+      "flightId" : 534419750 ,
+      "carrierFsCode" : "UA" ,
+      "flightNumber" : "531" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T10:40:00.000" ,
+        "dateUtc" : "2015-04-29T15:40:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T13:08:00.000" ,
+        "dateUtc" : "2015-04-29T20:08:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FJY" ,
+        "restrictions" : "" ,
+        "uplines" : [
+          {
+            "fsCode" : "DCA" ,
+            "flightId" : 534378087
+          }
+        ]
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T10:40:00.000" ,
+          "dateUtc" : "2015-04-29T15:40:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T13:08:00.000" ,
+          "dateUtc" : "2015-04-29T20:08:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T10:40:00.000" ,
+          "dateUtc" : "2015-04-29T15:40:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T10:40:00.000" ,
+          "dateUtc" : "2015-04-29T15:40:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T10:48:00.000" ,
+          "dateUtc" : "2015-04-29T15:48:00.000Z"
+        } ,
+        "estimatedRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T10:48:00.000" ,
+          "dateUtc" : "2015-04-29T15:48:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T13:08:00.000" ,
+          "dateUtc" : "2015-04-29T20:08:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T13:08:00.000" ,
+          "dateUtc" : "2015-04-29T20:08:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T12:19:00.000" ,
+          "dateUtc" : "2015-04-29T19:19:00.000Z"
+        } ,
+        "estimatedRunwayArrival" : {
+          "dateLocal" : "2015-04-29T12:19:00.000" ,
+          "dateUtc" : "2015-04-29T19:19:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AC" ,
+          "flightNumber" : "5039" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "NZ" ,
+          "flightNumber" : "9197" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 268 ,
+        "scheduledAirMinutes" : 211 ,
+        "scheduledTaxiOutMinutes" : 8 ,
+        "scheduledTaxiInMinutes" : 49
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "1" ,
+        "departureGate" : "B20" ,
+        "arrivalTerminal" : "7" ,
+        "arrivalGate" : "75B" ,
+        "baggage" : "3"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "320" ,
+        "tailNumber" : "N405UA"
+      }
+    } , {
+      "flightId" : 534419773 ,
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "2220" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T12:10:00.000" ,
+        "dateUtc" : "2015-04-29T17:10:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T14:52:00.000" ,
+        "dateUtc" : "2015-04-29T21:52:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FY" ,
+        "restrictions" : ""
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T12:10:00.000" ,
+          "dateUtc" : "2015-04-29T17:10:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T14:52:00.000" ,
+          "dateUtc" : "2015-04-29T21:52:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T12:10:00.000" ,
+          "dateUtc" : "2015-04-29T17:10:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T12:10:00.000" ,
+          "dateUtc" : "2015-04-29T17:10:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T12:20:00.000" ,
+          "dateUtc" : "2015-04-29T17:20:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T14:52:00.000" ,
+          "dateUtc" : "2015-04-29T21:52:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T14:52:00.000" ,
+          "dateUtc" : "2015-04-29T21:52:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T13:54:00.000" ,
+          "dateUtc" : "2015-04-29T20:54:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AS" ,
+          "flightNumber" : "1468" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "BA" ,
+          "flightNumber" : "4366" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "EY" ,
+          "flightNumber" : "3036" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "GF" ,
+          "flightNumber" : "4314" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "MH" ,
+          "flightNumber" : "9455" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "QF" ,
+          "flightNumber" : "3102" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "US" ,
+          "flightNumber" : "2220" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 282 ,
+        "scheduledAirMinutes" : 214 ,
+        "scheduledTaxiOutMinutes" : 10 ,
+        "scheduledTaxiInMinutes" : 58
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "3" ,
+        "departureGate" : "K5" ,
+        "arrivalTerminal" : "4" ,
+        "arrivalGate" : "47A" ,
+        "baggage" : "2"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "738" ,
+        "tailNumber" : "N964NN"
+      }
+    } , {
+      "flightId" : 534419753 ,
+      "carrierFsCode" : "UA" ,
+      "flightNumber" : "1632" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T12:40:00.000" ,
+        "dateUtc" : "2015-04-29T17:40:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T15:08:00.000" ,
+        "dateUtc" : "2015-04-29T22:08:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FJY" ,
+        "restrictions" : "" ,
+        "uplines" : [
+          {
+            "fsCode" : "DCA" ,
+            "flightId" : 534378093
+          }
+        ] ,
+        "downlines" : [
+          {
+            "fsCode" : "IAH" ,
+            "flightId" : 534403872
+          }
+        ]
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T12:40:00.000" ,
+          "dateUtc" : "2015-04-29T17:40:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T15:08:00.000" ,
+          "dateUtc" : "2015-04-29T22:08:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T12:40:00.000" ,
+          "dateUtc" : "2015-04-29T17:40:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T12:40:00.000" ,
+          "dateUtc" : "2015-04-29T17:40:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T12:48:00.000" ,
+          "dateUtc" : "2015-04-29T17:48:00.000Z"
+        } ,
+        "estimatedRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T12:48:00.000" ,
+          "dateUtc" : "2015-04-29T17:48:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T15:08:00.000" ,
+          "dateUtc" : "2015-04-29T22:08:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T15:08:00.000" ,
+          "dateUtc" : "2015-04-29T22:08:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T14:19:00.000" ,
+          "dateUtc" : "2015-04-29T21:19:00.000Z"
+        } ,
+        "estimatedRunwayArrival" : {
+          "dateLocal" : "2015-04-29T14:19:00.000" ,
+          "dateUtc" : "2015-04-29T21:19:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AC" ,
+          "flightNumber" : "5072" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "BR" ,
+          "flightNumber" : "3019" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "NZ" ,
+          "flightNumber" : "9263" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "OZ" ,
+          "flightNumber" : "6275" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 268 ,
+        "scheduledAirMinutes" : 211 ,
+        "scheduledTaxiOutMinutes" : 8 ,
+        "scheduledTaxiInMinutes" : 49
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "1" ,
+        "departureGate" : "C9" ,
+        "arrivalTerminal" : "8" ,
+        "arrivalGate" : "86" ,
+        "baggage" : "3"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "738" ,
+        "tailNumber" : "N26210"
+      }
+    } , {
+      "flightId" : 534419755 ,
+      "carrierFsCode" : "UA" ,
+      "flightNumber" : "1250" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T13:26:00.000" ,
+        "dateUtc" : "2015-04-29T18:26:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T15:55:00.000" ,
+        "dateUtc" : "2015-04-29T22:55:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FJY" ,
+        "restrictions" : "" ,
+        "downlines" : [
+          {
+            "fsCode" : "DEN" ,
+            "flightId" : 534403734
+          }
+        ]
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T13:26:00.000" ,
+          "dateUtc" : "2015-04-29T18:26:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T15:55:00.000" ,
+          "dateUtc" : "2015-04-29T22:55:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T13:26:00.000" ,
+          "dateUtc" : "2015-04-29T18:26:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T13:26:00.000" ,
+          "dateUtc" : "2015-04-29T18:26:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T13:28:00.000" ,
+          "dateUtc" : "2015-04-29T18:28:00.000Z"
+        } ,
+        "estimatedRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T13:28:00.000" ,
+          "dateUtc" : "2015-04-29T18:28:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T15:55:00.000" ,
+          "dateUtc" : "2015-04-29T22:55:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T15:55:00.000" ,
+          "dateUtc" : "2015-04-29T22:55:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T14:59:00.000" ,
+          "dateUtc" : "2015-04-29T21:59:00.000Z"
+        } ,
+        "estimatedRunwayArrival" : {
+          "dateLocal" : "2015-04-29T14:59:00.000" ,
+          "dateUtc" : "2015-04-29T21:59:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AC" ,
+          "flightNumber" : "5569" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "NZ" ,
+          "flightNumber" : "9254" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 269 ,
+        "scheduledAirMinutes" : 211 ,
+        "scheduledTaxiOutMinutes" : 2 ,
+        "scheduledTaxiInMinutes" : 56
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "1" ,
+        "departureGate" : "C22" ,
+        "arrivalTerminal" : "7" ,
+        "arrivalGate" : "70B" ,
+        "baggage" : "3"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "738" ,
+        "tailNumber" : "N78506"
+      }
+    } , {
+      "flightId" : 534419758 ,
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "2223" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T14:00:00.000" ,
+        "dateUtc" : "2015-04-29T19:00:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T16:35:00.000" ,
+        "dateUtc" : "2015-04-29T23:35:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FY" ,
+        "restrictions" : "" ,
+        "downlines" : [
+          {
+            "fsCode" : "ORD" ,
+            "flightId" : 534404117
+          }
+        ]
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T14:00:00.000" ,
+          "dateUtc" : "2015-04-29T19:00:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T16:35:00.000" ,
+          "dateUtc" : "2015-04-29T23:35:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T14:00:00.000" ,
+          "dateUtc" : "2015-04-29T19:00:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T14:00:00.000" ,
+          "dateUtc" : "2015-04-29T19:00:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T14:05:00.000" ,
+          "dateUtc" : "2015-04-29T19:05:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T16:35:00.000" ,
+          "dateUtc" : "2015-04-29T23:35:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T16:35:00.000" ,
+          "dateUtc" : "2015-04-29T23:35:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T15:39:00.000" ,
+          "dateUtc" : "2015-04-29T22:39:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AB" ,
+          "flightNumber" : "4626" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "AS" ,
+          "flightNumber" : "1098" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "BA" ,
+          "flightNumber" : "4370" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "EY" ,
+          "flightNumber" : "3129" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "GF" ,
+          "flightNumber" : "4142" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "MH" ,
+          "flightNumber" : "9461" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "QF" ,
+          "flightNumber" : "3012" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "US" ,
+          "flightNumber" : "2223" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 275 ,
+        "scheduledAirMinutes" : 214 ,
+        "scheduledTaxiOutMinutes" : 5 ,
+        "scheduledTaxiInMinutes" : 56
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "3" ,
+        "departureGate" : "H16" ,
+        "arrivalTerminal" : "4" ,
+        "arrivalGate" : "46A" ,
+        "baggage" : "2"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "738" ,
+        "tailNumber" : "N968NN"
+      }
+    } , {
+      "flightId" : 534419757 ,
+      "carrierFsCode" : "UA" ,
+      "flightNumber" : "1266" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T15:36:00.000" ,
+        "dateUtc" : "2015-04-29T20:36:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T18:11:00.000" ,
+        "dateUtc" : "2015-04-30T01:11:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FJY" ,
+        "restrictions" : "" ,
+        "downlines" : [
+          {
+            "fsCode" : "SFO" ,
+            "flightId" : 534404293
+          } , {
+            "fsCode" : "EWR" ,
+            "flightId" : 534430836
+          }
+        ]
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T15:36:00.000" ,
+          "dateUtc" : "2015-04-29T20:36:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T18:11:00.000" ,
+          "dateUtc" : "2015-04-30T01:11:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T15:36:00.000" ,
+          "dateUtc" : "2015-04-29T20:36:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T15:36:00.000" ,
+          "dateUtc" : "2015-04-29T20:36:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T15:44:00.000" ,
+          "dateUtc" : "2015-04-29T20:44:00.000Z"
+        } ,
+        "estimatedRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T15:44:00.000" ,
+          "dateUtc" : "2015-04-29T20:44:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T18:11:00.000" ,
+          "dateUtc" : "2015-04-30T01:11:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T18:11:00.000" ,
+          "dateUtc" : "2015-04-30T01:11:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T17:12:00.000" ,
+          "dateUtc" : "2015-04-30T00:12:00.000Z"
+        } ,
+        "estimatedRunwayArrival" : {
+          "dateLocal" : "2015-04-29T17:12:00.000" ,
+          "dateUtc" : "2015-04-30T00:12:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AC" ,
+          "flightNumber" : "5007" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "EI" ,
+          "flightNumber" : "6167" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "LH" ,
+          "flightNumber" : "9164" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "NZ" ,
+          "flightNumber" : "9213" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "OS" ,
+          "flightNumber" : "7705" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "SK" ,
+          "flightNumber" : "3919" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "SN" ,
+          "flightNumber" : "8815" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 275 ,
+        "scheduledAirMinutes" : 208 ,
+        "scheduledTaxiOutMinutes" : 8 ,
+        "scheduledTaxiInMinutes" : 59
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "1" ,
+        "departureGate" : "B9" ,
+        "arrivalTerminal" : "7" ,
+        "arrivalGate" : "74" ,
+        "baggage" : "3"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "739" ,
+        "tailNumber" : "N39416"
+      }
+    } , {
+      "flightId" : 534419767 ,
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "2341" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T16:55:00.000" ,
+        "dateUtc" : "2015-04-29T21:55:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T19:37:00.000" ,
+        "dateUtc" : "2015-04-30T02:37:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FY" ,
+        "restrictions" : ""
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T16:55:00.000" ,
+          "dateUtc" : "2015-04-29T21:55:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T19:37:00.000" ,
+          "dateUtc" : "2015-04-30T02:37:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T16:55:00.000" ,
+          "dateUtc" : "2015-04-29T21:55:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T16:55:00.000" ,
+          "dateUtc" : "2015-04-29T21:55:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T17:05:00.000" ,
+          "dateUtc" : "2015-04-29T22:05:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T19:37:00.000" ,
+          "dateUtc" : "2015-04-30T02:37:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T19:37:00.000" ,
+          "dateUtc" : "2015-04-30T02:37:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T18:39:00.000" ,
+          "dateUtc" : "2015-04-30T01:39:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AS" ,
+          "flightNumber" : "1238" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "BA" ,
+          "flightNumber" : "5199" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "GF" ,
+          "flightNumber" : "4307" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "IB" ,
+          "flightNumber" : "4476" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "MH" ,
+          "flightNumber" : "9583" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "QF" ,
+          "flightNumber" : "3162" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "QR" ,
+          "flightNumber" : "5106" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "TN" ,
+          "flightNumber" : "1143" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "US" ,
+          "flightNumber" : "2341" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 282 ,
+        "scheduledAirMinutes" : 214 ,
+        "scheduledTaxiOutMinutes" : 10 ,
+        "scheduledTaxiInMinutes" : 58
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "3" ,
+        "departureGate" : "H11A" ,
+        "arrivalTerminal" : "4" ,
+        "arrivalGate" : "45"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "738" ,
+        "tailNumber" : "N965NN"
+      }
+    } , {
+      "flightId" : 534419754 ,
+      "carrierFsCode" : "UA" ,
+      "flightNumber" : "1255" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T17:03:00.000" ,
+        "dateUtc" : "2015-04-29T22:03:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T19:31:00.000" ,
+        "dateUtc" : "2015-04-30T02:31:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FJY" ,
+        "restrictions" : "" ,
+        "downlines" : [
+          {
+            "fsCode" : "MCO" ,
+            "flightId" : 534403995
+          }
+        ]
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T17:03:00.000" ,
+          "dateUtc" : "2015-04-29T22:03:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T19:31:00.000" ,
+          "dateUtc" : "2015-04-30T02:31:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T17:03:00.000" ,
+          "dateUtc" : "2015-04-29T22:03:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T17:03:00.000" ,
+          "dateUtc" : "2015-04-29T22:03:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T17:10:00.000" ,
+          "dateUtc" : "2015-04-29T22:10:00.000Z"
+        } ,
+        "estimatedRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T17:10:00.000" ,
+          "dateUtc" : "2015-04-29T22:10:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T19:31:00.000" ,
+          "dateUtc" : "2015-04-30T02:31:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T19:31:00.000" ,
+          "dateUtc" : "2015-04-30T02:31:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T18:40:00.000" ,
+          "dateUtc" : "2015-04-30T01:40:00.000Z"
+        } ,
+        "estimatedRunwayArrival" : {
+          "dateLocal" : "2015-04-29T18:40:00.000" ,
+          "dateUtc" : "2015-04-30T01:40:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AC" ,
+          "flightNumber" : "5361" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "NZ" ,
+          "flightNumber" : "9278" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 268 ,
+        "scheduledAirMinutes" : 210 ,
+        "scheduledTaxiOutMinutes" : 7 ,
+        "scheduledTaxiInMinutes" : 51
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "1" ,
+        "departureGate" : "C28" ,
+        "arrivalTerminal" : "8" ,
+        "arrivalGate" : "86" ,
+        "baggage" : "3"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "738" ,
+        "tailNumber" : "N35271"
+      }
+    } , {
+      "flightId" : 534419748 ,
+      "carrierFsCode" : "NK" ,
+      "flightNumber" : "731" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T17:11:00.000" ,
+        "dateUtc" : "2015-04-29T22:11:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T19:41:00.000" ,
+        "dateUtc" : "2015-04-30T02:41:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "RY" ,
+        "restrictions" : ""
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T17:11:00.000" ,
+          "dateUtc" : "2015-04-29T22:11:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T19:41:00.000" ,
+          "dateUtc" : "2015-04-30T02:41:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T17:11:00.000" ,
+          "dateUtc" : "2015-04-29T22:11:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T17:11:00.000" ,
+          "dateUtc" : "2015-04-29T22:11:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T17:27:00.000" ,
+          "dateUtc" : "2015-04-29T22:27:00.000Z"
+        } ,
+        "estimatedRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T17:27:00.000" ,
+          "dateUtc" : "2015-04-29T22:27:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T19:41:00.000" ,
+          "dateUtc" : "2015-04-30T02:41:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T19:41:00.000" ,
+          "dateUtc" : "2015-04-30T02:41:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T18:56:00.000" ,
+          "dateUtc" : "2015-04-30T01:56:00.000Z"
+        } ,
+        "estimatedRunwayArrival" : {
+          "dateLocal" : "2015-04-29T18:56:00.000" ,
+          "dateUtc" : "2015-04-30T01:56:00.000Z"
+        }
+      } ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 270 ,
+        "scheduledAirMinutes" : 209 ,
+        "scheduledTaxiOutMinutes" : 16 ,
+        "scheduledTaxiInMinutes" : 45
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "3" ,
+        "departureGate" : "L7" ,
+        "arrivalTerminal" : "3" ,
+        "arrivalGate" : "32"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "320"
+      }
+    } , {
+      "flightId" : 534419771 ,
+      "carrierFsCode" : "VX" ,
+      "flightNumber" : "241" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T17:25:00.000" ,
+        "dateUtc" : "2015-04-29T22:25:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T20:00:00.000" ,
+        "dateUtc" : "2015-04-30T03:00:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FJY" ,
+        "restrictions" : ""
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T17:25:00.000" ,
+          "dateUtc" : "2015-04-29T22:25:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T20:00:00.000" ,
+          "dateUtc" : "2015-04-30T03:00:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T17:25:00.000" ,
+          "dateUtc" : "2015-04-29T22:25:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T17:38:00.000" ,
+          "dateUtc" : "2015-04-29T22:38:00.000Z"
+        } ,
+        "estimatedRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T17:38:00.000" ,
+          "dateUtc" : "2015-04-29T22:38:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T20:00:00.000" ,
+          "dateUtc" : "2015-04-30T03:00:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T19:05:00.000" ,
+          "dateUtc" : "2015-04-30T02:05:00.000Z"
+        } ,
+        "estimatedRunwayArrival" : {
+          "dateLocal" : "2015-04-29T19:05:00.000" ,
+          "dateUtc" : "2015-04-30T02:05:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "CI" ,
+          "flightNumber" : "9607" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "MU" ,
+          "flightNumber" : "3899" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "VA" ,
+          "flightNumber" : "5217" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 275 ,
+        "scheduledAirMinutes" : 207 ,
+        "scheduledTaxiOutMinutes" : 13 ,
+        "scheduledTaxiInMinutes" : 55
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "3" ,
+        "arrivalTerminal" : "3"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "320"
+      }
+    } , {
+      "flightId" : 534419762 ,
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "1014" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T18:20:00.000" ,
+        "dateUtc" : "2015-04-29T23:20:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T20:59:00.000" ,
+        "dateUtc" : "2015-04-30T03:59:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FY" ,
+        "restrictions" : ""
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T18:20:00.000" ,
+          "dateUtc" : "2015-04-29T23:20:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T20:59:00.000" ,
+          "dateUtc" : "2015-04-30T03:59:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T18:20:00.000" ,
+          "dateUtc" : "2015-04-29T23:20:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T18:20:00.000" ,
+          "dateUtc" : "2015-04-29T23:20:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T18:30:00.000" ,
+          "dateUtc" : "2015-04-29T23:30:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T20:59:00.000" ,
+          "dateUtc" : "2015-04-30T03:59:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T20:59:00.000" ,
+          "dateUtc" : "2015-04-30T03:59:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T20:02:00.000" ,
+          "dateUtc" : "2015-04-30T03:02:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AS" ,
+          "flightNumber" : "1261" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "IB" ,
+          "flightNumber" : "7076" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "MH" ,
+          "flightNumber" : "9663" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "QF" ,
+          "flightNumber" : "3008" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "RJ" ,
+          "flightNumber" : "7127" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "TN" ,
+          "flightNumber" : "1141" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "US" ,
+          "flightNumber" : "1014" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 279 ,
+        "scheduledAirMinutes" : 212 ,
+        "scheduledTaxiOutMinutes" : 10 ,
+        "scheduledTaxiInMinutes" : 57
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "3" ,
+        "departureGate" : "H16" ,
+        "arrivalTerminal" : "4" ,
+        "arrivalGate" : "43" ,
+        "baggage" : "2"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "738" ,
+        "tailNumber" : "N941NN"
+      }
+    } , {
+      "flightId" : 534419769 ,
+      "carrierFsCode" : "UA" ,
+      "flightNumber" : "623" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T18:30:00.000" ,
+        "dateUtc" : "2015-04-29T23:30:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T20:59:00.000" ,
+        "dateUtc" : "2015-04-30T03:59:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FJY" ,
+        "restrictions" : ""
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T18:30:00.000" ,
+          "dateUtc" : "2015-04-29T23:30:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T20:59:00.000" ,
+          "dateUtc" : "2015-04-30T03:59:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T18:30:00.000" ,
+          "dateUtc" : "2015-04-29T23:30:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T18:30:00.000" ,
+          "dateUtc" : "2015-04-29T23:30:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T18:35:00.000" ,
+          "dateUtc" : "2015-04-29T23:35:00.000Z"
+        } ,
+        "estimatedRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T18:35:00.000" ,
+          "dateUtc" : "2015-04-29T23:35:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T20:59:00.000" ,
+          "dateUtc" : "2015-04-30T03:59:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T20:59:00.000" ,
+          "dateUtc" : "2015-04-30T03:59:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T20:05:00.000" ,
+          "dateUtc" : "2015-04-30T03:05:00.000Z"
+        } ,
+        "estimatedRunwayArrival" : {
+          "dateLocal" : "2015-04-29T20:05:00.000" ,
+          "dateUtc" : "2015-04-30T03:05:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AC" ,
+          "flightNumber" : "5055" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "CA" ,
+          "flightNumber" : "7288" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "EI" ,
+          "flightNumber" : "6165" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "NZ" ,
+          "flightNumber" : "9231" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "SK" ,
+          "flightNumber" : "8741" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 269 ,
+        "scheduledAirMinutes" : 210 ,
+        "scheduledTaxiOutMinutes" : 5 ,
+        "scheduledTaxiInMinutes" : 54
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "1" ,
+        "departureGate" : "B17" ,
+        "arrivalTerminal" : "7" ,
+        "arrivalGate" : "70A" ,
+        "baggage" : "3"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "752" ,
+        "tailNumber" : "N526UA"
+      }
+    } , {
+      "flightId" : 534419765 ,
+      "carrierFsCode" : "UA" ,
+      "flightNumber" : "12" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T19:29:00.000" ,
+        "dateUtc" : "2015-04-30T00:29:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T22:08:00.000" ,
+        "dateUtc" : "2015-04-30T05:08:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FJY" ,
+        "restrictions" : "" ,
+        "uplines" : [
+          {
+            "fsCode" : "BUF" ,
+            "flightId" : 534368303
+          }
+        ]
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T19:29:00.000" ,
+          "dateUtc" : "2015-04-30T00:29:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T22:08:00.000" ,
+          "dateUtc" : "2015-04-30T05:08:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T19:29:00.000" ,
+          "dateUtc" : "2015-04-30T00:29:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T19:29:00.000" ,
+          "dateUtc" : "2015-04-30T00:29:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T19:36:00.000" ,
+          "dateUtc" : "2015-04-30T00:36:00.000Z"
+        } ,
+        "estimatedRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T19:36:00.000" ,
+          "dateUtc" : "2015-04-30T00:36:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T22:08:00.000" ,
+          "dateUtc" : "2015-04-30T05:08:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T22:08:00.000" ,
+          "dateUtc" : "2015-04-30T05:08:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T21:02:00.000" ,
+          "dateUtc" : "2015-04-30T04:02:00.000Z"
+        } ,
+        "estimatedRunwayArrival" : {
+          "dateLocal" : "2015-04-29T21:02:00.000" ,
+          "dateUtc" : "2015-04-30T04:02:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AC" ,
+          "flightNumber" : "5651" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "BR" ,
+          "flightNumber" : "3021" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "CA" ,
+          "flightNumber" : "7290" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "EI" ,
+          "flightNumber" : "6168" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "NZ" ,
+          "flightNumber" : "9227" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "SK" ,
+          "flightNumber" : "8755" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 279 ,
+        "scheduledAirMinutes" : 206 ,
+        "scheduledTaxiOutMinutes" : 7 ,
+        "scheduledTaxiInMinutes" : 66
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "1" ,
+        "departureGate" : "C22" ,
+        "arrivalTerminal" : "7" ,
+        "arrivalGate" : "73" ,
+        "baggage" : "3"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "739" ,
+        "tailNumber" : "N67815"
+      }
+    } , {
+      "flightId" : 534419764 ,
+      "carrierFsCode" : "F9" ,
+      "flightNumber" : "1269" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T19:35:00.000" ,
+        "dateUtc" : "2015-04-30T00:35:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T22:00:00.000" ,
+        "dateUtc" : "2015-04-30T05:00:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "RJY" ,
+        "restrictions" : ""
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T19:35:00.000" ,
+          "dateUtc" : "2015-04-30T00:35:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T22:00:00.000" ,
+          "dateUtc" : "2015-04-30T05:00:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T19:35:00.000" ,
+          "dateUtc" : "2015-04-30T00:35:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T19:35:00.000" ,
+          "dateUtc" : "2015-04-30T00:35:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T19:45:00.000" ,
+          "dateUtc" : "2015-04-30T00:45:00.000Z"
+        } ,
+        "estimatedRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T19:45:00.000" ,
+          "dateUtc" : "2015-04-30T00:45:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T22:00:00.000" ,
+          "dateUtc" : "2015-04-30T05:00:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T22:00:00.000" ,
+          "dateUtc" : "2015-04-30T05:00:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T21:15:00.000" ,
+          "dateUtc" : "2015-04-30T04:15:00.000Z"
+        } ,
+        "estimatedRunwayArrival" : {
+          "dateLocal" : "2015-04-29T21:15:00.000" ,
+          "dateUtc" : "2015-04-30T04:15:00.000Z"
+        }
+      } ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 265 ,
+        "scheduledAirMinutes" : 210 ,
+        "scheduledTaxiOutMinutes" : 10 ,
+        "scheduledTaxiInMinutes" : 45
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "3" ,
+        "departureGate" : "L1" ,
+        "arrivalTerminal" : "3" ,
+        "arrivalGate" : "31B"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "320" ,
+        "tailNumber" : "N203FR"
+      }
+    } , {
+      "flightId" : 534419761 ,
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "1092" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T20:20:00.000" ,
+        "dateUtc" : "2015-04-30T01:20:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T23:00:00.000" ,
+        "dateUtc" : "2015-04-30T06:00:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FY" ,
+        "restrictions" : ""
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T20:20:00.000" ,
+          "dateUtc" : "2015-04-30T01:20:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T23:00:00.000" ,
+          "dateUtc" : "2015-04-30T06:00:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T20:20:00.000" ,
+          "dateUtc" : "2015-04-30T01:20:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T20:20:00.000" ,
+          "dateUtc" : "2015-04-30T01:20:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T20:30:00.000" ,
+          "dateUtc" : "2015-04-30T01:30:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T23:00:00.000" ,
+          "dateUtc" : "2015-04-30T06:00:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T23:00:00.000" ,
+          "dateUtc" : "2015-04-30T06:00:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T22:00:00.000" ,
+          "dateUtc" : "2015-04-30T05:00:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AS" ,
+          "flightNumber" : "1227" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "BA" ,
+          "flightNumber" : "4349" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "MH" ,
+          "flightNumber" : "9369" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "QF" ,
+          "flightNumber" : "4915" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "RJ" ,
+          "flightNumber" : "7156" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "US" ,
+          "flightNumber" : "1092" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 280 ,
+        "scheduledAirMinutes" : 210 ,
+        "scheduledTaxiOutMinutes" : 10 ,
+        "scheduledTaxiInMinutes" : 60
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "3" ,
+        "departureGate" : "K13" ,
+        "arrivalTerminal" : "4" ,
+        "arrivalGate" : "41"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "738" ,
+        "tailNumber" : "N940NN"
+      }
+    } , {
+      "flightId" : 534419768 ,
+      "carrierFsCode" : "QF" ,
+      "flightNumber" : "7558" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T20:35:00.000" ,
+        "dateUtc" : "2015-04-30T01:35:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T22:45:00.000" ,
+        "dateUtc" : "2015-04-30T05:45:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "F" ,
+        "serviceClasses" : "Y" ,
+        "restrictions" : "A" ,
+        "downlines" : [
+          {
+            "fsCode" : "HNL" ,
+            "flightId" : 534403848
+          } , {
+            "fsCode" : "SYD" ,
+            "flightId" : 534393660
+          }
+        ]
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T20:35:00.000" ,
+          "dateUtc" : "2015-04-30T01:35:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T22:45:00.000" ,
+          "dateUtc" : "2015-04-30T05:45:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T20:35:00.000" ,
+          "dateUtc" : "2015-04-30T01:35:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T20:45:00.000" ,
+          "dateUtc" : "2015-04-30T01:45:00.000Z"
+        } ,
+        "estimatedRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T20:45:00.000" ,
+          "dateUtc" : "2015-04-30T01:45:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T22:45:00.000" ,
+          "dateUtc" : "2015-04-30T05:45:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T22:02:00.000" ,
+          "dateUtc" : "2015-04-30T05:02:00.000Z"
+        } ,
+        "estimatedRunwayArrival" : {
+          "dateLocal" : "2015-04-29T22:02:00.000" ,
+          "dateUtc" : "2015-04-30T05:02:00.000Z"
+        }
+      } ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 250 ,
+        "scheduledAirMinutes" : 197 ,
+        "scheduledTaxiOutMinutes" : 10 ,
+        "scheduledTaxiInMinutes" : 43
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "74Y"
+      }
+    } , {
+      "flightId" : 534419752 ,
+      "carrierFsCode" : "UA" ,
+      "flightNumber" : "1750" ,
+      "departureAirportFsCode" : "ORD" ,
+      "arrivalAirportFsCode" : "LAX" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T21:00:00.000" ,
+        "dateUtc" : "2015-04-30T02:00:00.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-04-29T23:33:00.000" ,
+        "dateUtc" : "2015-04-30T06:33:00.000Z"
+      } ,
+      "status" : "S" ,
+      "schedule" : {
+        "flightType" : "J" ,
+        "serviceClasses" : "FJY" ,
+        "restrictions" : "" ,
+        "uplines" : [
+          {
+            "fsCode" : "TPA" ,
+            "flightId" : 534439333
+          }
+        ]
+      } ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-04-29T21:00:00.000" ,
+          "dateUtc" : "2015-04-30T02:00:00.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-04-29T23:33:00.000" ,
+          "dateUtc" : "2015-04-30T06:33:00.000Z"
+        } ,
+        "scheduledGateDeparture" : {
+          "dateLocal" : "2015-04-29T21:00:00.000" ,
+          "dateUtc" : "2015-04-30T02:00:00.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-04-29T21:00:00.000" ,
+          "dateUtc" : "2015-04-30T02:00:00.000Z"
+        } ,
+        "flightPlanPlannedDeparture" : {
+          "dateLocal" : "2015-04-29T21:06:00.000" ,
+          "dateUtc" : "2015-04-30T02:06:00.000Z"
+        } ,
+        "estimatedRunwayDeparture" : {
+          "dateLocal" : "2015-04-29T21:06:00.000" ,
+          "dateUtc" : "2015-04-30T02:06:00.000Z"
+        } ,
+        "scheduledGateArrival" : {
+          "dateLocal" : "2015-04-29T23:33:00.000" ,
+          "dateUtc" : "2015-04-30T06:33:00.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-04-29T23:33:00.000" ,
+          "dateUtc" : "2015-04-30T06:33:00.000Z"
+        } ,
+        "flightPlanPlannedArrival" : {
+          "dateLocal" : "2015-04-29T22:36:00.000" ,
+          "dateUtc" : "2015-04-30T05:36:00.000Z"
+        } ,
+        "estimatedRunwayArrival" : {
+          "dateLocal" : "2015-04-29T22:36:00.000" ,
+          "dateUtc" : "2015-04-30T05:36:00.000Z"
+        }
+      } ,
+      "codeshares" : [
+        {
+          "fsCode" : "AC" ,
+          "flightNumber" : "5043" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "CA" ,
+          "flightNumber" : "7289" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "EI" ,
+          "flightNumber" : "6166" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "LH" ,
+          "flightNumber" : "9198" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "NZ" ,
+          "flightNumber" : "9129" ,
+          "relationship" : "L"
+        } , {
+          "fsCode" : "SK" ,
+          "flightNumber" : "8747" ,
+          "relationship" : "L"
+        }
+      ] ,
+      "flightDurations" : {
+        "scheduledBlockMinutes" : 273 ,
+        "scheduledAirMinutes" : 210 ,
+        "scheduledTaxiOutMinutes" : 6 ,
+        "scheduledTaxiInMinutes" : 57
+      } ,
+      "airportResources" : {
+        "departureTerminal" : "1" ,
+        "departureGate" : "B12" ,
+        "arrivalTerminal" : "7" ,
+        "arrivalGate" : "73" ,
+        "baggage" : "3"
+      } ,
+      "flightEquipment" : {
+        "scheduledEquipmentIataCode" : "738" ,
+        "tailNumber" : "N16217"
+      }
+    }
+  ]
+}

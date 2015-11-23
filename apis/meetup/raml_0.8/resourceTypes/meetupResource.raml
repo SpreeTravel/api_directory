@@ -1,0 +1,54 @@
+get?: 
+  responses: 
+    200: 
+      description: |
+        When everything goes well, we'll send a 200 response code along with your data.
+        
+        JSON requests that specify a callback parameter are treated differently: the API always responds with an HTTP status of 200, so that a client browser will load the response and handle the callback. When an error occurs its corresponding status line is served in a "status" field of the error response object rather than in the response header.
+    401: 
+      description: |
+        Unauthorized when you don't provide a valid key.
+    400: 
+      description: |
+        Bad request when there was a problem with the request.
+        
+        The 400 BadRequest response is something of a catch-all: sent if you have incorrect or missing parameters, if you exceed your API limits or you request an unsupported format. The response body will have more detail.
+    500: 
+      description: |
+        Internal Server Error if we messed up -- please let us know (http://groups.google.com/group/meetup-api/topics)!
+post?: 
+  responses: 
+    200: 
+      description: |
+        When everything goes well, we'll send a 200 response code along with your data.
+        
+        JSON requests that specify a callback parameter are treated differently: the API always responds with an HTTP status of 200, so that a client browser will load the response and handle the callback. When an error occurs its corresponding status line is served in a "status" field of the error response object rather than in the response header.
+    401: 
+      description: |
+        Unauthorized when you don't provide a valid key.
+    400: 
+      description: |
+        Bad request when there was a problem with the request.
+        
+        The 400 BadRequest response is something of a catch-all: sent if you have incorrect or missing parameters, if you exceed your API limits or you request an unsupported format. The response body will have more detail.
+    500: 
+      description: |
+        Internal Server Error if we messed up -- please let us know (http://groups.google.com/group/meetup-api/topics)!
+delete?: 
+  responses: 
+    200: 
+      description: |
+        When everything goes well, we'll send a 200 response code along with your data.
+        
+        JSON requests that specify a callback parameter are treated differently: the API always responds with an HTTP status of 200, so that a client browser will load the response and handle the callback. When an error occurs its corresponding status line is served in a "status" field of the error response object rather than in the response header.
+    401: 
+      description: |
+        Unauthorized when you don't provide a valid key.
+    400: 
+      description: |
+        Bad request when there was a problem with the request.
+        
+        The 400 BadRequest response is something of a catch-all: sent if you have incorrect or missing parameters, if you exceed your API limits or you request an unsupported format. The response body will have more detail.
+    500: 
+      description: |
+        Internal Server Error if we messed up -- please let us know (http://groups.google.com/group/meetup-api/topics)!

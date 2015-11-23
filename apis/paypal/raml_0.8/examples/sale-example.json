@@ -1,0 +1,26 @@
+{
+  "id" : "36C38912MN9658832" ,
+  "create_time" : "2013-02-19T22:01:53Z" ,
+  "update_time" : "2013-02-19T22:01:55Z" ,
+  "state" : "completed" ,
+  "amount" : {
+    "total" : "7.47" ,
+    "currency" : "USD"
+  } ,
+  "parent_payment" : "PAY-5YK922393D847794YKER7MUI" ,
+  "links" : [
+    {
+      "href" : "https://api.sandbox.paypal.com/v1/payments/sale/36C38912MN9658832" ,
+      "rel" : "self" ,
+      "method" : "GET"
+    } , {
+      "href" : "https://api.sandbox.paypal.com/v1/payments/sale/36C38912MN9658832/refund" ,
+      "rel" : "refund" ,
+      "method" : "POST"
+    } , {
+      "href" : "https://api.sandbox.paypal.com/v1/payments/payment/PAY-5YK922393D847794YKER7MUI" ,
+      "rel" : "parent_payment" ,
+      "method" : "GET"
+    }
+  ]
+}

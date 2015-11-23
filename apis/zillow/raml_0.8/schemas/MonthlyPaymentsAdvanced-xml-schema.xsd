@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.zillow.com/static/xsd/MonthlyPaymentsAdvanced.xsd" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:MonthlyPaymentsAdvanced="http://www.zillow.com/static/xsd/MonthlyPaymentsAdvanced.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <xsd:element name="paymentsdetails">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="request" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="price" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="rate" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="schedule" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="terminmonths" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="propertytax" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="hazard" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="pmi" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="hoa" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="zip" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="output" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="message" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="text" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="code" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="response" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="monthlyprincipalandinterest" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="monthlypropertytaxes" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="monthlyhazardinsurance" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="monthlypmi" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="monthlyhoadues" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="totalmonthlypayment" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="totalpayments" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="totalinterest" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="totalprincipal" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="totaltaxesfeesandinsurance" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="amortizationschedule" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="payment" maxOccurs="unbounded">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="beginningbalance" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                          <xsd:element name="amount" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                          <xsd:element name="principal" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                          <xsd:element name="interest" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                          <xsd:element name="endingbalance" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute name="frequency" type="xsd:normalizedString" use="required"/>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="schemaLocation" type="xsd:anyURI" use="required"/>
+    </xsd:complexType>
+    <xsd:attribute name="schemaLocation" type="xsd:anyURI" use="required"/>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "sleep": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "isMainSleep": {
+            "type": "boolean"
+          },
+          "logId": {
+            "type": "integer"
+          },
+          "efficiency": {
+            "type": "integer"
+          },
+          "startTime": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "string"
+          },
+          "minutesToFallAsleep": {
+            "type": "integer"
+          },
+          "minutesAsleep": {
+            "type": "integer"
+          },
+          "minutesAwake": {
+            "type": "integer"
+          },
+          "minutesAfterWakeup": {
+            "type": "integer"
+          },
+          "awakeningsCount": {
+            "type": "integer"
+          },
+          "timeInBed": {
+            "type": "integer"
+          },
+          "minuteData": {
+            "type": "array",
+            "items": {
+              "dateTime": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "totalMinutesAsleep": {
+          "type": "string"
+        },
+        "totalSleepRecords": {
+          "type": "integer"
+        },
+        "totalTimeInBed": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

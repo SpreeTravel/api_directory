@@ -1,0 +1,96 @@
+{
+	"type" : "object" ,
+	"required" : true ,
+	"$schema" : "http://json-schema.org/draft-03/schema" ,
+	"properties" : {
+		"escalation_policies" : {
+			"type" : "array" ,
+			"required" : false ,
+			"items" : 
+				{
+					"type" : "object" ,
+					"properties" : {
+						"id" : {
+							"type" : "string" ,
+							"required" : false
+						} ,
+						"name" : {
+							"type" : "string" ,
+							"required" : false
+						} ,
+						"escalation_rules" : {
+							"type" : "array" ,
+							"required" : false ,
+							"items" : 
+								{
+									"type" : "object" ,
+									"properties" : {
+										"id" : {
+											"type" : "string" ,
+											"required" : false
+										} ,
+										"escalation_delay_in_minutes" : {
+											"type" : "number" ,
+											"required" : false
+										} ,
+										"rule_object" : {
+											"type" : "object" ,
+											"required" : false
+										}
+									}
+								}
+							
+						} ,
+						"services" : {
+							"type" : "array" ,
+							"required" : false ,
+							"items" : 
+								{
+									"type" : "object" ,
+									"properties" : {
+										"id" : {
+											"type" : "string" ,
+											"required" : false
+										} ,
+										"name" : {
+											"type" : "string" ,
+											"required" : false
+										} ,
+										"integration_email" : {
+											"type" : "string" ,
+											"required" : false
+										} ,
+										"html_url" : {
+											"type" : "string" ,
+											"required" : false
+										} ,
+										"escalation_policy_id" : {
+											"type" : "string" ,
+											"required" : false
+										}
+									}
+								}
+							
+						} ,
+						"num_loops" : {
+							"type" : "number" ,
+							"required" : false
+						}
+					}
+				}
+			
+		} ,
+		"limit" : {
+			"type" : "number" ,
+			"required" : false
+		} ,
+		"offset" : {
+			"type" : "number" ,
+			"required" : false
+		} ,
+		"total" : {
+			"type" : "number" ,
+			"required" : false
+		}
+	}
+}

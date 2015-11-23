@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+		"calories": {
+			"description": "Manual Calorie Consumption Goal; calories, integer; either calories or intensity should be provided.",
+			"type": "integer"
+		},
+		"intensity": {
+			"description": "Food Plan intensity; either calories or intensity should be provided.",			
+			"enum": [
+				"MAINTENANCE",
+				"EASIER",
+				"MEDIUM",
+				"KINDAHARD",
+				"HARDER"
+			]
+		},
+		"personalized": {
+			"type": "boolean"
+		}
+	}
+}

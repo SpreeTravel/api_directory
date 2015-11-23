@@ -1,0 +1,18 @@
+get: 
+  is: [ isCommentLikes ]
+  description: Get information about the likes for a comment. Also used to like a comment.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: likePageResponse
+post: 
+  description: Get information about the likes for a comment. Also used to like a comment.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: likeResponse
+head: 
+  is: [ isCommentLikes ]
+  description: Get information about the likes for a comment. Also used to like a comment.

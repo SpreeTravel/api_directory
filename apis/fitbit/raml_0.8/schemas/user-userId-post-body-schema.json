@@ -1,0 +1,81 @@
+{
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"type": "object",
+	"properties": {
+		"gender": {
+			"type": "string",
+			"enum": [ "MALE", "FEMALE", "NA"]
+		},
+		"birthday": {
+			"description": "Date of Birth; in the format yyyy-MM-dd.",
+			"type": "string"
+		},
+		"height": {
+			"description": "Height; in the format X.XX, in the unit system that corresponds to the Accept-Language header provided.",
+			"type": "string"
+		},
+		"nickname": {
+			"type": "string"
+		},
+		"aboutMe": {
+			"description": "About Me string.",
+			"type": "string"
+		}	,
+		"fullname": {
+			"description": "Full name.",
+			"type": "string"
+		},
+		"country": {
+			"description": "Two-character code.",
+			"type": "string",
+			"minLength": 2,
+			"maxLength": 2
+		},
+		"state": {
+			"description": "US State; two-character code; valid only if country was or being set to US",
+			"type": "string",
+			"minLength": 2,
+			"maxLength": 2
+		},
+		"city": {
+			"description": "City",
+			"type": "string"
+		},
+		"strideLengthWalking": {
+			"description": "Walking stride length; in the format X.XX, in the unit system that corresponds to the Accept-Language header provided",
+			"type": "string"
+		},
+		"strideLengthRunning": {
+			"description": "Running stride length; in the format X.XX, in the unit system that corresponds to the Accept-Language header provided",
+			"type": "string"
+		},
+		"weightUnit": {
+			"description": "Default water unit on website (doesn't affect API); one of (en_US, en_GB, 'any' for METRIC)",
+			"type": "string"
+		},
+		"heightUnit": {
+			"description": "Default height/distance unit on website (doesn't affect API); one of (en_US, 'any' for METRIC)",
+			"type": "string"
+		},
+		"waterUnit": {
+			"description": "Default water unit on website (doesn't affect API); one of (en_US, 'any' for METRIC)",
+			"type": "string"
+		},
+		"glucoseUnit": {
+			"description": "Default glucose unit on website (doesn't affect API); one of (en_US, 'any' for METRIC)",
+			"type": "string"
+		},	
+		"timezone": {
+			"description": "Timezone; in the format 'America/Los_Angeles'",
+			"type": "string"
+		},
+		"foodsLocale": {
+			"description": "Food Database Locale; in the format 'xx_XX'",
+			"type": "string"
+		},
+		"locale": {
+			"description": "Locale of website (country/language); one of the locales, currently – (en_US, fr_FR, de_DE, es_ES, en_GB, en_AU, en_NZ, ja_JP)",
+			"type": "string"
+		}	
+	}
+}

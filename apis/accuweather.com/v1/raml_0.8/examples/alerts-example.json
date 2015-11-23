@@ -1,0 +1,93 @@
+[
+    {
+        "CountryCode": "US",
+        "AlertID": 853388,
+        "Description": 
+        {
+                "Localized": "RED FLAG WARNING",
+                "English": "RED FLAG WARNING"
+        },
+        "Category": "Fire",
+        "Priority": 51,
+        "Type": "FWW",
+        "Source": "U.S. National Weather Service",
+        "Area": [
+        {
+            "Name": "Bowman",
+            "StartTime": "2012-10-15T11:00:00-0600",
+            "EpochStartTime": 1350320400,
+            "EndTime": "2012-10-15T19:00:00-0600",
+            "EpochEndTime": 1350349200,
+            "LastAction": 
+            {
+                "Localized": "",
+                "English": "Continue"
+            },
+            "Text": "...RED FLAG WARNING REMAINS IN EFFECT UNTIL 8 PM CDT /7 PM MDT/\r\n            THIS EVENING FOR WINDS 20 TO 35 MPH...MINIMUM RELATIVE HUMIDITY\r\n            22 PERCENT...DRY PASTURES AND A VERY HIGH FIRE DANGER INDEX FOR\r\n            FAR SOUTH CENTRAL...SOUTHWEST AND WEST CENTRAL NORTH DAKOTA...\r\n\r\n            * AFFECTED AREA...FIRE WEATHER ZONE 017 MCKENZIE...FIRE WEATHER\r\n              ZONE 018 DUNN...FIRE WEATHER ZONE 031 GOLDEN VALLEY...FIRE\r\n              WEATHER ZONE 032 BILLINGS...FIRE WEATHER ZONE 033 STARK...FIRE\r\n              WEATHER ZONE 040 SLOPE...FIRE WEATHER ZONE 041 HETTINGER...\r\n              FIRE WEATHER ZONE 042 GRANT...FIRE WEATHER ZONE 043 BOWMAN...\r\n              FIRE WEATHER ZONE 044 ADAMS AND FIRE WEATHER ZONE 045 SIOUX.\r\n\r\n            * WINDS...WEST 20 MPH WITH GUSTS UP TO 35 MPH.\r\n\r\n            * TIMING...NOON TO 8 PM CDT.\r\n\r\n            * RELATIVE HUMIDITY...AS LOW AS 22 PERCENT.\r\n\r\n            * TEMPERATURES...72 TO 77.\r\n\r\n            * LIGHTNING...NONE\r\n\r\n            * IMPACTS...SHOULD A FIRE IGNITE UNDER THESE CONDITIONS...RAPID\r\n              FIRE GROWTH WOULD OCCUR.\r\n\r\n            PRECAUTIONARY/PREPAREDNESS ACTIONS...\r\n\r\n            A RED FLAG WARNING MEANS THAT CRITICAL FIRE WEATHER CONDITIONS\r\n            ARE EITHER OCCURRING NOW...OR WILL SHORTLY. A COMBINATION OF\r\n            STRONG WINDS...LOW RELATIVE HUMIDITY...AND WARM TEMPERATURES WILL\r\n            CREATE EXPLOSIVE FIRE GROWTH POTENTIAL.\r\n\r\n            &&"
+         }
+         ],
+        "MobileLink": "http://m.accuweather.com/en/us/bowman-nd/58623/weather-warnings/334907?lang=en-us",
+        "Link": "http://www.accuweather.com/en/us/bowman-nd/58623/weather-warnings/334907?lang=en-us"
+     },
+     {
+         "CountryCode": "US",
+         "AlertID": 853501,
+         "Description": 
+         {
+             "Localized": "HIGH WIND WATCH",
+             "English": "HIGH WIND WATCH"
+         },
+         "Category": "Wind",
+         "Priority": 72,
+         "Type": "HWA",
+         "Source": "U.S. National Weather Service",
+         "Area": [
+         {
+             "Name": "Bowman",
+             "StartTime": "2012-10-17T09:00:00-0600",
+             "EpochStartTime": 1350486000,
+             "EndTime": "2012-10-18T18:00:00-0600",
+             "EpochEndTime": 1350604800,
+             "LastAction": 
+             {
+                 "Localized": "",
+                 "English": "Extend"
+             },
+             "Text": "...HIGH WIND WATCH NOW IN EFFECT FROM WEDNESDAY MORNING THROUGH\r\n             THURSDAY EVENING...\r\n\r\n             * TIMING...WEDNESDAY THROUGH THURSDAY.\r\n\r\n             * WINDS...SUSTAINED WINDS OF 40 MPH WITH GUSTS TO 60 MPH.\r\n\r\n             * IMPACTS...MOTORISTS...ESPECIALLY THOSE IN HIGH PROFILE\r\n               VEHICLES WILL EXPERIENCE DIFFICULT DRIVING CONDITIONS.\r\n               INFRASTRUCTURE SUCH AS ROOFTOPS AND POWER LINES MAY BECOME\r\n               DAMAGED. THOSE WORKING ON ELEVATED SURFACES SUCH AS ROOFTOPS\r\n               AND TOWERS WILL BE AT RISK DUE TO THE VERY STRONG WINDS. ANY\r\n               FIRES WILL SPREAD RAPIDLY.\r\n\r\n             PRECAUTIONARY/PREPAREDNESS ACTIONS...\r\n\r\n             A HIGH WIND WATCH MEANS THERE IS THE POTENTIAL FOR A HAZARDOUS\r\n             HIGH WIND EVENT. SUSTAINED WINDS OF AT LEAST 40 MPH...AND OR\r\n             GUSTS OF 58 MPH OR HIGHER MAY OCCUR. CONTINUE TO MONITOR THE\r\n             LATEST FORECASTS.\r\n\r\n             &&"
+         }
+         ],
+        "MobileLink": "http://m.accuweather.com/en/us/bowman-nd/58623/weather-warnings/334907?lang=en-us",
+        "Link": "http://www.accuweather.com/en/us/bowman-nd/58623/weather-warnings/334907?lang=en-us"
+     },
+     {
+         "CountryCode": "US",
+         "AlertID": 853532,
+         "Description": 
+         {
+             "Localized": "FIRE WEATHER WATCH",
+             "English": "FIRE WEATHER WATCH"
+         },
+         "Category": "Fire",
+         "Priority": 76,
+         "Type": "FWA",
+         "Source": "U.S. National Weather Service",
+         "Area": [
+         {
+             "Name": "Bowman",
+             "StartTime": "2012-10-17T09:00:00-0600",
+             "EpochStartTime": 1350486000,
+             "EndTime": "2012-10-17T21:00:00-0600",
+             "EpochEndTime": 1350529200,
+             "LastAction": 
+             {
+                 "Localized": "",
+                 "English": "New"
+             },
+             "Text": "...RED FLAG WARNING REMAINS IN EFFECT UNTIL 8 PM CDT /7 PM MDT/\r\n             THIS EVENING FOR WINDS 20 TO 35 MPH...MINIMUM RELATIVE HUMIDITY\r\n             22 PERCENT...DRY PASTURES AND A VERY HIGH FIRE DANGER INDEX FOR\r\n             FAR SOUTH CENTRAL...SOUTHWEST AND WEST CENTRAL NORTH DAKOTA...\r\n\r\n             * AFFECTED AREA...FIRE WEATHER ZONE 017 MCKENZIE...FIRE WEATHER\r\n               ZONE 018 DUNN...FIRE WEATHER ZONE 031 GOLDEN VALLEY...FIRE\r\n               WEATHER ZONE 032 BILLINGS...FIRE WEATHER ZONE 033 STARK...FIRE\r\n               WEATHER ZONE 040 SLOPE...FIRE WEATHER ZONE 041 HETTINGER...\r\n               FIRE WEATHER ZONE 042 GRANT...FIRE WEATHER ZONE 043 BOWMAN...\r\n               FIRE WEATHER ZONE 044 ADAMS AND FIRE WEATHER ZONE 045 SIOUX.\r\n\r\n             * WINDS...WEST 20 MPH WITH GUSTS UP TO 35 MPH.\r\n\r\n             * TIMING...NOON TO 8 PM CDT.\r\n\r\n             * RELATIVE HUMIDITY...AS LOW AS 22 PERCENT.\r\n\r\n             * TEMPERATURES...72 TO 77.\r\n\r\n             * LIGHTNING...NONE\r\n\r\n             * IMPACTS...SHOULD A FIRE IGNITE UNDER THESE CONDITIONS...RAPID\r\n               FIRE GROWTH WOULD OCCUR.\r\n\r\n             PRECAUTIONARY/PREPAREDNESS ACTIONS...\r\n\r\n             A RED FLAG WARNING MEANS THAT CRITICAL FIRE WEATHER CONDITIONS\r\n             ARE EITHER OCCURRING NOW...OR WILL SHORTLY. A COMBINATION OF\r\n             STRONG WINDS...LOW RELATIVE HUMIDITY...AND WARM TEMPERATURES WILL\r\n             CREATE EXPLOSIVE FIRE GROWTH POTENTIAL.\r\n\r\n             &&"
+         }
+         ],
+        "MobileLink": "http://m.accuweather.com/en/us/bowman-nd/58623/weather-warnings/334907?lang=en-us",
+        "Link": "http://www.accuweather.com/en/us/bowman-nd/58623/weather-warnings/334907?lang=en-us"
+
+     }
+]

@@ -1,0 +1,10 @@
+[ {
+    "path" : "/2/member/self"
+}, {
+    "path" : "/2/events",
+    "params" : {
+        "member_id" : "self",
+        "rsvp" : "yes",
+        "only" : "name,time"
+    }
+} ]

@@ -1,0 +1,189 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "response": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "version": {
+          "required": false,
+          "type": "string"
+        },
+        "termsofService": {
+          "required": false,
+          "type": "string"
+        },
+        "features": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "tide": {
+              "required": false,
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "tide": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "tideInfo": {
+          "required": false,
+          "type": "array",
+          "items": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "tideSite": {
+                "required": false,
+                "type": "string"
+              },
+              "lat": {
+                "required": false,
+                "type": "string"
+              },
+              "lon": {
+                "required": false,
+                "type": "string"
+              },
+              "units": {
+                "required": false,
+                "type": "string"
+              },
+              "type": {
+                "required": false,
+                "type": "string"
+              },
+              "tzname": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          }
+        },
+        "tideSummary": {
+          "required": false,
+          "type": "array",
+          "items": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "date": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "pretty": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "year": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "mon": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "mday": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "hour": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "min": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "tzname": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "epoch": {
+                    "required": false,
+                    "type": "string"
+                  }
+                }
+              },
+              "utcdate": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "pretty": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "year": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "mon": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "mday": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "hour": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "min": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "tzname": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "epoch": {
+                    "required": false,
+                    "type": "string"
+                  }
+                }
+              },
+              "data": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "height": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "type": {
+                    "required": false,
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tideSummaryStats": {
+          "required": false,
+          "type": "array",
+          "items": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "maxheight": {
+                "required": false,
+                "type": "number"
+              },
+              "minheight": {
+                "required": false,
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

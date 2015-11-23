@@ -1,0 +1,711 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "flightStatus" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "flightId" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "carrier" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "fs" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "iata" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "icao" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "phoneNumber" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "active" : {
+              "type" : "boolean" ,
+              "required" : false
+            }
+          }
+        } ,
+        "flightNumber" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "departureAirport" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "fs" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "iata" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "icao" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "faa" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "street1" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "street2" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "city" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "cityCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "stateCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "postalCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "countryCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "countryName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "regionName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "timeZoneRegionName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "weatherZone" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "localTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "utcOffsetHours" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "latitude" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "longitude" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "elevationFeet" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "classification" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "active" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "delayIndexUrl" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "weatherUrl" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "arrivalAirport" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "fs" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "iata" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "icao" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "city" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "cityCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "stateCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "countryCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "countryName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "regionName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "timeZoneRegionName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "localTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "utcOffsetHours" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "latitude" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "longitude" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "elevationFeet" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "classification" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "active" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "delayIndexUrl" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "weatherUrl" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "departureDate" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "dateLocal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "dateUtc" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "arrivalDate" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "dateLocal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "dateUtc" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "status" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "schedule" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "flightType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "serviceClasses" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "restrictions" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "operationalTimes" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "publishedDeparture" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "dateLocal" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "dateUtc" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "publishedArrival" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "dateLocal" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "dateUtc" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "scheduledGateDeparture" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "dateLocal" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "dateUtc" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "actualGateDeparture" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "dateLocal" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "dateUtc" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "flightPlanPlannedDeparture" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "dateLocal" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "dateUtc" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "estimatedRunwayDeparture" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "dateLocal" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "dateUtc" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "actualRunwayDeparture" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "dateLocal" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "dateUtc" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "scheduledGateArrival" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "dateLocal" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "dateUtc" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "estimatedGateArrival" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "dateLocal" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "dateUtc" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "actualGateArrival" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "dateLocal" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "dateUtc" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "flightPlanPlannedArrival" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "dateLocal" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "dateUtc" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "estimatedRunwayArrival" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "dateLocal" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "dateUtc" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "actualRunwayArrival" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "dateLocal" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "dateUtc" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        } ,
+        "codeshares" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "carrier" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "fs" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "iata" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "icao" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "active" : {
+                      "type" : "boolean" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "flightNumber" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "relationship" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } , {
+              "type" : "object" ,
+              "properties" : {
+                "carrier" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "fs" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "iata" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "icao" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "phoneNumber" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "active" : {
+                      "type" : "boolean" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "flightNumber" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "relationship" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        } ,
+        "flightDurations" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "scheduledBlockMinutes" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "blockMinutes" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "scheduledAirMinutes" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "airMinutes" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "scheduledTaxiOutMinutes" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "taxiOutMinutes" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "scheduledTaxiInMinutes" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "taxiInMinutes" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "airportResources" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "departureTerminal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureGate" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalTerminal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalGate" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "flightEquipment" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "scheduledEquipment" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "iata" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "turboProp" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                } ,
+                "jet" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                } ,
+                "widebody" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                } ,
+                "regional" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "tailNumber" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "irregularOperations" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "type" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "dateUtc" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "message" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } , {
+              "type" : "object" ,
+              "properties" : {
+                "type" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "relatedFlightId" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "dateUtc" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "message" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

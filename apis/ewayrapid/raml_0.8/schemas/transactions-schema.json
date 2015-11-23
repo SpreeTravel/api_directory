@@ -1,0 +1,184 @@
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "properties": {
+        "BeagleVerification": {
+            "type": "object",
+            "properties": {
+                "Email": {
+                    "type": "number"
+                },
+                "Phone": {
+                    "type": "number"
+                }
+            }
+        },
+        "Errors": {
+            "type": "string"
+        },
+        "Transactions": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "AuthorisationCode": {
+                        "type": "string"
+                    },
+                    "BeagleScore": {
+                        "type": "string"
+                    },
+                    "Customer": {
+                        "type": "object",
+                        "properties": {
+                            "City": {
+                                "type": "string"
+                            },
+                            "Comments": {
+                                "type": "string"
+                            },
+                            "CompanyName": {
+                                "type": "string"
+                            },
+                            "Country": {
+                                "type": "string"
+                            },
+                            "Email": {
+                                "type": "string"
+                            },
+                            "Fax": {
+                                "type": "string"
+                            },
+                            "FirstName": {
+                                "type": "string"
+                            },
+                            "JobDescription": {
+                                "type": "string"
+                            },
+                            "LastName": {
+                                "type": "string"
+                            },
+                            "Mobile": {
+                                "type": "string"
+                            },
+                            "Phone": {
+                                "type": "string"
+                            },
+                            "PostalCode": {
+                                "type": "string"
+                            },
+                            "Reference": {
+                                "type": "string"
+                            },
+                            "State": {
+                                "type": "string"
+                            },
+                            "Street1": {
+                                "type": "string"
+                            },
+                            "Street2": {
+                                "type": "string"
+                            },
+                            "Title": {
+                                "type": "string"
+                            },
+                            "TokenCustomerID": {
+                                "type": "string"
+                            },
+                            "Url": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "InvoiceNumber": {
+                        "type": "string"
+                    },
+                    "InvoiceReference": {
+                        "type": "string"
+                    },
+                    "Options": {
+                        "type": "array"
+                    },
+                    "ResponseCode": {
+                        "type": "string"
+                    },
+                    "ResponseMessage": {
+                        "type": "string"
+                    },
+                    "ShippingAddress": {
+                        "type": "object",
+                        "properties": {
+                            "City": {
+                                "type": "string"
+                            },
+                            "Country": {
+                                "type": "string"
+                            },
+                            "Email": {
+                                "type": "string"
+                            },
+                            "Fax": {
+                                "type": "string"
+                            },
+                            "FirstName": {
+                                "type": "string"
+                            },
+                            "LastName": {
+                                "type": "string"
+                            },
+                            "Phone": {
+                                "type": "string"
+                            },
+                            "PostalCode": {
+                                "type": "string"
+                            },
+                            "ShippingMethod": {
+                                "type": "string"
+                            },
+                            "State": {
+                                "type": "string"
+                            },
+                            "Street1": {
+                                "type": "string"
+                            },
+                            "Street2": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "TokenCustomerID": {
+                        "type": "string"
+                    },
+                    "TotalAmount": {
+                        "type": "number"
+                    },
+                    "TransactionID": {
+                        "type": "number"
+                    },
+                    "TransactionStatus": {
+                        "type": "boolean"
+                    },
+                    "Verification": {
+                        "type": "object",
+                        "properties": {
+                            "Address": {
+                                "type": "number"
+                            },
+                            "CVN": {
+                                "type": "number"
+                            },
+                            "Email": {
+                                "type": "number"
+                            },
+                            "Mobile": {
+                                "type": "number"
+                            },
+                            "Phone": {
+                                "type": "number"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

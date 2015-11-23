@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "array",
+  "items": {
+    "required": false,
+    "type": "object",
+    "properties": {
+      "description": {
+        "required": false,
+        "type": "string"
+      },
+      "reputation": {
+        "required": false,
+        "type": "integer"
+      },
+      "short_description": {
+        "required": false,
+        "type": "string"
+      }
+    }
+  }
+}

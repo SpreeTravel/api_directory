@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Employee>
+  <EmployeeID>514ad9aa-8e4b-4a0a-859a-9f72658eeadc</EmployeeID>
+  <Status>ACTIVE</Status>
+  <FirstName>Homer</FirstName>
+  <LastName>Simpson</LastName>    
+  <ExternalLink>
+    <Url>http://twitter.com/#!/search/Homer+Simpson</Url>
+    <Description>Go to Twitter</Description>
+  </ExternalLink>
+</Employee>

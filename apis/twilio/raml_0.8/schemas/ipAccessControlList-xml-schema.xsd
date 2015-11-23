@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="TwilioResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="IpAccessControlList" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Sid" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="FriendlyName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="DateCreated" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="DateUpdated" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="Uri" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="SubresourceUris" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Addresses" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

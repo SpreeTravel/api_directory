@@ -1,0 +1,92 @@
+<geonames>
+<earthquake>
+<src>us</src>
+<eqid>c0001xgp</eqid>
+<datetime>2011-03-11 04:46:23</datetime>
+<lat>38.322</lat>
+<lng>142.369</lng>
+<magnitude>8.8</magnitude>
+<depth>24.4</depth>
+</earthquake>
+<earthquake>
+<src>us</src>
+<eqid>c000905e</eqid>
+<datetime>2012-04-11 06:38:37</datetime>
+<lat>2.311</lat>
+<lng>93.0632</lng>
+<magnitude>8.6</magnitude>
+<depth>22.9</depth>
+</earthquake>
+<earthquake>
+<src>us</src>
+<eqid>2007hear</eqid>
+<datetime>2007-09-12 09:10:26</datetime>
+<lat>-4.5172</lat>
+<lng>101.3815</lng>
+<magnitude>8.4</magnitude>
+<depth>30.0</depth>
+</earthquake>
+<earthquake>
+<src>us</src>
+<eqid>c00090da</eqid>
+<datetime>2012-04-11 08:43:09</datetime>
+<lat>0.7731</lat>
+<lng>92.4522</lng>
+<magnitude>8.2</magnitude>
+<depth>16.4</depth>
+</earthquake>
+<earthquake>
+<src>us</src>
+<eqid>2007aqbk</eqid>
+<datetime>2007-04-01 18:39:56</datetime>
+<lat>-8.4528</lat>
+<lng>156.9567</lng>
+<magnitude>8.0</magnitude>
+<depth>10.0</depth>
+</earthquake>
+<earthquake>
+<src>us</src>
+<eqid>2007hec6</eqid>
+<datetime>2007-09-12 21:49:01</datetime>
+<lat>-2.5265</lat>
+<lng>100.9638</lng>
+<magnitude>7.8</magnitude>
+<depth>10.0</depth>
+</earthquake>
+<earthquake>
+<src>us</src>
+<eqid>b000g7x7</eqid>
+<datetime>2013-04-16 08:44:20</datetime>
+<lat>28.1069</lat>
+<lng>62.0532</lng>
+<magnitude>7.8</magnitude>
+<depth>82.0</depth>
+</earthquake>
+<earthquake>
+<src>us</src>
+<eqid>a00043nx</eqid>
+<datetime>2010-10-25 12:42:22</datetime>
+<lat>-3.4841</lat>
+<lng>100.1139</lng>
+<magnitude>7.7</magnitude>
+<depth>20.6</depth>
+</earthquake>
+<earthquake>
+<src>us</src>
+<eqid>2010utc5</eqid>
+<datetime>2010-04-06 20:15:02</datetime>
+<lat>2.3602</lat>
+<lng>97.1315</lng>
+<magnitude>7.7</magnitude>
+<depth>31.0</depth>
+</earthquake>
+<earthquake>
+<src>us</src>
+<eqid>2009mebz</eqid>
+<datetime>2009-09-30 08:16:09</datetime>
+<lat>-0.7889</lat>
+<lng>99.9606</lng>
+<magnitude>7.6</magnitude>
+<depth>80.0</depth>
+</earthquake>
+</geonames>

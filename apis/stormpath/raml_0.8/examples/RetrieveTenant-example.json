@@ -1,0 +1,11 @@
+{
+  "href" : "https://api.stormpath.com/v1/tenants/cJoiwcorTTmkDDBsf02AbA" ,
+  "name" : "My Tenant" ,
+  "key" : "myTenant" ,
+  "applications" : {
+    "href" : "https://api.stormpath.com/v1/tenants/cJoiwcorTTmkDDBsf02AbA/applications"
+  } ,
+  "directories" : {
+    "href" : "https://api.stormpath.com/v1/tenants/cJoiwcorTTmkDDBsf02AbA/directories"
+  }
+}

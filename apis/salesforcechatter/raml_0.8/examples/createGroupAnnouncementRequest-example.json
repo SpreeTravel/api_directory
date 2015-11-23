@@ -1,0 +1,11 @@
+{
+  "body" : {
+    "messageSegments" : [
+      {
+        "text" : "Please install the updates for all iOS devices." ,
+        "type" : "Text"
+      }
+    ]
+  } ,
+  "expirationDate" : "2014-02-22T00:00:00.000Z"
+}

@@ -1,0 +1,55 @@
+#%RAML 0.8
+title: 23andMe Reseller
+version: 2
+baseUri: https://api.23andme.com/{version}
+securitySchemes:
+  - oauth_2_0: !include securitySchemes/oauth_2_0.raml
+schemas:
+  - placeorderRequest: !include /schemas/placeorderRequest-schema.json
+  - placeorderResponse: !include /schemas/placeorderResponse-schema.json
+  - verifyaddressResponse: !include /schemas/verifyaddressResponse-schema.json
+  - verifyaddressRequest: !include /schemas/verifyaddressRequest-schema.json
+securedBy: [ oauth_2_0 ]
+/placeorder: 
+  post: 
+    description: |
+      Places an order for kits.
+      
+      The minimum parameters are "first_name", "last_name", "address_line1", "city", "country", "email", "phone", "shipping_method", "product_id", "personalizations". All other parameters are optional but may become mandatory. For example, a state or postal code isn't necessary to ship to Ireland but are both necessary to ship to the US. 
+      
+      The optional parameters are "state", "postal_code", "gift_message" and "address_line2". 
+      
+      "shipping_method" is one of "Standard" or "Express". 
+      
+      "personalizations" is a list of personalization strings. The amount of kits in this order is based on the number of personalizations. ["Barack", "Michelle"] will place an order for 2 kits.
+    body: 
+      application/json: 
+        schema: placeorderRequest
+        example: !include examples/placeorderRequest-example.json
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: placeorderResponse
+            example: !include examples/placeorderResponse-example.json
+/verifyaddress: 
+  post: 
+    description: |
+      Verify's that we are allowed to ship to this address for you.
+      
+      The minimum parameters are "address_line1", "city", "country", "shipping_method", "product_id". All other parameters are optional but may become mandatory. For example, a state or postal code isn't necessary to ship to Ireland but are both necessary to ship to the US. 
+      
+      The optional parameters are "state", "postal_code" and "address_line2".
+    body: 
+      application/json: 
+        schema: verifyaddressRequest
+        example: !include examples/verifyaddressRequest-example.json
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: verifyaddressResponse
+            example: !include examples/verifyaddressResponse-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/reseller/headline.md

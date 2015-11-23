@@ -1,0 +1,19 @@
+{
+	"incidents" : [ {
+		"start" : "2012-08-01T00:00:00Z" ,
+		"number_of_incidents" : 7 ,
+		"end" : "2012-08-02T00:00:00Z"
+	} , {
+		"start" : "2012-08-02T00:00:00Z" ,
+		"number_of_incidents" : 3 ,
+		"end" : "2012-08-03T00:00:00Z"
+	} , {
+		"start" : "2012-08-03T00:00:00Z" ,
+		"number_of_incidents" : 4 ,
+		"end" : "2012-08-04T00:00:00Z"
+	} , {
+		"start" : "2012-08-04T00:00:00Z" ,
+		"number_of_incidents" : 15 ,
+		"end" : "2012-08-05T00:00:00Z"
+	} ]
+}

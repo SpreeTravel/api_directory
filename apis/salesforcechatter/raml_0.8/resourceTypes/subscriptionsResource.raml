@@ -1,0 +1,21 @@
+head: 
+  description: |
+    Information about the specified subscription. 
+    A subscription ID is returned as part of the response body for follower and following resources, for example, /records/recordId/followers. In addition, subscriptions IDs are also returned in many summary response bodies, such as group summary or user summary.
+  responses: 
+    200: 
+get: 
+  description: |
+    Information about the specified subscription.
+    A subscription ID is returned as part of the response body for follower and following resources, for example, /records/recordId/followers. In addition, subscriptions IDs are also returned in many summary response bodies, such as group summary or user summary.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: subscriptionResponse
+delete: 
+  description: |
+    Delete a subscription, for example, to unfollow a record or a topic.
+    A subscription ID is returned as part of the response body for follower and following resources, for example, /records/recordId/followers. In addition, subscriptions IDs are also returned in many summary response bodies, such as group summary or user summary.
+  responses: 
+    204: 

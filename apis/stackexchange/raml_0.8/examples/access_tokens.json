@@ -1,0 +1,9 @@
+[
+  {
+    "access_token": "some string",
+    "account_id": 1,
+    "expires_on_date": 1,
+    "scope": [
+    ]
+  }
+]

@@ -1,0 +1,110 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "properties" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "created_at" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "image_id" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "pattern" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "member_id" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "status" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "enum" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "updated_at" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "schema" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      }
+    }
+  }
+}

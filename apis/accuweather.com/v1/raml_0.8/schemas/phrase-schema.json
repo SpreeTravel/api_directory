@@ -1,0 +1,27 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "EnglishText" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "LanguageCode" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "PhraseCode" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "PhraseId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Text" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

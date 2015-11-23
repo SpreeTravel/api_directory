@@ -1,0 +1,17 @@
+{
+  "terminalType" : "undefined" ,
+  "connectedType" : "undefined" ,
+  "connectedId" : "465" ,
+  "name" : "string string" ,
+  "description" : "string string" ,
+  "permissions" : "InstancePermissions InstancePermissions" ,
+  "folderId" : "string string" ,
+  "sourceTemplateId" : "string string" ,
+  "createdBy" : "string string" ,
+  "createdAt" : "dateTime dateTime" ,
+  "updatedBy" : "string string" ,
+  "updatedAt" : "dateTime dateTime" ,
+  "accessedAt" : "dateTime dateTime" ,
+  "scheduledFor" : "dateTime dateTime" ,
+  "depth" : "RequestDepth RequestDepth"
+}

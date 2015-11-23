@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "array",
+  "items": {
+    "required": false,
+    "type": "object",
+    "properties": {
+      "can_add": {
+        "required": false,
+        "type": "boolean"
+      },
+      "can_delete": {
+        "required": false,
+        "type": "boolean"
+      },
+      "can_edit": {
+        "required": false,
+        "type": "boolean"
+      },
+      "max_daily_actions": {
+        "required": false,
+        "type": "integer"
+      },
+      "min_seconds_between_actions": {
+        "required": false,
+        "type": "integer"
+      },
+      "object_type": {
+        "required": false,
+        "type": "string"
+      },
+      "user_id": {
+        "required": false,
+        "type": "integer"
+      }
+    }
+  }
+}

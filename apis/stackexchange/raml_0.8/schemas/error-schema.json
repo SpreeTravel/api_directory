@@ -1,0 +1,19 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "error_id" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "error_message" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "error_name" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<magento_api>
+    <firstname>Earl</firstname>
+    <lastname>Hickey</lastname>
+    <password>123123q</password>
+    <email>earl@example.com</email>
+    <website_id>1</website_id>
+    <group_id>1</group_id>
+</magento_api>

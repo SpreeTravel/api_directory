@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:i="http://www.w3.org/2001/XMLSchema-instance-test">
+  <xsd:element name="SyncData">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="CompanyId" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="ImporterEmail" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="ReportEmail" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="DoNotSyncOnWarnings" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+        <xsd:element name="OverwriteEmployeeNamesAndEmail" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+        <xsd:element name="Employees" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Employee" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="FirstName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="LastName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="Name" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="DepartmentName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="LocationName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="RegionName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="SubsidiaryName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="Role" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="Title" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="EmployeeId" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="Address" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="Address2" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="City" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="State" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="PostalCode" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="Country" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="HomePhone" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="WorkPhone" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="Mobile" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="CustomFields" minOccurs="0" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="CustomField" maxOccurs="unbounded">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="Key" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                                <xsd:element name="Value" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

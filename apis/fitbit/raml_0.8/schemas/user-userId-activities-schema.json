@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+		"activityId": {
+			"description": "Activity id; id of the activity, directory activity or intensity level activity; if you pass directory activity id Fitbit will calculate and substitute it with the intensity level activity id, based on distance/duration.",
+			"type": "integer"
+		},
+		"activityName": {
+			"description": "Custom activity name; either activityId or activityName should be provided.",
+			"type": "string"
+		},
+		"manualCalories": {
+			"description": "Manual calories; amount of calories defined manually; required with activityName parameter, otherwise optional.",
+			"type": "integer"
+		},
+		"startTime": {
+			"description": "Start time; hours and minutes in the format HH:mm",
+			"type": "string",
+			"required": true
+		},
+		"durationMillis": {
+			"description": "Duration; in milliseconds.",
+			"type": "integer",
+			"required": true
+		},
+		"date": {
+			"description": "Log entry date; in the format yyyy-MM-dd",
+			"type": "string",
+			"required": true
+		},
+		"distance": {
+			"description": "Distance; required for logging directory activity; in the format X.XX, in the selected distanceUnit or in the unit system that corresponds to the Accept-Language header provided.",
+			"type": "string"
+		},
+		"distanceUnit": {
+			"description": "Distance measurement unit; Steps units are available only for 'Walking' (activityId=90013) and 'Running' (activityId=90009) directory activities and their intensity levels",
+			"type": "string"
+		}
+	}
+}

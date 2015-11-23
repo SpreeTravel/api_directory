@@ -1,0 +1,21 @@
+{
+	"note" : {
+		"id" : 22013 ,
+		"user" : {
+			"id" : "PT23IWX" ,
+			"name" : "Tim Wright" ,
+			"email" : "tim@acme.com" ,
+			"time_zone" : "Eastern Time (US & Canada)" ,
+			"color" : "purple" ,
+			"role" : "owner" ,
+			"avatar_url" :
+			"https://secure.gravatar.com/avatar/923a2b907dc04244e9bb5576a42e70a7.png?d=mm&r=PG"
+			,
+			"user_url" : "/users/PT23IWX" ,
+			"invitation_sent" : false ,
+			"marketing_opt_out" : false
+		} ,
+		"content" : "New Note" ,
+		"created_at" : "2013-04-08T14:54:33-04:00"
+	}
+}

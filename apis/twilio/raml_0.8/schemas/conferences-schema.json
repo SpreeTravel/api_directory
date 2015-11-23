@@ -1,0 +1,79 @@
+{
+  "type": "object",
+  "": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "end": {
+      "type": "integer"
+    },
+    "first_page_uri": {
+      "type": "string"
+    },
+    "last_page_uri": {
+      "type": "string"
+    },
+    "next_page_uri": {
+      "type": "string"
+    },
+    "num_pages": {
+      "type": "integer"
+    },
+    "page": {
+      "type": "integer"
+    },
+    "page_size": {
+      "type": "integer"
+    },
+    "previous_page_uri": {
+      "type": "string"
+    },
+    "start": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    },
+    "uri": {
+      "type": "string"
+    },
+    "conferences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "account_sid": {
+            "type": "string"
+          },
+          "api_version": {
+            "type": "string"
+          },
+          "date_created": {
+            "type": "string"
+          },
+          "date_updated": {
+            "type": "string"
+          },
+          "friendly_name": {
+            "type": "string"
+          },
+          "sid": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "subresource_uris": {
+            "type": "object",
+            "properties": {
+              "participants": {
+                "type": "string"
+              }
+            }
+          },
+          "uri": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

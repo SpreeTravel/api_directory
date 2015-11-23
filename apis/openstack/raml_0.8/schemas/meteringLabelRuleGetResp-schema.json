@@ -1,0 +1,33 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "metering_label_rule" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "remote_ip_prefix" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "direction" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "metering_label_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "excluded" : {
+          "type" : "boolean" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+queryParameters: 
+  include: 
+    description: |
+      Comma separated list of optional objects to include in the row:
+      discussions
+      attachments
+      columns
+      filters
+      
+      To include discussion attachments, both attachments and discussions parameters must be present in the query string.
+      Including the columns will provide all of the columns for the sheet. This enables you to have the full context of the cells in the row.
+      The "filters" include flag may be used in conjunction with "columns" to include this user's column filters with the columns.
+      
+      When specified with a value of "filters", includes this user's column filters defined for this sheet.
+      
+      value must be "templates"

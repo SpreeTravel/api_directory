@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Response">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="ExpenseClaims"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="ExpenseClaims">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element maxOccurs="unbounded" ref="ExpenseClaim"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="ExpenseClaim">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element minOccurs="0" ref="ValidationErrors"/>
+    </xs:sequence>
+    <xs:attribute name="status" use="required" type="xs:NCName"/>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidationErrors">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="ValidationError"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidationError">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Message"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Message" type="xs:NMTOKEN"/>
+</xs:schema>

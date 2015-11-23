@@ -1,0 +1,67 @@
+head: 
+  description: Get Information about a group.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+get: 
+  description: Get Information about a group.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: groupDetailResponse
+patch: 
+  description: Update information about a group.
+  queryParameters: 
+    announcement: 
+      description: |
+        The ID of a feed item to use as an announcement.
+        An announcement displays in a designated location in the Salesforce UI until 11:59 p.m. on its expiration date, unless it’s deleted or replaced by another announcement.
+    canHaveChatterGuests: 
+      description: true if this group allows Chatter customers, false otherwise. After this property is set to true, it cannot be set to false.
+      type: boolean
+      example: false
+    description: 
+      description: The “Description” section of the group
+    informationText: 
+      description: The “Information” section of the group. In the Web UI, the “Information” section is above the “Description” section. If the group is private, the “Information” section is visible only to members. The “Description” section is visible to everyone.
+    informationTitle: 
+      description: The title of the “Information” section of the group
+    isArchived: 
+      description: true if the group is archived, false otherwise. Defaults to false.
+      default: false
+      example: false
+    isAutoArchiveDisabled: 
+      description: true if automatic archiving is turned off for the group, false otherwise. Defaults to false.
+      type: boolean
+      default: false
+      example: false
+    name: 
+      description: The name of the group
+    owner: 
+      description: The ID of the group owner. This property is available for PATCH requests only.
+    visibility: 
+      description: |
+        Specifies the group visibility type. One of the following values:
+        PrivateAccess—Only members of the group can see posts to this group.
+        PublicAccess—All users within the community can see posts to this group.
+        Unlisted—Reserved for future use.
+      enum: 
+        - Unlisted
+        - PrivateAccess
+        - PublicAccess
+      example: PublicAccess
+  body: 
+    application/json: 
+      schema: groupInputRequest
+      example: !include examples/updateInformationOboutGroupRequest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: groupDetailResponse
+delete: 
+  description: Delete information about a group.
+  responses: 
+    204: 

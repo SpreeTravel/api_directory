@@ -1,0 +1,17 @@
+queryParameters: 
+  codeType: 
+    description: "Type of the given airline and/or airport code(s): 'IATA', 'ICAO', or 'FS'. If not specified, all domains will be searched in the order stated."
+  deliverTo: 
+    description: "Where the alert data will be delivered - the URL of an HTTP/HTTPS service that accepts POST data. For testing and evaluation purposes (no production use, please), we will also deliver alert data via email if the URL is of the form smtp://username@domain.com."
+    required: true
+  desc: 
+    description: A description of the rule to be created, for descriptive purposes.
+  events: 
+    description: "A comma separated list of events that should be emitted for the flight, e.g. 'dep,arr,div,can,preDep240,preDep60,bag240'. If omitted, all change events will be sent. See documentation for full example."
+  extendedOptions: 
+    description: "Comma separated list of extended options for modifying standard API behavior to fit special use cases. Options: 'useInlinedReferences', 'useHttpErrors', 'testRun', 'skipValidation'."
+  name: 
+    description: "The name of the rule to be created, for descriptive purposes. If omitted the value 'Default' will be used."
+  type: 
+    description: "The format of the alert data to be posted to the 'deliverTo' address: 'JSON' or 'XML'."
+    required: true

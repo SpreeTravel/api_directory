@@ -1,0 +1,51 @@
+[
+  {
+    "id" : 25954510 ,
+    "url" : "http://api.quizlet.com/25954510/kitkat-flash-cards/" ,
+    "title" : "KitKat" ,
+    "created_by" : "sophiabk" ,
+    "term_count" : 4 ,
+    "created_date" : 1378853418 ,
+    "modified_date" : 1381798690 ,
+    "has_images" : true ,
+    "subjects" : [
+    ] ,
+    "visibility" : "public" ,
+    "editable" : "only_me" ,
+    "has_access" : true ,
+    "description" : "Android 4.4 :)" ,
+    "has_discussion" : true ,
+    "lang_terms" : "en" ,
+    "lang_definitions" : "en" ,
+    "creator" : {
+      "username" : "sophiabk" ,
+      "account_type" : "plus" ,
+      "profile_image" : "https://fbquizlet-quizletllc.netdna-ssl.com/hprofile-ak-prn2/203022_2900976_1217779431_n.jpg" ,
+      "id" : 2890983
+    } ,
+    "class_ids" : [
+      103561
+    ] ,
+    "terms" : [
+      {
+        "id" : 901761014 ,
+        "term" : "..." ,
+        "definition" : "" ,
+        "image" : {
+          "url" : "https://d42f9g3milbb1.cloudfront.net/5OAQ9xw3lUITwxQZh6uQTQ_m.jpg" ,
+          "width" : 240 ,
+          "height" : 240
+        }
+      } , {
+        "id" : 901761015 ,
+        "term" : "KitKat" ,
+        "definition" : "..." ,
+        "image" : {
+          "url" : "https://d42f9g3milbb1.cloudfront.net/UnOf61Il.sKNN5FKE4cubA_m.jpg" ,
+          "width" : 240 ,
+          "height" : 159
+        }
+      }
+    ]
+  }
+]

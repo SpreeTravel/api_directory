@@ -1,0 +1,64 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "listener" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "admin_state_up" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "connection_limit" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "default_pool_id" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "description" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "loadbalancers" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "id" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "protocol" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "protocol_port" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "tenant_id" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

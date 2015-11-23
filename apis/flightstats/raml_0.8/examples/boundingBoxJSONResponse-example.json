@@ -1,0 +1,414 @@
+{
+  "request" : {
+    "topLatitude" : {
+      "requested" : "51.46666717529297" ,
+      "interpreted" : 51.46666717529297
+    } ,
+    "leftLongitude" : {
+      "requested" : "-1.1166666746139526" ,
+      "interpreted" : -1.1166666746139526
+    } ,
+    "bottomLatitude" : {
+      "requested" : "51.06666717529297" ,
+      "interpreted" : 51.06666717529297
+    } ,
+    "rightLongitude" : {
+      "requested" : "-0.44999998807907104" ,
+      "interpreted" : -0.44999998807907104
+    } ,
+    "maxFlights" : {
+    } ,
+    "extendedOptions" : {
+    } ,
+    "url" : "https://api.flightstats.com/flex/flightstatus/rest/v2/json/flightsNear/51.46666717529297/-1.1166666746139526/51.06666717529297/-0.44999998807907104"
+  } ,
+  "appendix" : {
+  } ,
+  "flightPositions" : [
+    {
+      "flightId" : 534377747 ,
+      "callsign" : "EIN447" ,
+      "heading" : 106.68628673051396 ,
+      "source" : "derived" ,
+      "positions" : [
+        {
+          "lon" : 0.5861 ,
+          "lat" : 51.06 ,
+          "speedMph" : 480 ,
+          "altitudeFt" : 36000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:40:26.000Z"
+        } , {
+          "lon" : 0.379 ,
+          "lat" : 51.0992 ,
+          "speedMph" : 590 ,
+          "altitudeFt" : 36000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:41:26.000Z"
+        } , {
+          "lon" : 0.228 ,
+          "lat" : 51.1299 ,
+          "speedMph" : 539 ,
+          "altitudeFt" : 36000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:42:26.000Z"
+        } , {
+          "lon" : 0.0129 ,
+          "lat" : 51.1736 ,
+          "speedMph" : 586 ,
+          "altitudeFt" : 36000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:43:26.000Z"
+        } , {
+          "lon" : -0.1836 ,
+          "lat" : 51.2132 ,
+          "speedMph" : 511 ,
+          "altitudeFt" : 36000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:44:26.000Z"
+        } , {
+          "lon" : -0.3482 ,
+          "lat" : 51.2458 ,
+          "speedMph" : 361 ,
+          "altitudeFt" : 36000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:45:26.000Z"
+        } , {
+          "lon" : -0.5493 ,
+          "lat" : 51.2852 ,
+          "speedMph" : 525 ,
+          "altitudeFt" : 36000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:46:26.000Z"
+        } , {
+          "lon" : -0.7289 ,
+          "lat" : 51.3201 ,
+          "speedMph" : 499 ,
+          "altitudeFt" : 36000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:47:26.000Z"
+        } , {
+          "lon" : -0.9075 ,
+          "lat" : 51.3544 ,
+          "speedMph" : 447 ,
+          "altitudeFt" : 36000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:48:26.000Z"
+        } , {
+          "lon" : -1.0847 ,
+          "lat" : 51.3881 ,
+          "speedMph" : 481 ,
+          "altitudeFt" : 36000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:49:26.000Z"
+        }
+      ]
+    } , {
+      "flightId" : 535723273 ,
+      "callsign" : "RYR122" ,
+      "heading" : 327.5515117104692 ,
+      "source" : "derived" ,
+      "positions" : [
+        {
+          "lon" : -1.3784 ,
+          "lat" : 51.751 ,
+          "speedMph" : 367 ,
+          "altitudeFt" : 15475 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:39:53.000Z"
+        } , {
+          "lon" : -1.307 ,
+          "lat" : 51.6815 ,
+          "speedMph" : 317 ,
+          "altitudeFt" : 15042 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:40:53.000Z"
+        } , {
+          "lon" : -1.237 ,
+          "lat" : 51.6135 ,
+          "speedMph" : 308 ,
+          "altitudeFt" : 14875 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:41:53.000Z"
+        } , {
+          "lon" : -1.1665 ,
+          "lat" : 51.5462 ,
+          "speedMph" : 334 ,
+          "altitudeFt" : 14917 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:42:53.000Z"
+        } , {
+          "lon" : -1.0831 ,
+          "lat" : 51.483 ,
+          "speedMph" : 336 ,
+          "altitudeFt" : 14950 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:43:53.000Z"
+        } , {
+          "lon" : -0.9886 ,
+          "lat" : 51.4264 ,
+          "speedMph" : 340 ,
+          "altitudeFt" : 15005 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:44:53.000Z"
+        } , {
+          "lon" : -0.8908 ,
+          "lat" : 51.3715 ,
+          "speedMph" : 345 ,
+          "altitudeFt" : 15000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:45:53.000Z"
+        } , {
+          "lon" : -0.8076 ,
+          "lat" : 51.3118 ,
+          "speedMph" : 332 ,
+          "altitudeFt" : 15000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:46:53.000Z"
+        } , {
+          "lon" : -0.7342 ,
+          "lat" : 51.2544 ,
+          "speedMph" : 305 ,
+          "altitudeFt" : 14828 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:47:53.000Z"
+        } , {
+          "lon" : -0.666 ,
+          "lat" : 51.1905 ,
+          "speedMph" : 310 ,
+          "altitudeFt" : 14352 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:48:53.000Z"
+        }
+      ]
+    } , {
+      "flightId" : 533972471 ,
+      "callsign" : "UAL930" ,
+      "tailNumber" : "N204UA" ,
+      "heading" : 314.20661659042906 ,
+      "source" : "derived" ,
+      "positions" : [
+        {
+          "lon" : -0.0758 ,
+          "lat" : 51.5634 ,
+          "speedMph" : 298 ,
+          "altitudeFt" : 6907 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:40:23.000Z"
+        } , {
+          "lon" : -0.0121 ,
+          "lat" : 51.5249 ,
+          "speedMph" : 231 ,
+          "altitudeFt" : 6081 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:41:23.000Z"
+        } , {
+          "lon" : -0.02 ,
+          "lat" : 51.4904 ,
+          "speedMph" : 151 ,
+          "altitudeFt" : 5325 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:42:23.000Z"
+        } , {
+          "lon" : -0.0788 ,
+          "lat" : 51.4715 ,
+          "speedMph" : 230 ,
+          "altitudeFt" : 4473 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:43:23.000Z"
+        } , {
+          "lon" : -0.1518 ,
+          "lat" : 51.4637 ,
+          "speedMph" : 283 ,
+          "altitudeFt" : 3488 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:44:24.000Z"
+        } , {
+          "lon" : -0.236 ,
+          "lat" : 51.4625 ,
+          "speedMph" : 270 ,
+          "altitudeFt" : 2564 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:45:24.000Z"
+        } , {
+          "lon" : -0.3046 ,
+          "lat" : 51.464 ,
+          "speedMph" : 188 ,
+          "altitudeFt" : 1730 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:46:24.000Z"
+        } , {
+          "lon" : -0.3667 ,
+          "lat" : 51.465 ,
+          "speedMph" : 155 ,
+          "altitudeFt" : 958 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:47:24.000Z"
+        } , {
+          "lon" : -0.4229 ,
+          "lat" : 51.4651 ,
+          "speedMph" : 138 ,
+          "altitudeFt" : 384 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:48:24.000Z"
+        } , {
+          "lon" : -0.4671 ,
+          "lat" : 51.4651 ,
+          "speedMph" : 115 ,
+          "altitudeFt" : -172 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:49:24.000Z"
+        }
+      ]
+    } , {
+      "flightId" : 534370730 ,
+      "callsign" : "AFR356" ,
+      "heading" : 125.8578756574008 ,
+      "source" : "derived" ,
+      "positions" : [
+        {
+          "lon" : 1.1569 ,
+          "lat" : 50.9771 ,
+          "speedMph" : 315 ,
+          "altitudeFt" : 35092 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:40:29.000Z"
+        } , {
+          "lon" : 0.9584 ,
+          "lat" : 51.0676 ,
+          "speedMph" : 485 ,
+          "altitudeFt" : 35674 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:41:29.000Z"
+        } , {
+          "lon" : 0.7653 ,
+          "lat" : 51.1378 ,
+          "speedMph" : 604 ,
+          "altitudeFt" : 36037 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:42:29.000Z"
+        } , {
+          "lon" : 0.5815 ,
+          "lat" : 51.1939 ,
+          "speedMph" : 604 ,
+          "altitudeFt" : 36182 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:43:29.000Z"
+        } , {
+          "lon" : 0.332 ,
+          "lat" : 51.2586 ,
+          "speedMph" : 604 ,
+          "altitudeFt" : 35881 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:44:29.000Z"
+        } , {
+          "lon" : 0.1818 ,
+          "lat" : 51.2967 ,
+          "speedMph" : 547 ,
+          "altitudeFt" : 36081 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:45:29.000Z"
+        } , {
+          "lon" : 0.0074 ,
+          "lat" : 51.3323 ,
+          "speedMph" : 428 ,
+          "altitudeFt" : 36021 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:46:29.000Z"
+        } , {
+          "lon" : -0.1227 ,
+          "lat" : 51.3518 ,
+          "speedMph" : 380 ,
+          "altitudeFt" : 36000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:47:29.000Z"
+        } , {
+          "lon" : -0.3439 ,
+          "lat" : 51.3825 ,
+          "speedMph" : 553 ,
+          "altitudeFt" : 36000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:48:29.000Z"
+        } , {
+          "lon" : -0.5107 ,
+          "lat" : 51.4023 ,
+          "speedMph" : 488 ,
+          "altitudeFt" : 36000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:49:29.000Z"
+        }
+      ]
+    } , {
+      "flightId" : 534406742 ,
+      "callsign" : "BAW860" ,
+      "heading" : 296.80182790514465 ,
+      "source" : "derived" ,
+      "positions" : [
+        {
+          "lon" : -0.444 ,
+          "lat" : 51.4761 ,
+          "speedMph" : 12 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:40:38.000Z"
+        } , {
+          "lon" : -0.4351 ,
+          "lat" : 51.4733 ,
+          "speedMph" : 5 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:41:38.000Z"
+        } , {
+          "lon" : -0.4336 ,
+          "lat" : 51.4749 ,
+          "speedMph" : 4 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:42:38.000Z"
+        } , {
+          "lon" : -0.431 ,
+          "lat" : 51.4791 ,
+          "speedMph" : 20 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:43:38.000Z"
+        } , {
+          "lon" : -0.4212 ,
+          "lat" : 51.4788 ,
+          "speedMph" : 31 ,
+          "altitudeFt" : 404 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:44:38.000Z"
+        } , {
+          "lon" : -0.4326 ,
+          "lat" : 51.4782 ,
+          "speedMph" : 5 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:45:38.000Z"
+        } , {
+          "lon" : -0.4343 ,
+          "lat" : 51.4767 ,
+          "speedMph" : 11 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:46:38.000Z"
+        } , {
+          "lon" : -0.4612 ,
+          "lat" : 51.4777 ,
+          "speedMph" : 65 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:47:38.000Z"
+        } , {
+          "lon" : -0.5044 ,
+          "lat" : 51.4767 ,
+          "speedMph" : 136 ,
+          "altitudeFt" : 1694 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:48:38.000Z"
+        } , {
+          "lon" : -0.5279 ,
+          "lat" : 51.4501 ,
+          "speedMph" : 153 ,
+          "altitudeFt" : 3133 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T12:49:38.000Z"
+        }
+      ]
+    }
+  ]
+}

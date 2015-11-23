@@ -1,0 +1,428 @@
+#%RAML 0.8
+title: Blogger
+version: v3
+baseUri: https://www.googleapis.com/blogger/{version}
+mediaType: application/json
+securitySchemes:
+  - oauth_2_0: !include securitySchemes/oauth_2_0.raml
+schemas:
+  - blogResource: !include /schemas/blogResource-schema.json
+  - getListByUser: !include /schemas/getListByUser-schema.json
+  - commentsList: !include /schemas/commentsList-schema.json
+  - comment: !include /schemas/comment-schema.json
+  - pages: !include /schemas/pages-schema.json
+  - page: !include /schemas/page-schema.json
+  - postsList: !include /schemas/postsList-schema.json
+  - post: !include /schemas/post-schema.json
+  - user: !include /schemas/user-schema.json
+  - blogUserInfo: !include /schemas/blogUserInfo-schema.json
+  - pageViews: !include /schemas/pageViews-schema.json
+  - postUserInfo: !include /schemas/postUserInfo-schema.json
+  - postUserInfosList: !include /schemas/postUserInfosList-schema.json
+traits:
+  - posts: !include traits/posts.raml
+  - view: !include traits/view.raml
+  - blogs: !include traits/blogs.raml
+securedBy: [ oauth_2_0 ]
+/blogs/{blogId}: 
+  get: 
+    description: Retrieves a blog by its ID.
+    queryParameters: 
+      maxPosts: 
+        description: Maximum number of posts to retrieve along with the blog. When this parameter is not specified, no posts will be returned as part of the blog resource.
+        type: integer
+        example: 25
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: blogResource
+            example: !include examples/blogResource-example.json
+  /comments: 
+    get: 
+      description: Retrieves the comments for a blog, across all posts, possibly filtered.
+      queryParameters: 
+        endDate: 
+          description: Latest date of comment to fetch, a date-time with RFC 3339 formatting.
+          type: date
+          example: "2016-10-02T10:00:00"
+        fetchBodies: 
+          description: Whether the body content of the comments is included.
+          type: boolean
+          example: true
+        maxResults: 
+          description: Maximum number of comments to include in the result.
+          type: integer
+          example: 25
+        pageToken: 
+          description: Continuation token if request is paged.
+        startDate: 
+          description: Earliest date of comment to fetch, a date-time with RFC 3339 formatting.
+          type: date
+          example: "2016-09-02T10:00:00"
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: commentsList
+              example: !include examples/commentsList-example.json
+  /pages: 
+    get: 
+      is: [ view ]
+      description: Retrieves the list of pages for a blog.
+      queryParameters: 
+        fetchBodies: 
+          description: Whether to retrieve the Page bodies.
+          type: boolean
+          example: true
+        status: 
+          description: |
+            Acceptable values are:
+            "draft": Draft (unpublished) Pages
+            "imported": Pages that have had their content removed
+            "live": Pages that are publicly visible
+          example: live
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: pages
+              example: !include examples/pages-example.json
+    post: 
+      description: Add a page.
+      body: 
+        application/json: 
+          schema: page
+          example: !include examples/page-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: page
+              example: !include examples/page-example.json
+    /{pageId}: 
+      get: 
+        is: [ view ]
+        description: Retrieves one pages resource by its page ID.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: page
+                example: !include examples/page-example.json
+      delete: 
+        description: Delete a page by ID.
+        responses: 
+          200: 
+      patch: 
+        description: Update a page. This method supports patch semantics.
+        body: 
+          application/json: 
+            schema: page
+            example: !include examples/page-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: page
+                example: !include examples/page-example.json
+      put: 
+        description: Update a page.
+        body: 
+          application/json: 
+            schema: page
+            example: !include examples/page-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: page
+                example: !include examples/page-example.json
+  /posts: 
+    get: 
+      is: [ blogs , posts ]
+      description: Retrieves a list of posts.
+      queryParameters: 
+        fetchImages: 
+          description: Whether image URL metadata for each post is included.
+          type: boolean
+          example: true
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: postsList
+              example: !include examples/postsList-example.json
+    post: 
+      description: Adds a post.
+      queryParameters: 
+        isDraft: 
+          description: Whether to create the post as a draft
+          type: boolean
+          example: true
+      body: 
+        application/json: 
+          schema: post
+          example: !include examples/post-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: post
+              example: !include examples/post-example.json
+    /{postId}: 
+      get: 
+        is: [ view ]
+        description: Retrieves one post by post ID.
+        queryParameters: 
+          maxComments: 
+            description: Maximum number of comments to retrieve as part of the the post resource. If this parameter is left unspecified, then no comments will be returned.
+            type: integer
+            example: 25
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: post
+                example: !include examples/post-example.json
+      delete: 
+        description: Deletes a post by ID.
+        body: 
+          application/json: 
+      patch: 
+        description: Updates a post. This method supports patch semantics.
+        body: 
+          application/json: 
+            schema: post
+            example: !include examples/post-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: post
+                example: !include examples/post-example.json
+      put: 
+        description: Updates a post.
+        body: 
+          application/json: 
+            schema: post
+            example: !include examples/post-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: post
+                example: !include examples/post-example.json
+      /comments: 
+        get: 
+          is: [ blogs ]
+          description: Retrieves the list of comments for a post.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: commentsList
+                  example: !include examples/commentsList-example.json
+        /{commentId}: 
+          delete: 
+            description: Delete a comment by ID.
+            responses: 
+              200: 
+          get: 
+            description: Retrieves one comment resource by its commentId.
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: comment
+                    example: !include examples/comment-example.json
+          /approve: 
+            post: 
+              description: Marks a comment as not spam.
+              responses: 
+                201: 
+                  body: 
+                    application/json: 
+                      schema: comment
+                      example: !include examples/comment-example.json
+          /spam: 
+            post: 
+              description: Marks a comment as spam. This will set the status of the comment to spam, and hide it in the default comment rendering.
+              responses: 
+                201: 
+                  body: 
+                    application/json: 
+                      schema: comment
+                      example: !include examples/comment-example.json
+          /removecontent: 
+            post: 
+              description: Removes the content of a comment.
+              responses: 
+                201: 
+                  body: 
+                    application/json: 
+                      schema: comment
+                      example: !include examples/comment-example.json
+      /publish: 
+        post: 
+          description: Publish a draft post.
+          queryParameters: 
+            publishDate: 
+              description: The date and time to schedule the publishing of the Post.
+              type: date
+              example: "2016-09-02T10:00:00"
+          responses: 
+            201: 
+              body: 
+                application/json: 
+                  schema: post
+                  example: !include examples/post-example.json
+      /revert: 
+        post: 
+          description: Revert a published or scheduled post to draft state, which removes the post from the publicly viewable content.
+          responses: 
+            201: 
+              body: 
+                application/json: 
+                  schema: post
+                  example: !include examples/post-example.json
+    /search: 
+      get: 
+        description: Searches for a post that matches the given query terms.
+        queryParameters: 
+          fetchBodies: 
+            description: "Whether the body content of posts is included. To minimize traffic, set this parameter to false when the post's body content is not required. (Default: true)"
+            type: boolean
+            default: true
+            example: true
+          orderBy: 
+            description: |
+              The sort order applied to the search results. 
+              
+              Acceptable values are:
+              "published": Order by the date the post was published
+              "updated": Order by the date the post was last updated
+            example: published
+          q: 
+            description: Query terms to search for.
+            required: true
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: postsList
+                example: !include examples/postsList-example.json
+    /bypath: 
+      get: 
+        is: [ view ]
+        description: Retrieves a post by path.
+        queryParameters: 
+          path: 
+            description: Path of the Post to retrieve.
+            required: true
+          maxComments: 
+            description: Maximum number of comments to retrieve for a post. If this parameter is left unspecified, no comments will be returned as part of the post resource.
+            type: integer
+            example: 25
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: post
+                example: !include examples/post-example.json
+  /pageviews: 
+    get: 
+      description: Retrieve pageview stats for a Blog.
+      queryParameters: 
+        range: 
+          description: |
+            Acceptable values are:
+            "30DAYS": Page view counts from the last thirty days.
+            "7DAYS": Page view counts from the last seven days.
+            "all": Total page view counts from all time.
+          example: 30DAYS
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: pageViews
+              example: !include examples/pageViews-example.json
+  /byurl: 
+    get: 
+      description: Retrieves a blog by URL.
+      queryParameters: 
+        url: 
+          description: The URL of the blog to retrieve.
+          required: true
+          example: http://code.blogger.com/
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: blogResource
+              example: !include examples/blogResource-example.json
+/users/{userId}: 
+  get: 
+    description: Retrieves a user by user ID.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: user
+            example: !include examples/user-example.json
+  /blogs: 
+    get: 
+      is: [ view ]
+      description: Retrieves a list of blogs.
+      queryParameters: 
+        fetchUserInfo: 
+          description: Whether the response is a list of blogs with per-user information instead of just blogs.
+          type: boolean
+          example: true
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: getListByUser
+              example: !include examples/getListByUser-example.json
+    /{blogId}: 
+      get: 
+        description: Gets one blog and user info pair by blogId and userId.
+        queryParameters: 
+          maxPosts: 
+            description: Maximum number of posts to pull back with the blog.
+            type: integer
+            example: 25
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: blogUserInfo
+                example: !include examples/blogUserInfo-example.json
+      /posts: 
+        get: 
+          is: [ blogs , posts ]
+          description: Retrieves a list of post and post user info pairs, possibly filtered. The post user info contains per-user information about the post, such as access rights, specific to the user.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: postUserInfosList
+                  example: !include examples/postUserInfosList-example.json
+        /{postId}: 
+          get: 
+            description: Gets one post and user info pair by postId and userId.
+            queryParameters: 
+              maxComments: 
+                description: Maximum number of comments to retrieve for the post.
+                type: integer
+                example: 25
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: postUserInfo
+                    example: !include examples/postUserInfo-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

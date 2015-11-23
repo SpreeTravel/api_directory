@@ -1,0 +1,26 @@
+{
+  "href" : "https://api.stormpath.com/v1/accounts/cJoiwcorTTmkDDBsf02AbA" ,
+  "username" : "jlpicard" ,
+  "email" : "capt@enterprise.com" ,
+  "fullName" : "Jean-Luc Picard" ,
+  "givenName" : "Jean-Luc" ,
+  "middleName" : "" ,
+  "surname" : "Picard" ,
+  "status" : "ENABLED" ,
+  "customData" : {
+    "href" : "https://api.stormpath.com/v1/accounts/cJoiwcorTTmkDDBsf02AbA/customData"
+  } ,
+  "groups" : {
+    "href" : "https://api.stormpath.com/v1/accounts/cJoiwcorTTmkDDBsf02AbA/groups"
+  } ,
+  "groupMemberships" : {
+    "href" : "https://api.stormpath.com/v1/accounts/cJoiwcorTTmkDDBsf02AbA/groupMemberships"
+  } ,
+  "directory" : {
+    "href" : "https://api.stormpath.com/v1/directories/1FaQ6kZxTL4DVJXWeXtUh7"
+  } ,
+  "tenant" : {
+    "href" : "https://api.stormpath.com/v1/tenants/Ad8mIcavSty7XzD-xZdP3g"
+  } ,
+  "emailVerificationToken" : null
+}

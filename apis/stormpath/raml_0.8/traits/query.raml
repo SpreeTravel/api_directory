@@ -1,0 +1,13 @@
+queryParameters: 
+  limit: 
+    description: The maximum number of collection items to return for a single request. Minimum value is 1. The maximum value is 100 and the default value is 25. This is a pagination-specific attribute.
+    type: integer
+    default: 25
+  orderBy: 
+    description: A request for a Collection Resource can contain an optional orderBy query parameter. The query parameter value is a URL-encoded comma-delimited list of ordering statements.
+  q: 
+    description: A filter search consists of specifying a q query parameter and a corresponding search value on a Collection
+  offset: 
+    description: The zero-based starting index in the entire collection of the first item to return. The default value is 0. This is a pagination-specific attribute.
+    type: integer
+    default: 0

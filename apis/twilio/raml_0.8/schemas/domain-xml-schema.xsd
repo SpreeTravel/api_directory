@@ -1,0 +1,37 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TwilioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SipDomain">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Sid"/>
+              <xs:element type="xs:string" name="AccountSid"/>
+              <xs:element type="xs:string" name="FriendlyName"/>
+              <xs:element type="xs:date" name="ApiVersion"/>
+              <xs:element type="xs:string" name="DomainName"/>
+              <xs:element type="xs:string" name="AuthType"/>
+              <xs:element type="xs:string" name="VoiceUrl"/>
+              <xs:element type="xs:string" name="VoiceMethod"/>
+              <xs:element type="xs:string" name="VoiceFallbackUrl"/>
+              <xs:element type="xs:string" name="VoiceFallbackMethod"/>
+              <xs:element type="xs:string" name="VoiceStatusCallbackUrl"/>
+              <xs:element type="xs:string" name="VoiceStatusCallbackMethod"/>
+              <xs:element type="xs:string" name="DateCreated"/>
+              <xs:element type="xs:string" name="DateUpdated"/>
+              <xs:element type="xs:string" name="Uri"/>
+              <xs:element name="SubresourceUris">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="CredentialListMappings"/>
+                    <xs:element type="xs:string" name="IpAccessControlListMappings"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

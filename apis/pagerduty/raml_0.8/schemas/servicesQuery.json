@@ -1,0 +1,87 @@
+{
+  "type": "object",
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "services": {
+      "type": "array",
+      "required": false,
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "required": false
+            },
+            "name": {
+              "type": "string",
+              "required": false
+            },
+            "service_url": {
+              "type": "string",
+              "required": false
+            },
+            "service_key": {
+              "type": "string",
+              "required": false
+            },
+            "auto_resolve_timeout": {
+              "type": "number",
+              "required": false
+            },
+            "acknowledgement_timeout": {
+              "type": "number",
+              "required": false
+            },
+            "created_at": {
+              "type": "string",
+              "required": false
+            },
+            "status": {
+              "type": "string",
+              "required": false
+            },
+            "last_incident_timestamp": {
+              "type": "object",
+              "required": false
+            },
+            "email_incident_creation": {
+              "type": "string",
+              "required": false
+            },
+            "incident_counts": {
+              "type": "object",
+              "required": false
+            },
+            "email_filter_mode": {
+              "type": "string",
+              "required": false
+            },
+            "type": {
+              "type": "string",
+              "required": false
+            },
+            "description": {
+              "type": "string",
+              "required": false
+            }
+          }
+        }
+      }
+    },
+    "limit": {
+      "type": "number",
+      "required": false
+    },
+    "offset": {
+      "type": "number",
+      "required": false
+    },
+    "total": {
+      "type": "number",
+      "required": false
+    }
+  }
+}

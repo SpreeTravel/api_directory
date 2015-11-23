@@ -1,0 +1,283 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "address": {
+      "required": false,
+      "type": "string"
+    },
+    "created_at": {
+      "required": false,
+      "type": "string"
+    },
+    "sent": {
+      "required": false,
+      "type": "integer"
+    },
+    "hard_bounces": {
+      "required": false,
+      "type": "integer"
+    },
+    "soft_bounces": {
+      "required": false,
+      "type": "integer"
+    },
+    "rejects": {
+      "required": false,
+      "type": "integer"
+    },
+    "complaints": {
+      "required": false,
+      "type": "integer"
+    },
+    "unsubs": {
+      "required": false,
+      "type": "integer"
+    },
+    "opens": {
+      "required": false,
+      "type": "integer"
+    },
+    "clicks": {
+      "required": false,
+      "type": "integer"
+    },
+    "stats": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "today": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "sent": {
+              "required": false,
+              "type": "integer"
+            },
+            "hard_bounces": {
+              "required": false,
+              "type": "integer"
+            },
+            "soft_bounces": {
+              "required": false,
+              "type": "integer"
+            },
+            "rejects": {
+              "required": false,
+              "type": "integer"
+            },
+            "complaints": {
+              "required": false,
+              "type": "integer"
+            },
+            "unsubs": {
+              "required": false,
+              "type": "integer"
+            },
+            "opens": {
+              "required": false,
+              "type": "integer"
+            },
+            "unique_opens": {
+              "required": false,
+              "type": "integer"
+            },
+            "clicks": {
+              "required": false,
+              "type": "integer"
+            },
+            "unique_clicks": {
+              "required": false,
+              "type": "integer"
+            }
+          }
+        },
+        "last_7_days": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "sent": {
+              "required": false,
+              "type": "integer"
+            },
+            "hard_bounces": {
+              "required": false,
+              "type": "integer"
+            },
+            "soft_bounces": {
+              "required": false,
+              "type": "integer"
+            },
+            "rejects": {
+              "required": false,
+              "type": "integer"
+            },
+            "complaints": {
+              "required": false,
+              "type": "integer"
+            },
+            "unsubs": {
+              "required": false,
+              "type": "integer"
+            },
+            "opens": {
+              "required": false,
+              "type": "integer"
+            },
+            "unique_opens": {
+              "required": false,
+              "type": "integer"
+            },
+            "clicks": {
+              "required": false,
+              "type": "integer"
+            },
+            "unique_clicks": {
+              "required": false,
+              "type": "integer"
+            }
+          }
+        },
+        "last_30_days": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "sent": {
+              "required": false,
+              "type": "integer"
+            },
+            "hard_bounces": {
+              "required": false,
+              "type": "integer"
+            },
+            "soft_bounces": {
+              "required": false,
+              "type": "integer"
+            },
+            "rejects": {
+              "required": false,
+              "type": "integer"
+            },
+            "complaints": {
+              "required": false,
+              "type": "integer"
+            },
+            "unsubs": {
+              "required": false,
+              "type": "integer"
+            },
+            "opens": {
+              "required": false,
+              "type": "integer"
+            },
+            "unique_opens": {
+              "required": false,
+              "type": "integer"
+            },
+            "clicks": {
+              "required": false,
+              "type": "integer"
+            },
+            "unique_clicks": {
+              "required": false,
+              "type": "integer"
+            }
+          }
+        },
+        "last_60_days": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "sent": {
+              "required": false,
+              "type": "integer"
+            },
+            "hard_bounces": {
+              "required": false,
+              "type": "integer"
+            },
+            "soft_bounces": {
+              "required": false,
+              "type": "integer"
+            },
+            "rejects": {
+              "required": false,
+              "type": "integer"
+            },
+            "complaints": {
+              "required": false,
+              "type": "integer"
+            },
+            "unsubs": {
+              "required": false,
+              "type": "integer"
+            },
+            "opens": {
+              "required": false,
+              "type": "integer"
+            },
+            "unique_opens": {
+              "required": false,
+              "type": "integer"
+            },
+            "clicks": {
+              "required": false,
+              "type": "integer"
+            },
+            "unique_clicks": {
+              "required": false,
+              "type": "integer"
+            }
+          }
+        },
+        "last_90_days": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "sent": {
+              "required": false,
+              "type": "integer"
+            },
+            "hard_bounces": {
+              "required": false,
+              "type": "integer"
+            },
+            "soft_bounces": {
+              "required": false,
+              "type": "integer"
+            },
+            "rejects": {
+              "required": false,
+              "type": "integer"
+            },
+            "complaints": {
+              "required": false,
+              "type": "integer"
+            },
+            "unsubs": {
+              "required": false,
+              "type": "integer"
+            },
+            "opens": {
+              "required": false,
+              "type": "integer"
+            },
+            "unique_opens": {
+              "required": false,
+              "type": "integer"
+            },
+            "clicks": {
+              "required": false,
+              "type": "integer"
+            },
+            "unique_clicks": {
+              "required": false,
+              "type": "integer"
+            }
+          }
+        }
+      }
+    }
+  }
+}

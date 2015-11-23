@@ -1,0 +1,21 @@
+head: 
+  description: |
+    Information about the specified like.
+    You can find the ID for a specific like from any feed, such as a news feed or a record feed.
+  responses: 
+    200: 
+get: 
+  description: |
+    Information about the specified like.
+    You can find the ID for a specific like from any feed, such as a news feed or a record feed.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: likeResponse
+delete: 
+  description: |
+    Delete a like.
+    You can find the ID for a specific like from any feed, such as a news feed or a record feed.
+  responses: 
+    204: 

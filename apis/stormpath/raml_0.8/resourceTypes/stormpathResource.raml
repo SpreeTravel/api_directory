@@ -1,0 +1,63 @@
+get?: 
+  responses: 
+    200: 
+      description: OK. The request was successful and the response body contains the representation requested.
+    302: 
+      description: FOUND. A common redirect response; you can GET the representation at the URI in the location response header.
+    304: 
+      description: NOT MODIFIED. Your clients cached version of the representation is still up to date.
+    401: 
+      description: UNAUTHORIZED. Authentication credentials are required to access the resource. All requests must be authenticated.
+    403: 
+      description: FORBIDDEN. The supplied authentication credentials are not sufficient to access the resource.
+    404: 
+      description: NOT FOUND. We could not locate the resource based on the specified URI.
+    429: 
+      description: TOO MANY REQUESTS. Your application is sending too many simultaneous requests.
+    500: 
+      description: SERVER ERROR. We could not return the representation due to an internal server error.
+    503: 
+      description: SERVICE UNAVAILABLE. We are temporarily unable to service the request. Please wait for a bit and try again.
+post?: 
+  responses: 
+    201: 
+      description: CREATED. The request was successful, we created a new resource, and the response body contains the representation. The Location header contains the new resources canonical URI.
+    400: 
+      description: BAD REQUEST. The data given in the POST or PUT failed validation. Inspect the response body for details.
+    401: 
+      description: UNAUTHORIZED. Authentication credentials are required to access the resource. All requests must be authenticated.
+    403: 
+      description: FORBIDDEN. The supplied authentication credentials are not sufficient to access the resource.
+    404: 
+      description: NOT FOUND. We could not locate the resource based on the specified URI.
+    405: 
+      description: METHOD NOT ALLOWED. POST is not supported for the resource.
+    409: 
+      description: CONFLICT. You cannot create or update a resource because another resource already exists or conflicts with one you are submitting.
+    415: 
+      description: UNSUPPORTED MEDIA TYPE. You did not specify the request Content-Type header to have a value of application/json. Only application/json is currently supported.
+    429: 
+      description: TOO MANY REQUESTS. Your application is sending too many simultaneous requests.
+    500: 
+      description: SERVER ERROR. We could not create or update the resource. Please try again.
+    503: 
+      description: SERVICE UNAVAILABLE. We are temporarily unable to service the request. Please wait for a bit and try again.
+delete?: 
+  responses: 
+    204: 
+      description: NO CONTENT. The request was successful; the resource was deleted. The deleted resource representation will not be returned.
+    401: 
+      description: UNAUTHORIZED. The supplied credentials, if any, are not sufficient to create or update the resource.
+    403: 
+      description: FORBIDDEN. The supplied authentication credentials are not sufficient to access the resource.
+    404: 
+      description: NOT FOUND. We could not locate the resource based on the specified URI.
+    405: 
+      description: METHOD NOT ALLOWED. DELETE is not supported for the resource.
+    429: 
+      description: TOO MANY REQUESTS. Your application is sending too many simultaneous requests.
+    500: 
+      description: SERVER ERROR. We could not create or update the resource. Please try again.
+    503: 
+      description: SERVICE UNAVAILABLE. We are temporarily unable to service the request. Please wait for a bit and try again.
+securedBy: [ basic , digest ]

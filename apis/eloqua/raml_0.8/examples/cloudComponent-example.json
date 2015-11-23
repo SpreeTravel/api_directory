@@ -1,0 +1,14 @@
+{
+  "id" : "undefined" ,
+  "name" : "undefined" ,
+  "description" : "Eloqua" ,
+  "iconUrl" : "undefined" ,
+  "providerName" : "undefined" ,
+  "uptimeMetric" : "good" ,
+  "componentImage" : {
+    "url" : "undefined" ,
+    "height" : "undefined" ,
+    "width" : "undefined"
+  } ,
+  "isAvailable" : "undefined"
+}

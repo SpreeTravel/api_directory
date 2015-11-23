@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "response": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "version": {
+          "required": false,
+          "type": "string"
+        },
+        "termsofService": {
+          "required": false,
+          "type": "string"
+        },
+        "features": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "satellite": {
+              "required": false,
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "satellite": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "image_url": {
+          "required": false,
+          "type": "string"
+        },
+        "image_url_ir4": {
+          "required": false,
+          "type": "string"
+        },
+        "image_url_vis": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    }
+  }
+}

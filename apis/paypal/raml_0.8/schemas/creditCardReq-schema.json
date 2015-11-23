@@ -1,0 +1,35 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "payer_id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "number" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "expire_month" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "expire_year" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "first_name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "last_name" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

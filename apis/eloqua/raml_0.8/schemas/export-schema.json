@@ -1,0 +1,49 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "notification" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "fileFormat" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "columnDelimiter" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "encoding" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "extension" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "rowDelimiter" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "textQualifier" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "fileLifetime" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "isFileCompressed" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "isDelta" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

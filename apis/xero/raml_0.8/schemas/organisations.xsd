@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Organisations">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Organisation"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Organisation">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="APIKey"/>
+    <xs:element ref="Name"/>
+    <xs:element ref="LegalName"/>
+    <xs:element ref="PaysTax"/>
+    <xs:element ref="Version"/>
+    <xs:element ref="OrganisationType"/>
+    <xs:element ref="BaseCurrency"/>
+    <xs:element ref="CountryCode"/>
+    <xs:element ref="IsDemoCompany"/>
+    <xs:element ref="OrganisationStatus"/>
+    <xs:element ref="TaxNumber"/>
+    <xs:element ref="FinancialYearEndDay"/>
+    <xs:element ref="FinancialYearEndMonth"/>
+    <xs:element ref="PeriodLockDate"/>
+    <xs:element ref="CreatedDateUTC"/>
+    <xs:element ref="OrganisationEntityType"/>
+    <xs:element ref="Timezone"/>
+    <xs:element ref="ShortCode"/>
+    <xs:element ref="Addresses"/>
+    <xs:element ref="ExternalLinks"/>
+    <xs:element ref="PaymentTerms"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="APIKey" type="xs:NCName"/>
+  <xs:element name="Name" type="xs:string"/>
+  <xs:element name="LegalName" type="xs:string"/>
+  <xs:element name="PaysTax" type="xs:boolean"/>
+  <xs:element name="Version" type="xs:NCName"/>
+  <xs:element name="OrganisationType" type="xs:NCName"/>
+  <xs:element name="BaseCurrency" type="xs:NCName"/>
+  <xs:element name="CountryCode" type="xs:NCName"/>
+  <xs:element name="IsDemoCompany" type="xs:boolean"/>
+  <xs:element name="OrganisationStatus" type="xs:NCName"/>
+  <xs:element name="TaxNumber" type="xs:NMTOKEN"/>
+  <xs:element name="FinancialYearEndDay" type="xs:integer"/>
+  <xs:element name="FinancialYearEndMonth" type="xs:integer"/>
+  <xs:element name="PeriodLockDate" type="xs:dateTime"/>
+  <xs:element name="CreatedDateUTC" type="xs:dateTime"/>
+  <xs:element name="OrganisationEntityType" type="xs:NCName"/>
+  <xs:element name="Timezone" type="xs:NCName"/>
+  <xs:element name="ShortCode" type="xs:string"/>
+  <xs:element name="Addresses">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Address"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Address">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="AddressType"/>
+    <xs:element ref="AddressLine1"/>
+    <xs:element ref="AddressLine2"/>
+    <xs:element ref="City"/>
+    <xs:element ref="PostalCode"/>
+    <xs:element ref="Country"/>
+    <xs:element ref="AttentionTo"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="AddressType" type="xs:NCName"/>
+  <xs:element name="AddressLine1" type="xs:string"/>
+  <xs:element name="AddressLine2" type="xs:string"/>
+  <xs:element name="City" type="xs:NCName"/>
+  <xs:element name="PostalCode" type="xs:integer"/>
+  <xs:element name="Country" type="xs:string"/>
+  <xs:element name="AttentionTo" type="xs:string"/>
+  <xs:element name="ExternalLinks">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element maxOccurs="unbounded" ref="ExternalLink"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="ExternalLink">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="LinkType"/>
+    <xs:element ref="Url"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="LinkType" type="xs:NCName"/>
+  <xs:element name="Url" type="xs:anyURI"/>
+  <xs:element name="PaymentTerms">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Bills"/>
+    <xs:element ref="Sales"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Bills">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Day"/>
+    <xs:element ref="Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Sales">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Day"/>
+    <xs:element ref="Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Day" type="xs:integer"/>
+  <xs:element name="Type" type="xs:NCName"/>
+</xs:schema>

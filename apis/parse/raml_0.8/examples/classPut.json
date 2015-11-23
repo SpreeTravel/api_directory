@@ -1,0 +1,19 @@
+{
+	"name" : "New Name" ,
+	"score" : {
+		"__op" : "Increment" ,
+		"amount" : 1
+	} ,
+	"skills" : {
+		"__op" : "AddUnique" ,
+		"objects" : [ "flying" , "kungfu" ]
+	} ,
+	"opponents" : {
+		"__op" : "AddRelation" ,
+		"objects" : [ {
+			"__type" : "Pointer" ,
+			"className" : "Player" ,
+			"objectId" : "Vx4nudeWn"
+		} ]
+	}
+}

@@ -1,0 +1,11 @@
+{
+  "id" : "undefined" ,
+  "componentId" : "undefined" ,
+  "configurationUrl" : "undefined" ,
+  "instanceImage" : "undefined" ,
+  "componentImage" : {
+    "url" : "undefined" ,
+    "height" : "undefined" ,
+    "width" : "undefined"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "features": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "canBrowse": {
+          "type": "boolean",
+          "required": false
+        },
+        "canSearch": {
+          "type": "boolean",
+          "required": false
+        }
+      }
+    },
+    "id": {
+      "type": "string",
+      "required": false
+    },
+    "label": {
+      "type": "string",
+      "required": false
+    },
+    "motif": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "color": {
+          "type": "string",
+          "required": false
+        },
+        "largeIconUrl": {
+          "type": "string",
+          "required": false
+        },
+        "mediumIconUrl": {
+          "type": "string",
+          "required": false
+        },
+        "smallIconUrl": {
+          "type": "string",
+          "required": false
+        },
+        "svgIconUrl": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "mySubscription": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "required": false
+        },
+        "url": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "providerType": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "label": {
+          "type": "string",
+          "required": false
+        },
+        "type": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "rootFolderItemsUrl": {
+      "type": "string",
+      "required": false
+    },
+    "type": {
+      "type": "string",
+      "required": false
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

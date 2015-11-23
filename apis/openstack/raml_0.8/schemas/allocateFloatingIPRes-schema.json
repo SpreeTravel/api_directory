@@ -1,0 +1,33 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "floating_ip" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "fixed_ip" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "instance_id" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "ip" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "pool" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

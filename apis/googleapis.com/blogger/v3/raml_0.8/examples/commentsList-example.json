@@ -1,0 +1,33 @@
+{
+  "kind" : "blogger#commentList" ,
+  "nextPageToken" : "string" ,
+  "prevPageToken" : "string" ,
+  "items" : [
+    {
+      "kind" : "blogger#comment" ,
+      "status" : "string" ,
+      "id" : "string" ,
+      "inReplyTo" : {
+        "id" : "string"
+      } ,
+      "post" : {
+        "id" : "string"
+      } ,
+      "blog" : {
+        "id" : "string"
+      } ,
+      "published" : "datetime" ,
+      "updated" : "datetime" ,
+      "selfLink" : "string" ,
+      "content" : "string" ,
+      "author" : {
+        "id" : "string" ,
+        "displayName" : "string" ,
+        "url" : "string" ,
+        "image" : {
+          "url" : "string"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "tz_offset": {
+          "description": "The offset for the specified timezone, in hours.",
+          "type": "integer"
+        },
+        "unit": {
+          "description": "An echo of the specified unit value.",
+          "type": "string"
+        },
+        "units": {
+          "description": "An echo of the specified units value.",
+          "type": "integer"
+        },
+        "popular_links": {
+          "items": {
+            "description": "The links that have received click traffic in the specified timeframe.",
+            "properties": {
+              "link": {
+                "description": "A bitly link.",
+                "type": "string"
+              },
+              "clicks": {
+                "description": "The number of clicks on that bitly link in the specified timeframe.",
+                "type": "integer"
+              }
+            }
+          },
+          "type": "array"
+        }
+      }
+    },
+    "status_code": {
+      "type": "integer",
+      "required": true
+    },
+    "status_txt": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

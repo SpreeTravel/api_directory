@@ -1,0 +1,67 @@
+{
+  "startAt" : "1358345068" ,
+  "endAt" : "undefined" ,
+  "budgetedCost" : "undefined" ,
+  "actualCost" : "" ,
+  "isMemberAllowedReEntry" : "undefined" ,
+  "fieldValues" : [
+    {
+      "value" : "undefined" ,
+      "id" : "undefined"
+    }
+  ] ,
+  "elements" : [
+    {
+      "position" : {
+      } ,
+      "outputTerminals" : [
+        {
+          "terminalType" : "undefined" ,
+          "connectedType" : "undefined" ,
+          "connectedId" : "465" ,
+          "name" : "undefined" ,
+          "description" : "Eloqua" ,
+          "permissions" : "undefined" ,
+          "folderId" : "undefined" ,
+          "sourceTemplateId" : "undefined" ,
+          "createdBy" : "undefined" ,
+          "createdAt" : "undefined" ,
+          "updatedBy" : "undefined" ,
+          "updatedAt" : "undefined" ,
+          "accessedAt" : "undefined" ,
+          "scheduledFor" : "undefined" ,
+          "depth" : "minimal"
+        }
+      ] ,
+      "name" : "undefined" ,
+      "description" : "Eloqua" ,
+      "permissions" : "undefined" ,
+      "folderId" : "undefined" ,
+      "sourceTemplateId" : "undefined" ,
+      "createdBy" : "undefined" ,
+      "createdAt" : "undefined" ,
+      "updatedBy" : "undefined" ,
+      "updatedAt" : "undefined" ,
+      "accessedAt" : "undefined" ,
+      "scheduledFor" : "undefined" ,
+      "depth" : "minimal"
+    }
+  ] ,
+  "isReadOnly" : "true" ,
+  "campaignType" : "" ,
+  "product" : "" ,
+  "region" : "undefined" ,
+  "crmId" : "undefined" ,
+  "name" : "undefined" ,
+  "description" : "Eloqua" ,
+  "permissions" : "undefined" ,
+  "folderId" : "undefined" ,
+  "sourceTemplateId" : "undefined" ,
+  "createdBy" : "undefined" ,
+  "createdAt" : "undefined" ,
+  "updatedBy" : "undefined" ,
+  "updatedAt" : "undefined" ,
+  "accessedAt" : "undefined" ,
+  "scheduledFor" : "undefined" ,
+  "depth" : "minimal"
+}

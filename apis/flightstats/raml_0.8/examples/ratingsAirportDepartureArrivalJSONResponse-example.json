@@ -1,0 +1,155 @@
+{
+	"request": {
+		"departureAirport": {
+			"requestedCode": "LAX",
+			"fsCode": "LAX"
+		},
+		"arrivalAirport": {
+			"requestedCode": "ORD",
+			"fsCode": "ORD"
+		},
+		"codeType": {
+			
+		},
+		"url": "https://api.flightstats.com/flex/ratings/rest/v1/json/route/LAX/ORD"
+	},
+	"ratings": [{
+		"departureAirportFsCode": "LAX",
+		"arrivalAirportFsCode": "ORD",
+		"airlineFsCode": "VA",
+		"flightNumber": "5216",
+		"codeshares": 50,
+		"directs": 0,
+		"observations": 50,
+		"ontime": 44,
+		"late15": 4,
+		"late30": 1,
+		"late45": 1,
+		"cancelled": 0,
+		"diverted": 0,
+		"ontimePercent": 0.88,
+		"delayObservations": 16,
+		"delayMean": 13.0,
+		"delayStandardDeviation": 13.961853,
+		"delayMin": 0,
+		"delayMax": 52,
+		"allOntimeCumulative": 0.98210001,
+		"allOntimeStars": 4.9000001,
+		"allDelayCumulative": 0.90319997,
+		"allDelayStars": 4.5,
+		"allStars": 4.6999998
+	},
+	{
+		"departureAirportFsCode": "LAX",
+		"arrivalAirportFsCode": "ORD",
+		"airlineFsCode": "VA",
+		"flightNumber": "5214",
+		"codeshares": 60,
+		"directs": 0,
+		"observations": 60,
+		"ontime": 48,
+		"late15": 4,
+		"late30": 3,
+		"late45": 5,
+		"cancelled": 0,
+		"diverted": 0,
+		"ontimePercent": 0.80000001,
+		"delayObservations": 34,
+		"delayMean": 33.0,
+		"delayStandardDeviation": 67.177711,
+		"delayMin": 0,
+		"delayMax": 343,
+		"allOntimeCumulative": 0.81590003,
+		"allOntimeStars": 4.0999999,
+		"allDelayCumulative": 0.242,
+		"allDelayStars": 1.2,
+		"allStars": 2.6500001
+	}],
+	"appendix": {
+		"airlines": [{
+			"fs": "JL",
+			"iata": "JL",
+			"icao": "JAL",
+			"name": "JAL",
+			"active": true
+		},
+		{
+			"fs": "VX",
+			"iata": "VX",
+			"icao": "VRD",
+			"name": "Virgin America",
+			"active": true
+		},
+		{
+			"fs": "LO",
+			"iata": "LO",
+			"icao": "LOT",
+			"name": "LOT - Polish Airlines",
+			"active": true
+		},
+		{
+			"fs": "RU",
+			"iata": "RU",
+			"icao": "ABW",
+			"name": "AirBridgeCargo",
+			"active": true
+		},
+		{
+			"fs": "FJ",
+			"iata": "FJ",
+			"icao": "FJI",
+			"name": "Fiji Airways",
+			"phoneNumber": "1-800-227-4446",
+			"active": true
+		}],
+		"airports": [{
+			"fs": "ORD",
+			"iata": "ORD",
+			"icao": "KORD",
+			"faa": "ORD",
+			"name": "O'Hare International Airport",
+			"street1": "10000 West O'Hare",
+			"city": "Chicago",
+			"cityCode": "CHI",
+			"stateCode": "IL",
+			"postalCode": "60666",
+			"countryCode": "US",
+			"countryName": "United States",
+			"regionName": "North America",
+			"timeZoneRegionName": "America/Chicago",
+			"weatherZone": "ILZ014",
+			"localTime": "2015-04-28T02:35:26.727",
+			"utcOffsetHours": -5.0,
+			"latitude": 41.976912,
+			"longitude": -87.904876,
+			"elevationFeet": 668,
+			"classification": 1,
+			"active": true
+		},
+		{
+			"fs": "LAX",
+			"iata": "LAX",
+			"icao": "KLAX",
+			"faa": "LAX",
+			"name": "Los Angeles International Airport",
+			"street1": "One World Way",
+			"street2": "",
+			"city": "Los Angeles",
+			"cityCode": "LAX",
+			"stateCode": "CA",
+			"postalCode": "90045-5803",
+			"countryCode": "US",
+			"countryName": "United States",
+			"regionName": "North America",
+			"timeZoneRegionName": "America/Los_Angeles",
+			"weatherZone": "CAZ041",
+			"localTime": "2015-04-28T00:35:26.727",
+			"utcOffsetHours": -7.0,
+			"latitude": 33.943399,
+			"longitude": -118.408279,
+			"elevationFeet": 126,
+			"classification": 1,
+			"active": true
+		}]
+	}
+}

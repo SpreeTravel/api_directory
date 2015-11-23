@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+		"fat": {
+			"description": "Body Fat; in the format X.XX, in the unit system that corresponds to the Accept-Language header provided.",
+			"type": "number",
+            "required": true
+		},
+		"date": {
+			"description": "Log entry date; in the format yyyy-MM-dd",
+			"type": "string",
+            "required": true
+		},
+		"time": {
+			"description": "Time of the measurement; hours and minutes in the format HH:mm:ss; set to last second of the day if not provided.",
+			"type": "string"
+		}
+	}
+}

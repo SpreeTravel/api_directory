@@ -1,0 +1,92 @@
+{
+  "description" : "Agreement for Fast Speed Plan" ,
+  "links" : [
+    {
+      "href" : "https://localhost/cgi-bin/webscr?cmd=_express-checkout&token=EC-7MD89916KU283780J" ,
+      "rel" : "approval_url" ,
+      "method" : "REDIRECT"
+    } , {
+      "href" : "https://api.sandbox.paypal.com/v1/payments/billing-agreements/EC-7MD89916KU283780J/agreement-execute" ,
+      "rel" : "execute" ,
+      "method" : "POST"
+    }
+  ] ,
+  "start_date" : "2015-02-19T00:37:04Z" ,
+  "plan" : {
+    "id" : "P-0NJ10521L3680291SOAQIVTQ" ,
+    "state" : "ACTIVE" ,
+    "name" : "Fast Speed Plan" ,
+    "description" : "Template creation." ,
+    "type" : "FIXED" ,
+    "payment_definitions" : [
+      {
+        "id" : "PD-0NJ10521L3680291SOAQIVTQ" ,
+        "name" : "Payment Definition-1" ,
+        "type" : "REGULAR" ,
+        "frequency" : "Month" ,
+        "frequency_interval" : "2" ,
+        "amount" : {
+          "value" : "100" ,
+          "currency" : "USD"
+        } ,
+        "cycles" : "12" ,
+        "charge_models" : [
+          {
+            "id" : "CHM-4J874305Y03154608OAQIVTQ" ,
+            "type" : "SHIPPING" ,
+            "amount" : {
+              "value" : "10" ,
+              "currency" : "USD"
+            }
+          } , {
+            "id" : "CHM-694072065W722980MOAQIVTQ" ,
+            "type" : "TAX" ,
+            "amount" : {
+              "value" : "12" ,
+              "currency" : "USD"
+            }
+          }
+        ]
+      } , {
+        "id" : "PD-4J874305Y03154608OAQIVTQ" ,
+        "name" : "Payment Definition-1" ,
+        "type" : "TRIAL" ,
+        "frequency" : "Month" ,
+        "frequency_interval" : "2" ,
+        "amount" : {
+          "value" : "100" ,
+          "currency" : "USD"
+        } ,
+        "cycles" : "12" ,
+        "charge_models" : [
+          {
+            "id" : "CHM-7EF88706AP068633TOAQIVTQ" ,
+            "type" : "SHIPPING" ,
+            "amount" : {
+              "value" : "10" ,
+              "currency" : "USD"
+            }
+          } , {
+            "id" : "CHM-3T289804JP1858048OAQIVTQ" ,
+            "type" : "TAX" ,
+            "amount" : {
+              "value" : "12" ,
+              "currency" : "USD"
+            }
+          }
+        ]
+      }
+    ] ,
+    "merchant_preferences" : {
+      "setup_fee" : {
+        "value" : "22" ,
+        "currency" : "USD"
+      } ,
+      "auto_bill_amount" : "YES" ,
+      "initial_fail_amount_action" : "CONTINUE" ,
+      "max_fail_attempts" : "0" ,
+      "return_url" : "http://www.paypal.com" ,
+      "cancel_url" : "http://www.paypal123.com"
+    }
+  }
+}

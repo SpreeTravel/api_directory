@@ -1,0 +1,19 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "username" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "role" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "email_notification" : {
+      "type" : "boolean" ,
+      "required" : false
+    }
+  }
+}

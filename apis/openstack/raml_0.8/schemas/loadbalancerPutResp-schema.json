@@ -1,0 +1,55 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "loadbalancer" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "admin_state_up" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "description" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "listeners" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+          ]
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "operating_status" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "provisioning_status" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "tenant_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "vip_address" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "vip_subnet_id" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

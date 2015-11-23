@@ -1,0 +1,19 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "input" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "csvInstance" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+          ]
+        }
+      }
+    }
+  }
+}

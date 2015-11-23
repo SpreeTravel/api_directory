@@ -1,0 +1,848 @@
+<Demographics:demographics xsi:schemaLocation="http://www.zillow.com/static/xsd/Demographics.xsd /vstatic/67b77c529559c9f5cfbaf08116781d51/static/xsd/Demographics.xsd">
+<request>
+<state>WA</state>
+<city>Seattle</city>
+<neighborhood>Ballard</neighborhood>
+</request>
+<message>
+<text>Request successfully processed</text>
+<code>0</code>
+</message>
+<response>
+<region>
+<id>250017</id>
+<state>Washington</state>
+<city>Seattle</city>
+<neighborhood>Ballard</neighborhood>
+<latitude>47.668304</latitude>
+<longitude>-122.384601</longitude>
+</region>
+<links>
+<main>
+http://www.zillow.com/local-info/WA-Seattle/Ballard/r_250017/
+</main>
+<affordability>
+http://www.zillow.com/local-info/WA-Seattle/Ballard-home-value/r_250017/
+</affordability>
+<homesandrealestate>
+http://www.zillow.com/local-info/WA-Seattle/Ballard-homes/r_250017/
+</homesandrealestate>
+<people>
+http://www.zillow.com/local-info/WA-Seattle/Ballard-people/r_250017/
+</people>
+<forSale>
+http://www.zillow.com/ballard-seattle-wa/
+</forSale>
+<forSaleByOwner>
+http://www.zillow.com/homes/fsbo/Ballard-Seattle-WA/
+</forSaleByOwner>
+<foreclosures>
+http://www.zillow.com/ballard-seattle-wa/fore_lt/
+</foreclosures>
+<recentlySold>
+http://www.zillow.com/homes/recently_sold/Ballard-Seattle-WA/
+</recentlySold>
+</links>
+<charts>
+<chart>
+<name>Median Condo Value</name>
+<url>
+http://www.tes300.zillow.local/app?chartType=affordability_avgCondoValue&amp;graphType=barChart®ionId=250017®ionType=8&amp;service=chart
+</url>
+</chart>
+<chart>
+<name>Median Home Value</name>
+<url>
+http://www.tes300.zillow.local/app?chartType=affordability_avgHomeValue&amp;graphType=barChart®ionId=250017®ionType=8&amp;service=chart
+</url>
+</chart>
+<chart>
+<name>Dollars Per Square Feet</name>
+<url>
+http://www.tes300.zillow.local/app?chartType=affordability_pricePerSqft&amp;graphType=barChart®ionId=250017®ionType=8&amp;service=chart
+</url>
+</chart>
+<chart>
+<name deprecated="true">Zillow Home Value Index Distribution</name>
+<url>
+http://www.tes300.zillow.local/app?chartType=affordability_ZindexByDistribution&amp;graphType=barChart®ionId=250017®ionType=8&amp;service=chart
+</url>
+</chart>
+<chart>
+<name>Home Type</name>
+<url>
+http://www.tes300.zillow.local/app?chartType=home_homeType&amp;graphType=barChart®ionId=250017®ionType=8&amp;service=chart
+</url>
+</chart>
+<chart>
+<name deprecated="true">Owners vs. Renters</name>
+<url>
+http://www.tes300.zillow.local/app?chartType=home_ownVsRent&amp;graphType=barChart®ionId=250017®ionType=8&amp;service=chart
+</url>
+</chart>
+<chart>
+<name>Home Size in Square Feet</name>
+<url>
+http://www.tes300.zillow.local/app?chartType=home_homeSize&amp;graphType=barChart®ionId=250017®ionType=8&amp;service=chart
+</url>
+</chart>
+<chart>
+<name>Year Built</name>
+<url>
+http://www.tes300.zillow.local/app?chartType=home_yearBuilt&amp;graphType=barChart®ionId=250017®ionType=8&amp;service=chart
+</url>
+</chart>
+</charts>
+<market deprecated="true"></market>
+<pages>
+<page>
+<name>Affordability</name>
+<tables>
+<table>
+<name>Affordability Data</name>
+<data>
+<attribute>
+<name>Zillow Home Value Index</name>
+<values>
+<neighborhood>
+<value type="USD">330600</value>
+</neighborhood>
+<city>
+<value type="USD">383000</value>
+</city>
+<nation>
+<value type="USD">191200</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Median Single Family Home Value</name>
+<values>
+<neighborhood>
+<value type="USD">389300</value>
+</neighborhood>
+<city>
+<value type="USD">409600</value>
+</city>
+<nation>
+<value type="USD">192800</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Median Condo Value</name>
+<values>
+<neighborhood>
+<value type="USD">295200</value>
+</neighborhood>
+<city>
+<value type="USD">305300</value>
+</city>
+<nation>
+<value type="USD">181300</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Median 2-Bedroom Home Value</name>
+<values>
+<neighborhood>
+<value type="USD">341100</value>
+</neighborhood>
+<city>
+<value type="USD">342000</value>
+</city>
+<nation>
+<value type="USD">149800</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Median 3-Bedroom Home Value</name>
+<values>
+<neighborhood>
+<value type="USD">378700</value>
+</neighborhood>
+<city>
+<value type="USD">409000</value>
+</city>
+<nation>
+<value type="USD">174300</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Median 4-Bedroom Home Value</name>
+<values>
+<neighborhood>
+<value type="USD">441500</value>
+</neighborhood>
+<city>
+<value type="USD">479900</value>
+</city>
+<nation>
+<value type="USD">263500</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Percent Homes Decreasing</name>
+<values>
+<neighborhood>
+<value type="percent">0.859</value>
+</neighborhood>
+<city>
+<value type="percent">0.825</value>
+</city>
+<nation>
+<value type="percent">0.693</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Percent Listing Price Reduction</name>
+<values>
+<neighborhood>
+<value type="percent">0.21</value>
+</neighborhood>
+<city>
+<value type="percent">0.236</value>
+</city>
+<nation>
+<value type="percent">0.247</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Median List Price Per Sq Ft</name>
+<values>
+<neighborhood>
+<value type="USD">304</value>
+</neighborhood>
+<city>
+<value type="USD">280</value>
+</city>
+<nation>
+<value type="USD">115</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Median List Price</name>
+<values>
+<neighborhood>
+<value type="USD">330000</value>
+</neighborhood>
+<city>
+<value type="USD">449000</value>
+</city>
+<nation>
+<value type="USD">215000</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Median Sale Price</name>
+<values>
+<neighborhood>
+<value type="USD">333800</value>
+</neighborhood>
+<city>
+<value type="USD">380600</value>
+</city>
+<nation>
+<value type="USD">210600</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Homes For Sale</name>
+<values>
+<neighborhood>
+<value>105</value>
+</neighborhood>
+<city>
+<value>7492</value>
+</city>
+<nation>
+<value>3512252</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Homes Recently Sold</name>
+<values>
+<neighborhood>
+<value>13</value>
+</neighborhood>
+<city>
+<value>750</value>
+</city>
+<nation>
+<value>272365</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Property Tax</name>
+<values>
+<neighborhood>
+<value type="USD">2735</value>
+</neighborhood>
+<city>
+<value type="USD">3456</value>
+</city>
+<nation>
+<value type="USD">2192</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Turnover (Sold Within Last Yr.)</name>
+<values>
+<neighborhood>
+<value type="percent">0.091</value>
+</neighborhood>
+<city>
+<value type="percent">0.039</value>
+</city>
+<nation>
+<value type="percent">0.035</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Median Value Per Sq Ft</name>
+<values>
+<neighborhood>
+<value type="USD">370</value>
+</neighborhood>
+<city>
+<value type="USD">328</value>
+</city>
+<nation>
+<value type="USD">118</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>1-Yr. Change</name>
+<values>
+<neighborhood>
+<value type="percent">-0.086</value>
+</neighborhood>
+<city>
+<value type="percent">-0.102</value>
+</city>
+<nation>
+<value type="percent">-0.076</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>>Homes For Sale By Owner</name>
+<values>
+<neighborhood>
+<value>5</value>
+</neighborhood>
+<city>
+<value>205</value>
+</city>
+<nation>
+<value>25194</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>>New Construction</name>
+<values>
+<neighborhood>
+<value>0</value>
+</neighborhood>
+<city>
+<value>12</value>
+</city>
+<nation>
+<value>102395</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>>Foreclosures</name>
+<values>
+<neighborhood>
+<value>1</value>
+</neighborhood>
+<city>
+<value>404</value>
+</city>
+<nation>
+<value>664546</value>
+</nation>
+</values>
+</attribute>
+</data>
+</table>
+</tables>
+</page>
+<page>
+<name>Homes &amp; Real Estate</name>
+<tables>
+<table>
+<name>Homes &amp; Real Estate Data</name>
+<data>
+<attribute>
+<name>Owners</name>
+<values>
+<neighborhood>
+<value type="percent">0.35028618</value>
+</neighborhood>
+<city>
+<value type="percent">0.48412441</value>
+</city>
+<nation>
+<value type="percent">0.66268764</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Renters</name>
+<values>
+<neighborhood>
+<value type="percent">0.64971382</value>
+</neighborhood>
+<city>
+<value type="percent">0.51587559</value>
+</city>
+<nation>
+<value type="percent">0.33731236</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Median Home Size (Sq. Ft.)</name>
+<values>
+<neighborhood>
+<value>1230</value>
+</neighborhood>
+<city>
+<value>1460</value>
+</city>
+<nation>
+<value>1548</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Avg. Year Built</name>
+<values>
+<neighborhood>
+<value>1980</value>
+</neighborhood>
+<city>
+<value>1948</value>
+</city>
+<nation>
+<value>1974</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Single-Family Homes</name>
+<values>
+<neighborhood>
+<value type="percent">0.3128767123287671</value>
+</neighborhood>
+<city>
+<value type="percent">0.7606991687356031</value>
+</city>
+<nation>
+<value type="percent">0.7866848290049298</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Condos</name>
+<values>
+<neighborhood>
+<value type="percent">0.4263013698630137</value>
+</neighborhood>
+<city>
+<value type="percent">0.17935175082098562</value>
+</city>
+<nation>
+<value type="percent">0.10635880824351963</value>
+</nation>
+</values>
+</attribute>
+</data>
+</table>
+<table>
+<name>BuiltYear</name>
+<data>
+<attribute>
+<name>>2000</name>
+<value type="percent">0.33095890410958906</value>
+</attribute>
+<attribute>
+<name>1900-1919</name>
+<value type="percent">0.24054794520547945</value>
+</attribute>
+<attribute>
+<name>1920-1939</name>
+<value type="percent">0.057534246575342465</value>
+</attribute>
+<attribute>
+<name>1940-1959</name>
+<value type="percent">0.06301369863013699</value>
+</attribute>
+<attribute>
+<name>1960-1979</name>
+<value type="percent">0.12876712328767123</value>
+</attribute>
+<attribute>
+<name>1980-1999</name>
+<value type="percent">0.17917808219178083</value>
+</attribute>
+</data>
+</table>
+<table>
+<name>Census Summary-HomeSize</name>
+<data>
+<attribute>
+<name>&lt;1000sqft</name>
+<value type="percent">0.3942470389170897</value>
+</attribute>
+<attribute>
+<name>&gt;3600sqft</name>
+<value type="percent">0.025380710659898477</value>
+</attribute>
+<attribute>
+<name>1000-1400sqft</name>
+<value type="percent">0.24591088550479415</value>
+</attribute>
+<attribute>
+<name>1400-1800sqft</name>
+<value type="percent">0.14438804286520024</value>
+</attribute>
+<attribute>
+<name>1800-2400sqft</name>
+<value type="percent">0.1065989847715736</value>
+</attribute>
+<attribute>
+<name>2400-3600sqft</name>
+<value type="percent">0.08347433728144388</value>
+</attribute>
+</data>
+</table>
+<table>
+<name>Census Summary-HomeType</name>
+<data>
+<attribute>
+<name>Condo</name>
+<value type="percent">0.4263013698630137</value>
+</attribute>
+<attribute>
+<name>Other</name>
+<value type="percent">0.2608219178082192</value>
+</attribute>
+<attribute>
+<name>SingleFamily</name>
+<value type="percent">0.3128767123287671</value>
+</attribute>
+</data>
+</table>
+<table>
+<name>Census Summary-Occupancy</name>
+<data>
+<attribute>
+<name>Own</name>
+<value type="percent">0.35028618</value>
+</attribute>
+<attribute>
+<name>Rent</name>
+<value type="percent">0.64971382</value>
+</attribute>
+</data>
+</table>
+</tables>
+</page>
+<page>
+<name>People</name>
+<tables>
+<table>
+<name>People Data</name>
+<data>
+<attribute>
+<name>Median Household Income</name>
+<values>
+<neighborhood>
+<value currency="USD">41202.9453206937</value>
+</neighborhood>
+<city>
+<value currency="USD">45736</value>
+</city>
+<nation>
+<value currency="USD">44512.0130806292</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Single Males</name>
+<values>
+<neighborhood>
+<value type="percent">0.218182040689239</value>
+</neighborhood>
+<city>
+<value type="percent">0.230033266826908</value>
+</city>
+<nation>
+<value type="percent">0.146462187349365</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Single Females</name>
+<values>
+<neighborhood>
+<value type="percent">0.197726979090431</value>
+</neighborhood>
+<city>
+<value type="percent">0.187486853578992</value>
+</city>
+<nation>
+<value type="percent">0.124578258618535</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Median Age</name>
+<values>
+<neighborhood>
+<value>39</value>
+</neighborhood>
+<city>
+<value>37</value>
+</city>
+<nation>
+<value>36</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Homes With Kids</name>
+<values>
+<neighborhood>
+<value type="percent">0.149933859172205</value>
+</neighborhood>
+<city>
+<value type="percent">0.181808339938523</value>
+</city>
+<nation>
+<value type="percent">0.313623902816284</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Average Household Size</name>
+<values>
+<neighborhood>
+<value>1.82278897942217</value>
+</neighborhood>
+<city>
+<value>2.08</value>
+</city>
+<nation>
+<value>2.58883240001203</value>
+</nation>
+</values>
+</attribute>
+<attribute>
+<name>Average Commute Time (Minutes)</name>
+<values>
+<neighborhood>
+<value>26.56776121676753</value>
+</neighborhood>
+<city>
+<value>26.6363786935206</value>
+</city>
+<nation>
+<value>26.375545725891282</value>
+</nation>
+</values>
+</attribute>
+</data>
+</table>
+<table>
+<name>Census Summary-AgeDecade</name>
+<data>
+<attribute>
+<name>>=70s</name>
+<value type="percent">0.114872901061</value>
+</attribute>
+<attribute>
+<name>0s</name>
+<value type="percent">0.0698273234810158</value>
+</attribute>
+<attribute>
+<name>10s</name>
+<value type="percent">0.0614721332267584</value>
+</attribute>
+<attribute>
+<name>20s</name>
+<value type="percent">0.210411237406907</value>
+</attribute>
+<attribute>
+<name>30s</name>
+<value type="percent">0.222130722421361</value>
+</attribute>
+<attribute>
+<name>40s</name>
+<value type="percent">0.159760457231474</value>
+</attribute>
+<attribute>
+<name>50s</name>
+<value type="percent">0.100382039995932</value>
+</attribute>
+<attribute>
+<name>60s</name>
+<value type="percent">0.0611431851755522</value>
+</attribute>
+</data>
+</table>
+<table>
+<name>Census Summary-CommuteTime</name>
+<data>
+<attribute>
+<name>&lt;10min</name>
+<value type="percent">0.116523248268039</value>
+</attribute>
+<attribute>
+<name>&gt;=60min</name>
+<value type="percent">0.0482377198229543</value>
+</attribute>
+<attribute>
+<name>10-20min</name>
+<value type="percent">0.266281330068427</value>
+</attribute>
+<attribute>
+<name>20-30min</name>
+<value type="percent">0.255069379257092</value>
+</attribute>
+<attribute>
+<name>30-45min</name>
+<value type="percent">0.189151878627933</value>
+</attribute>
+<attribute>
+<name>45-60min</name>
+<value type="percent">0.124736443955555</value>
+</attribute>
+</data>
+</table>
+<table>
+<name>Census Summary-Household</name>
+<data>
+<attribute>
+<name>NoKids</name>
+<value type="percent">0.850066140827795</value>
+</attribute>
+<attribute>
+<name>WithKids</name>
+<value type="percent">0.149933859172205</value>
+</attribute>
+</data>
+</table>
+<table>
+<name>Census Summary-RelationshipStatus</name>
+<data>
+<attribute>
+<name>Divorced-Female</name>
+<value type="percent">0.0854375513590899</value>
+</attribute>
+<attribute>
+<name>Divorced-Male</name>
+<value type="percent">0.0602982799519792</value>
+</attribute>
+<attribute>
+<name>Married-Female</name>
+<value type="percent">0.178297193386233</value>
+</attribute>
+<attribute>
+<name>Married-Male</name>
+<value type="percent">0.186687382837076</value>
+</attribute>
+<attribute>
+<name>Single-Female</name>
+<value type="percent">0.197726979090431</value>
+</attribute>
+<attribute>
+<name>Single-Male</name>
+<value type="percent">0.218182040689239</value>
+</attribute>
+<attribute>
+<name>Widowed-Female</name>
+<value type="percent">0.0632616593158969</value>
+</attribute>
+<attribute>
+<name>Widowed-Male</name>
+<value type="percent">0.0101089133700551</value>
+</attribute>
+</data>
+</table>
+</tables>
+<segmentation>
+<liveshere>
+<title>Makin' It Singles</title>
+<name>Upper-scale urban singles.</name>
+<description>
+Pre-middle-age to middle-age singles with upper-scale incomes. May or may not own their own home. Most have college educations and are employed in mid-management professions.
+</description>
+</liveshere>
+<liveshere>
+<title>Aspiring Urbanites</title>
+<name>Urban singles with moderate income.</name>
+<description>
+Low- to middle-income singles over a wide age range. Some have a college education. They work in a variety of occupations, including some management-level positions.
+</description>
+</liveshere>
+<liveshere>
+<title>Bright Lights, Big City</title>
+<name>Very mobile singles living in the city.</name>
+<description>
+Singles ranging in age from early 20s to mid-40s who have moved to an urban setting. Most rent their apartment or condo. Some have a college education and work in services and the professional sector.
+</description>
+</liveshere>
+</segmentation>
+<uniqueness>
+<category type="Education">
+<characteristic>Bachelor's degrees</characteristic>
+</category>
+<category type="Employment">
+<characteristic>Females working for non-profits</characteristic>
+<characteristic>Self-employed (unincorporated businesses)</characteristic>
+<characteristic>
+Work in arts, design, entertainment, sports, or media occupations
+</characteristic>
+<characteristic>Work in computer or mathematical occupations</characteristic>
+<characteristic>
+Work in office and administrative support occupations
+</characteristic>
+</category>
+<category type="People &amp; Culture">
+<characteristic>Born in the Midwest</characteristic>
+<characteristic>Born in the Northeast</characteristic>
+<characteristic>Born in the South</characteristic>
+<characteristic>Divorced females</characteristic>
+<characteristic>Single females</characteristic>
+<characteristic>Single males</characteristic>
+<characteristic>Widowed females</characteristic>
+</category>
+<category type="Transportation">
+<characteristic>Get to work by bicycle</characteristic>
+<characteristic>Get to work by bus</characteristic>
+</category>
+</uniqueness>
+</page>
+</pages>
+</response>
+</Demographics:demographics>

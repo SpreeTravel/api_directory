@@ -1,0 +1,623 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "response": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "version": {
+          "required": false,
+          "type": "string"
+        },
+        "termsofService": {
+          "required": false,
+          "type": "string"
+        },
+        "features": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "history": {
+              "required": false,
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "history": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "date": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "pretty": {
+              "required": false,
+              "type": "string"
+            },
+            "year": {
+              "required": false,
+              "type": "string"
+            },
+            "mon": {
+              "required": false,
+              "type": "string"
+            },
+            "mday": {
+              "required": false,
+              "type": "string"
+            },
+            "hour": {
+              "required": false,
+              "type": "string"
+            },
+            "min": {
+              "required": false,
+              "type": "string"
+            },
+            "tzname": {
+              "required": false,
+              "type": "string"
+            }
+          }
+        },
+        "utcdate": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "pretty": {
+              "required": false,
+              "type": "string"
+            },
+            "year": {
+              "required": false,
+              "type": "string"
+            },
+            "mon": {
+              "required": false,
+              "type": "string"
+            },
+            "mday": {
+              "required": false,
+              "type": "string"
+            },
+            "hour": {
+              "required": false,
+              "type": "string"
+            },
+            "min": {
+              "required": false,
+              "type": "string"
+            },
+            "tzname": {
+              "required": false,
+              "type": "string"
+            }
+          }
+        },
+        "observations": {
+          "required": false,
+          "type": "array",
+          "items": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "date": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "pretty": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "year": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "mon": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "mday": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "hour": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "min": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "tzname": {
+                    "required": false,
+                    "type": "string"
+                  }
+                }
+              },
+              "utcdate": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "pretty": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "year": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "mon": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "mday": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "hour": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "min": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "tzname": {
+                    "required": false,
+                    "type": "string"
+                  }
+                }
+              },
+              "tempm": {
+                "required": false,
+                "type": "string"
+              },
+              "tempi": {
+                "required": false,
+                "type": "string"
+              },
+              "dewptm": {
+                "required": false,
+                "type": "string"
+              },
+              "dewpti": {
+                "required": false,
+                "type": "string"
+              },
+              "hum": {
+                "required": false,
+                "type": "string"
+              },
+              "wspdm": {
+                "required": false,
+                "type": "string"
+              },
+              "wspdi": {
+                "required": false,
+                "type": "string"
+              },
+              "wgustm": {
+                "required": false,
+                "type": "string"
+              },
+              "wgusti": {
+                "required": false,
+                "type": "string"
+              },
+              "wdird": {
+                "required": false,
+                "type": "string"
+              },
+              "wdire": {
+                "required": false,
+                "type": "string"
+              },
+              "vism": {
+                "required": false,
+                "type": "string"
+              },
+              "visi": {
+                "required": false,
+                "type": "string"
+              },
+              "pressurem": {
+                "required": false,
+                "type": "string"
+              },
+              "pressurei": {
+                "required": false,
+                "type": "string"
+              },
+              "windchillm": {
+                "required": false,
+                "type": "string"
+              },
+              "windchilli": {
+                "required": false,
+                "type": "string"
+              },
+              "heatindexm": {
+                "required": false,
+                "type": "string"
+              },
+              "heatindexi": {
+                "required": false,
+                "type": "string"
+              },
+              "precipm": {
+                "required": false,
+                "type": "string"
+              },
+              "precipi": {
+                "required": false,
+                "type": "string"
+              },
+              "conds": {
+                "required": false,
+                "type": "string"
+              },
+              "icon": {
+                "required": false,
+                "type": "string"
+              },
+              "fog": {
+                "required": false,
+                "type": "string"
+              },
+              "rain": {
+                "required": false,
+                "type": "string"
+              },
+              "snow": {
+                "required": false,
+                "type": "string"
+              },
+              "hail": {
+                "required": false,
+                "type": "string"
+              },
+              "thunder": {
+                "required": false,
+                "type": "string"
+              },
+              "tornado": {
+                "required": false,
+                "type": "string"
+              },
+              "metar": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          }
+        },
+        "dailysummary": {
+          "required": false,
+          "type": "array",
+          "items": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "date": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "pretty": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "year": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "mon": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "mday": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "hour": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "min": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "tzname": {
+                    "required": false,
+                    "type": "string"
+                  }
+                }
+              },
+              "fog": {
+                "required": false,
+                "type": "string"
+              },
+              "rain": {
+                "required": false,
+                "type": "string"
+              },
+              "snow": {
+                "required": false,
+                "type": "string"
+              },
+              "snowfallm": {
+                "required": false,
+                "type": "string"
+              },
+              "snowfalli": {
+                "required": false,
+                "type": "string"
+              },
+              "monthtodatesnowfallm": {
+                "required": false,
+                "type": "string"
+              },
+              "monthtodatesnowfalli": {
+                "required": false,
+                "type": "string"
+              },
+              "since1julsnowfallm": {
+                "required": false,
+                "type": "string"
+              },
+              "since1julsnowfalli": {
+                "required": false,
+                "type": "string"
+              },
+              "snowdepthm": {
+                "required": false,
+                "type": "string"
+              },
+              "snowdepthi": {
+                "required": false,
+                "type": "string"
+              },
+              "hail": {
+                "required": false,
+                "type": "string"
+              },
+              "thunder": {
+                "required": false,
+                "type": "string"
+              },
+              "tornado": {
+                "required": false,
+                "type": "string"
+              },
+              "meantempm": {
+                "required": false,
+                "type": "string"
+              },
+              "meantempi": {
+                "required": false,
+                "type": "string"
+              },
+              "meandewptm": {
+                "required": false,
+                "type": "string"
+              },
+              "meandewpti": {
+                "required": false,
+                "type": "string"
+              },
+              "meanpressurem": {
+                "required": false,
+                "type": "string"
+              },
+              "meanpressurei": {
+                "required": false,
+                "type": "string"
+              },
+              "meanwindspdm": {
+                "required": false,
+                "type": "string"
+              },
+              "meanwindspdi": {
+                "required": false,
+                "type": "string"
+              },
+              "meanwdire": {
+                "required": false,
+                "type": "string"
+              },
+              "meanwdird": {
+                "required": false,
+                "type": "string"
+              },
+              "meanvism": {
+                "required": false,
+                "type": "string"
+              },
+              "meanvisi": {
+                "required": false,
+                "type": "string"
+              },
+              "humidity": {
+                "required": false,
+                "type": "string"
+              },
+              "maxtempm": {
+                "required": false,
+                "type": "string"
+              },
+              "maxtempi": {
+                "required": false,
+                "type": "string"
+              },
+              "mintempm": {
+                "required": false,
+                "type": "string"
+              },
+              "mintempi": {
+                "required": false,
+                "type": "string"
+              },
+              "maxhumidity": {
+                "required": false,
+                "type": "string"
+              },
+              "minhumidity": {
+                "required": false,
+                "type": "string"
+              },
+              "maxdewptm": {
+                "required": false,
+                "type": "string"
+              },
+              "maxdewpti": {
+                "required": false,
+                "type": "string"
+              },
+              "mindewptm": {
+                "required": false,
+                "type": "string"
+              },
+              "mindewpti": {
+                "required": false,
+                "type": "string"
+              },
+              "maxpressurem": {
+                "required": false,
+                "type": "string"
+              },
+              "maxpressurei": {
+                "required": false,
+                "type": "string"
+              },
+              "minpressurem": {
+                "required": false,
+                "type": "string"
+              },
+              "minpressurei": {
+                "required": false,
+                "type": "string"
+              },
+              "maxwspdm": {
+                "required": false,
+                "type": "string"
+              },
+              "maxwspdi": {
+                "required": false,
+                "type": "string"
+              },
+              "minwspdm": {
+                "required": false,
+                "type": "string"
+              },
+              "minwspdi": {
+                "required": false,
+                "type": "string"
+              },
+              "maxvism": {
+                "required": false,
+                "type": "string"
+              },
+              "maxvisi": {
+                "required": false,
+                "type": "string"
+              },
+              "minvism": {
+                "required": false,
+                "type": "string"
+              },
+              "minvisi": {
+                "required": false,
+                "type": "string"
+              },
+              "gdegreedays": {
+                "required": false,
+                "type": "string"
+              },
+              "heatingdegreedays": {
+                "required": false,
+                "type": "string"
+              },
+              "coolingdegreedays": {
+                "required": false,
+                "type": "string"
+              },
+              "precipm": {
+                "required": false,
+                "type": "string"
+              },
+              "precipi": {
+                "required": false,
+                "type": "string"
+              },
+              "precipsource": {
+                "required": false,
+                "type": "string"
+              },
+              "heatingdegreedaysnormal": {
+                "required": false,
+                "type": "string"
+              },
+              "monthtodateheatingdegreedays": {
+                "required": false,
+                "type": "string"
+              },
+              "monthtodateheatingdegreedaysnormal": {
+                "required": false,
+                "type": "string"
+              },
+              "since1sepheatingdegreedays": {
+                "required": false,
+                "type": "string"
+              },
+              "since1sepheatingdegreedaysnormal": {
+                "required": false,
+                "type": "string"
+              },
+              "since1julheatingdegreedays": {
+                "required": false,
+                "type": "string"
+              },
+              "since1julheatingdegreedaysnormal": {
+                "required": false,
+                "type": "string"
+              },
+              "coolingdegreedaysnormal": {
+                "required": false,
+                "type": "string"
+              },
+              "monthtodatecoolingdegreedays": {
+                "required": false,
+                "type": "string"
+              },
+              "monthtodatecoolingdegreedaysnormal": {
+                "required": false,
+                "type": "string"
+              },
+              "since1sepcoolingdegreedays": {
+                "required": false,
+                "type": "string"
+              },
+              "since1sepcoolingdegreedaysnormal": {
+                "required": false,
+                "type": "string"
+              },
+              "since1jancoolingdegreedays": {
+                "required": false,
+                "type": "string"
+              },
+              "since1jancoolingdegreedaysnormal": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

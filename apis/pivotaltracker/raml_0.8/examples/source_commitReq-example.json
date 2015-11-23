@@ -1,0 +1,8 @@
+{
+  "source_commit" : {
+    "commit_id" : "abc123" ,
+    "message" : "[#555] some commit" ,
+    "url" : "http://example.com/abc123" ,
+    "author" : "Darth Vader"
+  }
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="magento_api">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="item_id" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="product_id" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="stock_id" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="qty" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+        <xsd:element name="min_qty" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+        <xsd:element name="use_config_min_qty" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="is_qty_decimal" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="backorders" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="use_config_backorders" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="min_sale_qty" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+        <xsd:element name="use_config_min_sale_qty" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="max_sale_qty" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+        <xsd:element name="use_config_max_sale_qty" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="is_in_stock" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="low_stock_date" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="notify_stock_qty" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+        <xsd:element name="use_config_notify_stock_qty" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="manage_stock" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="use_config_manage_stock" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="stock_status_changed_auto" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="use_config_qty_increments" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="qty_increments" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+        <xsd:element name="use_config_enable_qty_inc" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="enable_qty_increments" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="is_decimal_divided" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

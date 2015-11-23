@@ -1,0 +1,8 @@
+{
+  "introduction" : {
+    "status" : "received" ,
+    "visibility" : "genome" ,
+    "message_text" : "Hi! Want to explore?"
+  } ,
+  "can_send" : false
+}

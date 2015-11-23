@@ -1,0 +1,29 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "vpnservice" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "subnet_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "router_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "admin_state_up" : {
+          "type" : "boolean" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

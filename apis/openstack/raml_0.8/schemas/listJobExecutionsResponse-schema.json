@@ -1,0 +1,393 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "job_executions" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "output_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "info" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "status" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "externalId" : {
+                  "type" : "object" ,
+                  "required" : false
+                } ,
+                "run" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "startTime" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "appName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "lastModTime" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "actions" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                    {
+                      "type" : "object" ,
+                      "properties" : {
+                        "status" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "retries" : {
+                          "type" : "number" ,
+                          "required" : false
+                        } ,
+                        "transition" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "stats" : {
+                          "type" : "object" ,
+                          "required" : false
+                        } ,
+                        "startTime" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "cred" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "errorMessage" : {
+                          "type" : "object" ,
+                          "required" : false
+                        } ,
+                        "externalId" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "errorCode" : {
+                          "type" : "object" ,
+                          "required" : false
+                        } ,
+                        "consoleUrl" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "toString" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "externalStatus" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "conf" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "trackerUri" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "externalChildIDs" : {
+                          "type" : "object" ,
+                          "required" : false
+                        } ,
+                        "endTime" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "data" : {
+                          "type" : "object" ,
+                          "required" : false
+                        } ,
+                        "id" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "name" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } , {
+                      "type" : "object" ,
+                      "properties" : {
+                        "status" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "retries" : {
+                          "type" : "number" ,
+                          "required" : false
+                        } ,
+                        "transition" : {
+                          "type" : "object" ,
+                          "required" : false
+                        } ,
+                        "stats" : {
+                          "type" : "object" ,
+                          "required" : false
+                        } ,
+                        "startTime" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "cred" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "errorMessage" : {
+                          "type" : "object" ,
+                          "required" : false
+                        } ,
+                        "externalId" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "errorCode" : {
+                          "type" : "object" ,
+                          "required" : false
+                        } ,
+                        "consoleUrl" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "toString" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "externalStatus" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "conf" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "trackerUri" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "externalChildIDs" : {
+                          "type" : "object" ,
+                          "required" : false
+                        } ,
+                        "endTime" : {
+                          "type" : "object" ,
+                          "required" : false
+                        } ,
+                        "data" : {
+                          "type" : "object" ,
+                          "required" : false
+                        } ,
+                        "id" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "name" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    }
+                  ]
+                } ,
+                "acl" : {
+                  "type" : "object" ,
+                  "required" : false
+                } ,
+                "consoleUrl" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "appPath" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "toString" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "user" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "conf" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "parentId" : {
+                  "type" : "object" ,
+                  "required" : false
+                } ,
+                "createdTime" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "group" : {
+                  "type" : "object" ,
+                  "required" : false
+                } ,
+                "endTime" : {
+                  "type" : "object" ,
+                  "required" : false
+                } ,
+                "id" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "job_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "tenant_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "start_time" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "updated_at" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "return_code" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "oozie_job_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "input_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "end_time" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "cluster_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "progress" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "job_configs" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "created_at" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "output_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "info" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "status" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "job_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "tenant_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "start_time" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "updated_at" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "return_code" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "oozie_job_id" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "input_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "end_time" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "cluster_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "progress" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "job_configs" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "created_at" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+#%RAML 0.8
+---
+description: |
+  User-authenticated calls are made using an access token sent in the header.
+type: OAuth 2.0
+describedBy:
+  headers:
+    Authorization:
+      description: |
+        Used to send a valid OAuth 2 access token. 
+      type: string
+      example: "Bearer YOUR_ACCESS_TOKEN"
+settings:
+  authorizationUrl: https://api.quizlet.com/2.0/users/USERNAME

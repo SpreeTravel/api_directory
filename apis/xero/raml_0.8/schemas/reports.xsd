@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Response">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Id"/>
+    <xs:element ref="Status"/>
+    <xs:element ref="ProviderName"/>
+    <xs:element ref="DateTimeUTC"/>
+    <xs:element ref="Reports"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Id" type="xs:string"/>
+  <xs:element name="Status" type="xs:NCName"/>
+  <xs:element name="ProviderName" type="xs:string"/>
+  <xs:element name="DateTimeUTC" type="xs:dateTime"/>
+  <xs:element name="Reports">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Report"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Report">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="ReportID"/>
+    <xs:element ref="ReportName"/>
+    <xs:element ref="ReportType"/>
+    <xs:element ref="ReportDate"/>
+    <xs:element ref="UpdatedDateUTC"/>
+    <xs:element ref="Attributes"/>
+    <xs:element ref="Fields"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="ReportID" type="xs:string"/>
+  <xs:element name="ReportName" type="xs:string"/>
+  <xs:element name="ReportType" type="xs:NCName"/>
+  <xs:element name="ReportDate" type="xs:string"/>
+  <xs:element name="UpdatedDateUTC" type="xs:dateTime"/>
+  <xs:element name="Attributes">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element maxOccurs="unbounded" ref="ReportAttribute"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="ReportAttribute">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Name"/>
+    <xs:element ref="Description"/>
+    <xs:element ref="Value"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Name" type="xs:NCName"/>
+  <xs:element name="Fields">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element maxOccurs="unbounded" ref="ReportField"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="ReportField">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="FieldID"/>
+    <xs:element minOccurs="0" ref="Description"/>
+    <xs:element ref="Value"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="FieldID" type="xs:NMTOKEN"/>
+  <xs:element name="Description" type="xs:string"/>
+  <xs:element name="Value" type="xs:string"/>
+</xs:schema>

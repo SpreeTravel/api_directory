@@ -1,0 +1,27 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": false
+    },
+    "rating": {
+      "type": "number",
+      "required": false
+    },
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "urlLink": {
+      "type": "string",
+      "required": false
+    },
+    "viewCount": {
+      "type": "integer",
+      "required": false
+    }
+  }
+}

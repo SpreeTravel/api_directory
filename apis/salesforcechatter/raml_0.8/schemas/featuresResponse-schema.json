@@ -1,0 +1,107 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "chatter": {
+      "type": "boolean",
+      "required": false
+    },
+    "chatterActivity": {
+      "type": "boolean",
+      "required": false
+    },
+    "chatterAnswers": {
+      "type": "boolean",
+      "required": false
+    },
+    "chatterGlobalInfluence": {
+      "type": "boolean",
+      "required": false
+    },
+    "chatterGroupRecords": {
+      "type": "boolean",
+      "required": false
+    },
+    "chatterGroupRecordSharing": {
+      "type": "boolean",
+      "required": false
+    },
+    "chatterMessages": {
+      "type": "boolean",
+      "required": false
+    },
+    "chatterTopics": {
+      "type": "boolean",
+      "required": false
+    },
+    "communitiesEnabled": {
+      "type": "boolean",
+      "required": false
+    },
+    "communityModeration": {
+      "type": "boolean",
+      "required": false
+    },
+    "communityReputation": {
+      "type": "boolean",
+      "required": false
+    },
+    "dashboardComponentSnapshots": {
+      "type": "boolean",
+      "required": false
+    },
+    "defaultCurrencyIsoCode": {
+      "type": "string",
+      "required": false
+    },
+    "feedPolling": {
+      "type": "boolean",
+      "required": false
+    },
+    "files": {
+      "type": "boolean",
+      "required": false
+    },
+    "filesOnComments": {
+      "type": "boolean",
+      "required": false
+    },
+    "groupsCanFollow": {
+      "type": "boolean",
+      "required": false
+    },
+    "ideas": {
+      "type": "boolean",
+      "required": false
+    },
+    "managedTopicsEnabled": {
+      "type": "boolean",
+      "required": false
+    },
+    "mobileNotificationsEnabled": {
+      "type": "boolean",
+      "required": false
+    },
+    "multiCurrency": {
+      "type": "boolean",
+      "required": false
+    },
+    "publisherActions": {
+      "type": "boolean",
+      "required": false
+    },
+    "storeDataOnDevicesEnabled": {
+      "type": "boolean",
+      "required": false
+    },
+    "trendingTopics": {
+      "type": "boolean",
+      "required": false
+    },
+    "viralInvitesAllowed": {
+      "type": "boolean",
+      "required": false
+    }
+  }
+}

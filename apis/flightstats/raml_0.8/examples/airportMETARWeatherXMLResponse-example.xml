@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+	<appendix>
+		<airports>
+			<airport>
+				<fs>ORD</fs>
+				<iata>ORD</iata>
+				<icao>KORD</icao>
+				<faa>ORD</faa>
+				<name>O'Hare International Airport</name>
+				<street1>10000 West O'Hare</street1>
+				<city>Chicago</city>
+				<cityCode>CHI</cityCode>
+				<stateCode>IL</stateCode>
+				<postalCode>60666</postalCode>
+				<countryCode>US</countryCode>
+				<countryName>United States</countryName>
+				<regionName>North America</regionName>
+				<timeZoneRegionName>America/Chicago</timeZoneRegionName>
+				<weatherZone>ILZ014</weatherZone>
+				<localTime>2015-04-28T03:14:35.332</localTime>
+				<utcOffsetHours>-5.0</utcOffsetHours>
+				<latitude>41.976912</latitude>
+				<longitude>-87.904876</longitude>
+				<elevationFeet>668</elevationFeet>
+				<classification>1</classification>
+				<active>true</active>
+				<delayIndexUrl>https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/ORD?codeType=fs</delayIndexUrl>
+			</airport>
+		</airports>
+	</appendix>
+	<request>
+		<url>https://api.flightstats.com/flex/weather/rest/v1/xml/metar/ORD</url>
+		<airport>
+			<requestedCode>ORD</requestedCode>
+			<fsCode>ORD</fsCode>
+		</airport>
+		<codeType/>
+	</request>
+	<metar>
+		<report>KORD 280651Z 00000KT 10SM CLR 04/01 A3013 RMK AO2 SLP204 T00390006</report>
+		<reportTime>2015-04-28T06:51:00.000Z</reportTime>
+		<weatherStationIcao>KORD</weatherStationIcao>
+		<tags>
+			<tag>
+				<key>Freezing</key>
+				<value>4</value>
+			</tag>
+			<tag>
+				<key>Instrumentation</key>
+				<value>VFR</value>
+			</tag>
+			<tag>
+				<key>Prevailing Conditions</key>
+				<value>Clear</value>
+			</tag>
+		</tags>
+		<conditions>
+			<wind>
+				<direction>0</direction>
+				<directionIsVariable>false</directionIsVariable>
+				<speedKnots>0.00</speedKnots>
+			</wind>
+			<visibility>
+				<miles>10.00</miles>
+				<lessThan>false</lessThan>
+				<cavok>false</cavok>
+			</visibility>
+			<weatherConditions/>
+			<skyConditions>
+				<skyCondition>
+					<coverage>Clear</coverage>
+				</skyCondition>
+			</skyConditions>
+			<pressureInchesHg>30.13</pressureInchesHg>
+		</conditions>
+		<temperatureCelsius>3.90</temperatureCelsius>
+		<dewPointCelsius>0.60</dewPointCelsius>
+		<runwayVisualRanges/>
+		<obscurations/>
+		<noSignificantChange>false</noSignificantChange>
+	</metar>
+</response>

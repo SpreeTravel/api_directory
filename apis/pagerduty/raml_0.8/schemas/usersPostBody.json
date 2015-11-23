@@ -1,0 +1,23 @@
+{
+	"type" : "object" ,
+	"required" : true ,
+	"$schema" : "http://json-schema.org/draft-03/schema" ,
+	"properties" : {
+		"role" : {
+			"type" : "string" ,
+			"required" : false
+		} ,
+		"name" : {
+			"type" : "string" ,
+			"required" : false
+		} ,
+		"email" : {
+			"type" : "string" ,
+			"required" : false
+		} ,
+		"requester_id" : {
+			"type" : "string" ,
+			"required" : false
+		}
+	}
+}

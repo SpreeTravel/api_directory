@@ -1,0 +1,27 @@
+{
+    "": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+    	"sid": {
+    		"type": "string"
+    	},
+		"account_sid": {
+			"type": "string"
+		},
+		"friendly_name": {
+			"type": "string"
+		},
+		"phone_number": {
+			"type": "string"
+		},
+		"date_created": {
+			"type": "string"
+		},
+		"date_updated": {
+			"type": "string"
+		},
+		"uri": {
+			"type": "string"
+		}
+    }
+}    

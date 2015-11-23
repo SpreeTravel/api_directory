@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "album_id": {
+      "required": false,
+      "type": "integer"
+    },
+    "details": {
+      "required": false,
+      "type": "string"
+    },
+    "photo_id": {
+      "required": false,
+      "type": "integer"
+    },
+    "title": {
+      "required": false,
+      "type": "integer"
+    }
+  }
+}

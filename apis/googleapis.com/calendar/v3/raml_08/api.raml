@@ -1,0 +1,545 @@
+#%RAML 0.8
+title: Google Calendar
+version: v3
+baseUri: https://www.googleapis.com/calendar/{version}
+mediaType: application/json
+securitySchemes:
+  - oauth_2_0: !include securitySchemes/oauth_2_0.raml
+schemas:
+  - aclResourceResponse: !include schemas/aclResourceResponse-schema.json
+  - createAccessRuleRequest: !include schemas/createAccessRuleRequest-schema.json
+  - aclListResponse: !include schemas/aclListResponse-schema.json
+  - watchRequest: !include schemas/watchRequest-schema.json
+  - watchResponse: !include schemas/watchResponse-schema.json
+  - userCalendarResponse: !include schemas/userCalendarResponse-schema.json
+  - createUserCalendarRequest: !include schemas/createUserCalendarRequest-schema.json
+  - calendarListResponse: !include schemas/calendarListResponse-schema.json
+  - calendarListChangesRequst: !include schemas/calendarListChangesRequst-schema.json
+  - calendarListChangesResponse: !include schemas/calendarListChangesResponse-schema.json
+  - calendarResponse: !include schemas/calendarResponse-schema.json
+  - newCalendarRequest: !include schemas/newCalendarRequest-schema.json
+  - updateCalendarRequest: !include schemas/updateCalendarRequest-schema.json
+  - colorResponse: !include schemas/colorResponse-schema.json
+  - eventResourceResponse: !include schemas/eventResourceResponse-schema.json
+  - createEventResourceRequest: !include schemas/createEventResourceRequest-schema.json
+  - instancesResponse: !include schemas/instancesResponse-schema.json
+  - eventWatchRequest: !include schemas/eventWatchRequest-schema.json
+  - freeBusyRequest: !include schemas/freeBusyRequest-schema.json
+  - freeBusyResponse: !include schemas/freeBusyResponse-schema.json
+  - settingResponse: !include schemas/settingResponse-schema.json
+  - settingsResponse: !include schemas/settingsResponse-schema.json
+  - watchSettingsRequest: !include schemas/watchSettingsRequest-schema.json
+  - watchSettingsResponse: !include schemas/watchSettingsResponse-schema.json
+  - stopWatchingRequest: !include schemas/stopWatchingRequest-schema.json
+  - updateAccessRuleRequest: !include schemas/updateAccessRuleRequest-schema.json
+  - updateUserCalendarRequest: !include schemas/updateUserCalendarRequest-schema.json
+resourceTypes:
+  - watch: !include resourceTypes/watch.raml
+traits:
+  - sendNotifications: !include traits/sendNotifications.raml
+  - calendarList: !include traits/calendarList.raml
+  - calendarEvent: !include traits/calendarEvent.raml
+  - maxResult: !include traits/maxResult.raml
+securedBy: [ oauth_2_0 ]
+/calendars: 
+  post: 
+    description: Creates a secondary calendar.
+    body: 
+      application/json: 
+        schema: newCalendarRequest
+        example: !include examples/newCalendarRequest-example.json
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: calendarResponse
+            example: !include examples/calendarResponse-example.json
+  /{calendar_id}: 
+    uriParameters: 
+      calendar_id: 
+        displayName: calendar_id
+        description: Calendar id
+        required: true
+        example: d2jgoc87u2b8ffc9gp3hu0af8k@group.calendar.google.com
+    get: 
+      description: Returns metadata for a calendar.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: calendarResponse
+              example: !include examples/calendarResponse-example.json
+    put: 
+      description: Updates metadata for a calendar.
+      body: 
+        application/json: 
+          schema: updateCalendarRequest
+          example: !include examples/updateCalendarRequest-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: calendarResponse
+              example: !include examples/calendarResponse-example.json
+    delete: 
+      description: Deletes a secondary calendar.
+      responses: 
+        204: 
+          description: If successful, this method returns an empty response body.
+    patch: 
+      description: Updates metadata for a calendar. This method supports patch semantics.
+      body: 
+        application/json: 
+          schema: newCalendarRequest
+          example: !include examples/newCalendarRequest-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: calendarResponse
+              example: !include examples/calendarResponse-example.json
+    /acl: 
+      get: 
+        is: [ calendarList , maxResult ]
+        description: Returns the rules in the access control list for the calendar.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: aclListResponse
+                example: !include examples/aclListResponse-example.json
+      post: 
+        description: Creates an access control rule.
+        body: 
+          application/json: 
+            schema: createAccessRuleRequest
+            example: !include examples/createAccessRuleRequest-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: aclResourceResponse
+                example: !include examples/aclResourceResponse-example.json
+      /{rule_id}: 
+        uriParameters: 
+          rule_id: 
+            displayName: rule_id
+            description: Id ACL
+            required: true
+            example: "user:ramltest3@list.ru"
+        get: 
+          description: Returns an access control rule.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: aclResourceResponse
+                  example: !include examples/aclResourceResponse-example.json
+        put: 
+          description: Updates an access control rule.
+          body: 
+            application/json: 
+              schema: updateAccessRuleRequest
+              example: !include examples/createAccessRuleRequest-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: aclResourceResponse
+                  example: !include examples/aclResourceResponse-example.json
+        delete: 
+          description: Deletes an access control rule.
+          responses: 
+            204: 
+              description: If successful, this method returns an empty response body.
+        patch: 
+          description: Updates an access control rule. This method supports patch semantics.
+          body: 
+            application/json: 
+              schema: updateAccessRuleRequest
+              example: !include examples/createAccessRuleRequest-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: aclResourceResponse
+                  example: !include examples/aclResourceResponse-example.json
+      /watch: 
+        type: watch
+    /clear: 
+      post: 
+        description: Clears a primary calendar. This operation deletes all data associated with the primary calendar of an account and cannot be undone.
+        responses: 
+          201: 
+            description: If successful, this method returns an empty response body.
+    /events: 
+      post: 
+        is: [ sendNotifications ]
+        description: Creates an event.
+        queryParameters: 
+          maxAttendees: 
+            description: The maximum number of attendees to include in the response. If there are more than the specified number of attendees, only the participant is returned. Optional.
+            type: integer
+            example: 15
+        body: 
+          application/json: 
+            schema: createEventResourceRequest
+            example: !include examples/createEventResourceRequest-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: eventResourceResponse
+                example: !include examples/eventResourceResponse-example.json
+      get: 
+        is: [ calendarEvent , calendarList ]
+        description: Returns events on the specified calendar.
+        queryParameters: 
+          iCalUID: 
+            description: Specifies event ID in the iCalendar format to be included in the response. Optional.
+            example: 4992cn3nvm4dn0a5f5gmu184n4@google.com
+          maxResults: 
+            description: Maximum number of events returned on one result page. By default the value is 250 events. The page size can never be larger than 2500 events. Optional.
+            example: 15
+          orderBy: 
+            description: The order of the events returned in the result. Optional. The default is an unspecified, stable order.
+            example: startTime
+          privateExtendedProperty: 
+            description: Extended properties constraint specified as propertyName=value. Matches only private properties. This parameter might be repeated multiple times to return events that match all given constraints.
+          q: 
+            description: Free text search terms to find events that match these terms in any field, except for extended properties. Optional.
+            example: news
+          sharedExtendedProperty: 
+            description: Extended properties constraint specified as propertyName=value. Matches only shared properties. This parameter might be repeated multiple times to return events that match all given constraints.
+          showHiddenInvitations: 
+            description: Whether to include hidden invitations in the result. Optional. The default is False.
+            type: boolean
+            default: false
+            example: true
+          singleEvents: 
+            description: Whether to expand recurring events into instances and only return single one-off events and instances of recurring events, but not the underlying recurring events themselves. Optional. The default is False.
+            type: boolean
+            default: false
+            example: false
+          timeMax: 
+            description: "Upper bound (exclusive) for an event's start time to filter by. Optional. The default is not to filter by start time."
+            type: date
+            example: "04:45:03"
+          timeMin: 
+            description: "Lower bound (inclusive) for an event's end time to filter by. Optional. The default is not to filter by end time."
+            type: date
+            example: "04:45:03"
+          timeZone: 
+            description: Time zone used in the response. Optional. The default is the time zone of the calendar.
+            example: UTC
+          updatedMin: 
+            description: "Lower bound for an event's last modification time (as a RFC 3339 timestamp) to filter by. When specified, entries deleted since this time will always be included regardless of showDeleted. Optional. The default is not to filter by last modification time."
+            type: date
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: instancesResponse
+                example: !include examples/instancesResponse-example.json
+      /import: 
+        post: 
+          description: Imports an event. This operation is used to add a private copy of an existing event to a calendar.
+          body: 
+            application/json: 
+              schema: createEventResourceRequest
+              example: !include examples/createEventResourceRequest-example.json
+          responses: 
+            201: 
+              body: 
+                application/json: 
+                  schema: eventResourceResponse
+                  example: !include examples/eventResourceResponse-example.json
+      /{event_id}: 
+        get: 
+          is: [ calendarEvent ]
+          description: Returns an event.
+          queryParameters: 
+            timeZone: 
+              description: Time zone used in the response. Optional. The default is the time zone of the calendar.
+              example: UTC
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: eventResourceResponse
+                  example: !include examples/eventResourceResponse-example.json
+        put: 
+          is: [ calendarEvent , sendNotifications ]
+          description: Updates an event.
+          body: 
+            application/json: 
+              schema: createEventResourceRequest
+              example: !include examples/createEventResourceRequest-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: eventResourceResponse
+                  example: !include examples/eventResourceResponse-example.json
+        delete: 
+          is: [ sendNotifications ]
+          description: Deletes an event.
+          responses: 
+            200: 
+              description: If successful, this method returns an empty response body.
+        patch: 
+          is: [ sendNotifications ]
+          description: Updates an event. This method supports patch semantics.
+          queryParameters: 
+            eventResourceResponse: 
+              description: Whether to always include a value in the email field for the organizer, creator and attendees, even if no real email is available (i.e. a generated, non-working value will be provided). The use of this option is discouraged and should only be used by clients which cannot handle the absence of an email address value in the mentioned places. Optional. The default is False.
+              type: boolean
+              default: false
+              example: false
+            maxAttendees: 
+              description: The maximum number of attendees to include in the response. If there are more than the specified number of attendees, only the participant is returned. Optional.
+              type: integer
+              example: 15
+          body: 
+            application/json: 
+              schema: createEventResourceRequest
+              example: !include examples/createEventResourceRequest-example.json
+          responses: 
+            201: 
+              body: 
+                application/json: 
+                  schema: eventResourceResponse
+                  example: !include examples/eventResourceResponse-example.json
+        /instances: 
+          get: 
+            is: [ calendarEvent , maxResult ]
+            description: Returns instances of the specified recurring event.
+            queryParameters: 
+              originalStart: 
+                description: The original start time of the instance in the result. Optional.
+              pageToken: 
+                description: Token specifying which result page to return. Optional.
+                example: 00001416408713375000
+              showDeleted: 
+                description: 'Whether to include deleted events (with status equals "cancelled") in the result. Cancelled instances of recurring events will still be included if singleEvents is False. Optional. The default is False.'
+                type: boolean
+                default: false
+                example: true
+              timeMax: 
+                description: "Upper bound (exclusive) for an event's start time to filter by. Optional. The default is not to filter by start time."
+                type: date
+                example: "04:45:03"
+              timeMin: 
+                description: "Lower bound (inclusive) for an event's end time to filter by. Optional. The default is not to filter by end time."
+                type: date
+                example: "04:45:03"
+              timeZone: 
+                description: Time zone used in the response. Optional. The default is the time zone of the calendar.
+                example: UTC
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: instancesResponse
+                    example: !include examples/instancesResponse-example.json
+        /move: 
+          post: 
+            is: [ sendNotifications ]
+            description: |
+              Moves an event to another calendar, i.e. changes an event's organizer.
+              Required query parameters: destination
+            queryParameters: 
+              destination: 
+                description: Calendar identifier of the target calendar where the event is to be moved to.
+                required: true
+            responses: 
+              201: 
+                body: 
+                  application/json: 
+                    schema: eventResourceResponse
+                    example: !include examples/eventResourceResponse-example.json
+      /quickAdd: 
+        post: 
+          is: [ sendNotifications ]
+          description: |
+            Creates an event based on a simple text string.
+            Required query parameters: text
+          queryParameters: 
+            text: 
+              description: The text describing the event to be created.
+              required: true
+              example: My event
+          responses: 
+            201: 
+              body: 
+                application/json: 
+                  schema: eventResourceResponse
+                  example: !include examples/eventResourceResponse-example.json
+      /watch: 
+        type: watch
+/colors: 
+  get: 
+    description: Returns the color definitions for calendars and events.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: colorResponse
+            example: !include examples/colorResponse-example.json
+/freeBusy: 
+  description: For Freebusy Resource details, see the resource representation page.
+  post: 
+    description: Returns free/busy information for a set of calendars.
+    body: 
+      application/json: 
+        schema: freeBusyRequest
+        example: !include examples/freeBusyRequest-example.json
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: freeBusyResponse
+            example: !include examples/freeBusyResponse-example.json
+/channels/stop: 
+  post: 
+    description: Stop watching resources through this channel.
+    body: 
+      application/json: 
+        schema: stopWatchingRequest
+        example: !include examples/stopWatchingRequest-example.json
+    responses: 
+      201: 
+        description: If successful, this method returns an empty response body.
+/users/me: 
+  /settings: 
+    get: 
+      is: [ maxResult ]
+      description: Returns all user settings for the authenticated user.
+      queryParameters: 
+        pageToken: 
+          description: Token specifying which result page to return. Optional.
+          example: 00001416406191979000
+        syncToken: 
+          description: Token obtained from the nextSyncToken field returned on the last page of results from the previous list request. It makes the result of this list request contain only entries that have changed since then.
+          example: 00001416406191979000
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: settingsResponse
+              example: !include examples/settingsResponse-example.json
+    /watch: 
+      type: watch
+    /{setting}: 
+      uriParameters: 
+        setting: 
+          displayName: setting
+          description: Setting
+          required: true
+          example: remindOnRespondedEventsOnly
+      get: 
+        description: Returns a single user setting.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: settingResponse
+                example: !include examples/settingResponse-example.json
+  /calendarList: 
+    get: 
+      is: [ calendarList , maxResult ]
+      description: "Returns entries on the user's calendar list."
+      queryParameters: 
+        minAccessRole: 
+          description: The minimum access role for the user in the returned entires. Optional. The default is no restriction.
+          example: reader
+        showHidden: 
+          description: Whether to show hidden entries. Optional. The default is False.
+          type: boolean
+          default: false
+          example: true
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: calendarListResponse
+              example: !include examples/calendarListResponse-example.json
+    post: 
+      description: "Adds an entry to the user's calendar list."
+      queryParameters: 
+        colorRgbFormat: 
+          description: Whether to use the foregroundColor and backgroundColor fields to write the calendar colors (RGB). If this feature is used, the index-based colorId field will be set to the best matching option automatically. Optional. The default is False.
+          type: boolean
+          default: false
+          example: true
+      body: 
+        application/json: 
+          schema: createUserCalendarRequest
+          example: !include examples/createUserCalendarRequest-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: userCalendarResponse
+              example: !include examples/userCalendarResponse-example.json
+    /{calendar_id}: 
+      uriParameters: 
+        calendar_id: 
+          displayName: calendar_id
+          description: Calendar id
+          required: true
+          example: l0ackgv99oiqtsnum7bk0br22s@group.calendar.google.com
+      get: 
+        description: "Returns an entry on the user's calendar list."
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: userCalendarResponse
+                example: !include examples/userCalendarResponse-example.json
+      put: 
+        description: "Updates an entry on the user's calendar list."
+        queryParameters: 
+          colorRgbFormat: 
+            description: Whether to use the foregroundColor and backgroundColor fields to write the calendar colors (RGB). If this feature is used, the index-based colorId field will be set to the best matching option automatically. Optional. The default is False.
+            type: boolean
+            default: false
+            example: false
+        body: 
+          application/json: 
+            schema: updateUserCalendarRequest
+            example: !include examples/createUserCalendarRequest-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: userCalendarResponse
+                example: !include examples/userCalendarResponse-example.json
+      delete: 
+        description: "Deletes an entry on the user's calendar list."
+        responses: 
+          204: 
+            description: If successful, this method returns an empty response body.
+      patch: 
+        description: "Updates an entry on the user's calendar list. This method supports patch semantics."
+        queryParameters: 
+          colorRgbFormat: 
+            description: Whether to use the foregroundColor and backgroundColor fields to write the calendar colors (RGB). If this feature is used, the index-based colorId field will be set to the best matching option automatically. Optional. The default is False.
+            type: boolean
+            default: false
+            example: true
+        body: 
+          application/json: 
+            schema: updateUserCalendarRequest
+            example: !include examples/createUserCalendarRequest-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: userCalendarResponse
+                example: !include examples/userCalendarResponse-example.json
+    /watch: 
+      type: watch
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

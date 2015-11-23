@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "activity": {
+      "type": "object",
+      "properties": {
+        "accessLevel": {
+          "enum": [
+            "PUBLIC",
+            "PRIVATE",
+            "SHARED"
+          ]
+        },
+        "activityLevels": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "maxSpeedMPH": {
+                "type": "number"
+              },
+              "minSpeedMPH": {
+                "type": "integer"
+              },
+              "mets": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "hasSpeed": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

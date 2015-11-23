@@ -1,0 +1,35 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "parentId": {
+      "type": "string",
+      "required": false
+    },
+    "filterId1": {
+      "type": "string",
+      "required": false
+    },
+    "filterId2": {
+      "type": "string",
+      "required": false
+    },
+    "filterId3": {
+      "type": "string",
+      "required": false
+    },
+    "feedItemBody": {
+      "type": "object",
+      "required": false,
+      "properties": {"messageSegments": {
+        "type": "array",
+        "required": false
+      }}
+    },
+    "runningUserId": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+	"type" : "object" ,
+	"$schema" : "http://json-schema.org/draft-03/schema" ,
+	"required" : true ,
+	"properties" : {
+		"username" : {
+			"type" : "string" ,
+			"required" : true
+		} ,
+		"email" : {
+			"type" : "string" ,
+			"required" : false
+		} ,
+		"phone" : {
+			"type" : "string" ,
+			"required" : false
+		} ,
+		"objectId" : {
+			"type" : "string" ,
+			"required" : true
+		} ,
+		"createdAt" : {
+			"type" : "string" ,
+			"required" : true
+		} ,		
+		"updatedAt" : {
+			"type" : "string" ,
+			"required" : true
+		}
+	},
+	"patternProperties" : {
+		"^[a-zA-Z0-9_]+$" : {
+			"type" : "any" ,
+			"required" : false
+		}
+	} ,
+	"additionalProperties" : false
+}

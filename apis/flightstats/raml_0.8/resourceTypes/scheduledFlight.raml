@@ -1,0 +1,15 @@
+get: 
+  is: [ extendedOptions ]
+  description: Scheduled Flight(s) by carrier and flight number, departing on the given date.
+  queryParameters: 
+    codeType: 
+    callback: 
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: scheduledFlightJSONResponse
+          example: !include ../examples/scheduledFlightJSONResponse-example.json
+        application/xml: 
+          schema: scheduledFlightXMLResponse
+          example: !include ../examples/scheduledFlightXMLResponse-example.xml

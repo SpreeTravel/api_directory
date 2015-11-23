@@ -1,0 +1,687 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "Headline": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "EffectiveDate": {
+          "required": false,
+          "type": "string"
+        },
+        "EffectiveEpochDate": {
+          "required": false,
+          "type": "integer"
+        },
+        "Severity": {
+          "required": false,
+          "type": "integer"
+        },
+        "Text": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    },
+    "DailyForecasts": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "AirQuality": {
+            "required": false,
+            "type": "array",
+            "items": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "Category": {
+                  "required": false,
+                  "type": "string"
+                },
+                "CategoryValue": {
+                  "required": false,
+                  "type": "integer"
+                },
+                "Name": {
+                  "required": false,
+                  "type": "string"
+                },
+                "Type": {
+                  "required": false,
+                  "type": "string"
+                },
+                "Value": {
+                  "required": false,
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "Date": {
+            "required": false,
+            "type": "string"
+          },
+          "Day": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "Icon": {
+                "required": false,
+                "type": "integer"
+              },
+              "IconPhrase": {
+                "required": false,
+                "type": "string"
+              },
+              "ShortPhrase": {
+                "required": false,
+                "type": "string"
+              },
+              "LongPhrase": {
+                "required": false,
+                "type": "string"
+              },
+              "PrecipitationProbability": {
+                "required": false,
+                "type": "integer"
+              },
+              "ThunderstormProbability": {
+                "required": false,
+                "type": "integer"
+              },
+              "RainProbability": {
+                "required": false,
+                "type": "integer"
+              },
+              "SnowProbability": {
+                "required": false,
+                "type": "integer"
+              },
+              "IceProbability": {
+                "required": false,
+                "type": "integer"
+              },
+              "Wind": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Speed": {
+                    "required": false,
+                    "type": "object",
+                    "properties": {
+                      "Value": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "Unit": {
+                        "required": false,
+                        "type": "string"
+                      },
+                      "UnitType": {
+                        "required": false,
+                        "type": "integer"
+                      }
+                    }
+                  },
+                  "Direction": {
+                    "required": false,
+                    "type": "object",
+                    "properties": {
+                      "Degrees": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "Localized": {
+                        "required": false,
+                        "type": "string"
+                      },
+                      "English": {
+                        "required": false,
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              },
+              "WindGust": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Speed": {
+                    "required": false,
+                    "type": "object",
+                    "properties": {
+                      "Value": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "Unit": {
+                        "required": false,
+                        "type": "string"
+                      },
+                      "UnitType": {
+                        "required": false,
+                        "type": "integer"
+                      }
+                    }
+                  },
+                  "Direction": {
+                    "required": false,
+                    "type": "object",
+                    "properties": {
+                      "Degrees": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "Localized": {
+                        "required": false,
+                        "type": "string"
+                      },
+                      "English": {
+                        "required": false,
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              },
+              "TotalLiquid": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Unit": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "UnitType": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              },
+              "Rain": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Unit": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "UnitType": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              },
+              "Snow": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Unit": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "UnitType": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              },
+              "Ice": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Unit": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "UnitType": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              },
+              "HoursOfPrecipitation": {
+                "required": false,
+                "type": "integer"
+              },
+              "HoursOfRain": {
+                "required": false,
+                "type": "integer"
+              },
+              "CloudCover": {
+                "required": false,
+                "type": "integer"
+              }
+            }
+          },
+          "EpochDate": {
+            "required": false,
+            "type": "integer"
+          },
+          "HoursOfSun": {
+            "required": false,
+            "type": "number"
+          },
+          "Link": {
+            "required": false,
+            "type": "string"
+          },
+          "MobileLink": {
+            "required": false,
+            "type": "string"
+          },
+          "Moon": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "Rise": {
+                "required": false,
+                "type": "string"
+              },
+              "EpochRise": {
+                "required": false,
+                "type": "integer"
+              },
+              "Set": {
+                "required": false,
+                "type": "string"
+              },
+              "EpochSet": {
+                "required": false,
+                "type": "integer"
+              },
+              "Phase": {
+                "required": false,
+                "type": "string"
+              },
+              "Age": {
+                "required": false,
+                "type": "integer"
+              }
+            }
+          },
+          "Night": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "Icon": {
+                "required": false,
+                "type": "integer"
+              },
+              "IconPhrase": {
+                "required": false,
+                "type": "string"
+              },
+              "ShortPhrase": {
+                "required": false,
+                "type": "string"
+              },
+              "LongPhrase": {
+                "required": false,
+                "type": "string"
+              },
+              "PrecipitationProbability": {
+                "required": false,
+                "type": "integer"
+              },
+              "ThunderstormProbability": {
+                "required": false,
+                "type": "integer"
+              },
+              "RainProbability": {
+                "required": false,
+                "type": "integer"
+              },
+              "SnowProbability": {
+                "required": false,
+                "type": "integer"
+              },
+              "IceProbability": {
+                "required": false,
+                "type": "integer"
+              },
+              "Wind": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Speed": {
+                    "required": false,
+                    "type": "object",
+                    "properties": {
+                      "Value": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "Unit": {
+                        "required": false,
+                        "type": "string"
+                      },
+                      "UnitType": {
+                        "required": false,
+                        "type": "integer"
+                      }
+                    }
+                  },
+                  "Direction": {
+                    "required": false,
+                    "type": "object",
+                    "properties": {
+                      "Degrees": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "Localized": {
+                        "required": false,
+                        "type": "string"
+                      },
+                      "English": {
+                        "required": false,
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              },
+              "WindGust": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Speed": {
+                    "required": false,
+                    "type": "object",
+                    "properties": {
+                      "Value": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "Unit": {
+                        "required": false,
+                        "type": "string"
+                      },
+                      "UnitType": {
+                        "required": false,
+                        "type": "integer"
+                      }
+                    }
+                  },
+                  "Direction": {
+                    "required": false,
+                    "type": "object",
+                    "properties": {
+                      "Degrees": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "Localized": {
+                        "required": false,
+                        "type": "string"
+                      },
+                      "English": {
+                        "required": false,
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              },
+              "TotalLiquid": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Unit": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "UnitType": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              },
+              "Rain": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Unit": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "UnitType": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              },
+              "Snow": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Unit": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "UnitType": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              },
+              "Ice": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Unit": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "UnitType": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              },
+              "HoursOfPrecipitation": {
+                "required": false,
+                "type": "integer"
+              },
+              "HoursOfRain": {
+                "required": false,
+                "type": "integer"
+              },
+              "CloudCover": {
+                "required": false,
+                "type": "integer"
+              }
+            }
+          },
+          "RealFeelTemperature": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "Minimum": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Unit": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "UnitType": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              },
+              "Maximum": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Unit": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "UnitType": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "RealFeelTemperatureShade": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "Minimum": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Unit": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "UnitType": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              },
+              "Maximum": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Unit": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "UnitType": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "Sun": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "Rise": {
+                "required": false,
+                "type": "string"
+              },
+              "EpochRise": {
+                "required": false,
+                "type": "integer"
+              },
+              "Set": {
+                "required": false,
+                "type": "string"
+              },
+              "EpochSet": {
+                "required": false,
+                "type": "integer"
+              }
+            }
+          },
+          "Temperature": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "Minimum": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Unit": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "UnitType": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              },
+              "Maximum": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Unit": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "UnitType": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

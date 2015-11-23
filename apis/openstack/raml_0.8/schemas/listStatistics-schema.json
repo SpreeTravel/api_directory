@@ -1,0 +1,60 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : [
+    {
+      "type" : "object" ,
+      "properties" : {
+        "avg" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "count" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "duration" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "duration_end" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "duration_start" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "max" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "min" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "period" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "period_end" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "period_start" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "sum" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "unit" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "uri" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "available_phone_numbers" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : 
+        {
+          "type" : "object" ,
+          "properties" : {
+            "friendly_name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "phone_number" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "lata" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "rate_center" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "latitude" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "longitude" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "region" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "postal_code" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "iso_country" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "capabilities" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "voice" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "SMS" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "MMS" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        }
+      
+    }
+  }
+}

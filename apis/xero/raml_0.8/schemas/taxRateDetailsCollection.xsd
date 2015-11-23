@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="TaxRates">
+  <xs:complexType mixed="true">
+    <xs:sequence>
+    <xs:element minOccurs="0" maxOccurs="unbounded" ref="TaxRate"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="TaxRate">
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+    <xs:element ref="Name"/>
+    <xs:element ref="CanApplyToAssets"/>
+    <xs:element ref="CanApplyToEquity"/>
+    <xs:element ref="CanApplyToExpenses"/>
+    <xs:element ref="CanApplyToLiabilities"/>
+    <xs:element ref="CanApplyToRevenue"/>
+    <xs:element ref="DisplayTaxRate"/>
+    <xs:element ref="EffectiveRate"/>
+    <xs:element ref="Status"/>
+    <xs:element ref="TaxComponents"/>
+    <xs:element ref="TaxType"/>
+    </xs:choice>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="CanApplyToAssets" type="xs:boolean"/>
+  <xs:element name="CanApplyToEquity" type="xs:boolean"/>
+  <xs:element name="CanApplyToExpenses" type="xs:boolean"/>
+  <xs:element name="CanApplyToLiabilities" type="xs:boolean"/>
+  <xs:element name="CanApplyToRevenue" type="xs:boolean"/>
+  <xs:element name="DisplayTaxRate" type="xs:decimal"/>
+  <xs:element name="EffectiveRate" type="xs:decimal"/>
+  <xs:element name="Status" type="xs:NCName"/>
+  <xs:element name="TaxComponents">
+  <xs:complexType mixed="true">
+    <xs:sequence>
+    <xs:element minOccurs="0" maxOccurs="unbounded" ref="TaxComponent"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="TaxComponent">
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+    <xs:element ref="Name"/>
+    <xs:element ref="IsCompound"/>
+    <xs:element ref="Rate"/>
+    </xs:choice>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="IsCompound" type="xs:boolean"/>
+  <xs:element name="Rate" type="xs:decimal"/>
+  <xs:element name="TaxType" type="xs:NCName"/>
+  <xs:element name="Name" type="xs:string"/>
+</xs:schema>

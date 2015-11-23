@@ -1,0 +1,43 @@
+head: 
+  description: |
+    Get information about a recommendation definition.
+    Only community managers (users with the “Create and Set Up Communities” or “Manage Communities” permission) and users with the “Modify All Data” permission can access, create, and delete recommendation definitions and scheduled recommendations. These recommendations appear directly in the feed in communities in the Salesforce1 mobile browser app. They also appear, by default, on the right side of the home page in communities using the Summer ’15 or later version of the Napili template.
+  responses: 
+    200: 
+get: 
+  description: |
+    Get information about a recommendation definition.
+    Only community managers (users with the “Create and Set Up Communities” or “Manage Communities” permission) and users with the “Modify All Data” permission can access, create, and delete recommendation definitions and scheduled recommendations. These recommendations appear directly in the feed in communities in the Salesforce1 mobile browser app. They also appear, by default, on the right side of the home page in communities using the Summer ’15 or later version of the Napili template.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+patch: 
+  description: |
+    Modify a recommendation definition.
+    Only community managers (users with the “Create and Set Up Communities” or “Manage Communities” permission) and users with the “Modify All Data” permission can access, create, and delete recommendation definitions and scheduled recommendations. These recommendations appear directly in the feed in communities in the Salesforce1 mobile browser app. They also appear, by default, on the right side of the home page in communities using the Summer ’15 or later version of the Napili template.
+  queryParameters: 
+    actionUrl: 
+      description: The URL for acting on the recommendation, for example, the URL to join a group.
+    actionUrlName: 
+      description: The text label for the action URL in the user interface, for example, “Launch.”
+    explanation: 
+      description: The explanation, or body, of the recommendation.
+    name: 
+      description: The name of the recommendation definition. The name is displayed in Setup.
+    title: 
+      description: The title of the recommendation definition.
+  body: 
+    application/json: 
+      schema: recommendationDefinitionModifyResquest
+      example: !include examples/recommendationDefinitionModifyResquest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+delete: 
+  description: |
+    Delete a recommendation definition.
+    Only community managers (users with the “Create and Set Up Communities” or “Manage Communities” permission) and users with the “Modify All Data” permission can access, create, and delete recommendation definitions and scheduled recommendations. These recommendations appear directly in the feed in communities in the Salesforce1 mobile browser app. They also appear, by default, on the right side of the home page in communities using the Summer ’15 or later version of the Napili template.
+  responses: 
+    204: 

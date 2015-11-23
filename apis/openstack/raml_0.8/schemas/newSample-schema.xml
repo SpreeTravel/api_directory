@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="value">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="meter" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="type" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="unit" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="volume" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+        <xsd:element name="user_id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="project_id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="resource_id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="source" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="timestamp" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="recorded_at" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="metadata" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="item" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="key" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="value" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

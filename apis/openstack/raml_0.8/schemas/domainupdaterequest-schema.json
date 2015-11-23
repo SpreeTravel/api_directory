@@ -1,0 +1,25 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "domain" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "description" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "enabled" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

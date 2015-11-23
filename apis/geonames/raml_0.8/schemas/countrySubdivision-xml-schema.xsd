@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="geonames">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="countrySubdivision" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="countryCode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="countryName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="adminCode1" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="adminName1" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="code" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:extension base="xsd:int">
+                      <xsd:attribute name="type" type="xsd:normalizedString" use="required"/>
+                    </xsd:extension>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="distance" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

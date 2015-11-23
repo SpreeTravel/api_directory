@@ -1,0 +1,65 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "volume" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "host" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "ref" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "source-volume-name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "source-volume-id" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "availability_zone" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "description" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "volume_type" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "bootable" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "metadata" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "key1" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "key2" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      }
+    }
+  }
+}

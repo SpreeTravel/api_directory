@@ -1,0 +1,33 @@
+description: |
+  Stormpath also supports a more secure authentication scheme known as digest authentication.
+  This approach computes a cryptographic digest of the request and sends the digest value
+  along with the request. If the transmitted digest matches what the Stormpath API server
+  computes for the same request, the request is authenticated.
+  
+  This technique is especially secure because the API key secret is never transmitted outside
+  of the application, making it extremely difficult for anything (or anyone) outside of the
+  application to interfere with a request or see the secret.
+  
+  We recommend using digest authentication whenever possible because it is inherently more
+  secure. However, due to its complexity, it might not be feasible for some projects.
+  
+  All Stormpath SDKs (currently Java, Ruby, PHP, and Python) use this more secure digest
+  authentication so we recommend that you use the SDKs whenever possible. However, if we do not
+  yet have an SDK for your programming language, you should use basic authentication over HTTPS.
+  
+  Finally, if you would like to use Stormpath digest authentication in a programming language
+  that Stormpath does not yet support, you can attempt to port the algorithm to that language.
+  You can try to replicate the algorithm and use Stormpath existing code as examples to help:
+  
+  Java: Sauthc1Signer (the sign method) https://github.com/stormpath/stormpath-sdk-java/blob/master/impl/src/main/java/com/stormpath/sdk/impl/http/authc/Sauthc1Signer.java
+  Ruby: Sauthc1Signer (the sign_request method) https://github.com/stormpath/stormpath-sdk-ruby/blob/master/lib/stormpath-sdk/http/authc/sauthc1_signer.rb
+  PHP: Sauthc1Signer (the signRequest method) https://github.com/stormpath/stormpath-sdk-php/blob/master/src/Stormpath/Http/Authc/Sauthc1Signer.php
+  Python: Sauthc1Signer (the call method) https://github.com/stormpath/stormpath-sdk-python/blob/master/stormpath/auth.py
+  
+  If you port the algorithm to other languages, please let us know. We are happy to help.
+  Email us at support@stormpath.com and we will help as best as we can.
+type: x-digest-schema
+describedBy: 
+  headers: 
+    Authorisation: 
+      required: true

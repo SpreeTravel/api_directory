@@ -1,0 +1,259 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "plugin" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "versions" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "string"
+            }
+          ]
+        } ,
+        "description" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "required_image_tags" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "string"
+            }
+          ]
+        } ,
+        "node_processes" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "JobFlow" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "HDFS" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "YARN" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "MapReduce" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "Hadoop" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "Hive" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            }
+          }
+        } ,
+        "configs" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "default_value" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "priority" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "config_type" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "applicable_target" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "is_optional" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                } ,
+                "scope" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "description" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } , {
+              "type" : "object" ,
+              "properties" : {
+                "default_value" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "priority" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "config_type" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "applicable_target" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "is_optional" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                } ,
+                "scope" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "description" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } , {
+              "type" : "object" ,
+              "properties" : {
+                "default_value" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "config_values" : {
+                  "type" : "object" ,
+                  "required" : false
+                } ,
+                "priority" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "config_type" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "applicable_target" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "is_optional" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                } ,
+                "scope" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "description" : {
+                  "type" : "object" ,
+                  "required" : false
+                }
+              }
+            } , {
+              "type" : "object" ,
+              "properties" : {
+                "default_value" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "config_values" : {
+                  "type" : "object" ,
+                  "required" : false
+                } ,
+                "priority" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "config_type" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "applicable_target" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "is_optional" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                } ,
+                "scope" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "description" : {
+                  "type" : "object" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        } ,
+        "title" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

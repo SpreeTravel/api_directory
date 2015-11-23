@@ -1,0 +1,20 @@
+{
+  "currentPageUrl" : "/services/data/v34.0/chatter/mentions/completions?contextId=0D5D0000000Hwky&q=g" ,
+  "mentionCompletions" : [
+    {
+      "additionalLabel" : null ,
+      "description" : "VP Sales" ,
+      "name" : "Gordon Johnson" ,
+      "photoUrl" : "https://instance_name/profilephoto/729D00000000LJL/T" ,
+      "recordId" : "005D0000001LLO1IAO"
+    } , {
+      "additionalLabel" : null ,
+      "description" : "A place for constructive cr..." ,
+      "name" : "Airing of Grievances" ,
+      "photoUrl" : "https://instance_name/profilephoto/0F9/T" ,
+      "recordId" : "0F9D00000000izfKAA"
+    }
+  ] ,
+  "nextPageUrl" : null ,
+  "previousPageUrl" : null
+}

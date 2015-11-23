@@ -1,0 +1,36 @@
+{
+  "candidate" : [
+    {
+      "mid" : "/m/02ktj7" ,
+      "confidence" : 0.8762683 ,
+      "name" : "King Kong" ,
+      "notable" : {
+        "name" : "Film" ,
+        "id" : "/film/film"
+      } ,
+      "lang" : "en"
+    } , {
+      "mid" : "/m/02dr9j" ,
+      "confidence" : 0.058297582 ,
+      "name" : "King Kong" ,
+      "notable" : {
+        "name" : "Film" ,
+        "id" : "/film/film"
+      } ,
+      "lang" : "en"
+    } , {
+      "mid" : "/m/0gzlzqq" ,
+      "confidence" : 0.022297567 ,
+      "name" : "King Kong" ,
+      "notable" : {
+        "name" : "Film" ,
+        "id" : "/film/film"
+      } ,
+      "lang" : "en"
+    }
+  ] ,
+  "costs" : {
+    "ms" : 11 ,
+    "hits" : 24
+  }
+}

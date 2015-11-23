@@ -1,0 +1,51 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+        "body": {
+            "properties": {
+                "bicep": {
+                    "type": "number"
+                },
+                "bmi": {
+                    "type": "number"
+                },
+                "calf": {
+                    "type": "number"
+                },
+                "chest": {
+                    "type": "number"
+                },
+                "fat": {
+                    "type": "number"
+                },
+                "forearm": {
+                    "type": "number"
+                },
+                "hips": {
+                    "type": "number"
+                },
+                "neck": {
+                    "type": "number"
+                },
+                "thigh": {
+                    "type": "number"
+                },
+                "waist": {
+                    "type": "number"
+                },
+                "weight": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "goals": {
+            "properties": {
+                "weight": {
+                    "type": "number"
+                }
+            }
+        }
+    }
+}

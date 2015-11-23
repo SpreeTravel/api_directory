@@ -1,0 +1,16 @@
+<TwilioResponse>
+    <QueueMembers end="0" firstpageuri="/2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d/Queues/QU02ed207b15e543a8a9ccf8f784be2bc7/Members.xml?PageSize=50&amp;Page=0" nextpageuri="" page="0" pagesize="50" previouspageuri="" start="0" uri="/2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d/Queues/QU02ed207b15e543a8a9ccf8f784be2bc7/Members.xml?PageSize=50&amp;Page=0" lastpageuri="/2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d/Queues/QU02ed207b15e543a8a9ccf8f784be2bc7/Members.xml?PageSize=50&amp;Page=0" numpages="0" total="0">
+        <QueueMember>
+            <CallSid>CAxxxxxxxx</CallSid>
+            <DateEnqueued>2012-02-04 15:44:15</DateEnqueued>
+            <WaitTime>30</WaitTime>
+            <Position>1</Position>
+        </QueueMember>
+        <QueueMember>
+            <CallSid>CAyyyyyyy</CallSid>
+            <DateEnqueued>2012-02-04 15:44:30</DateEnqueued>
+            <WaitTime>45</WaitTime>
+            <Position>2</Position>
+        </QueueMember>
+    </QueueMembers>
+</TwilioResponse>

@@ -1,0 +1,31 @@
+{
+  "inputs" : [
+    {
+      "richInput" : {
+        "subjectId" : "me" ,
+        "body" : {
+          "messageSegments" : [
+            {
+              "type" : "Text" ,
+              "text" : "Post Number 1"
+            }
+          ]
+        } ,
+        "feedElementType" : "FeedItem"
+      }
+    } , {
+      "richInput" : {
+        "subjectId" : "me" ,
+        "body" : {
+          "messageSegments" : [
+            {
+              "type" : "Text" ,
+              "text" : "Post Number 2"
+            }
+          ]
+        } ,
+        "feedElementType" : "FeedItem"
+      }
+    }
+  ]
+}

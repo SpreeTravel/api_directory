@@ -1,0 +1,13 @@
+post: 
+  body: 
+    application/json: 
+      schema: newEvent
+      example: !include ../examples/newEvent-example.json
+  responses: 
+    201: 
+      description: The request has been fulfilled and resulted in the creation of a new resource.
+get: 
+  description: You can request all the events across all calendars (or a filtered list by using the $filter OData query parameter) via the Events property on the User entity, or request all events in a specific calendar via the Events property on the Calendar entity.
+  responses: 
+    200: 
+      description: The request completed successfully.

@@ -1,0 +1,69 @@
+{
+  "filename" : "sample.jpg" ,
+  "isAppendingDateToFilename" : "undefined" ,
+  "filenameDateFormat" : {
+    "id" : "undefined" ,
+    "format" : "undefined" ,
+    "dataType" : "undefined"
+  } ,
+  "destinationConnection" : {
+    "hostname" : "undefined" ,
+    "username" : "undefined" ,
+    "password" : "undefined" ,
+    "port" : "undefined" ,
+    "name" : "undefined" ,
+    "description" : "Eloqua" ,
+    "permissions" : "undefined" ,
+    "folderId" : "undefined" ,
+    "sourceTemplateId" : "undefined" ,
+    "createdBy" : "undefined" ,
+    "createdAt" : "undefined" ,
+    "updatedBy" : "undefined" ,
+    "updatedAt" : "undefined" ,
+    "accessedAt" : "undefined" ,
+    "scheduledFor" : "undefined" ,
+    "depth" : "minimal"
+  } ,
+  "downloadUrl" : "undefined" ,
+  "exportInfo" : {
+    "notification" : {
+    } ,
+    "fileFormat" : {
+      "columnDelimiter" : "undefined" ,
+      "encoding" : "undefined" ,
+      "extension" : "undefined" ,
+      "rowDelimiter" : "undefined" ,
+      "textQualifier" : "undefined"
+    } ,
+    "fileLifetime" : "undefined" ,
+    "isFileCompressed" : "undefined" ,
+    "isDelta" : "undefined"
+  } ,
+  "destinationPath" : "undefined" ,
+  "executedAt" : "undefined" ,
+  "executionStatus" : "undefined" ,
+  "schedule" : {
+    "displayTimeZoneId" : "undefined" ,
+    "details" : {
+      "dailyStartTime" : "undefined" ,
+      "dailyEndTime" : "undefined" ,
+      "days" : [
+        null ,
+        null
+      ]
+    } ,
+    "executionInterval" : "undefined"
+  } ,
+  "name" : "undefined" ,
+  "description" : "Eloqua" ,
+  "permissions" : "undefined" ,
+  "folderId" : "undefined" ,
+  "sourceTemplateId" : "undefined" ,
+  "createdBy" : "undefined" ,
+  "createdAt" : "undefined" ,
+  "updatedBy" : "undefined" ,
+  "updatedAt" : "undefined" ,
+  "accessedAt" : "undefined" ,
+  "scheduledFor" : "undefined" ,
+  "depth" : "minimal"
+}

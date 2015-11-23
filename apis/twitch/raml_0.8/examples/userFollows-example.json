@@ -1,0 +1,30 @@
+{
+  "_links" : {
+    "self" : "https://api.twitch.tv/kraken/users/test_user1/follows/channels/test_channel"
+  } ,
+  "channel" : {
+    "name" : "test_channel" ,
+    "game" : null ,
+    "created_at" : "2011-05-01T14:50:12Z" ,
+    "teams" : [
+    ] ,
+    "background" : null ,
+    "updated_at" : "2012-10-13T18:18:43Z" ,
+    "banner" : null ,
+    "logo" : "http://static-cdn.jtvnw.net/jtv_user_pictures/test_channel-profile_image-9bd02ad8f4f5bc97-300x300.jpeg" ,
+    "_links" : {
+      "stream_key" : "https://api.twitch.tv/kraken/channels/test_channel/stream_key" ,
+      "self" : "https://api.twitch.tv/kraken/channels/test_channel" ,
+      "chat" : "https://api.twitch.tv/kraken/chat/test_channel" ,
+      "commercial" : "https://api.twitch.tv/kraken/channels/test_channel/commercial" ,
+      "videos" : "https://api.twitch.tv/kraken/channels/test_channel/videos" ,
+      "features" : "https://api.twitch.tv/kraken/channels/test_channel/features"
+    } ,
+    "url" : "http://www.twitch.tv/test_channel" ,
+    "_id" : 22125774 ,
+    "mature" : true ,
+    "video_banner" : null ,
+    "display_name" : "test_channel" ,
+    "status" : "Not Live"
+  }
+}

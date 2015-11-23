@@ -1,0 +1,78 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "token" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "authorization" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "scopes" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : 
+                {
+                  "type" : "string"
+                }
+              
+            } ,
+            "created_at" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "updated_at" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "user_name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "valid" : {
+          "type" : "boolean" ,
+          "required" : false
+        }
+      }
+    } ,
+    "_links" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "channel" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "users" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "user" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "channels" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "chat" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "streams" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "ingests" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

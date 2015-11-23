@@ -1,0 +1,68 @@
+{
+  "poi" : [
+    {
+      "typeName" : "fire_hydrant" ,
+      "distance" : "0.04" ,
+      "name" : "" ,
+      "lng" : "-122.1802277" ,
+      "typeClass" : "amenity" ,
+      "lat" : "37.451314"
+    } , {
+      "typeName" : "fire_hydrant" ,
+      "distance" : "0.08" ,
+      "name" : "" ,
+      "lng" : "-122.1809017" ,
+      "typeClass" : "amenity" ,
+      "lat" : "37.4507907"
+    } , {
+      "typeName" : "fire_hydrant" ,
+      "distance" : "0.09" ,
+      "name" : "" ,
+      "lng" : "-122.1797522" ,
+      "typeClass" : "amenity" ,
+      "lat" : "37.4518296"
+    } , {
+      "typeName" : "cafe" ,
+      "distance" : "0.12" ,
+      "name" : "Starbucks" ,
+      "lng" : "-122.1803386" ,
+      "typeClass" : "amenity" ,
+      "lat" : "37.452055"
+    } , {
+      "typeName" : "fire_hydrant" ,
+      "distance" : "0.14" ,
+      "name" : "" ,
+      "lng" : "-122.1784682" ,
+      "typeClass" : "amenity" ,
+      "lat" : "37.4510495"
+    } , {
+      "typeName" : "fire_hydrant" ,
+      "distance" : "0.15" ,
+      "name" : "" ,
+      "lng" : "-122.1808941" ,
+      "typeClass" : "amenity" ,
+      "lat" : "37.4521145"
+    } , {
+      "typeName" : "fire_hydrant" ,
+      "distance" : "0.15" ,
+      "name" : "" ,
+      "lng" : "-122.181694" ,
+      "typeClass" : "amenity" ,
+      "lat" : "37.4511518"
+    } , {
+      "typeName" : "fast_food" ,
+      "distance" : "0.16" ,
+      "name" : "Rubios" ,
+      "lng" : "-122.1784509" ,
+      "typeClass" : "amenity" ,
+      "lat" : "37.4501701"
+    } , {
+      "typeName" : "fire_hydrant" ,
+      "distance" : "0.19" ,
+      "name" : "" ,
+      "lng" : "-122.1800525" ,
+      "typeClass" : "amenity" ,
+      "lat" : "37.449328"
+    }
+  ]
+}

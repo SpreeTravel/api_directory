@@ -1,0 +1,36 @@
+{
+    "AccessCode": "44DD7CgzOhVD1JiaBtmyeKFJFDEP6MORwP4Dfyc-c-eyu8tT4-ZXczJTWWE0hLX8gqMQyVv43VeF7wxt8XMP7pHsVSZL6EN_IuUvkUH8Gd8XdPIuhWxMSOgQmWZ_AjGptB1rcj8K0gajegLbkvjrSt0dqAQ==",
+    "AuthorisationCode": "000000",
+    "ResponseCode": "58",
+    "ResponseMessage": "D4458",
+    "InvoiceNumber": "Inv 21540",
+    "InvoiceReference": "513456",
+    "TotalAmount": 100,
+    "TransactionID": 92979635,
+    "TransactionStatus": false,
+    "TokenCustomerID": null,
+    "BeagleScore": null,
+    "Options": [
+        {
+            "Value": "Option1"
+        },
+        {
+            "Value": "Option2"
+        },
+        {
+            "Value": "Option3"
+        }
+    ],
+    "Verification": {
+        "CVN": 0,
+        "Address": 0,
+        "Email": 0,
+        "Mobile": 0,
+        "Phone": 0
+    },
+    "BeagleVerification": {
+        "Email": 0,
+        "Phone": 0
+    },
+    "Errors": null
+}

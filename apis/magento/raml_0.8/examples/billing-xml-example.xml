@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<magento_api>
+  <region>Palau</region>
+  <postcode>19103</postcode>
+  <lastname>Doe</lastname>
+  <street>2356 Jody Road Philadelphia
+844 Jefferson Street; 4510 Willis Avenue</street>
+  <city>PA</city>
+  <telephone>610-634-1181</telephone>
+  <country_id>US</country_id>
+  <firstname>John</firstname>
+  <address_type>billing</address_type>
+  <prefix>Dr.</prefix>
+  <middlename></middlename>
+  <suffix>Jr.</suffix>
+  <company></company>
+</magento_api>

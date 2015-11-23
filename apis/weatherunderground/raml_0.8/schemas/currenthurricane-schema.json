@@ -1,0 +1,849 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "response": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "version": {
+          "required": false,
+          "type": "string"
+        },
+        "termsofService": {
+          "required": false,
+          "type": "string"
+        },
+        "features": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "currenthurricane": {
+              "required": false,
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "currenthurricane": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "stormInfo": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "stormName": {
+                "required": false,
+                "type": "string"
+              },
+              "stormName_Nice": {
+                "required": false,
+                "type": "string"
+              },
+              "stormNumber": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "Current": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "lat": {
+                "required": false,
+                "type": "number"
+              },
+              "lon": {
+                "required": false,
+                "type": "number"
+              },
+              "SaffirSimpsonCategory": {
+                "required": false,
+                "type": "integer"
+              },
+              "Category": {
+                "required": false,
+                "type": "string"
+              },
+              "Time": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "hour": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "hour_padded": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "year": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "mon": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "mon_padded": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "mon_abbrev": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "mday": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "mday_padded": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "yday": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "isdst": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "epoch": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "pretty": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "civil": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "month_name": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "month_name_abbrev": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "weekday_name": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "weekday_name_night": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "weekday_name_abbrev": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "weekday_name_unlang": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "weekday_name_night_unlang": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "ampm": {
+                    "required": false,
+                    "type": "string"
+                  }
+                }
+              },
+              "TimeGMT": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "hour": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "hour_padded": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "year": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "mon": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "mon_padded": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "mon_abbrev": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "mday": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "mday_padded": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "yday": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "epoch": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "pretty": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "civil": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "month_name": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "month_name_abbrev": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "weekday_name": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "weekday_name_night": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "weekday_name_abbrev": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "weekday_name_unlang": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "weekday_name_night_unlang": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "ampm": {
+                    "required": false,
+                    "type": "string"
+                  }
+                }
+              },
+              "WindSpeed": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Kts": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Mph": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Kph": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              },
+              "WindGust": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Kts": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Mph": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Kph": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              },
+              "Fspeed": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Kts": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Mph": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Kph": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              },
+              "Movement": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Degrees": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "Text": {
+                    "required": false,
+                    "type": "string"
+                  }
+                }
+              },
+              "Pressure": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "mb": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "inches": {
+                    "required": false,
+                    "type": "number"
+                  }
+                }
+              },
+              "WindQuadrants": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "comment": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "quad_1": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "quad_2": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "quad_3": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "quad_4": {
+                    "required": false,
+                    "type": "string"
+                  }
+                }
+              },
+              "WindRadius": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "34": {
+                    "required": false,
+                    "type": "object",
+                    "properties": {
+                      "NE": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "SE": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "SW": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "NW": {
+                        "required": false,
+                        "type": "integer"
+                      }
+                    }
+                  },
+                  "50": {
+                    "required": false,
+                    "type": "object",
+                    "properties": {
+                      "NE": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "SE": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "SW": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "NW": {
+                        "required": false,
+                        "type": "integer"
+                      }
+                    }
+                  },
+                  "64": {
+                    "required": false,
+                    "type": "object",
+                    "properties": {
+                      "NE": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "SE": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "SW": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "NW": {
+                        "required": false,
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              },
+              "SeaQuadrants": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "comment": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "quad_1": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "quad_2": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "quad_3": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "quad_4": {
+                    "required": false,
+                    "type": "string"
+                  }
+                }
+              },
+              "SeaRadius": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "12": {
+                    "required": false,
+                    "type": "object",
+                    "properties": {
+                      "NE": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "SE": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "SW": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "NW": {
+                        "required": false,
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "forecast": {
+            "required": false,
+            "type": "array",
+            "items": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "ForecastHour": {
+                  "required": false,
+                  "type": "string"
+                },
+                "SaffirSimpsonCategory": {
+                  "required": false,
+                  "type": "integer"
+                },
+                "lat": {
+                  "required": false,
+                  "type": "number"
+                },
+                "lon": {
+                  "required": false,
+                  "type": "number"
+                },
+                "Category": {
+                  "required": false,
+                  "type": "string"
+                },
+                "Time": {
+                  "required": false,
+                  "type": "object",
+                  "properties": {
+                    "hour": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "hour_padded": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "year": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "mon": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "mon_padded": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "mon_abbrev": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "mday": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "mday_padded": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "yday": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "isdst": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "epoch": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "pretty": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "civil": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "month_name": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "month_name_abbrev": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "weekday_name": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "weekday_name_night": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "weekday_name_abbrev": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "weekday_name_unlang": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "weekday_name_night_unlang": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "ampm": {
+                      "required": false,
+                      "type": "string"
+                    }
+                  }
+                },
+                "TimeGMT": {
+                  "required": false,
+                  "type": "object",
+                  "properties": {
+                    "hour": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "hour_padded": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "year": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "mon": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "mon_padded": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "mon_abbrev": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "mday": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "mday_padded": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "yday": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "epoch": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "pretty": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "civil": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "month_name": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "month_name_abbrev": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "weekday_name": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "weekday_name_night": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "weekday_name_abbrev": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "weekday_name_unlang": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "weekday_name_night_unlang": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "ampm": {
+                      "required": false,
+                      "type": "string"
+                    }
+                  }
+                },
+                "WindSpeed": {
+                  "required": false,
+                  "type": "object",
+                  "properties": {
+                    "Kts": {
+                      "required": false,
+                      "type": "integer"
+                    },
+                    "Mph": {
+                      "required": false,
+                      "type": "integer"
+                    },
+                    "Kph": {
+                      "required": false,
+                      "type": "integer"
+                    }
+                  }
+                },
+                "WindGust": {
+                  "required": false,
+                  "type": "object",
+                  "properties": {
+                    "Kts": {
+                      "required": false,
+                      "type": "integer"
+                    },
+                    "Mph": {
+                      "required": false,
+                      "type": "integer"
+                    },
+                    "Kph": {
+                      "required": false,
+                      "type": "integer"
+                    }
+                  }
+                },
+                "WindQuadrants": {
+                  "required": false,
+                  "type": "object",
+                  "properties": {
+                    "comment": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "quad_1": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "quad_2": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "quad_3": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "quad_4": {
+                      "required": false,
+                      "type": "string"
+                    }
+                  }
+                },
+                "WindRadius": {
+                  "required": false,
+                  "type": "object",
+                  "properties": {
+                    "34": {
+                      "required": false,
+                      "type": "object",
+                      "properties": {
+                        "NE": {
+                          "required": false,
+                          "type": "integer"
+                        },
+                        "SE": {
+                          "required": false,
+                          "type": "integer"
+                        },
+                        "SW": {
+                          "required": false,
+                          "type": "integer"
+                        },
+                        "NW": {
+                          "required": false,
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    "50": {
+                      "required": false,
+                      "type": "object",
+                      "properties": {
+                        "NE": {
+                          "required": false,
+                          "type": "integer"
+                        },
+                        "SE": {
+                          "required": false,
+                          "type": "integer"
+                        },
+                        "SW": {
+                          "required": false,
+                          "type": "integer"
+                        },
+                        "NW": {
+                          "required": false,
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    "64": {
+                      "required": false,
+                      "type": "object",
+                      "properties": {
+                        "NE": {
+                          "required": false,
+                          "type": "null"
+                        },
+                        "SE": {
+                          "required": false,
+                          "type": "null"
+                        },
+                        "SW": {
+                          "required": false,
+                          "type": "null"
+                        },
+                        "NW": {
+                          "required": false,
+                          "type": "null"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "ExtendedForecast": {
+            "required": false,
+            "type": "array",
+            "items": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "ForecastHour": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "track": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

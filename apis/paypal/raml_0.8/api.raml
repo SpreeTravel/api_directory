@@ -1,0 +1,560 @@
+#%RAML 0.8
+title: Pay Pal API
+version: v1
+baseUri: https://api.sandbox.paypal.com/{version}
+mediaType: application/json
+securitySchemes: 
+  - oauth_2_0_app: !include securitySchemes/oauth_2_0_app.raml
+  - oauth_2_0_user: !include securitySchemes/oauth_2_0_user.raml
+schemas:
+  - createPaymentReq: !include schemas/createPaymentReq-schema.json
+  - payment: !include schemas/payment-schema.json
+  - approve: !include schemas/approve-schema.json
+  - payments: !include schemas/payments-schema.json
+  - sale: !include schemas/sale-schema.json
+  - refundReq: !include schemas/refundReq-schema.json
+  - refund: !include schemas/refund-schema.json
+  - authorization: !include schemas/authorization-schema.json
+  - captureReq: !include schemas/captureReq-schema.json
+  - capture: !include schemas/capture-schema.json
+  - planReq: !include schemas/planReq-schema.json
+  - plan: !include schemas/plan-schema.json
+  - updatePlan: !include schemas/updatePlan-schema.json
+  - plans: !include schemas/plans-schema.json
+  - agreementReq: !include schemas/agreementReq-schema.json
+  - agreement: !include schemas/agreement-schema.json
+  - updateAgreementReq: !include schemas/updateAgreementReq-schema.json
+  - suspendReq: !include schemas/suspendReq-schema.json
+  - agreementTransactions: !include schemas/agreementTransactions-schema.json
+  - currencyProperties: !include schemas/currencyProperties-schema.json
+  - billAmount: !include schemas/billAmount-schema.json
+  - order: !include schemas/order-schema.json
+  - creditCardReq: !include schemas/creditCardReq-schema.json
+  - creditCard: !include schemas/creditCard-schema.json
+  - creditCardModifyReq: !include schemas/creditCardModifyReq-schema.json
+  - tokeninfo: !include schemas/tokeninfo-schema.json
+  - userAttributes: !include schemas/userAttributes-schema.json
+  - invoices: !include schemas/invoices-schema.json
+  - invoiceReq: !include schemas/invoiceReq-schema.json
+  - invoice: !include schemas/invoice-schema.json
+  - searchReq: !include schemas/searchReq-schema.json
+  - searchInvoices: !include schemas/searchInvoices-schema.json
+  - reminderReq: !include schemas/reminderReq-schema.json
+  - cancel_notification: !include schemas/cancel_notification-schema.json
+  - qrCode: !include schemas/qrCode-schema.json
+  - recordPayment: !include schemas/recordPayment-schema.json
+  - recordRefund: !include schemas/recordRefund-schema.json
+  - error: !include schemas/error-schema.json
+resourceTypes:
+  - captureReturnedType: !include resourceTypes/captureReturnedType.raml
+  - agreementReturnedType: !include resourceTypes/agreementReturnedType.raml
+  - refundReturnedType: !include resourceTypes/refundReturnedType.raml
+  - invoiceReturnedType: !include resourceTypes/invoiceReturnedType.raml
+  - base: !include resourceTypes/base.raml
+  - paymentReturnedType: !include resourceTypes/paymentReturnedType.raml
+traits:
+  - pageable: !include traits/pageable.raml
+securedBy: [ oauth_2_0 ]
+/payments: 
+  /payment: 
+    type: paymentReturnedType
+    get: 
+      is: [ pageable ]
+      description: Use this call to get a list of payments in any state (created, approved, failed, etc.). The payments returned are the payments made to the merchant making the call.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: payments
+              example: !include examples/payments-example.json
+    post: 
+      description: Create a payment
+      body: 
+        application/json: 
+          schema: createPaymentReq
+          example: !include examples/createPaymentReq-example.json
+      responses: 
+        201: 
+    /{PaymentId}: 
+      type: paymentReturnedType
+      get: 
+        description: Use this call to get details about payments that have not completed, such as payments that are created and approved, or if a payment has failed.
+        responses: 
+          200: 
+      /execute: 
+        type: paymentReturnedType
+        post: 
+          description: Use this call to execute (complete) a PayPal payment that has been approved by the payer. You can optionally update transaction information when executing the payment by passing in one or more transactions.
+          body: 
+            application/json: 
+              schema: approve
+              example: !include examples/approve-example.json
+          responses: 
+            201: 
+  /sale/{TransactionId}: 
+    type: base
+    uriParameters: 
+      TransactionId: 
+        displayName: TransactionId
+        description: Pass the sale id in the endpoint.
+        required: true
+    get: 
+      description: Use this call to get details about a sale transaction.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: sale
+              example: !include examples/sale-example.json
+    /refund: 
+      type: refundReturnedType
+      post: 
+        description: Use this call to refund a completed payment. Provide the sale_id in the URI and an empty JSON payload for a full refund. For partial refunds, you can include an amount.
+        body: 
+          application/json: 
+            schema: refundReq
+            example: !include examples/refundReq-example.json
+        responses: 
+          201: 
+  /refund/{RefundId}: 
+    type: refundReturnedType
+    get: 
+      description: Use this call to get details about a specific refund.
+      responses: 
+        200: 
+  /capture/{CaptureId}: 
+    type: captureReturnedType
+    get: 
+      description: Use this call to get details about a captured payment.
+      responses: 
+        200: 
+    /refund: 
+      type: refundReturnedType
+      post: 
+        description: Use this call to refund a captured payment. Provide the captureId in the URI and an amount object. For partial refunds, you can include a lower amount object.
+        body: 
+          application/json: 
+            schema: refundReq
+            example: !include examples/refundReq-example.json
+        responses: 
+          201: 
+  /billing-plans: 
+    type: base
+    get: 
+      is: [ pageable ]
+      description: "Use this call to get a list of all billing plans based on their current state: created, active, or deactivated."
+      queryParameters: 
+        status: 
+          description: Pass created, active, or inactive in the URI path to request billings plans in the CREATED, ACTIVE, or INACTIVE states respectively. 
+          enum: 
+            - INACTIVE
+            - CREATED
+            - ACTIVE
+          default: CREATED
+          example: CREATED
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: plans
+              example: !include examples/plans-example.json
+    post: 
+      description: Use this call to create a billing plan. The request sample shows the plan being created with a regular billing period.
+      body: 
+        application/json: 
+          schema: planReq
+          example: !include examples/planReq-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: plan
+              example: !include examples/plan-example.json
+    /{PlanId}: 
+      type: base
+      get: 
+        description: Use this call to get details about a specific billing plan.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: plan
+                example: !include examples/plan-example.json
+      patch: 
+        description: You can update the information for an existing billing plan. The state of a plan must be active before a billing agreement is created.
+        body: 
+          application/json: 
+            schema: updatePlan
+            example: !include examples/updatePlan-example.json
+        responses: 
+          200: 
+            description: Returns the HTTP status of 200 if the call is successful.
+  /billing-agreements: 
+    type: agreementReturnedType
+    post: 
+      description: Use this call to create a billing agreement for the buyer.
+      body: 
+        application/json: 
+          schema: agreementReq
+          example: !include examples/agreementReq-example.json
+      responses: 
+        201: 
+    /{payment-token}/agreement-execute: 
+      type: agreementReturnedType
+      post: 
+        description: Use this call to execute an agreement after the buyer approves it.
+        responses: 
+          201: 
+    /{agreementId}: 
+      type: agreementReturnedType
+      get: 
+        description: Use this call to retrieve an agreement.
+        responses: 
+          200: 
+      patch: 
+        description: Use this call to update an agreement.
+        body: 
+          application/json: 
+            schema: updateAgreementReq
+            example: !include examples/updateAgreementReq-example.json
+        responses: 
+          200: 
+            description: Returns the HTTP status of 200 if the call is successful.
+      /suspend: 
+        type: base
+        post: 
+          description: Use this call to suspend an agreement.
+          body: 
+            application/json: 
+              schema: suspendReq
+              example: !include examples/suspendReq-example.json
+          responses: 
+            204: 
+              description: Returns the HTTP status of 204 if the call is successful.
+      /re-activate: 
+        type: base
+        post: 
+          description: Use this call to reactivate an agreement.
+          body: 
+            application/json: 
+              schema: suspendReq
+              example: !include examples/suspendReq-example.json
+          responses: 
+            204: 
+              description: Returns the HTTP status of 204 if the call is successful.
+      /cancel: 
+        type: base
+        post: 
+          description: Use this call to cancel an agreement.
+          body: 
+            application/json: 
+              schema: suspendReq
+              example: !include examples/suspendReq-example.json
+          responses: 
+            204: 
+      /bill-balance: 
+        type: base
+        post: 
+          description: Use this call to bill the outstanding amount of an agreement.
+          body: 
+            application/json: 
+              schema: billAmount
+              example: !include examples/billAmount-example.json
+          responses: 
+            204: 
+              description: Returns the HTTP status of 204 if the call is successful.
+      /set-balance: 
+        type: base
+        post: 
+          description: Use this call to set the outstanding amount of an agreement.
+          body: 
+            application/json: 
+              schema: currencyProperties
+              example: !include examples/currencyProperties-example.json
+          responses: 
+            204: 
+              description: Returns the HTTP status of 204 if the call is successful.
+      /transactions: 
+        type: base
+        get: 
+          description: Use this call to search for the transactions within a billing agreement.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: agreementTransactions
+                  example: !include examples/agreementTransactions-example.json
+  /orders/{orderId}: 
+    type: base
+    get: 
+      description: Specify an order ID to get details about an order.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: order
+              example: !include examples/order-example.json
+    /authorization: 
+      type: base
+      post: 
+        description: Use this call to authorize an order.
+        body: 
+          application/json: 
+            schema: refundReq
+            example: !include examples/refundReq-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: authorization
+                example: !include examples/authorization-example.json
+    /capture: 
+      type: captureReturnedType
+      post: 
+        description: Use this call to capture a payment on an order. To use this call, an original payment call must specify an intent of order.
+        body: 
+          application/json: 
+            schema: captureReq
+            example: !include examples/captureReq-example.json
+        responses: 
+          201: 
+    /void: 
+      type: base
+      post: 
+        description: se this call to void an existing order.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: order
+                example: !include examples/order-example.json
+  /authorization/{AuthorizationId}: 
+    type: base
+    get: 
+      description: Use this call to get details about authorizations.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: authorization
+              example: !include examples/authorization-example.json
+    /capture: 
+      type: captureReturnedType
+      post: 
+        description: Use this resource to capture and process a previously created authorization. To use this resource, the original payment call must have the intent set to authorize.
+        body: 
+          application/json: 
+            schema: captureReq
+            example: !include examples/captureReq-example.json
+        responses: 
+          201: 
+    /void: 
+      type: base
+      post: 
+        description: Use this call to void a previously authorized payment.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: authorization
+                example: !include examples/authorization-example.json
+    /reauthorize: 
+      type: base
+      post: 
+        description: Pass the authorization id in the endpoint along with a new authorization object if you need to authorize a different amount.
+        body: 
+          application/json: 
+            schema: refundReq
+            example: !include examples/refundReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: authorization
+                example: !include examples/authorization-example.json
+/vault/credit-card: 
+  type: base
+  post: 
+    description: Use this call to store credit card details with PayPal.
+    body: 
+      application/json: 
+        schema: creditCardReq
+        example: !include examples/creditCardReq-example.json
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: creditCard
+            example: !include examples/creditCard-example.json
+  /{CreditCardId}: 
+    type: base
+    get: 
+      description: Use this call to look up details of a credit card. Simply include the credit card id in the request URI.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: creditCard
+              example: !include examples/creditCard-example.json
+    delete: 
+      description: Use this call to delete details of a credit card. Simply include the credit card id in the request URI.
+      responses: 
+        204: 
+    patch: 
+      description: Use this call to modify a credit card.
+      body: 
+        application/json: 
+          schema: creditCardModifyReq
+          example: !include examples/creditCardModifyReq-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: creditCard
+              example: !include examples/creditCard-example.json
+/identity/openidconnect: 
+  /tokenservice: 
+    type: base
+    post: 
+      description: Use this call to grant a new access token, using the previously obtained authorization code.
+      body: 
+        application/x-www-form-urlencoded: 
+          formParameters: 
+            grant_type: 
+              description: Token grant type. Value must be set to authorization_code
+            code: 
+              description: Authorization code previously received from the authorization server.
+            redirect_uri: 
+              description: Redirection endpoint that must match the one provided during the authorization request that ended in receiving the authorization code.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: tokeninfo
+              example: !include examples/tokeninfo-example.json
+  /userinfo: 
+    type: base
+    get: 
+      description: Use this call to retrieve user profile attributes.
+      queryParameters: 
+        schema: 
+          description: Pass the schema that is used to return as per openidconnect protocol. The only supported schema value is openid.
+          enum: [ openid ]
+          example: openid
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: userAttributes
+              example: !include examples/userAttributes-example.json
+/invoicing: 
+  /invoices: 
+    type: invoiceReturnedType
+    get: 
+      is: [ pageable ]
+      description: Returns invoices that belong to the merchant who makes the call.
+    post: 
+      description: Creates an invoice in a draft state. After you create an invoice that includes an items array, you can send the invoice.
+      body: 
+        application/json: 
+          schema: invoiceReq
+          example: !include examples/invoiceReq-example.json
+      responses: 
+        201: 
+    /{InvoiceId}: 
+      type: invoiceReturnedType
+      get: 
+        description: Returns the specified invoice.
+      put: 
+        description: Makes the specified changes to the specified invoice.
+      delete: 
+        description: Deletes a draft invoice. Note that this call works for invoices in the draft state only.
+        responses: 
+          204: 
+      /qr-code: 
+        type: base
+        get: 
+          description: Specify an invoice ID to get a QR code (image) that corresponds to the invoice ID.
+          queryParameters: 
+            width: 
+              description: The width of the QR code image, in pixels. Range of 150 to 500.
+              default: 500
+            height: 
+              description: The height of the QR code image, in pixels. Range of 150 to 500.
+              default: 500
+            action: 
+              description: The type of URL for which a QR code is provided. The only supported value is pay, which is the default value.
+              enum: [ pay ]
+              default: pay
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: qrCode
+                  example: !include examples/qrCode-example.json
+      /send: 
+        type: base
+        post: 
+          description: Sends the specified invoice to the payer. An invoice cannot be sent unless it includes an items array.
+          responses: 
+            202: 
+              description: Returns an HTTP response message with status code 202 (Accepted).
+      /remind: 
+        type: base
+        post: 
+          description: Sends a reminder that a payment is due for an existing invoice.
+          body: 
+            application/json: 
+              schema: reminderReq
+              example: !include examples/reminderReq-example.json
+          responses: 
+            202: 
+              description: Returns an HTTP response message with status code 202 (Accepted).
+      /cancel: 
+        type: base
+        post: 
+          description: Cancels an invoice and (optionally) notifies the payer of the cancellation.
+          body: 
+            application/json: 
+              schema: cancel_notification
+              example: !include examples/cancel_notification-example.json
+          responses: 
+            202: 
+              description: Returns an HTTP response message with status code 202 (Accepted).
+      /record-payment: 
+        type: base
+        post: 
+          description: Use this call to mark an invoice as paid.
+          body: 
+            application/json: 
+              schema: recordPayment
+              example: !include examples/recordPayment-example.json
+          responses: 
+            204: 
+      /record-refund: 
+        type: base
+        post: 
+          description: Use this call to mark an invoice as refunded.
+          body: 
+            application/json: 
+              schema: recordRefund
+              example: !include examples/recordRefund-example.json
+          responses: 
+            204: 
+  /search: 
+    type: base
+    post: 
+      description: Returns invoices that match the specified criteria.
+      body: 
+        application/json: 
+          schema: searchReq
+          example: !include examples/searchReq-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: searchInvoices
+              example: !include examples/searchInvoices-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

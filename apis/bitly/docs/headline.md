@@ -1,0 +1,1 @@
+Bitly provides a URL shortening service in addition to a set of tools to view statistics related to users that clicked on the generated links.

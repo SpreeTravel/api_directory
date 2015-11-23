@@ -1,0 +1,41 @@
+{
+  "_links" : {
+    "next" : "https://api.twitch.tv/kraken/channels/test_user1/follows?limit=25&offset=25" ,
+    "self" : "https://api.twitch.tv/kraken/channels/test_user1/follows?limit=25&offset=0"
+  } ,
+  "follows" : [
+    {
+      "_links" : {
+        "self" : "https://api.twitch.tv/kraken/users/test_user2/follows/channels/test_user1"
+      } ,
+      "user" : {
+        "_links" : {
+          "self" : "https://api.twitch.tv/kraken/users/test_user2"
+        } ,
+        "staff" : false ,
+        "logo" : null ,
+        "display_name" : "test_user2" ,
+        "created_at" : "2013-02-06T21:21:57Z" ,
+        "updated_at" : "2013-02-13T20:59:42Z" ,
+        "_id" : 40091581 ,
+        "name" : "test_user2"
+      }
+    } , {
+      "_links" : {
+        "self" : "https://api.twitch.tv/kraken/users/test_user2/follows/channels/test_user1"
+      } ,
+      "user" : {
+        "_links" : {
+          "self" : "https://api.twitch.tv/kraken/users/test_user2"
+        } ,
+        "staff" : false ,
+        "logo" : null ,
+        "display_name" : "test_user2" ,
+        "created_at" : "2013-02-06T21:21:57Z" ,
+        "updated_at" : "2013-02-13T20:59:42Z" ,
+        "_id" : 40091581 ,
+        "name" : "test_user2"
+      }
+    }
+  ]
+}

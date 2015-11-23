@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://api.jobvite.com/action/api/v1">
+  <xsd:element name="Results">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Candidates" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Candidate" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="CandidateRecordInfo" minOccurs="0" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="Id" minOccurs="0" maxOccurs="1">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="IdValue" minOccurs="0" maxOccurs="1">
+                                  <xsd:complexType>
+                                    <xsd:simpleContent>
+                                      <xsd:extension base="xsd:int">
+                                        <xsd:attribute name="name" type="xsd:normalizedString" use="required"/>
+                                      </xsd:extension>
+                                    </xsd:simpleContent>
+                                  </xsd:complexType>
+                                </xsd:element>
+                              </xsd:sequence>
+                              <xsd:attribute name="idOwner" type="xsd:normalizedString" use="required"/>
+                            </xsd:complexType>
+                          </xsd:element>
+                          <xsd:element name="Status" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="RelatedPositionPostings" minOccurs="0" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="PositionPosting" minOccurs="0" maxOccurs="1">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="Id" minOccurs="0" maxOccurs="1">
+                                  <xsd:complexType>
+                                    <xsd:sequence>
+                                      <xsd:element name="IdValue" minOccurs="0" maxOccurs="1">
+                                        <xsd:complexType>
+                                          <xsd:simpleContent>
+                                            <xsd:extension base="xsd:int">
+                                              <xsd:attribute name="name" type="xsd:normalizedString" use="required"/>
+                                            </xsd:extension>
+                                          </xsd:simpleContent>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                    </xsd:sequence>
+                                    <xsd:attribute name="idOwner" type="xsd:normalizedString" use="required"/>
+                                  </xsd:complexType>
+                                </xsd:element>
+                                <xsd:element name="Title" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="CandidateSupplier" minOccurs="0" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="SupplierId" minOccurs="0" maxOccurs="1">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="IdValue" minOccurs="0" maxOccurs="1">
+                                  <xsd:complexType>
+                                    <xsd:simpleContent>
+                                      <xsd:extension base="xsd:int">
+                                        <xsd:attribute name="name" type="xsd:normalizedString" use="required"/>
+                                      </xsd:extension>
+                                    </xsd:simpleContent>
+                                  </xsd:complexType>
+                                </xsd:element>
+                              </xsd:sequence>
+                              <xsd:attribute name="idOwner" type="xsd:normalizedString" use="required"/>
+                            </xsd:complexType>
+                          </xsd:element>
+                          <xsd:element name="EntityName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                          <xsd:element name="SourceType" minOccurs="0" maxOccurs="1">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="NonStandardValue" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="CandidateProfile" minOccurs="0" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="PersonalData" minOccurs="0" maxOccurs="1">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="PersonId" minOccurs="0" maxOccurs="1">
+                                  <xsd:complexType>
+                                    <xsd:sequence>
+                                      <xsd:element name="IdValue" minOccurs="0" maxOccurs="1">
+                                        <xsd:complexType>
+                                          <xsd:simpleContent>
+                                            <xsd:extension base="xsd:normalizedString">
+                                              <xsd:attribute name="name" type="xsd:normalizedString" use="required"/>
+                                            </xsd:extension>
+                                          </xsd:simpleContent>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                    </xsd:sequence>
+                                    <xsd:attribute name="idOwner" type="xsd:normalizedString" use="required"/>
+                                  </xsd:complexType>
+                                </xsd:element>
+                                <xsd:element name="PersonName" minOccurs="0" maxOccurs="1">
+                                  <xsd:complexType>
+                                    <xsd:sequence>
+                                      <xsd:element name="GivenName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                                      <xsd:element name="FamilyName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                                    </xsd:sequence>
+                                  </xsd:complexType>
+                                </xsd:element>
+                                <xsd:element name="ContactMethod" minOccurs="0" maxOccurs="1">
+                                  <xsd:complexType>
+                                    <xsd:sequence>
+                                      <xsd:element name="Use" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                                      <xsd:element name="Location" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                                      <xsd:element name="Telephone" minOccurs="0" maxOccurs="1">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="FormattedNumber" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="Mobile" minOccurs="0" maxOccurs="1">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="FormattedNumber" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="Fax" minOccurs="0" maxOccurs="1">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="FormattedNumber" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="InternetEmailAddress" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                                      <xsd:element name="PostalAddress" minOccurs="0" maxOccurs="1">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="CountryCode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                                            <xsd:element name="PostalCode" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                                            <xsd:element name="Region" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                                            <xsd:element name="Municipality" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                                            <xsd:element name="DeliveryAddress" minOccurs="0" maxOccurs="1">
+                                              <xsd:complexType>
+                                                <xsd:sequence>
+                                                  <xsd:element name="AddressLine" maxOccurs="unbounded" type="xsd:string"/>
+                                                </xsd:sequence>
+                                              </xsd:complexType>
+                                            </xsd:element>
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                    </xsd:sequence>
+                                  </xsd:complexType>
+                                </xsd:element>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="Resume" minOccurs="0" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="NonXMLResume" minOccurs="0" maxOccurs="1">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="TextResume" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="UserArea" minOccurs="0" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="CustomFields" minOccurs="0" maxOccurs="1">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="Field" maxOccurs="unbounded">
+                                  <xsd:complexType>
+                                    <xsd:simpleContent>
+                                      <xsd:extension base="xsd:string">
+                                        <xsd:attribute name="type" type="xsd:normalizedString" use="required"/>
+                                        <xsd:attribute name="name" type="xsd:string" use="required"/>
+                                      </xsd:extension>
+                                    </xsd:simpleContent>
+                                  </xsd:complexType>
+                                </xsd:element>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="first" type="xsd:int" use="required"/>
+            <xsd:attribute name="count" type="xsd:int" use="required"/>
+            <xsd:attribute name="total" type="xsd:int" use="required"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="action" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="version" type="xsd:decimal" use="required"/>
+    </xsd:complexType>
+    <xsd:attribute name="action" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="version" type="xsd:decimal" use="required"/>
+  </xsd:element>
+</xsd:schema>

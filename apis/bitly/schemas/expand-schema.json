@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "short_url": {
+          "description": "An echo back of the shortUrl request parameter.",
+          "type": "string"
+        },
+        "hash": {
+          "description": "An echo back of the hash request parameter.",
+          "type": "string"
+        },
+        "user_hash": {
+          "description": "The corresponding bitly user identifier.",
+          "type": "string"
+        },
+        "global_hash": {
+          "description": "The corresponding bitly aggregate identifier.",
+          "type": "string"
+        },
+        "error": {
+          "description": "Indicates there was an error retrieving data for a given shortUrl or hash. An example error is 'NOT_FOUND'.",
+          "type": "string"
+        },
+        "long_url": {
+          "description": "The URL that the requested short_url or hash points to.",
+          "type": "string"
+        }
+      }
+    },
+    "status_code": {
+      "type": "integer",
+      "required": true
+    },
+    "status_txt": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "activeContacts": {
+      "type": "integer",
+      "required": false
+    },
+    "address": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "city": {
+          "type": "string",
+          "required": false
+        },
+        "country": {
+          "type": "string",
+          "required": false
+        },
+        "formattedAddress": {
+          "type": "string",
+          "required": false
+        },
+        "state": {
+          "type": "string",
+          "required": false
+        },
+        "street": {
+          "type": "string",
+          "required": false
+        },
+        "zip": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "annualRevenue": {
+      "type": "number",
+      "required": false
+    },
+    "companyId": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "string",
+      "required": false
+    },
+    "dunsNumber": {
+      "type": "string",
+      "required": false
+    },
+    "industry": {
+      "type": "string",
+      "required": false
+    },
+    "isInactive": {
+      "type": "boolean",
+      "required": false
+    },
+    "isOwned": {
+      "type": "boolean",
+      "required": false
+    },
+    "naicsCode": {
+      "type": "string",
+      "required": false
+    },
+    "naicsDescription": {
+      "type": "string",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "numberOfEmployees": {
+      "type": "integer",
+      "required": false
+    },
+    "ownership": {
+      "type": "string",
+      "required": false
+    },
+    "phoneNumbers": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "label": {
+          "type": "string",
+          "required": false
+        },
+        "number": {
+          "type": "string",
+          "required": false
+        },
+        "phoneNumber": {
+          "type": "string",
+          "required": false
+        },
+        "phoneType": {
+          "type": "string",
+          "required": false
+        },
+        "type": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "sic": {
+      "type": "string",
+      "required": false
+    },
+    "sicDescription": {
+      "type": "string",
+      "required": false
+    },
+    "site": {
+      "type": "string",
+      "required": false
+    },
+    "tickerSymbol": {
+      "type": "string",
+      "required": false
+    },
+    "tradeStyle": {
+      "type": "string",
+      "required": false
+    },
+    "updatedDate": {
+      "type": "string",
+      "required": false
+    },
+    "website": {
+      "type": "string",
+      "required": false
+    },
+    "yearStarted": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,782 @@
+#%RAML 0.8
+title: FlightStats
+version: v1
+baseUri: https://api.flightstats.com/flex
+securitySchemes:
+  - apiHeaderKey: !include securitySchemes/apiHeaderKey.raml
+  - apiQueryKey: !include securitySchemes/apiQueryKey.raml
+schemas:
+  - airlinesResourcesResponse: !include schemas/airlinesResourcesResponse-schema.json
+  - activeJSONResponse: !include schemas/activeJSONResponse-schema.json
+  - activeXMLResponse: !include schemas/activeXMLResponse-schema.xsd
+  - allAirlinesJSONResponse: !include schemas/allAirlinesJSONResponse-schema.json
+  - airlineFsCodeXMLResponse: !include schemas/airlineFsCodeXMLResponse-schema.xsd
+  - airlineFsCodeJSONResponse: !include schemas/airlineFsCodeJSONResponse-schema.json
+  - airlineIATACodeXMLResponse: !include schemas/airlineIATACodeXMLResponse-schema.xsd
+  - airlineIATACodeJSONResponse: !include schemas/airlineIATACodeJSONResponse-schema.json
+  - airportsRestResourceJSONResponse: !include schemas/airportsRestResourceJSONResponse-schema.json
+  - activeAirportsXMLResponse: !include schemas/activeAirportsXMLResponse-schema.xsd
+  - activeAirportsJSONResponse: !include schemas/activeAirportsJSONResponse-schema.json
+  - activeAirportsByDayJSONResponse: !include schemas/activeAirportsByDayJSONResponse-schema.json
+  - airportFSCodeXMLResponse: !include schemas/airportFSCodeXMLResponse-schema.xsd
+  - airportFSCodeJSONResponse: !include schemas/airportFSCodeJSONResponse-schema.json
+  - iataAirportCodeXMLResponse: !include schemas/iataAirportCodeXMLResponse-schema.xsd
+  - iataAirportCodeJSONResponse: !include schemas/iataAirportCodeJSONResponse-schema.json
+  - airportCodeJSONResponse: !include schemas/airportCodeJSONResponse-schema.json
+  - airportCodeXMLResponse: !include schemas/airportCodeXMLResponse-schema.xsd
+  - alertsResourcesResponse: !include schemas/alertsResourcesResponse-schema.json
+  - alertsResourcesXMLResponse: !include schemas/alertsResourcesXMLResponse-schema.xsd
+  - alertsResourcesJSONResponse: !include schemas/alertsResourcesJSONResponse-schema.json
+  - flightMonitoringJSONResponse: !include schemas/flightMonitoringJSONResponse-schema.json
+  - flightMonitoringXMLResponse: !include schemas/flightMonitoringXMLResponse-schema.xsd
+  - arrivingMonitoringXMLResponse: !include schemas/arrivingMonitoringXMLResponse-schema.xsd
+  - arrivingMonitoringJSONResponse: !include schemas/arrivingMonitoringJSONResponse-schema.json
+  - departingMonitoringXMLResponse: !include schemas/departingMonitoringXMLResponse-schema.xsd
+  - departingMonitoringJSONResponse: !include schemas/departingMonitoringJSONResponse-schema.json
+  - arrivingAirportMonitoringXMLResponse: !include schemas/arrivingAirportMonitoringXMLResponse-schema.xsd
+  - arrivingAirportMonitoringJSONResponse: !include schemas/arrivingAirportMonitoringJSONResponse-schema.json
+  - alertRuleJSONResponse: !include schemas/alertRuleJSONResponse-schema.json
+  - alertRuleXMLResponse: !include schemas/alertRuleXMLResponse-schema.xsd
+  - alertDeleteRuleJSONResponse: !include schemas/alertDeleteRuleJSONResponse-schema.json
+  - alertDeleteRuleXMLResponse: !include schemas/alertDeleteRuleXMLResponse-schema.xsd
+  - alertListJSONResponse: !include schemas/alertListJSONResponse-schema.json
+  - alertListXMLResponse: !include schemas/alertListXMLResponse-schema.xsd
+  - delayindexResourceVersionResponse: !include schemas/delayindexResourceVersionResponse-schema.json
+  - delayindexResourcesJSONResponse: !include schemas/delayindexResourcesJSONResponse-schema.json
+  - delayindexResourcesXMLResponse: !include schemas/delayindexResourcesXMLResponse-schema.xsd
+  - airportsDelayIndexJSONResponse: !include schemas/airportsDelayIndexJSONResponse-schema.json
+  - airportsDelayIndexXMLResponse: !include schemas/airportsDelayIndexXMLResponse-schema.xsd
+  - countryDelayIndexesJSONResponse: !include schemas/countryDelayIndexesJSONResponse-schema.json
+  - countryDelayIndexesXMLResponse: !include schemas/countryDelayIndexesXMLResponse-schema.xsd
+  - regionDelayIndexesJSONResponse: !include schemas/regionDelayIndexesJSONResponse-schema.json
+  - regionDelayIndexesXMLResponse: !include schemas/regionDelayIndexesXMLResponse-schema.xsd
+  - stateDelayIndexesJSONResponse: !include schemas/stateDelayIndexesJSONResponse-schema.json
+  - stateDelayIndexesXMLResponse: !include schemas/stateDelayIndexesXMLResponse-schema.xsd
+  - fidsAirportDeparturesJSONResponse: !include schemas/fidsAirportDeparturesJSONResponse-schema.json
+  - fidsAirportDeparturesXMLResponse: !include schemas/fidsAirportDeparturesXMLResponse-schema.xsd
+  - fidsAirportArrivalsXMLResponse: !include schemas/fidsAirportArrivalsXMLResponse-schema.xsd
+  - fidsAirportArrivalsJSONResponse: !include schemas/fidsAirportArrivalsJSONResponse-schema.json
+  - ratingsCalculationAirlineXMLResponse: !include schemas/ratingsCalculationAirlineXMLResponse-schema.xsd
+  - ratingsCalculationAirlineJSONResponse: !include schemas/ratingsCalculationAirlineJSONResponse-schema.json
+  - ratingsAirportDepartureArrivalXMLResponse: !include schemas/ratingsAirportDepartureArrivalXMLResponse-schema.xsd
+  - ratingsAirportDepartureArrivalJSONResponse: !include schemas/ratingsAirportDepartureArrivalJSONResponse-schema.json
+  - weatherVersionResponse: !include schemas/weatherVersionResponse-schema.json
+  - weatherResourcesXMLResponse: !include schemas/weatherResourcesXMLResponse-schema.xsd
+  - weatherResourcesJSONResponse: !include schemas/weatherResourcesJSONResponse-schema.json
+  - allAirportWeatherProductsXMLResponse: !include schemas/allAirportWeatherProductsXMLResponse-schema.xsd
+  - allAirportWeatherProductsJSONResponse: !include schemas/allAirportWeatherProductsJSONResponse-schema.json
+  - airportMETARWeatherXMLResponse: !include schemas/airportMETARWeatherXMLResponse-schema.xsd
+  - airportMETARWeatherJSONResponse: !include schemas/airportMETARWeatherJSONResponse-schema.json
+  - airportTAFXMLResponse: !include schemas/airportTAFXMLResponse-schema.xsd
+  - airportTAFJSONResponse: !include schemas/airportTAFJSONResponse-schema.json
+  - airportAvailorecastXMLResponse: !include schemas/airportAvailorecastXMLResponse-schema.xsd
+  - airportAvailorecastJSONResponse: !include schemas/airportAvailorecastJSONResponse-schema.json
+  - schedulesResourceXMLResponse: !include schemas/schedulesResourceXMLResponse-schema.xsd
+  - schedulesResourceJSONResponse: !include schemas/schedulesResourceJSONResponse-schema.json
+  - scheduledFlightJSONResponse: !include schemas/scheduledFlightJSONResponse-schema.json
+  - scheduledFlightXMLResponse: !include schemas/scheduledFlightXMLResponse-schema.xsd
+  - scheduledFlightRouteJSONResponse: !include schemas/scheduledFlightRouteJSONResponse-schema.json
+  - scheduledFlightRouteXMLResponse: !include schemas/scheduledFlightRouteXMLResponse-schema.xsd
+  - scheduledFlightDepartingJSONResponse: !include schemas/scheduledFlightDepartingJSONResponse-schema.json
+  - scheduledFlightDepartingXMLResponse: !include schemas/scheduledFlightDepartingXMLResponse-schema.xsd
+  - scheduledFlightAirportDepartingXMLResponse: !include schemas/scheduledFlightAirportDepartingXMLResponse-schema.xsd
+  - scheduledFlightAirportDepartingJSONResponse: !include schemas/scheduledFlightAirportDepartingJSONResponse-schema.json
+  - scheduledFlightHourOfDayJSONResponse: !include schemas/scheduledFlightHourOfDayJSONResponse-schema.json
+  - scheduledFlightHourOfDayXMLResponse: !include schemas/scheduledFlightHourOfDayXMLResponse-schema.xsd
+  - alertLessThanResponse: !include schemas/alertLessThanResponse-schema.json
+  - alertLessThanXMLResponse: !include schemas/alertLessThanXMLResponse-schema.json
+  - schedulesResourcesResponse: !include schemas/schedulesResourcesResponse-schema.xsd
+  - testdeliveryJSONResponse: !include schemas/testdeliveryJSONResponse-schema.json
+  - testdeliveryXMLResponse: !include schemas/testdeliveryXMLResponse-schema.xsd
+resourceTypes:
+  - iataAirlineCode: !include resourceTypes/iataAirlineCode.raml
+  - airports: !include resourceTypes/airports.raml
+  - scheduledFlight: !include resourceTypes/scheduledFlight.raml
+  - airportCode: !include resourceTypes/airportCode.raml
+traits:
+  - extendedOptions: !include traits/extendedOptions.raml
+  - alert: !include traits/alert.raml
+securedBy: [ apiHeaderKey ]
+/weather/rest: 
+  /resources{mediaTypeExtension}: 
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: weatherResourcesXMLResponse
+              example: !include examples/weatherResourcesXMLResponse-example.xml
+            application/json: 
+              schema: weatherResourcesJSONResponse
+              example: !include examples/weatherResourcesJSONResponse-example.json
+  /resources/{version}: 
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: weatherVersionResponse
+              example: !include examples/weatherVersionResponse-example.json
+  /{version}/{mediaType}: 
+    /metar/{airport}: 
+      get: 
+        is: [ extendedOptions ]
+        description: Retrieve the most current available METAR weather report for the aerodrome around a given airport. METAR reports describe current conditions and are updated about once an hour.
+        queryParameters: 
+          codeType: 
+          callback: 
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: airportMETARWeatherXMLResponse
+                example: !include examples/airportMETARWeatherXMLResponse-example.xml
+              application/json: 
+                schema: airportMETARWeatherJSONResponse
+                example: !include examples/airportMETARWeatherJSONResponse-example.json
+    /all/{airport}: 
+      get: 
+        is: [ extendedOptions ]
+        description: Retrieve all weather products (METAR, TAF, and Zone Forecast) for the airport.
+        queryParameters: 
+          codeType: 
+          callback: 
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: allAirportWeatherProductsXMLResponse
+                example: !include examples/allAirportWeatherProductsXMLResponse-example.xml
+              application/json: 
+                schema: allAirportWeatherProductsJSONResponse
+                example: !include examples/allAirportWeatherProductsJSONResponse-example.json
+    /taf/{airport}: 
+      get: 
+        is: [ extendedOptions ]
+        description: Retrieve the most current available Terminal Aerodrome Forecast (TAF) for the airport. TAFs forecast weather conditions for the area within a 5 mile radius from the center of the airport runway complex.
+        queryParameters: 
+          codeType: 
+          callback: 
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: airportTAFXMLResponse
+                example: !include examples/airportTAFXMLResponse-example.xml
+              application/json: 
+                schema: airportTAFJSONResponse
+                example: !include examples/airportTAFJSONResponse-example.json
+    /zf/{airport}: 
+      get: 
+        is: [ extendedOptions ]
+        description: Retrieve the most current available zone forecast for the airport. Zone forecasts can cover several days, and apply to a more extensive area around the airport than TAFs.
+        queryParameters: 
+          codeType: 
+          callback: 
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: airportAvailorecastXMLResponse
+                example: !include examples/airportAvailorecastXMLResponse-example.xml
+              application/json: 
+                schema: airportAvailorecastJSONResponse
+                example: !include examples/airportAvailorecastJSONResponse-example.json
+/fids/rest/{version}/{mediaType}/{airport}: 
+  /departures: 
+    get: 
+      is: [ extendedOptions ]
+      description: Retrieve FIDS display data for flights departing from a given airport, including fields selected by a comma-separated list.
+      queryParameters: 
+        airport: 
+        codeType: 
+        requestedFields: 
+        sortFields: 
+        excludeAirlines: 
+        includeAirlines: 
+        includeCodeshares: 
+        terminal: 
+        timeFormat: 
+        timeWindowBegin: 
+        timeWindowEnd: 
+        maxFlights: 
+        lateMinutes: 
+        boardingMinutes: 
+        useRunwayTimes: 
+        excludeCargoOnlyFlights: 
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: fidsAirportDeparturesXMLResponse
+              example: !include examples/fidsAirportDeparturesXMLResponse-example.xml
+            application/json: 
+              schema: fidsAirportDeparturesJSONResponse
+              example: !include examples/fidsAirportDeparturesJSONResponse-example.json
+  /arrivals: 
+    get: 
+      is: [ extendedOptions ]
+      description: Retrieve FIDS display data for flights arriving at a given airport, including fields selected by a comma-separated list.
+      queryParameters: 
+        sortFields: 
+        excludeAirlines: 
+        includeAirlines: 
+        includeCodeshares: 
+        terminal: 
+        timeFormat: 
+        timeWindowBegin: 
+        timeWindowEnd: 
+        maxFlights: 
+        lateMinutes: 
+        boardingMinutes: 
+        useRunwayTimes: 
+        excludeCargoOnlyFlights: 
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: fidsAirportArrivalsXMLResponse
+              example: !include examples/fidsAirportArrivalsXMLResponse-example.xml
+            application/json: 
+              schema: fidsAirportArrivalsJSONResponse
+              example: !include examples/fidsAirportArrivalsJSONResponse-example.json
+/ratings/rest/{version}/{mediaType}: 
+  /flight/{carrier}/{flightNumber}: 
+    get: 
+      is: [ extendedOptions ]
+      description: Returns the calculated ratings information for a given airline and flight number
+      queryParameters: 
+        carrier: 
+        flightNumber: 
+        departureAirport: 
+        codeType: 
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: ratingsCalculationAirlineXMLResponse
+              example: !include examples/ratingsCalculationAirlineXMLResponse-example.xml
+            application/json: 
+              schema: ratingsCalculationAirlineJSONResponse
+              example: !include examples/ratingsCalculationAirlineJSONResponse-example.json
+  /route/{departureAirport}/{arrivalAirport}: 
+    get: 
+      is: [ extendedOptions ]
+      description: Returns the calculated ratings information for all flights having the given departure and arrival airports
+      queryParameters: 
+        departureAirport: 
+        arrivalAirport: 
+        codeType: 
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: ratingsAirportDepartureArrivalXMLResponse
+              example: !include examples/ratingsAirportDepartureArrivalXMLResponse-example.xml
+            application/json: 
+              schema: ratingsAirportDepartureArrivalJSONResponse
+              example: !include examples/ratingsAirportDepartureArrivalJSONResponse-example.json
+/alerts/rest: 
+  /resources{mediaTypeExtension}: 
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: alertsResourcesXMLResponse
+              example: !include examples/alertsResourcesXMLResponse-example.xml
+            application/json: 
+              schema: alertsResourcesJSONResponse
+              example: !include examples/alertsResourcesJSONResponse-example.json
+  /{version}/{mediaType}: 
+    /testdelivery/{carrier}/{flightNumber}/from/{departureAirport}/to/{arrivalAirport}: 
+      get: 
+        is: [ extendedOptions ]
+        description: We made this service to help you create and test your alert webservices, where FlightStats will send alert messages. When you invoke this service, FlightStats will send a simulated alert - a fake event for a fake flight - to your URL.
+        queryParameters: 
+          type: 
+            required: true
+          deliverTo: 
+            required: true
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: testdeliveryJSONResponse
+                example: !include examples/testdeliveryJSONResponse-example.json
+              application/xml: 
+                schema: testdeliveryXMLResponse
+                example: !include examples/testdeliveryXMLResponse-example.xml
+    /create/{carrier}/{flightNumber}: 
+      /to/{arrivalAirport}/arriving/{year}/{month}/{day}: 
+        get: 
+          description: Create a flight rule to be monitored for a specific flight arriving at an airport on the given day. Returns the fully constructed flight rule that was created.
+          queryParameters: 
+            type: 
+              required: true
+            deliverTo: 
+              required: true
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: arrivingAirportMonitoringXMLResponse
+                  example: !include examples/arrivingAirportMonitoringXMLResponse-example.xml
+                application/json: 
+                  schema: arrivingAirportMonitoringJSONResponse
+                  example: !include examples/arrivingAirportMonitoringJSONResponse-example.json
+      /from/{departureAirport}: 
+        /to/{arrivalAirport}: 
+          /arriving/{year}/{month}/{day}: 
+            get: 
+              is: [ alert ]
+              description: Create a flight rule to be monitored for a specific flight between two airports arriving on the given day. Returns the fully constructed flight rule that was created.
+              responses: 
+                200: 
+                  body: 
+                    application/xml: 
+                      schema: arrivingMonitoringXMLResponse
+                      example: !include examples/arrivingMonitoringXMLResponse-example.xml
+                    application/json: 
+                      schema: arrivingMonitoringJSONResponse
+                      example: !include examples/arrivingMonitoringJSONResponse-example.json
+          /departing/{year}/{month}/{day}: 
+            get: 
+              is: [ extendedOptions , alert ]
+              description: Create a flight rule to be monitored for a specific flight between two airports departing on the given day. Returns the fully constructed flight rule that was created.
+              queryParameters: 
+                name: 
+                desc: 
+                events: 
+                codeType: 
+                callback: 
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      schema: flightMonitoringJSONResponse
+                      example: !include examples/flightMonitoringJSONResponse-example.json
+                    application/xml: 
+                      schema: flightMonitoringXMLResponse
+                      example: !include examples/flightMonitoringXMLResponse-example.xml
+        /departing/{year}/{month}/{day}: 
+          get: 
+            description: Create a flight rule to be monitored for a specific flight departing from an airport on the given day. Returns the fully constructed flight rule that was created.
+            queryParameters: 
+              type: 
+                required: true
+              deliverTo: 
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    schema: departingMonitoringXMLResponse
+                    example: !include examples/departingMonitoringXMLResponse-example.xml
+                  application/json: 
+                    schema: departingMonitoringJSONResponse
+                    example: !include examples/departingMonitoringJSONResponse-example.json
+    /list: 
+      get: 
+        description: Returns at most the last thousand Alert Rule IDs. See the alternative form of this to specify the max Rule ID, which allows for iteration over all Rule IDs.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: alertListXMLResponse
+                example: !include examples/alertListXMLResponse-example.xml
+              application/json: 
+                schema: alertListJSONResponse
+                example: !include examples/alertListJSONResponse-example.json
+      /{lessThan}: 
+        get: 
+          is: [ extendedOptions ]
+          description: Returns at most the last thousand Alert Rule IDs that are less than the given max Rule ID. See the alternative form of this list the last 1000 Rule IDs.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: alertLessThanResponse
+                  example: !include examples/alertListJSONResponse-example.json
+                application/xml: 
+                  schema: alertLessThanXMLResponse
+                  example: !include examples/alertListXMLResponse-example.xml
+    /get/{ruleId}: 
+      get: 
+        is: [ extendedOptions ]
+        description: Returns the flight rule that was previously created given a rule ID.
+        queryParameters: 
+          callback: 
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: alertRuleJSONResponse
+                example: !include examples/alertRuleJSONResponse-example.json
+              application/xml: 
+                schema: alertRuleXMLResponse
+                example: !include examples/alertRuleXMLResponse-example.xml
+    /delete/{ruleId}: 
+      get: 
+        is: [ extendedOptions ]
+        description: Deletes a flight rule that was previously created given a rule ID. Returns the flight rule that was deleted. Note that once deleted any subsequent calls with the same ID will return a rule not found exception.
+        queryParameters: 
+          callback: 
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: alertDeleteRuleJSONResponse
+                example: !include examples/alertDeleteRuleJSONResponse-example.json
+              application/xml: 
+                schema: alertDeleteRuleXMLResponse
+                example: !include examples/alertDeleteRuleXMLResponse-example.xml
+  /resources: 
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: alertsResourcesResponse
+              example: !include examples/alertsResourcesResponse-example.json
+/delayindex/rest: 
+  /resources{mediaTypeExtension}: 
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: delayindexResourcesJSONResponse
+              example: !include examples/delayindexResourcesJSONResponse-example.json
+            application/xml: 
+              schema: delayindexResourcesXMLResponse
+              example: !include examples/delayindexResourcesXMLResponse-example.xml
+  /resources/{version}: 
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: delayindexResourceVersionResponse
+              example: !include examples/delayindexResourceVersionResponse-example.json
+  /{version}/{mediaType}: 
+    /airports/{airports}: 
+      get: 
+        is: [ extendedOptions ]
+        description: Returns the current DelayIndex(es) for the given Airport(s)
+        queryParameters: 
+          codeType: 
+          classification: 
+          score: 
+          callback: 
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: airportsDelayIndexJSONResponse
+                example: !include examples/airportsDelayIndexJSONResponse-example.json
+              application/xml: 
+                schema: airportsDelayIndexXMLResponse
+                example: !include examples/airportsDelayIndexXMLResponse-example.xml
+    /region/{region}: 
+      get: 
+        is: [ extendedOptions ]
+        description: Returns DelayIndexes for airports in the given Region
+        queryParameters: 
+          classification: 
+          score: 
+          callback: 
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: regionDelayIndexesJSONResponse
+                example: !include examples/regionDelayIndexesJSONResponse-example.json
+              application/xml: 
+                schema: regionDelayIndexesXMLResponse
+                example: !include examples/regionDelayIndexesXMLResponse-example.xml
+    /state/{state}: 
+      get: 
+        is: [ extendedOptions ]
+        description: Returns DelayIndexes for airports in the given State
+        queryParameters: 
+          classification: 
+          score: 
+          callback: 
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: stateDelayIndexesJSONResponse
+                example: !include examples/stateDelayIndexesJSONResponse-example.json
+              application/xml: 
+                schema: stateDelayIndexesXMLResponse
+                example: !include examples/stateDelayIndexesXMLResponse-example.xml
+    /country/{country}: 
+      get: 
+        is: [ extendedOptions ]
+        description: Returns DelayIndexes for airports in the given Country
+        queryParameters: 
+          classification: 
+          score: 
+          callback: 
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: countryDelayIndexesJSONResponse
+                example: !include examples/countryDelayIndexesJSONResponse-example.json
+              application/xml: 
+                schema: countryDelayIndexesXMLResponse
+                example: !include examples/countryDelayIndexesXMLResponse-example.xml
+/airports/rest: 
+  /resources{mediaTypeExtension}: 
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: airportsRestResourceJSONResponse
+              example: !include examples/airportsRestResourceJSONResponse-example.json
+  /{version}/{mediaType}: 
+    /cityCode/{cityCode}: 
+      type: airports
+    /active: 
+      type: airports
+      /{year}/{month}/{day}: 
+        type: airports
+    /withinRadius/{longitude}/{latitude}/{radiusMiles}: 
+      type: airports
+    /fs/{code}: 
+      get: 
+        is: [ extendedOptions ]
+        description: Returns the airport with the given FlightStats code, a globally unique code across time
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: airportFSCodeXMLResponse
+                example: !include examples/airportFSCodeXMLResponse-example.xml
+              application/json: 
+                schema: airportFSCodeJSONResponse
+                example: !include examples/airportFSCodeJSONResponse-example.json
+    /all: 
+      type: airports
+    /icao/{icaoCode}: 
+      type: airports
+      /{year}/{month}/{day}: 
+        type: airports
+    /{code}: 
+      /{year}/{month}/{day}: 
+        type: airportCode
+      /today: 
+        type: airportCode
+    /iata/{iataCode}: 
+      type: airports
+      /{year}/{month}/{day}: 
+        get: 
+          is: [ extendedOptions ]
+          description: Returns the airport that had the IATA code on the given date.
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: airportFSCodeXMLResponse
+                  example: !include examples/iataCodeDayXMLResponse-example.xml
+                application/json: 
+                  schema: airportFSCodeJSONResponse
+                  example: !include examples/iataCodeDayJSONResponse-example.json
+    /countryCode/{countryCode}: 
+      type: airports
+  /resources: 
+    get: 
+      description: Airports resources info
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: airlinesResourcesResponse
+              example: !include examples/airportsResourcesResponse-example.json
+/airlines/rest: 
+  /{version}/{mediaType}: 
+    /active: 
+      get: 
+        is: [ extendedOptions ]
+        description: Returns a listing of currently active airlines
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: activeXMLResponse
+                example: !include examples/activeXMLResponse-example.xml
+              application/json: 
+                schema: activeJSONResponse
+                example: !include examples/activeJSONResponse-example.json
+      /{year}/{month}/{day}: 
+        get: 
+          is: [ extendedOptions ]
+          description: Returns a listing of active airlines on the given date
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: activeXMLResponse
+                  example: !include examples/activeAirlinesAtGivenDateXMLResponse-example.xml
+                application/json: 
+                  schema: activeJSONResponse
+                  example: !include examples/activeAirlinesAtGivenDateJSONResponse-example.json
+    /fs/{code}: 
+      get: 
+        is: [ extendedOptions ]
+        description: Returns the airline with the given FlightStats code, a globally unique code that is consistent across time
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: airlineFsCodeXMLResponse
+                example: !include examples/airlineFsCodeXMLResponse-example.xml
+              application/json: 
+                schema: airlineFsCodeJSONResponse
+                example: !include examples/airlineFsCodeJSONResponse-example.json
+    /all: 
+      get: 
+        is: [ extendedOptions ]
+        description: Returns a listing of all airlines, including those that are not currently active
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: activeXMLResponse
+                example: !include examples/allAirlinesXMLResponse-example.xml
+              application/json: 
+                schema: allAirlinesJSONResponse
+                example: !include examples/allAirlinesJSONResponse-example.json
+    /icao/{icaoCode}: 
+      get: 
+        is: [ extendedOptions ]
+        description: Returns a listing of airlines that have had the given ICAO code
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: airlineIATACodeXMLResponse
+                example: !include examples/airlineICAOCodeXMLResponse-example.xml
+              application/json: 
+                schema: airlineIATACodeJSONResponse
+                example: !include examples/airlineICAOCodeJSONResponse-example.json
+      /{year}/{month}/{day}: 
+        get: 
+          is: [ extendedOptions ]
+          description: Returns the airline that had the ICAO code on the given date
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: airlineFsCodeXMLResponse
+                  example: !include examples/airlineICAOCodeByDateXMLResponse-example.xml
+                application/json: 
+                  schema: airlineFsCodeJSONResponse
+                  example: !include examples/airlineICAOCodeByDateJSONResponse-example.json
+    /iata/{iataCode}: 
+      type: iataAirlineCode
+      /{year}/{month}/{day}: 
+        type: iataAirlineCode
+  /resources: 
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+/schedules/rest: 
+  /resources{mediaTypeExtension}: 
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: schedulesResourceXMLResponse
+              example: !include examples/schedulesResourceXMLResponse-example.xml
+            application/json: 
+              schema: schedulesResourceJSONResponse
+              example: !include examples/schedulesResourceJSONResponse-example.json
+  /{version}/{mediaType}: 
+    /to/{arrivalAirportCode}/arriving/{year}/{month}/{day}/{hourOfDay}: 
+      get: 
+        is: [ extendedOptions ]
+        description: Scheduled Flight(s) arriving at the given airport at the given date and hour.
+        queryParameters: 
+          codeType: 
+          callback: 
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: scheduledFlightHourOfDayJSONResponse
+                example: !include examples/scheduledFlightHourOfDayJSONResponse-example.json
+              application/xml: 
+                schema: scheduledFlightHourOfDayXMLResponse
+                example: !include examples/scheduledFlightHourOfDayXMLResponse-example.xml
+    /from/{departureAirportCode}: 
+      /to/{arrivalAirportCode}: 
+        /arriving/{year}/{month}/{day}: 
+          get: 
+            is: [ extendedOptions ]
+            description: Scheduled Flight(s) by route, arriving on the given date.
+            queryParameters: 
+              codeType: 
+              callback: 
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: scheduledFlightRouteJSONResponse
+                    example: !include examples/scheduledFlightRouteJSONResponse-example.json
+                  application/xml: 
+                    schema: scheduledFlightRouteXMLResponse
+                    example: !include examples/scheduledFlightRouteXMLResponse-example.xml
+        /departing/{year}/{month}/{day}: 
+          get: 
+            is: [ extendedOptions ]
+            description: Scheduled Flight(s) by route, departing on the given date.
+            queryParameters: 
+              codeType: 
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: scheduledFlightDepartingJSONResponse
+                    example: !include examples/scheduledFlightDepartingJSONResponse-example.json
+                  application/xml: 
+                    schema: scheduledFlightDepartingXMLResponse
+                    example: !include examples/scheduledFlightDepartingXMLResponse-example.xml
+      /departing/{year}/{month}/{day}/{hourOfDay}: 
+        get: 
+          is: [ extendedOptions ]
+          description: Scheduled Flight(s) departing from the given airport at the given date and hour.
+          queryParameters: 
+            codeType: 
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: scheduledFlightAirportDepartingXMLResponse
+                  example: !include examples/scheduledFlightAirportDepartingXMLResponse-example.xml
+                application/json: 
+                  schema: scheduledFlightAirportDepartingJSONResponse
+                  example: !include examples/scheduledFlightAirportDepartingJSONResponse-example.json
+    /flight/{carrier}/{flightnumber}: 
+      /arriving/{year}/{month}/{day}: 
+        type: scheduledFlight
+      /departing/{year}/{month}/{day}: 
+        type: scheduledFlight
+  /resources: 
+    get: 
+      description: Airlines resource info
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: schedulesResourcesResponse
+              example: !include examples/airlinesResourcesResponse-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/api/headline.md

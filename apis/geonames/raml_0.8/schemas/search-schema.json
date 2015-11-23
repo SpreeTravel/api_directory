@@ -1,0 +1,82 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "totalResultsCount" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "geonames" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "countryId" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "adminCode1" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "countryName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "fclName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "countryCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "lng" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "fcodeName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "toponymName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "fcl" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "fcode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "geonameId" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "lat" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "adminName1" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "population" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

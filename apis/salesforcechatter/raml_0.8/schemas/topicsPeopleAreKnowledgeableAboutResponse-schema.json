@@ -1,0 +1,71 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "isEndorsedByMe": {
+      "type": "boolean",
+      "required": false
+    },
+    "knowledgeableId": {
+      "type": "string",
+      "required": false
+    },
+    "numEndorsements": {
+      "type": "integer",
+      "required": false
+    },
+    "reasons": {
+      "type": "string",
+      "required": false
+    },
+    "topic": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "createdDate": {
+          "type": "string",
+          "required": false
+        },
+        "description": {
+          "type": "string",
+          "required": false
+        },
+        "id": {
+          "type": "string",
+          "required": false
+        },
+        "images": {
+          "type": "object",
+          "required": false,
+          "properties": {
+            "coverImageUrl": {
+              "type": "string",
+              "required": false
+            },
+            "featuredImageUrl": {
+              "type": "string",
+              "required": false
+            }
+          }
+        },
+        "isBeingDeleted": {
+          "type": "boolean",
+          "required": false
+        },
+        "name": {
+          "type": "string",
+          "required": false
+        },
+        "talkingAbout": {
+          "type": "integer",
+          "required": false
+        },
+        "url": {
+          "type": "string",
+          "required": false
+        }
+      }
+    }
+  }
+}

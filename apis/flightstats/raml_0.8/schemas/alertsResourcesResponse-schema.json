@@ -1,0 +1,38 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "apiVersion" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "swaggerVersion" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "basePath" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "apis" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "path" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

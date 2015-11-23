@@ -1,0 +1,10 @@
+{
+  "kind" : "blogger#page_views" ,
+  "blogId" : "long" ,
+  "counts" : [
+    {
+      "timeRange" : "string" ,
+      "count" : "long"
+    }
+  ]
+}

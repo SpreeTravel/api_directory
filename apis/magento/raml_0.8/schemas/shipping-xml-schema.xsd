@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="magento_api">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="region" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="postcode" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="lastname" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="street" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="city" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="telephone" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="country_id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="firstname" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="address_type" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="prefix" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="middlename" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="suffix" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="company" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

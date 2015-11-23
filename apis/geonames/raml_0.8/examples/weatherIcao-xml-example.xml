@@ -1,0 +1,191 @@
+<geonames>
+<observation>
+<observation>
+K1R7 081635Z AUTO 28009G15KT 3SM -RA BKN015 BKN022 OVC029 12/11 A2995 RMK AO2
+</observation>
+<observationTime>2014-04-08 16:35:00</observationTime>
+<stationName>BROOKHAVEN</stationName>
+<ICAO>K1R7</ICAO>
+<countryCode/>
+<elevation>0</elevation>
+<lat>31.6</lat>
+<lng>-90.41666666666667</lng>
+<temperature>12</temperature>
+<dewPoint>11</dewPoint>
+<humidity>93</humidity>
+<clouds code="BKN">broken clouds</clouds>
+<weatherCondition code="-RA">light rain</weatherCondition>
+<windDirection>280.0</windDirection>
+<windSpeed>09</windSpeed>
+</observation>
+<observation>
+<observation>
+K2V5 081635Z AUTO 34011G24KT 10SM 17/M02 A3016 RMK AO2 T01671023
+</observation>
+<observationTime>2014-04-08 16:35:00</observationTime>
+<stationName>WRAY</stationName>
+<ICAO>K2V5</ICAO>
+<countryCode/>
+<elevation>0</elevation>
+<lat>40.1</lat>
+<lng>-102.23333333333333</lng>
+<temperature>16.7</temperature>
+<dewPoint>-2.3</dewPoint>
+<humidity>27</humidity>
+<clouds>n/a</clouds>
+<weatherCondition>n/a</weatherCondition>
+<windDirection>340.0</windDirection>
+<windSpeed>11</windSpeed>
+</observation>
+<observation>
+<observation>
+K42J 081635Z AUTO 25008KT 10SM FEW090 FEW110 19/16 A2978 RMK AO1
+</observation>
+<observationTime>2014-04-08 16:35:00</observationTime>
+<stationName>KEYSTONE HEIGHTS</stationName>
+<ICAO>K42J</ICAO>
+<countryCode/>
+<elevation>0</elevation>
+<lat>29.85</lat>
+<lng>-82.05</lng>
+<temperature>19</temperature>
+<dewPoint>16</dewPoint>
+<humidity>82</humidity>
+<clouds code="FEW">few clouds</clouds>
+<weatherCondition>n/a</weatherCondition>
+<windDirection>250.0</windDirection>
+<windSpeed>08</windSpeed>
+</observation>
+<observation>
+<observation>
+KAIK 081635Z AUTO 28006KT 10SM CLR 15/11 A2972 RMK AO2 PNO
+</observation>
+<observationTime>2014-04-08 16:35:00</observationTime>
+<stationName>AIKEN</stationName>
+<ICAO>KAIK</ICAO>
+<countryCode/>
+<elevation>0</elevation>
+<lat>33.65</lat>
+<lng>-81.68333333333334</lng>
+<temperature>15</temperature>
+<dewPoint>11</dewPoint>
+<humidity>77</humidity>
+<clouds>n/a</clouds>
+<weatherCondition>n/a</weatherCondition>
+<windDirection>280.0</windDirection>
+<windSpeed>06</windSpeed>
+</observation>
+<observation>
+<observation>
+KANQ 081635Z AUTO VRB06KT 10SM FEW075 12/02 A2969 RMK
+</observation>
+<observationTime>2014-04-08 16:35:00</observationTime>
+<stationName>Tri-State Steuben County Airport</stationName>
+<ICAO>KANQ</ICAO>
+<countryCode/>
+<elevation>0</elevation>
+<lat>41.6394947</lat>
+<lng>-85.0866346</lng>
+<temperature>12</temperature>
+<dewPoint>2</dewPoint>
+<humidity>50</humidity>
+<clouds code="FEW">few clouds</clouds>
+<weatherCondition>n/a</weatherCondition>
+<windSpeed>06</windSpeed>
+</observation>
+<observation>
+<observation>
+KCMR 081635Z AUTO 01004KT 10SM CLR 16/M09 A3045 RMK AO1
+</observation>
+<observationTime>2014-04-08 16:35:00</observationTime>
+<stationName>WILLIAMS CLARK</stationName>
+<ICAO>KCMR</ICAO>
+<countryCode/>
+<elevation>0</elevation>
+<lat>35.3</lat>
+<lng>-112.2</lng>
+<temperature>16</temperature>
+<dewPoint>-9</dewPoint>
+<humidity>17</humidity>
+<clouds>n/a</clouds>
+<weatherCondition>n/a</weatherCondition>
+<windDirection>10.0</windDirection>
+<windSpeed>04</windSpeed>
+</observation>
+<observation>
+<observation>
+KFDW 081635Z AUTO 29005KT 10SM SCT018 15/11 A2968 RMK AO1
+</observation>
+<observationTime>2014-04-08 16:35:00</observationTime>
+<stationName>WINNSBORO</stationName>
+<ICAO>KFDW</ICAO>
+<countryCode/>
+<elevation>0</elevation>
+<lat>34.31666666666667</lat>
+<lng>-81.11666666666666</lng>
+<temperature>15</temperature>
+<dewPoint>11</dewPoint>
+<humidity>77</humidity>
+<clouds code="SCT">scattered clouds</clouds>
+<weatherCondition>n/a</weatherCondition>
+<windDirection>290.0</windDirection>
+<windSpeed>05</windSpeed>
+</observation>
+<observation>
+<observation>
+KFWZ 081635Z AUTO 25009KT 10SM CLR 06/M05 A3023 RMK AO2
+</observation>
+<observationTime>2014-04-08 16:35:00</observationTime>
+<stationName>SOUTH PASS</stationName>
+<ICAO>KFWZ</ICAO>
+<countryCode/>
+<elevation>0</elevation>
+<lat>42.516666666666666</lat>
+<lng>-108.78333333333333</lng>
+<temperature>6</temperature>
+<dewPoint>-5</dewPoint>
+<humidity>45</humidity>
+<clouds>n/a</clouds>
+<weatherCondition>n/a</weatherCondition>
+<windDirection>250.0</windDirection>
+<windSpeed>09</windSpeed>
+</observation>
+<observation>
+<observation>
+KGGE 081635Z AUTO 25008KT 10SM -RA BKN009 OVC016 19/19 A2966 RMK AO2
+</observation>
+<observationTime>2014-04-08 16:35:00</observationTime>
+<stationName>GEORGETOWN</stationName>
+<ICAO>KGGE</ICAO>
+<countryCode/>
+<elevation>0</elevation>
+<lat>33.31666666666667</lat>
+<lng>-79.31666666666666</lng>
+<temperature>19</temperature>
+<dewPoint>19</dewPoint>
+<humidity>100</humidity>
+<clouds code="BKN">broken clouds</clouds>
+<weatherCondition code="-RA">light rain</weatherCondition>
+<windDirection>250.0</windDirection>
+<windSpeed>08</windSpeed>
+</observation>
+<observation>
+<observation>
+KGLY 081635Z AUTO 32011G17KT 10SM SCT043 SCT100 13/04 A2999 RMK AO2
+</observation>
+<observationTime>2014-04-08 16:35:00</observationTime>
+<stationName>CLINTON</stationName>
+<ICAO>KGLY</ICAO>
+<countryCode/>
+<elevation>0</elevation>
+<lat>38.35</lat>
+<lng>-93.68333333333334</lng>
+<temperature>13</temperature>
+<dewPoint>4</dewPoint>
+<humidity>54</humidity>
+<clouds code="SCT">scattered clouds</clouds>
+<weatherCondition>n/a</weatherCondition>
+<windDirection>320.0</windDirection>
+<windSpeed>11</windSpeed>
+</observation>
+</geonames>

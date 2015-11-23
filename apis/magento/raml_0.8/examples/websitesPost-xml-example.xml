@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<magento_api>
+  <data_item>
+    <website_id>1</website_id>
+  </data_item>
+  <data_item>
+    <website_id>3</website_id>
+  </data_item>
+</magento_api>

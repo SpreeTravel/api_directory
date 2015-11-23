@@ -1,0 +1,133 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "foods": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "isFavorite": {
+            "type": "boolean"
+          },
+          "logDate": {
+            "type": "string"
+          },
+          "logId": {
+            "type": "integer"
+          },
+          "loggedFood": {
+            "type": "object",
+            "properties": {
+              "accessLevel": {
+                "enum": [
+                  "PUBLIC",
+                  "PRIVATE",
+                  "SHARED"
+                ]
+              },
+              "amount": {
+                "type": "number"
+              },
+              "brand": {
+                "type": "string"
+              },
+              "calories": {
+                "type": "integer"
+              },
+              "foodId": {
+                "type": "integer"
+              },
+              "mealTypeId": {
+                "type": "integer"
+              },
+              "locale": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "unit": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "plural": {
+                    "type": "string"
+                  }
+                }
+              },
+              "units": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "nutritionalValues": {
+            "type": "object",
+            "properties": {
+              "calories": {
+                "type": "integer"
+              },
+              "carbs": {
+                "type": "number"
+              },
+              "fat": {
+                "type": "number"
+              },
+              "fiber": {
+                "type": "number"
+              },
+              "protein": {
+                "type": "number"
+              },
+              "sodium": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "calories": {
+          "type": "integer"
+        },
+        "carbs": {
+          "type": "number"
+        },
+        "fat": {
+          "type": "number"
+        },
+        "fiber": {
+          "type": "number"
+        },
+        "protein": {
+          "type": "number"
+        },
+        "sodium": {
+          "type": "number"
+        },
+        "water": {
+          "type": "number"
+        }
+      }
+    },
+    "goals": {
+      "type": "object",
+      "properties": {
+        "calories": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

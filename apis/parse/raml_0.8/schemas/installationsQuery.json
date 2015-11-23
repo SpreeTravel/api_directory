@@ -1,0 +1,41 @@
+{
+	"type" : "object" ,
+	"$schema" : "http://json-schema.org/draft-03/schema" ,
+	"required" : true ,
+	"properties" : {
+		"results" : {
+			"type" : "array" ,
+			"required" : true ,
+			"items" : {
+				"type" : "object" ,
+				"required" : false ,
+				"properties" : {
+					"devicetype" : {
+						"type" : "string" ,
+						"required" : true
+					} ,
+					"createdAt" : {
+						"type" : "string" ,
+						"required" : true
+					} ,
+					"objectId" : {
+						"type" : "string" ,
+						"required" : true
+					} ,
+					"updatedAt" : {
+						"type" : "string" ,
+						"required" : true
+					}
+				} ,
+				"patternProperties" : {
+					"^[a-zA-Z0-9_]+$" : {
+						"type" : "any" ,
+						"required" : false
+					}
+				} ,
+				"additionalProperties" : false
+			}
+		}
+	} ,
+	"additionalProperties" : false
+}

@@ -1,0 +1,29 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "displayName": {
+      "type": "string",
+      "required": false
+    },
+    "displayValue": {
+      "type": "string",
+      "required": false
+    },
+    "record": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "required": false
+        },
+        "url": {
+          "type": "string",
+          "required": false
+        }
+      }
+    }
+  }
+}

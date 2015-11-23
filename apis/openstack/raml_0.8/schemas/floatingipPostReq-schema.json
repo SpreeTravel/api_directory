@@ -1,0 +1,21 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "floatingip" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "floating_network_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "port_id" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

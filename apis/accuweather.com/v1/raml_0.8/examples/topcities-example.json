@@ -1,0 +1,114 @@
+[
+  {
+    "Version" : 1 ,
+    "Key" : "7894" ,
+    "Type" : "City" ,
+    "Rank" : 10 ,
+    "LocalizedName" : "Buenos Aires" ,
+    "EnglishName" : "Buenos Aires" ,
+    "PrimaryPostalCode" : "" ,
+    "Region" : {
+      "ID" : "SAM" ,
+      "LocalizedName" : "South America" ,
+      "EnglishName" : "South America"
+    } ,
+    "Country" : {
+      "ID" : "AR" ,
+      "LocalizedName" : "Argentina" ,
+      "EnglishName" : "Argentina"
+    } ,
+    "AdministrativeArea" : {
+      "ID" : "C" ,
+      "LocalizedName" : "Buenos Aires - Capital Federal" ,
+      "EnglishName" : "Buenos Aires - Capital Federal" ,
+      "Level" : 1 ,
+      "LocalizedType" : "Autonomous City" ,
+      "EnglishType" : "Autonomous City" ,
+      "CountryID" : "AR"
+    } ,
+    "TimeZone" : {
+      "Code" : "ART" ,
+      "Name" : "America/Argentina/Buenos_Aires" ,
+      "GmtOffset" : -3 ,
+      "IsDaylightSaving" : false ,
+      "NextOffsetChange" : null
+    } ,
+    "GeoPosition" : {
+      "Latitude" : -34.62 ,
+      "Longitude" : -58.42 ,
+      "Elevation" : {
+        "Metric" : {
+          "Value" : 26 ,
+          "Unit" : "m" ,
+          "UnitType" : 5
+        } ,
+        "Imperial" : {
+          "Value" : 85 ,
+          "Unit" : "ft" ,
+          "UnitType" : 0
+        }
+      }
+    } ,
+    "IsAlias" : false ,
+    "SupplementalAdminAreas" : [
+      {
+        "Level" : 2 ,
+        "LocalizedName" : "5" ,
+        "EnglishName" : "5"
+      }
+    ]
+  } , {
+    "Version" : 1 ,
+    "Key" : "28143" ,
+    "Type" : "City" ,
+    "Rank" : 10 ,
+    "LocalizedName" : "Dhaka" ,
+    "EnglishName" : "Dhaka" ,
+    "PrimaryPostalCode" : "" ,
+    "Region" : {
+      "ID" : "ASI" ,
+      "LocalizedName" : "Asia" ,
+      "EnglishName" : "Asia"
+    } ,
+    "Country" : {
+      "ID" : "BD" ,
+      "LocalizedName" : "Bangladesh" ,
+      "EnglishName" : "Bangladesh"
+    } ,
+    "AdministrativeArea" : {
+      "ID" : "C" ,
+      "LocalizedName" : "Dhaka" ,
+      "EnglishName" : "Dhaka" ,
+      "Level" : 1 ,
+      "LocalizedType" : "Division" ,
+      "EnglishType" : "Division" ,
+      "CountryID" : "BD"
+    } ,
+    "TimeZone" : {
+      "Code" : "BDT" ,
+      "Name" : "Asia/Dhaka" ,
+      "GmtOffset" : 6 ,
+      "IsDaylightSaving" : false ,
+      "NextOffsetChange" : null
+    } ,
+    "GeoPosition" : {
+      "Latitude" : 23.71 ,
+      "Longitude" : 90.41 ,
+      "Elevation" : {
+        "Metric" : {
+          "Value" : 4 ,
+          "Unit" : "m" ,
+          "UnitType" : 5
+        } ,
+        "Imperial" : {
+          "Value" : 14 ,
+          "Unit" : "ft" ,
+          "UnitType" : 0
+        }
+      }
+    } ,
+    "IsAlias" : false ,
+    "SupplementalAdminAreas" : [
+    ]
+  }
+]

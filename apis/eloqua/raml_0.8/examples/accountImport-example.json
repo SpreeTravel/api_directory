@@ -1,0 +1,21 @@
+{
+  "purpose" : "undefined" ,
+  "dataImportPriorityId" : "undefined" ,
+  "sourceFieldIds" : [
+    null ,
+    null
+  ] ,
+  "fieldMappings" : [
+    {
+      "sourceFieldId" : "undefined" ,
+      "targetFieldId" : "undefined" ,
+      "isLookup" : "true" ,
+      "updateType" : "undefined"
+    }
+  ] ,
+  "notification" : {
+  } ,
+  "listId" : "undefined" ,
+  "isAutomated" : "undefined" ,
+  "lastUpdatedSourceFieldsAt" : "undefined"
+}

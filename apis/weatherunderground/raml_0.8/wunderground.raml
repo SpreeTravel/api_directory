@@ -1,0 +1,448 @@
+#%RAML 0.8
+title: Weather Underground
+version: v1
+baseUri: http://api.wunderground.com/api/{api_key}
+baseUriParameters: 
+  api_key: 
+    description: Your API key. You can request a key on the sign in page. This is used in most API calls (with the exception of the AutoComplete API).
+schemas:
+  - alertsSchema: !include schemas/alerts-schema.json
+  - almanacSchema: !include schemas/almanac-schema.json
+  - astronomySchema: !include schemas/astronomy-schema.json
+  - conditionsSchema: !include schemas/conditions-schema.json
+  - currenthurricaneSchema: !include schemas/currenthurricane-schema.json
+  - datafeaturesSchema: !include schemas/datafeatures-schema.json
+  - forecastSchema: !include schemas/forecast-schema.json
+  - forecast10daySchema: !include schemas/forecast10day-schema.json
+  - geolookupSchema: !include schemas/geolookup-schema.json
+  - historySchema: !include schemas/history-schema.json
+  - hourlySchema: !include schemas/hourly-schema.json
+  - hourly10daySchema: !include schemas/hourly10day-schema.json
+  - plannerSchema: !include schemas/planner-schema.json
+  - rawtideSchema: !include schemas/rawtide-schema.json
+  - satelliteSchema: !include schemas/satellite-schema.json
+  - tideSchema: !include schemas/tide-schema.json
+  - webcamsSchema: !include schemas/webcams-schema.json
+  - yesterdaySchema: !include schemas/yesterday-schema.json
+resourceTypes:
+  - featureBase2: !include resourceTypes/featureBase2.raml
+  - featureBase: !include resourceTypes/featureBase.raml
+  - feature: !include resourceTypes/feature.raml
+traits:
+  - alertsTrait: !include traits/alertsTrait.raml
+  - forecast10dayTrait: !include traits/forecast10dayTrait.raml
+  - satellite2Trait: !include traits/satellite2Trait.raml
+  - satelliteTrait: !include traits/satelliteTrait.raml
+  - geolookupTrait: !include traits/geolookupTrait.raml
+  - yesterdayTrait: !include traits/yesterdayTrait.raml
+  - almanacTrait: !include traits/almanacTrait.raml
+  - radarTrait: !include traits/radarTrait.raml
+  - hourlyTrait: !include traits/hourlyTrait.raml
+  - tideTrait: !include traits/tideTrait.raml
+  - rawtideTrait: !include traits/rawtideTrait.raml
+  - currenthurricaneTrait: !include traits/currenthurricaneTrait.raml
+  - hourly10dayTrait: !include traits/hourly10dayTrait.raml
+  - webcamsTrait: !include traits/webcamsTrait.raml
+  - plannerTrait: !include traits/plannerTrait.raml
+  - datafeaturesTrait: !include traits/datafeaturesTrait.raml
+  - historyTrait: !include traits/historyTrait.raml
+  - forecastTrait: !include traits/forecastTrait.raml
+  - conditionsTrait: !include traits/conditionsTrait.raml
+  - radarSatelliteTrait: !include traits/radarSatelliteTrait.raml
+  - canRequestJsonp: !include traits/canRequestJsonp.raml
+  - astronomyTrait: !include traits/astronomyTrait.raml
+/{radarFeature}: 
+  uriParameters: 
+    radarFeature: 
+      description: |
+        radar (single frame) or animatedradar (6-frame animation by default; must be gif or swf format)
+      enum: [ radar , animatedradar ]
+  /image{mediaTypeExtension}: 
+    uriParameters: 
+      mediaTypeExtension: 
+        description: |
+          gif, png, or swf
+        enum: 
+          - gif
+          - png
+          - swf
+    get: 
+      is: [ radarTrait ]
+      responses: 
+        200: 
+  /q/{query}{mediaTypeExtension}: 
+    uriParameters: 
+      query: 
+        description: |
+          A valid location query as described in the API URL Format
+          http://www.wunderground.com/weather/api/d/docs?d=data/index
+      mediaTypeExtension: 
+        description: |
+          gif, png, or swf
+        enum: 
+          - gif
+          - png
+          - swf
+    get: 
+      is: [ radarTrait ]
+      responses: 
+        200: 
+/{satteliteFeature}: 
+  uriParameters: 
+    satteliteFeature: 
+      description: |
+        satellite (single frame) or animatedsatellite (6-frame animation by default; must be gif format)
+      enum: [ satellite , animatedsatellite ]
+  /image{mediaTypeExtension}: 
+    uriParameters: 
+      mediaTypeExtension: 
+        description: |
+          gif or png
+          Output format.
+        enum: [ gif , png ]
+    get: 
+      is: [ satellite2Trait ]
+      responses: 
+        200: 
+  /q/{query}{mediaTypeExtension}: 
+    uriParameters: 
+      query: 
+        description: |
+          A valid location query as described in the API URL Format
+          http://www.wunderground.com/weather/api/d/docs?d=data/index
+      mediaTypeExtension: 
+        description: |
+          gif or png
+          Output format.
+        enum: [ gif , png ]
+    get: 
+      is: [ satellite2Trait ]
+      responses: 
+        200: 
+/{radarSatteliteFeatures}: 
+  uriParameters: 
+    radarSatteliteFeatures: 
+      description: |
+        radar/satellite (single frame) or animatedradar/animatedsatellite (6-frame animation by default; must be gif format)
+      enum: [ radar/satellite , animatedradar/animatedsatellite ]
+  /image{mediaTypeExtension}: 
+    uriParameters: 
+      mediaTypeExtension: 
+        description: |
+          gif or png
+          Output format.
+        enum: [ gif , png ]
+    get: 
+      is: [ radarSatelliteTrait ]
+      responses: 
+        200: 
+  /q/{query}{mediaTypeExtension}: 
+    uriParameters: 
+      query: 
+        description: |
+          A valid location query as described in the API URL Format
+          http://www.wunderground.com/weather/api/d/docs?d=data/index
+      mediaTypeExtension: 
+        description: |
+          gif or png
+          Output format.
+        enum: [ gif , png ]
+    get: 
+      is: [ radarSatelliteTrait ]
+      responses: 
+        200: 
+/alerts: 
+  /{settings}/q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase, trait: alertsTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+  /q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase2, trait: alertsTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+/almanac: 
+  /{settings}/q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase, trait: almanacTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+  /q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase2, trait: almanacTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+/astronomy: 
+  /{settings}/q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase, trait: astronomyTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+  /q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase2, trait: astronomyTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+/conditions: 
+  /{settings}/q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase, trait: conditionsTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+  /q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase2, trait: conditionsTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+/currenthurricane: 
+  /{settings}/q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase, trait: currenthurricaneTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+  /q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase2, trait: currenthurricaneTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+/{features}: 
+  uriParameters: 
+    features: 
+      description: |
+        One or more of the following data features. Note that these can be combined into a single request: geolookup/conditions/forecast
+        |feature|description|
+        |-|
+        |alerts|Returns the short name description, expiration time and a long text description of a severe alert  if one has been issued for the searched upon location.|
+        |almanac|Historical average temperature for today|
+        |astronomy|Returns the moon phase, sunrise and sunset times.|
+        |conditions|Returns the current temperature, weather condition, humidity, wind, 'feels like' temperature, barometric pressure, and visibility.|
+        |currenthurricane|Returns the current position, forecast, and track of all current hurricanes.|
+        |forecast|Returns a summary of the weather for the next 3 days. This includes high and low temperatures, a string text forecast and the conditions.|
+        |forecast10day|Returns a summary of the weather for the next 10 days. This includes high and low temperatures, a string text forecast and the conditions.|
+        |geolookup|Returns the the city name, zip code / postal code, latitude-longitude coordinates and nearby personal weather stations.|
+        |history|history_YYYYMMDD returns a summary of the observed weather for the specified date.|
+        |hourly|Returns an hourly forecast for the next 36 hours immediately following the API request.|
+        |hourly10day|Returns an hourly forecast for the next 10 days|
+        |planner|planner_MMDDMMDD returns a weather summary based on historical information between the specified dates (30 days max).|
+        |rawtide|Raw Tidal information for graphs|
+        |tide|Tidal information|
+        |webcams|Returns locations of nearby Personal Weather Stations and URL's for images from their web cams.|
+        |yesterday|Returns a summary of the observed weather history for yesterday.|
+  /{settings}/q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase, trait: datafeaturesTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+  /q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase2, trait: datafeaturesTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+/forecast: 
+  /{settings}/q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase, trait: forecastTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+  /q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase2, trait: forecastTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+/forecast10day: 
+  /{settings}/q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase, trait: forecast10dayTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+  /q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase2, trait: forecast10dayTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+/geolookup: 
+  /{settings}/q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase, trait: geolookupTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+  /q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase2, trait: geolookupTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+/history: 
+  /{settings}/q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase, trait: historyTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+  /q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase2, trait: historyTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+/hourly: 
+  /{settings}/q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase, trait: hourlyTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+  /q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase2, trait: hourlyTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+/hourly10day: 
+  /{settings}/q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase, trait: hourly10dayTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+  /q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase2, trait: hourly10dayTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+/planner: 
+  /{settings}/q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase, trait: plannerTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+  /q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase2, trait: plannerTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+/rawtide: 
+  /{settings}/q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase, trait: rawtideTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+  /q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase2, trait: rawtideTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+/satellite: 
+  /{settings}/q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase, trait: satelliteTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+  /q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase2, trait: satelliteTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+/tide: 
+  /{settings}/q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase, trait: tideTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+  /q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase2, trait: tideTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+/webcams: 
+  /{settings}/q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase, trait: webcamsTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+  /q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase2, trait: webcamsTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+/yesterday: 
+  /{settings}/q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase, trait: yesterdayTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+  /q/{query}{mediaTypeExtension}: 
+    type: { feature: { parentType: featureBase2, trait: yesterdayTrait } }
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .xml , .json ]
+documentation: 
+  - title: Headline
+    content: !include docs/wunderground/headline.md

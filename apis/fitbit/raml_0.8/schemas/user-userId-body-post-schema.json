@@ -1,0 +1,53 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+        "body": {
+            "description": "At least one optional parameter required.",
+            "date": {
+                "description": "Measurement date; in the format yyyy-MM-dd",
+                "type": "string"
+            },
+            "bicep": {
+                "description": "Bicep; in the format X.XX",
+                "type": "number"
+            },
+            "calf": {
+                "description": "Calf; in the format X.XX",
+                "type": "number"
+            },
+            "chest": {
+                "description": "Chest; in the format X.XX",
+                "type": "number"
+            },
+            "fat": {
+                "description": "Body Fat %; in the format X.XX",
+                "type": "number"
+            },
+            "forearm": {
+                "description": "Forearm; in the format X.XX",
+                "type": "number"
+            },
+            "hips": {
+                "description": "Hips; in the format X.XX",
+                "type": "number"
+            },
+            "neck": {
+                "description": "Neck; in the format X.XX",
+                "type": "number"
+            },
+            "thigh": {
+                "description": "Thigh; in the format X.XX",
+                "type": "number"
+            },
+            "waist": {
+                "description": "Waist; in the format X.XX",
+                "type": "number"
+            },
+            "weight": {
+                "description": "Weight; in the format X.XX",
+                "type": "string"
+            }
+        }
+    }
+}

@@ -1,0 +1,558 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "request" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "url" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "airport" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "requestedCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "fsCode" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "codeType" : {
+          "type" : "object" ,
+          "required" : false
+        }
+      }
+    } ,
+    "metar" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "report" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "reportTime" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "weatherStationIcao" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "tags" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "key" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "value" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        } ,
+        "conditions" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "wind" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "direction" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "directionIsVariable" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                } ,
+                "speedKnots" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "visibility" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "miles" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "lessThan" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                } ,
+                "cavok" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "weatherConditions" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "skyConditions" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "coverage" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            } ,
+            "pressureInchesHg" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "temperatureCelsius" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "dewPointCelsius" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "runwayVisualRanges" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+          ]
+        } ,
+        "obscurations" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+          ]
+        } ,
+        "noSignificantChange" : {
+          "type" : "boolean" ,
+          "required" : false
+        }
+      }
+    } ,
+    "taf" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "report" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "reportTime" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "observationTime" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "reportType" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "weatherStationIcao" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "forecasts" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "type" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "start" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "end" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "conditions" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "wind" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "direction" : {
+                          "type" : "number" ,
+                          "required" : false
+                        } ,
+                        "directionIsVariable" : {
+                          "type" : "boolean" ,
+                          "required" : false
+                        } ,
+                        "speedKnots" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "visibility" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "miles" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "lessThan" : {
+                          "type" : "boolean" ,
+                          "required" : false
+                        } ,
+                        "cavok" : {
+                          "type" : "boolean" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "weatherConditions" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                      ]
+                    } ,
+                    "skyConditions" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "object" ,
+                          "properties" : {
+                            "coverage" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "base" : {
+                              "type" : "number" ,
+                              "required" : false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            } , {
+              "type" : "object" ,
+              "properties" : {
+                "type" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "start" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "end" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "conditions" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "wind" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "directionIsVariable" : {
+                          "type" : "boolean" ,
+                          "required" : false
+                        } ,
+                        "speedKnots" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "visibility" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "miles" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "lessThan" : {
+                          "type" : "boolean" ,
+                          "required" : false
+                        } ,
+                        "cavok" : {
+                          "type" : "boolean" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "weatherConditions" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                      ]
+                    } ,
+                    "skyConditions" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "object" ,
+                          "properties" : {
+                            "coverage" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "base" : {
+                              "type" : "number" ,
+                              "required" : false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    } ,
+    "zoneForecast" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "header" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "general" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "zones" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "string"
+            }
+          ]
+        } ,
+        "reportTime" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "cities" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "string"
+            }
+          ]
+        } ,
+        "zoneNames" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "string"
+            }
+          ]
+        } ,
+        "dayForecasts" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "day" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "forecast" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "start" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "end" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "tags" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                    {
+                      "type" : "object" ,
+                      "properties" : {
+                        "key" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "value" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    } ,
+    "appendix" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "airports" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "fs" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "iata" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "icao" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "faa" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "street1" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "city" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "cityCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "stateCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "postalCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "regionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "timeZoneRegionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "weatherZone" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "localTime" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "utcOffsetHours" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "latitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "longitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "elevationFeet" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "classification" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "active" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                } ,
+                "delayIndexUrl" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "pool" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "admin_state_up" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "description" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "healthmonitor_id" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "lb_algorithm" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "listeners" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "id" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        } ,
+        "members" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+          ]
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "protocol" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "session_persistence" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "cookie_name" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "tenant_id" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

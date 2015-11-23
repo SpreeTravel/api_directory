@@ -1,0 +1,42 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "quotas" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "subnet" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "network" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "floatingip" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "tenant_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "router" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "port" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

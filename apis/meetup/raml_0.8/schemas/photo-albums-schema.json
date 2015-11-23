@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "results": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "album_photo": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "highres_link": {
+                "required": false,
+                "type": "string"
+              },
+              "photo_id": {
+                "required": false,
+                "type": "integer"
+              },
+              "photo_link": {
+                "required": false,
+                "type": "string"
+              },
+              "thumb_link": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "created": {
+            "required": false,
+            "type": "integer"
+          },
+          "event_id": {
+            "required": false,
+            "type": "integer"
+          },
+          "group_id": {
+            "required": false,
+            "type": "integer"
+          },
+          "ordering": {
+            "required": false,
+            "type": "integer"
+          },
+          "photo_album_id": {
+            "required": false,
+            "type": "integer"
+          },
+          "photo_count": {
+            "required": false,
+            "type": "integer"
+          },
+          "title": {
+            "required": false,
+            "type": "integer"
+          },
+          "updated": {
+            "required": false,
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Results xmlns="http://api.jobvite.com/action/api/v1" action=" getNewHires " version="1.0">
+	<Errors xmlns="http://api.jobvite.com/action/api/v1">
+		<Error code="201">Unable to open connection.</Error>
+	</Errors>
+</Results>

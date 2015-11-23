@@ -1,0 +1,10 @@
+{
+  "key": "example key",
+  "raw_message": "From: sender@example.comTo: mailbox-123@inbound.example.comSubject: Some SubjectSome content.",
+  "to": [
+    "mailbox-123@inbound.example.com"
+  ],
+  "mail_from": "sender@example.com",
+  "helo": "example.com",
+  "client_address": "127.0.0.1"
+}

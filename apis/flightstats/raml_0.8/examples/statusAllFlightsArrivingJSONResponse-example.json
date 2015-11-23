@@ -1,0 +1,813 @@
+{
+	"request": {
+		"airport": {
+			"requestedCode": "ORD",
+			"fsCode": "ORD"
+		},
+		"date": {
+			"year": "2015",
+			"month": "4",
+			"day": "29",
+			"interpreted": "2015-04-29"
+		},
+		"hourOfDay": {
+			"requested": "8",
+			"interpreted": 8
+		},
+		"numHours": {
+			"interpreted": 1
+		},
+		"utc": {
+			"interpreted": false
+		},
+		"codeType": {
+			
+		},
+		"maxFlights": {
+			
+		},
+		"extendedOptions": {
+			
+		},
+		"url": "https://api.flightstats.com/flex/flightstatus/rest/v2/json/airport/status/ORD/arr/2015/4/29/8"
+	},
+	"appendix": {
+		"airlines": [{
+			"fs": "RS",
+			"iata": "RS",
+			"icao": "SKV",
+			"name": "Sky Regional",
+			"active": true
+		},
+		{
+			"fs": "JL",
+			"iata": "JL",
+			"icao": "JAL",
+			"name": "JAL",
+			"active": true
+		},
+		{
+			"fs": "S5",
+			"iata": "S5",
+			"icao": "TCF",
+			"name": "Shuttle America",
+			"active": true
+		},
+		{
+			"fs": "DL",
+			"iata": "DL",
+			"icao": "DAL",
+			"name": "Delta Air Lines",
+			"phoneNumber": "1-800-221-1212",
+			"active": true
+		},
+		{
+			"fs": "UA",
+			"iata": "UA",
+			"icao": "UAL",
+			"name": "United Airlines",
+			"phoneNumber": "1-800-864-8331",
+			"active": true
+		},
+		{
+			"fs": "G3",
+			"iata": "G3",
+			"icao": "GLO",
+			"name": "Gol",
+			"active": true
+		},
+		{
+			"fs": "LX",
+			"iata": "LX",
+			"icao": "SWR",
+			"name": "SWISS",
+			"active": true
+		},
+		{
+			"fs": "G7",
+			"iata": "G7",
+			"icao": "GJS",
+			"name": "GoJet Airlines",
+			"active": true
+		},
+		{
+			"fs": "SK",
+			"iata": "SK",
+			"icao": "SAS",
+			"name": "SAS",
+			"active": true
+		},
+		{
+			"fs": "IB",
+			"iata": "IB",
+			"icao": "IBE",
+			"name": "Iberia",
+			"active": true
+		},
+		{
+			"fs": "US",
+			"iata": "US",
+			"icao": "AWE",
+			"name": "US Airways",
+			"phoneNumber": "1-800-943-5436",
+			"active": true
+		},
+		{
+			"fs": "SQ",
+			"iata": "SQ",
+			"icao": "SIA",
+			"name": "Singapore Airlines",
+			"active": true
+		},
+		{
+			"fs": "YX",
+			"iata": "YX",
+			"icao": "RPA",
+			"name": "Republic Airlines",
+			"active": true
+		},
+		{
+			"fs": "AA",
+			"iata": "AA",
+			"icao": "AAL",
+			"name": "American Airlines",
+			"phoneNumber": "1-800-433-7300",
+			"active": true
+		},
+		{
+			"fs": "OO",
+			"iata": "OO",
+			"icao": "SKW",
+			"name": "SkyWest Airlines",
+			"active": true
+		},
+		{
+			"fs": "KL",
+			"iata": "KL",
+			"icao": "KLM",
+			"name": "KLM",
+			"active": true
+		},
+		{
+			"fs": "AC",
+			"iata": "AC",
+			"icao": "ACA",
+			"name": "Air Canada",
+			"phoneNumber": "1-800-247-2262",
+			"active": true
+		},
+		{
+			"fs": "MQ",
+			"iata": "MQ",
+			"icao": "ENY",
+			"name": "Envoy Air",
+			"active": true
+		},
+		{
+			"fs": "EI",
+			"iata": "EI",
+			"icao": "EIN",
+			"name": "Aer Lingus",
+			"phoneNumber": "1-800-IRISHAIR",
+			"active": true
+		},
+		{
+			"fs": "GEC",
+			"icao": "GEC",
+			"name": "Lufthansa Cargo ",
+			"active": true
+		},
+		{
+			"fs": "CM",
+			"iata": "CM",
+			"icao": "CMP",
+			"name": "Copa Airlines",
+			"active": true
+		},
+		{
+			"fs": "OZ",
+			"iata": "OZ",
+			"icao": "AAR",
+			"name": "Asiana Airlines",
+			"active": true
+		},
+		{
+			"fs": "9E",
+			"iata": "9E",
+			"icao": "FLG",
+			"name": "Endeavor Air",
+			"active": true
+		},
+		{
+			"fs": "EV",
+			"iata": "EV",
+			"icao": "ASQ",
+			"name": "ExpressJet",
+			"active": true
+		},
+		{
+			"fs": "AS",
+			"iata": "AS",
+			"icao": "ASA",
+			"name": "Alaska Airlines",
+			"phoneNumber": "1-800-252-7522",
+			"active": true
+		},
+		{
+			"fs": "3E",
+			"iata": "3E",
+			"icao": "WBR",
+			"name": "Air Choice One",
+			"active": true
+		},
+		{
+			"fs": "TG",
+			"iata": "TG",
+			"icao": "THA",
+			"name": "Thai Airways International",
+			"active": true
+		},
+		{
+			"fs": "EY",
+			"iata": "EY",
+			"icao": "ETD",
+			"name": "Etihad Airways",
+			"active": true
+		},
+		{
+			"fs": "AV",
+			"iata": "AV",
+			"icao": "AVA",
+			"name": "AVIANCA",
+			"active": true
+		},
+		{
+			"fs": "NH",
+			"iata": "NH",
+			"icao": "ANA",
+			"name": "ANA",
+			"phoneNumber": "1-800-235-9262",
+			"active": true
+		},
+		{
+			"fs": "LH",
+			"iata": "LH",
+			"icao": "DLH",
+			"name": "Lufthansa",
+			"active": true
+		},
+		{
+			"fs": "NK",
+			"iata": "NK",
+			"icao": "NKS",
+			"name": "Spirit Airlines",
+			"active": true
+		},
+		{
+			"fs": "VS",
+			"iata": "VS",
+			"icao": "VIR",
+			"name": "Virgin Atlantic",
+			"active": true
+		},
+		{
+			"fs": "BA",
+			"iata": "BA",
+			"icao": "BAW",
+			"name": "British Airways",
+			"phoneNumber": "1-800-AIRWAYS",
+			"active": true
+		}],
+		"airports": [{
+			"fs": "JAX",
+			"iata": "JAX",
+			"icao": "KJAX",
+			"faa": "JAX",
+			"name": "Jacksonville International Airport",
+			"street1": "2400 Yankee Clipper Drive",
+			"city": "Jacksonville",
+			"cityCode": "JAX",
+			"stateCode": "FL",
+			"postalCode": "32218",
+			"countryCode": "US",
+			"countryName": "United States",
+			"regionName": "North America",
+			"timeZoneRegionName": "America/New_York",
+			"weatherZone": "FLZ025",
+			"localTime": "2015-04-29T08:06:26.960",
+			"utcOffsetHours": -4.0,
+			"latitude": 30.491254,
+			"longitude": -81.683053,
+			"elevationFeet": 19,
+			"classification": 2,
+			"active": true,
+			"delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/JAX?codeType=fs",
+			"weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/JAX?codeType=fs"
+		},
+		{
+			"fs": "YOW",
+			"iata": "YOW",
+			"icao": "CYOW",
+			"name": "Ottawa/Macdonald-Cartier International Airport",
+			"street1": "50 Airport Road",
+			"city": "Ottawa",
+			"cityCode": "YOW",
+			"stateCode": "ON",
+			"countryCode": "CA",
+			"countryName": "Canada",
+			"regionName": "North America",
+			"timeZoneRegionName": "America/Toronto",
+			"localTime": "2015-04-29T08:06:26.961",
+			"utcOffsetHours": -4.0,
+			"latitude": 45.320833,
+			"longitude": -75.672778,
+			"elevationFeet": 374,
+			"classification": 2,
+			"active": true,
+			"delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/YOW?codeType=fs",
+			"weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/YOW?codeType=fs"
+		},
+		{
+			"fs": "DAY",
+			"iata": "DAY",
+			"icao": "KDAY",
+			"faa": "DAY",
+			"name": "James M. Cox Dayton International Airport",
+			"street1": "Terminal Building",
+			"city": "Dayton",
+			"cityCode": "DAY",
+			"stateCode": "OH",
+			"postalCode": "45377",
+			"countryCode": "US",
+			"countryName": "United States",
+			"regionName": "North America",
+			"timeZoneRegionName": "America/New_York",
+			"weatherZone": "OHZ061",
+			"localTime": "2015-04-29T08:06:26.982",
+			"utcOffsetHours": -4.0,
+			"latitude": 39.898007,
+			"longitude": -84.220767,
+			"elevationFeet": 1009,
+			"classification": 3,
+			"active": true,
+			"delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/DAY?codeType=fs",
+			"weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/DAY?codeType=fs"
+		}],
+		"equipments": [{
+			"iata": "CRJ9",
+			"name": "??",
+			"turboProp": false,
+			"jet": false,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "CRJ7",
+			"name": "??",
+			"turboProp": false,
+			"jet": false,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "B738",
+			"name": "??",
+			"turboProp": false,
+			"jet": false,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "M80",
+			"name": "Boeing (Douglas) MD-80",
+			"turboProp": false,
+			"jet": true,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "E170",
+			"name": "??",
+			"turboProp": false,
+			"jet": false,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "B737",
+			"name": "??",
+			"turboProp": false,
+			"jet": false,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "CRJ2",
+			"name": "??",
+			"turboProp": false,
+			"jet": false,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "C208",
+			"name": "??",
+			"turboProp": false,
+			"jet": false,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "B712",
+			"name": "??",
+			"turboProp": false,
+			"jet": false,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "A320",
+			"name": "??",
+			"turboProp": false,
+			"jet": false,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "773",
+			"name": "Boeing 777-300 Passenger",
+			"turboProp": false,
+			"jet": true,
+			"widebody": true,
+			"regional": false
+		},
+		{
+			"iata": "319",
+			"name": "Airbus Industrie A319",
+			"turboProp": false,
+			"jet": true,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "738",
+			"name": "Boeing 737-800 Passenger",
+			"turboProp": false,
+			"jet": true,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "717",
+			"name": "Boeing 717-200",
+			"turboProp": false,
+			"jet": true,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "739",
+			"name": "Boeing 737-900 Passenger",
+			"turboProp": false,
+			"jet": true,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "E70",
+			"name": "Embraer 170",
+			"turboProp": false,
+			"jet": true,
+			"widebody": false,
+			"regional": true
+		},
+		{
+			"iata": "E75",
+			"name": "Embraer 175",
+			"turboProp": false,
+			"jet": true,
+			"widebody": false,
+			"regional": true
+		},
+		{
+			"iata": "A319",
+			"name": "??",
+			"turboProp": false,
+			"jet": false,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "M90",
+			"name": "Boeing (Douglas) MD-90",
+			"turboProp": false,
+			"jet": true,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "ER4",
+			"name": "Embraer RJ145",
+			"turboProp": false,
+			"jet": true,
+			"widebody": false,
+			"regional": true
+		},
+		{
+			"iata": "77F",
+			"name": "Boeing 777 Freighter",
+			"turboProp": false,
+			"jet": true,
+			"widebody": true,
+			"regional": false
+		},
+		{
+			"iata": "CR7",
+			"name": "Canadair (Bombardier) Regional Jet 700 and Challenger 870",
+			"turboProp": false,
+			"jet": true,
+			"widebody": false,
+			"regional": true
+		},
+		{
+			"iata": "CR9",
+			"name": "Canadair (Bombardier) Regional Jet 900 and Challenger 890",
+			"turboProp": false,
+			"jet": true,
+			"widebody": false,
+			"regional": true
+		},
+		{
+			"iata": "73G",
+			"name": "Boeing 737-700 Passenger",
+			"turboProp": false,
+			"jet": true,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "73H",
+			"name": "Boeing 737-800 (winglets) Passenger",
+			"turboProp": false,
+			"jet": true,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "E145",
+			"name": "??",
+			"turboProp": false,
+			"jet": false,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "320",
+			"name": "Airbus Industrie A320",
+			"turboProp": false,
+			"jet": true,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "E45X",
+			"name": "??",
+			"turboProp": false,
+			"jet": false,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "ERD",
+			"name": "Embraer RJ140",
+			"turboProp": false,
+			"jet": true,
+			"widebody": false,
+			"regional": true
+		},
+		{
+			"iata": "77W",
+			"name": "Boeing 777-300ER Passenger",
+			"turboProp": false,
+			"jet": true,
+			"widebody": true,
+			"regional": false
+		},
+		{
+			"iata": "CNC",
+			"name": "Cessna (Light aircraft - single turboprop engine)",
+			"turboProp": true,
+			"jet": false,
+			"widebody": false,
+			"regional": true
+		},
+		{
+			"iata": "CRJ",
+			"name": "Canadair (Bombardier) Regional Jet",
+			"turboProp": false,
+			"jet": true,
+			"widebody": false,
+			"regional": true
+		},
+		{
+			"iata": "ERJ",
+			"name": "Embraer RJ135/RJ140/RJ145",
+			"turboProp": false,
+			"jet": true,
+			"widebody": false,
+			"regional": true
+		}]
+	},
+	"flightStatuses": [{
+		"flightId": 533902489,
+		"carrierFsCode": "AS",
+		"flightNumber": "138",
+		"departureAirportFsCode": "ANC",
+		"arrivalAirportFsCode": "ORD",
+		"departureDate": {
+			"dateLocal": "2015-04-28T23:15:00.000",
+			"dateUtc": "2015-04-29T07:15:00.000Z"
+		},
+		"arrivalDate": {
+			"dateLocal": "2015-04-29T08:30:00.000",
+			"dateUtc": "2015-04-29T13:30:00.000Z"
+		},
+		"status": "A",
+		"schedule": {
+			"flightType": "J",
+			"serviceClasses": "RFY",
+			"restrictions": ""
+		},
+		"operationalTimes": {
+			"publishedDeparture": {
+				"dateLocal": "2015-04-28T23:15:00.000",
+				"dateUtc": "2015-04-29T07:15:00.000Z"
+			},
+			"publishedArrival": {
+				"dateLocal": "2015-04-29T08:30:00.000",
+				"dateUtc": "2015-04-29T13:30:00.000Z"
+			},
+			"scheduledGateDeparture": {
+				"dateLocal": "2015-04-28T23:15:00.000",
+				"dateUtc": "2015-04-29T07:15:00.000Z"
+			},
+			"estimatedGateDeparture": {
+				"dateLocal": "2015-04-28T23:13:00.000",
+				"dateUtc": "2015-04-29T07:13:00.000Z"
+			},
+			"actualGateDeparture": {
+				"dateLocal": "2015-04-28T23:13:00.000",
+				"dateUtc": "2015-04-29T07:13:00.000Z"
+			},
+			"flightPlanPlannedDeparture": {
+				"dateLocal": "2015-04-28T23:31:00.000",
+				"dateUtc": "2015-04-29T07:31:00.000Z"
+			},
+			"estimatedRunwayDeparture": {
+				"dateLocal": "2015-04-28T23:33:00.000",
+				"dateUtc": "2015-04-29T07:33:00.000Z"
+			},
+			"actualRunwayDeparture": {
+				"dateLocal": "2015-04-28T23:33:00.000",
+				"dateUtc": "2015-04-29T07:33:00.000Z"
+			},
+			"scheduledGateArrival": {
+				"dateLocal": "2015-04-29T08:30:00.000",
+				"dateUtc": "2015-04-29T13:30:00.000Z"
+			},
+			"estimatedGateArrival": {
+				"dateLocal": "2015-04-29T08:39:00.000",
+				"dateUtc": "2015-04-29T13:39:00.000Z"
+			},
+			"flightPlanPlannedArrival": {
+				"dateLocal": "2015-04-29T07:57:00.000",
+				"dateUtc": "2015-04-29T12:57:00.000Z"
+			},
+			"estimatedRunwayArrival": {
+				"dateLocal": "2015-04-29T08:15:00.000",
+				"dateUtc": "2015-04-29T13:15:00.000Z"
+			}
+		},
+		"codeshares": [{
+			"fsCode": "AA",
+			"flightNumber": "6803",
+			"relationship": "L"
+		}],
+		"delays": {
+			"departureRunwayDelayMinutes": 2,
+			"arrivalGateDelayMinutes": 9,
+			"arrivalRunwayDelayMinutes": 18
+		},
+		"flightDurations": {
+			"scheduledBlockMinutes": 375,
+			"scheduledAirMinutes": 326,
+			"scheduledTaxiOutMinutes": 16,
+			"taxiOutMinutes": 20,
+			"scheduledTaxiInMinutes": 33
+		},
+		"airportResources": {
+			"departureTerminal": "S",
+			"departureGate": "C2",
+			"arrivalTerminal": "3",
+			"arrivalGate": "L8"
+		},
+		"flightEquipment": {
+			"scheduledEquipmentIataCode": "73H",
+			"actualEquipmentIataCode": "B738",
+			"tailNumber": "N592AS"
+		}
+	},
+	{
+		"flightId": 534428356,
+		"carrierFsCode": "UA",
+		"flightNumber": "1524",
+		"departureAirportFsCode": "RSW",
+		"arrivalAirportFsCode": "ORD",
+		"departureDate": {
+			"dateLocal": "2015-04-29T05:51:00.000",
+			"dateUtc": "2015-04-29T09:51:00.000Z"
+		},
+		"arrivalDate": {
+			"dateLocal": "2015-04-29T08:02:00.000",
+			"dateUtc": "2015-04-29T13:02:00.000Z"
+		},
+		"status": "A",
+		"schedule": {
+			"flightType": "J",
+			"serviceClasses": "FJY",
+			"restrictions": ""
+		},
+		"operationalTimes": {
+			"publishedDeparture": {
+				"dateLocal": "2015-04-29T05:51:00.000",
+				"dateUtc": "2015-04-29T09:51:00.000Z"
+			},
+			"publishedArrival": {
+				"dateLocal": "2015-04-29T08:02:00.000",
+				"dateUtc": "2015-04-29T13:02:00.000Z"
+			},
+			"scheduledGateDeparture": {
+				"dateLocal": "2015-04-29T05:51:00.000",
+				"dateUtc": "2015-04-29T09:51:00.000Z"
+			},
+			"estimatedGateDeparture": {
+				"dateLocal": "2015-04-29T05:52:00.000",
+				"dateUtc": "2015-04-29T09:52:00.000Z"
+			},
+			"actualGateDeparture": {
+				"dateLocal": "2015-04-29T05:52:00.000",
+				"dateUtc": "2015-04-29T09:52:00.000Z"
+			},
+			"flightPlanPlannedDeparture": {
+				"dateLocal": "2015-04-29T06:05:00.000",
+				"dateUtc": "2015-04-29T10:05:00.000Z"
+			},
+			"estimatedRunwayDeparture": {
+				"dateLocal": "2015-04-29T06:05:00.000",
+				"dateUtc": "2015-04-29T10:05:00.000Z"
+			},
+			"actualRunwayDeparture": {
+				"dateLocal": "2015-04-29T06:05:00.000",
+				"dateUtc": "2015-04-29T10:05:00.000Z"
+			},
+			"scheduledGateArrival": {
+				"dateLocal": "2015-04-29T08:02:00.000",
+				"dateUtc": "2015-04-29T13:02:00.000Z"
+			},
+			"estimatedGateArrival": {
+				"dateLocal": "2015-04-29T07:56:00.000",
+				"dateUtc": "2015-04-29T12:56:00.000Z"
+			},
+			"flightPlanPlannedArrival": {
+				"dateLocal": "2015-04-29T07:31:00.000",
+				"dateUtc": "2015-04-29T12:31:00.000Z"
+			},
+			"estimatedRunwayArrival": {
+				"dateLocal": "2015-04-29T07:42:00.000",
+				"dateUtc": "2015-04-29T12:42:00.000Z"
+			}
+		},
+		"delays": {
+			"departureGateDelayMinutes": 1,
+			"arrivalRunwayDelayMinutes": 11
+		},
+		"flightDurations": {
+			"scheduledBlockMinutes": 191,
+			"scheduledAirMinutes": 146,
+			"scheduledTaxiOutMinutes": 14,
+			"taxiOutMinutes": 13,
+			"scheduledTaxiInMinutes": 31
+		},
+		"airportResources": {
+			"departureGate": "C1",
+			"arrivalTerminal": "1",
+			"arrivalGate": "C23",
+			"baggage": "14"
+		},
+		"flightEquipment": {
+			"scheduledEquipmentIataCode": "738",
+			"actualEquipmentIataCode": "B738",
+			"tailNumber": "N33289"
+		}
+	}]
+}

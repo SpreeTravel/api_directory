@@ -1,0 +1,49 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "keypair" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "fingerprint" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "public_key" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "user_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "deleted" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "created_at" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "updated_at" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "deleted_at" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

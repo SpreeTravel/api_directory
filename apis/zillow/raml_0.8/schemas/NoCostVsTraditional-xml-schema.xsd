@@ -1,0 +1,44 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="request">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:int" name="amount"/>
+        <xs:element type="xs:float" name="rate"/>
+        <xs:element type="xs:float" name="nocostrate"/>
+        <xs:element type="xs:short" name="terminmonths"/>
+        <xs:element type="xs:short" name="closingcosts"/>
+        <xs:element type="xs:string" name="rollfees"/>
+        <xs:element type="xs:float" name="costofmoney"/>
+        <xs:element type="xs:float" name="taxbracket"/>
+        <xs:element type="xs:byte" name="comparisonyears"/>
+        <xs:element type="xs:string" name="output"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="message">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="text"/>
+        <xs:element type="xs:byte" name="code"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:int" name="monthlyprincipalandinterest"/>
+        <xs:element type="xs:int" name="monthlyprincipalandinterestnocost"/>
+        <xs:element type="xs:int" name="discountedpayments"/>
+        <xs:element type="xs:int" name="nocostdiscountedpayments"/>
+        <xs:element type="xs:byte" name="remainingprincipal"/>
+        <xs:element type="xs:byte" name="nocostremainingprincipal"/>
+        <xs:element type="xs:int" name="taxsavings"/>
+        <xs:element type="xs:int" name="nocosttaxsavings"/>
+        <xs:element type="xs:short" name="paidatclose"/>
+        <xs:element type="xs:int" name="totalcost"/>
+        <xs:element type="xs:int" name="nocosttotalcost"/>
+        <xs:element type="xs:string" name="result"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

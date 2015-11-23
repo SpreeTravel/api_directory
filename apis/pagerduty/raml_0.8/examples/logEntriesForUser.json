@@ -1,0 +1,126 @@
+{
+	"log_entries" : [ {
+		"id" : "PZN9UEN" ,
+		"type" : "escalate" ,
+		"created_at" : "2013-03-06T21:08:43Z" ,
+		"agent" : {
+			"type" : "service"
+		} ,
+		"channel" : {
+			"type" : "timeout"
+		} ,
+		"assigned_user" : {
+			"id" : "PPSFHH7" ,
+			"name" : "Bob Smith" ,
+			"email" : "bob@acme.com" ,
+			"time_zone" : "Eastern Time (US & Canada)" ,
+			"color" : "red" ,
+			"role" : "user" ,
+			"avatar_url" :
+			"https://secure.gravatar.com/avatar/78e9fa7d6d2ddba416ad7534eb1403d0.png?d=mm&r=PG"
+			,
+			"user_url" : "/users/PPSFHH7" ,
+			"invitation_sent" : true ,
+			"marketing_opt_out" : false
+		} ,
+		"note" : null
+	} , {
+		"id" : "PHCXXHR" ,
+		"type" : "escalate" ,
+		"created_at" : "2013-03-06T21:00:30Z" ,
+		"agent" : {
+			"type" : "service"
+		} ,
+		"channel" : {
+			"type" : "timeout"
+		} ,
+		"assigned_user" : {
+			"id" : "PPSFHH7" ,
+			"name" : "Bob Smith" ,
+			"email" : "bob@acme.com" ,
+			"time_zone" : "Eastern Time (US & Canada)" ,
+			"color" : "red" ,
+			"role" : "user" ,
+			"avatar_url" :
+			"https://secure.gravatar.com/avatar/78e9fa7d6d2ddba416ad7534eb1403d0.png?d=mm&r=PG"
+			,
+			"user_url" : "/users/PPSFHH7" ,
+			"invitation_sent" : true ,
+			"marketing_opt_out" : false
+		} ,
+		"note" : null
+	} , {
+		"id" : "PABDPAI" ,
+		"type" : "resolve" ,
+		"created_at" : "2013-01-31T03:21:15Z" ,
+		"note" : "Doused it with a water hose." ,
+		"agent" : {
+			"id" : "PPSFHH7" ,
+			"name" : "Bob Smith" ,
+			"email" : "bob@acme.com" ,
+			"time_zone" : "Eastern Time (US & Canada)" ,
+			"color" : "red" ,
+			"role" : "user" ,
+			"avatar_url" :
+			"https://secure.gravatar.com/avatar/78e9fa7d6d2ddba416ad7534eb1403d0.png?d=mm&r=PG"
+			,
+			"user_url" : "/users/PPSFHH7" ,
+			"invitation_sent" : true ,
+			"marketing_opt_out" : false ,
+			"type" : "user"
+		} ,
+		"channel" : {
+			"type" : "website"
+		}
+	} , {
+		"id" : "PKLZ54O" ,
+		"type" : "acknowledge" ,
+		"created_at" : "2013-01-31T03:18:13Z" ,
+		"agent" : {
+			"id" : "PPSFHH7" ,
+			"name" : "Bob Smith" ,
+			"email" : "bob@acme.com" ,
+			"time_zone" : "Eastern Time (US & Canada)" ,
+			"color" : "red" ,
+			"role" : "user" ,
+			"avatar_url" :
+			"https://secure.gravatar.com/avatar/78e9fa7d6d2ddba416ad7534eb1403d0.png?d=mm&r=PG"
+			,
+			"user_url" : "/users/PPSFHH7" ,
+			"invitation_sent" : true ,
+			"marketing_opt_out" : false ,
+			"type" : "user"
+		} ,
+		"channel" : {
+			"type" : "website"
+		}
+	} , {
+		"id" : "PHZRXSA" ,
+		"type" : "escalate" ,
+		"created_at" : "2013-01-31T03:16:32Z" ,
+		"agent" : {
+			"type" : "service"
+		} ,
+		"channel" : {
+			"type" : "timeout"
+		} ,
+		"assigned_user" : {
+			"id" : "PPSFHH7" ,
+			"name" : "Bob Smith" ,
+			"email" : "bob@acme.com" ,
+			"time_zone" : "Eastern Time (US & Canada)" ,
+			"color" : "red" ,
+			"role" : "user" ,
+			"avatar_url" :
+			"https://secure.gravatar.com/avatar/78e9fa7d6d2ddba416ad7534eb1403d0.png?d=mm&r=PG"
+			,
+			"user_url" : "/users/PPSFHH7" ,
+			"invitation_sent" : true ,
+			"marketing_opt_out" : false
+		} ,
+		"note" : null
+	} ] ,
+	"limit" : 100 ,
+	"offset" : 0 ,
+	"total" : 5
+}

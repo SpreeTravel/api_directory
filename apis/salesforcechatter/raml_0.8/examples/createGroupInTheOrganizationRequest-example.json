@@ -1,0 +1,14 @@
+{
+   "announcement" : "0D5D0000000K4XT",
+   "canHaveChatterGuests" : "true",
+   "description" : "This group is building a powerful API.",
+   "information" : {
+      "text" : "Read this section before you post to the group.",
+      "title" : "Information"
+   },
+   "isArchived" : "false",
+   "isAutoArchiveDisabled" : "false",
+   "name" : "Chatter API",
+   "owner" : "00590000000DmPw",
+   "visibility" : "PublicAccess"
+}

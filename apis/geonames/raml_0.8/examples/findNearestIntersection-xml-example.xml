@@ -1,0 +1,19 @@
+<geonames credits="1.0">
+<intersection>
+<street1>Roble Ave</street1>
+<mtfcc1>S1400</mtfcc1>
+<street1Bearing>213</street1Bearing>
+<street2>Curtis St</street2>
+<mtfcc2>S1400</mtfcc2>
+<street2Bearing>303</street2Bearing>
+<lat>37.450649</lat>
+<lng>-122.180842</lng>
+<distance>0.08</distance>
+<postalcode>94025</postalcode>
+<placename>Menlo Park</placename>
+<adminName2>San Mateo</adminName2>
+<adminCode1>CA</adminCode1>
+<adminName1>California</adminName1>
+<countryCode>US</countryCode>
+</intersection>
+</geonames>

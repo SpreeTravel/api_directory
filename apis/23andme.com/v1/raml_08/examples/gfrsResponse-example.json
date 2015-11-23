@@ -1,0 +1,14 @@
+{
+  "genetic_risk_factors" : [
+    {
+      "mutations" : "positive" ,
+      "description" : "Celiac Disease (HLA-DQ2-Related)" ,
+      "report_id" : "i_celiac"
+    } , {
+      "mutations" : "negative" ,
+      "description" : "Alpha-1 Antitrypsin Deficiency" ,
+      "report_id" : "i_aatd"
+    }
+  ] ,
+  "id" : "c4480ba411939067"
+}

@@ -1,0 +1,22 @@
+{
+	"alerts" : [ {
+		"number_of_alerts" : 17 ,
+		"number_of_phone_alerts" : 11 ,
+		"number_of_sms_alerts" : 2 ,
+		"number_of_email_alerts" : 4 ,
+		"start" : "2012-06-01T07:00:00Z" ,
+		"end" : "2012-07-01T00:00:00-07:00"
+	} , {
+		"number_of_alerts" : 22 ,
+		"number_of_phone_alerts" : 12 ,
+		"number_of_sms_alerts" : 5 ,
+		"number_of_email_alerts" : 5 ,
+		"start" : "2012-07-01T07:00:00Z" ,
+		"end" : "2012-08-01T00:00:00-07:00"
+	} ] ,
+	"total_number_of_alerts" : 39 ,
+	"total_number_of_phone_alerts" : 23 ,
+	"total_number_of_sms_alerts" : 7 ,
+	"total_number_of_email_alerts" : 9 ,
+	"total_number_of_billable_alerts" : 30
+}

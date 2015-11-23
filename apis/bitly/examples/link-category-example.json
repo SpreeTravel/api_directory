@@ -1,0 +1,13 @@
+{
+  "data": {
+    "categories": [
+      "Social Media",
+      "Advertising",
+      "Software and Internet",
+      "Technology",
+      "Business"
+    ]
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

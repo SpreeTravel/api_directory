@@ -1,0 +1,44 @@
+{
+	"alerts" : [ {
+		"id" : "PWL7QXS" ,
+		"type" : "Phone" ,
+		"started_at" : "2013-03-06T15:28:50-05:00" ,
+		"user" : {
+			"id" : "PT23IWX" ,
+			"name" : "Tim Wright" ,
+			"email" : "tim@acme.com" ,
+			"time_zone" : "Eastern Time (US & Canada)" ,
+			"color" : "purple" ,
+			"role" : "owner" ,
+			"avatar_url" :
+			"https://secure.gravatar.com/avatar/923a2b907dc04244e9bb5576a42e70a7.png?d=mm&r=PG"
+			,
+			"user_url" : "/users/PT23IWX" ,
+			"invitation_sent" : false ,
+			"marketing_opt_out" : false
+		} ,
+		"address" : "+15555551234"
+	} , {
+		"id" : "PKN7NBH" ,
+		"type" : "Email" ,
+		"started_at" : "2013-03-06T15:28:51-05:00" ,
+		"user" : {
+			"id" : "PT23IWX" ,
+			"name" : "Tim Wright" ,
+			"email" : "tim@acme.com" ,
+			"time_zone" : "Eastern Time (US & Canada)" ,
+			"color" : "purple" ,
+			"role" : "owner" ,
+			"avatar_url" :
+			"https://secure.gravatar.com/avatar/923a2b907dc04244e9bb5576a42e70a7.png?d=mm&r=PG"
+			,
+			"user_url" : "/users/PT23IWX" ,
+			"invitation_sent" : false ,
+			"marketing_opt_out" : false
+		} ,
+		"address" : "tim@pagerduty.com"
+	} ] ,
+	"limit" : 100 ,
+	"offset" : 0 ,
+	"total" : 2
+}

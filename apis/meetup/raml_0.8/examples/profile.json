@@ -1,0 +1,51 @@
+{
+  "profile_url": "profile_url",
+  "status": "status",
+  "photo_url": "photo_url",
+  "answers": {
+    "answer": "answer",
+    "question": "question",
+    "question_id": 100
+  },
+  "member_country": "member_country",
+  "membership_dues": {
+    "total_amount": "total_amount",
+    "transaction_time": 100,
+    "period_status": "period_status"
+  },
+  "site_name": "site_name",
+  "photo": {
+    "photo_link": "photo_link",
+    "highres_link": "highres_link",
+    "thumb_link": "thumb_link",
+    "photo_id": 100
+  },
+  "attendance_count": 100,
+  "member_id": 100,
+  "visited": 100,
+  "title": 100,
+  "member_city": "member_city",
+  "member_state": "member_state",
+  "bio": "bio",
+  "additional": "additional",
+  "created": 100,
+  "updated": 100,
+  "name": "name",
+  "role": "role",
+  "comment": "comment",
+  "group": {
+    "id": 100,
+    "group_lat": "group_lat",
+    "name": "name",
+    "group_lon": "group_lon",
+    "join_mode": "join_mode",
+    "urlname": "urlname",
+    "who": "who"
+  },
+  "other_services": {
+    "[service-name]": {
+      "identifier": "identifier"
+    }
+  },
+  "site_url": "site_url"
+}

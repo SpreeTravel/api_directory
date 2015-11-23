@@ -1,0 +1,61 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "epics" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "epics" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+          ]
+        } ,
+        "total_hits" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    } ,
+    "query" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "stories" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "stories" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+          ]
+        } ,
+        "resources" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+          ]
+        } ,
+        "total_hits" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "total_hits_with_done" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "total_points" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "total_points_completed" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

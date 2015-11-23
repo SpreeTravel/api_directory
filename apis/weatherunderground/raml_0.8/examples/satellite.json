@@ -1,0 +1,14 @@
+{
+  "response": {
+    "version": "0.1",
+    "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
+    "features": {
+      "satellite": 1
+    }
+  },
+  "satellite": {
+    "image_url": "http://wublast.wunderground.com/cgi-bin/WUBLAST?lat=37.77500916&lon=-122.41825867&radius=75&width=300&height=300&key=sat_ir4_thumb&gtt=0&extension=png&proj=me&num=1&delay=25&timelabel=0&basemap=1&borders=1&theme=WUNIDS&rand=1341275538&api_key=",
+    "image_url_ir4": "http://wublast.wunderground.com/cgi-bin/WUBLAST?lat=37.77500916&lon=-122.41825867&radius=75&width=300&height=300&key=sat_ir4_thumb&gtt=0&extension=png&proj=me&num=1&delay=25&timelabel=0&basemap=1&borders=1&theme=WUNIDS&rand=1341275538&api_key=",
+    "image_url_vis": "http://wublast.wunderground.com/cgi-bin/WUBLAST?lat=37.77500916&lon=-122.41825867&radius=75&width=300&height=300&key=sat_vis_thumb&gtt=0&extension=png&proj=me&num=1&delay=25&timelabel=0&basemap=1&borders=1&theme=WUNIDS&rand=1341275538&api_key="
+  }
+}

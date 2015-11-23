@@ -1,0 +1,6 @@
+{
+  "readOnlyLiteEnabled" : true ,
+  "readOnlyFullEnabled" : false ,
+  "readWriteEnabled" : false ,
+  "icalEnabled" : false
+}

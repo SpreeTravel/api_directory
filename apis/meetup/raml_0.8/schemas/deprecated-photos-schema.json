@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "results": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "album_id": {
+            "required": false,
+            "type": "integer"
+          },
+          "albumtitle": {
+            "required": false,
+            "type": "string"
+          },
+          "captions": {
+            "required": false,
+            "type": "string"
+          },
+          "created": {
+            "required": false,
+            "type": "integer"
+          },
+          "descr": {
+            "required": false,
+            "type": "integer"
+          },
+          "link": {
+            "required": false,
+            "type": "string"
+          },
+          "member_url": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

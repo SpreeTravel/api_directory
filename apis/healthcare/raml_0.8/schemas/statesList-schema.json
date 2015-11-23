@@ -1,0 +1,76 @@
+{
+  "type": "object",
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "states": {
+      "type": "array",
+      "required": false,
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "lang": {
+              "type": "string",
+              "required": false
+            },
+            "tags": {
+              "type": "array",
+              "required": false,
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "stateurl": {
+              "type": "string",
+              "required": false
+            },
+            "url": {
+              "type": "string",
+              "required": false
+            },
+            "title": {
+              "type": "string",
+              "required": false
+            },
+            "content": {
+              "type": "string",
+              "required": false
+            },
+            "date": {
+              "type": "string",
+              "required": false
+            },
+            "sort": {
+              "type": "number",
+              "required": false
+            },
+            "id": {
+              "type": "string",
+              "required": false
+            },
+            "categories": {
+              "type": "array",
+              "required": false,
+              "items": {
+                "type": "array"
+              }
+            },
+            "excerpt": {
+              "type": "string",
+              "required": false
+            },
+            "path": {
+              "type": "string",
+              "required": false
+            }
+          }
+        }
+      }
+    }
+  }
+}

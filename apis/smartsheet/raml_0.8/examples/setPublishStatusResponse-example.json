@@ -1,0 +1,11 @@
+{
+  "message" : "SUCCESS" ,
+  "result" : {
+    "icalEnabled" : false ,
+    "readOnlyFullEnabled" : false ,
+    "readOnlyLiteEnabled" : true ,
+    "readOnlyLiteUrl" : "http://publish.smartsheet.com/9862638d9c444014b5d7a114d436e99d" ,
+    "readWriteEnabled" : false
+  } ,
+  "resultCode" : 0
+}

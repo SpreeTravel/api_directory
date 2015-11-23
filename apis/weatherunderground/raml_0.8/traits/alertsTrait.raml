@@ -1,0 +1,56 @@
+description: |
+  Returns the short name description, expiration time and a long text description of a severe alert, if one has been issued for the searched upon location.
+  
+  These alerts are only active in the United States and Europe. View our United States Severe Weather map or our European Severe Weather map to see where there are active alerts at this moment.
+  
+  Read the National Weather Service description of VTEC codes used in severe weather alerts in the United States, including "phenomena" and "significane", here: www.weather.gov/os/vtec/pdfs/VTEC_explanation6.pdf
+  
+  European alerts are required to show the "attribution" to Meteoalarm.
+  
+  #Examples:
+  http://api.wunderground.com/api/Your_Key/alerts/q/IA/Des_Moines.json
+  http://api.wunderground.com/api/Your_Key/alerts/q/zmw:00000.1.16172.json
+  (See description of the response.)
+responses: 
+  200: 
+    description: |
+      The response will be a JSON-encoded object.
+      |name|description|
+      |-|
+      |alerts|Type: array. JSON type: array. The official API documentation provides no description. |
+      |alerts.item|Type: object. JSON type: object. The official API documentation provides no description. |
+      |alerts.item.StormBased|Type: object. JSON type: object. The official API documentation provides no description. |
+      |alerts.item.StormBased.Vertex_count|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |alerts.item.StormBased.stormInfo|Type: object. JSON type: object. The official API documentation provides no description. |
+      |alerts.item.StormBased.stormInfo.Motion_deg|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |alerts.item.StormBased.stormInfo.Motion_spd|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |alerts.item.StormBased.stormInfo.position_lat|Type: unknown. JSON type: number. The official API documentation provides no description. |
+      |alerts.item.StormBased.stormInfo.position_lon|Type: unknown. JSON type: number. The official API documentation provides no description. |
+      |alerts.item.StormBased.stormInfo.time_epoch|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |alerts.item.StormBased.vertices|Type: array. JSON type: array. The official API documentation provides no description. |
+      |alerts.item.StormBased.vertices.item|Type: object. JSON type: object. The official API documentation provides no description. |
+      |alerts.item.StormBased.vertices.item.lat|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |alerts.item.StormBased.vertices.item.lon|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |alerts.item.ZONES|Type: array. JSON type: array. The official API documentation provides no description. |
+      |alerts.item.ZONES.item|Type: object. JSON type: object. The official API documentation provides no description. |
+      |alerts.item.ZONES.item.ZONE|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |alerts.item.ZONES.item.state|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |alerts.item.date|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |alerts.item.date_epoch|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |alerts.item.description|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |alerts.item.expires|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |alerts.item.expires_epoch|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |alerts.item.message|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |alerts.item.phenomena|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |alerts.item.significance|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |alerts.item.type|Type: unknown. JSON type: string. type Translated HUR Hurricane Local Statement TOR Tornado Warning TOW Tornado Watch WRN Severe Thunderstorm Warning SEW Severe Thunderstorm Watch WIN Winter Weather Advisory FLO Flood Warning WAT Flood Watch / Statement WND High Wind Advisory SVR Severe Weather Statement HEA Heat Advisory FOG Dense Fog Advisory SPE Special Weather Statement FIR Fire Weather Advisory VOL Volcanic Activity Statement HWW Hurricane Wind Warning REC Record Set REP Public Reports PUB Public Information Statement. |
+      |response|Type: object. JSON type: object. The official API documentation provides no description. |
+      |response.features|Type: object. JSON type: object. The official API documentation provides no description. |
+      |response.features.alerts|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |response.termsofService|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |response.version|Type: unknown. JSON type: string. The official API documentation provides no description. |
+    body: 
+      application/json: 
+        schema: alertsSchema
+        example: !include ../examples/alerts.json
+      application/xml: 

@@ -1,0 +1,19 @@
+{
+  "fidsData" : [
+    {
+      "flightNumber" : "1731" ,
+      "airlineLogoUrlPng" : "http://d3o54sf0907rz4.cloudfront.net/airline-logos/v2/centered/logos/png/300x100/dl-logo.png" ,
+      "isCodeshare" : false ,
+      "remarks" : "On-Time" ,
+      "city" : "Atlanta" ,
+      "currentTime" : "01:15 AM"
+    } , {
+      "flightNumber" : "6682" ,
+      "airlineLogoUrlPng" : "http://d3o54sf0907rz4.cloudfront.net/airline-logos/v2/centered/logos/png/300x100/va-logo.png" ,
+      "isCodeshare" : true ,
+      "remarks" : "On-Time" ,
+      "city" : "Atlanta" ,
+      "currentTime" : "01:15 AM"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+    "healthmonitor": {
+        "admin_state_up": false,
+        "delay": 2,
+        "expected_codes": "200",
+        "http_method": "POST",
+        "id": "0a9ac99d-0a09-4b18-8499-a0796850279a",
+        "max_retries": 2,
+        "pools": [
+            {
+                "id": "74aa2010-a59f-4d35-a436-60a6da882819"
+            }
+        ],
+        "tenant_id": "6f3584d5754048a18e30685362b88411",
+        "timeout": 2,
+        "type": "HTTP",
+        "url_path": "/page.html"
+    }
+}

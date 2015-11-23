@@ -1,0 +1,27 @@
+{
+  "kind" : "calendar#acl" ,
+  "etag" : "etag" ,
+  "nextPageToken" : "string" ,
+  "nextSyncToken" : "string" ,
+  "items" : [
+    {
+      "kind" : "calendar#aclRule" ,
+      "etag" : "etag" ,
+      "id" : "string" ,
+      "scope" : {
+        "type" : "string" ,
+        "value" : "string"
+      } ,
+      "role" : "string"
+    } , {
+      "kind" : "calendar#aclRule" ,
+      "etag" : "etag" ,
+      "id" : "string" ,
+      "scope" : {
+        "type" : "string" ,
+        "value" : "string"
+      } ,
+      "role" : "string"
+    }
+  ]
+}

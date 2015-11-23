@@ -1,0 +1,15 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "length" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "team_strength" : {
+      "type" : "number" ,
+      "required" : false
+    }
+  }
+}

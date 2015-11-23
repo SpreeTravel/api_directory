@@ -1,0 +1,28 @@
+queryParameters: 
+  api: 
+    description: The API key issued by Jobvite.
+    required: true
+    example: api=jobvite
+  secret: 
+    description: The secret for this service, issued by Jobvite.
+    required: true
+    example: secret=test
+  action: 
+    description: 'The action to perform. "getNewHires", "getCandidates"'
+    required: true
+    example: action=getNewHires
+  format: 
+    description: The format of the data (HRXML)
+    required: true
+    example: format=hrxml
+  datestart: 
+    description: The date after which the candidate was last updated for filtering purposes.
+    example: datestart=08-01-2009
+  dateend: 
+    description: The date before which the candidate was last updated for filtering purposes.
+    example: "dateend=2009-08-15T11:21:33-0700"
+  dateFormat: 
+    description: |
+      The format of the dates. The supported defaults are: "MM/dd/yyyy", "MM-dd-yyyy", " yyyy-MM-dd'T'HH:mm:ssZ".
+    default: dateFormat=MM-dd-yyyy
+    example: dateFormat

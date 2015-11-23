@@ -1,0 +1,10 @@
+{
+  "application": {
+    "name": "some string",
+    "settings": {
+      "app_apdex_threshold": 1.0,
+      "end_user_apdex_threshold": 1.0,
+      "enable_real_user_monitoring": true
+    }
+  }
+}

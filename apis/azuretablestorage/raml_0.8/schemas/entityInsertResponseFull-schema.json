@@ -1,0 +1,83 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "odata.metadata" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "odata.type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "odata.id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "odata.etag" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "odata.editLink" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "PartitionKey" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "RowKey" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Timestamp@odata.type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Timestamp" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Address" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Age" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "AmountDue" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "CustomerCode@odata.type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "CustomerCode" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "CustomerSince@odata.type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "CustomerSince" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "IsActive" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "NumberOfOrders@odata.type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "NumberOfOrders" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

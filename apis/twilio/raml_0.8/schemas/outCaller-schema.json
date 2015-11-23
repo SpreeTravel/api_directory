@@ -1,0 +1,21 @@
+{
+    "": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+        "account_sid": {
+            "type": "string"
+        },
+        "phone_number": {
+            "type": "string"
+        },
+        "friendly_name": {
+            "type": "string"
+        },
+        "validation_code": {
+            "type": "integer"
+        },
+        "call_sid": {
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,65 @@
+description: |
+  Returns the city name, zip code / postal code, latitude-longitude coordinates and nearby personal weather stations.
+  
+  #Examples:
+  http://api.wunderground.com/api/Your_Key/geolookup/q/CA/San_Francisco.json
+  http://api.wunderground.com/api/Your_Key/geolookup/q/France/Paris.json
+  http://api.wunderground.com/api/Your_Key/geolookup/q/autoip.json
+  http://api.wunderground.com/api/Your_Key/geolookup/q/94107.json
+  http://api.wunderground.com/api/Your_Key/geolookup/q/SFO.json
+  http://api.wunderground.com/api/Your_Key/geolookup/q/37.776289,-122.395234.json
+  http://api.wunderground.com/api/Your_Key/geolookup/q/pws:KMNCHASK10.json
+  (See description of the response.)
+responses: 
+  200: 
+    description: |
+      The response will be a JSON-encoded object.
+      |name|description|
+      |-|
+      |location|Type: object. JSON type: object. The official API documentation provides no description. |
+      |location.city|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.country|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.country_iso3166|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.country_name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.l|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.lat|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.lon|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.magic|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations|Type: object. JSON type: object. The official API documentation provides no description. |
+      |location.nearby_weather_stations.airport|Type: object. JSON type: object. The official API documentation provides no description. |
+      |location.nearby_weather_stations.airport.station|Type: array. JSON type: array. The official API documentation provides no description. |
+      |location.nearby_weather_stations.airport.station.item|Type: object. JSON type: object. The official API documentation provides no description. |
+      |location.nearby_weather_stations.airport.station.item.city|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations.airport.station.item.country|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations.airport.station.item.icao|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations.airport.station.item.lat|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations.airport.station.item.lon|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations.airport.station.item.state|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations.pws|Type: object. JSON type: object. The official API documentation provides no description. |
+      |location.nearby_weather_stations.pws.station|Type: array. JSON type: array. The official API documentation provides no description. |
+      |location.nearby_weather_stations.pws.station.item|Type: object. JSON type: object. The official API documentation provides no description. |
+      |location.nearby_weather_stations.pws.station.item.city|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations.pws.station.item.country|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations.pws.station.item.distance_km|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |location.nearby_weather_stations.pws.station.item.distance_mi|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |location.nearby_weather_stations.pws.station.item.id|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations.pws.station.item.neighborhood|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations.pws.station.item.state|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.requesturl|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.state|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.type|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.tz_long|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.tz_short|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.wmo|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.wuiurl|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.zip|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |response|Type: object. JSON type: object. The official API documentation provides no description. |
+      |response.features|Type: object. JSON type: object. The official API documentation provides no description. |
+      |response.features.geolookup|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |response.termsofService|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |response.version|Type: unknown. JSON type: string. The official API documentation provides no description. |
+    body: 
+      application/json: 
+        schema: geolookupSchema
+        example: !include ../examples/geolookup.json
+      application/xml: 

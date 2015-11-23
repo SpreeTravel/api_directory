@@ -1,0 +1,137 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "geonames" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "parsererror" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "-style" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "h3" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "div" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "-style" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "#text" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        } ,
+        "totalResultsCount" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "code" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "postalcode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "lat" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "lng" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "adminCode1" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "adminName1" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "adminCode2" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "adminName2" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "adminCode3" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "adminName3" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } , {
+              "type" : "object" ,
+              "properties" : {
+                "postalcode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "lat" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "lng" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "adminCode1" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "adminName1" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

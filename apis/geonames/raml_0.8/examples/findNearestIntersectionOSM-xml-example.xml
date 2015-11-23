@@ -1,0 +1,13 @@
+<geonames>
+<intersection>
+<street1>Roble Avenue</street1>
+<highway1>residential</highway1>
+<street1Bearing>213</street1Bearing>
+<street2>Curtis Street</street2>
+<highway2>residential</highway2>
+<street2Bearing>303</street2Bearing>
+<lat>37.4506505</lat>
+<lng>-122.1808293</lng>
+<distance>0.08</distance>
+</intersection>
+</geonames>

@@ -1,0 +1,39 @@
+{
+  "geonames" : {
+    "parsererror" : {
+      "-style" : "display: block; white-space: pre; border: 2px solid #c77; padding: 0 1em 0 1em; margin: 1em; background-color: #fdd; color: black" ,
+      "h3" : [
+        "This page contains the following errors:" ,
+        "Below is a rendering of the page up to the first error."
+      ] ,
+      "div" : {
+        "-style" : "font-family:monospace;font-size:12px" ,
+        "#text" : "error on line 29 at column 7: Extra content at the end of the document"
+      }
+    } ,
+    "totalResultsCount" : "11" ,
+    "code" : [
+      {
+        "postalcode" : "9011" ,
+        "name" : "St. Gallen" ,
+        "countryCode" : "CH" ,
+        "lat" : "47.41478" ,
+        "lng" : "9.39985" ,
+        "adminCode1" : "SG" ,
+        "adminName1" : "Kanton St. Gallen" ,
+        "adminCode2" : "1721" ,
+        "adminName2" : "Wahlkreis St. Gallen" ,
+        "adminCode3" : "3203" ,
+        "adminName3" : "St. Gallen"
+      } , {
+        "postalcode" : "9011" ,
+        "name" : "Győr" ,
+        "countryCode" : "HU" ,
+        "lat" : "47.60764" ,
+        "lng" : "17.78194" ,
+        "adminCode1" : "GS" ,
+        "adminName1" : "Győr-Moson-Sopron"
+      }
+    ]
+  }
+}

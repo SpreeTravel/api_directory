@@ -1,0 +1,63 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {"items": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "displayLabel": {
+        "type": "string",
+        "required": false
+      },
+      "explanation": {
+        "type": "object",
+        "required": false,
+        "properties": {
+          "detailsUrl": {
+            "type": "string",
+            "required": false
+          },
+          "summary": {
+            "type": "string",
+            "required": false
+          },
+          "type": {
+            "type": "string",
+            "required": false
+          }
+        }
+      },
+      "motif": {
+        "type": "object",
+        "required": false,
+        "properties": {
+          "color": {
+            "type": "string",
+            "required": false
+          },
+          "largeIconUrl": {
+            "type": "string",
+            "required": false
+          },
+          "mediumIconUrl": {
+            "type": "string",
+            "required": false
+          },
+          "smallIconUrl": {
+            "type": "string",
+            "required": false
+          },
+          "svgIconUrl": {
+            "type": "string",
+            "required": false
+          }
+        }
+      },
+      "recommendationType": {
+        "type": "string",
+        "required": false
+      }
+    }
+  }}
+}

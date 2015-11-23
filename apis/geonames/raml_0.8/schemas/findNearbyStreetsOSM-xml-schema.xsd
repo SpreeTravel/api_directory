@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="geonames">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="streetSegment" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="wayId" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="line" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="distance" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="highway" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "levelImageUrl": {
+      "type": "string",
+      "required": false
+    },
+    "levelName": {
+      "type": "string",
+      "required": false
+    },
+    "levelNumber": {
+      "type": "integer",
+      "required": false
+    }
+  }
+}

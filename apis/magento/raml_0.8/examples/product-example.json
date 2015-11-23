@@ -1,0 +1,55 @@
+{
+  "entity_id" : "8" ,
+  "attribute_set_id" : "4" ,
+  "type_id" : "simple" ,
+  "sku" : "dress" ,
+  "name" : "Dress" ,
+  "url_key" : "my-new-dress" ,
+  "country_of_manufacture" : "AD" ,
+  "msrp_display_actual_price_type" : "2" ,
+  "gift_message_available" : "1" ,
+  "price" : "2000.0000" ,
+  "weight" : "0.5000" ,
+  "status" : "1" ,
+  "visibility" : "4" ,
+  "tax_class_id" : "7" ,
+  "description" : "dress" ,
+  "group_price" : [
+    {
+      "website_id" : "0" ,
+      "cust_group" : "1" ,
+      "price" : "1400.0000"
+    }
+  ] ,
+  "tier_price" : [
+    {
+      "website_id" : "0" ,
+      "cust_group" : "1" ,
+      "price" : "1300.0000" ,
+      "price_qty" : "1.0000"
+    }
+  ] ,
+  "stock_data" : {
+    "qty" : "50.0000" ,
+    "min_qty" : "0.0000" ,
+    "use_config_min_qty" : "1" ,
+    "is_qty_decimal" : "0" ,
+    "backorders" : "0" ,
+    "use_config_backorders" : "1" ,
+    "min_sale_qty" : "1.0000" ,
+    "use_config_min_sale_qty" : "1" ,
+    "max_sale_qty" : "0.0000" ,
+    "use_config_max_sale_qty" : "1" ,
+    "is_in_stock" : "1" ,
+    "notify_stock_qty" : null ,
+    "use_config_notify_stock_qty" : "1" ,
+    "manage_stock" : "0" ,
+    "use_config_manage_stock" : "1" ,
+    "use_config_qty_increments" : "1" ,
+    "qty_increments" : "0.0000" ,
+    "use_config_enable_qty_inc" : "1" ,
+    "enable_qty_increments" : "0" ,
+    "is_decimal_divided" : "0" ,
+    "use_config_enable_qty_increments" : "1"
+  }
+}

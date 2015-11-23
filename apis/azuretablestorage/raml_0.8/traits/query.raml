@@ -1,0 +1,26 @@
+headers: 
+  Accept: 
+    description: Specifies the accepted content-type of the response payload.
+    enum: 
+      - application/json;odata=nometadata
+      - application/atom+xml
+      - application/json;odata=fullmetadata
+      - application/json;odata=minimalmetadata
+queryParameters: 
+  select: 
+    description: Returns the desired properties of an entity from the set. This query option is only supported for requests using version 2011-08-18 or newer. For more information, see Writing LINQ Queries.
+  filter: 
+    description: Returns only tables or entities that satisfy the specified filter. Note that no more than 15 discrete comparisons are permitted within a $filter string.
+  top: 
+    description: Returns only the top n tables or entities from the set.
+    type: integer
+responses: 
+  200: 
+    headers: 
+      Content-Type: 
+        description: Indicates the content type of the payload. The value depends on the value specified for the Accept request header. For more information about content types, see Payload Format for Table Service Operations.
+        enum: 
+          - application/json;odata=nometadata
+          - application/atom+xml
+          - application/json;odata=fullmetadata
+          - application/json;odata=minimalmetadata

@@ -1,0 +1,23 @@
+[
+  {
+    "EnglishText" : "911 Telephone Outage" ,
+    "LanguageCode" : "es" ,
+    "PhraseCode" : "911TelephoneOutage" ,
+    "Text" : "Teléfono en caso de apagones 911"
+  } , {
+    "EnglishText" : "Menu" ,
+    "LanguageCode" : "es" ,
+    "PhraseCode" : "Abbr_Menu" ,
+    "Text" : "Menú"
+  } , {
+    "EnglishText" : "About" ,
+    "LanguageCode" : "es" ,
+    "PhraseCode" : "About" ,
+    "Text" : "Acerca de"
+  } , {
+    "EnglishText" : "Accept" ,
+    "LanguageCode" : "es" ,
+    "PhraseCode" : "Accept" ,
+    "Text" : "Aceptar"
+  }
+]

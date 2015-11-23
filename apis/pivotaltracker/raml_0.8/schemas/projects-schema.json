@@ -1,0 +1,256 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : [
+    {
+      "type" : "object" ,
+      "properties" : {
+        "id" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "kind" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "version" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "iteration_length" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "week_start_day" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "point_scale" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "point_scale_is_custom" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "bugs_and_chores_are_estimatable" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "automatic_planning" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "enable_tasks" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "time_zone" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "kind" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "olson_name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "offset" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "velocity_averaged_over" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "number_of_done_iterations_to_show" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "has_google_domain" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "enable_incoming_emails" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "initial_velocity" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "public" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "atom_enabled" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "start_time" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "created_at" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "updated_at" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "account_id" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "current_iteration_number" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "enable_following" : {
+          "type" : "boolean" ,
+          "required" : false
+        }
+      }
+    } , {
+      "type" : "object" ,
+      "properties" : {
+        "id" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "kind" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "version" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "iteration_length" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "week_start_day" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "point_scale" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "point_scale_is_custom" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "bugs_and_chores_are_estimatable" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "automatic_planning" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "enable_tasks" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "time_zone" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "kind" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "olson_name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "offset" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "velocity_averaged_over" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "number_of_done_iterations_to_show" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "has_google_domain" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "description" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "profile_content" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "enable_incoming_emails" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "initial_velocity" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "public" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "atom_enabled" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "start_date" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "start_time" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "created_at" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "updated_at" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "account_id" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "current_iteration_number" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "enable_following" : {
+          "type" : "boolean" ,
+          "required" : false
+        }
+      }
+    }
+  ]
+}

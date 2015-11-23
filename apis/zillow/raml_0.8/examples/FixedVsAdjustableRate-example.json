@@ -1,0 +1,249 @@
+cb({
+  "request" : {
+    "adjustablerate" : "5.405" ,
+    "comparisonyears" : "30" ,
+    "output" : "json" ,
+    "schedule" : "yearly" ,
+    "monthsbetweenadjustments" : "12" ,
+    "amount" : "10000000" ,
+    "callback" : "cb" ,
+    "adjustment" : "0.03" ,
+    "fixedrate" : "6.504" ,
+    "fixedterminmonths" : "360" ,
+    "monthsbeforeadjustment" : "60" ,
+    "taxbracket" : "0.02" ,
+    "adjustableterminmonths" : "360" ,
+    "ratecap" : "18.0" ,
+    "costofmoney" : "0.0"
+  } ,
+  "message" : {
+    "text" : "Request successfully processed" ,
+    "code" : "0"
+  } ,
+  "response" : {
+    "monthlyPrincipalAndInterest" : "63233" ,
+    "monthlyPrincipalAndInterestAdjustable" : "56184" ,
+    "fixedDiscountedPayments" : "758797" ,
+    "adjustableDiscountedPayments" : "20696671" ,
+    "fixedRemainingPrincipal" : "0" ,
+    "adjustableRemainingPrincipal" : "0" ,
+    "fixedTaxSavings" : "2553" ,
+    "adjustableTaxSavings" : "2139" ,
+    "fixedTotalCost" : "756245" ,
+    "adjustableTotalCost" : "20694532" ,
+    "result" : "The fixed-rate loan looks like it will save you $19,938,287 over the 30 year period." ,
+    "annualAmortizationSchedule" : [
+      {
+        "period" : "1" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "9888312" ,
+        "adjustablePayment" : "674212" ,
+        "adjustableBalance" : "9862926" ,
+        "adjustableRate" : "5.405"
+      } , {
+        "period" : "2" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "9769140" ,
+        "adjustablePayment" : "674212" ,
+        "adjustableBalance" : "9718256" ,
+        "adjustableRate" : "5.405"
+      } , {
+        "period" : "3" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "9641981" ,
+        "adjustablePayment" : "674212" ,
+        "adjustableBalance" : "9565571" ,
+        "adjustableRate" : "5.405"
+      } , {
+        "period" : "4" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "9506301" ,
+        "adjustablePayment" : "674212" ,
+        "adjustableBalance" : "9404425" ,
+        "adjustableRate" : "5.405"
+      } , {
+        "period" : "5" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "9361528" ,
+        "adjustablePayment" : "674212" ,
+        "adjustableBalance" : "9234351" ,
+        "adjustableRate" : "5.405"
+      } , {
+        "period" : "6" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "9207054" ,
+        "adjustablePayment" : "676189" ,
+        "adjustableBalance" : "9055640" ,
+        "adjustableRate" : "5.435"
+      } , {
+        "period" : "7" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "9042227" ,
+        "adjustablePayment" : "678111" ,
+        "adjustableBalance" : "8867761" ,
+        "adjustableRate" : "5.465"
+      } , {
+        "period" : "8" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "8866355" ,
+        "adjustablePayment" : "679975" ,
+        "adjustableBalance" : "8670141" ,
+        "adjustableRate" : "5.495"
+      } , {
+        "period" : "9" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "8678697" ,
+        "adjustablePayment" : "681780" ,
+        "adjustableBalance" : "8462173" ,
+        "adjustableRate" : "5.525"
+      } , {
+        "period" : "10" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "8478463" ,
+        "adjustablePayment" : "683524" ,
+        "adjustableBalance" : "8243203" ,
+        "adjustableRate" : "5.555"
+      } , {
+        "period" : "11" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "8264811" ,
+        "adjustablePayment" : "685205" ,
+        "adjustableBalance" : "8012536" ,
+        "adjustableRate" : "5.585"
+      } , {
+        "period" : "12" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "8036840" ,
+        "adjustablePayment" : "686822" ,
+        "adjustableBalance" : "7769425" ,
+        "adjustableRate" : "5.615"
+      } , {
+        "period" : "13" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "7793593" ,
+        "adjustablePayment" : "688372" ,
+        "adjustableBalance" : "7513072" ,
+        "adjustableRate" : "5.645"
+      } , {
+        "period" : "14" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "7534044" ,
+        "adjustablePayment" : "689854" ,
+        "adjustableBalance" : "7242623" ,
+        "adjustableRate" : "5.675"
+      } , {
+        "period" : "15" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "7257102" ,
+        "adjustablePayment" : "691266" ,
+        "adjustableBalance" : "6957161" ,
+        "adjustableRate" : "5.705"
+      } , {
+        "period" : "16" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "6961601" ,
+        "adjustablePayment" : "692605" ,
+        "adjustableBalance" : "6655707" ,
+        "adjustableRate" : "5.735"
+      } , {
+        "period" : "17" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "6646297" ,
+        "adjustablePayment" : "693871" ,
+        "adjustableBalance" : "6337209" ,
+        "adjustableRate" : "5.765"
+      } , {
+        "period" : "18" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "6309863" ,
+        "adjustablePayment" : "695060" ,
+        "adjustableBalance" : "6000542" ,
+        "adjustableRate" : "5.795"
+      } , {
+        "period" : "19" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "5950884" ,
+        "adjustablePayment" : "696172" ,
+        "adjustableBalance" : "5644495" ,
+        "adjustableRate" : "5.825"
+      } , {
+        "period" : "20" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "5567847" ,
+        "adjustablePayment" : "697203" ,
+        "adjustableBalance" : "5267775" ,
+        "adjustableRate" : "5.855"
+      } , {
+        "period" : "21" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "5159142" ,
+        "adjustablePayment" : "698152" ,
+        "adjustableBalance" : "4868989" ,
+        "adjustableRate" : "5.885"
+      } , {
+        "period" : "22" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "4723047" ,
+        "adjustablePayment" : "699017" ,
+        "adjustableBalance" : "4446644" ,
+        "adjustableRate" : "5.915"
+      } , {
+        "period" : "23" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "4257728" ,
+        "adjustablePayment" : "699795" ,
+        "adjustableBalance" : "3999139" ,
+        "adjustableRate" : "5.945"
+      } , {
+        "period" : "24" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "3761226" ,
+        "adjustablePayment" : "700485" ,
+        "adjustableBalance" : "3524752" ,
+        "adjustableRate" : "5.975"
+      } , {
+        "period" : "25" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "3231451" ,
+        "adjustablePayment" : "701084" ,
+        "adjustableBalance" : "3021632" ,
+        "adjustableRate" : "6.005"
+      } , {
+        "period" : "26" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "2666174" ,
+        "adjustablePayment" : "701590" ,
+        "adjustableBalance" : "2487792" ,
+        "adjustableRate" : "6.035"
+      } , {
+        "period" : "27" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "2063015" ,
+        "adjustablePayment" : "702000" ,
+        "adjustableBalance" : "1921095" ,
+        "adjustableRate" : "6.065"
+      } , {
+        "period" : "28" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "1419436" ,
+        "adjustablePayment" : "702314" ,
+        "adjustableBalance" : "1319244" ,
+        "adjustableRate" : "6.095"
+      } , {
+        "period" : "29" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "732728" ,
+        "adjustablePayment" : "702528" ,
+        "adjustableBalance" : "679765" ,
+        "adjustableRate" : "6.125"
+      } , {
+        "period" : "30" ,
+        "fixedPayment" : "758797" ,
+        "fixedBalance" : "0" ,
+        "adjustablePayment" : "702641" ,
+        "adjustableBalance" : "0" ,
+        "adjustableRate" : "6.155"
+      }
+    ]
+  }
+});

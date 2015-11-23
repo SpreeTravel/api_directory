@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Invoices">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Invoice"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Invoice">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Type"/>
+    <xs:element ref="Contact"/>
+    <xs:element ref="Date"/>
+    <xs:element ref="DueDate"/>
+    <xs:element ref="Status"/>
+    <xs:element ref="LineAmountTypes"/>
+    <xs:element ref="LineItems"/>
+    <xs:element ref="SubTotal"/>
+    <xs:element ref="TotalTax"/>
+    <xs:element ref="Total"/>
+    <xs:element ref="UpdatedDateUTC"/>
+    <xs:element ref="CurrencyCode"/>
+    <xs:element ref="InvoiceID"/>
+    <xs:element ref="InvoiceNumber"/>
+    <xs:element ref="Payments"/>
+    <xs:element ref="AmountDue"/>
+    <xs:element ref="AmountPaid"/>
+    <xs:element ref="AmountCredited"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Type" type="xs:NCName"/>
+  <xs:element name="Contact">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="ContactID"/>
+    <xs:element ref="ContactStatus"/>
+    <xs:element ref="Name"/>
+    <xs:element ref="Addresses"/>
+    <xs:element ref="Phones"/>
+    <xs:element ref="UpdatedDateUTC"/>
+    <xs:element ref="IsSupplier"/>
+    <xs:element ref="IsCustomer"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="ContactID" type="xs:string"/>
+  <xs:element name="ContactStatus" type="xs:NCName"/>
+  <xs:element name="Addresses">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element maxOccurs="unbounded" ref="Address"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Address">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="AddressType"/>
+    <xs:sequence minOccurs="0">
+      <xs:element ref="AddressLine1"/>
+      <xs:element ref="AddressLine2"/>
+      <xs:element ref="City"/>
+      <xs:element ref="PostalCode"/>
+    </xs:sequence>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="AddressType" type="xs:NCName"/>
+  <xs:element name="AddressLine1" type="xs:string"/>
+  <xs:element name="AddressLine2" type="xs:string"/>
+  <xs:element name="City" type="xs:NCName"/>
+  <xs:element name="PostalCode" type="xs:integer"/>
+  <xs:element name="Phones">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element maxOccurs="unbounded" ref="Phone"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Phone">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="PhoneType"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="PhoneType" type="xs:NCName"/>
+  <xs:element name="IsSupplier" type="xs:boolean"/>
+  <xs:element name="IsCustomer" type="xs:boolean"/>
+  <xs:element name="DueDate" type="xs:dateTime"/>
+  <xs:element name="Status" type="xs:NCName"/>
+  <xs:element name="LineAmountTypes" type="xs:NCName"/>
+  <xs:element name="LineItems">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="LineItem"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="LineItem">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Description"/>
+    <xs:element ref="Quantity"/>
+    <xs:element ref="UnitAmount"/>
+    <xs:element ref="TaxType"/>
+    <xs:element ref="TaxAmount"/>
+    <xs:element ref="LineAmount"/>
+    <xs:element ref="AccountCode"/>
+    <xs:element ref="Tracking"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Description" type="xs:string"/>
+  <xs:element name="Quantity" type="xs:decimal"/>
+  <xs:element name="UnitAmount" type="xs:decimal"/>
+  <xs:element name="TaxType" type="xs:NCName"/>
+  <xs:element name="TaxAmount" type="xs:decimal"/>
+  <xs:element name="LineAmount" type="xs:decimal"/>
+  <xs:element name="AccountCode" type="xs:integer"/>
+  <xs:element name="Tracking">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="TrackingCategory"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="TrackingCategory">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="TrackingCategoryID"/>
+    <xs:element ref="Name"/>
+    <xs:element ref="Option"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="TrackingCategoryID" type="xs:string"/>
+  <xs:element name="Option" type="xs:string"/>
+  <xs:element name="SubTotal" type="xs:decimal"/>
+  <xs:element name="TotalTax" type="xs:decimal"/>
+  <xs:element name="Total" type="xs:decimal"/>
+  <xs:element name="CurrencyCode" type="xs:NCName"/>
+  <xs:element name="InvoiceID" type="xs:string"/>
+  <xs:element name="InvoiceNumber" type="xs:NCName"/>
+  <xs:element name="Payments">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Payment"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Payment">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Date"/>
+    <xs:element ref="Amount"/>
+    <xs:element ref="PaymentID"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Amount" type="xs:decimal"/>
+  <xs:element name="PaymentID" type="xs:string"/>
+  <xs:element name="AmountDue" type="xs:decimal"/>
+  <xs:element name="AmountPaid" type="xs:decimal"/>
+  <xs:element name="AmountCredited" type="xs:decimal"/>
+  <xs:element name="Name" type="xs:string"/>
+  <xs:element name="UpdatedDateUTC" type="xs:dateTime"/>
+  <xs:element name="Date" type="xs:dateTime"/>
+</xs:schema>

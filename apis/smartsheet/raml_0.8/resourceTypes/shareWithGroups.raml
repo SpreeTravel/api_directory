@@ -1,0 +1,34 @@
+put: 
+  description: |
+    Updates the access level of a user or group for the specified Sheet or Workspace.
+     Allowed For: [SHARE_SHEETS (when working with Sheets) ADMIN_WORKSPACES (when working with Workspaces)]
+  body: 
+    application/json: 
+      schema: updateSharewithGroupsRequest
+      example: !include ../examples/updateSharewithGroupsRequest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: updateSharewithGroupsResponse
+          example: !include ../examples/updateSharewithGroupsResponse-example.json
+get: 
+  description: |
+    Returns the access level for the specified user or group on the specified sheet or workspace .
+     Allowed For: [READ_SHEETS]
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: getSharewithGroupsResponse
+          example: !include ../examples/getSharewithGroupsResponse-example.json
+delete: 
+  description: |
+    Deletes the Share.
+     Allowed For: [SHARE_SHEETS (when working with Sheets) ADMIN_WORKSPACES (when working with Workspaces)]
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: deleteSharewithGroupsResponse
+          example: !include ../examples/deleteSharewithGroupsResponse-example.json

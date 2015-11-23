@@ -1,0 +1,214 @@
+{
+  "flightStatus" : {
+    "flightId" : 271046927 ,
+    "carrier" : {
+      "fs" : "AA" ,
+      "iata" : "AA" ,
+      "icao" : "AAL" ,
+      "name" : "American Airlines" ,
+      "phoneNumber" : "1-800-433-7300" ,
+      "active" : true
+    } ,
+    "flightNumber" : "100" ,
+    "departureAirport" : {
+      "fs" : "JFK" ,
+      "iata" : "JFK" ,
+      "icao" : "KJFK" ,
+      "faa" : "JFK" ,
+      "name" : "John F. Kennedy International Airport" ,
+      "street1" : "JFK Airport" ,
+      "street2" : "" ,
+      "city" : "New York" ,
+      "cityCode" : "NYC" ,
+      "stateCode" : "NY" ,
+      "postalCode" : "11430" ,
+      "countryCode" : "US" ,
+      "countryName" : "United States" ,
+      "regionName" : "North America" ,
+      "timeZoneRegionName" : "America/New_York" ,
+      "weatherZone" : "NYZ076" ,
+      "localTime" : "2012-08-09T14:47:31.438" ,
+      "utcOffsetHours" : -4 ,
+      "latitude" : 40.642335 ,
+      "longitude" : -73.78817 ,
+      "elevationFeet" : 13 ,
+      "classification" : 1 ,
+      "active" : true ,
+      "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/JFK?codeType=fs" ,
+      "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/JFK?codeType=fs"
+    } ,
+    "arrivalAirport" : {
+      "fs" : "LHR" ,
+      "iata" : "LHR" ,
+      "icao" : "EGLL" ,
+      "name" : "Heathrow Airport" ,
+      "city" : "London" ,
+      "cityCode" : "LON" ,
+      "stateCode" : "EN" ,
+      "countryCode" : "GB" ,
+      "countryName" : "United Kingdom" ,
+      "regionName" : "Europe" ,
+      "timeZoneRegionName" : "Europe/London" ,
+      "localTime" : "2012-08-09T19:47:31.439" ,
+      "utcOffsetHours" : 1 ,
+      "latitude" : 51.469603 ,
+      "longitude" : -0.453566 ,
+      "elevationFeet" : 80 ,
+      "classification" : 1 ,
+      "active" : true ,
+      "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/LHR?codeType=fs" ,
+      "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/LHR?codeType=fs"
+    } ,
+    "departureDate" : {
+      "dateLocal" : "2012-08-07T18:10:00.000" ,
+      "dateUtc" : "2012-08-07T22:10:00.000Z"
+    } ,
+    "arrivalDate" : {
+      "dateLocal" : "2012-08-08T06:20:00.000" ,
+      "dateUtc" : "2012-08-08T05:20:00.000Z"
+    } ,
+    "status" : "L" ,
+    "schedule" : {
+      "flightType" : "J" ,
+      "serviceClasses" : "RFJY" ,
+      "restrictions" : ""
+    } ,
+    "operationalTimes" : {
+      "publishedDeparture" : {
+        "dateLocal" : "2012-08-07T18:10:00.000" ,
+        "dateUtc" : "2012-08-07T22:10:00.000Z"
+      } ,
+      "publishedArrival" : {
+        "dateLocal" : "2012-08-08T06:20:00.000" ,
+        "dateUtc" : "2012-08-08T05:20:00.000Z"
+      } ,
+      "scheduledGateDeparture" : {
+        "dateLocal" : "2012-08-07T18:10:00.000" ,
+        "dateUtc" : "2012-08-07T22:10:00.000Z"
+      } ,
+      "actualGateDeparture" : {
+        "dateLocal" : "2012-08-07T18:05:00.000" ,
+        "dateUtc" : "2012-08-07T22:05:00.000Z"
+      } ,
+      "flightPlanPlannedDeparture" : {
+        "dateLocal" : "2012-08-07T18:54:00.000" ,
+        "dateUtc" : "2012-08-07T22:54:00.000Z"
+      } ,
+      "estimatedRunwayDeparture" : {
+        "dateLocal" : "2012-08-07T18:49:00.000" ,
+        "dateUtc" : "2012-08-07T22:49:00.000Z"
+      } ,
+      "actualRunwayDeparture" : {
+        "dateLocal" : "2012-08-07T18:23:00.000" ,
+        "dateUtc" : "2012-08-07T22:23:00.000Z"
+      } ,
+      "scheduledGateArrival" : {
+        "dateLocal" : "2012-08-08T06:20:00.000" ,
+        "dateUtc" : "2012-08-08T05:20:00.000Z"
+      } ,
+      "estimatedGateArrival" : {
+        "dateLocal" : "2012-08-08T06:07:00.000" ,
+        "dateUtc" : "2012-08-08T05:07:00.000Z"
+      } ,
+      "actualGateArrival" : {
+        "dateLocal" : "2012-08-08T06:09:00.000" ,
+        "dateUtc" : "2012-08-08T05:09:00.000Z"
+      } ,
+      "flightPlanPlannedArrival" : {
+        "dateLocal" : "2012-08-08T06:14:00.000" ,
+        "dateUtc" : "2012-08-08T05:14:00.000Z"
+      } ,
+      "estimatedRunwayArrival" : {
+        "dateLocal" : "2012-08-08T06:07:00.000" ,
+        "dateUtc" : "2012-08-08T05:07:00.000Z"
+      } ,
+      "actualRunwayArrival" : {
+        "dateLocal" : "2012-08-08T06:05:00.000" ,
+        "dateUtc" : "2012-08-08T05:05:00.000Z"
+      }
+    } ,
+    "codeshares" : [
+      {
+        "carrier" : {
+          "fs" : "LY" ,
+          "iata" : "LY" ,
+          "icao" : "ELY" ,
+          "name" : "El Al" ,
+          "active" : true
+        } ,
+        "flightNumber" : "8051" ,
+        "relationship" : "L"
+      } , {
+        "carrier" : {
+          "fs" : "IB" ,
+          "iata" : "IB" ,
+          "icao" : "IBE" ,
+          "name" : "Iberia" ,
+          "active" : true
+        } ,
+        "flightNumber" : "4218" ,
+        "relationship" : "L"
+      } , {
+        "carrier" : {
+          "fs" : "BA" ,
+          "iata" : "BA" ,
+          "icao" : "BAW" ,
+          "name" : "British Airways" ,
+          "phoneNumber" : "1-800-AIRWAYS" ,
+          "active" : true
+        } ,
+        "flightNumber" : "1511" ,
+        "relationship" : "L"
+      } , {
+        "carrier" : {
+          "fs" : "GF" ,
+          "iata" : "GF" ,
+          "icao" : "GFA" ,
+          "name" : "Gulf Air" ,
+          "active" : true
+        } ,
+        "flightNumber" : "6654" ,
+        "relationship" : "L"
+      }
+    ] ,
+    "flightDurations" : {
+      "scheduledBlockMinutes" : 430 ,
+      "blockMinutes" : 424 ,
+      "scheduledAirMinutes" : 380 ,
+      "airMinutes" : 402 ,
+      "scheduledTaxiOutMinutes" : 44 ,
+      "taxiOutMinutes" : 18 ,
+      "scheduledTaxiInMinutes" : 6 ,
+      "taxiInMinutes" : 4
+    } ,
+    "airportResources" : {
+      "departureTerminal" : "8" ,
+      "departureGate" : "B3" ,
+      "arrivalTerminal" : "3" ,
+      "arrivalGate" : "36"
+    } ,
+    "flightEquipment" : {
+      "scheduledEquipment" : {
+        "iata" : "777" ,
+        "name" : "Boeing 777 Passenger" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : true ,
+        "regional" : false
+      } ,
+      "tailNumber" : "N753AN"
+    } ,
+    "irregularOperations" : [
+      {
+        "type" : "CANCELLATION" ,
+        "dateUtc" : "2013-02-26T23:00:00.000Z" ,
+        "message" : "Cancelled due to mechanical issue."
+      } , {
+        "type" : "REPLACED_BY" ,
+        "relatedFlightId" : 24586521 ,
+        "dateUtc" : "2013-02-26T23:00:00.000Z" ,
+        "message" : "New flight created to replace a cancelled flight."
+      }
+    ]
+  }
+}

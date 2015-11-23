@@ -1,0 +1,35 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "kind" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "selfLink" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "storageDataLocation" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "storagePMMLLocation" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "storagePMMLModelLocation" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "modelType" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

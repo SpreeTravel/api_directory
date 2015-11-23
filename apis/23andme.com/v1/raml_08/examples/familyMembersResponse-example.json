@@ -1,0 +1,41 @@
+{
+  "id" : "a42e94634e3f7683" ,
+  "limit" : 10 ,
+  "offset" : 0 ,
+  "count" : 23 ,
+  "members" : [
+    {
+      "id" : "48f2489h294hf" ,
+      "profile_id" : "8cb31789fb47912c" ,
+      "first_name" : "Ian" ,
+      "middle_name" : null ,
+      "last_name" : "Mendel" ,
+      "birth_surname" : null ,
+      "name_suffix" : "Jr" ,
+      "nickname" : "Junior" ,
+      "sex" : "m" ,
+      "adopted" : false ,
+      "deceased" : false ,
+      "partners" : [
+        "c4480ba411939067"
+      ] ,
+      "parents" : [
+        "b5d5423af9a82848" ,
+        "e07427ff8628a8ce"
+      ] ,
+      "events" : [
+        {
+          "type" : "birth" ,
+          "date" : "1943-11-29" ,
+          "end_date" : null ,
+          "location" : "New Orleans, LA"
+        } , {
+          "type" : "residence" ,
+          "date" : "1956-05-16" ,
+          "end_date" : "1969-07-16" ,
+          "location" : "Chicago, IL"
+        }
+      ]
+    }
+  ]
+}

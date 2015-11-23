@@ -1,0 +1,135 @@
+[
+   {
+       "kind": "project_membership",
+       "id": 100,
+       "person":
+       {
+           "kind": "person",
+           "id": 100,
+           "name": "Emperor Palpatine",
+           "email": "emperor@galacticrepublic.gov",
+           "initials": "EP",
+           "username": "palpatine"
+       },
+       "project_id": 99,
+       "role": "owner",
+       "project_color": "8100ea",
+       "last_viewed_at": "2014-07-22T12:00:00Z",
+       "wants_comment_notification_emails": false,
+       "will_receive_mention_notifications_or_emails": true
+   },
+   {
+       "kind": "project_membership",
+       "id": 101,
+       "person":
+       {
+           "kind": "person",
+           "id": 101,
+           "name": "Darth Vader",
+           "email": "vader@deathstar.mil",
+           "initials": "DV",
+           "username": "vader"
+       },
+       "project_id": 99,
+       "role": "member",
+       "project_color": "8100ea",
+       "last_viewed_at": "2014-07-22T12:00:00Z",
+       "wants_comment_notification_emails": true,
+       "will_receive_mention_notifications_or_emails": true
+   },
+   {
+       "kind": "project_membership",
+       "id": 102,
+       "person":
+       {
+           "kind": "person",
+           "id": 102,
+           "name": "Wilhuff Tarkin",
+           "email": "governor@eriadu.gov",
+           "initials": "WT",
+           "username": "tarkin"
+       },
+       "project_id": 99,
+       "role": "owner",
+       "project_color": "8100ea",
+       "last_viewed_at": "2014-07-22T12:00:00Z",
+       "wants_comment_notification_emails": false,
+       "will_receive_mention_notifications_or_emails": true
+   },
+   {
+       "kind": "project_membership",
+       "id": 103,
+       "person":
+       {
+           "kind": "person",
+           "id": 103,
+           "name": "Moradmin Bast",
+           "email": "bast@deathstar.mil",
+           "initials": "MB",
+           "username": "bast"
+       },
+       "project_id": 99,
+       "role": "member",
+       "project_color": "8100ea",
+       "last_viewed_at": "2014-07-22T12:00:00Z",
+       "wants_comment_notification_emails": true,
+       "will_receive_mention_notifications_or_emails": true
+   },
+   {
+       "kind": "project_membership",
+       "id": 104,
+       "person":
+       {
+           "kind": "person",
+           "id": 104,
+           "name": "Clone TK421",
+           "email": "tk421@deathstar.mil",
+           "initials": "TK421",
+           "username": "tk421"
+       },
+       "project_id": 99,
+       "role": "member",
+       "project_color": "8100ea",
+       "last_viewed_at": "2014-07-22T12:00:00Z",
+       "wants_comment_notification_emails": true,
+       "will_receive_mention_notifications_or_emails": true
+   },
+   {
+       "kind": "project_membership",
+       "id": 105,
+       "person":
+       {
+           "kind": "person",
+           "id": 105,
+           "name": "Robotic Maintenance Team 4",
+           "email": "I662@deathstar.mil",
+           "initials": "i662",
+           "username": "i662"
+       },
+       "project_id": 99,
+       "role": "member",
+       "project_color": "8100ea",
+       "last_viewed_at": "2014-07-22T12:00:00Z",
+       "wants_comment_notification_emails": true,
+       "will_receive_mention_notifications_or_emails": true
+   },
+   {
+       "kind": "project_membership",
+       "id": 107,
+       "person":
+       {
+           "kind": "person",
+           "id": 107,
+           "name": "Bevel Lemelisk",
+           "email": "bevel@sith.mil",
+           "initials": "bl",
+           "username": "bevel"
+       },
+       "project_id": 99,
+       "role": "viewer",
+       "project_color": "8100ea",
+       "last_viewed_at": "2014-07-22T12:00:05Z",
+       "wants_comment_notification_emails": false,
+       "will_receive_mention_notifications_or_emails": true
+   }
+]

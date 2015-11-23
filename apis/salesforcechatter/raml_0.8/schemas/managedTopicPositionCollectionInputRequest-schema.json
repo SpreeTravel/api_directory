@@ -1,0 +1,45 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "managedTopicPositions": {
+      "type": "array",
+      "required": false,
+      "items": [{
+        "type": "object",
+        "required": false,
+        "properties": {
+          "managedTopicId": {
+            "type": "string",
+            "required": false
+          },
+          "position": {
+            "type": "integer",
+            "required": false
+          }
+        }
+      }]
+    },
+    "ManagedTopicA": {
+      "type": "string",
+      "required": false
+    },
+    "ManagedTopicB": {
+      "type": "string",
+      "required": false
+    },
+    "ManagedTopicC": {
+      "type": "string",
+      "required": false
+    },
+    "ManagedTopicD": {
+      "type": "string",
+      "required": false
+    },
+    "ManagedTopicE": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

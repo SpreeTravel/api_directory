@@ -1,0 +1,11 @@
+{
+  "name" : "Small" ,
+  "price_money" : {
+    "currency_code" : "USD" ,
+    "amount" : 400
+  } ,
+  "track_inventory" : true ,
+  "inventory_alert_type" : "LOW_QUANTITY" ,
+  "inventory_alert_threshold" : 10 ,
+  "user_data" : "SEASONAL=TRUE"
+}

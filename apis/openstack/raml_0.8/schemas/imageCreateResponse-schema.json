@@ -1,0 +1,73 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "status" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "tags" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+      ]
+    } ,
+    "container_format" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "created_at" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "disk_format" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "updated_at" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "visibility" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "self" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "min_disk" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "protected" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "file" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "owner" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "min_ram" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "schema" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

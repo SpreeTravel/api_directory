@@ -1,0 +1,43 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "calculation_phase" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "adjustment_type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "applies_to_custom_amounts" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "enabled" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "inclusion_type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "rate" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "type" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

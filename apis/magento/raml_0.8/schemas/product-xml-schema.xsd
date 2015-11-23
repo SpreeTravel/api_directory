@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="magento_api">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="entity_id" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="attribute_set_id" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="type_id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="sku" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="name" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="url_key" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="country_of_manufacture" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="msrp_display_actual_price_type" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="gift_message_available" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="price" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+        <xsd:element name="weight" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+        <xsd:element name="status" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="visibility" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="tax_class_id" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="description" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="group_price" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="data_item" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="website_id" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="cust_group" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="price" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="tier_price" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="data_item" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="website_id" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="cust_group" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="price" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                    <xsd:element name="price_qty" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="stock_data" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="qty" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="min_qty" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="use_config_min_qty" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="is_qty_decimal" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="backorders" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="use_config_backorders" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="min_sale_qty" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="use_config_min_sale_qty" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="max_sale_qty" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="use_config_max_sale_qty" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="is_in_stock" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="notify_stock_qty" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="use_config_notify_stock_qty" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="manage_stock" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="use_config_manage_stock" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="use_config_qty_increments" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="qty_increments" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="use_config_enable_qty_inc" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="enable_qty_increments" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="is_decimal_divided" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="use_config_enable_qty_increments" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

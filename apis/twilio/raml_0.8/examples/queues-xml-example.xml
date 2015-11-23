@@ -1,0 +1,22 @@
+<TwilioResponse>
+    <Queues  end="0" firstpageuri="/2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d/Queues.xml?PageSize=50&amp;Page=0" nextpageuri="" page="0" pagesize="50" previouspageuri="" start="0" uri="/2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d/Queues.xml?PageSize=50&amp;Page=0" lastpageuri="/2010-04-01/Accounts/ACba8bc05eacf94afdae398e642c9cc32d/Queues.xml?PageSize=50&amp;Page=0" numpages="0" total="0">
+        <Queue>
+            <Sid>QUxxxxxxxxx</Sid>
+            <FriendlyName>persistent_queue1</FriendlyName>
+            <CurrentSize>32</CurrentSize>
+            <AverageWaitTime>140</AverageWaitTime>
+            <MaxSize>1000</MaxSize>
+            <DateCreated>2012-02-04 12:44:15</DateCreated>
+            <DateUpdated>2012-02-05 17:33:44</DateUpdated>
+        </Queue>
+        <Queue>
+            <Sid>QUyyyyyyyyy</Sid>
+            <FriendlyName>persistent_queue2</FriendlyName>
+            <CurrentSize>10</CurrentSize>
+            <AverageWaitTime>140</AverageWaitTime>
+            <MaxSize>100</MaxSize>
+            <DateCreated>2012-02-04 12:44:15</DateCreated>
+            <DateUpdated>2012-02-05 17:33:44</DateUpdated>
+        </Queue>
+    </Queues>
+</TwilioResponse>

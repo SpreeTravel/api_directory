@@ -1,0 +1,21 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "dns_entry" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "ip" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "dns_type" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

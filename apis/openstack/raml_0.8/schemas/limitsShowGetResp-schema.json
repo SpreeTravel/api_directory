@@ -1,0 +1,49 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "limits" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "rate" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+          ]
+        } ,
+        "absolute" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "totalSnapshotsUsed" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "maxTotalVolumeGigabytes" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "totalGigabytesUsed" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "maxTotalSnapshots" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "totalVolumesUsed" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "maxTotalVolumes" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        }
+      }
+    }
+  }
+}

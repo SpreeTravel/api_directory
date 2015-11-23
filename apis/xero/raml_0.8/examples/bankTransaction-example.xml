@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BankTransaction>
+    <Type>RECEIVE</Type>
+    <Contact>
+    <Name>Flowers Ltd</Name>
+    </Contact>
+    <LineItems>
+    <LineItem>
+      <Description>Monthly Retainer</Description>
+      <UnitAmount>575.00</UnitAmount>
+      <AccountCode>200</AccountCode>
+      <Tracking>
+      <TrackingCategory>
+        <Name>Activity/Workstream</Name>
+        <Option>Website management</Option>
+      </TrackingCategory>
+      </Tracking>
+    </LineItem>
+    </LineItems>
+    <BankAccount>
+    <Code>BANK-ABC</Code>
+    </BankAccount>
+    <Url>http://www.accounting20.com</Url>
+</BankTransaction>

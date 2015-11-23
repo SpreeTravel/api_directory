@@ -1,0 +1,14 @@
+{
+	"escalation_rule" : {
+		"id" : "PN0ZD20" ,
+		"escalation_delay_in_minutes" : 2 ,
+		"rule_object" : {
+			"id" : "PAD6MYW" ,
+			"name" : "Aliya Bradtke" ,
+			"type" : "user" ,
+			"email" : "bradtke.aliya@leannon.uk" ,
+			"time_zone" : "Eastern Time (US & Canada)" ,
+			"color" : "cayenne"
+		}
+	}
+}

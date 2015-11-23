@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="magento_api">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="data_item" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="entity_id" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="type_id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="sku" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="description" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="meta_keyword" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="short_description" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="meta_title" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="meta_description" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="regular_price_with_tax" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="regular_price_without_tax" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="final_price_with_tax" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="final_price_without_tax" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="is_saleable" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="image_url" minOccurs="0" maxOccurs="1" type="xsd:anyURI"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

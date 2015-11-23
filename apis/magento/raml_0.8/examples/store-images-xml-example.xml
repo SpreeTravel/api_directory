@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<magento_api>
+  <data_item>
+    <id>6</id>
+    <label>white dress</label>
+    <position>1</position>
+    <exclude>0</exclude>
+    <url>http://magento/media/catalog/product/1/2/12.jpg</url>
+    <types>
+      <data_item>image</data_item>
+      <data_item>small_image</data_item>
+      <data_item>thumbnail</data_item>
+    </types>
+  </data_item>
+</magento_api>

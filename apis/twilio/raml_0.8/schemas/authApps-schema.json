@@ -1,0 +1,71 @@
+{
+  "type": "object",
+  "": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "end": {
+      "type": "integer"
+    },
+    "first_page_uri": {
+      "type": "string"
+    },
+    "last_page_uri": {
+      "type": "string"
+    },
+    "next_page_uri": {
+      "type": "string"
+    },
+    "num_pages": {
+      "type": "integer"
+    },
+    "page": {
+      "type": "integer"
+    },
+    "page_size": {
+      "type": "integer"
+    },
+    "previous_page_uri": {
+      "type": "string"
+    },
+    "start": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    },
+    "uri": {
+      "type": "string"
+    },
+    "authorized_connect_apps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "connect_app_sid": {
+            "type": "string"
+          },
+          "account_sid": {
+            "type": "string"
+          },
+          "permissions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "connect_app_friendly_name": {
+            "type": "string"
+          },
+          "connect_app_description": {
+            "type": "string"
+          },
+          "connect_app_company_name": {
+            "type": "string"
+          },
+          "connect_app_homepage_url": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

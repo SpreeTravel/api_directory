@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+	<appendix>
+		<airports>
+			<airport>
+				<fs>UUS</fs>
+				<iata>UUS</iata>
+				<icao>UHSS</icao>
+				<name>Yuzhno-Sakhalinsk Airport</name>
+				<city>Yuzhno-Sakhalinsk</city>
+				<cityCode>UUS</cityCode>
+				<countryCode>RU</countryCode>
+				<countryName>Russian Federation</countryName>
+				<regionName>Europe</regionName>
+				<timeZoneRegionName>Asia/Sakhalin</timeZoneRegionName>
+				<localTime>2015-04-29T22:21:29.265</localTime>
+				<utcOffsetHours>10.0</utcOffsetHours>
+				<latitude>46.885341</latitude>
+				<longitude>142.721561</longitude>
+				<elevationFeet>71</elevationFeet>
+				<classification>4</classification>
+				<active>true</active>
+				<delayIndexUrl>https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/UUS?codeType=fs</delayIndexUrl>
+				<weatherUrl>https://api.flightstats.com/flex/weather/rest/v1/json/all/UUS?codeType=fs</weatherUrl>
+			</airport>
+		</airports>
+	</appendix>
+	<flightTracks/>
+	<request>
+		<url>https://api.flightstats.com/flex/flightstatus/rest/v2/xml/airport/tracks/UUS/arr</url>
+		<airport>
+			<requestedCode>UUS</requestedCode>
+			<fsCode>UUS</fsCode>
+		</airport>
+		<includeFlightPlan>
+			<interpreted>false</interpreted>
+		</includeFlightPlan>
+		<maxPositions/>
+		<maxPositionAgeMinutes/>
+		<codeType/>
+		<maxFlights/>
+		<extendedOptions/>
+	</request>
+</response>

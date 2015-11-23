@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "companyIds": {
+      "type": "string",
+      "required": false
+    },
+    "contactIds": {
+      "type": "string",
+      "required": false
+    },
+    "userType": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

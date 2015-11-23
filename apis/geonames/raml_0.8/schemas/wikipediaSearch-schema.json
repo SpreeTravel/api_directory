@@ -1,0 +1,114 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "geonames" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "summary" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "rank" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "title" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "wikipediaUrl" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "elevation" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "countryCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "lng" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "feature" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "thumbnailImg" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "lang" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "lat" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "summary" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "rank" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "title" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "wikipediaUrl" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "elevation" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "countryCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "lng" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "feature" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "thumbnailImg" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "geoNameId" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "lang" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "lat" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

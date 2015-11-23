@@ -1,0 +1,61 @@
+<xsd:schema attributeFormDefault="unqualified"
+     elementFormDefault="unqualified"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:ZillowTypes="http://www.zillow.com/vstatic/2/static/xsd/ZillowTypes.xsd">
+ 
+     <xsd:import namespace="http://www.zillow.com/vstatic/2/static/xsd/ZillowTypes.xsd" />
+ 
+  <xsd:complexType name="Message">
+         <xsd:sequence>
+             <xsd:element name="text" type="xsd:string"/>
+             <xsd:element name="code" type="xsd:integer"/>
+             <xsd:element name="limit-warning" type="xsd:boolean" fixed="true" minOccurs="0" />
+         </xsd:sequence>
+     </xsd:complexType>
+     
+ 
+     <xsd:element name="regionchart">
+         <xsd:complexType>
+             <xsd:sequence>
+ 
+                 <xsd:element name="request">
+                     <xsd:complexType>
+                         <xsd:sequence>
+                           <!--  the region name can be a zip code OR city, two-letter state OR two-letter state 
+                                 if none of these 3 values occur, the chart for US is returned -->
+            <xsd:element name="city" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="state" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="neighborhood" type="xsd:string" minOccurs="0"/>        
+            <xsd:element name="zip" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="unit-type" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="width" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="height" type="xsd:string"/>
+                         </xsd:sequence>
+                     </xsd:complexType>
+                 </xsd:element>
+ 
+                 <xsd:element name="message" type="Message"/>
+ 
+                 <xsd:element minOccurs="0" name="response">
+                     <xsd:complexType>
+                         <xsd:sequence>
+                             <xsd:element name="url" type="xsd:string"/>
+                             <xsd:element name="link" type="xsd:string" minOccurs="0" />
+                             <xsd:element name="zindex">
+                                 <xsd:complexType>
+                                     <xsd:simpleContent>
+                                         <xsd:extension base="xsd:string">
+                                             <xsd:attribute name="type" type="xsd:string" />
+                                             <xsd:attribute name="currency" type="xsd:string" default="USD" />
+                                         </xsd:extension>
+                                     </xsd:simpleContent>
+                                 </xsd:complexType>
+                             </xsd:element>
+                         </xsd:sequence>
+                     </xsd:complexType>
+                 </xsd:element>
+ 
+             </xsd:sequence>
+         </xsd:complexType>
+     </xsd:element>              
+ </xsd:schema>

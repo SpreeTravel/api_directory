@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "sid": {
+      "type": "string"
+    },
+    "account_sid": {
+      "type": "string"
+    },
+    "friendly_name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "company_name": {
+      "type": "string"
+    },
+    "homepage_url": {
+      "type": "string"
+    },
+    "authorize_redirect_url": {
+      "type": "string"
+    },
+    "deauthorize_callback_url": {
+      "type": "string"
+    },
+    "deauthorize_callback_method": {
+      "type": "string"
+    },
+    "permissions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "results": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "caption": {
+            "required": false,
+            "type": "string"
+          },
+          "created": {
+            "required": false,
+            "type": "integer"
+          },
+          "highres_link": {
+            "required": false,
+            "type": "string"
+          },
+          "member": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "member_city": {
+                "required": false,
+                "type": "string"
+              },
+              "member_country": {
+                "required": false,
+                "type": "string"
+              },
+              "member_id": {
+                "required": false,
+                "type": "integer"
+              },
+              "member_state": {
+                "required": false,
+                "type": "string"
+              },
+              "name": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "member_photo": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "highres_link": {
+                "required": false,
+                "type": "string"
+              },
+              "photo_id": {
+                "required": false,
+                "type": "integer"
+              },
+              "photo_link": {
+                "required": false,
+                "type": "string"
+              },
+              "thumb_link": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "photo_album": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "event": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "event_url": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "id": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "name": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "time": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              },
+              "event_id": {
+                "required": false,
+                "type": "integer"
+              },
+              "group_id": {
+                "required": false,
+                "type": "integer"
+              },
+              "photo_album_id": {
+                "required": false,
+                "type": "integer"
+              }
+            }
+          },
+          "photo_id": {
+            "required": false,
+            "type": "integer"
+          },
+          "photo_link": {
+            "required": false,
+            "type": "string"
+          },
+          "self": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "actions": {
+                "required": false,
+                "type": "string"
+              },
+              "role": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "site_link": {
+            "required": false,
+            "type": "string"
+          },
+          "thumb_link": {
+            "required": false,
+            "type": "string"
+          },
+          "updated": {
+            "required": false,
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}

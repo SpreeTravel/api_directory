@@ -1,0 +1,12 @@
+{
+  "href" : "https://api.stormpath.com/v1/accountStoreMappings/7Ui2gpn9tV75y3TExAmPLe" ,
+  "accountStore" : {
+    "href" : "https://api.stormpath.com/v1/directories/bckhcGMXQDujIXpExAmPLe"
+  } ,
+  "application" : {
+    "href" : "https://api.stormpath.com/v1/applications/Uh8FzIouQ9C8EpcExAmPLe"
+  } ,
+  "listIndex" : 0 ,
+  "isDefaultAccountStore" : true ,
+  "isDefaultGroupStore" : true
+}

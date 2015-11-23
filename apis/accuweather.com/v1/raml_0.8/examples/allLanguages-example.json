@@ -1,0 +1,30 @@
+[
+  {
+    "DisplayName" : "Arabic" ,
+    "ID" : 26 ,
+    "ISO" : "ar" ,
+    "LanguageType" : 26 ,
+    "LocalizedName" : "عربي" ,
+    "MicroSoftCode" : "ar" ,
+    "MicroSoftName" : "Arabic" ,
+    "Name" : "ARABIC"
+  } , {
+    "DisplayName" : "Arabic" ,
+    "ID" : 26 ,
+    "ISO" : "ar-ae" ,
+    "LanguageType" : 26 ,
+    "LocalizedName" : "عربي" ,
+    "MicroSoftCode" : "ar-ae" ,
+    "MicroSoftName" : "Arabic (U.A.E.)" ,
+    "Name" : "ARABIC"
+  } , {
+    "DisplayName" : "Arabic" ,
+    "ID" : 26 ,
+    "ISO" : "ar-bh" ,
+    "LanguageType" : 26 ,
+    "LocalizedName" : "عربي" ,
+    "MicroSoftCode" : "ar-bh" ,
+    "MicroSoftName" : "Arabic (Bahrain)" ,
+    "Name" : "ARABIC"
+  }
+]

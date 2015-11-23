@@ -1,0 +1,31 @@
+{
+  "@odata.type": "#Microsoft.Exchange.Services.OData.Model.Event",
+  "Subject": "Discuss the Calendar REST API",
+  "Body": {
+    "ContentType": "HTML",
+    "Content": "I think it will meet our requirements!"
+  },
+  "Start": "2014-07-02T18:00:00Z",
+  "End": "2014-07-02T19:00:00Z",
+  "Location": {
+      "DisplayName": "Conference Room 1"
+    },
+  "ShowAs": "Busy",
+  "Attendees": [
+    {
+      "Name": "Alex Darrow",
+      "Address": "alexd@contoso.com",
+      "Type": "Required"
+    },
+    {
+      "Name": "Anne Wallace",
+      "Address": "annew@contoso.com",
+      "Type": "Optional"
+    },
+    {
+      "Name": "Conference Room 1",
+      "Address": "conf1@contoso.com",
+      "Type": "Resource"
+    }
+  ]
+}

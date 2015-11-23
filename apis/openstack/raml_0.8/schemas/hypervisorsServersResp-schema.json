@@ -1,0 +1,27 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "hypervisor" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "hypervisor_hostname" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "servers" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+          ]
+        }
+      }
+    }
+  }
+}

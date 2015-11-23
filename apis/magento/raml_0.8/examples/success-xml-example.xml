@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<magento_api>
+  <data_item>
+    <item_id>1</item_id>
+    <product_id>1</product_id>
+    <stock_id>1</stock_id>
+    <qty>99.0000</qty>
+    <low_stock_date></low_stock_date>
+  </data_item>
+  <data_item>
+    <item_id>2</item_id>
+    <product_id>2</product_id>
+    <stock_id>1</stock_id>
+    <qty>100.0000</qty>
+    <low_stock_date></low_stock_date>
+  </data_item>
+</magento_api>

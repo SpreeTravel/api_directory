@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "member_photo_id": {
+      "required": false,
+      "type": "integer"
+    },
+    "photo_url": {
+      "required": false,
+      "type": "string"
+    },
+    "title": {
+      "required": false,
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+get: 
+  is: [ pageable ]
+  queryParameters: 
+    occurred_before: 
+      description: Activity will be returned only for operations that occurred before the time specified by this parameter.
+    occurred_after: 
+      description: Activity will be returned only for operations that occurred after the time specified by this parameter.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: activity_types
+          example: !include ../examples/activity_types-example.json

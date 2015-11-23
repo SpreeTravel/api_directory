@@ -1,0 +1,42 @@
+{
+    "": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+        "account_sid": {
+            "type": "string"
+        },
+        "api_version": {
+            "type": "string"
+        },
+        "date_created": {
+            "type": "string"
+        },
+        "date_updated": {
+            "type": "string"
+        },
+        "friendly_name": {
+            "type": "string"
+        },
+        "sid": {
+            "type": "string"
+        },
+        "status": {
+            "enum": [
+                "init",
+                "in-progress",
+                "completed"
+            ]
+        },
+        "subresource_uris": {
+            "properties": {
+                "participants": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "uri": {
+            "type": "string"
+        }
+    }
+}

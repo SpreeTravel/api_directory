@@ -1,0 +1,43 @@
+description: |
+  #API Key signatures
+  Similar to OAuth signing, this method of authentication certifies that a request was approved by a particular user. Unlike OAuth-signed requests, key-signed requests may be reused and recycled as long as their corresponding API key is valid. If a signed URL is released to the public, any application can use it to interact with Meetup as if it had that API key; the difference is that it can not change definitive parameters or use the signature against other API methods.
+  
+  Because requests are signed with an API key as well as a Meetup private key, it is not possible for applications to sign them independently. Instead they pass a "sign=true" parameter along with a standard read request authorized by an API key. This causes a "signed_url" field to be returned in the response metadata. OAuth requests may not be signed with an API key, as this would allow a consumer to continue act on behalf of a user even if its access token is revoked.
+  
+  URL: any read method
+  Formats: json, xml
+  Parameters: all of the required parameters for the standard request must be supplied, as well as the following:
+  
+  sign Set to "true"
+  key API key authentication is required.
+  #Variable Parameters:
+  Certain parameters are excluded from the URL signature calculation so that they may be updated to recycle the request.
+  
+  offset Paging through long responses.
+  format Change the response format to xml or json.
+  callback Specify a JavaScript callback to handle the results.
+  
+  #Response Data
+  Along with the normal results and metadata, a "signed_url" is returned that can be used to repeat the request. In JSON it is in the "meta" object, in XML the "head" element.
+  
+  signed_url Full signed url, may include default values for parameters not specified in the original request. Parameters may be reordered when reusing but only the value of the "variable parameters" may be altered.
+  
+  #Examples:
+  Get the upcoming NY Tech Meetups.
+  
+  https://api.meetup.com/events.json?key=ABDE12456AB2324445&group_urlname=ny-tech&sign=true
+  The returned "signed_url" field to be published and reused.
+  
+  http://api.meetup.com/events/?radius=25.0&order=time&group_urlname=ny-tech&offset=0&format=json&page=20&sig_id=123456780&sig=xxxxxx
+type: x-API-Key-Signatures
+describedBy: 
+  queryParameters: 
+    key: 
+      description: Your unique API key
+      required: true
+      example: ABDE12456AB2324445
+    sign: 
+      description: |
+        Should have the 'true' value.
+      required: true
+      example: true

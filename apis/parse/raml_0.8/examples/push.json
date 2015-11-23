@@ -1,0 +1,11 @@
+{
+	"channels" : [ "Giants" , "Mets" ] ,
+	"where" : {
+		"deviceType" : "android"
+	} ,
+	"push_time" : "2013-12-21T23:47:14Z" ,
+	"expiration_interval" : 518400 ,
+	"data" : {
+		"alert" : "Season tickets on sale until December 27, 2013"
+	}
+}

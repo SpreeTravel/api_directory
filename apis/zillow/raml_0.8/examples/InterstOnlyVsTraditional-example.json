@@ -1,0 +1,389 @@
+cb({
+  "request" : {
+    "amount" : "10000000" ,
+    "callback" : "cb" ,
+    "output" : "json" ,
+    "terminmonths" : "360" ,
+    "schedule" : "yearly" ,
+    "interestterminmonths" : "120" ,
+    "rate" : "6.504"
+  } ,
+  "message" : {
+    "text" : "Request successfully processed" ,
+    "code" : "0"
+  } ,
+  "response" : {
+    "monthlyPrincipalAndInterest" : "63233" ,
+    "monthlyPrincipalAndInterestInterestOnly" : "54200" ,
+    "monthlyPrincipalAndInterestAdjusted" : "74581" ,
+    "totalInterestPayments" : "12763921" ,
+    "totalInterestPaymentsInterestOnly" : "14403409" ,
+    "result" : "During the initial interest-only period of 10.00 years, the payment would be $54,200. After the interest-only period the loan payment adjusts to $74,581. Your total interest costs over the life of the loan are $14,403,409. Compare this to a traditional mortgage with a payment of $63,233 and total interest costs of $12,763,921. The difference in interest is $1,639,488." ,
+    "annualAmortizationSchedule" : [
+      {
+        "period" : "1" ,
+        "beginningBalance" : "10000000" ,
+        "payment" : "758797" ,
+        "interest" : "647110" ,
+        "endingBalance" : "9888313"
+      } , {
+        "period" : "2" ,
+        "beginningBalance" : "9888313" ,
+        "payment" : "758797" ,
+        "interest" : "639625" ,
+        "endingBalance" : "9769141"
+      } , {
+        "period" : "3" ,
+        "beginningBalance" : "9769141" ,
+        "payment" : "758797" ,
+        "interest" : "631639" ,
+        "endingBalance" : "9641983"
+      } , {
+        "period" : "4" ,
+        "beginningBalance" : "9641983" ,
+        "payment" : "758797" ,
+        "interest" : "623117" ,
+        "endingBalance" : "9506303"
+      } , {
+        "period" : "5" ,
+        "beginningBalance" : "9506303" ,
+        "payment" : "758797" ,
+        "interest" : "614025" ,
+        "endingBalance" : "9361531"
+      } , {
+        "period" : "6" ,
+        "beginningBalance" : "9361531" ,
+        "payment" : "758797" ,
+        "interest" : "604323" ,
+        "endingBalance" : "9207057"
+      } , {
+        "period" : "7" ,
+        "beginningBalance" : "9207057" ,
+        "payment" : "758797" ,
+        "interest" : "593971" ,
+        "endingBalance" : "9042231"
+      } , {
+        "period" : "8" ,
+        "beginningBalance" : "9042231" ,
+        "payment" : "758797" ,
+        "interest" : "582925" ,
+        "endingBalance" : "8866359"
+      } , {
+        "period" : "9" ,
+        "beginningBalance" : "8866359" ,
+        "payment" : "758797" ,
+        "interest" : "571139" ,
+        "endingBalance" : "8678701"
+      } , {
+        "period" : "10" ,
+        "beginningBalance" : "8678701" ,
+        "payment" : "758797" ,
+        "interest" : "558563" ,
+        "endingBalance" : "8478467"
+      } , {
+        "period" : "11" ,
+        "beginningBalance" : "8478467" ,
+        "payment" : "758797" ,
+        "interest" : "545145" ,
+        "endingBalance" : "8264815"
+      } , {
+        "period" : "12" ,
+        "beginningBalance" : "8264815" ,
+        "payment" : "758797" ,
+        "interest" : "530827" ,
+        "endingBalance" : "8036845"
+      } , {
+        "period" : "13" ,
+        "beginningBalance" : "8036845" ,
+        "payment" : "758797" ,
+        "interest" : "515550" ,
+        "endingBalance" : "7793598"
+      } , {
+        "period" : "14" ,
+        "beginningBalance" : "7793598" ,
+        "payment" : "758797" ,
+        "interest" : "499249" ,
+        "endingBalance" : "7534050"
+      } , {
+        "period" : "15" ,
+        "beginningBalance" : "7534050" ,
+        "payment" : "758797" ,
+        "interest" : "481855" ,
+        "endingBalance" : "7257108"
+      } , {
+        "period" : "16" ,
+        "beginningBalance" : "7257108" ,
+        "payment" : "758797" ,
+        "interest" : "463296" ,
+        "endingBalance" : "6961607"
+      } , {
+        "period" : "17" ,
+        "beginningBalance" : "6961607" ,
+        "payment" : "758797" ,
+        "interest" : "443493" ,
+        "endingBalance" : "6646303"
+      } , {
+        "period" : "18" ,
+        "beginningBalance" : "6646303" ,
+        "payment" : "758797" ,
+        "interest" : "422364" ,
+        "endingBalance" : "6309870"
+      } , {
+        "period" : "19" ,
+        "beginningBalance" : "6309870" ,
+        "payment" : "758797" ,
+        "interest" : "399818" ,
+        "endingBalance" : "5950891"
+      } , {
+        "period" : "20" ,
+        "beginningBalance" : "5950891" ,
+        "payment" : "758797" ,
+        "interest" : "375761" ,
+        "endingBalance" : "5567855"
+      } , {
+        "period" : "21" ,
+        "beginningBalance" : "5567855" ,
+        "payment" : "758797" ,
+        "interest" : "350092" ,
+        "endingBalance" : "5159150"
+      } , {
+        "period" : "22" ,
+        "beginningBalance" : "5159150" ,
+        "payment" : "758797" ,
+        "interest" : "322703" ,
+        "endingBalance" : "4723056"
+      } , {
+        "period" : "23" ,
+        "beginningBalance" : "4723056" ,
+        "payment" : "758797" ,
+        "interest" : "293478" ,
+        "endingBalance" : "4257737"
+      } , {
+        "period" : "24" ,
+        "beginningBalance" : "4257737" ,
+        "payment" : "758797" ,
+        "interest" : "262295" ,
+        "endingBalance" : "3761235"
+      } , {
+        "period" : "25" ,
+        "beginningBalance" : "3761235" ,
+        "payment" : "758797" ,
+        "interest" : "229023" ,
+        "endingBalance" : "3231461"
+      } , {
+        "period" : "26" ,
+        "beginningBalance" : "3231461" ,
+        "payment" : "758797" ,
+        "interest" : "193520" ,
+        "endingBalance" : "2666184"
+      } , {
+        "period" : "27" ,
+        "beginningBalance" : "2666184" ,
+        "payment" : "758797" ,
+        "interest" : "155638" ,
+        "endingBalance" : "2063025"
+      } , {
+        "period" : "28" ,
+        "beginningBalance" : "2063025" ,
+        "payment" : "758797" ,
+        "interest" : "115218" ,
+        "endingBalance" : "1419446"
+      } , {
+        "period" : "29" ,
+        "beginningBalance" : "1419446" ,
+        "payment" : "758797" ,
+        "interest" : "72089" ,
+        "endingBalance" : "732738"
+      } , {
+        "period" : "30" ,
+        "beginningBalance" : "732738" ,
+        "payment" : "758797" ,
+        "interest" : "26070" ,
+        "endingBalance" : "11"
+      }
+    ] ,
+    "annualInterestOnlyAmortizationSchedule" : [
+      {
+        "period" : "1" ,
+        "beginningBalance" : "10000000" ,
+        "payment" : "650400" ,
+        "interest" : "650400" ,
+        "endingBalance" : "10000000"
+      } , {
+        "period" : "2" ,
+        "beginningBalance" : "10000000" ,
+        "payment" : "650400" ,
+        "interest" : "650400" ,
+        "endingBalance" : "10000000"
+      } , {
+        "period" : "3" ,
+        "beginningBalance" : "10000000" ,
+        "payment" : "650400" ,
+        "interest" : "650400" ,
+        "endingBalance" : "10000000"
+      } , {
+        "period" : "4" ,
+        "beginningBalance" : "10000000" ,
+        "payment" : "650400" ,
+        "interest" : "650400" ,
+        "endingBalance" : "10000000"
+      } , {
+        "period" : "5" ,
+        "beginningBalance" : "10000000" ,
+        "payment" : "650400" ,
+        "interest" : "650400" ,
+        "endingBalance" : "10000000"
+      } , {
+        "period" : "6" ,
+        "beginningBalance" : "10000000" ,
+        "payment" : "650400" ,
+        "interest" : "650400" ,
+        "endingBalance" : "10000000"
+      } , {
+        "period" : "7" ,
+        "beginningBalance" : "10000000" ,
+        "payment" : "650400" ,
+        "interest" : "650400" ,
+        "endingBalance" : "10000000"
+      } , {
+        "period" : "8" ,
+        "beginningBalance" : "10000000" ,
+        "payment" : "650400" ,
+        "interest" : "650400" ,
+        "endingBalance" : "10000000"
+      } , {
+        "period" : "9" ,
+        "beginningBalance" : "10000000" ,
+        "payment" : "650400" ,
+        "interest" : "650400" ,
+        "endingBalance" : "10000000"
+      } , {
+        "period" : "10" ,
+        "beginningBalance" : "10000000" ,
+        "payment" : "650400" ,
+        "interest" : "650400" ,
+        "endingBalance" : "10000000"
+      } , {
+        "period" : "11" ,
+        "beginningBalance" : "10000000" ,
+        "payment" : "894970" ,
+        "interest" : "642976" ,
+        "endingBalance" : "9748006"
+      } , {
+        "period" : "12" ,
+        "beginningBalance" : "9748006" ,
+        "payment" : "894970" ,
+        "interest" : "626089" ,
+        "endingBalance" : "9479125"
+      } , {
+        "period" : "13" ,
+        "beginningBalance" : "9479125" ,
+        "payment" : "894970" ,
+        "interest" : "608070" ,
+        "endingBalance" : "9192225"
+      } , {
+        "period" : "14" ,
+        "beginningBalance" : "9192225" ,
+        "payment" : "894970" ,
+        "interest" : "588843" ,
+        "endingBalance" : "8886098"
+      } , {
+        "period" : "15" ,
+        "beginningBalance" : "8886098" ,
+        "payment" : "894970" ,
+        "interest" : "568329" ,
+        "endingBalance" : "8559457"
+      } , {
+        "period" : "16" ,
+        "beginningBalance" : "8559457" ,
+        "payment" : "894970" ,
+        "interest" : "546439" ,
+        "endingBalance" : "8210926"
+      } , {
+        "period" : "17" ,
+        "beginningBalance" : "8210926" ,
+        "payment" : "894970" ,
+        "interest" : "523082" ,
+        "endingBalance" : "7839038"
+      } , {
+        "period" : "18" ,
+        "beginningBalance" : "7839038" ,
+        "payment" : "894970" ,
+        "interest" : "498160" ,
+        "endingBalance" : "7442228"
+      } , {
+        "period" : "19" ,
+        "beginningBalance" : "7442228" ,
+        "payment" : "894970" ,
+        "interest" : "471569" ,
+        "endingBalance" : "7018827"
+      } , {
+        "period" : "20" ,
+        "beginningBalance" : "7018827" ,
+        "payment" : "894970" ,
+        "interest" : "443195" ,
+        "endingBalance" : "6567052"
+      } , {
+        "period" : "21" ,
+        "beginningBalance" : "6567052" ,
+        "payment" : "894970" ,
+        "interest" : "412919" ,
+        "endingBalance" : "6085001"
+      } , {
+        "period" : "22" ,
+        "beginningBalance" : "6085001" ,
+        "payment" : "894970" ,
+        "interest" : "380615" ,
+        "endingBalance" : "5570646"
+      } , {
+        "period" : "23" ,
+        "beginningBalance" : "5570646" ,
+        "payment" : "894970" ,
+        "interest" : "346146" ,
+        "endingBalance" : "5021822"
+      } , {
+        "period" : "24" ,
+        "beginningBalance" : "5021822" ,
+        "payment" : "894970" ,
+        "interest" : "309367" ,
+        "endingBalance" : "4436219"
+      } , {
+        "period" : "25" ,
+        "beginningBalance" : "4436219" ,
+        "payment" : "894970" ,
+        "interest" : "270123" ,
+        "endingBalance" : "3811372"
+      } , {
+        "period" : "26" ,
+        "beginningBalance" : "3811372" ,
+        "payment" : "894970" ,
+        "interest" : "228249" ,
+        "endingBalance" : "3144651"
+      } , {
+        "period" : "27" ,
+        "beginningBalance" : "3144651" ,
+        "payment" : "894970" ,
+        "interest" : "183569" ,
+        "endingBalance" : "2433250"
+      } , {
+        "period" : "28" ,
+        "beginningBalance" : "2433250" ,
+        "payment" : "894970" ,
+        "interest" : "135895" ,
+        "endingBalance" : "1674175"
+      } , {
+        "period" : "29" ,
+        "beginningBalance" : "1674175" ,
+        "payment" : "894970" ,
+        "interest" : "85026" ,
+        "endingBalance" : "864231"
+      } , {
+        "period" : "30" ,
+        "beginningBalance" : "864231" ,
+        "payment" : "894970" ,
+        "interest" : "30748" ,
+        "endingBalance" : "9"
+      }
+    ]
+  }
+});

@@ -1,0 +1,19 @@
+[
+  {
+    "domain": "example.com",
+    "created_at": "2013-01-01 15:30:27",
+    "last_tested_at": "2013-01-01 15:40:42",
+    "spf": {
+      "valid": true,
+      "valid_after": "2013-01-01 15:45:23",
+      "error": "example error"
+    },
+    "dkim": {
+      "valid": true,
+      "valid_after": "2013-01-01 15:45:23",
+      "error": "example error"
+    },
+    "verified_at": "2013-01-01 15:50:21",
+    "valid_signing": true
+  }
+]

@@ -1,0 +1,191 @@
+get?: 
+  responses: 
+    200: 
+      description: |
+        No error, operation successful.
+    204: 
+      description: |
+        The request was processed successfully, but no response body is needed.
+    301: 
+      description: |
+        Resource has moved.
+    303: 
+      description: |
+        Redirection.
+    304: 
+      description: |
+        Resource has not been modified.
+    400: 
+      description: |
+        Malformed syntax or a bad query.
+    401: 
+      description: |
+        Action requires user authentication. 
+    403: 
+      description: |
+        Authentication failure or invalid Application ID.
+    404: 
+      description: |
+        Resource not found.
+    405: 
+      description: |
+        Method not allowed on resource.
+    406: 
+      description: |
+        Requested representation not available for the resource.
+    408: 
+      description: |
+        Request has timed out.
+    410: 
+      description: |
+        The URI used to refer to a resource.
+    412: 
+      description: |
+        Operation not completed because preconditions were not met.
+    416: 
+      description: |
+        Requested range not satisfiable.
+    500: 
+      description: |
+        Internal server error.
+    502: 
+      description: |
+        Backend service failure (data store failure).
+    505: 
+      description: |
+        HTTP version not supported.  
+post?: 
+  responses: 
+    201: 
+      description: |
+        Successful creation of a resource.
+    202: 
+      description: |
+        The request was received.
+    400: 
+      description: |
+        Malformed syntax or a bad query.
+    401: 
+      description: |
+        Action requires user authentication. 
+    403: 
+      description: |
+        Authentication failure or invalid Application ID.
+    404: 
+      description: |
+        Resource not found.
+    405: 
+      description: |
+        Method not allowed on resource.
+    408: 
+      description: |
+        Request has timed out.
+    411: 
+      description: |
+        The server needs to know the size of the entity body and it should be specified in the Content Length header.
+    413: 
+      description: |
+        The representation was too large for the server to handle.
+    414: 
+      description: |
+        The URI has more than 2k characters.
+    415: 
+      description: |
+        Representation not supported for the resource.
+    500: 
+      description: |
+        Internal server error.
+    501: 
+      description: |
+        Requested HTTP operation not supported.
+    502: 
+      description: |
+        Backend service failure (data store failure).
+put?: 
+  responses: 
+    200: 
+      description: |
+        No error, operation successful.
+    202: 
+      description: |
+        The request was received.
+    204: 
+      description: |
+        The request was processed successfully, but no response body is needed.
+    400: 
+      description: |
+        Malformed syntax or a bad query.
+    401: 
+      description: |
+        Action requires user authentication. 
+    403: 
+      description: |
+        Authentication failure or invalid Application ID.
+    404: 
+      description: |
+        Resource not found.
+    405: 
+      description: |
+        Method not allowed on resource.
+    409: 
+      description: |
+        State of the resource doesn't permit request.
+    410: 
+      description: |
+        The URI used to refer to a resource.
+    411: 
+      description: |
+        The server needs to know the size of the entity body and it should be specified in the Content Length header.
+    413: 
+      description: |
+        The representation was too large for the server to handle.
+    414: 
+      description: |
+        The URI has more than 2k characters.
+    415: 
+      description: |
+        Representation not supported for the resource.
+    500: 
+      description: |
+        Internal server error.
+    501: 
+      description: |
+        Requested HTTP operation not supported.
+    502: 
+      description: |
+        Backend service failure (data store failure).
+delete?: 
+  responses: 
+    200: 
+      description: |
+        No error, operation successful.
+    202: 
+      description: |
+        The request was received.
+    204: 
+      description: |
+        The request was processed successfully, but no response body is needed.
+    400: 
+      description: |
+        Malformed syntax or a bad query.
+    401: 
+      description: |
+        Action requires user authentication. 
+    403: 
+      description: |
+        Authentication failure or invalid Application ID.
+    404: 
+      description: |
+        Resource not found.
+    405: 
+      description: |
+        Method not allowed on resource.
+    409: 
+      description: |
+        State of the resource doesn't permit request.
+    501: 
+      description: |
+        Requested HTTP operation not supported.
+    502: 
+      description: |
+        Backend service failure (data store failure).

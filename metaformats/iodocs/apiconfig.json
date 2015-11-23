@@ -1,0 +1,23 @@
+{
+    "klout": {
+        "name": "Klout v2 API"
+    },
+    "egnyte": {
+        "name": "Egnyte API"
+    },
+    "usatoday": {
+        "name": "USA TODAY Census API"
+    },
+    "foursquare": {
+        "name": "Foursquare (OAuth 2.0 Auth Code)"
+    },
+    "rdio": {
+        "name": "Rdio Beta (OAuth 2.0 Client Credentials)"
+    },
+    "rdio2": {
+        "name": "Rdio Beta (OAuth 2.0 Implicit Grant)"
+    },
+    "requestbin": {
+        "name": "Requestb.in"
+    }
+}

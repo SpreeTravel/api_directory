@@ -1,0 +1,17 @@
+{
+  "address" : {
+    "postalcode" : "94025" ,
+    "adminCode2" : "081" ,
+    "adminCode1" : "CA" ,
+    "street" : "Roble Ave" ,
+    "countryCode" : "US" ,
+    "lng" : "-122.18032" ,
+    "placename" : "Menlo Park" ,
+    "adminName2" : "San Mateo" ,
+    "distance" : "0.04" ,
+    "streetNumber" : "649" ,
+    "mtfcc" : "S1400" ,
+    "lat" : "37.45127" ,
+    "adminName1" : "California"
+  }
+}

@@ -1,0 +1,208 @@
+[
+  {
+    "Name" : "Indoor Activity" ,
+    "ID" : -2 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Indoor Activities Forecast helps you decide when it will be better to plan your activities inside due to poor weather conditions outdoors."
+  } , {
+    "Name" : "Dog Walking Comfort" ,
+    "ID" : -1 ,
+    "Ascending" : true ,
+    "Description" : "AccuWeather.com has developed a forecast that accounts for all the weather factors that affect how comfortable you and your pet will feel when you take your dog for a walk."
+  } , {
+    "Name" : "Running" ,
+    "ID" : 1 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Running Forecast takes into consideration all of the weather factors that impact your safety, comfort, and ability to run outdoors."
+  } , {
+    "Name" : "Jogging" ,
+    "ID" : 2 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Jogging Forecast takes into consideration all of the weather factors that impact your safety, comfort, and ability to jog outdoors."
+  } , {
+    "Name" : "Hiking" ,
+    "ID" : 3 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Hiking Forecast takes into consideration all of the weather factors that impact your safety, comfort, and ability to go hiking."
+  } , {
+    "Name" : "Bicycling" ,
+    "ID" : 4 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Bicycling Forecast takes into consideration all of the weather factors that impact your comfort, safety, and ability to go bicycling outdoors."
+  } , {
+    "Name" : "Golf Weather" ,
+    "ID" : 5 ,
+    "Ascending" : true ,
+    "Description" : "For the avid or casual golfer, the AccuWeather.com Golf Forecast considers past and current weather effects on the greens and on your own safety and comfort to describe how suitable the day will be for golf."
+  } , {
+    "Name" : "Tennis" ,
+    "ID" : 6 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Tennis Forecast takes into consideration all of the weather factors that impact your safety, comfort, and ability to play tennis."
+  } , {
+    "Name" : "Skateboarding" ,
+    "ID" : 7 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Skateboarding Forecast takes into consideration all of the weather factors that impact your safety, comfort, and ability to skateboard."
+  } , {
+    "Name" : "Outdoor Concert" ,
+    "ID" : 8 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Outdoor Concert Forecast takes into consideration all of the weather factors that impact your comfort and safety when attending an outdoor concert."
+  } , {
+    "Name" : "Kite Flying" ,
+    "ID" : 9 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Kite Flying Forecast takes into consideration all of the weather factors that impact your safety, comfort, and ability to fly a kite outdoors."
+  } , {
+    "Name" : "Beach & Pool" ,
+    "ID" : 10 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Beach and Pool Forecast considers numerous weather and water factors to help predict the conditions you will encounter at the beach or pool."
+  } , {
+    "Name" : "Sailing" ,
+    "ID" : 11 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Sailing Forecast combines information about optimum wind conditions with the weather and water factors that influence how safe and comfortable the day is for sailing."
+  } , {
+    "Name" : "Stargazing" ,
+    "ID" : 12 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Stargazing Forecast considers weather conditions and the lunar cycle to forecast the peak evenings for amateur astronomy."
+  } , {
+    "Name" : "Fishing" ,
+    "ID" : 13 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Fishing Forecast combines solunar and weather information to measure the day's peak conditions for fishing."
+  } , {
+    "Name" : "Construction" ,
+    "ID" : 14 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Construction Forecast will help you determine ideal weather conditions for outdoor construction projects."
+  } , {
+    "Name" : "Ski Weather" ,
+    "ID" : 15 ,
+    "Ascending" : true ,
+    "Description" : "For both experts and casual skiers, the AccuWeather.com Skiing Index forecasts the conditions you will encounter on the slopes and cross-country trails, taking into account the weather and snow conditions that produce a great day for skiing. It also considers travel conditions to and from skiing sites. In locations where there is no skiing, the index is always 1."
+  } , {
+    "Name" : "Healthy Heart Fitness" ,
+    "ID" : 16 ,
+    "Ascending" : true ,
+    "Description" : "This AccuWeather.com forecast expresses how good the outdoor weather is for mild to moderate exercise, considering not only the actual weather but also the kind of weather that people in the area are used to."
+  } , {
+    "Name" : "Mosquito Activity" ,
+    "ID" : 17 ,
+    "Ascending" : true ,
+    "Description" : "AccuWeather.com has developed a forecast that combines all of the current and past weather factors that affect mosquito activity."
+  } , {
+    "Name" : "Dust & Dander" ,
+    "ID" : 18 ,
+    "Ascending" : false ,
+    "Description" : "The AccuWeather.com Dust & Dander Forecast will help you determine how conducive conditions are to the accumulation of dust and dander in the air and on the surfaces inside your home."
+  } , {
+    "Name" : "Snow Days" ,
+    "ID" : 19 ,
+    "Ascending" : true ,
+    "Description" : "The Snow Days Forecast predicts the probability of school cancellation for your location based on expected winter-season weather. NOTE: The Snow Days Forecast is NOT intended as a replacement for official school closing and delay notices, which come directly from the school district."
+  } , {
+    "Name" : "Hunting" ,
+    "ID" : 20 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather Hunting Forecast accounts for the solunar and weather factors that play a role in hunting, as well as the weather factors that affect comfort and safety while hunting."
+  } , {
+    "Name" : "Arthritis Pain" ,
+    "ID" : 21 ,
+    "Ascending" : false ,
+    "Description" : "AccuWeather.com has developed a forecast that combines weather factors that may affect arthritis sufferers, and summarizes potential likelihood and severity of weather-related arthritis pain. The AccuWeather.com Arthritis Pain Forecast gives arthritis sufferers advance notice of increased pain, allowing them to plan appropriate physical activities."
+  } , {
+    "Name" : "Asthma" ,
+    "ID" : 23 ,
+    "Ascending" : false ,
+    "Description" : "There are a number of environmental factors that affect the likelihood and severity of an asthma attack. The AccuWeather.com Asthma Forecast shows how these factors are likely to affect asthmatics, with higher levels indicating an increased risk for an asthma attack and an increased likelihood of a more severe attack."
+  } , {
+    "Name" : "Outdoor Barbecue" ,
+    "ID" : 24 ,
+    "Ascending" : true ,
+    "Description" : "AccuWeather.com has developed a forecast that accounts for all the weather factors that determine whether or not conditions will be favorable for an outdoor barbecue."
+  } , {
+    "Name" : "Common Cold" ,
+    "ID" : 25 ,
+    "Ascending" : false ,
+    "Description" : "The weather plays an important role in the chance you will get a cold and, if you do, how severe it will be and how long it will last. These factors are combined to yield the AccuWeather.com Common Cold Forecast."
+  } , {
+    "Name" : "Flu" ,
+    "ID" : 26 ,
+    "Ascending" : false ,
+    "Description" : "The arrival of flu season each winter impacts schools, workplaces and families. The AccuWeather.com Flu Forecast combines the effects of the weather with relevant demographic factors to provide a scale showing the overall probability of flu transmission and the severity of flu symptoms."
+  } , {
+    "Name" : "Migraine Headache" ,
+    "ID" : 27 ,
+    "Ascending" : false ,
+    "Description" : "Migraine Headaches can occur at any time. The AccuWeather.com Migraine Headache Forecast combines current weather with how the weather is changing to predict the probability of experiencing a migraine headache, as well as how intense it is likely to be and how long it is likely to last."
+  } , {
+    "Name" : "Lawn Mowing" ,
+    "ID" : 28 ,
+    "Ascending" : true ,
+    "Description" : "All the weather factors that play a role in your comfort, safety and ease of mowing the lawn are combined in the AccuWeather.com Lawn Mowing Forecast. Outside of the growing season, the index is always 1."
+  } , {
+    "Name" : "Outdoor Activity" ,
+    "ID" : 29 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Outdoor Activities Forecast accounts for all the weather factors that play a role in your safety and comfort during typical outdoor activities, as well as your travel to and from outdoor activity locations."
+  } , {
+    "Name" : "Sinus Headache" ,
+    "ID" : 30 ,
+    "Ascending" : false ,
+    "Description" : "The AccuWeather.com Sinus Headache Forecast combines the effects of weather and relevant demographic factors to show the probability of experiencing a sinus headache, as well as how long it is likely to last and how severe it is likely to be."
+  } , {
+    "Name" : "Field Readiness" ,
+    "ID" : 32 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather Field Readiness Forecast considers soil moisture, temperature and compressibility to summarize the suitability of fields for planting."
+  } , {
+    "Name" : "Grass Growing" ,
+    "ID" : 33 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Grass Growing Forecast combines a variety of measures of soil moisture, precipitation and evapotranspiration rates to summarize how well the level of soil moisture will support grass growth."
+  } , {
+    "Name" : "Soil Moisture" ,
+    "ID" : 34 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Soil Moisture Forecast combines a variety of measures of soil moisture, precipitation and evapotranspiration rates to summarize how well the level of soil moisture will support crop growth. Outside of the growing season, the index is always 1."
+  } , {
+    "Name" : "Morning School Bus" ,
+    "ID" : 35 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Morning School Bus Forecast combines information about all the weather factors that influence how safe and comfortable it will be at the bus stop."
+  } , {
+    "Name" : "Home Energy Efficiency" ,
+    "ID" : 36 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Home Energy Efficiency Forecast accounts for all the weather factors that play a role in increasing or decreasing your home's energy usage, relative to the typical experience for your home and lifestyle."
+  } , {
+    "Name" : "Fuel Economy" ,
+    "ID" : 37 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Fuel Economy Forecast accounts for all the weather factors that play a role in increasing or decreasing fuel economy, relative to the typical experience for your vehicle and driving style."
+  } , {
+    "Name" : "Composting" ,
+    "ID" : 38 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Composting Forecast combines into one number all the weather factors that play an important role in the progress of your compost heap and your comfort in working it."
+  } , {
+    "Name" : "Shopping" ,
+    "ID" : 39 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Holiday Shopping Forecast will help you determine ideal weather conditions for shopping."
+  } , {
+    "Name" : "Driving" ,
+    "ID" : 40 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Driving Travel Index takes into consideration all of the weather factors that impact your ability to drive."
+  } , {
+    "Name" : "Thirst" ,
+    "ID" : 41 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather Thirst Forecast, brought to you by Country Time, helps you plan your week and stay refreshed. Whether it's hosting an outdoor party or enjoying family time indoors, every summer day is a Country Time day."
+  }
+]

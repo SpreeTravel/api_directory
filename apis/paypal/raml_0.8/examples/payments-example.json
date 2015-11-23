@@ -1,0 +1,79 @@
+{
+  "payments" : [
+    {
+      "id" : "PAY-4D099447DD202993VKEFMRJQ" ,
+      "create_time" : "2013-01-31T19:40:22Z" ,
+      "update_time" : "2013-01-31T19:40:24Z" ,
+      "state" : "approved" ,
+      "intent" : "sale" ,
+      "payer" : {
+        "payment_method" : "credit_card" ,
+        "funding_instruments" : [
+          {
+            "credit_card" : {
+              "type" : "visa" ,
+              "number" : "xxxxxxxxxxxx0331" ,
+              "expire_month" : "10" ,
+              "expire_year" : "2018" ,
+              "first_name" : "Betsy" ,
+              "last_name" : "Buyer" ,
+              "billing_address" : {
+                "line1" : "111 First Street" ,
+                "city" : "Saratoga" ,
+                "state" : "CA" ,
+                "postal_code" : "95070" ,
+                "country_code" : "US"
+              }
+            }
+          }
+        ]
+      } ,
+      "transactions" : [
+        {
+          "amount" : {
+            "total" : "110.54" ,
+            "currency" : "USD"
+          } ,
+          "description" : "This is the payment transaction description." ,
+          "related_resources" : [
+            {
+              "sale" : {
+                "id" : "1D971400A7097562W" ,
+                "create_time" : "2013-01-31T19:40:23Z" ,
+                "update_time" : "2013-01-31T19:40:25Z" ,
+                "state" : "completed" ,
+                "amount" : {
+                  "total" : "110.54" ,
+                  "currency" : "USD"
+                } ,
+                "parent_payment" : "PAY-4D099447DD202993VKEFMRJQ" ,
+                "links" : [
+                  {
+                    "href" : "https://api.sandbox.paypal.com/v1/payments/sale/1D971400A7097562W" ,
+                    "rel" : "self" ,
+                    "method" : "GET"
+                  } , {
+                    "href" : "https://api.sandbox.paypal.com/v1/payments/sale/1D971400A7097562W/refund" ,
+                    "rel" : "refund" ,
+                    "method" : "POST"
+                  } , {
+                    "href" : "https://api.sandbox.paypal.com/v1/payments/payment/PAY-4D099447DD202993VKEFMRJQ" ,
+                    "rel" : "parent_payment" ,
+                    "method" : "GET"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ] ,
+      "links" : [
+        {
+          "href" : "https://api.sandbox.paypal.com/v1/payments/payment/PAY-4D099447DD202993VKEFMRJQ" ,
+          "rel" : "self" ,
+          "method" : "GET"
+        }
+      ]
+    }
+  ]
+}

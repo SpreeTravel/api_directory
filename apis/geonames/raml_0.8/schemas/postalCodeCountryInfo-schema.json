@@ -1,0 +1,38 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "geonames" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "countryName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "numPostalCodes" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "countryCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "maxPostalCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "minPostalCode" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

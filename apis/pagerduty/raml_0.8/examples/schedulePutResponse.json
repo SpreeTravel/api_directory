@@ -1,0 +1,38 @@
+{
+	"schedule" : {
+		"today" : "2012-08-24" ,
+		"overrides_subschedule" : {
+			"name" : "Overrides"
+		} ,
+		"final_schedule" : {
+			"name" : "Final Schedule"
+		} ,
+		"id" : "P9UJCMM" ,
+		"name" : "new name" ,
+		"time_zone" : "UTC" ,
+		"escalation_policies" : [ ] ,
+		"schedule_layers" : [ {
+			"restrictions" : [ {
+				"start_time_of_day" : "00:00:00" ,
+				"duration_seconds" : 43200
+			} ] ,
+			"start" : "2012-08-24T02:39:33Z" ,
+			"end" : null ,
+			"rotation_turn_length_seconds" : 604800 ,
+			"rotation_virtual_start" : "2012-08-05T00:00:00Z" ,
+			"restriction_type" : "Daily" ,
+			"id" : "P07F6S3" ,
+			"name" : "Schedule Layer 1" ,
+			"users" : [ {
+				"user" : {
+					"color" : "purple" ,
+					"id" : "PPI9KUT" ,
+					"name" : "Alan" ,
+					"email" : "alankay@example.com"
+				} ,
+				"member_order" : 1
+			} ] ,
+			"priority" : 0
+		} ]
+	}
+}

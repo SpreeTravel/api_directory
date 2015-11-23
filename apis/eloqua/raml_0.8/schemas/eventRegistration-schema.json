@@ -1,0 +1,207 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "fields" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "displayType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "dataType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "defaultValue" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "permissions" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "folderId" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "sourceTemplateId" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "createdBy" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "createdAt" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "updatedBy" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "updatedAt" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "accessedAt" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "scheduledFor" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "depth" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    } ,
+    "sessionFields" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "dataType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "outputFormat" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "id" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "format" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "dataType" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "permissions" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "folderId" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "sourceTemplateId" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "createdBy" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "createdAt" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "updatedBy" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "updatedAt" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "accessedAt" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "scheduledFor" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "depth" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "description" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "permissions" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "folderId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "sourceTemplateId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "createdBy" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "createdAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "updatedBy" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "updatedAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "accessedAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "scheduledFor" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "depth" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

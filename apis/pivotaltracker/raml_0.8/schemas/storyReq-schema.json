@@ -1,0 +1,76 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "comment" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "text" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "file_attachments" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "type" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "id" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "filename" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "created_at" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "uploader_id" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "thumbnailable" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                } ,
+                "height" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "width" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "size" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "download_url" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "thumbnail_url" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        }
+      }
+    } ,
+    "current_state" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<magento_api>
+  <success>
+    <data_item>
+      <website_id>1</website_id>
+      <product_id>8</product_id>
+      <message>Resource updated successful.</message>
+      <code>200</code>
+    </data_item>
+    <data_item>
+      <website_id>3</website_id>
+      <product_id>8</product_id>
+      <message>Resource updated successful.</message>
+      <code>200</code>
+    </data_item>
+  </success>
+</magento_api>

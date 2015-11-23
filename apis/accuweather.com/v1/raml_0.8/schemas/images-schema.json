@@ -1,0 +1,73 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "MobileLink" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Link" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Radar" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "Size" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Images" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : 
+            {
+              "type" : "object" ,
+              "properties" : {
+                "Date" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "Url" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          
+        }
+      }
+    } ,
+    "Satellite" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "Size" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Images" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : 
+            {
+              "type" : "object" ,
+              "properties" : {
+                "Date" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "Url" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          
+        }
+      }
+    }
+  }
+}

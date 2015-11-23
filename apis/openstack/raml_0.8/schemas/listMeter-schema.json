@@ -1,0 +1,44 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : [
+    {
+      "type" : "object" ,
+      "properties" : {
+        "meter_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "project_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "resource_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "source" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "type" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "unit" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "user_id" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  ]
+}

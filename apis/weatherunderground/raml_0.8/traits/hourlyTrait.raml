@@ -1,0 +1,88 @@
+description: |
+  
+  #Examples:
+  http://api.wunderground.com/api/Your_Key/hourly/q/CA/San_Francisco.json
+  (See description of the response.)
+responses: 
+  200: 
+    description: |
+      The response will be a JSON-encoded object.
+      |name|description|
+      |-|
+      |hourly_forecast|Type: array. JSON type: array. The official API documentation provides no description. |
+      |hourly_forecast.item|Type: object. JSON type: object. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME|Type: object. JSON type: object. (see FCTTIME below). |
+      |hourly_forecast.item.FCTTIME.age|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.ampm|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.civil|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.epoch|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.hour|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.hour_padded|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.isdst|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.mday|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.mday_padded|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.min|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.mon|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.mon_abbrev|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.mon_padded|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.month_name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.month_name_abbrev|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.pretty|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.sec|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.tz|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.weekday_name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.weekday_name_abbrev|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.weekday_name_night|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.weekday_name_night_unlang|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.weekday_name_unlang|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.yday|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.FCTTIME.year|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.condition|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.dewpoint|Type: object. JSON type: object. The official API documentation provides no description. |
+      |hourly_forecast.item.dewpoint.english|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.dewpoint.metric|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.fctcode|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.feelslike|Type: object. JSON type: object. The official API documentation provides no description. |
+      |hourly_forecast.item.feelslike.english|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.feelslike.metric|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.heatindex|Type: object. JSON type: object. The official API documentation provides no description. |
+      |hourly_forecast.item.heatindex.english|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.heatindex.metric|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.humidity|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.icon|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.icon_url|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.mslp|Type: object. JSON type: object. The official API documentation provides no description. |
+      |hourly_forecast.item.mslp.english|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.mslp.metric|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.pop|Type: unknown. JSON type: string. Probability of Precipitation. |
+      |hourly_forecast.item.qpf|Type: object. JSON type: object. The official API documentation provides no description. |
+      |hourly_forecast.item.qpf.english|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.qpf.metric|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.sky|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.snow|Type: object. JSON type: object. The official API documentation provides no description. |
+      |hourly_forecast.item.snow.english|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.snow.metric|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.temp|Type: object. JSON type: object. The official API documentation provides no description. |
+      |hourly_forecast.item.temp.english|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.temp.metric|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.uvi|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.wdir|Type: object. JSON type: object. The official API documentation provides no description. |
+      |hourly_forecast.item.wdir.degrees|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.wdir.dir|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.windchill|Type: object. JSON type: object. The official API documentation provides no description. |
+      |hourly_forecast.item.windchill.english|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.windchill.metric|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.wspd|Type: object. JSON type: object. The official API documentation provides no description. |
+      |hourly_forecast.item.wspd.english|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.wspd.metric|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |hourly_forecast.item.wx|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |response|Type: object. JSON type: object. The official API documentation provides no description. |
+      |response.features|Type: object. JSON type: object. The official API documentation provides no description. |
+      |response.features.hourly|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |response.termsofService|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |response.version|Type: unknown. JSON type: string. The official API documentation provides no description. |
+    body: 
+      application/json: 
+        schema: hourlySchema
+        example: !include ../examples/hourly.json
+      application/xml: 

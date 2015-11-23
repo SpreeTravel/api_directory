@@ -1,0 +1,39 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": "string",
+      "required": false
+    },
+    "id": {
+      "type": "string",
+      "required": false
+    },
+    "isActive": {
+      "type": "boolean",
+      "required": false
+    },
+    "isChatterAnswers": {
+      "type": "boolean",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    },
+    "visibility": {
+      "type": "string",
+      "required": false
+    },
+    "visibilityId": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

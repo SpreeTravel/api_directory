@@ -1,0 +1,83 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "sid" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "date_created" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "date_updated" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "account_sid" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "friendly_name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "api_version" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "voice_url" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "voice_method" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "voice_fallback_url" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "voice_fallback_method" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "status_callback" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "status_callback_method" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "voice_caller_id_lookup" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "sms_url" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "sms_method" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "sms_fallback_url" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "sms_fallback_method" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "sms_status_callback" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "uri" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

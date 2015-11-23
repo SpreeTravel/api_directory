@@ -1,0 +1,23 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "cropSize" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "cropX" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "cropY" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "fileId" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

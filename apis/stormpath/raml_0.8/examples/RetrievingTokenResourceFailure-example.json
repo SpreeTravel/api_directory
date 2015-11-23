@@ -1,0 +1,7 @@
+{
+  "status" : 404 ,
+  "code" : 404 ,
+  "message" : "The requested resource does not exist." ,
+  "developerMessage" : "The requested resource does not exist." ,
+  "moreInfo" : "mailto:support@stormpath.com"
+}

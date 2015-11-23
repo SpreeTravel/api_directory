@@ -1,0 +1,45 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "message" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "result" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "attachmentType" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "createdAt" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "description" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "url" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "resultCode" : {
+      "type" : "number" ,
+      "required" : false
+    }
+  }
+}

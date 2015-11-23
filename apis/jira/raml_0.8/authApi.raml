@@ -1,0 +1,57 @@
+#%RAML 0.8
+title: Jira Authorization API
+schemas:
+  - userSession: !include schemas/userSession-schema.json
+  - credentials: !include schemas/credentials-schema.json
+  - credentialsReq: !include schemas/credentialsReq-schema.json
+resourceTypes:
+  - base: !include resourceTypes/base.raml
+/rest/auth/1: 
+  type: base
+  /session: 
+    type: base
+    get: 
+      description: "Returns information about the currently authenticated user's session. If the caller is not authenticated they will get a 401 Unauthorized status code."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: userSession
+              example: !include examples/userSession-example.json
+        401: 
+          description: Returned if the caller is not authenticated.
+    post: 
+      description: |
+        Creates a new session for a user in JIRA. Once a session has been successfully created it can be used to access any of JIRA's remote APIs and also the web UI by passing the appropriate HTTP Cookie header.
+        Note that it is generally preferrable to use HTTP BASIC authentication with the REST API. However, this resource may be used to mimic the behaviour of JIRA's log-in page (e.g. to display log-in errors to a user).
+      body: 
+        application/json: 
+          schema: credentialsReq
+          example: !include examples/credentialsReq-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: credentials
+              example: !include examples/credentials-example.json
+        401: 
+          description: Returned if the login fails due to invalid credentials.
+        403: 
+          description: Returned if the login is denied due to a CAPTCHA requirement, throtting, or any other reason. In case of a 403 status code it is possible that the supplied credentials are valid but the user is not allowed to log in at this point in time.
+    delete: 
+      description: Logs the current user out of JIRA, destroying the existing session, if any.
+      responses: 
+        204: 
+          description: Returned if the user was successfully logged out.
+        401: 
+          description: Returned if the caller is not authenticated.
+  /websudo: 
+    type: base
+    delete: 
+      description: This method invalidates the any current WebSudo session.
+      responses: 
+        204: 
+          description: Returned if no error occurs
+documentation: 
+  - title: Headline
+    content: !include docs/authApi/headline.md

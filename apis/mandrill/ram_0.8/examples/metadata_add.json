@@ -1,0 +1,5 @@
+{
+  "key": "example key",
+  "name": "group_id",
+  "view_template": "<a href=http://yourapplication.com/user/{{value}}>{{value}}</a>"
+}

@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+		"goals": {
+			"properties": {
+				"caloriesOut": {
+		    		"type": "integer"
+		    	},
+		    	"activeMinutes": {
+					"type": "integer"
+		    	},
+		    	"floors": {
+		    		"type": "integer"
+		    	},
+		    	"distance": {
+		    		"type": "number"
+		    	},
+		    	"steps": {
+		    		"type": "integer"
+		    	}
+			},
+			"type": "object"
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+  "data": {
+    "info": [
+      {
+        "created_at": 1212926400,
+        "created_by": null,
+        "global_hash": "1RmnUT",
+        "short_url": "http://bit.ly/1RmnUT",
+        "title": "Google",
+        "user_hash": "1RmnUT"
+      }
+    ]
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

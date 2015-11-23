@@ -1,0 +1,14 @@
+post: 
+  description: |
+    Creates a new Discussion on a Sheet or Row. Result object containing Discussion object for the newly created discussion.
+     Allowed For: [WRITE_SHEETS]
+  body: 
+    application/json: 
+      schema: createDiscussionRequest
+      example: !include ../examples/createDiscussionRequest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: createDiscussionResponse
+          example: !include ../examples/createDiscussionResponse-example.json

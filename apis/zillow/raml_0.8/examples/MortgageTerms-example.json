@@ -1,0 +1,38 @@
+cb({
+  "request" : {
+    "taxBracket" : "20.0" ,
+    "amount" : "10000000" ,
+    "costOfMoney" : "0.0" ,
+    "rate" : "6.504" ,
+    "comparisonYears" : "20" ,
+    "rate2" : "5.45" ,
+    "rate3" : "7.806" ,
+    "callback" : "cb" ,
+    "terminmonths3" : "360" ,
+    "terminmonths2" : "480" ,
+    "output" : "json" ,
+    "terminmonths" : "360"
+  } ,
+  "message" : {
+    "text" : "Request successfully processed" ,
+    "code" : "0"
+  } ,
+  "response" : {
+    "monthlyPrincipalAndInterest" : "63233" ,
+    "monthlyPrincipalAndInterest2" : "51237" ,
+    "monthlyPrincipalAndInterest3" : "72029" ,
+    "discountedCost" : "15175920" ,
+    "discountedCost2" : "12296880" ,
+    "discountedCost3" : "17286960" ,
+    "remainingPrincipal" : "5567904" ,
+    "remainingPrincipal2" : "7479282" ,
+    "remainingPrincipal3" : "5986956" ,
+    "taxSavings" : "2148765" ,
+    "taxSavings2" : "1955232" ,
+    "taxSavings3" : "2654781" ,
+    "totalCost" : "18595059" ,
+    "totalCost2" : "17820930" ,
+    "totalCost3" : "20619135" ,
+    "result" : "The 40.00 year loan at the rate of 5.45% looks to be the cheapest over the 20.00 year period."
+  }
+});

@@ -1,0 +1,14 @@
+{
+    "sleep":{
+        "isMainSleep":false,
+        "logId":29767,
+        "efficiency":98,
+        "startTime":"2011-06-16T17:20:00.000",
+        "duration":6000000,
+        "minutesToFallAsleep":0,
+        "minutesAsleep":47,
+        "minutesAwake":24,
+        "awakeningsCount":10,
+        "timeInBed":100
+    }
+}

@@ -1,0 +1,152 @@
+#%RAML 0.8
+title: Rapid API
+version: 3.1
+baseUri: https://api.ewaypayments.com/
+mediaType: application/json
+securitySchemes:
+  - basic: !include securitySchemes/basic.raml
+schemas:
+  - customer-create: !include schemas/customer-create-schema.json
+  - customer-response: !include schemas/customer-response-schema.json
+  - accessCode: !include schemas/accessCode-schema.json
+  - customer-create-schema: !include schemas/customer-create-schema.json
+  - customerTransaction-response: !include schemas/customerTransaction-response-schema.json
+  - refundTransaction: !include schemas/refundTransaction-schema.json
+  - refundTransaction-response: !include schemas/refundTransaction-response-schema.json
+  - transactions: !include schemas/transactions-schema.json
+  - customerSharedCode-response: !include schemas/customerSharedCode-response-schema.json
+securedBy: [ basic ]
+/AccessCodes: 
+  post: 
+    description: |
+      To request an Access Code, the merchant will make a server-side call to the
+      CreateAccessCode method of Rapid 3.1 API. The service will respond with an
+      Access Code and return the customer data.
+      If the request involves an existing Token customer, their details will be
+      returned in the response including the masked credit card number.
+      If Token Payments are not in use for this transaction, the returned customer
+      data will be an echo of the data in the request.
+      
+      Available Methods
+      Rapid 3.1 API supports both regular one-off payments, Token Payments, Beagle Fraud Alerts and
+      Beagle Fraud Alerts (Enterprise). Additionally, merchants can create or update their Token customers
+      through Rapid 3.1 API by sending the appropriate value in the initial request.
+      
+      ProcessPayment
+      This method allows merchants to process a standard payment.
+      
+      TokenPayment
+      This method allows merchants to process payments using Token customers they have stored with
+      eWAY. Merchants can either load an existing token customer by passing in their TokenCustomerID in
+      the initial request, or create a new Token customer by leaving the TokenCustomerID field blank.
+      Any values passed in the Customer part of the initial request will be used to either create or update
+      the Token customer, depending on the TokenCustomerID value.
+      When loading an existing Token customer, the customer's details will be returned by eWAY, including
+      the masked credit card details. The masked card can be sent back to eWAY when the payment is
+      processed if the customer wants to process the payment using the card on file.
+      
+      CreateTokenCustomer
+      This method allows merchants to create Token customers without processing a payment.
+      
+      UpdateTokenCustomer
+      This method allows merchants to update existing Token customers without processing a payment.
+    body: 
+      application/json: 
+        schema: customer-create
+        example: !include examples/customer-create-example.json
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: customer-response
+            example: !include examples/customer-response-example.json
+/AccessCode/{AccessCode}: 
+  uriParameters: 
+    AccessCode: 
+      description: ID of Access Code.
+  get: 
+    description: |
+      Once the customer has been redirected to the next page, the merchant will
+      need to request the results from eWAY by calling the GetAccessCodeResult
+      method of the Rapid 3.1 API web service.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: accessCode
+            example: !include examples/accessCode-example.json
+/Transaction: 
+  post: 
+    description: |
+      Where environments are PCI-DSS compliant, card data may be submitted directly
+      to Rapid 3.1. This allows processing of transactions in one server side call.
+      Note: Before being able to send credit card data via the direct API, eWAY must
+      enable it on the account (both live and sandbox). To be enabled on a live
+      account we must receive proof that the environment is PCI-DSS compliant.
+      Transactions not involving credit card data (such as a recurring token payment)
+      may be processed without proof of compliance.
+    body: 
+      application/json: 
+        schema: customer-create-schema
+        example: !include examples/customer-create-example.json
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: customerTransaction-response
+            example: !include examples/customerTransaction-response-example.json
+  /{ID}/Refund: 
+    uriParameters: 
+      ID: 
+        description: Transaction ID or Access Code.
+    post: 
+      description: |
+        Process a refund.
+        Note: Before accessing the direct refund API you must add the Refund ability
+        to your API user role.
+      body: 
+        application/json: 
+          schema: refundTransaction
+          example: !include examples/refundTransaction-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: refundTransaction-response
+              example: !include examples/refundTransaction-response-example.json
+    get: 
+      description: |
+        Request transaction results.
+        This is a direct call to the eWAY service allowing you to request the
+        details that have been entered by the customer on the Responsive Shared
+        Page. You only need to implement this if you have allowed the customer
+        details to be modifiable on the Responsive Shared Page.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: transactions
+              example: !include examples/transactions-example.json
+/AccessCodesShared: 
+  post: 
+    description: |
+      To request an Access Code, the merchant will make a server-side call to the
+      CreateAccessCodeShared method of Rapid 3.1 API. The service will respond
+      with an Access Code and return the customer data.
+      If the request involves an existing Token customer, their details will be
+      returned in the response including the masked credit card number.
+      If Token Payments are not in use for this transaction, the returned customer
+      data will be an echo of the data in the request.
+    body: 
+      application/json: 
+        schema: customer-create-schema
+        example: !include examples/customer-create-example.json
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: customerSharedCode-response
+            example: !include examples/customerSharedCode-response-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

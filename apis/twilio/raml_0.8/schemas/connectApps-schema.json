@@ -1,0 +1,80 @@
+{
+  "type": "object",
+  "": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "end": {
+      "type": "integer"
+    },
+    "first_page_uri": {
+      "type": "string"
+    },
+    "last_page_uri": {
+      "type": "string"
+    },
+    "next_page_uri": {
+      "type": "string"
+    },
+    "num_pages": {
+      "type": "integer"
+    },
+    "page": {
+      "type": "integer"
+    },
+    "page_size": {
+      "type": "integer"
+    },
+    "previous_page_uri": {
+      "type": "string"
+    },
+    "start": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    },
+    "uri": {
+      "type": "string"
+    },
+    "connect_apps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sid": {
+            "type": "string"
+          },
+          "account_sid": {
+            "type": "string"
+          },
+          "friendly_name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "company_name": {
+            "type": "string"
+          },
+          "homepage_url": {
+            "type": "string"
+          },
+          "authorize_redirect_url": {
+            "type": "string"
+          },
+          "deauthorize_callback_url": {
+            "type": "string"
+          },
+          "deauthorize_callback_method": {
+            "type": "string"
+          },
+          "permissions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

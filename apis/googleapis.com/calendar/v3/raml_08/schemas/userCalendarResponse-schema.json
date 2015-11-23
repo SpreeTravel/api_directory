@@ -1,0 +1,115 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "kind" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "etag" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "summary" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "description" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "location" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "timeZone" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "summaryOverride" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "colorId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "backgroundColor" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "foregroundColor" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "hidden" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "selected" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "accessRole" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "defaultReminders" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "method" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "minutes" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    } ,
+    "notificationSettings" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "notifications" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "type" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "method" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        }
+      }
+    } ,
+    "primary" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "deleted" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

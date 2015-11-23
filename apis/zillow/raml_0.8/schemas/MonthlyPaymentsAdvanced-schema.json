@@ -1,0 +1,148 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "request" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "hoa" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "callback" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "propertytax" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "output" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "terminmonths" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "price" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "schedule" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "zip" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "pmi" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "hazard" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "rate" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "message" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "text" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "code" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "response" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "monthlyPrincipalAndInterest" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "monthlyPropertyTaxes" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "monthlyHazardInsurance" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "monthlyPmi" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "monthlyHoaDues" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "totalMonthlyPayment" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "totalPayments" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "totalInterest" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "totalPrincipal" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "totalTaxesFeesAndInsurance" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "annualAmortizationSchedule" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "beginningBalance" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "amount" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "principal" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "interest" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "endingBalance" : {
+                  "type" : "number" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

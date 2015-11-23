@@ -1,0 +1,17 @@
+[
+  {
+    "kind" : "person" ,
+    "id" : 100 ,
+    "name" : "Emperor Palpatine" ,
+    "email" : "emperor@galacticrepublic.gov" ,
+    "initials" : "EP" ,
+    "username" : "palpatine"
+  } , {
+    "kind" : "person" ,
+    "id" : 103 ,
+    "name" : "Moradmin Bast" ,
+    "email" : "bast@deathstar.mil" ,
+    "initials" : "MB" ,
+    "username" : "bast"
+  }
+]

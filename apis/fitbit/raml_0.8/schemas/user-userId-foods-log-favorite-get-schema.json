@@ -1,0 +1,180 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "accessLevel": {
+            "enum": [
+              "PRIVATE",
+              "PUBLIC",
+              "SHARED"
+            ]
+          },
+          "brand": {
+            "type": "string"
+          },
+          "calories": {
+            "type": "integer"
+          },
+          "defaultServingSize": {
+            "type": "integer"
+          },
+          "defaultUnit": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "plural": {
+                "type": "string"
+              }
+            }
+          },
+          "foodId": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "servings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "multiplier": {
+                  "type": "integer"
+                },
+                "servingSize": {
+                  "type": "integer"
+                },
+                "unitId": {
+                  "type": "integer"
+                },
+                "unit": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "plural": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "units": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "nutritionalValues": {
+            "type": "object",
+            "properties": {
+              "biotin": {
+                "type": "number"
+              },
+              "calcium": {
+                "type": "number"
+              },
+              "calories": {
+                "type": "number"
+              },
+              "caloriesFromFat": {
+                "type": "number"
+              },
+              "cholesterol": {
+                "type": "number"
+              },
+              "copper": {
+                "type": "number"
+              },
+              "dietaryFiber": {
+                "type": "number"
+              },
+              "folicAcid": {
+                "type": "number"
+              },
+              "iodine": {
+                "type": "number"
+              },
+              "iron": {
+                "type": "number"
+              },
+              "magnesium": {
+                "type": "number"
+              },
+              "niacin": {
+                "type": "number"
+              },
+              "pantothenicAcid": {
+                "type": "number"
+              },
+              "phosphorus": {
+                "type": "number"
+              },
+              "potassium": {
+                "type": "number"
+              },
+              "protein": {
+                "type": "number"
+              },
+              "riboflavin": {
+                "type": "number"
+              },
+              "saturatedFat": {
+                "type": "number"
+              },
+              "sodium": {
+                "type": "number"
+              },
+              "sugars": {
+                "type": "number"
+              },
+              "thiamin": {
+                "type": "number"
+              },
+              "totalCarbohydrate": {
+                "type": "number"
+              },
+              "totalFat": {
+                "type": "number"
+              },
+              "transFat": {
+                "type": "number"
+              },
+              "vitaminA": {
+                "type": "number"
+              },
+              "vitaminB12": {
+                "type": "number"
+              },
+              "vitaminB6": {
+                "type": "number"
+              },
+              "vitaminC": {
+                "type": "number"
+              },
+              "vitaminD": {
+                "type": "number"
+              },
+              "vitaminE": {
+                "type": "number"
+              },
+              "zinc": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+}

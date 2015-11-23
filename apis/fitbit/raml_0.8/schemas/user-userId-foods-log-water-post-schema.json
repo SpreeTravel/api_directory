@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+		"waterLog": {
+			"properties": {
+				"amount": {
+					"description": "Amount consumed; in the format X.X, in the selected waterUnit or in the unit system that corresponds to the Accept-Language header provided.",
+					"type": "number"
+				},
+				"date": {
+					"description": "Log entry date; in the format yyyy-MM-dd ",
+					"type": "string"
+				},
+				"unit": {
+					"description": "Water measurement unit; ('ml', fl oz' or 'cup') ",
+					"type": "string"
+				}
+			},
+			"type": "object"
+		}
+	}
+}

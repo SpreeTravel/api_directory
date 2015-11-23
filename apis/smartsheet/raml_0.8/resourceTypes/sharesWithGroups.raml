@@ -1,0 +1,30 @@
+post: 
+  description: |
+    Shares a Sheet or Workspace to the user specified.
+    Allowed For: [SHARE_SHEETS (when working with Sheets) ADMIN_WORKSPACES (when working with Workspaces)]
+  queryParameters: 
+    sendEmail: 
+      description: 'Either "true" or "false" to  indicate whether or not to notify the user by email. Default is false.'
+      type: boolean
+      default: false
+      example: true
+  body: 
+    application/json: 
+      schema: sharewithGroupstoOneRequest
+      example: !include ../examples/sharewithGroupstoOneRequest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: sharewithGroupstoOneResponse
+          example: !include ../examples/sharewithGroupstoOneResponse-example.json
+get: 
+  description: |
+    Lists all the users and groups to whom a Sheet or Workspace is shared, and their access level.
+    Allowed For: [READ_SHEETS]
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: getShareswithGroupsResponse
+          example: !include ../examples/getShareswithGroupsResponse-example.json

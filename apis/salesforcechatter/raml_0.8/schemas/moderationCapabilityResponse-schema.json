@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {"moderationFlags": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "flagCount": {
+        "type": "integer",
+        "required": false
+      },
+      "flaggedByMe": {
+        "type": "boolean",
+        "required": false
+      }
+    }
+  }}
+}

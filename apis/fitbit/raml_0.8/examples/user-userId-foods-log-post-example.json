@@ -1,0 +1,20 @@
+{
+    "foodLog":{
+        "isFavorite":true,
+        "logDate":"2011-06-29",
+        "logId":21633,
+        "loggedFood":{
+            "accessLevel":"PUBLIC",
+            "amount":2.55,
+            "brand":"",
+            "calories":370,
+            "foodId":82294,
+            "mealTypeId":7,
+            "locale":"en_US",
+            "name":"Chips",
+            "unit":{"id":304,"name":"serving","plural":"servings"},
+            "units":[304,226,180,147,389]
+        },
+        "nutritionalValues":{"calories":370,"carbs":47,"fat":17.5,"fiber":5,"protein":5,"sodium":325}
+    }
+}

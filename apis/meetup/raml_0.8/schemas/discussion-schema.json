@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "body": {
+      "required": false,
+      "type": "string"
+    },
+    "created": {
+      "required": false,
+      "type": "integer"
+    },
+    "discussion": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "id": {
+          "required": false,
+          "type": "integer"
+        }
+      }
+    },
+    "id": {
+      "required": false,
+      "type": "integer"
+    },
+    "in_reply_to": {
+      "required": false,
+      "type": "integer"
+    },
+    "member": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "city": {
+          "required": false,
+          "type": "string"
+        },
+        "country": {
+          "required": false,
+          "type": "string"
+        },
+        "id": {
+          "required": false,
+          "type": "integer"
+        },
+        "name": {
+          "required": false,
+          "type": "string"
+        },
+        "photo": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "thumb": {
+              "required": false,
+              "type": "integer"
+            }
+          }
+        },
+        "state": {
+          "required": false,
+          "type": "integer"
+        }
+      }
+    },
+    "subject": {
+      "required": false,
+      "type": "string"
+    },
+    "updated": {
+      "required": false,
+      "type": "integer"
+    }
+  }
+}

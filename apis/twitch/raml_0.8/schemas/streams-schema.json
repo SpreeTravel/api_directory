@@ -1,0 +1,30 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "_links" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "self" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "next" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "streams" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : 
+        {
+          "type" : "string"
+        }
+      
+    }
+  }
+}

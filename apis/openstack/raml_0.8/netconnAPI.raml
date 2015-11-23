@@ -1,0 +1,3284 @@
+#%RAML 0.8
+title: OpenStack Networking API
+version: v2.0
+baseUri: https://servers.api.openstack.com/
+schemas:
+  - flavors: !include schemas/netconnFlavors-schema.xsd
+  - databases: !include schemas/netconnDatabases-schema.xsd
+  - badRequest: !include schemas/netconnBadRequest-schema.xsd
+  - instance: !include schemas/netconInstance-schema.xsd
+  - instances: !include schemas/netconInstances-schema.xsd
+  - restart: !include schemas/netconnRestart-schema.xsd
+  - serviceUnavailable: !include schemas/netconnServiceUnavailable-schema.xsd
+  - forbidden: !include schemas/netconnForbidden-schema.xsd
+  - unprocessableEntity: !include schemas/netconnUnprocessableEntity-schema.xsd
+  - itemNotFound: !include schemas/netconItemNotFound-schema.xsd
+  - users: !include schemas/netconnUsers-schema.xsd
+  - flavor: !include schemas/netconnFlavor-schema.xsd
+  - notImplemented: !include schemas/netconnNotImplemented-schema.xsd
+  - overLimit: !include schemas/netconnOverLimit-schema.xsd
+  - database: !include schemas/netconnDatabase-schema.xsd
+  - unauthorized: !include schemas/netconnUnauthorized-schema.xsd
+  - badMethod: !include schemas/netconnBadMethod-schema.xsd
+  - badMediaType: !include schemas/netconnBadMediaType-schema.xsd
+  - resize: !include schemas/netconnResize-schema.xsd
+  - user: !include schemas/netconnUser-schema.xsd
+  - instanceFault: !include schemas/netconInstanceFault-schema.xsd
+  - floatingipGetDetailResp: !include schemas/floatingipGetDetailResp-schema.json
+  - floatingipPostReq: !include schemas/floatingipPostReq-schema.json
+  - floatingipPostResp: !include schemas/floatingipPostResp-schema.json
+  - floatingipPutDisassociateUpdateReq: !include schemas/floatingipPutDisassociateUpdate.req-schema.json
+  - floatingipPutDisassociateUpdateResp: !include schemas/floatingipPutDisassociateUpdateResp-schema.json
+  - floatingipPutUpdateReq: !include schemas/floatingipPutUpdate.req-schema.json
+  - floatingipPutUpdateResp: !include schemas/floatingipPutUpdateResp-schema.json
+  - floatingIpsGetResp: !include schemas/floatingIpsGetResp-schema.json
+  - healthmonitorGetDetailResp: !include schemas/healthmonitorGetDetailResp-schema.json
+  - healthmonitorListResp: !include schemas/healthmonitorListResp-schema.json
+  - healthmonitorPostAssociateReq: !include schemas/healthmonitorPostAssociateReq-schema.json
+  - healthmonitorPostAssociateResp: !include schemas/healthmonitorPostAssociateResp-schema.json
+  - healthmonitorPostReq: !include schemas/healthmonitorPostReq-schema.json
+  - healthmonitorPostResp: !include schemas/healthmonitorPostResp-schema.json
+  - healthmonitorPutReq: !include schemas/healthmonitorPutReq-schema.json
+  - healthmonitorPutResp: !include schemas/healthmonitorPutResp-schema.json
+  - healthmonitorPutUpdateReq: !include schemas/healthmonitorPutUpdate.req-schema.json
+  - healthmonitorPutUpdateResp: !include schemas/healthmonitorPutUpdateResp-schema.json
+  - hmsGetResp: !include schemas/hmsGetResp-schema.json
+  - ikepolicyCreateReq: !include schemas/ikepolicyCreateReq-schema.json
+  - ikepolicyCreateRes: !include schemas/ikepolicyCreateRes-schema.json
+  - ikepolicyListRes: !include schemas/ikepolicyListRes-schema.json
+  - ikepolicyShowRes: !include schemas/ikepolicyShowRes-schema.json
+  - ikepolicyUpdateReq: !include schemas/ikepolicyUpdateReq-schema.json
+  - ikepolicyUpdateRes: !include schemas/ikepolicyUpdateRes-schema.json
+  - ipsecpolicyCreateReq: !include schemas/ipsecpolicyCreateReq-schema.json
+  - ipsecpolicyCreateRes: !include schemas/ipsecpolicyCreateRes-schema.json
+  - ipsecpolicyListRes: !include schemas/ipsecpolicyListRes-schema.json
+  - ipsecpolicyShowRes: !include schemas/ipsecpolicyShowRes-schema.json
+  - ipsecpolicyUpdateReq: !include schemas/ipsecpolicyUpdateReq-schema.json
+  - ipsecpolicyUpdateRes: !include schemas/ipsecpolicyUpdateRes-schema.json
+  - ipsecSiteConnectionCreateReq: !include schemas/ipsecSiteConnectionCreateReq-schema.json
+  - ipsecSiteConnectionCreateRes: !include schemas/ipsecSiteConnectionCreateRes-schema.json
+  - ipsecSiteConnectionListRes: !include schemas/ipsecSiteConnectionListRes-schema.json
+  - ipsecSiteConnectionShowRes: !include schemas/ipsecSiteConnectionShowRes-schema.json
+  - ipsecSiteConnectionUpdateReq: !include schemas/ipsecSiteConnectionUpdateReq-schema.json
+  - ipsecSiteConnectionUpdateRes: !include schemas/ipsecSiteConnectionUpdateRes-schema.json
+  - listenerGetDetailResp: !include schemas/listenerGetDetailResp-schema.json
+  - listenerListResp: !include schemas/listenerListResp-schema.json
+  - listenerPostReq: !include schemas/listenerPostReq-schema.json
+  - listenerPostResp: !include schemas/listenerPostResp-schema.json
+  - listenerPutReq: !include schemas/listenerPutReq-schema.json
+  - listenerPutResp: !include schemas/listenerPutResp-schema.json
+  - loadbalancerGetDetailResp: !include schemas/loadbalancerGetDetailResp-schema.json
+  - loadbalancerListResp: !include schemas/loadbalancerListResp-schema.json
+  - loadbalancerPostReq: !include schemas/loadbalancerPostReq-schema.json
+  - loadbalancerPostResp: !include schemas/loadbalancerPostResp-schema.json
+  - loadbalancerPutReq: !include schemas/loadbalancerPutReq-schema.json
+  - loadbalancerPutResp: !include schemas/loadbalancerPutResp-schema.json
+  - memberGetDetailResp: !include schemas/memberGetDetailResp-schema.json
+  - memberGetResp: !include schemas/memberGetResp-schema.json
+  - memberListResp: !include schemas/memberListResp-schema.json
+  - memberPostReq: !include schemas/memberPostReq-schema.json
+  - memberPostResp: !include schemas/memberPostResp-schema.json
+  - memberPutReq: !include schemas/memberPutReq-schema.json
+  - memberPutResp: !include schemas/memberPutResp-schema.json
+  - memberPutUpdateReq: !include schemas/memberPutUpdate.req-schema.json
+  - memberPutUpdateResp: !include schemas/memberPutUpdateResp-schema.json
+  - meteringLabelCreateReq: !include schemas/meteringLabelCreateReq-schema.json
+  - meteringLabelCreateResp: !include schemas/meteringLabelCreateResp-schema.json
+  - meteringLabelGetResp: !include schemas/meteringLabelGetResp-schema.json
+  - meteringLabelRuleCreateReq: !include schemas/meteringLabelRuleCreateReq-schema.json
+  - meteringLabelRuleCreateResp: !include schemas/meteringLabelRuleCreateResp-schema.json
+  - meteringLabelRuleGetResp: !include schemas/meteringLabelRuleGetResp-schema.json
+  - meteringLabelRulesListGetResp: !include schemas/meteringLabelRulesListGetResp-schema.json
+  - meteringLabelsListGetResp: !include schemas/meteringLabelsListGetResp-schema.json
+  - networkMultiPostReq: !include schemas/networkMultiPostReq-schema.json
+  - networkMultiPostResp: !include schemas/networkMultiPostResp-schema.json
+  - networkPostReq: !include schemas/networkPostReq-schema.json
+  - networkPostResp: !include schemas/networkPostResp-schema.json
+  - networkPutUpdateReq: !include schemas/networkPutUpdate.req-schema.json
+  - networkPutUpdateResp: !include schemas/networkPutUpdateResp-schema.json
+  - networksCreateBulkResp: !include schemas/networksCreateBulkResp-schema.json
+  - networksGetDetailResp: !include schemas/networksGetDetailResp-schema.json
+  - networksGetResp: !include schemas/networksGetResp-schema.json
+  - networksMultiGetDetailResp: !include schemas/networksMultiGetDetailResp-schema.json
+  - networksMultiListResp: !include schemas/networksMultiListResp-schema.json
+  - networksPostCreateBulkReq: !include schemas/networksPostCreateBulkReq-schema.json
+  - neutronVersionsResponse: !include schemas/neutronVersionsResponse-schema.json
+  - poolGetDetailResp: !include schemas/poolGetDetailResp-schema.json
+  - poolListResp: !include schemas/poolListResp-schema.json
+  - poolPostReq: !include schemas/poolPostReq-schema.json
+  - poolPostResp: !include schemas/poolPostResp-schema.json
+  - poolPutReq: !include schemas/poolPutReq-schema.json
+  - poolPutResp: !include schemas/poolPutResp-schema.json
+  - poolPutUpdateReq: !include schemas/poolPutUpdate.req-schema.json
+  - poolPutUpdateResp: !include schemas/poolPutUpdateResp-schema.json
+  - poolsGetResp: !include schemas/poolsGetResp-schema.json
+  - portBindCreateOrUpdateResp: !include schemas/portBindCreateOrUpdateResp-schema.json
+  - portBindGetResp: !include schemas/portBindGetResp-schema.json
+  - portCreateOrUpdateResp: !include schemas/portCreateOrUpdateResp-schema.json
+  - portGetResp: !include schemas/portGetResp-schema.json
+  - portPostCreateReq: !include schemas/portPostCreateReq-schema.json
+  - portsBindGetResp: !include schemas/portsBindGetResp-schema.json
+  - portsCreateBulkResp: !include schemas/portsCreateBulkResp-schema.json
+  - portsGetResp: !include schemas/portsGetResp-schema.json
+  - portsPostCreateBulkReq: !include schemas/portsPostCreateBulkReq-schema.json
+  - quotasListResp: !include schemas/quotasListResp-schema.json
+  - quotasPutReq: !include schemas/quotasPutReq-schema.json
+  - quotasPutResp: !include schemas/quotasPutResp-schema.json
+  - quotasShowResp: !include schemas/quotasShowResp-schema.json
+  - routerAddInterfaceReq: !include schemas/routerAddInterface.req-schema.json
+  - routerAddInterfaceResp: !include schemas/routerAddInterfaceResp-schema.json
+  - routerGetDetailResp: !include schemas/routerGetDetailResp-schema.json
+  - routerPostReq: !include schemas/routerPostReq-schema.json
+  - routerPostResp: !include schemas/routerPostResp-schema.json
+  - routerPutUpdateReq: !include schemas/routerPutUpdate.req-schema.json
+  - routerPutUpdateResp: !include schemas/routerPutUpdateResp-schema.json
+  - routerRemoveInterfaceReq: !include schemas/routerRemoveInterfaceReq-schema.json
+  - routerRemoveInterfaceResp: !include schemas/routerRemoveInterfaceResp-schema.json
+  - routersGetResp: !include schemas/routersGetResp-schema.json
+  - rulesSecurityGroupsCreateReq: !include schemas/rulesSecurityGroupsCreateReq-schema.json
+  - rulesSecurityGroupsCreateResp: !include schemas/rulesSecurityGroupsCreateResp-schema.json
+  - rulesSecurityGroupsGetResp: !include schemas/rulesSecurityGroupsGetResp-schema.json
+  - rulesSecurityGroupsListGetResp: !include schemas/rulesSecurityGroupsListGetResp-schema.json
+  - securityGroupsCreateReq: !include schemas/securityGroupsCreateReq-schema.json
+  - securityGroupsCreateResp: !include schemas/securityGroupsCreateResp-schema.json
+  - securityGroupsGetResp: !include schemas/securityGroupsGetResp-schema.json
+  - securityGroupsListGetResp: !include schemas/securityGroupsListGetResp-schema.json
+  - subnetCreateReq: !include schemas/subnetCreateReq-schema.json
+  - subnetCreateResp: !include schemas/subnetCreateResp-schema.json
+  - subnetsCreateBulkResp: !include schemas/subnetsCreateBulkResp-schema.json
+  - subnetsGetResp: !include schemas/subnetsGetResp-schema.json
+  - subnetShowResp: !include schemas/subnetShowResp-schema.json
+  - subnetsPostCreateBulkReq: !include schemas/subnetsPostCreateBulkReq-schema.json
+  - subnetUpdateReq: !include schemas/subnetUpdateReq-schema.json
+  - subnetUpdateResp: !include schemas/subnetUpdateResp-schema.json
+  - versionV2NeutronGetResp: !include schemas/versionV2NeutronGetResp-schema.json
+  - vipGetDetailResp: !include schemas/vipGetDetailResp-schema.json
+  - vipPostReq: !include schemas/vipPostReq-schema.json
+  - vipPostResp: !include schemas/vipPostResp-schema.json
+  - vipPutUpdateReq: !include schemas/vipPutUpdateReq-schema.json
+  - vipPutUpdateResp: !include schemas/vipPutUpdateResp-schema.json
+  - vipsGetResp: !include schemas/vipsGetResp-schema.json
+  - vpnserviceCreateReq: !include schemas/vpnserviceCreateReq-schema.json
+  - vpnserviceCreateRes: !include schemas/vpnserviceCreateRes-schema.json
+  - vpnserviceListRes: !include schemas/vpnserviceListRes-schema.json
+  - vpnserviceShowRes: !include schemas/vpnserviceShowRes-schema.json
+  - vpnserviceUpdateReq: !include schemas/vpnserviceUpdateReq-schema.json
+  - vpnserviceUpdateRes: !include schemas/vpnserviceUpdateRes-schema.json
+  - networkPostReqXML: !include schemas/networkPostReq-schema.xsd
+  - networkPostRespXML: !include schemas/networkPostResp-schema.xsd
+  - networkPutUpdateReqXML: !include schemas/networkPutUpdate.req-schema.xsd
+  - networkPutUpdateRespXML: !include schemas/networkPutUpdateResp-schema.xsd
+  - networksCreateBulkRespXML: !include schemas/networksCreateBulkResp-schema.xsd
+  - networksGetDetailRespXML: !include schemas/networksGetDetailResp-schema.xsd
+  - networksGetRespXML: !include schemas/networksGetResp-schema.xsd
+  - networksPostCreateBulkReqXML: !include schemas/networksPostCreateBulkReq-schema.xsd
+  - neutronVersionsResponseXML: !include schemas/neutronVersionsResponse-schema.xsd
+  - portBindCreateOrUpdateRespXML: !include schemas/portBindCreateOrUpdateResp-schema.xsd
+  - portBindGetRespXML: !include schemas/portBindGetResp-schema.xsd
+  - portCreateOrUpdateReqXML: !include schemas/portCreateOrUpdateReq-schema.xsd
+  - portCreateOrUpdateRespXML: !include schemas/portCreateOrUpdateResp-schema.xsd
+  - portGetRespXML: !include schemas/portGetResp-schema.xsd
+  - portsBindGetRespXML: !include schemas/portsBindGetResp-schema.xsd
+  - portsCreateBulkRespXML: !include schemas/portsCreateBulkResp--schema.xsd
+  - portsGetRespXML: !include schemas/portsGetResp-schema.xsd
+  - portsPostCreateBulkReqXML: !include schemas/portsPostCreateBulkReq-schema.xsd
+  - subnetCreateReqXML: !include schemas/subnetCreateReq-schema.xsd
+  - subnetCreateRespXML: !include schemas/subnetCreateResp-schema.xsd
+  - subnetsCreateBulkRespXML: !include schemas/subnetsCreateBulkResp-schema.xsd
+  - subnetsGetRespXML: !include schemas/subnetsGetResp-schema.xsd
+  - subnetShowRespXML: !include schemas/subnetShowResp-schema.xsd
+  - subnetsPostCreateBulkReqXML: !include schemas/subnetsPostCreateBulkReq-schema.xsd
+  - subnetUpdateReqXML: !include schemas/subnetUpdateReq-schema.xsd
+  - subnetUpdateRespXML: !include schemas/subnetUpdateResp-schema.xsd
+  - versionV2NeutronGetRespXML: !include schemas/versionV2NeutronGetResp-schema.xsd
+  - portCreateOrUpdateReq: !include schemas/portCreateOrUpdateReq-schema.json
+  - showAPIDetailsXML: !include /schemas/showAPIDetailsXML-schema.xsd
+  - showAPIDetails: !include /schemas/showAPIDetails-schema.json
+  - listExtensionsResXML: !include /schemas/listExtensionsResXML-schema.xsd
+  - listExtensionsRes: !include /schemas/listExtensionsRes-schema.json
+  - extensionDetailsXML: !include /schemas/extensionDetailsXML-schema.xsd
+  - extensionDetails: !include /schemas/extensionDetails-schema.json
+  - listVIPs: !include /schemas/listVIPs-schema.json
+  - createLoadBalancerVIPReq: !include /schemas/createLoadBalancerVIPReq-schema.json
+  - createLoadBalancerVIPRes: !include /schemas/createLoadBalancerVIPRes-schema.json
+  - showVIPDetailsRes: !include /schemas/showVIPDetailsRes-schema.json
+  - updateVIPReq: !include /schemas/updateVIPReq-schema.json
+  - updateVIPRes: !include /schemas/updateVIPRes-schema.json
+  - hmListRes: !include /schemas/hmListRes-schema.json
+  - createLoadBalancerReq: !include /schemas/createLoadBalancerReq-schema.json
+  - createLoadBalancerRes: !include /schemas/createLoadBalancerRes-schema.json
+  - showHealthMonitorDetails: !include /schemas/showHealthMonitorDetails-schema.json
+  - updateHealthMonitor: !include /schemas/updateHealthMonitor-schema.json
+  - updateHealthMonitorRes: !include /schemas/updateHealthMonitorRes-schema.json
+  - listPoolsRes: !include /schemas/listPoolsRes-schema.json
+  - createLoadBalancerPoolReq: !include /schemas/createLoadBalancerPoolReq-schema.json
+  - createLoadBalancerPoolRes: !include /schemas/createLoadBalancerPoolRes-schema.json
+  - showPoolDetailsRes: !include /schemas/showPoolDetailsRes-schema.json
+  - updateSinglePoolRes: !include /schemas/updateSinglePoolRes-schema.json
+  - updateSinglePool: !include /schemas/updateSinglePool-schema.json
+  - associateHealthMonitorWithPoolReq: !include /schemas/associateHealthMonitorWithPoolReq-schema.json
+  - associateHealthMonitorWithPoolRes: !include /schemas/associateHealthMonitorWithPoolRes-schema.json
+/: 
+  get: 
+    description: List API versions
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: neutronVersionsResponseXML
+            example: !include examples/neutronVersionsResponse-example.xml
+          application/json: 
+            schema: neutronVersionsResponse
+            example: !include examples/neutronVersionsResponse-example.json
+/{version}: 
+  get: 
+    description: Show API details
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: showAPIDetailsXML
+            example: !include examples/showAPIDetailsXML-example.xml
+          application/json: 
+            schema: showAPIDetails
+            example: !include examples/showAPIDetails-example.json
+  /extensions: 
+    get: 
+      description: List extensions
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: listExtensionsResXML
+              example: !include examples/listExtensionsResXML-example.xml
+            application/json: 
+              schema: listExtensionsRes
+              example: !include examples/listExtensionsRes-example.json
+    /{alias}: 
+      get: 
+        description: Get extension details
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: extensionDetailsXML
+                example: !include examples/extensionDetailsXML-example.xml
+              application/json: 
+                schema: extensionDetails
+                example: !include examples/extensionDetails-example.json
+  /floatingips: 
+    post: 
+      description: Create floating IP
+      body: 
+        application/json: 
+          schema: floatingipPostReq
+          example: !include examples/floatingipPostReq-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: floatingipPostResp
+              example: !include examples/floatingipPostResp-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        409: 
+          body: 
+            application/xml: 
+              schema: conflict
+            application/json: 
+              schema: ""
+    get: 
+      description: List floating IPs
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: floatingIpsGetResp
+              example: !include examples/floatingIpsGetResp-example.json
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+    /{floatingip_id}: 
+      get: 
+        description: Show floating IP details
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: floatingipGetDetailResp
+                example: !include examples/floatingipGetDetailResp-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      put: 
+        description: Update floating IP
+        body: 
+          application/json: 
+            schema: floatingipPutDisassociateUpdateReq
+            example: !include examples/floatingipPutDisassociateUpdate.req-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: floatingipPutDisassociateUpdateResp
+                example: !include examples/floatingipPutDisassociateUpdateResp-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+          409: 
+            body: 
+              application/xml: 
+                schema: conflict
+              application/json: 
+                schema: ""
+      delete: 
+        description: Delete floating IP
+        responses: 
+          204: 
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+  /lb: 
+    /members: 
+      get: 
+        description: List members
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: memberGetResp
+                example: !include examples/memberGetResp-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+      post: 
+        description: Create a load balancer member
+        body: 
+          application/json: 
+            schema: memberPostReq
+            example: !include examples/memberPostReq-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: memberPostResp
+                example: !include examples/memberPostResp-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+      /{member_id}: 
+        get: 
+          description: Show member details
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: memberGetDetailResp
+                  example: !include examples/memberGetDetailResp-example.json
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            403: 
+              body: 
+                application/xml: 
+                  schema: forbidden
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+        put: 
+          description: Update member
+          body: 
+            application/json: 
+              schema: memberPutUpdateReq
+              example: !include examples/memberPutUpdate.req-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: memberPutUpdateResp
+                  example: !include examples/memberPutUpdateResp-example.json
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            403: 
+              body: 
+                application/xml: 
+                  schema: forbidden
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+        delete: 
+          description: Delete member
+          responses: 
+            204: 
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+            409: 
+              body: 
+                application/xml: 
+                  schema: conflict
+                application/json: 
+                  schema: ""
+    /vips: 
+      get: 
+        description: List VIPs
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: listVIPs
+                example: !include examples/listVIPs-example.json
+      post: 
+        description: Create a load balancer VIP
+        body: 
+          application/json: 
+            schema: createLoadBalancerVIPReq
+            example: !include examples/createLoadBalancerVIPReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: createLoadBalancerVIPRes
+                example: !include examples/createLoadBalancerVIPRes-example.json
+      /{vip_id}: 
+        get: 
+          description: Show VIP details
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: showVIPDetailsRes
+                  example: !include examples/showVIPDetailsRes-example.json
+        put: 
+          description: Update VIP
+          body: 
+            application/json: 
+              schema: updateVIPReq
+              example: !include examples/updateVIPReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: updateVIPRes
+                  example: !include examples/updateVIPRes-example.json
+        delete: 
+          description: Delete VIP
+          responses: 
+            204: 
+    /healthmonitors: 
+      get: 
+        description: List health monitors
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: hmListRes
+                example: !include examples/hmListRes-example.json
+      post: 
+        description: Create a load balancer health monitor
+        body: 
+          application/json: 
+            schema: createLoadBalancerReq
+            example: !include examples/createLoadBalancerReq-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: createLoadBalancerRes
+                example: !include examples/createLoadBalancerRes-example.json
+      /​{health_monitor_id}​: 
+        get: 
+          description: Show health monitor details
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: showHealthMonitorDetails
+                  example: !include examples/showHealthMonitorDetails-example.json
+        put: 
+          description: Update health monitor
+          body: 
+            application/json: 
+              schema: updateHealthMonitor
+              example: !include examples/updateHealthMonitor-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: updateHealthMonitorRes
+                  example: !include examples/updateHealthMonitorRes-example.json
+        delete: 
+          description: Delete health monitor
+          responses: 
+            204: 
+    /pools: 
+      get: 
+        description: List pools
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: listPoolsRes
+                example: !include examples/listPoolsRes-example.json
+      post: 
+        description: Create a load balancer pool
+        body: 
+          application/json: 
+            schema: createLoadBalancerPoolReq
+            example: !include examples/createLoadBalancerPoolReq-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: createLoadBalancerPoolRes
+                example: !include examples/createLoadBalancerPoolRes-example.json
+      /{pool_id}: 
+        get: 
+          description: Show pool details
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: showPoolDetailsRes
+                  example: !include examples/showPoolDetailsRes-example.json
+        put: 
+          description: Update pool
+          body: 
+            application/json: 
+              schema: updateSinglePoolRes
+              example: !include examples/updateSinglePoolRes-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: updateSinglePool
+                  example: !include examples/updateSinglePool-example.json
+        delete: 
+          description: Delete pool
+          responses: 
+            204: 
+        /health_monitors: 
+          post: 
+            description: Associate health monitor with pool
+            body: 
+              application/json: 
+                schema: associateHealthMonitorWithPoolReq
+                example: !include examples/associateHealthMonitorWithPoolReq-example.json
+            responses: 
+              201: 
+                body: 
+                  application/json: 
+                    schema: associateHealthMonitorWithPoolRes
+                    example: !include examples/associateHealthMonitorWithPoolRes-example.json
+          delete: 
+            description: Disassociate health monitor from pool
+            responses: 
+              204: 
+  /lbaas: 
+    /healthmonitors: 
+      post: 
+        description: Create health monitor
+        body: 
+          application/json: 
+            schema: healthmonitorPostReq
+            example: !include examples/healthmonitorPostReq-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: healthmonitorPostResp
+                example: !include examples/healthmonitorPostResp-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+          409: 
+            body: 
+              application/xml: 
+                schema: conflict
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          500: 
+            body: 
+              application/xml: 
+                schema: Internal-server-error
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+      get: 
+        description: List health monitors
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: healthmonitorListResp
+                example: !include examples/healthmonitorListResp-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          500: 
+            body: 
+              application/xml: 
+                schema: Internal-server-error
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+      /{health_monitor_id}: 
+        get: 
+          description: Show health monitor details
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: healthmonitorGetDetailResp
+                  example: !include examples/healthmonitorGetDetailResp-example.json
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            403: 
+              body: 
+                application/xml: 
+                  schema: forbidden
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+            409: 
+              body: 
+                application/xml: 
+                  schema: conflict
+                application/json: 
+                  schema: ""
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimit
+                application/json: 
+                  schema: ""
+            500: 
+              body: 
+                application/xml: 
+                  schema: Internal-server-error
+                application/json: 
+                  schema: ""
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailable
+                application/json: 
+                  schema: ""
+        put: 
+          description: Update health monitor
+          body: 
+            application/json: 
+              schema: healthmonitorPutReq
+              example: !include examples/healthmonitorPutReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: healthmonitorPutResp
+                  example: !include examples/healthmonitorPutResp-example.json
+            500: 
+              body: 
+                application/xml: 
+                  schema: Internal-server-error
+                application/json: 
+                  schema: ""
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailable
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimit
+                application/json: 
+                  schema: ""
+        delete: 
+          description: Remove health monitor
+          responses: 
+            204: 
+            500: 
+              body: 
+                application/xml: 
+                  schema: Internal-server-error
+                application/json: 
+                  schema: ""
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailable
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            409: 
+              body: 
+                application/xml: 
+                  schema: conflict
+                application/json: 
+                  schema: ""
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimit
+                application/json: 
+                  schema: ""
+    /listeners: 
+      get: 
+        description: List listeners
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: listenerListResp
+                example: !include examples/listenerListResp-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          500: 
+            body: 
+              application/xml: 
+                schema: Internal-server-error
+              application/json: 
+                schema: ""
+      post: 
+        description: Create listener
+        body: 
+          application/json: 
+            schema: listenerPostReq
+            example: !include examples/listenerPostReq-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: listenerPostResp
+                example: !include examples/listenerPostResp-example.json
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          409: 
+            body: 
+              application/xml: 
+                schema: conflict
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          500: 
+            body: 
+              application/xml: 
+                schema: Internal-server-error
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+      /{listener_id}: 
+        get: 
+          description: Show listener details
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: listenerGetDetailResp
+                  example: !include examples/listenerGetDetailResp-example.json
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            403: 
+              body: 
+                application/xml: 
+                  schema: forbidden
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+            409: 
+              body: 
+                application/xml: 
+                  schema: conflict
+                application/json: 
+                  schema: ""
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimit
+                application/json: 
+                  schema: ""
+            500: 
+              body: 
+                application/xml: 
+                  schema: Internal-server-error
+                application/json: 
+                  schema: ""
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailable
+                application/json: 
+                  schema: ""
+        put: 
+          description: Update listener
+          body: 
+            application/json: 
+              schema: listenerPutReq
+              example: !include examples/listenerPutReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: listenerPutResp
+                  example: !include examples/listenerPutResp-example.json
+            500: 
+              body: 
+                application/xml: 
+                  schema: Internal-server-error
+                application/json: 
+                  schema: ""
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailable
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimit
+                application/json: 
+                  schema: ""
+        delete: 
+          description: Remove listener
+          responses: 
+            204: 
+            500: 
+              body: 
+                application/xml: 
+                  schema: Internal-server-error
+                application/json: 
+                  schema: ""
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailable
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            409: 
+              body: 
+                application/xml: 
+                  schema: conflict
+                application/json: 
+                  schema: ""
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimit
+                application/json: 
+                  schema: ""
+    /loadbalancers: 
+      get: 
+        description: List load balancers
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: loadbalancerListResp
+                example: !include examples/loadbalancerListResp-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          500: 
+            body: 
+              application/xml: 
+                schema: Internal-server-error
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+      post: 
+        description: Create load balancer
+        body: 
+          application/json: 
+            schema: loadbalancerPostReq
+            example: !include examples/loadbalancerPostReq-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: loadbalancerPostResp
+                example: !include examples/loadbalancerPostResp-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+          409: 
+            body: 
+              application/xml: 
+                schema: conflict
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          500: 
+            body: 
+              application/xml: 
+                schema: Internal-server-error
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+      /{loadbalancer_id}: 
+        get: 
+          description: Show load balancer details
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: loadbalancerGetDetailResp
+                  example: !include examples/loadbalancerGetDetailResp-example.json
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            403: 
+              body: 
+                application/xml: 
+                  schema: forbidden
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimit
+                application/json: 
+                  schema: ""
+            500: 
+              body: 
+                application/xml: 
+                  schema: Internal-server-error
+                application/json: 
+                  schema: ""
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailable
+                application/json: 
+                  schema: ""
+        put: 
+          description: Update load balancer
+          body: 
+            application/json: 
+              schema: loadbalancerPutReq
+              example: !include examples/loadbalancerPutReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: loadbalancerPutResp
+                  example: !include examples/loadbalancerPutResp-example.json
+            500: 
+              body: 
+                application/xml: 
+                  schema: Internal-server-error
+                application/json: 
+                  schema: ""
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailable
+                application/json: 
+                  schema: ""
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimit
+                application/json: 
+                  schema: ""
+        delete: 
+          description: Remove load balancer
+          responses: 
+            204: 
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+            409: 
+              body: 
+                application/xml: 
+                  schema: conflict
+                application/json: 
+                  schema: ""
+    /pools: 
+      get: 
+        description: List pools
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: poolListResp
+                example: !include examples/poolListResp-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          500: 
+            body: 
+              application/xml: 
+                schema: Internal-server-error
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+      post: 
+        description: Create pool
+        body: 
+          application/json: 
+            schema: poolPostReq
+            example: !include examples/poolPostReq-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: poolPostResp
+                example: !include examples/poolPostResp-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+          409: 
+            body: 
+              application/xml: 
+                schema: conflict
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          500: 
+            body: 
+              application/xml: 
+                schema: Internal-server-error
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+      /{pool_id}: 
+        get: 
+          description: Show pool details
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: poolGetDetailResp
+                  example: !include examples/poolGetDetailResp-example.json
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            403: 
+              body: 
+                application/xml: 
+                  schema: forbidden
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+            409: 
+              body: 
+                application/xml: 
+                  schema: conflict
+                application/json: 
+                  schema: ""
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimit
+                application/json: 
+                  schema: ""
+            500: 
+              body: 
+                application/xml: 
+                  schema: Internal-server-error
+                application/json: 
+                  schema: ""
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailable
+                application/json: 
+                  schema: ""
+        put: 
+          description: Update pool
+          body: 
+            application/json: 
+              schema: poolPutReq
+              example: !include examples/poolPutReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: poolPutResp
+                  example: !include examples/poolPutResp-example.json
+            500: 
+              body: 
+                application/xml: 
+                  schema: Internal-server-error
+                application/json: 
+                  schema: ""
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailable
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimit
+                application/json: 
+                  schema: ""
+        delete: 
+          description: Remove pool
+          responses: 
+            204: 
+            500: 
+              body: 
+                application/xml: 
+                  schema: Internal-server-error
+                application/json: 
+                  schema: ""
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailable
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            409: 
+              body: 
+                application/xml: 
+                  schema: conflict
+                application/json: 
+                  schema: ""
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimit
+                application/json: 
+                  schema: ""
+        /members: 
+          get: 
+            description: List pool members
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: memberListResp
+                    example: !include examples/memberListResp-example.json
+              401: 
+                body: 
+                  application/xml: 
+                    schema: unauthorized
+                  application/json: 
+                    schema: ""
+              503: 
+                body: 
+                  application/xml: 
+                    schema: serviceUnavailable
+                  application/json: 
+                    schema: ""
+              500: 
+                body: 
+                  application/xml: 
+                    schema: Internal-server-error
+                  application/json: 
+                    schema: ""
+          post: 
+            description: Add member to pool
+            body: 
+              application/json: 
+                schema: memberPostReq
+                example: !include examples/memberPostReq-example.json
+            responses: 
+              201: 
+                body: 
+                  application/json: 
+                    schema: memberPostResp
+                    example: !include examples/memberPostResp-example.json
+              401: 
+                body: 
+                  application/xml: 
+                    schema: unauthorized
+                  application/json: 
+                    schema: ""
+              404: 
+                body: 
+                  application/xml: 
+                    schema: itemNotFound
+                  application/json: 
+                    schema: ""
+              409: 
+                body: 
+                  application/xml: 
+                    schema: conflict
+                  application/json: 
+                    schema: ""
+              413: 
+                body: 
+                  application/xml: 
+                    schema: overLimit
+                  application/json: 
+                    schema: ""
+              500: 
+                body: 
+                  application/xml: 
+                    schema: Internal-server-error
+                  application/json: 
+                    schema: ""
+              503: 
+                body: 
+                  application/xml: 
+                    schema: serviceUnavailable
+                  application/json: 
+                    schema: ""
+          /{member_id}: 
+            get: 
+              description: Show pool member details
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      schema: memberGetDetailResp
+                      example: !include examples/memberGetDetailResp-example.json
+                401: 
+                  body: 
+                    application/xml: 
+                      schema: unauthorized
+                    application/json: 
+                      schema: ""
+                403: 
+                  body: 
+                    application/xml: 
+                      schema: forbidden
+                    application/json: 
+                      schema: ""
+                404: 
+                  body: 
+                    application/xml: 
+                      schema: itemNotFound
+                    application/json: 
+                      schema: ""
+                409: 
+                  body: 
+                    application/xml: 
+                      schema: conflict
+                    application/json: 
+                      schema: ""
+                413: 
+                  body: 
+                    application/xml: 
+                      schema: overLimit
+                    application/json: 
+                      schema: ""
+                500: 
+                  body: 
+                    application/xml: 
+                      schema: Internal-server-error
+                    application/json: 
+                      schema: ""
+                503: 
+                  body: 
+                    application/xml: 
+                      schema: serviceUnavailable
+                    application/json: 
+                      schema: ""
+            put: 
+              description: Update pool member
+              body: 
+                application/json: 
+                  schema: memberPutReq
+                  example: !include examples/memberPutReq-example.json
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      schema: memberPutResp
+                      example: !include examples/memberPutResp-example.json
+                500: 
+                  body: 
+                    application/xml: 
+                      schema: Internal-server-error
+                    application/json: 
+                      schema: ""
+                503: 
+                  body: 
+                    application/xml: 
+                      schema: serviceUnavailable
+                    application/json: 
+                      schema: ""
+                401: 
+                  body: 
+                    application/xml: 
+                      schema: unauthorized
+                    application/json: 
+                      schema: ""
+                400: 
+                  body: 
+                    application/xml: 
+                      schema: badRequest
+                    application/json: 
+                      schema: ""
+                413: 
+                  body: 
+                    application/xml: 
+                      schema: overLimit
+                    application/json: 
+                      schema: ""
+            delete: 
+              description: Remove member from pool
+              responses: 
+                204: 
+                500: 
+                  body: 
+                    application/xml: 
+                      schema: Internal-server-error
+                    application/json: 
+                      schema: ""
+                503: 
+                  body: 
+                    application/xml: 
+                      schema: serviceUnavailable
+                    application/json: 
+                      schema: ""
+                401: 
+                  body: 
+                    application/xml: 
+                      schema: unauthorized
+                    application/json: 
+                      schema: ""
+                400: 
+                  body: 
+                    application/xml: 
+                      schema: badRequest
+                    application/json: 
+                      schema: ""
+                409: 
+                  body: 
+                    application/xml: 
+                      schema: conflict
+                    application/json: 
+                      schema: ""
+                413: 
+                  body: 
+                    application/xml: 
+                      schema: overLimit
+                    application/json: 
+                      schema: ""
+  /metering: 
+    /metering-label-rules: 
+      get: 
+        description: List metering label rules
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: meteringLabelRulesListGetResp
+                example: !include examples/meteringLabelRulesListGetResp-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+      post: 
+        description: Create metering label rule
+        body: 
+          application/json: 
+            schema: meteringLabelRuleCreateReq
+            example: !include examples/meteringLabelRuleCreateReq-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: meteringLabelRuleCreateResp
+                example: !include examples/meteringLabelRuleCreateResp-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+          409: 
+            body: 
+              application/xml: 
+                schema: buildInProgress
+              application/json: 
+                schema: ""
+      /{metering-label-rule-id}: 
+        get: 
+          description: Show metering label rule
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: meteringLabelRuleGetResp
+                  example: !include examples/meteringLabelRuleGetResp-example.json
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+        delete: 
+          description: Delete metering label rule
+          responses: 
+            204: 
+              body: 
+                application/json: 
+                  schema: meteringLabelRuleDeleteRespJsonHttp
+                  example: !include examples/meteringLabelRuleDeleteRespJsonHttp-example.json
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+    /metering-labels: 
+      get: 
+        description: List metering labels
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: meteringLabelsListGetResp
+                example: !include examples/meteringLabelsListGetResp-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+      post: 
+        description: Create metering label
+        body: 
+          application/json: 
+            schema: meteringLabelCreateReq
+            example: !include examples/meteringLabelCreateReq-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: meteringLabelCreateResp
+                example: !include examples/meteringLabelCreateResp-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+      /{metering_label_id}: 
+        get: 
+          description: Show metering label
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: meteringLabelGetResp
+                  example: !include examples/meteringLabelGetResp-example.json
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+        delete: 
+          description: Delete metering label
+          responses: 
+            204: 
+              body: 
+                application/json: 
+                  schema: meteringLabelDeleteRespJsonHttp
+                  example: !include examples/meteringLabelDeleteRespJsonHttp-example.json
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+  /networks: 
+    get: 
+      description: List networks
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: networksGetDetailRespXML
+              example: !include examples/networksGetDetailResp-example.xml
+            application/json: 
+              schema: networksGetDetailResp
+              example: !include examples/networksGetDetailResp-example.json
+    post: 
+      description: Bulk create networks
+      body: 
+        application/json: 
+          schema: networksPostCreateBulkReq
+          example: !include examples/networksPostCreateBulkReq-example.json
+        application/xml: 
+          schema: networksPostCreateBulkReqXML
+          example: !include examples/networksPostCreateBulkReq-example.xml
+      responses: 
+        201: 
+          body: 
+            application/xml: 
+              schema: networksCreateBulkRespXML
+              example: !include examples/networksCreateBulkResp-example.xml
+            application/json: 
+              schema: networksCreateBulkResp
+              example: !include examples/networksCreateBulkResp-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+    /{network_id}: 
+      get: 
+        description: Show network
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: networksGetDetailRespXML
+                example: !include examples/networksGetDetailResp-example.xml
+              application/json: 
+                schema: networksGetDetailResp
+                example: !include examples/networksGetDetailResp-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      put: 
+        description: Update network
+        body: 
+          application/json: 
+            schema: networkPutUpdateReq
+            example: !include examples/networkPutUpdate.req-example.json
+          application/xml: 
+            schema: networkPutUpdateReqXML
+            example: !include examples/networkPutUpdate.req-example.xml
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: networkPutUpdateRespXML
+                example: !include examples/networkPutUpdateResp-example.xml
+              application/json: 
+                schema: networkPutUpdateResp
+                example: !include examples/networkPutUpdateResp-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      delete: 
+        description: Delete network
+        responses: 
+          204: 
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+          409: 
+            body: 
+              application/xml: 
+                schema: conflict
+              application/json: 
+                schema: ""
+  /ports: 
+    get: 
+      description: List ports
+      queryParameters: 
+        status: 
+          description: The port status. Value is ACTIVE or DOWN.
+        display_name: 
+          description: The port name.
+        admin_state: 
+          description: The administrative state of the router, which is up (true) or down (false).
+          type: boolean
+        network_id: 
+          description: The ID of the attached network.
+        device_owner: 
+          description: The ID of the entity that uses this port. For example, a DHCP agent.
+        mac_address: 
+          description: The MAC address of the port.
+        port_id: 
+          description: The ID of the port.
+        security_groups: 
+          description: The IDs of any attached security groups.
+        device_id: 
+          description: The ID of the device that uses this port. For example, a virtual server.
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: portsGetRespXML
+              example: !include examples/portsGetResp-example.xml
+            application/json: 
+              schema: portsGetResp
+              example: !include examples/portsGetResp-example.json
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+    post: 
+      description: Bulk create ports
+      body: 
+        application/json: 
+          schema: portsPostCreateBulkReq
+          example: !include examples/portsPostCreateBulkReq-example.json
+        application/xml: 
+          schema: portsPostCreateBulkReqXML
+          example: !include examples/portsPostCreateBulkReq-example.xml
+      responses: 
+        201: 
+          body: 
+            application/xml: 
+              schema: portsCreateBulkRespXML
+              example: !include examples/portsCreateBulkResp-example.xml
+            application/json: 
+              schema: portsCreateBulkResp
+              example: !include examples/portsCreateBulkResp-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+        409: 
+          body: 
+            application/xml: 
+              schema: conflict
+            application/json: 
+              schema: ""
+        503: 
+          body: 
+            application/xml: 
+              schema: macGenerationFailure
+            application/json: 
+              schema: ""
+    /{port_id}: 
+      get: 
+        description: Show port
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: portGetRespXML
+                example: !include examples/portGetResp-example.xml
+              application/json: 
+                schema: portGetResp
+                example: !include examples/portGetResp-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      put: 
+        description: Update port
+        body: 
+          application/json: 
+            schema: portCreateOrUpdateReq
+            example: !include examples/portCreateOrUpdateReq-example.json
+          application/xml: 
+            schema: portCreateOrUpdateReqXML
+            example: !include examples/portCreateOrUpdateReqXML-example.xml
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: portCreateOrUpdateRespXML
+                example: !include examples/portCreateOrUpdateResp-example.xml
+              application/json: 
+                schema: portCreateOrUpdateResp
+                example: !include examples/portCreateOrUpdateResp-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+          409: 
+            body: 
+              application/xml: 
+                schema: conflict
+              application/json: 
+                schema: ""
+      delete: 
+        description: Delete port
+        responses: 
+          204: 
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+  /quotas: 
+    get: 
+      description: Show quota
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: quotasShowResp
+              example: !include examples/quotasShowResp-example.json
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+    /{tenant_id}: 
+      put: 
+        description: Update quota
+        body: 
+          application/json: 
+            schema: quotasPutReq
+            example: !include examples/quotasPutReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: quotasPutResp
+                example: !include examples/quotasPutResp-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+      delete: 
+        description: Reset quota
+        responses: 
+          204: 
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+  /routers: 
+    post: 
+      description: Create router
+      body: 
+        application/json: 
+          schema: routerPostReq
+          example: !include examples/routerPostReq-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: routerPostResp
+              example: !include examples/routerPostResp-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+    get: 
+      description: List routers
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: routersGetResp
+              example: !include examples/routersGetResp-example.json
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+    /{router_id}: 
+      get: 
+        description: Show router details
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: routerGetDetailResp
+                example: !include examples/routerGetDetailResp-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      put: 
+        description: Update router
+        body: 
+          application/json: 
+            schema: routerPutUpdateReq
+            example: !include examples/routerPutUpdate.req-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: routerPutUpdateResp
+                example: !include examples/routerPutUpdateResp-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      delete: 
+        description: Delete router
+        responses: 
+          204: 
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+          409: 
+            body: 
+              application/xml: 
+                schema: conflict
+              application/json: 
+                schema: ""
+      /add_router_interface: 
+        put: 
+          description: Add interface to router
+          body: 
+            application/json: 
+              schema: routerAddInterfaceReq
+              example: !include examples/routerAddInterface.req-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: routerAddInterfaceResp
+                  example: !include examples/routerAddInterfaceResp-example.json
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+            409: 
+              body: 
+                application/xml: 
+                  schema: conflict
+                application/json: 
+                  schema: ""
+      /remove_router_interface: 
+        put: 
+          description: Remove interface from router
+          body: 
+            application/json: 
+              schema: routerRemoveInterfaceReq
+              example: !include examples/routerRemoveInterfaceReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: routerRemoveInterfaceResp
+                  example: !include examples/routerRemoveInterfaceResp-example.json
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+            409: 
+              body: 
+                application/xml: 
+                  schema: conflict
+                application/json: 
+                  schema: ""
+  /security-group-rules: 
+    get: 
+      description: List security group rules
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: rulesSecurityGroupsListGetResp
+              example: !include examples/rulesSecurityGroupsListGetResp-example.json
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+    post: 
+      description: Create security group rule
+      body: 
+        application/json: 
+          schema: rulesSecurityGroupsCreateReq
+          example: !include examples/rulesSecurityGroupsCreateReq-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: rulesSecurityGroupsCreateResp
+              example: !include examples/rulesSecurityGroupsCreateResp-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+        409: 
+          body: 
+            application/xml: 
+              schema: buildInProgress
+            application/json: 
+              schema: ""
+    /{rules-security-groups-id}: 
+      get: 
+        description: Show security group rule
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: rulesSecurityGroupsGetResp
+                example: !include examples/rulesSecurityGroupsGetResp-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      delete: 
+        description: Delete security group rule
+        responses: 
+          204: 
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+  /security-groups: 
+    get: 
+      description: List security groups
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: securityGroupsListGetResp
+              example: !include examples/securityGroupsListGetResp-example.json
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+    post: 
+      description: Create security group
+      body: 
+        application/json: 
+          schema: securityGroupsCreateReq
+          example: !include examples/securityGroupsCreateReq-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: securityGroupsCreateResp
+              example: !include examples/securityGroupsCreateResp-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+    /{security_group_id}: 
+      get: 
+        description: Show security group
+        queryParameters: 
+          verbose: 
+            description: Show detailed information.
+            type: boolean
+          fields: 
+            description: The fields to be returned by server.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: securityGroupsGetResp
+                example: !include examples/securityGroupsGetResp-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      delete: 
+        description: Delete security group
+        responses: 
+          204: 
+            body: 
+              application/json: 
+                schema: securityGroupsDeleteRespJsonHttp
+                example: !include examples/securityGroupsDeleteRespJsonHttp-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+  /subnets: 
+    get: 
+      description: List subnets
+      queryParameters: 
+        display_name: 
+          description: Name of the network.
+        network_id: 
+          description: The ID of the attached network.
+        gateway_ip: 
+          description: The gateway IP address.
+        ip_version: 
+          description: The IP version, which is 4 or 6.
+        cidr: 
+          description: The CIDR.
+          type: boolean
+        id: 
+          description: The ID of the subnet.
+        enable_dhcp: 
+          description: If true, DHCP is enabled and If false, DHCP is disabled.
+          type: boolean
+        ipv6_ra_mode: 
+          description: "Choose from (constants.IPV6_SLAAC,constants.DHCPV6_STATEFUL,constants.DHCPV6_STATELESS,name='ipv6_address_modes,null)"
+        ipv6_address_mode: 
+          description: "Choose from (constants.IPV6_SLAAC,constants.DHCPV6_STATEFUL,constants.DHCPV6_STATELESS,name='ipv6_address_modes,null)."
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: subnetsGetRespXML
+              example: !include examples/subnetsGetResp-example.xml
+            application/json: 
+              schema: subnetsGetResp
+              example: !include examples/subnetsGetResp-example.json
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+    post: 
+      description: Bulk create subnet
+      body: 
+        application/json: 
+          schema: subnetsPostCreateBulkReq
+          example: !include examples/subnetsPostCreateBulkReq-example.json
+        application/xml: 
+          schema: subnetsPostCreateBulkReqXML
+          example: !include examples/subnetsPostCreateBulkReq-example.xml
+      responses: 
+        201: 
+          body: 
+            application/xml: 
+              schema: subnetsCreateBulkRespXML
+              example: !include examples/subnetsCreateBulkResp-example.xml
+            application/json: 
+              schema: subnetsCreateBulkResp
+              example: !include examples/subnetsCreateBulkResp-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+        409: 
+          body: 
+            application/xml: 
+              schema: conflict
+            application/json: 
+              schema: ""
+    /{subnet_id}: 
+      get: 
+        description: Show subnet
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: subnetShowRespXML
+                example: !include examples/subnetShowResp-example.xml
+              application/json: 
+                schema: subnetShowResp
+                example: !include examples/subnetShowResp-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      put: 
+        description: Update subnet
+        body: 
+          application/json: 
+            schema: subnetUpdateReq
+            example: !include examples/subnetUpdateReq-example.json
+          application/xml: 
+            schema: subnetUpdateReqXML
+            example: !include examples/subnetUpdateReq-example.xml
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: subnetUpdateRespXML
+                example: !include examples/subnetUpdateResp-example.xml
+              application/json: 
+                schema: subnetUpdateResp
+                example: !include examples/subnetUpdateResp-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      delete: 
+        description: Delete subnet
+        responses: 
+          204: 
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+          409: 
+            body: 
+              application/xml: 
+                schema: conflict
+              application/json: 
+                schema: ""
+  /vpn: 
+    /ikepolicies: 
+      get: 
+        description: List IKE policies
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: ikepolicyListRes
+                example: !include examples/ikepolicyListRes-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+      post: 
+        description: Create IKE policy
+        body: 
+          application/json: 
+            schema: ikepolicyCreateReq
+            example: !include examples/ikepolicyCreateReq-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: ikepolicyCreateRes
+                example: !include examples/ikepolicyCreateRes-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+      /{ikepolicy_id}: 
+        get: 
+          description: Show IKE policies
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: ikepolicyShowRes
+                  example: !include examples/ikepolicyShowRes-example.json
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            403: 
+              body: 
+                application/xml: 
+                  schema: forbidden
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+        put: 
+          description: Update IKE policy
+          body: 
+            application/json: 
+              schema: ikepolicyUpdateReq
+              example: !include examples/ikepolicyUpdateReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: ikepolicyUpdateRes
+                  example: !include examples/ikepolicyUpdateRes-example.json
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+        delete: 
+          description: Remove IKE policy
+          responses: 
+            204: 
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+            409: 
+              body: 
+                application/xml: 
+                  schema: conflict
+                application/json: 
+                  schema: ""
+    /ipsecpolicies: 
+      get: 
+        description: List IPSec policies
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: ipsecpolicyListRes
+                example: !include examples/ipsecpolicyListRes-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+      post: 
+        description: Create IPSec policy
+        body: 
+          application/json: 
+            schema: ipsecpolicyCreateReq
+            example: !include examples/ipsecpolicyCreateReq-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: ipsecpolicyCreateRes
+                example: !include examples/ipsecpolicyCreateRes-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+      /{ipsecpolicy_id}: 
+        get: 
+          description: Show IPSec Policies
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: ipsecpolicyShowRes
+                  example: !include examples/ipsecpolicyShowRes-example.json
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            403: 
+              body: 
+                application/xml: 
+                  schema: forbidden
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+        put: 
+          description: Update IPSec policy
+          body: 
+            application/json: 
+              schema: ipsecpolicyUpdateReq
+              example: !include examples/ipsecpolicyUpdateReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: ipsecpolicyUpdateRes
+                  example: !include examples/ipsecpolicyUpdateRes-example.json
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+        delete: 
+          description: Remove IPSec policy
+          responses: 
+            204: 
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+            409: 
+              body: 
+                application/xml: 
+                  schema: conflict
+                application/json: 
+                  schema: ""
+    /ipsecsiteconnections: 
+      get: 
+        description: List IPSec connections
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: ipsecSiteConnectionListRes
+                example: !include examples/ipsecSiteConnectionListRes-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+      post: 
+        description: Create IPSec connection
+        body: 
+          application/json: 
+            schema: ipsecSiteConnectionCreateReq
+            example: !include examples/ipsecSiteConnectionCreateReq-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: ipsecSiteConnectionCreateRes
+                example: !include examples/ipsecSiteConnectionCreateRes-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+      /{connection_id}: 
+        get: 
+          description: Show IPSec connection
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: ipsecSiteConnectionShowRes
+                  example: !include examples/ipsecSiteConnectionShowRes-example.json
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            403: 
+              body: 
+                application/xml: 
+                  schema: forbidden
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+        put: 
+          description: Update IPSec connection
+          body: 
+            application/json: 
+              schema: ipsecSiteConnectionUpdateReq
+              example: !include examples/ipsecSiteConnectionUpdateReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: ipsecSiteConnectionUpdateRes
+                  example: !include examples/ipsecSiteConnectionUpdateRes-example.json
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+        delete: 
+          description: Remove IPSec connection
+          responses: 
+            204: 
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+            409: 
+              body: 
+                application/xml: 
+                  schema: conflict
+                application/json: 
+                  schema: ""
+    /vpnservices: 
+      get: 
+        description: List VPN services
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: vpnserviceListRes
+                example: !include examples/vpnserviceListRes-example.json
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+      post: 
+        description: Create VPN service
+        body: 
+          application/json: 
+            schema: vpnserviceCreateReq
+            example: !include examples/vpnserviceCreateReq-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: vpnserviceCreateRes
+                example: !include examples/vpnserviceCreateRes-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+      /{service_id}: 
+        get: 
+          description: Show VPN service details
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: vpnserviceShowRes
+                  example: !include examples/vpnserviceShowRes-example.json
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            403: 
+              body: 
+                application/xml: 
+                  schema: forbidden
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+        put: 
+          description: Update VPN service
+          body: 
+            application/json: 
+              schema: vpnserviceUpdateReq
+              example: !include examples/vpnserviceUpdateReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: vpnserviceUpdateRes
+                  example: !include examples/vpnserviceUpdateRes-example.json
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+        delete: 
+          description: Remove VPN service
+          responses: 
+            204: 
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+            409: 
+              body: 
+                application/xml: 
+                  schema: conflict
+                application/json: 
+                  schema: ""

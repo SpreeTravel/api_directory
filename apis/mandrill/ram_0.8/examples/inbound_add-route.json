@@ -1,0 +1,6 @@
+{
+  "key": "example key",
+  "domain": "inbound.example.com",
+  "pattern": "mailbox-*",
+  "url": "http://example.com/webhook-url"
+}

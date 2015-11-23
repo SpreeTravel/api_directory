@@ -1,0 +1,77 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "request" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "latitude" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "requested" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "interpreted" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "longitude" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "requested" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "interpreted" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "radiusMiles" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "requested" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "interpreted" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "maxFlights" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "extendedOptions" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "url" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "appendix" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "flightPositions" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+      ]
+    }
+  }
+}

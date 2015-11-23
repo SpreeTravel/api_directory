@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="magento_api">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="data_item" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="product_id" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="stock_id" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="qty" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="min_qty" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+            </xsd:sequence>
+            <xsd:attribute name="item_id" type="xsd:int" use="required"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

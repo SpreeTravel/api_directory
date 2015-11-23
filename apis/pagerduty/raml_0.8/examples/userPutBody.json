@@ -1,0 +1,7 @@
+{
+	"user" : {
+		"role" : "admin" ,
+		"name" : "Bart Simpson" ,
+		"email" : "bart@example.com"
+	}
+}

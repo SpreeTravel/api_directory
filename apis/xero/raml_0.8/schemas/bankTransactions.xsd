@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="BankTransactions">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element maxOccurs="unbounded" ref="BankTransaction"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="BankTransaction">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Contact"/>
+    <xs:element ref="Date"/>
+    <xs:element ref="LineAmountTypes"/>
+    <xs:element ref="SubTotal"/>
+    <xs:element ref="TotalTax"/>
+    <xs:element ref="Total"/>
+    <xs:element ref="UpdatedDateUTC"/>
+    <xs:element ref="FullyPaidOnDate"/>
+    <xs:element ref="BankTransactionID"/>
+    <xs:element ref="BankAccount"/>
+    <xs:element ref="Type"/>
+    <xs:element ref="IsReconciled"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Contact">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="ContactID"/>
+    <xs:element ref="Name"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="ContactID" type="xs:string"/>
+  <xs:element name="Name" type="xs:NCName"/>
+  <xs:element name="Date" type="xs:dateTime"/>
+  <xs:element name="LineAmountTypes" type="xs:NCName"/>
+  <xs:element name="SubTotal" type="xs:decimal"/>
+  <xs:element name="TotalTax" type="xs:decimal"/>
+  <xs:element name="Total" type="xs:decimal"/>
+  <xs:element name="UpdatedDateUTC" type="xs:dateTime"/>
+  <xs:element name="FullyPaidOnDate" type="xs:dateTime"/>
+  <xs:element name="BankTransactionID" type="xs:string"/>
+  <xs:element name="BankAccount">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="AccountID"/>
+    <xs:element ref="Code"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="AccountID" type="xs:string"/>
+  <xs:element name="Code" type="xs:NCName"/>
+  <xs:element name="Type" type="xs:NCName"/>
+  <xs:element name="IsReconciled" type="xs:boolean"/>
+</xs:schema>

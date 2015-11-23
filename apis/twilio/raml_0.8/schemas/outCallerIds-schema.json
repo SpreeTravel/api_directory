@@ -1,0 +1,67 @@
+{
+    "": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+        "page": {
+            "type": "integer"
+        },
+        "num_pages": {
+            "type": "integer"
+        },
+        "page_size": {
+            "type": "integer"
+        },
+        "total": {
+            "type": "integer"
+        },
+        "start": {
+            "type": "integer"
+        },
+        "end": {
+            "type": "integer"
+        },
+        "uri": {
+            "type": "string"
+        },
+        "first_page_uri": {
+            "type": "string"
+        },
+        "previous_page_uri": {
+            "type": "string"
+        },
+        "next_page_uri": {
+            "type": "string"
+        },
+        "last_page_uri": {
+            "type": "string"
+        },
+        "outgoing_caller_ids": 
+            {
+                "properties": {
+                    "sid": {
+                        "type": "string"
+                    },
+                    "account_sid": {
+                        "type": "string"
+                    },
+                    "friendly_name": {
+                        "type": "string"
+                    },
+                    "phone_number": {
+                        "type": "string"
+                    },
+                    "date_created": {
+                        "type": "string"
+                    },
+                    "date_updated": {
+                        "type": "string"
+                    },
+                    "uri": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            }
+        
+    }
+}

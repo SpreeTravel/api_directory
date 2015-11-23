@@ -1,0 +1,41 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "moreChanges": {
+      "type": "array",
+      "required": false,
+      "items": [{
+        "type": "object",
+        "required": false,
+        "properties": {
+          "segments": {
+            "type": "array",
+            "required": false
+          },
+          "text": {
+            "type": "string",
+            "required": false
+          },
+          "type": {
+            "type": "string",
+            "required": false
+          }
+        }
+      }]
+    },
+    "moreChangesCount": {
+      "type": "integer",
+      "required": false
+    },
+    "text": {
+      "type": "string",
+      "required": false
+    },
+    "type": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "attachment": {
+      "type": "string",
+      "required": false
+    },
+    "body": {
+      "type": "object",
+      "required": false,
+      "properties": {"messageSegments": {
+        "type": "array",
+        "required": false
+      }}
+    },
+    "capabilities": {
+      "type": "object",
+      "required": false,
+      "properties": {"content": {
+        "type": "object",
+        "required": false,
+        "properties": {
+          "contentDocumentId": {
+            "type": "string",
+            "required": false
+          },
+          "description": {
+            "type": "string",
+            "required": false
+          },
+          "title": {
+            "type": "string",
+            "required": false
+          }
+        }
+      }}
+    }
+  }
+}

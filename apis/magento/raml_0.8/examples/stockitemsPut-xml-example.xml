@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<magento_api>
+  <data_item item_id="157">
+    <product_id>262</product_id>
+    <stock_id>1</stock_id>
+    <qty>100.0000</qty>
+    <min_qty>0.0000</min_qty>
+  </data_item>
+  <data_item item_id="158">
+    <product_id>263</product_id>
+    <stock_id>1</stock_id>
+    <qty>100.0000</qty>
+    <min_qty>0.0000</min_qty>
+  </data_item>
+  <data_item item_id="159">
+    <product_id>264</product_id>
+    <stock_id>1</stock_id>
+    <qty>120.0000</qty>
+    <min_qty>0.0000</min_qty>
+  </data_item>
+  <data_item item_id="153">
+    <product_id> </product_id>
+    <qty>110.0000</qty>
+    <min_qty>0.0000</min_qty>
+  </data_item>
+</magento_api>

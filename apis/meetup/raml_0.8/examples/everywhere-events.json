@@ -1,0 +1,80 @@
+{
+  "results": [
+    {
+      "zip": "zip 0",
+      "lon": 1.0,
+      "venue_name": "venue_name 0",
+      "status": "status 0",
+      "link": "link 0",
+      "state": 0,
+      "community": {
+        "id": 0,
+        "name": "name 0",
+        "urlname": "urlname 0"
+      },
+      "address1": "address1 0",
+      "city": "city 0",
+      "country": "country 0",
+      "helpers": {
+        "member_state": "member_state 0",
+        "member_city": "member_city 0",
+        "name": "name 0",
+        "member_country": "member_country 0",
+        "member_id": 0
+      },
+      "id": 0,
+      "time": 0,
+      "short_description": "short_description 0",
+      "updated": 0,
+      "udf_{varname}": "udf_{varname} 0",
+      "created": 0,
+      "container": {
+        "id": 0,
+        "name": "name 0",
+        "urlname": "urlname 0"
+      },
+      "description": "description 0",
+      "rsvp_count": 0,
+      "meetup_url": "meetup_url 0",
+      "lat": 1.0
+    },
+    {
+      "zip": "zip 1",
+      "lon": 1.0,
+      "venue_name": "venue_name 1",
+      "status": "status 1",
+      "link": "link 1",
+      "state": 1,
+      "community": {
+        "id": 1,
+        "name": "name 1",
+        "urlname": "urlname 1"
+      },
+      "address1": "address1 1",
+      "city": "city 1",
+      "country": "country 1",
+      "helpers": {
+        "member_state": "member_state 1",
+        "member_city": "member_city 1",
+        "name": "name 1",
+        "member_country": "member_country 1",
+        "member_id": 1
+      },
+      "id": 1,
+      "time": 1,
+      "short_description": "short_description 1",
+      "updated": 1,
+      "udf_{varname}": "udf_{varname} 1",
+      "created": 1,
+      "container": {
+        "id": 1,
+        "name": "name 1",
+        "urlname": "urlname 1"
+      },
+      "description": "description 1",
+      "rsvp_count": 1,
+      "meetup_url": "meetup_url 1",
+      "lat": 1.0
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "programId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "programName" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "action" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "details" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "programOccurrenceId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "performedAt" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

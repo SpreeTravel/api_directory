@@ -1,0 +1,25 @@
+{
+  "scope" : "global" ,
+  "count" : "undefined" ,
+  "membershipAdditions" : [
+    null ,
+    null
+  ] ,
+  "membershipDeletions" : [
+    null ,
+    null
+  ] ,
+  "dataLookupId" : "undefined" ,
+  "name" : "undefined" ,
+  "description" : "Eloqua" ,
+  "permissions" : "undefined" ,
+  "folderId" : "undefined" ,
+  "sourceTemplateId" : "undefined" ,
+  "createdBy" : "undefined" ,
+  "createdAt" : "undefined" ,
+  "updatedBy" : "undefined" ,
+  "updatedAt" : "undefined" ,
+  "accessedAt" : "undefined" ,
+  "scheduledFor" : "undefined" ,
+  "depth" : "minimal"
+}

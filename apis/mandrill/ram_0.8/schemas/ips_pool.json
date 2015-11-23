@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "name": {
+      "required": false,
+      "type": "string"
+    },
+    "created_at": {
+      "required": false,
+      "type": "string"
+    },
+    "ips": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "created_at": {
+            "required": false,
+            "type": "string"
+          },
+          "custom_dns": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "required": false,
+                "type": "boolean"
+              },
+              "valid": {
+                "required": false,
+                "type": "boolean"
+              },
+              "error": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "domain": {
+            "required": false,
+            "type": "string"
+          },
+          "ip": {
+            "required": false,
+            "type": "string"
+          },
+          "pool": {
+            "required": false,
+            "type": "string"
+          },
+          "warmup": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "warming_up": {
+                "required": false,
+                "type": "boolean"
+              },
+              "start_at": {
+                "required": false,
+                "type": "string"
+              },
+              "end_at": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "ipsec_site_connection" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "mtu" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

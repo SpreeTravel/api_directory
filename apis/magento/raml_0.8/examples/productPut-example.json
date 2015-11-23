@@ -1,0 +1,16 @@
+{
+  "attribute_set_id" : "4" ,
+  "type_id" : "simple" ,
+  "sku" : "wedding dress" ,
+  "name" : "Dress_test" ,
+  "meta_title" : "dress" ,
+  "meta_description" : "a wedding dress" ,
+  "price" : "2000.0000" ,
+  "weight" : "0.5000" ,
+  "status" : "1" ,
+  "visibility" : "4" ,
+  "enable_googlecheckout" : "1" ,
+  "tax_class_id" : "7" ,
+  "description" : "dress" ,
+  "meta_keyword" : "dress, wedding"
+}

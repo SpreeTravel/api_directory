@@ -1,0 +1,28 @@
+{
+  "results": [
+    {
+      "lon": 1.0,
+      "created": 0,
+      "photo_url": "photo_url 0",
+      "name": "name 0",
+      "link": "link 0",
+      "state": 0,
+      "comment": "comment 0",
+      "lat": 1.0,
+      "city": "city 0",
+      "country": "country 0"
+    },
+    {
+      "lon": 1.0,
+      "created": 1,
+      "photo_url": "photo_url 1",
+      "name": "name 1",
+      "link": "link 1",
+      "state": 1,
+      "comment": "comment 1",
+      "lat": 1.0,
+      "city": "city 1",
+      "country": "country 1"
+    }
+  ]
+}

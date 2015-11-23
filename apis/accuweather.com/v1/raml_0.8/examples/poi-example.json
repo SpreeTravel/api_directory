@@ -1,0 +1,76 @@
+[
+  {
+    "Version" : 1 ,
+    "Key" : "14918_POI" ,
+    "Type" : "POI" ,
+    "Rank" : 250 ,
+    "LocalizedName" : "Disney Studios" ,
+    "EnglishName" : "Disney Studios" ,
+    "PrimaryPostalCode" : "91521" ,
+    "Region" : {
+      "ID" : "NAM" ,
+      "LocalizedName" : "North America" ,
+      "EnglishName" : "North America"
+    } ,
+    "Country" : {
+      "ID" : "US" ,
+      "LocalizedName" : "United States" ,
+      "EnglishName" : "United States"
+    } ,
+    "AdministrativeArea" : {
+      "ID" : "CA" ,
+      "LocalizedName" : "California" ,
+      "EnglishName" : "California" ,
+      "Level" : 1 ,
+      "LocalizedType" : "State" ,
+      "EnglishType" : "State" ,
+      "CountryID" : "US"
+    } ,
+    "TimeZone" : {
+      "Code" : "PDT" ,
+      "Name" : "America/Los_Angeles" ,
+      "GmtOffset" : -7 ,
+      "IsDaylightSaving" : true ,
+      "NextOffsetChange" : null
+    } ,
+    "GeoPosition" : {
+      "Latitude" : 34.16 ,
+      "Longitude" : -118.32 ,
+      "Elevation" : {
+        "Metric" : {
+          "Value" : "158" ,
+          "Unit" : "m" ,
+          "UnitType" : 5
+        } ,
+        "Imperial" : {
+          "Value" : "518" ,
+          "Unit" : "ft" ,
+          "UnitType" : 0
+        }
+      }
+    } ,
+    "IsAlias" : false ,
+    "SupplementalAdminAreas" : [
+    ] ,
+    "Details" : {
+      "Key" : "14918_POI" ,
+      "StationCode" : "CAUY" ,
+      "StationGmtOffset" : -8 ,
+      "BandMap" : "" ,
+      "Climo" : "BUR" ,
+      "LocalRadar" : "KRIV" ,
+      "MediaRegion" : null ,
+      "Metar" : "KBUR" ,
+      "NXMetro" : "VNY" ,
+      "NXState" : "CAS" ,
+      "Population" : null ,
+      "PrimaryWarningCountyCode" : "CAC037" ,
+      "PrimaryWarningZoneCode" : "CAZ547" ,
+      "Satellite" : "" ,
+      "Synoptic" : "72288" ,
+      "MarineStation" : "SMO" ,
+      "MarineStationGMTOffset" : -8 ,
+      "VideoCode" : "LAX"
+    }
+  }
+]

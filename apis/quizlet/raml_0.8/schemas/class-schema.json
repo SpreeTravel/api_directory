@@ -1,0 +1,39 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "id" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "set_count" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "user_count" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "created_date" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "is_public" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "admin_only" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "description" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

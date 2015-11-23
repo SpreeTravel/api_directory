@@ -1,0 +1,4 @@
+curl -H 'Accept: application/vnd.twitchtv.v2+json' 
+-H 'Authorization: OAuth <access_token>' \
+-d "channel[status]=Playing+cool+new+game!&channel[game]=Diablo" \
+-X PUT https://api.twitch.tv/kraken/channels/test_user1

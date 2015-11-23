@@ -1,0 +1,65 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "id" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "kind" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "person" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "kind" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "email" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "initials" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "username" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "project_color" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "project_id" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "role" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "wants_comment_notification_emails" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "will_receive_mention_notifications_or_emails" : {
+      "type" : "boolean" ,
+      "required" : false
+    }
+  }
+}

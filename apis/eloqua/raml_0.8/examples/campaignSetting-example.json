@@ -1,0 +1,18 @@
+{
+  "processActivityFor" : "undefined" ,
+  "fiscalYearStartMonth" : "undefined" ,
+  "baseCurrency" : "undefined" ,
+  "leadStageContactFieldId" : "undefined" ,
+  "leadStages" : [
+    {
+      "id" : "undefined" ,
+      "name" : "undefined" ,
+      "value" : "undefined"
+    }
+  ] ,
+  "responseRules" : [
+    {
+      "campaignResponseActivityId" : "12"
+    }
+  ]
+}

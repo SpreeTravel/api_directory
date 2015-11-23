@@ -1,0 +1,33 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "neanderthal" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "proportion" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "ancestry" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "average" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "percentile" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": false
+    },
+    "isDefault": {
+      "type": "boolean",
+      "required": false
+    },
+    "tabType": {
+      "type": "string",
+      "required": false
+    },
+    "tabUrl": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

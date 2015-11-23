@@ -1,0 +1,38 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="request">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:int" name="price"/>
+        <xs:element type="xs:byte" name="down"/>
+        <xs:element type="xs:int" name="zip"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="message">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="text"/>
+        <xs:element type="xs:byte" name="code"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="payment" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:float" name="rate"/>
+              <xs:element type="xs:short" name="monthlyPrincipalAndInterest"/>
+              <xs:element type="xs:byte" name="monthlyMortgageInsurance"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="loanType" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:int" name="downPayment"/>
+        <xs:element type="xs:short" name="monthlyPropertyTaxes"/>
+        <xs:element type="xs:byte" name="monthlyHazardInsurance"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

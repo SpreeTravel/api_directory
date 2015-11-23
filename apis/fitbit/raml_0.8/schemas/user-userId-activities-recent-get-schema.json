@@ -1,0 +1,33 @@
+{
+  "type": "array",
+  "$schema": "http://json-schema.org/draft-03/schema",
+      "items": {
+        "type": "object",
+        "properties": {
+          "activityId": {
+            "description": "The activity id.",
+            "type": "integer"
+          },
+          "calories": {
+            "description": "Calories expended during the activity the last time it was logged.",
+            "type": "number"
+          },
+          "description": {
+            "description": "Activity level description for an activity with level. Empty for an activity with no level.",
+            "type": "string"
+          },
+          "distance": {
+            "description": "Distance in units specified via the unit system.",
+            "type": "number"
+          },
+          "duration": {
+            "description": "Duration in milliseconds.",
+            "type": "integer"
+          },
+          "name": {
+            "description": "Name of the activity.",
+            "type": "string"
+          }
+        }
+  	  }
+}

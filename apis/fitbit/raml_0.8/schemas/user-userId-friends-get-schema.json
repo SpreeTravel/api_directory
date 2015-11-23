@@ -1,0 +1,75 @@
+{
+  "type": "object",
+  "": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "friends": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "type": "object",
+            "properties": {
+              "aboutMe": {
+                "type": "string"
+              },
+              "avatar": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "dateOfBirth": {
+                "type": "string"
+              },
+              "displayName": {
+                "type": "string"
+              },
+              "encodedId": {
+                "type": "string"
+              },
+              "fullName": {
+                "type": "string"
+              },
+              "gender": {
+                "enum": [
+                  "MALE",
+                  "FEMALE"
+                ]
+              },
+              "height": {
+                "type": "number"
+              },
+              "nickname": {
+                "type": "string"
+              },
+              "offsetFromUTCMillis": {
+                "type": "integer"
+              },
+              "state": {
+                "type": "string",
+                "minLength": 2,
+                "maxLength": 2
+              },
+              "strideLengthRunning": {
+                "type": "number"
+              },
+              "strideLengthWalking": {
+                "type": "number"
+              },
+              "timezone": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

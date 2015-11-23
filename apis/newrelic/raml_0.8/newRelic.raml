@@ -1,0 +1,449 @@
+#%RAML 0.8
+title: NewRelic
+version: v2
+baseUri: https://api.newrelic.com/{version}
+securitySchemes:
+  - x-Api-Key: !include securitySchemes/x-Api-Key.raml
+schemas:
+  - alertPoliciesList: !include schemas/alertPoliciesList.json
+  - alertPolicy: !include schemas/alertPolicy.json
+  - alertPolicyPut: !include schemas/alertPolicyPut.json
+  - application: !include schemas/application.json
+  - applicationPut: !include schemas/applicationPut.json
+  - applicationsList: !include schemas/applicationsList.json
+  - host: !include schemas/host.json
+  - hostsList: !include schemas/hostsList.json
+  - instance: !include schemas/instance.json
+  - instancesList: !include schemas/instancesList.json
+  - metricNames: !include schemas/metricNames.json
+  - notificationChannel: !include schemas/notificationChannel.json
+  - notificationChannelsList: !include schemas/notificationChannelsList.json
+  - server: !include schemas/server.json
+  - serverPut: !include schemas/serverPut.json
+  - serversList: !include schemas/serversList.json
+  - user: !include schemas/user.json
+  - usersList: !include schemas/usersList.json
+  - keyTransaction: !include schemas/keyTransaction.json
+  - keyTransactionsList: !include schemas/keyTransactionsList.json
+resourceTypes:
+  - basic: !include resourceTypes/basic.raml
+  - collectionMember: !include resourceTypes/collectionMember.raml
+  - collection: !include resourceTypes/collection.raml
+traits:
+  - metricData: !include traits/metricData.raml
+  - filterableByName: !include traits/filterableByName.raml
+  - filterableByHostname: !include traits/filterableByHostname.raml
+  - filterableById: !include traits/filterableById.raml
+  - metricNames: !include traits/metricNames.raml
+  - filterableByType: !include traits/filterableByType.raml
+/applications{mediaTypeExtension}: 
+  type: collection
+  uriParameters: 
+    mediaTypeExtension: 
+      enum: [ .json , .xml ]
+  get: 
+    is: [ filterableById: { name: application } , filterableByName: { name: application } ]
+    description: |
+      This API endpoint returns a paginated list of the Applications associated with your New Relic account.
+      Applications can be filtered by their name, the list of application IDs or the application language as reported by the agents.
+    queryParameters: 
+      filter[language]: 
+        description: Filter by application language
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: applicationsList
+            example: !include examples/applicationsList.json
+/applications: 
+  /{id}{mediaTypeExtension}: 
+    type: { collectionMember: { name: application } }
+    uriParameters: 
+      id: 
+        description: Application ID
+        type: integer
+      mediaTypeExtension: 
+        enum: [ .json , .xml ]
+    get: 
+      description: |
+        This API endpoint returns a single Application, identified its ID.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: application
+              example: !include examples/application.json
+    put: 
+      description: |
+        This API endpoint allows you to update certain parameters of your application.
+        The input is expected to be in JSON or XML format in the body parameter of the PUT request. The exact schema is defined below. Any extra parameters passed in the body will be ignored.
+      body: 
+        application/json: 
+          schema: applicationPut
+          example: !include examples/applicationPut.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: application
+              example: !include examples/application.json
+    delete: 
+      description: |
+        This API endpoint deletes an application and all of its reported data.
+        **WARNING**: Only applications that have stopped reporting can be deleted. This is an irreversible process which will delete all reported data for this application.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: application
+              example: !include examples/application.json
+  /{application_id}: 
+    uriParameters: 
+      application_id: 
+        description: Application ID
+        type: integer
+    /metrics{mediaTypeExtension}: 
+      type: collection
+      uriParameters: 
+        mediaTypeExtension: 
+          enum: [ .json , .xml ]
+      get: 
+        is: [ metricNames ]
+    /metrics: 
+      /data{mediaTypeExtension}: 
+        uriParameters: 
+          mediaTypeExtension: 
+            enum: [ .json , .xml ]
+        get: 
+          is: [ metricData ]
+    /hosts{mediaTypeExtension}: 
+      type: collection
+      uriParameters: 
+        mediaTypeExtension: 
+          enum: [ .json , .xml ]
+      get: 
+        is: [ filterableById: { name: host } , filterableByHostname ]
+        description: |
+          This API endpoint returns a paginated list of hosts associated with the given application.
+          Application hosts can be filtered by hostname, or the list of application host IDs.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: hostsList
+                example: !include examples/hostsList.json
+    /hosts: 
+      /{host_id}{mediaTypeExtension}: 
+        type: { collectionMember: { name: application host } }
+        uriParameters: 
+          host_id: 
+            description: Application host ID
+            type: integer
+          mediaTypeExtension: 
+            enum: [ .json , .xml ]
+        get: 
+          description: |
+            This API endpoint returns a single application host, identified by its ID.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: host
+                  example: !include examples/host.json
+      /{host_id}: 
+        /metrics{mediaTypeExtension}: 
+          type: collection
+          uriParameters: 
+            mediaTypeExtension: 
+              enum: [ .json , .xml ]
+          get: 
+            is: [ metricNames ]
+        /metrics: 
+          /data{mediaTypeExtension}: 
+            uriParameters: 
+              mediaTypeExtension: 
+                enum: [ .json , .xml ]
+            get: 
+              is: [ metricData ]
+    /instances{mediaTypeExtension}: 
+      type: collection
+      uriParameters: 
+        mediaTypeExtension: 
+          enum: [ .json , .xml ]
+      get: 
+        is: [ filterableById: { name: application instance } , filterableByHostname ]
+        description: |
+          This API endpoint returns a paginated list of instances associated with the given application.
+          Application instances can be filtered by hostname, or the list of application instance IDs.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: instancesList
+                example: !include examples/instancesList.json
+    /instances: 
+      /{instance_id}{mediaTypeExtension}: 
+        type: { collectionMember: { name: application instance } }
+        uriParameters: 
+          instance_id: 
+            description: Application instance ID
+            type: integer
+          mediaTypeExtension: 
+            enum: [ .json , .xml ]
+        get: 
+          description: |
+            This API endpoint returns a single application instance, identified by its ID.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: instance
+                  example: !include examples/instance.json
+      /{instance_id}: 
+        /metrics{mediaTypeExtension}: 
+          type: collection
+          uriParameters: 
+            mediaTypeExtension: 
+              enum: [ .json , .xml ]
+          get: 
+            is: [ metricNames ]
+        /metrics: 
+          /data{mediaTypeExtension}: 
+            uriParameters: 
+              mediaTypeExtension: 
+                enum: [ .json , .xml ]
+            get: 
+              is: [ metricData ]
+/servers{mediaTypeExtension}: 
+  type: collection
+  uriParameters: 
+    mediaTypeExtension: 
+      enum: [ .json , .xml ]
+  get: 
+    is: [ filterableById: { name: server } , filterableByName: { name: server } ]
+    description: |
+      This API endpoint returns a paginated list of the Servers associated with your New Relic account.
+      Servers can be filtered by their name/hostname, or the list of server IDs.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: serversList
+            example: !include examples/serversList.json
+/servers: 
+  /{server_id}{mediaTypeExtension}: 
+    type: { collectionMember: { name: server } }
+    uriParameters: 
+      server_id: 
+        description: Server ID
+        type: integer
+      mediaTypeExtension: 
+        enum: [ .json , .xml ]
+    get: 
+      description: |
+        This API endpoint returns a single Server, identified by ID.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: server
+              example: !include examples/server.json
+    put: 
+      description: |
+        This API endpoint allows you to rename your server.
+        The input is expected to be in JSON or XML format in the body parameter of the PUT request. The exact schema is defined below. Any extra parameters passed in the body will be ignored.
+      body: 
+        application/json: 
+          schema: serverPut
+          example: !include examples/serverPut.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: server
+              example: !include examples/server.json
+    delete: 
+      description: |
+        This API endpoint deletes a server and all of its reported data.
+        **WARNING**: Only servers that have stopped reporting can be deleted. This is an irreversible process which will delete all reported data for this server.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: server
+              example: !include examples/server.json
+  /{server_id}: 
+    /metrics{mediaTypeExtension}: 
+      type: collection
+      uriParameters: 
+        mediaTypeExtension: 
+          enum: [ .json , .xml ]
+      get: 
+        is: [ metricNames ]
+    /metrics: 
+      /data{mediaTypeExtension}: 
+        type: collection
+        uriParameters: 
+          mediaTypeExtension: 
+            enum: [ .json , .xml ]
+        get: 
+          is: [ metricData ]
+/users{mediaTypeExtension}: 
+  type: collection
+  uriParameters: 
+    mediaTypeExtension: 
+      enum: [ .json , .xml ]
+  get: 
+    is: [ filterableById: { name: user } ]
+    description: |
+      Show a list of all users
+    queryParameters: 
+      filter[email]: 
+        description: Filter by user email
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: usersList
+            example: !include examples/usersList.json
+/users: 
+  /{id}{mediaTypeExtension}: 
+    type: { collectionMember: { name: user } }
+    uriParameters: 
+      id: 
+        description: User ID
+        type: integer
+      mediaTypeExtension: 
+        enum: [ .json , .xml ]
+    get: 
+      description: |
+        This API endpoint returns a single user, identified by ID.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: user
+              example: !include examples/user.json
+/alert_policies{mediaTypeExtension}: 
+  type: collection
+  uriParameters: 
+    mediaTypeExtension: 
+      enum: [ .json , .xml ]
+  get: 
+    is: [ filterableById: { name: policy } , filterableByName: { name: policy } , filterableByType: { name: policy } ]
+    description: |
+      This API endpoint returns a paginated list of the alert policies associated with your New Relic account.
+      Alert policies can be filtered by their name, list of IDs, type (application, key_transaction, or server) or whether or not policies are archived (defaults to filtering archived policies).
+    queryParameters: 
+      filter[enabled]: 
+        description: Select only enabled/disabled policies
+        type: boolean
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: alertPoliciesList
+            example: !include examples/alertPoliciesList.json
+/alert_policies: 
+  /{id}{mediaTypeExtension}: 
+    type: { collectionMember: { name: aliert policy } }
+    uriParameters: 
+      id: 
+        description: Alert policy ID
+        type: integer
+      mediaTypeExtension: 
+        enum: [ .json , .xml ]
+    get: 
+      description: |
+        This API endpoint returns a single alert policy, identified by ID.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: alertPolicy
+              example: !include examples/alertPolicy.json
+    put: 
+      description: |
+        This API endpoint allows you to update your alert policies.
+        The input is expected to be in JSON or XML format in the body parameters of the PUT request. The exact schema is defined below. Any extra parameters passed in the body will be ignored.
+        **NOTE**: When updating alertable and notification channel links, the list sent replaces the existing list. Invalid values will be ignored but an empty array will result in alertables/channels being reset.
+      body: 
+        application/json: 
+          schema: alertPolicyPut
+          example: !include examples/alertPolicyPut.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: alertPolicy
+              example: !include examples/alertPolicy.json
+/notification_channels{mediaTypeExtension}: 
+  type: collection
+  uriParameters: 
+    mediaTypeExtension: 
+      enum: [ .json , .xml ]
+  get: 
+    is: [ filterableById: { name: notification channel } , filterableByType: { name: notification channel } ]
+    description: |
+      This API endpoint returns a paginated list of the notification channels associated with your New Relic account.
+      Notification channels can be filtered by their type or a list of IDs.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: notificationChannelsList
+            example: !include examples/notificationChannelsList.json
+/notification_channels: 
+  /{id}{mediaTypeExtension}: 
+    type: { collectionMember: { name: notification channel } }
+    uriParameters: 
+      id: 
+        description: User ID
+        type: integer
+      mediaTypeExtension: 
+        enum: [ .json , .xml ]
+    get: 
+      description: |
+        This API endpoint returns a single notification channel, identified by ID.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: notificationChannel
+              example: !include examples/notificationChannel.json
+/key_transactions{mediaTypeExtension}: 
+  type: collection
+  uriParameters: 
+    mediaTypeExtension: 
+      enum: [ .json , .xml ]
+  get: 
+    is: [ filterableById: { name: key transaction } , filterableByName: { name: key transaction } ]
+    description: |
+      This API endpoint returns a paginated list of the key transactions associated with your New Relic account.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: keyTransactionsList
+            example: !include examples/keyTransactionsList.json
+/key_transactions: 
+  /{id}{mediaTypeExtension}: 
+    type: { collectionMember: { name: key transaction } }
+    uriParameters: 
+      id: 
+        description: Key Transaction ID
+        type: integer
+      mediaTypeExtension: 
+        enum: [ .json , .xml ]
+    get: 
+      description: |
+        This endpoint returns a single key transaction, identified by ID
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: keyTransactionsList
+              example: !include examples/keyTransactionsList.json
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

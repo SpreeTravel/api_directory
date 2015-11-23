@@ -1,0 +1,34 @@
+description: |
+  Returns the moon phase, sunrise and sunset times.
+  
+  #Examples:
+  http://api.wunderground.com/api/Your_Key/astronomy/q/Australia/Sydney.json
+  (See description of the response.)
+responses: 
+  200: 
+    description: |
+      The response will be a JSON-encoded object.
+      |name|description|
+      |-|
+      |moon_phase|Type: object. JSON type: object. The official API documentation provides no description. |
+      |moon_phase.ageOfMoon|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |moon_phase.current_time|Type: object. JSON type: object. The official API documentation provides no description. |
+      |moon_phase.current_time.hour|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |moon_phase.current_time.minute|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |moon_phase.percentIlluminated|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |moon_phase.sunrise|Type: object. JSON type: object. The official API documentation provides no description. |
+      |moon_phase.sunrise.hour|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |moon_phase.sunrise.minute|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |moon_phase.sunset|Type: object. JSON type: object. The official API documentation provides no description. |
+      |moon_phase.sunset.hour|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |moon_phase.sunset.minute|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |response|Type: object. JSON type: object. The official API documentation provides no description. |
+      |response.features|Type: object. JSON type: object. The official API documentation provides no description. |
+      |response.features.astronomy|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |response.termsofService|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |response.version|Type: unknown. JSON type: string. The official API documentation provides no description. |
+    body: 
+      application/json: 
+        schema: astronomySchema
+        example: !include ../examples/astronomy.json
+      application/xml: 

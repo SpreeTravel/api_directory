@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="geoname">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="toponymName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="lat" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+        <xsd:element name="lng" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+        <xsd:element name="geonameId" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="countryCode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="countryName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="fcl" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="fcode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="fclName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="fcodeName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="population" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="alternateNames" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="elevation" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="srtm3" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="continentCode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="adminCode1" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:simpleContent>
+              <xsd:extension base="xsd:int">
+                <xsd:attribute name="ISO3166-2" type="xsd:int" use="required"/>
+              </xsd:extension>
+            </xsd:simpleContent>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="adminName1" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="adminCode2" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="adminName2" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="alternateName" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:simpleContent>
+              <xsd:extension base="xsd:string">
+                <xsd:attribute name="lang" type="xsd:normalizedString" use="required"/>
+              </xsd:extension>
+            </xsd:simpleContent>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="timezone" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:simpleContent>
+              <xsd:extension base="xsd:normalizedString">
+                <xsd:attribute name="dstOffset" type="xsd:decimal" use="required"/>
+                <xsd:attribute name="gmtOffset" type="xsd:decimal" use="required"/>
+              </xsd:extension>
+            </xsd:simpleContent>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="bbox" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="west" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="north" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="east" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="south" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,347 @@
+#%RAML 0.8
+title: OpenStack Object Storage API
+version: v1
+baseUri: https://storage.swiftdrive.com/
+schemas:
+  - accountContainersListHttpResponseJson: !include schemas/accountContainersListHttpResponseJson-schema.json
+  - accountContainersListHttpResponseXml: !include schemas/accountContainersListHttpResponseXml-schema.xml
+  - objectListHttpResponseJson: !include schemas/objectListHttpResponseJson-schema.json
+  - objectListHttpResponseXml: !include schemas/objectListHttpResponseXml-schema.xml
+/{version}: 
+  /{account}: 
+    head: 
+      description: Show account metadata
+      headers: 
+        X-Auth-Token: 
+        X-Newest: 
+          type: boolean
+      responses: 
+        204: 
+          headers: 
+            X-Timestamp: 
+              type: integer
+            X-Account-Meta-Temp-URL-Key: 
+            X-Account-Container-Count: 
+              type: integer
+            X-Account-Meta-name: 
+            X-Account-Object-Count: 
+              type: integer
+            X-Account-Bytes-Used: 
+              type: integer
+            Content-Length: 
+            X-Trans-Id: 
+            Date: 
+            X-Account-Meta-Temp-URL-Key-2: 
+            Content-Type: 
+    post: 
+      description: Create, update, or delete account metadata
+      headers: 
+        X-Auth-Token: 
+        X-Account-Meta-Temp-URL-Key: 
+        X-Account-Meta-Temp-URL-Key-2: 
+        X-Account-Meta-name: 
+        Content-Type: 
+        X-Detect-Content-Type: 
+          type: boolean
+      responses: 
+        204: 
+          headers: 
+            X-Timestamp: 
+              type: integer
+            Content-Length: 
+            X-Trans-Id: 
+            Date: 
+            Content-Type: 
+    get: 
+      description: Show account details and list containers
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: showAccountDetailsAndListContainersXML
+              example: !include examples/accountContainersListHttpResponseXml-example.xml
+            application/json: 
+              schema: showAccountDetailsAndListContainersJSON
+              example: !include examples/accountContainersListHttpResponseJson-example.json
+    /{container}: 
+      put: 
+        description: Create container
+        headers: 
+          X-Auth-Token: 
+            required: true
+          X-Container-Read: 
+          X-Container-Write: 
+          X-Container-Sync-To: 
+          X-Container-Sync-Key: 
+          X-Versions-Location: 
+          X-Container-Meta-name: 
+          Content-Type: 
+          X-Detect-Content-Type: 
+            type: boolean
+          If-None-Match: 
+        responses: 
+          201: 
+            headers: 
+              X-Timestamp: 
+                type: integer
+              Content-Length: 
+              X-Trans-Id: 
+              Date: 
+              Content-Type: 
+      delete: 
+        description: Delete container
+        headers: 
+          X-Auth-Token: 
+            required: true
+        responses: 
+          204: 
+            headers: 
+              X-Timestamp: 
+                type: integer
+              Content-Length: 
+              X-Trans-Id: 
+              Date: 
+              Content-Type: 
+          404: 
+          409: 
+      post: 
+        description: Create, update, or delete container metadata
+        headers: 
+          X-Auth-Token: 
+          X-Container-Read: 
+          X-Remove-Container-name: 
+          X-Container-Write: 
+          X-Container-Sync-To: 
+          X-Container-Sync-Key: 
+          X-Versions-Location: 
+          X-Remove-Versions-Location: 
+          X-Container-Meta-name: 
+          X-Container-Meta-Web-Directory-Type: 
+          Content-Type: 
+          X-Detect-Content-Type: 
+            type: boolean
+        responses: 
+          204: 
+            headers: 
+              X-Timestamp: 
+                type: integer
+              Content-Length: 
+              X-Trans-Id: 
+              Date: 
+              Content-Type: 
+      head: 
+        description: Show container metadata
+        headers: 
+          X-Auth-Token: 
+          X-Newest: 
+            type: boolean
+        queryParameters: 
+          "signature ": 
+          expires: 
+          X-Newest: 
+            type: boolean
+        responses: 
+          204: 
+            headers: 
+              X-Timestamp: 
+                type: integer
+              X-Container-Object-Count: 
+                type: integer
+              X-Container-Sync-Key: 
+              X-Trans-Id: 
+              Date: 
+              Accept-Ranges: 
+              X-Container-Sync-To: 
+              X-Versions-Location: 
+              X-Container-Meta-name: 
+              X-Container-Bytes-Used: 
+                type: integer
+              X-Container-Read: 
+              Content-Length: 
+              X-Container-Write: 
+              Content-Type: 
+      get: 
+        description: Show container details and list objects
+        headers: 
+          X-Auth-Token: 
+            description: Authentication token.
+            required: true
+          "X-Newest ": 
+            description: If set to True, Object Storage queries all replicas to return the most recent one. If you omit this header, Object Storage responds faster after it finds one valid replica. Because setting this header to True is more expensive for the back end, use it only when it is absolutely needed.
+            type: boolean
+        queryParameters: 
+          "limit ": 
+            description: For an integer value n, limits the number of results to n.
+            type: integer
+            example: 5
+          "marker ": 
+            description: For a string value x, returns container names that are greater in value than the specified marker.
+          end_marker: 
+            description: For a string value x, returns container names that are less in value than the specified marker.
+          "prefix ": 
+            description: Prefix value. Named items in the response begin with this value.
+          "format ": 
+            description: |
+              The response format. Valid values are json, xml, or plain. The default is plain.
+              
+              If you append the format=xml or format=json query parameter to the storage account URL, the response shows extended container information serialized in the specified format.
+              
+              If you append the format=plain query parameter, the response lists the container names separated by newlines.
+            default: plain
+            example: json
+          "delimiter ": 
+            description: Delimiter value, which returns the object names that are nested in the container.
+          "path ": 
+            description: For a string value, returns the object names that are nested in the pseudo path. Equivalent to setting delimiter to / and prefix to the path with a / at the end.
+            example: /
+        body: 
+          application/xml: 
+            schema: ""
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: showContainerDetailsAndListObjectsXML
+                example: !include examples/objectListHttpResponseXml-example.xml
+              application/json: 
+                schema: showContainerDetailsAndListObjectsJSON
+                example: !include examples/objectListHttpResponseJson-example.json
+      /{object}: 
+        put: 
+          description: Create or replace object
+          headers: 
+            X-Object-Manifest: 
+            X-Auth-Token: 
+            Content-Length: 
+              type: integer
+            Transfer-Encoding: 
+            Content-Type: 
+            X-Detect-Content-Type: 
+              type: boolean
+            X-Copy-From: 
+            ETag: 
+            Content-Disposition: 
+            Content-Encoding: 
+            X-Delete-At: 
+              type: integer
+            X-Delete-After: 
+              type: integer
+            X-Object-Meta-name: 
+            If-None-Match: 
+          queryParameters: 
+            multipart-manifest: 
+            signature: 
+            expires: 
+          responses: 
+            201: 
+              headers: 
+                X-Timestamp: 
+                ETag: 
+                Content-Length: 
+                X-Trans-Id: 
+                Date: 
+                Content-Type: 
+        delete: 
+          description: Delete object
+          headers: 
+            X-Auth-Token: 
+          queryParameters: 
+            multipart-manifest: 
+              description: |
+                If you include the multipart-manifest=delete query parameter and the object is a static large object, the segment objects and the manifest object are deleted. If you omit the multipart-manifest=delete query parameter and this is a static large object, the manifest object is deleted and the segment objects are not deleted.
+                
+                For a bulk delete, the response body looks the same as it does for a normal bulk delete. In contrast, a plain object DELETE response has an empty body.
+          responses: 
+            200: 
+              headers: 
+                X-Timestamp: 
+                Content-Length: 
+                X-Trans-Id: 
+                Date: 
+                Content-Type: 
+        head: 
+          description: Show object metadata
+          headers: 
+            X-Auth-Token: 
+            X-Newest: 
+              type: boolean
+          queryParameters: 
+            signature: 
+            expires: 
+          responses: 
+            204: 
+              headers: 
+                X-Timestamp: 
+                X-Object-Meta-name: 
+                Last-Modified: 
+                X-Static-Large-Object: 
+                  type: boolean
+                X-Trans-Id: 
+                Date: 
+                ETag: 
+                X-Delete-At: 
+                Content-Disposition: 
+                X-Object-Manifest: 
+                Content-Encoding: 
+                Content-Length: 
+                Content-Type: 
+        post: 
+          description: Create or update object metadata
+          headers: 
+            X-Auth-Token: 
+            X-Object-Meta-name: 
+            X-Delete-At: 
+              type: integer
+            Content-Disposition: 
+            Content-Encoding: 
+            X-Delete-After: 
+              type: integer
+            Content-Type: 
+            X-Detect-Content-Type: 
+              type: boolean
+          responses: 
+            202: 
+              headers: 
+                X-Timestamp: 
+                Content-Length: 
+                X-Trans-Id: 
+                Date: 
+                Content-Type: 
+        get: 
+          description: Get object content and metadata
+          headers: 
+            X-Auth-Token: 
+            X-Newest: 
+              type: boolean
+            Range: 
+            If-Match: 
+            If-None-Match: 
+            If-Modified-Since: 
+              type: date
+            If-Unmodified-Since: 
+              type: date
+          queryParameters: 
+            signature: 
+              description: Used with temporary URLs to sign the request. For more information about temporary URLs, see OpenStack Object Storage API v1 Reference .
+            expires: 
+              description: Used with temporary URLs to specify the expiry time of the signature. For more information about temporary URLs, see OpenStack Object Storage API v1 Reference .
+            multipart-manifest: 
+              description: If you include the multipart-manifest=get query parameter and the object is a large object, the object contents are not returned. Instead, the manifest is returned in the X-Object-Manifest response header for dynamic large objects or in the response body for static large objects.
+          responses: 
+            200: 
+              headers: 
+                X-Timestamp: 
+                X-Object-Meta-name: 
+                Last-Modified: 
+                X-Static-Large-Object: 
+                  type: boolean
+                X-Trans-Id: 
+                Date: 
+                Accept-Ranges: 
+                ETag: 
+                X-Delete-At: 
+                Content-Disposition: 
+                X-Object-Manifest: 
+                Content-Encoding: 
+                Content-Length: 
+                Content-Type: 

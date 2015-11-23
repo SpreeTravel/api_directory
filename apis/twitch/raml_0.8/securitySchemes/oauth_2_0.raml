@@ -1,0 +1,33 @@
+description: |
+  The Twitch API uses the OAuth 2.0 protocol for simple, but effective
+  authentication and authorization. The one thing to keep in mind is tha
+  all requests to the API must be made over SSL (https:// not http://)
+type: OAuth 2.0
+describedBy: 
+  headers: 
+    Authorization: 
+      description: |
+        Used to send a valid OAuth 2 access token. Do not use together with
+        the "access_token" queryParameters string parameter.
+  queryParameters: 
+    access_token: 
+      description: |
+        Used to send a valid OAuth 2 access token. Do not use together with
+        the "Authorization" header
+settings: 
+  authorizationUri: https://api.twitch.tv/kraken/oauth2/authorize
+  accessTokenUri: https://api.twitch.tv/kraken/oauth2/token
+  authorizationGrants: [ code ]
+  scopes: 
+    - user_read
+    - user_blocks_edit
+    - user_blocks_read
+    - user_follows_edit
+    - channel_read
+    - channel_editor
+    - channel_commercial
+    - channel_stream
+    - channel_subscriptions
+    - user_subscriptions
+    - channel_check_subscription
+    - chat_login

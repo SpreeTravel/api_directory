@@ -1,0 +1,12 @@
+head: 
+  description: Returns a set of small, medium, and large motif icons for the specified record. Can also return the base color for the specified record.
+  responses: 
+    200: 
+get: 
+  description: Returns a set of small, medium, and large motif icons for the specified record. Can also return the base color for the specified record.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: motifResponse
+          example: !include examples/motifsResourceResponse-example.json

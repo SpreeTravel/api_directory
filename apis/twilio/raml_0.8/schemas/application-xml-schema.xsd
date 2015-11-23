@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="TwilioResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Application" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Sid" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="DateCreated" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="DateUpdated" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="AccountSid" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="FriendlyName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="ApiVersion" minOccurs="0" maxOccurs="1" type="xsd:date"/>
+              <xsd:element name="VoiceUrl" minOccurs="0" maxOccurs="1" type="xsd:anyURI"/>
+              <xsd:element name="VoiceMethod" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="VoiceFallbackUrl" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="VoiceFallbackMethod" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="StatusCallback" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="StatusCallbackMethod" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="VoiceCallerIdLookup" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+              <xsd:element name="SmsUrl" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="SmsMethod" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="SmsFallbackUrl" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="SmsFallbackMethod" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="SmsStatusCallback" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="Uri" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

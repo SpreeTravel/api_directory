@@ -1,0 +1,1027 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "defaultContentSection" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "contentHtml" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "contentText" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "scope" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "forms" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "htmlName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "processingType" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "emailAddressFormFieldId" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "submitFailedLandingPageId" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "size" : {
+                  "type" : "object" ,
+                  "required" : false
+                } ,
+                "html" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "style" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "elements" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                    {
+                      "type" : "object" ,
+                      "properties" : {
+                        "instructions" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "style" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "name" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "permissions" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "folderId" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "sourceTemplateId" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "createdBy" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "createdAt" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "updatedBy" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "updatedAt" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "accessedAt" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "scheduledFor" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "depth" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    }
+                  ]
+                } ,
+                "processingSteps" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                    {
+                      "type" : "object" ,
+                      "properties" : {
+                        "execute" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "conditionalType" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "conditionalFieldId" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "conditionalComparator" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "isConditionallyNegated" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "name" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "permissions" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "folderId" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "sourceTemplateId" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "createdBy" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "createdAt" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "updatedBy" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "updatedAt" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "accessedAt" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "scheduledFor" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "depth" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    }
+                  ]
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "description" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "permissions" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "folderId" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "sourceTemplateId" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "createdBy" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "createdAt" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "updatedBy" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "updatedAt" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "accessedAt" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "scheduledFor" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "depth" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        } ,
+        "images" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "fullImageUrl" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "size" : {
+                  "type" : "object" ,
+                  "required" : false
+                } ,
+                "thumbnailUrl" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "description" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "permissions" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "folderId" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "sourceTemplateId" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "createdBy" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "createdAt" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "updatedBy" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "updatedAt" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "accessedAt" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "scheduledFor" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "depth" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        } ,
+        "hyperlinks" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "href" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "hyperlinkType" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "referencedEntityId" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "description" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "permissions" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "folderId" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "sourceTemplateId" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "createdBy" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "createdAt" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "updatedBy" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "updatedAt" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "accessedAt" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "scheduledFor" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "depth" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        } ,
+        "size" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "description" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "permissions" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "folderId" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "sourceTemplateId" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "createdBy" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "createdAt" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "updatedBy" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "updatedAt" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "accessedAt" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "scheduledFor" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "depth" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "rules" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "depth" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "contentSection" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "contentHtml" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "contentText" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "scope" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "forms" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                    {
+                      "type" : "object" ,
+                      "properties" : {
+                        "htmlName" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "processingType" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "emailAddressFormFieldId" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "submitFailedLandingPageId" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "size" : {
+                          "type" : "object" ,
+                          "required" : false
+                        } ,
+                        "html" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "style" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "elements" : {
+                          "type" : "array" ,
+                          "required" : false ,
+                          "items" : [
+                            {
+                              "type" : "object" ,
+                              "properties" : {
+                                "instructions" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "style" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "name" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "description" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "permissions" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "folderId" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "sourceTemplateId" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "createdBy" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "createdAt" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "updatedBy" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "updatedAt" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "accessedAt" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "scheduledFor" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "depth" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                }
+                              }
+                            }
+                          ]
+                        } ,
+                        "processingSteps" : {
+                          "type" : "array" ,
+                          "required" : false ,
+                          "items" : [
+                            {
+                              "type" : "object" ,
+                              "properties" : {
+                                "execute" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "conditionalType" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "conditionalFieldId" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "conditionalComparator" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "isConditionallyNegated" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "name" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "description" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "permissions" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "folderId" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "sourceTemplateId" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "createdBy" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "createdAt" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "updatedBy" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "updatedAt" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "accessedAt" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "scheduledFor" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                } ,
+                                "depth" : {
+                                  "type" : "string" ,
+                                  "required" : false
+                                }
+                              }
+                            }
+                          ]
+                        } ,
+                        "name" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "permissions" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "folderId" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "sourceTemplateId" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "createdBy" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "createdAt" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "updatedBy" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "updatedAt" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "accessedAt" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "scheduledFor" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "depth" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    }
+                  ]
+                } ,
+                "images" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                    {
+                      "type" : "object" ,
+                      "properties" : {
+                        "fullImageUrl" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "size" : {
+                          "type" : "object" ,
+                          "required" : false
+                        } ,
+                        "thumbnailUrl" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "name" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "permissions" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "folderId" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "sourceTemplateId" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "createdBy" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "createdAt" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "updatedBy" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "updatedAt" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "accessedAt" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "scheduledFor" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "depth" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    }
+                  ]
+                } ,
+                "hyperlinks" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                    {
+                      "type" : "object" ,
+                      "properties" : {
+                        "href" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "hyperlinkType" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "referencedEntityId" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "name" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "permissions" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "folderId" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "sourceTemplateId" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "createdBy" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "createdAt" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "updatedBy" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "updatedAt" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "accessedAt" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "scheduledFor" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "depth" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    }
+                  ]
+                } ,
+                "size" : {
+                  "type" : "object" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "description" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "permissions" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "folderId" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "sourceTemplateId" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "createdBy" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "createdAt" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "updatedBy" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "updatedAt" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "accessedAt" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "scheduledFor" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "depth" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "criteria" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "description" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "permissions" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "folderId" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "sourceTemplateId" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "createdBy" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "createdAt" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "updatedBy" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "updatedAt" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "accessedAt" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "scheduledFor" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "depth" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            } ,
+            "statement" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "description" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "permissions" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "folderId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "sourceTemplateId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "createdBy" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "createdAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "updatedBy" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "updatedAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "accessedAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "scheduledFor" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "depth" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

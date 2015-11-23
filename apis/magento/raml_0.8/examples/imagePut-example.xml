@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<magento_api>
+  <label>English store image</label>
+  <position>3</position>
+  <exclude>0</exclude>
+  <types>
+      <data_item>image</data_item>
+      <data_item>small_image</data_item>
+      <data_item>thumbnail</data_item>
+   </types>
+</magento_api>

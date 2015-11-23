@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "tz_offset": {
+          "description": "The offset for the specified timezone, in hours.",
+          "type": "integer"
+        },
+        "unit": {
+          "description": "An echo of the specified unit value.",
+          "type": "string"
+        },
+        "units": {
+          "description": "An echo of the specified units value.",
+          "type": "integer"
+        },
+        "countries": {
+          "items": {
+            "properties": {
+              "clicks": {
+                "description": "The number of clicks referred from this country.",
+                "type": "integer"
+              },
+              "country": {
+                "description": "The two-letter code of the referring country.",
+                "type": "string",
+                "minLength": 2,
+                "maxLength": 2
+              }
+            },
+            "type": "object"
+          },
+          "type": "array"
+        }
+      }
+    },
+    "status_code": {
+      "type": "integer",
+      "required": true
+    },
+    "status_txt": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<magento_api>
+  <position>3</position>
+  <exclude>0</exclude>
+  <types>
+      <data_item>image</data_item>
+   </types>
+</magento_api>

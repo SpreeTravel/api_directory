@@ -1,0 +1,109 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "kind" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "timeMin" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "timeMax" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "groups" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "(key)" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "errors" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "domain" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "reason" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            } ,
+            "calendars" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            }
+          }
+        }
+      }
+    } ,
+    "calendars" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "(key)" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "errors" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "domain" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "reason" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            } ,
+            "busy" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "start" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "end" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

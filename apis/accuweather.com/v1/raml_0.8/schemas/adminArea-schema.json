@@ -1,0 +1,35 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "Level" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "LocalizedType" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "EnglishType" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "CountryID" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "ID" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "LocalizedName" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "EnglishName" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

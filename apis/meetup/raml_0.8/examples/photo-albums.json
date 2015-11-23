@@ -1,0 +1,36 @@
+{
+  "results": [
+    {
+      "title": 0,
+      "album_photo": {
+        "photo_link": "photo_link 0",
+        "highres_link": "highres_link 0",
+        "thumb_link": "thumb_link 0",
+        "photo_id": 0
+      },
+      "updated": 0,
+      "created": 0,
+      "group_id": 0,
+      "photo_album_id": 0,
+      "ordering": 0,
+      "event_id": 0,
+      "photo_count": 0
+    },
+    {
+      "title": 1,
+      "album_photo": {
+        "photo_link": "photo_link 1",
+        "highres_link": "highres_link 1",
+        "thumb_link": "thumb_link 1",
+        "photo_id": 1
+      },
+      "updated": 1,
+      "created": 1,
+      "group_id": 1,
+      "photo_album_id": 1,
+      "ordering": 1,
+      "event_id": 1,
+      "photo_count": 1
+    }
+  ]
+}

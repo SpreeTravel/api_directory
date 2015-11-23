@@ -1,0 +1,50 @@
+{
+  "results": [
+    {
+      "member": {
+        "member_state": "member_state 0",
+        "member_city": "member_city 0",
+        "name": "name 0",
+        "member_country": "member_country 0",
+        "member_id": 0
+      },
+      "id": 0,
+      "udf_{varname}": "udf_{varname} 0",
+      "status": "status 0",
+      "created": 0,
+      "container": {
+        "id": 0,
+        "name": "name 0",
+        "urlname": "urlname 0"
+      },
+      "community": {
+        "id": 0,
+        "name": "name 0",
+        "urlname": "urlname 0"
+      }
+    },
+    {
+      "member": {
+        "member_state": "member_state 1",
+        "member_city": "member_city 1",
+        "name": "name 1",
+        "member_country": "member_country 1",
+        "member_id": 1
+      },
+      "id": 1,
+      "udf_{varname}": "udf_{varname} 1",
+      "status": "status 1",
+      "created": 1,
+      "container": {
+        "id": 1,
+        "name": "name 1",
+        "urlname": "urlname 1"
+      },
+      "community": {
+        "id": 1,
+        "name": "name 1",
+        "urlname": "urlname 1"
+      }
+    }
+  ]
+}

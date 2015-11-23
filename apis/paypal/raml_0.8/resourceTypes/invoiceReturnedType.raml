@@ -1,0 +1,28 @@
+post?: 
+  body: 
+    application/json: 
+  responses: 
+    201?: 
+      body: 
+        application/json: 
+          schema: invoices
+          example: !include ../examples/invoices-example.json
+get?: 
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: invoices
+          example: !include ../examples/invoices-example.json
+put?: 
+  body: 
+    application/json: 
+      schema: invoice
+      example: !include ../examples/invoice-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: invoice
+          example: !include ../examples/invoice-example.json
+type: base

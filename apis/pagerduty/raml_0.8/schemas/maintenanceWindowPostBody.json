@@ -1,0 +1,15 @@
+{
+	"type" : "object" ,
+	"required" : true ,
+	"$schema" : "http://json-schema.org/draft-03/schema" ,
+	"properties" : {
+		"maintenance_window" : {
+			"type" : "object" ,
+			"required" : false
+		} ,
+		"requester_id" : {
+			"type" : "string" ,
+			"required" : false
+		}
+	}
+}

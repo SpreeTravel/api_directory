@@ -1,0 +1,169 @@
+#%RAML 0.8
+title: Healthcare
+baseUri: https://www.healthcare.gov/
+schemas:
+  - articlesList: !include schemas/articlesList-schema.json
+  - blogList: !include schemas/blogList-schema.json
+  - blogPage: !include schemas/blogPage-schema.json
+  - glossaryList: !include schemas/glossaryList-schema.json
+  - glossaryPage: !include schemas/glossaryPage-schema.json
+  - page: !include schemas/page-schema.json
+  - questionPage: !include schemas/questionPage-schema.json
+  - questionsList: !include schemas/questionsList-schema.json
+  - statePage: !include schemas/statePage-schema.json
+  - statesList: !include schemas/statesList-schema.json
+  - topicsList: !include schemas/topicsList-schema.json
+resourceTypes:
+  - superPage: !include resourceTypes/superPage.raml
+  - commonPage: !include resourceTypes/commonPage.raml
+  - resourcePage: !include resourceTypes/resourcePage.raml
+/{pageName}{mediaTypeExtension}: 
+  type: { commonPage: { type: page } }
+  description: Common page at healthcare.gov. Use json format to access metadata.
+  get: 
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            example: !include examples/page-example.json
+/{stateName}{mediaTypeExtension}: 
+  type: { resourcePage: { type: statePage } }
+  description: Content and metadata on particular state.
+  get: 
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            example: !include examples/statePage-example.json
+/blog/{pageName}{mediaTypeExtension}: 
+  type: { commonPage: { type: blogPage } }
+  description: Blog entry page at healthcare.gov. Use json format to access metadata.
+  get: 
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            example: !include examples/blogPage-example.json
+/glossary/{pageName}{mediaTypeExtension}: 
+  type: { commonPage: { type: glossaryPage } }
+  description: Glossary entry page at healthcare.gov. Use json format to access metadata.
+  get: 
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            example: !include examples/glossaryPage-example.json
+/question/{pageName}{mediaTypeExtension}: 
+  type: { resourcePage: { type: questionPage } }
+  description: Content and metadata on particular state.
+  get: 
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            example: !include examples/questionPage-example.json
+/es: 
+  description: Content in Spanish language.
+  /{pageName}{mediaTypeExtension}: 
+    type: { commonPage: { type: page } }
+    description: Common page. Use json format to access metadata. Spanish language.
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/page-example.json
+  /{stateName}{mediaTypeExtension}: 
+    type: { resourcePage: { type: statePage } }
+    description: Content and metadata on particular state. Spanish language.
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/statePage-example.json
+  /blog/{pageName}{mediaTypeExtension}: 
+    type: { commonPage: { type: blogPage } }
+    description: Blog entry page at healthcare.gov. Use json format to access metadata. Spanish language.
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/blogPage-example.json
+  /glossary/{pageName}{mediaTypeExtension}: 
+    type: { commonPage: { type: glossaryPage } }
+    description: Glossary entry page. Use json format to access metadata. Spanish language.
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/glossaryPage-example.json
+  /question/{pageName}{mediaTypeExtension}: 
+    type: { resourcePage: { type: questionPage } }
+    description: Content and metadata on particular state. Spanish language.
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/questionPage-example.json
+/api: 
+  /articles{mediaTypeExtension}: 
+    type: { resourcePage: { type: articlesList } }
+    description: Content and metadata of all articles.
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/articlesList-example.json
+  /questions{mediaTypeExtension}: 
+    type: { resourcePage: { type: questionsList } }
+    description: Content and metadata of all questions.
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/questionsList-example.json
+  /blog{mediaTypeExtension}: 
+    type: { resourcePage: { type: blogList } }
+    description: Content and metadata of all blog entries.
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/blogList-example.json
+  /glossary{mediaTypeExtension}: 
+    type: { resourcePage: { type: glossaryList } }
+    description: Content and metadata of all glossary entries.
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/glossaryList-example.json
+  /states{mediaTypeExtension}: 
+    type: { resourcePage: { type: statesList } }
+    description: Content and metadata of all state entries.
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/statesList-example.json
+  /topics{mediaTypeExtension}: 
+    type: { resourcePage: { type: topicsList } }
+    description: Content and metadata of all topics.
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/topicsList-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

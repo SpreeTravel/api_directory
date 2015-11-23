@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<magento_api>
+  <id>10</id>
+  <label></label>
+  <position>5</position>
+  <exclude>1</exclude>
+  <url>http://magento/media/catalog/product/n/e/new_image.gif</url>
+  <types/>
+</magento_api>

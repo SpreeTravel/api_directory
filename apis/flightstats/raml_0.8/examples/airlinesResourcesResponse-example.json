@@ -1,0 +1,11 @@
+{
+  "apiVersion" : "1.0" ,
+  "swaggerVersion" : "1.0" ,
+  "basePath" : "https://api.flightstats.com/flex/schedules/rest" ,
+  "apis" : [
+    {
+      "path" : "/v1/" ,
+      "description" : "Scheduled Flights API entry points returning JSON format"
+    }
+  ]
+}

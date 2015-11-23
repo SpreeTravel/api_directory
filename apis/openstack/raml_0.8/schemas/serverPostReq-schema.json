@@ -1,0 +1,54 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "server" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "imageRef" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "flavorRef" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "metadata" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "My Server Name" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "personality" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "path" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "contents" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

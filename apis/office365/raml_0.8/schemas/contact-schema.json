@@ -1,0 +1,195 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "@odata.id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "@odata.etag" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "@odata.editLink" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "ChangeKey" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "ClassName" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Subject" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "BodyPreview" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Body" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "ContentType" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Content" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "Importance" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Categories" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+      ]
+    } ,
+    "HasAttachments" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "ParentFolderId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Birthday" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "FileAs" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "DisplayName" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "GivenName" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Initials" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "MiddleName" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "NickName" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "Surname" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Title" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "Generation" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "EmailAddress1" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "ImAddress1" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "ImAddress2" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "ImAddress3" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "JobTitle" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "CompanyName" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "Department" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "OfficeLocation" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "Profession" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "BusinessHomePage" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "AssistantName" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "Manager" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "HomePhone1" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "HomePhone2" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "BusinessPhone1" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "BusinessPhone2" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "MobilePhone1" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "OtherPhone" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "DateTimeCreated" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "LastModifiedTime" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Attachments@odata.navigationLink" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

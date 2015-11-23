@@ -1,0 +1,22 @@
+get: 
+  description: Returns all the favorites for the context user.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: favoritesPageResponse
+head: 
+  description: Returns all the favorites for the context user.
+  responses: 
+    200: 
+post: 
+  description: Creates a favorite of a Chatter feed search or topic.
+  body: 
+    application/json: 
+      schema: feedsListFavoritesRequest
+      example: !include examples/feedsListFavoritesRequest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: favoriteResponse

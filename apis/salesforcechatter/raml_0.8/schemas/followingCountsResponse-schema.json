@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "people": {
+      "type": "integer",
+      "required": false
+    },
+    "records": {
+      "type": "integer",
+      "required": false
+    },
+    "total": {
+      "type": "integer",
+      "required": false
+    }
+  }
+}

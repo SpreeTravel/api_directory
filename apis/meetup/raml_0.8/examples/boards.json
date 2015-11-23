@@ -1,0 +1,19 @@
+{
+  "0": {
+    "id": 100,
+    "updated": 100,
+    "discussion_count": 100,
+    "created": 100,
+    "post_count": 100,
+    "name": "name",
+    "latest_reply": {
+      "member": {
+        "name": "name"
+      },
+      "created": 100
+    },
+    "group": {
+      "id": 100
+    }
+  }
+}

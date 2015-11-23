@@ -1,0 +1,46 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TwilioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="UsageTriggers">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UsageTrigger">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Sid"/>
+                    <xs:element type="xs:string" name="AccountSid"/>
+                    <xs:element type="xs:string" name="DateCreated"/>
+                    <xs:element type="xs:string" name="DateUpdated"/>
+                    <xs:element type="xs:string" name="DateFired"/>
+                    <xs:element type="xs:string" name="FriendlyName"/>
+                    <xs:element type="xs:string" name="UsageCategory"/>
+                    <xs:element type="xs:string" name="TriggerBy"/>
+                    <xs:element type="xs:string" name="Recurring"/>
+                    <xs:element type="xs:float" name="TriggerValue"/>
+                    <xs:element type="xs:byte" name="CurrentValue"/>
+                    <xs:element type="xs:anyURI" name="CallbackUrl"/>
+                    <xs:element type="xs:string" name="CallbackMethod"/>
+                    <xs:element type="xs:string" name="UsageRecordUri"/>
+                    <xs:element type="xs:string" name="Uri"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:byte" name="numpages"/>
+            <xs:attribute type="xs:byte" name="end"/>
+            <xs:attribute type="xs:byte" name="pagesize"/>
+            <xs:attribute type="xs:string" name="nextpageuri"/>
+            <xs:attribute type="xs:string" name="uri"/>
+            <xs:attribute type="xs:byte" name="start"/>
+            <xs:attribute type="xs:string" name="firstpageuri"/>
+            <xs:attribute type="xs:string" name="previouspageuri"/>
+            <xs:attribute type="xs:string" name="lastpageuri"/>
+            <xs:attribute type="xs:byte" name="total"/>
+            <xs:attribute type="xs:byte" name="page"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

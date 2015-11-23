@@ -1,0 +1,119 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "request" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "price" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "down" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "zip" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "output" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "callback" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "message" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "text" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "code" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "response" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "thirtyYearFixed" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "rate" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "monthlyPrincipalAndInterest" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "monthlyMortgageInsurance" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "fifteenYearFixed" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "rate" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "monthlyPrincipalAndInterest" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "monthlyMortgageInsurance" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "fiveOneARM" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "rate" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "monthlyPrincipalAndInterest" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "monthlyMortgageInsurance" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "downPayment" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthlyPropertyTaxes" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthlyHazardInsurance" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

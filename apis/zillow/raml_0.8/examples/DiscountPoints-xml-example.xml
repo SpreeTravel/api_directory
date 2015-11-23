@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<DiscountPoints:discountpoints xsi:schemaLocation="http://www.zillow.com/static/xsd/DiscountPoints.xsd http://www.zillow.com/vstatic/301d3d6d429ae53192cff6e00c9b3723/static/xsd/DiscountPoints.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DiscountPoints="http://www.zillow.com/static/xsd/DiscountPoints.xsd">
+    <request>
+        <amount>1000000</amount>
+        <terminmonths>360</terminmonths>
+        <rate>6.504</rate>
+        <points>2.543</points>
+        <rate2>5.454</rate2>
+        <points2>3.0</points2>
+        <output>xml</output>
+    </request>
+    <message>
+        <text>Request successfully processed</text>
+        <code>0</code>
+    </message>
+    <response>
+        <monthlyprincipalandinterest>6323</monthlyprincipalandinterest>
+        <monthlyprincipalandinterest2>5649</monthlyprincipalandinterest2>
+        <costofpoints>25430</costofpoints>
+        <costofpoints2>30000</costofpoints2>
+        <monthlysavings>674</monthlysavings>
+        <result>It will take you 7 months (0.58 years) to break even from buying discount points. So if you plan to stay in your house for more than 7 months and you have cash available, you may want to consider buying down your rate with points. If you stay in your home the entire time, you could save as much as $242,640.</result>
+        <breakeven>7</breakeven>
+        <totalsavings>242640</totalsavings>
+    </response>
+</DiscountPoints:discountpoints>

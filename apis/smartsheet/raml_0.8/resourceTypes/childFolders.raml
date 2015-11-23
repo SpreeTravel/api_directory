@@ -1,0 +1,24 @@
+get: 
+  description: |
+    Returns an array of top-level child folders.
+     Allowed For: [READ_SHEETS]
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: listChildFoldersResponse
+          example: !include ../examples/listChildFoldersResponse-example.json
+post: 
+  description: |
+    Creates child folder.
+     Allowed For: [ADMIN_WORKSPACES]
+  body: 
+    application/json: 
+      schema: createChildFolderRequest
+      example: !include ../examples/createChildFolderRequest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: createChildFolderResponse
+          example: !include ../examples/createChildFolderResponse-example.json

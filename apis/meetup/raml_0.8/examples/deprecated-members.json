@@ -1,0 +1,58 @@
+{
+  "results": [
+    {
+      "lon": 1.0,
+      "photo_url": "photo_url 0",
+      "messaging_pref": "messaging_pref 0",
+      "link": "link 0",
+      "state": 0,
+      "lang": "lang 0",
+      "country": "country 0",
+      "city": "city 0",
+      "visited": "visited 0",
+      "id": 0,
+      "topics": {
+        "id": 0,
+        "urlkey": "urlkey 0",
+        "name": "name 0"
+      },
+      "joined": "joined 0",
+      "bio": "bio 0",
+      "email": 0,
+      "name": "name 0",
+      "other_services": {
+        "[service-name]": {
+          "identifier": "identifier 0"
+        }
+      },
+      "lat": 1.0
+    },
+    {
+      "lon": 1.0,
+      "photo_url": "photo_url 1",
+      "messaging_pref": "messaging_pref 1",
+      "link": "link 1",
+      "state": 1,
+      "lang": "lang 1",
+      "country": "country 1",
+      "city": "city 1",
+      "visited": "visited 1",
+      "id": 1,
+      "topics": {
+        "id": 1,
+        "urlkey": "urlkey 1",
+        "name": "name 1"
+      },
+      "joined": "joined 1",
+      "bio": "bio 1",
+      "email": 1,
+      "name": "name 1",
+      "other_services": {
+        "[service-name]": {
+          "identifier": "identifier 1"
+        }
+      },
+      "lat": 1.0
+    }
+  ]
+}

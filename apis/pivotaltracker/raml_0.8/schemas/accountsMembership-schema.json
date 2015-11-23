@@ -1,0 +1,82 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : [
+    {
+      "type" : "object" ,
+      "properties" : {
+        "kind" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "person" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "kind" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "email" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "initials" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "username" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "account_id" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "created_at" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "updated_at" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "owner" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "admin" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "project_creator" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "timekeeper" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "time_enterer" : {
+          "type" : "boolean" ,
+          "required" : false
+        }
+      }
+    }
+  ]
+}

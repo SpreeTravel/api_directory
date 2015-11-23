@@ -1,0 +1,23 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "readOnlyLiteEnabled" : {
+      "type" : "boolean" ,
+      "required" : true
+    } ,
+    "readOnlyFullEnabled" : {
+      "type" : "boolean" ,
+      "required" : true
+    } ,
+    "readWriteEnabled" : {
+      "type" : "boolean" ,
+      "required" : true
+    } ,
+    "icalEnabled" : {
+      "type" : "boolean" ,
+      "required" : true
+    }
+  }
+}

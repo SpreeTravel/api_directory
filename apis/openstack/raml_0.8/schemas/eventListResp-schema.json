@@ -1,0 +1,65 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "events" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "resource_name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "event_time" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "links" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "href" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "rel" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            } ,
+            "logical_resource_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "resource_status" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "resource_status_reason" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "physical_resource_id" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

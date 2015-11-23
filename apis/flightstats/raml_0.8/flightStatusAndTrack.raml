@@ -1,0 +1,513 @@
+#%RAML 0.8
+title: Flight Status And Track
+version: v2
+baseUri: https://api.flightstats.com/flex/flightstatus/rest/{version}
+securitySchemes:
+  - apiHeaderKey: !include securitySchemes/apiHeaderKey.raml
+  - apiQueryKey: !include securitySchemes/apiQueryKey.raml
+schemas:
+  - fleetStatusXMLResponse: !include schemas/fleetStatusXMLResponse-schema.xsd
+  - fleetStatusJSONResponse: !include schemas/fleetStatusJSONResponse-schema.json
+  - fleetTrackXMLResponse: !include schemas/fleetTrackXMLResponse-schema.xsd
+  - fleetTrackJSONResponse: !include schemas/fleetTrackJSONResponse-schema.json
+  - carrierFlightStatusesXMLResponse: !include schemas/carrierFlightStatusesXMLResponse-schema.xsd
+  - carrierFlightStatusesJSONResponse: !include schemas/carrierFlightStatusesJSONResponse-schema.json
+  - flightStatusXMLResponse: !include schemas/flightStatusXMLResponse-schema.xsd
+  - flightStatusJSONResponse: !include schemas/flightStatusJSONResponse-schema.json
+  - flightNumberStatusXMLResponse: !include schemas/flightNumberStatusXMLResponse-schema.xsd
+  - flightNumberStatusJSONResponse: !include schemas/flightNumberStatusJSONResponse-schema.json
+  - trackFlightPositionXMLResponse: !include schemas/trackFlightPositionXMLResponse-schema.xsd
+  - trackFlightPositionJSONResponse: !include schemas/trackFlightPositionJSONResponse-schema.json
+  - positionalTracksFlightsArrivingXMLResponse: !include schemas/positionalTracksFlightsArrivingXMLResponse-schema.xsd
+  - positionalTracksFlightsArrivingJSONResponse: !include schemas/positionalTracksFlightsArrivingJSONResponse-schema.json
+  - positionalTracksFlightsDepartingXMLResponse: !include schemas/positionalTracksFlightsDepartingXMLResponse-schema.xsd
+  - positionalTracksFlightsDepartingJSONResponse: !include schemas/positionalTracksFlightsDepartingJSONResponse-schema.json
+  - statusAllFlightsDepartingXMLResponse: !include schemas/statusAllFlightsDepartingXMLResponse-schema.xsd
+  - statusAllFlightsDepartingJSONResponse: !include schemas/statusAllFlightsDepartingJSONResponse-schema.json
+  - statusAllFlightsArrivingXMLResponse: !include schemas/statusAllFlightsArrivingXMLResponse-schema.xsd
+  - statusAllFlightsArrivingJSONResponse: !include schemas/statusAllFlightsArrivingJSONResponse-schema.json
+  - positionalAirportTracksXMLResponse: !include schemas/positionalAirportTracksXMLResponse-schema.xsd
+  - positionalAirportTracksJSONResponse: !include schemas/positionalAirportTracksJSONResponse-schema.json
+  - positionalAirportDepTracksXMLResponse: !include schemas/positionalAirportDepTracksXMLResponse-schema.xsd
+  - positionalAirportDepTracksJSONResponse: !include schemas/positionalAirportDepTracksJSONResponse-schema.json
+  - allRouteStatusDepXMLResponse: !include schemas/allRouteStatusDepXMLResponse-schema.xsd
+  - allRouteStatusDepJSONResponse: !include schemas/allRouteStatusDepJSONResponse-schema.json
+  - allRouteStatusArrXMLResponse: !include schemas/allRouteStatusArrXMLResponse-schema.xsd
+  - allRouteStatusArrJSONResponse: !include schemas/allRouteStatusArrJSONResponse-schema.json
+  - boundingBoxXMLResponse: !include schemas/boundingBoxXMLResponse-schema.xsd
+  - boundingBoxJSONResponse: !include schemas/boundingBoxJSONResponse-schema.json
+  - flightsAroundPointXMLResponse: !include schemas/flightsAroundPointXMLResponse-schema.xsd
+  - flightsAroundPointJSONResponse: !include schemas/flightsAroundPointJSONResponse-schema.json
+securedBy: [ apiHeaderKey ]
+/{mediaType}: 
+  /flight: 
+    /status: 
+      /{flightId}: 
+        get: 
+          description: Returns the Flight Status associated with provided Flight ID. The Flight ID is an arbitrary number that FlightStats uses to uniquely identify flights
+          queryParameters: 
+            extendedOptions: 
+              description: "Extended options for modifying standard API behavior to fit special use cases. Options: 'useInlinedReferences', 'useHttpErrors', 'includeDeltas'."
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: flightStatusXMLResponse
+                  example: !include examples/flightStatusXMLResponse-example.xml
+                application/json: 
+                  schema: flightStatusJSONResponse
+                  example: !include examples/flightStatusJSONResponse-example.json
+      /{carrier}/{flight}: 
+        /arr/{year}/{month}/{day}: 
+          get: 
+            description: Returns the Flight Statuses for the given Carrier and Flight Number that departed on the given date. Optionally, the arrival airport may be specified.
+            queryParameters: 
+              utc: 
+                description: Time given as UTC instead of local (default is false)?
+                type: boolean
+                default: false
+                example: true
+              airport: 
+                description: Departure airport
+                example: ""
+              codeType: 
+                description: "Type of any given codes: 'IATA', 'ICAO', or 'FS'. If not specified all domains will be searched in the order stated."
+              extendedOptions: 
+                description: "Extended options for modifying standard API behavior to fit special use cases. Options: 'useInlinedReferences', 'useHttpErrors', 'includeDeltas'."
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    schema: carrierFlightStatusesXMLResponse
+                    example: !include examples/carrierFlightStatusesXMLResponse-example.xml
+                  application/json: 
+                    schema: carrierFlightStatusesJSONResponse
+                    example: !include examples/carrierFlightStatusesJSONResponse-example.json
+        /dep/{year}/{month}/{day}: 
+          get: 
+            description: Returns the Flight Statuses for the given Carrier and Flight Number that departed on the given date. Optionally, the departure airport may be specified.
+            queryParameters: 
+              utc: 
+                description: Time given as UTC instead of local (default is false)?
+                type: boolean
+                default: false
+                example: true
+              airport: 
+                description: Departure airport
+                example: ""
+              codeType: 
+                description: "Type of any given codes: 'IATA', 'ICAO', or 'FS'. If not specified all domains will be searched in the order stated."
+              extendedOptions: 
+                description: "Extended options for modifying standard API behavior to fit special use cases. Options: 'useInlinedReferences', 'useHttpErrors', 'includeDeltas'."
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    schema: flightNumberStatusXMLResponse
+                    example: !include examples/flightNumberStatusXMLResponse-example.xml
+                  application/json: 
+                    schema: flightNumberStatusJSONResponse
+                    example: !include examples/flightNumberStatusJSONResponse-example.json
+    /track/{flightId}: 
+      get: 
+        description: "Returns the positional track for a specific flight, specified by flight ID. Flight plan may be optionally included. To narrow down to only the freshest data, you may optionally limit the age (in minutes) and/or number of positions returned. You can obtain a candidate Flight ID using the other Flight Status API's"
+        queryParameters: 
+          includeFlightPlan: 
+            description: Include flight plans (default false)
+            type: boolean
+            default: false
+            example: true
+          maxPositions: 
+            description: Maximum number of positions in track
+            example: 2
+          maxPositionAgeMinutes: 
+            description: Maximum age for positions in track (minutes)
+          extendedOptions: 
+            example: "Extended options for modifying standard API behavior to fit special use cases. Options: 'useInlinedReferences', 'useHttpErrors', 'includeDeltas'."
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: trackFlightPositionXMLResponse
+                example: !include examples/trackFlightPositionXMLResponse-example.xml
+              application/json: 
+                schema: trackFlightPositionJSONResponse
+                example: !include examples/trackFlightPositionJSONResponse-example.json
+    /tracks: 
+      /{carrier}/{flight}: 
+        /arr/{year}/{month}/{day}: 
+          get: 
+            description: "Returns the positional tracks of flights, with a given carrier and flight number, arriving or having arrived on the given date. If 'hourOfDay' is specified, results will be limited to the given hour, unless 'numHours' is also specified. Arrival airport may optionally be specified. Flight plans may be optionally included. To narrow down to only the freshest data, you may optionally limit the age (in minutes) and/or number of positions per track."
+            queryParameters: 
+              hourOfDay: 
+                description: Departure hour of day (0-23)
+              utc: 
+                description: Time given as UTC instead of local (default is false)
+                default: false
+                example: true
+              numHours: 
+                description: "Number of hours' worth of departures to include (up to 24)."
+              includeFlightPlan: 
+                description: Include flight plans (default false)
+                type: boolean
+                default: false
+                example: true
+              airport: 
+                description: Departure airport code
+              maxPositions: 
+                description: Maximum number of positions in track
+                example: 2
+              maxPositionAgeMinutes: 
+                description: Maximum age for positions in track (minutes)
+              codeType: 
+                example: "Type of any given codes: 'IATA', 'ICAO', or 'FS'. If not specified, all domains will be searched in the order stated."
+              extendedOptions: 
+                example: "Extended options for modifying standard API behavior to fit special use cases. Options: 'useInlinedReferences', 'useHttpErrors', 'includeDeltas'."
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    schema: positionalTracksFlightsArrivingXMLResponse
+                    example: !include examples/positionalTracksFlightsArrivingXMLResponse-example.xml
+                  application/json: 
+                    schema: positionalTracksFlightsArrivingJSONResponse
+                    example: !include examples/positionalTracksFlightsArrivingJSONResponse-example.json
+        /dep/{year}/{month}/{day}: 
+          get: 
+            description: "Returns the positional tracks of flights, with a given carrier and flight number, departing or having departed on the given date. If 'hourOfDay' is specified, results will be limited to the given hour, unless 'numHours' is also specified. Departure airport may optionally be specified. Flight plans may be optionally included. To narrow down to only the freshest data, you may optionally limit the age (in minutes) or number of positions per track."
+            queryParameters: 
+              hourOfDay: 
+                description: Departure hour of day (0-23)
+              utc: 
+                description: Time given as UTC instead of local (default is false)
+                default: false
+                example: true
+              numHours: 
+                description: "Number of hours' worth of departures to include (up to 24)."
+              includeFlightPlan: 
+                description: Include flight plans (default false)
+                type: boolean
+                default: false
+                example: true
+              airport: 
+                description: Departure airport code
+              maxPositions: 
+                description: Maximum number of positions in track
+                example: 2
+              maxPositionAgeMinutes: 
+                description: Maximum age for positions in track (minutes)
+              codeType: 
+                example: "Type of any given codes: 'IATA', 'ICAO', or 'FS'. If not specified, all domains will be searched in the order stated."
+              extendedOptions: 
+                example: "Extended options for modifying standard API behavior to fit special use cases. Options: 'useInlinedReferences', 'useHttpErrors', 'includeDeltas'."
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    schema: positionalTracksFlightsDepartingXMLResponse
+                    example: !include examples/positionalTracksFlightsDepartingXMLResponse-example.xml
+                  application/json: 
+                    schema: positionalTracksFlightsDepartingJSONResponse
+                    example: !include examples/positionalTracksFlightsDepartingJSONResponse-example.json
+  /airport: 
+    /status/{airport}: 
+      /dep/{year}/{month}/{day}/{hourOfDay}: 
+        get: 
+          description: Returns the status of all flights departing (or having departed) from an airport within the specified hour, or within a window up to 6 hours wide if numHours is specified.
+          queryParameters: 
+            utc: 
+              description: Time given as UTC instead of local (default is false)
+              type: boolean
+              default: false
+              example: true
+            numHours: 
+              description: "Number of hours' worth of departures to include (up to 6; default is 1)"
+              default: 1
+              example: 2
+            carrier: 
+              description: Filter results to include only the carrier indicated
+            codeType: 
+              description: "Type of any given codes: 'IATA', 'ICAO', or 'FS'. If not specified, all domains will be searched in the order stated."
+            maxFlights: 
+              description: The maximum number of unique flights to return status documents for. This is used to restrict output size for the API documentation; if it is omitted, all flights are returned.
+              example: 5
+            extendedOptions: 
+              description: "Extended options for modifying standard API behavior to fit special use cases. Options: 'useInlinedReferences', 'useHttpErrors', 'includeDeltas'."
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: statusAllFlightsDepartingXMLResponse
+                  example: !include examples/statusAllFlightsDepartingXMLResponse-example.xml
+                application/json: 
+                  schema: statusAllFlightsDepartingJSONResponse
+                  example: !include examples/statusAllFlightsDepartingJSONResponse-example.json
+      /arr/{year}/{month}/{day}/{hourOfDay}: 
+        get: 
+          description: Returns the status of all flights arriving (or having arrived) at an airport within the specified hour, or within a window up to 6 hours wide if numHours is specified.
+          queryParameters: 
+            utc: 
+              description: Time given as UTC instead of local (default is false)
+              type: boolean
+              default: false
+              example: true
+            numHours: 
+              description: "Number of hours' worth of departures to include (up to 6; default is 1)"
+              default: 1
+              example: 2
+            carrier: 
+              description: Filter results to include only the carrier indicated
+            codeType: 
+              description: "Type of any given codes: 'IATA', 'ICAO', or 'FS'. If not specified, all domains will be searched in the order stated."
+            maxFlights: 
+              description: The maximum number of unique flights to return status documents for. This is used to restrict output size for the API documentation; if it is omitted, all flights are returned.
+              example: 5
+            extendedOptions: 
+              description: "Extended options for modifying standard API behavior to fit special use cases. Options: 'useInlinedReferences', 'useHttpErrors', 'includeDeltas'."
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: statusAllFlightsArrivingXMLResponse
+                  example: !include examples/statusAllFlightsArrivingXMLResponse-example.xml
+                application/json: 
+                  schema: statusAllFlightsArrivingJSONResponse
+                  example: !include examples/statusAllFlightsArrivingJSONResponse-example.json
+    /tracks/{airport}: 
+      /arr: 
+        get: 
+          description: 'Returns the positional tracks of active flights having the specified arrival airport. Flight plans may be optionally included. "Active" flights are those for which positional data are available, and which have not yet landed. To narrow down to only the freshest data, you may optionally limit the age (in minutes) and/or number of positions per track.'
+          queryParameters: 
+            carrier: 
+              description: Filter results to include only the carrier indicated
+            codeType: 
+              description: "Type of any given codes: 'IATA', 'ICAO', or 'FS'. If not specified, all domains will be searched in the order stated."
+            maxFlights: 
+              description: The maximum number of unique flights to return status documents for. This is used to restrict output size for the API documentation; if it is omitted, all flights are returned.
+              example: 5
+            extendedOptions: 
+              description: "Extended options for modifying standard API behavior to fit special use cases. Options: 'useInlinedReferences', 'useHttpErrors', 'includeDeltas'."
+            includeFlightPlan: 
+              description: Include flight plans (default false)
+              type: boolean
+              default: false
+              example: true
+            maxPositions: 
+              description: Maximum number of positions in each track (per source)
+              example: 2
+            maxPositionAgeMinutes: 
+              description: Maximum age (in minutes) for positions to include
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: positionalAirportTracksXMLResponse
+                  example: !include examples/positionalAirportTracksXMLResponse-example.xml
+                application/json: 
+                  schema: positionalAirportTracksJSONResponse
+                  example: !include examples/positionalAirportTracksJSONResponse-example.json
+      /dep: 
+        get: 
+          description: |
+            Returns the positional tracks of active flights having the specified departure airport. Flight plans may be optionally included. "Active" flights are those for which positional data are available, and which have not yet landed. To narrow down to only the freshest data, you may optionally limit the age (in minutes) and/or number of positions per track.'
+          queryParameters: 
+            carrier: 
+              description: Filter results to include only the carrier indicated
+            codeType: 
+              description: "Type of any given codes: 'IATA', 'ICAO', or 'FS'. If not specified, all domains will be searched in the order stated."
+            maxFlights: 
+              description: The maximum number of unique flights to return status documents for. This is used to restrict output size for the API documentation; if it is omitted, all flights are returned.
+              example: 5
+            extendedOptions: 
+              description: "Extended options for modifying standard API behavior to fit special use cases. Options: 'useInlinedReferences', 'useHttpErrors', 'includeDeltas'."
+            includeFlightPlan: 
+              description: Include flight plans (default false)
+              type: boolean
+              default: false
+              example: true
+            maxPositions: 
+              description: Maximum number of positions in each track (per source)
+              example: 2
+            maxPositionAgeMinutes: 
+              description: Maximum age (in minutes) for positions to include
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: positionalAirportDepTracksXMLResponse
+                  example: !include examples/positionalAirportDepTracksXMLResponse-example.xml
+                application/json: 
+                  schema: positionalAirportDepTracksJSONResponse
+                  example: !include examples/positionalAirportDepTracksJSONResponse-example.json
+  /route/status/{departureAirport}/{arrivalAirport}: 
+    /dep/{year}/{month}/{day}: 
+      get: 
+        description: Returns the status of all flights for a given route departing on the specified date
+        queryParameters: 
+          hourOfDay: 
+            description: Departure hour of day (0-23)
+            example: 0
+          utc: 
+            description: Time given as UTC instead of local (default is false)
+            default: false
+            example: true
+          numHours: 
+            description: "Number of hours' worth of departures to include (up to 24)."
+          codeType: 
+            example: "Type of any given codes: 'IATA', 'ICAO', or 'FS'. If not specified, all domains will be searched in the order stated."
+          extendedOptions: 
+            example: "Extended options for modifying standard API behavior to fit special use cases. Options: 'useInlinedReferences', 'useHttpErrors', 'includeDeltas'."
+          maxFlights: 
+            description: The maximum number of unique flights to return tracks for. This is used to restrict output size for the API documentation.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: allRouteStatusDepXMLResponse
+                example: !include examples/allRouteStatusDepXMLResponse-example.xml
+              application/json: 
+                schema: allRouteStatusDepJSONResponse
+                example: !include examples/allRouteStatusDepJSONResponse-example.json
+    /arr/{year}/{month}/{day}: 
+      get: 
+        description: Returns the status of all flights for a given route arriving on the specified date
+        queryParameters: 
+          hourOfDay: 
+            description: Departure hour of day (0-23)
+            example: 0
+          utc: 
+            description: Time given as UTC instead of local (default is false)
+            default: false
+            example: true
+          numHours: 
+            description: "Number of hours' worth of departures to include (up to 24)."
+          codeType: 
+            example: "Type of any given codes: 'IATA', 'ICAO', or 'FS'. If not specified, all domains will be searched in the order stated."
+          extendedOptions: 
+            example: "Extended options for modifying standard API behavior to fit special use cases. Options: 'useInlinedReferences', 'useHttpErrors', 'includeDeltas'."
+          maxFlights: 
+            description: The maximum number of unique flights to return tracks for. This is used to restrict output size for the API documentation.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: allRouteStatusArrXMLResponse
+                example: !include examples/allRouteStatusArrXMLResponse-example.xml
+              application/json: 
+                schema: allRouteStatusArrJSONResponse
+                example: !include examples/allRouteStatusArrJSONResponse-example.json
+  /flightsNear: 
+    /{topLat}/{leftLon}/{bottomLat}/{rightLon}: 
+      get: 
+        description: Get all flights with current positions inside a specified bounding box. Bounding box coordinates are specified in degrees of latitude/longitude. Sides of box must not exceed 5 degrees in length.
+        queryParameters: 
+          maxFlights: 
+            description: The maximum number of unique flights to return data for. Primarily used to restrict the response size for testing.
+            example: 5
+          extendedOptions: 
+            description: "Extended options for modifying standard API behavior to fit special use cases. Options: 'useInlinedReferences', 'useHttpErrors', 'includeDeltas'."
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: boundingBoxXMLResponse
+                example: !include examples/boundingBoxXMLResponse-example.xml
+              application/json: 
+                schema: boundingBoxJSONResponse
+                example: !include examples/boundingBoxJSONResponse-example.json
+    /{lat}/{lon}/{miles}: 
+      get: 
+        description: Get flights centered around a particular point, within a given radius. The area searched is a square (not circle); the radius specifies the distance from the center of the square to one of its corners. Center point is specified in degrees of latitude and longitude; radius is specified in miles.
+        queryParameters: 
+          maxFlights: 
+            description: The maximum number of unique flights to return data for. Primarily used to restrict the response size for testing.
+            example: 5
+          extendedOptions: 
+            description: "Extended options for modifying standard API behavior to fit special use cases. Options: 'useInlinedReferences', 'useHttpErrors', 'includeDeltas'."
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: flightsAroundPointXMLResponse
+                example: !include examples/flightsAroundPointXMLResponse-example.xml
+              application/json: 
+                schema: flightsAroundPointJSONResponse
+                example: !include examples/flightsAroundPointJSONResponse-example.json
+  /fleet: 
+    /tracks/{carrier}: 
+      get: 
+        description: 'Returns the positional tracks of active flights for a fleet. Flight plans may be optionally included. "Active" flights are those for which positional data are available, and which have not yet landed. To narrow down to only the freshest data, you may optionally limit the age (in minutes) or number of positions per track.'
+        queryParameters: 
+          codeshares: 
+            description: Include codeshare partners
+            example: true
+          airport: 
+            description: Optional airport filter to restrict results to a single airport
+          codeType: 
+            description: "Type of any given codes: 'IATA', 'ICAO', or 'FS'. If not specified all domains will be searched in the order stated."
+          maxFlights: 
+            description: The maximum number of unique flights to return status documents for. This is used to restrict output size for the API documentation.
+            example: 5
+          extendedOptions: 
+            description: "Extended options for modifying standard API behavior to fit special use cases. Options: 'useInlinedReferences', 'useHttpErrors', 'includeDeltas'."
+          includeFlightPlan: 
+            description: Include flight plans (default false)
+            type: boolean
+            default: false
+            example: true
+          maxPositions: 
+            description: Maximum number of positions in track
+            example: 2
+          maxPositionAgeMinutes: 
+            description: Maximum age (in minutes) for positions to include
+          sourceType: 
+            description: Positional Source Type
+            enum: 
+              - raw
+              - derived
+              - all
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: fleetTrackXMLResponse
+                example: !include examples/fleetTrackXMLResponse-example.xml
+              application/json: 
+                schema: fleetTrackJSONResponse
+                example: !include examples/fleetTrackJSONResponse-example.json
+    /status/{carrier}/dep/{year}/{month}/{day}/{hourOfDay}: 
+      get: 
+        description: "Returns the status of all flights for a fleet departing or having departed on the given date (UTC). If 'hourOfDay' is specified, results will be limited to the given hour, unless 'numHours' is also specified."
+        queryParameters: 
+          utc: 
+            description: Time given as UTC instead of local (default is false)
+            type: boolean
+            default: false
+            example: true
+          numHours: 
+            description: Number of hours worth of departures to include (up to 24)
+            example: 2
+          codeshares: 
+            description: Include codeshare partners
+            example: true
+          airport: 
+            description: Optional airport filter to restrict results to a single airport
+          codeType: 
+            description: "Type of any given codes: 'IATA', 'ICAO', or 'FS'. If not specified all domains will be searched in the order stated."
+          maxFlights: 
+            description: The maximum number of unique flights to return status documents for. This is used to restrict output size for the API documentation.
+            example: 5
+          extendedOptions: 
+            description: "Extended options for modifying standard API behavior to fit special use cases. Options: 'useInlinedReferences', 'useHttpErrors', 'includeDeltas'."
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: fleetStatusXMLResponse
+                example: !include examples/fleetStatusXMLResponse-example.xml
+              application/json: 
+                schema: fleetStatusJSONResponse
+                example: !include examples/fleetStatusJSONResponse-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/flightStatusAndTrack/headline.md

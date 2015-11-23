@@ -1,0 +1,22 @@
+{
+  "name" : "newsheet" ,
+  "columns" : [
+    {
+      "title" : "Favorite" ,
+      "type" : "CHECKBOX" ,
+      "symbol" : "STAR"
+    } , {
+      "title" : "Primary Column" ,
+      "primary" : true ,
+      "type" : "TEXT_NUMBER"
+    } , {
+      "title" : "Status" ,
+      "type" : "PICKLIST" ,
+      "options" : [
+        "Not Started" ,
+        "Started" ,
+        "Completed"
+      ]
+    }
+  ]
+}

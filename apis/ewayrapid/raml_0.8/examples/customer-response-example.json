@@ -1,0 +1,41 @@
+{
+    "AccessCode": "44DD7CgzOhVD1JiaBtmyeKFJFDEP6MORwP4Dfyc-c-eyu8tT4-ZXczJTWWE0hLX8gqMQyVv43VeF7wxt8XMP7pHsVSZL6EN_IuUvkUH8Gd8XdPIuhWxMSOgQmWZ_AjGptB1rcj8K0gajegLbkvjrSt0dqAQ==",
+    "Customer": {
+        "CardNumber": "",
+        "CardStartMonth": "",
+        "CardStartYear": "",
+        "CardIssueNumber": "",
+        "CardName": "",
+        "CardExpiryMonth": "",
+        "CardExpiryYear": "",
+        "IsActive": false,
+        "TokenCustomerID": null,
+        "Reference": "A12345",
+        "Title": "Mr.",
+        "FirstName": "John",
+        "LastName": "Smith",
+        "CompanyName": "Demo Shop 123",
+        "JobDescription": "Developer",
+        "Street1": "Level 5",
+        "Street2": "369 Queen Street",
+        "City": "Auckland",
+        "State": "",
+        "PostalCode": "1010",
+        "Country": "nz",
+        "Email": "",
+        "Phone": "09 889 0986",
+        "Mobile": "09 889 0986",
+        "Comments": "",
+        "Fax": "",
+        "Url": ""
+    },
+    "Payment": {
+        "TotalAmount": 100,
+        "InvoiceNumber": "Inv 21540",
+        "InvoiceDescription": "Individual Invoice Description",
+        "InvoiceReference": "513456",
+        "CurrencyCode": "NZD"
+    },
+    "FormActionURL": "http://staging.secure.ewaypayments.com/AccessCode/44DD7CgzOhVD1JiaBtmyeKFJFDEP6MORwP4Dfyc-c-eyu8tT4-ZXczJTWWE0hLX8gqMQyVv43VeF7wxt8XMP7pHsVSZL6EN_IuUvkUH8Gd8XdPIuhWxMSOgQmWZ_AjGptB1rcj8K0gajegLbkvjrSt0dqAQ==",
+    "Errors": null
+}

@@ -1,0 +1,29 @@
+usage: This type should be used for methods that return any list
+description: The collection of <<resourcePathName>>
+queryParameters: 
+  order: 
+    displayName: Order
+    description: How to order the results
+  page: 
+    displayName: Page Size
+    description: The page size
+    type: integer
+    minimum: 1.0
+  offset: 
+    displayName: Offset
+    description: The starting page for results to return
+    type: integer
+    minimum: 0.0
+  desc: 
+    displayName: Descending
+    description: 'Reverses the sorting order, when you include the parameter "desc=desc" or "desc=true"'
+    enum: 
+      - desc
+      - true
+      - false
+  only: 
+    displayName: Only
+    description: You can select result fields by specifying only parameters
+  omit: 
+    displayName: Omit
+    description: You can suppress result fields by specifying omit parameters

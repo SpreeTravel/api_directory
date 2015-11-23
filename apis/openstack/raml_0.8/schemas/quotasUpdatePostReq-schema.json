@@ -1,0 +1,17 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "quota_set" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "security_groups" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

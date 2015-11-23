@@ -1,0 +1,26 @@
+{
+  "id" : "4CF18861HF410323U" ,
+  "create_time" : "2013-01-31T04:13:34Z" ,
+  "update_time" : "2013-01-31T04:13:36Z" ,
+  "state" : "completed" ,
+  "amount" : {
+    "total" : "2.34" ,
+    "currency" : "USD"
+  } ,
+  "parent_payment" : "PAY-46E69296BH2194803KEE662Y" ,
+  "links" : [
+    {
+      "href" : "https://api.sandbox.paypal.com/v1/payments/refund/4CF18861HF410323U" ,
+      "rel" : "self" ,
+      "method" : "GET"
+    } , {
+      "href" : "https://api.sandbox.paypal.com/v1/payments/payment/PAY-46E69296BH2194803KEE662Y" ,
+      "rel" : "parent_payment" ,
+      "method" : "GET"
+    } , {
+      "href" : "https://api.sandbox.paypal.com/v1/payments/sale/2MU78835H4515710F" ,
+      "rel" : "sale" ,
+      "method" : "GET"
+    }
+  ]
+}

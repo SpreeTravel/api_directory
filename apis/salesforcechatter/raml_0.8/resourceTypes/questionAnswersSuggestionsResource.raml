@@ -1,0 +1,22 @@
+get: 
+  description: Get question and answers suggestions.
+  queryParameters: 
+    includeArticles: 
+      description: Specify true to include knowledge articles in the search results. To return only questions, specify false.
+      type: boolean
+      example: true
+    maxResults: 
+      description: The maximum number of results to return for each type of item. Possible values are 1–10. The default value is 5.
+      type: integer
+      default: 5
+      example: 5
+    q: 
+      description: Specifies the string to search. The search string must contain at least two characters, not including wildcards. See Wildcards. The maximum length is 255 characters.
+      required: true
+    subjectId: 
+      description: Specify a subject ID to search only questions on that object. If the ID is a topic or a user, the ID is ignored.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: questionAndAnswersSuggestionCollectionResponse

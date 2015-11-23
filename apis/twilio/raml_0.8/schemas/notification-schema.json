@@ -1,0 +1,57 @@
+{
+    "": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+        "sid": {
+            "type": "string"
+        },
+        "account_sid": {
+            "type": "string"
+        },
+        "call_sid": {
+            "type": "string"
+        },
+        "log": {
+            "type": "string"
+        },
+        "error_code": {
+            "type": "string"
+        },
+        "more_info": {
+            "type": "string"
+        },
+        "message_text": {
+            "type": "string"
+        },
+        "message_date": {
+            "type": "string"
+        },
+        "response_body": {
+            "type": "string"
+        },
+        "request_method": {
+            "type": "string"
+        },
+        "request_url": {
+            "type": "string"
+        },
+        "request_variables": {
+            "type": "string"
+        },
+        "response_headers": {
+            "type": "string"
+        },
+        "date_created": {
+            "type": "string"
+        },
+        "api_version": {
+            "type": "string"
+        },
+        "date_updated": {
+            "type": "string"
+        },
+        "uri": {
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "percentile": {
+      "type": "string",
+      "required": false
+    },
+    "rank": {
+      "type": "integer",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,555 @@
+#%RAML 0.8
+title: OpenStack Identity API extensions
+version: v3
+baseUri: "http://localhost:35357"
+schemas:
+  - endpoints: !include schemas/endpoints-schema.xsd
+  - role: !include schemas/role-schema.xsd
+  - projects: !include schemas/projects-schema.xsd
+  - auth: !include schemas/auth-schema.xsd
+  - credentials: !include schemas/credentials-schema.xsd
+  - roles: !include schemas/roles-schema.xsd
+  - link: !include schemas/link-schema.xsd
+  - Service: !include schemas/Service-schema.xsd
+  - project: !include schemas/project-schema.xsd
+  - domains: !include schemas/domains-schema.xsd
+  - groups: !include schemas/groups-schema.xsd
+  - error: !include schemas/error-schema.xsd
+  - users: !include schemas/identityExtUser-schema.xsd
+  - token: !include schemas/token-schema.xsd
+  - Services: !include schemas/Services-schema.xsd
+  - endpoint: !include schemas/endpoint-schema.xsd
+  - credential: !include schemas/credential-schema.xsd
+  - domain: !include schemas/domain-schema.xsd
+  - links: !include schemas/links-schema.xsd
+  - user: !include schemas/identityExtUser-schema.xsd
+  - group: !include schemas/group-schema.xsd
+  - accessTokenGetResp: !include schemas/accessTokenGetResp-schema.json
+  - accessTokenPostResp: !include schemas/accessTokenPostResp-schema.json
+  - accessTokensGetResp: !include schemas/accessTokensGetResp-schema.json
+  - consumerGetResp: !include schemas/consumerGetResp-schema.json
+  - consumerPatchReq: !include schemas/consumerPatchReq-schema.json
+  - consumerPatchResp: !include schemas/consumerPatchResp-schema.json
+  - consumersGetResp: !include schemas/consumersGetResp-schema.json
+  - consumersPostReq: !include schemas/consumersPostReq-schema.json
+  - consumersPostResp: !include schemas/consumersPostResp-schema.json
+  - requestTokenPostResp: !include schemas/requestTokenPostResp-schema.json
+/{version}: 
+  /OS-OAUTH1: 
+    /access_token: 
+      post: 
+        description: Create access token
+        responses: 
+          200: 
+            body: 
+              application/txt: 
+                schema: accessTokenPostResp
+                example: !include examples/accessTokenPostResp-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+      /{access_token_key}: 
+    /consumers: 
+      post: 
+        description: Create consumer
+        body: 
+          application/json: 
+            schema: consumersPostReq
+            example: !include examples/consumersPostReq-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: consumersPostResp
+                example: !include examples/consumersPostResp-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+      get: 
+        description: List consumers
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: consumersGetResp
+                example: !include examples/consumersGetResp-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      /{consumer_id}: 
+        get: 
+          description: Show consumer
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: consumerGetResp
+                  example: !include examples/consumerGetResp-example.json
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            403: 
+              body: 
+                application/xml: 
+                  schema: forbidden
+                application/json: 
+                  schema: ""
+            405: 
+              body: 
+                application/xml: 
+                  schema: badMethod
+                application/json: 
+                  schema: ""
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimit
+                application/json: 
+                  schema: ""
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailable
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+        patch: 
+          description: Update consumer
+          body: 
+            application/json: 
+              schema: consumerPatchReq
+              example: !include examples/consumerPatchReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: consumerPatchResp
+                  example: !include examples/consumerPatchResp-example.json
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            403: 
+              body: 
+                application/xml: 
+                  schema: forbidden
+                application/json: 
+                  schema: ""
+            405: 
+              body: 
+                application/xml: 
+                  schema: badMethod
+                application/json: 
+                  schema: ""
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimit
+                application/json: 
+                  schema: ""
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailable
+                application/json: 
+                  schema: ""
+        delete: 
+          description: Delete consumer
+          responses: 
+            204: 
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            403: 
+              body: 
+                application/xml: 
+                  schema: forbidden
+                application/json: 
+                  schema: ""
+            405: 
+              body: 
+                application/xml: 
+                  schema: badMethod
+                application/json: 
+                  schema: ""
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimit
+                application/json: 
+                  schema: ""
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailable
+                application/json: 
+                  schema: ""
+    /request_token: 
+    /users: 
+      /{user_id}: 
+        /access_tokens: 
+          get: 
+            description: List authorized access tokens
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: accessTokensGetResp
+                    example: !include examples/accessTokensGetResp-example.json
+              400: 
+                body: 
+                  application/xml: 
+                    schema: badRequest
+                  application/json: 
+                    schema: ""
+              401: 
+                body: 
+                  application/xml: 
+                    schema: unauthorized
+                  application/json: 
+                    schema: ""
+              403: 
+                body: 
+                  application/xml: 
+                    schema: forbidden
+                  application/json: 
+                    schema: ""
+              405: 
+                body: 
+                  application/xml: 
+                    schema: badMethod
+                  application/json: 
+                    schema: ""
+              413: 
+                body: 
+                  application/xml: 
+                    schema: overLimit
+                  application/json: 
+                    schema: ""
+              503: 
+                body: 
+                  application/xml: 
+                    schema: serviceUnavailable
+                  application/json: 
+                    schema: ""
+          /{access_token_id}: 
+            get: 
+              description: Get authorized access token
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      schema: accessTokenGetResp
+                      example: !include examples/accessTokenGetResp-example.json
+                400: 
+                  body: 
+                    application/xml: 
+                      schema: badRequest
+                    application/json: 
+                      schema: ""
+                401: 
+                  body: 
+                    application/xml: 
+                      schema: unauthorized
+                    application/json: 
+                      schema: ""
+                403: 
+                  body: 
+                    application/xml: 
+                      schema: forbidden
+                    application/json: 
+                      schema: ""
+                405: 
+                  body: 
+                    application/xml: 
+                      schema: badMethod
+                    application/json: 
+                      schema: ""
+                413: 
+                  body: 
+                    application/xml: 
+                      schema: overLimit
+                    application/json: 
+                      schema: ""
+                503: 
+                  body: 
+                    application/xml: 
+                      schema: serviceUnavailable
+                    application/json: 
+                      schema: ""
+            delete: 
+              description: Revoke access token
+              responses: 
+                204: 
+            /roles: 
+              get: 
+                description: List roles for an access token
+                responses: 
+                  200: 
+                  400: 
+                    body: 
+                      application/xml: 
+                        schema: badRequest
+                      application/json: 
+                        schema: ""
+                  401: 
+                    body: 
+                      application/xml: 
+                        schema: unauthorized
+                      application/json: 
+                        schema: ""
+                  403: 
+                    body: 
+                      application/xml: 
+                        schema: forbidden
+                      application/json: 
+                        schema: ""
+                  405: 
+                    body: 
+                      application/xml: 
+                        schema: badMethod
+                      application/json: 
+                        schema: ""
+                  413: 
+                    body: 
+                      application/xml: 
+                        schema: overLimit
+                      application/json: 
+                        schema: ""
+                  503: 
+                    body: 
+                      application/xml: 
+                        schema: serviceUnavailable
+                      application/json: 
+                        schema: ""
+              /{role_id}: 
+                get: 
+                  description: Get role information for an access token
+                  responses: 
+                    200: 
+                    400: 
+                      body: 
+                        application/xml: 
+                          schema: badRequest
+                        application/json: 
+                          schema: ""
+                    401: 
+                      body: 
+                        application/xml: 
+                          schema: unauthorized
+                        application/json: 
+                          schema: ""
+                    403: 
+                      body: 
+                        application/xml: 
+                          schema: forbidden
+                        application/json: 
+                          schema: ""
+                    405: 
+                      body: 
+                        application/xml: 
+                          schema: badMethod
+                        application/json: 
+                          schema: ""
+                    413: 
+                      body: 
+                        application/xml: 
+                          schema: overLimit
+                        application/json: 
+                          schema: ""
+                    503: 
+                      body: 
+                        application/xml: 
+                          schema: serviceUnavailable
+                        application/json: 
+                          schema: ""
+  /auth: 
+    /tokens: 
+      post: 
+        description: Get an Identity Service token
+        body: 
+          application/json: 
+            schema: ""
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: ""
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""

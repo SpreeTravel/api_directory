@@ -1,0 +1,10 @@
+{
+  "body" : {
+    "messageSegments" : [
+      {
+        "type" : "Text" ,
+        "text" : "I am definitely going to check that out."
+      }
+    ]
+  }
+}

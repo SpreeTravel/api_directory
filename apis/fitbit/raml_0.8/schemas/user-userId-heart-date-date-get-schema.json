@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "average": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "heartRate": {
+            "type": "integer"
+          },
+          "tracker": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "heart": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "heartRate": {
+            "type": "integer"
+          },
+          "logId": {
+            "type": "integer"
+          },
+          "time": {
+            "type": "string"
+          },
+          "tracker": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

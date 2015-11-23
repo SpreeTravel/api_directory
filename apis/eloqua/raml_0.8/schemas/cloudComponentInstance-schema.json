@@ -1,0 +1,41 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "componentId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "configurationUrl" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "instanceImage" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "componentImage" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "url" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "height" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "width" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

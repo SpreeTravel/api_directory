@@ -1,0 +1,10 @@
+queryParameters: 
+  alwaysIncludeEmail: 
+    description: Whether to always include a value in the email field for the organizer, creator and attendees, even if no real email is available (i.e. a generated, non-working value will be provided). The use of this option is discouraged and should only be used by clients which cannot handle the absence of an email address value in the mentioned places. Optional. The default is False.
+    type: boolean
+    default: false
+    example: true
+  maxAttendees: 
+    description: The maximum number of attendees to include in the response. If there are more than the specified number of attendees, only the participant is returned. Optional.
+    type: integer
+    example: 15

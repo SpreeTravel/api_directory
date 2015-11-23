@@ -1,0 +1,47 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "access_token" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "consumer_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "expires_at" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "links" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "roles" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "self" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "project_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "authorizing_user_id" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

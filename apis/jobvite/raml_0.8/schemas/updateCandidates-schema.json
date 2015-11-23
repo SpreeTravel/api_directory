@@ -1,0 +1,25 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "date" : {
+      "type" : "object" ,
+      "required" : true ,
+      "properties" : {
+        "api" : {
+          "type" : "string" ,
+          "required" : true
+        } ,
+        "secret" : {
+          "type" : "string" ,
+          "required" : true
+        } ,
+        "action" : {
+          "type" : "string" ,
+          "required" : true
+        }
+      }
+    }
+  }
+}

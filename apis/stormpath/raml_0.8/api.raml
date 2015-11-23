@@ -1,0 +1,588 @@
+#%RAML 0.8
+title: StormPath
+version: v1
+baseUri: https://api.stormpath.com/{version}
+mediaType: application/json
+securitySchemes:
+  - basic: !include securitySchemes/basic.raml
+  - digest: !include securitySchemes/digest.raml
+schemas:
+  - Group: !include schemas/Group-schema.json
+  - GroupResponse: !include schemas/GroupResponse-schema.json
+  - loginAttempt: !include schemas/loginAttempt-schema.json
+  - TenantAplications: !include schemas/TenantAplications-schema.json
+  - RetrieveTenant: !include schemas/RetrieveTenant-schema.json
+  - DirectoriesList: !include schemas/DirectoriesList-schema.json
+  - CreateAplicationresp: !include schemas/CreateAplicationresp-schema.json
+  - ReturnHrefAttribute: !include schemas/ReturnHrefAttribute-schema.json
+  - UpdateApplicationresp: !include schemas/UpdateApplicationresp-schema.json
+  - LoginAttempt: !include schemas/LoginAttemp-schema.json
+  - LoginAttemptFailure: !include schemas/LoginAttemptFailure-schema.json
+  - RegisterAccount: !include schemas/RegisterAccount-schema.json
+  - RegisterAccountresp: !include schemas/RegisterAccountresp-schema.json
+  - AccountsListresp: !include schemas/AccountsListresp-schema.json
+  - GroupsList: !include schemas/GroupsList-schema.json
+  - ResetEmail: !include schemas/ResetEmail-schema.json
+  - ResetEmailresp: !include schemas/ResetEmailresp-schema.json
+  - ResetEmailFailure: !include schemas/ResetEmailFailure-schema.json
+  - RetrievingTokenResource: !include schemas/RetrievingTokenResource-schema.json
+  - RetrievingTokenResourceFailure: !include schemas/RetrievingTokenResourceFailure-schema.json
+  - StoreMappingsList: !include schemas/StoreMappingsList-schema.json
+  - UpdateApplication: !include schemas/UpdateApplication-schema.json
+  - CreateAplication: !include schemas/CreateAplication-schema.json
+  - AccountStoreMapping: !include schemas/AccountStoreMapping-schema.json
+  - RetrieveAccountStoreMappings: !include schemas/RetrieveAccountStoreMappings-schema.json
+  - UpdateAccountStoreMapping: !include schemas/UpdateAccountStoreMapping-schema.json
+  - UpdateAccountStoreMappingresp: !include schemas/UpdateAccountStoreMappingresp-schema.json
+  - AccountStoreMappingresp: !include schemas/AccountStoreMappingresp-schema.json
+  - CreateCloudDirectory: !include schemas/CreateCloudDirectory-schema.json
+  - CreateCloudDirectoryresp: !include schemas/CreateCloudDirectoryresp-schema.json
+  - RetrieveDirectory: !include schemas/RetrieveDirectory-schema.json
+  - UpdateDirectory: !include schemas/UpdateDirectory-schema.json
+  - UpdateDirectoryresp: !include schemas/UpdateDirectoryresp-schema.json
+  - DirectoryAccountsList: !include schemas/DirectoryAccountsList-schema.json
+  - CreateAccount: !include schemas/CreateAccount-schema.json
+  - CreateAccountresp: !include schemas/CreateAccountresp-schema.json
+  - RetrieveGroup: !include schemas/RetrieveGroup-schema.json
+  - UpdateGroup: !include schemas/UpdateGroup-schema.json
+  - GroupMembershipsList: !include schemas/GroupMembershipsList-schema.json
+  - CreateGroupMembership: !include schemas/CreateGroupMembership-schema.json
+  - CreateGroupMembershipresp: !include schemas/CreateGroupMembershipresp-schema.json
+  - RetrieveGroupMembership: !include schemas/RetrieveGroupMembership-schema.json
+  - RetrieveAccount: !include schemas/RetrieveAccount-schema.json
+  - UpdateAccount: !include schemas/UpdateAccount-schema.json
+  - AccountGroupsList: !include schemas/AccountGroupsList-schema.json
+  - RetrieveAccountCustomData: !include schemas/RetrieveAccountCustomData-schema.json
+  - UpdateAccountCustomData: !include schemas/UpdateAccountCustomData-schema.json
+  - UpdateAccountCustomDataresp: !include schemas/UpdateAccountCustomDataresp-schema.json
+  - EmailVerificationTokens: !include schemas/EmailVerificationTokens-schema.json
+  - UpdateAccountresp: !include schemas/UpdateAccountresp-schema.json
+  - LoginAttemp: !include schemas/LoginAttemp-schema.json
+resourceTypes:
+  - stormpathResource: !include resourceTypes/stormpathResource.raml
+traits:
+  - query: !include traits/query.raml
+securedBy: [ basic ]
+/tenants: 
+  type: stormpathResource
+  /current: 
+    type: stormpathResource
+    get: 
+      description: |
+        Because a REST caller can retrieve one and only one Tenant resource, it is often more convenient not to be concerned with the Tenant-specific URL is when performing a request, and instead use a simpler permanent alias.
+        
+        You can request the current Tenant resource, and the API server will automatically issue a 302 redirect to the Tenant resource corresponding to the currently executing API caller. In other words, this endpoint redirects the API caller to their own Tenantâ€™s URI.
+      responses: 
+        302: 
+  /{tenantId}: 
+    type: stormpathResource
+    get: 
+      description: "Execute a GET request with the tenant URI to retrieve the Tenant resource. You may only retrieve your own Tenant: every API Key that executes REST requests is associated with a Tenant, and the request caller may only retrieve the Tenant corresponding to the API Key used."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: RetrieveTenant
+              example: !include examples/RetrieveTenant-example.json
+    /applications: 
+      type: stormpathResource
+      get: 
+        is: [ query ]
+        description: You can list your tenants applications by sending a GET request to your tenants applications Collection Resource href URL. The response is a paginated list of tenant applications.
+        queryParameters: 
+          name: 
+            description: The name of the application. Must be unique across all applications within a tenant.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: TenantAplications
+                example: !include examples/TenantAplications-example.json
+    /directories: 
+      type: stormpathResource
+      get: 
+        is: [ query ]
+        description: "List your tenent's directories."
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: DirectoriesList
+                example: !include examples/DirectoriesList-example.json
+/applications: 
+  type: stormpathResource
+  post: 
+    description: Create an application
+    queryParameters: 
+      createDirectory: 
+        description: "Create a brand new Directory and automatically name the directory based on the application. The generated name will reflect the new application's name as best as is possible, guaranteeing that it is unique compared to any of your existing directories."
+    body: 
+      application/json: 
+        schema: CreateAplication
+        example: !include examples/CreateAplication-example.json
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: CreateAplicationresp
+            example: !include examples/CreateAplicationresp-example.json
+  /{applicationId}: 
+    type: stormpathResource
+    get: 
+      description: Retrieve application contents.
+      queryParameters: 
+        expand: 
+          description: "The following Application attributes are expandable: tenant, accounts, groups. Also, because accounts and groups are Collection Resources themselves, you can additionally control pagination for either expanded collection."
+          example: "GET https://api.stormpath.com/v1/applications/WpM9nyZ2TbaEzfbRvLk9KA?expand=tenant,accounts(offset:0,limit:50)"
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: ReturnHrefAttribute
+              example: !include examples/ReturnHrefAttribute-example.json
+    post: 
+      description: |
+        Update an application. Unspecified attributes are not changed, but at least one attribute must be specified.
+      body: 
+        application/json: 
+          schema: UpdateApplication
+          example: !include examples/UpdateApplication-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: UpdateApplicationresp
+              example: !include examples/UpdateApplicationresp-example.json
+    delete: 
+      description: Delete an application
+    /loginAttempts: 
+      type: stormpathResource
+      post: 
+        description: |
+          Execute an account login attempt. An HTTP POST authenticates an associated application account. Only HTTP POST is supported.
+          
+          |Parameter|Required|Description|          
+          |---|---|
+          |type|true|The type of the login attempt. The only currently supported type is basic. Additional types will likely be supported in the future.|
+          |value|true|The Base64 encoded username:plaintextPassword pair. For example, for username jsmith or email jsmith@email.com and plaintext password mySecretPassword this value attribute would be set to the following computed result: base64_encode("jsmith:mySecretPassword"); The base64_encode method call is only an example. You will need to use the Base64 encoding method is available to you in your chosen programming language and/or software frameworks.|
+          |accountStore|false|An optional link to the application's accountStore (directory or group) that you are certain contains the account attempting to login. Specifying this attribute can speed up logins if you know exactly which of the application's assigned account stores contains the account: Stormpath will not have to iterate over the assigned account stores to find the account to authenticate it. This can speed up logins significantly if you have many account stores (> 15) assigned to the application.|
+        body: 
+          application/josn: 
+            schema: loginAttempt
+            example: !include examples/loginAttempt-example.josn
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: LoginAttemp
+                example: !include examples/LoginAttempt-example.json
+          400: 
+            description: If the login attempt fails, a 400 Bad Request is returned with an error payload explaining why the attempt failed
+            body: 
+              application/json: 
+                schema: LoginAttemptFailure
+                example: !include examples/LoginAttemptFailure-example.json
+    /accounts: 
+      type: stormpathResource
+      post: 
+        description: Register a new application account
+        body: 
+          application/json: 
+            schema: RegisterAccount
+            example: !include examples/RegisterAccount-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: RegisterAccountresp
+                example: !include examples/RegisterAccountresp-example.json
+      get: 
+        is: [ query ]
+        description: You can list your applications accounts by sending a GET request to your applications accounts Collection Resource href URL. The response is a paginated list of application accounts.
+        queryParameters: 
+          username: 
+            description: The username for the account. Must be unique across the owning directory. If not specified, the username will default to the email field
+            minLength: 1
+            maxLength: 255
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: AccountsListresp
+                example: !include examples/AccountsListresp-example.json
+    /groups: 
+      type: stormpathResource
+      get: 
+        is: [ query ]
+        description: You can list your applications groups by sending a GET request to your applications groups Collection Resource href URL. The response is a paginated list of application groups.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: GroupsList
+                example: !include examples/GroupsList-example.json
+      post: 
+        description: "Create an application group. In addition to Stormpath's group attributes, you may also specify your own custom data by including a customData JSON object"
+        body: 
+          application/json: 
+            schema: Group
+            example: !include examples/Group-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: GroupResponse
+                example: !include examples/GroupResponse-example.json
+    /passwordResetTokens: 
+      type: stormpathResource
+      post: 
+        description: A successful HTTP POST sends a password reset email to the first discovered account associated with the corresponding application. The email recipient can then click a password reset URL in the email to reset their password in a web form.
+        body: 
+          application/json: 
+            schema: ResetEmail
+            example: !include examples/ResetEmail-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: ResetEmailresp
+                example: !include examples/ResetEmailresp-example.json
+          400: 
+            description: If the password reset token creation fails, a 400 Bad Request is returned with an error payload explaining why the attempt failed.
+            body: 
+              application/json: 
+                schema: ResetEmailFailure
+                example: !include examples/ResetEmailFailure-example.json
+      /{token}: 
+        type: stormpathResource
+        get: 
+          description: Retrieving a token resource successfully using an HTTP GET indicates that the token is valid. Thus, to validate a token, you call to the passwordResetTokens end point and specify the token captured from the query string as the specific resource to request
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: RetrievingTokenResource
+                  example: !include examples/RetrievingTokenResource-example.json
+            404: 
+              description: If the password reset token is invalid - it never existed or has expired - a 404 Not Found response is returned.
+              body: 
+                application/json: 
+                  schema: RetrievingTokenResourceFailure
+                  example: !include examples/RetrievingTokenResourceFailure-example.json
+    /accountStoreMappings: 
+      type: stormpathResource
+      get: 
+        description: List an applications assigned account stores.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: StoreMappingsList
+                example: !include examples/StoreMappingsList-example.json
+/accountStoreMappings: 
+  type: stormpathResource
+  post: 
+    description: Create an account store mapping
+    body: 
+      application/json: 
+        schema: AccountStoreMapping
+        example: !include examples/AccountStoreMapping-example.json
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: AccountStoreMappingresp
+            example: !include examples/AccountStoreMappingresp-example.json
+  /{accountStoreMappingId}: 
+    type: stormpathResource
+    get: 
+      description: Retreive an account store mapping.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: RetrieveAccountStoreMappings
+              example: !include examples/RetrieveAccountStoreMappings-example.json
+    post: 
+      description: Update an account store mapping
+      body: 
+        application/json: 
+          schema: UpdateAccountStoreMapping
+          example: !include examples/UpdateAccountStoreMapping-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: UpdateAccountStoreMappingresp
+              example: !include examples/UpdateAccountStoreMappingresp-example.json
+    delete: 
+      description: Delete an account store mapping
+/directories: 
+  type: stormpathResource
+  post: 
+    description: Create a cloud directory
+    body: 
+      application/json: 
+        schema: CreateCloudDirectory
+        example: !include examples/CreateCloudDirectory-example.json
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: CreateCloudDirectoryresp
+            example: !include examples/CreateCloudDirectoryresp-example.json
+  /{directoryId}: 
+    type: stormpathResource
+    get: 
+      description: Retrieve a cloud directory
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: RetrieveDirectory
+              example: !include examples/RetrieveDirectory-example.json
+    post: 
+      description: Update a cloud directory
+      body: 
+        application/json: 
+          schema: UpdateDirectory
+          example: !include examples/UpdateDirectory-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: UpdateDirectoryresp
+              example: !include examples/UpdateDirectoryresp-example.json
+    delete: 
+      description: Delete a cloud directory
+    /accounts: 
+      type: stormpathResource
+      description: ""
+      get: 
+        is: [ query ]
+        description: You can list your directorys accounts by sending a GET request to your directorys accounts Collection Resource href URL. The response is a paginated list of directory accounts.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: DirectoryAccountsList
+                example: !include examples/DirectoryAccountsList-example.json
+      post: 
+        description: Create an account
+        body: 
+          application/json: 
+            schema: CreateAccount
+            example: !include examples/CreateAccount-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: CreateAccountresp
+                example: !include examples/CreateAccountresp-example.json
+    /groups: 
+      type: stormpathResource
+      get: 
+        is: [ query ]
+        description: You can list your directorys groups by sending a GET request to your directorys groups Collection Resource href URL. The response is a paginated list of directory groups.
+        queryParameters: 
+          name: 
+            description: The name of the group. Must be unique within a directory.
+            minLength: 1
+            maxLength: 255
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: DirectoryAccountsList
+                example: !include examples/DirectoryAccountsList-example.json
+/groups: 
+  type: stormpathResource
+  /{groupId}: 
+    type: stormpathResource
+    get: 
+      description: Retrieve a group
+      queryParameters: 
+        expand: 
+          description: "The following Groups attributes are expandable: tenant, directory, accounts. Also, because accounts is a Collection Resources itself, you can additionally control pagination for either expanded collection."
+          example: "expand=tenant,directory,accounts(offset:0,limit:50)"
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: RetrieveGroup
+              example: !include examples/RetrieveGroup-example.json
+    post: 
+      description: Update a group
+      body: 
+        application/json: 
+          schema: UpdateGroup
+          example: !include examples/UpdateGroup-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/UpdateGroupresp-example.json
+    delete: 
+      description: Delete a group
+    /accounts: 
+      type: stormpathResource
+      get: 
+        is: [ query ]
+        description: Retreive group accounts.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+    /customData: 
+      type: stormpathResource
+      get: 
+        description: Retrieve a group custom data
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                example: ""
+      delete: 
+        description: Delete all of a groups custom data
+      post: 
+        description: Update a group custom data
+        body: 
+          application/json: 
+        responses: 
+          200: 
+            body: 
+              application/json: 
+      /{fieldName}: 
+        type: stormpathResource
+        delete: 
+          description: Delete a customData field.
+    /accountMemberships: 
+      type: stormpathResource
+      get: 
+        description: Retreive a Collection Resource containing the group memberships to which a specific group is a member
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: GroupMembershipsList
+                example: !include examples/GroupMembershipsList-example.json
+/groupMemberships: 
+  type: stormpathResource
+  post: 
+    description: To create a group membership you need the account and the group href.
+    body: 
+      application/json: 
+        schema: CreateGroupMembership
+        example: !include examples/CreateGroupMembership-example.json
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: CreateGroupMembershipresp
+            example: !include examples/CreateGroupMembershipresp-example.json
+  /{groupMembershipId}: 
+    type: stormpathResource
+    get: 
+      description: |
+        Retrieve a group membership.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: RetrieveGroupMembership
+              example: !include examples/RetrieveGroupMembership-example.json
+    delete: 
+      description: Delete a group membership
+/accounts: 
+  type: stormpathResource
+  /{accountId}: 
+    type: stormpathResource
+    get: 
+      description: Retrieve an account
+      queryParameters: 
+        expand: 
+          description: "The following Account attributes are expandable: customData, tenant, directory, groups, groupMemberships. Also, because groups and groupMemberships are Collection Resources themselves, you can additionally control pagination for either expanded collection."
+          example: "expand=tenant,directory,groups(offset:0,limit:50),groupMemberships(offset:0,limit:50)"
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: RetrieveAccount
+              example: !include examples/RetrieveAccount-example.json
+    post: 
+      description: Update an account
+      body: 
+        application/json: 
+          schema: UpdateAccount
+          example: !include examples/UpdateAccount-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: UpdateAccountresp
+              example: !include examples/UpdateAccountresp-example.json
+    delete: 
+      description: Delete an account
+    /groupMemberships: 
+      type: stormpathResource
+      get: 
+        description: Retreive a paginated list of the group memberships where the account is involved.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: GroupMembershipsList
+                example: !include examples/GroupMembershipsList-example.json
+    /groups: 
+      type: stormpathResource
+      get: 
+        description: Retreive a Collection Resource containing links for all groups where a specific account is a member.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: AccountGroupsList
+                example: !include examples/AccountGroupsList-example.json
+    /customData: 
+      type: stormpathResource
+      get: 
+        description: Retrieve an account custom data
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: RetrieveAccountCustomData
+                example: !include examples/RetrieveAccountCustomData-example.json
+      post: 
+        description: Update account custom data
+        body: 
+          application/json: 
+            schema: UpdateAccountCustomData
+            example: !include examples/UpdateAccountCustomData-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: UpdateAccountCustomDataresp
+                example: !include examples/UpdateAccountCustomDataresp-example.json
+      delete: 
+        description: Delete all of an accounts custom data
+      /{fieldName}: 
+        type: stormpathResource
+        delete: 
+          description: Delete a customData field.
+  /emailVerificationTokens: 
+    type: stormpathResource
+    /{verificationToken}: 
+      type: stormpathResource
+      post: 
+        description: Verify the email.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: EmailVerificationTokens
+                example: !include examples/EmailVerificationTokens-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

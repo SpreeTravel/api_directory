@@ -1,0 +1,91 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "hypervisor" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "cpu_info" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "current_workload" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "disk_available_least" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "free_disk_gb" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "free_ram_mb" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "hypervisor_hostname" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "hypervisor_type" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "hypervisor_version" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "local_gb" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "local_gb_used" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "memory_mb" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "memory_mb_used" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "running_vms" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "service" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "host" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "vcpus" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "vcpus_used" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

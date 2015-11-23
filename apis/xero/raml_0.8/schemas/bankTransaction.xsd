@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="BankTransaction">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Type"/>
+    <xs:element ref="Contact"/>
+    <xs:element ref="LineItems"/>
+    <xs:element ref="BankAccount"/>
+    <xs:element ref="Url"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Type" type="xs:NCName"/>
+  <xs:element name="Contact" type="Name"/>
+  <xs:element name="LineItems">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="LineItem"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="LineItem">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Description"/>
+    <xs:element ref="UnitAmount"/>
+    <xs:element ref="AccountCode"/>
+    <xs:element ref="Tracking"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Description" type="xs:string"/>
+  <xs:element name="UnitAmount" type="xs:decimal"/>
+  <xs:element name="AccountCode" type="xs:integer"/>
+  <xs:element name="Tracking">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="TrackingCategory"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="TrackingCategory">
+  <xs:complexType>
+    <xs:complexContent>
+    <xs:extension base="Name">
+      <xs:sequence>
+      <xs:element ref="Option"/>
+      </xs:sequence>
+    </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Option" type="xs:string"/>
+  <xs:element name="BankAccount">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Code"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Code" type="xs:NCName"/>
+  <xs:element name="Url" type="xs:anyURI"/>
+  <xs:complexType name="Name">
+  <xs:sequence>
+    <xs:element ref="Name"/>
+  </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Name" type="xs:string"/>
+</xs:schema>

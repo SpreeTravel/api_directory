@@ -1,0 +1,82 @@
+{
+	"type" : "object" ,
+	"$schema" : "http://json-schema.org/draft-03/schema" ,
+	"required" : false ,
+	"properties" : {
+		"roles" : {
+			"type" : "object" ,
+			"required" : false ,
+			"properties" : {
+				"__op" : {
+					"type" : "string" ,
+					"required" : true ,
+					"pattern" : "^AddRelation$"
+				} ,
+				"objects" : {
+					"type" : "array" ,
+					"required" : true ,
+					"items" : {
+						"type" : "object" ,
+						"required" : false ,
+						"properties" : {
+							"__type" : {
+								"type" : "string" ,
+								"required" : true ,
+								"pattern" : "^_Role$"
+							} ,
+							"className" : {
+								"type" : "string" ,
+								"required" : true
+							} ,
+							"objectId" : {
+								"type" : "string" ,
+								"required" : true
+							}
+						}
+					}
+				}
+			}
+		} ,
+		"users" : {
+			"type" : "object" ,
+			"required" : false ,
+			"properties" : {
+				"__op" : {
+					"type" : "string" ,
+					"required" : true ,
+					"pattern" : "^AddRelation$"
+				} ,
+				"objects" : {
+					"type" : "array" ,
+					"required" : true ,
+					"items" : {
+						"type" : "object" ,
+						"required" : false ,
+						"properties" : {
+							"__type" : {
+								"type" : "string" ,
+								"required" : true ,
+								"pattern" : "^_User$"
+							} ,
+							"className" : {
+								"type" : "string" ,
+								"required" : true
+							} ,
+							"objectId" : {
+								"type" : "string" ,
+								"required" : true
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"patternProperties" : {
+		"^[a-zA-Z0-9_]+$" : {
+			"type" : "any" ,
+			"required" : false
+		}
+	} ,
+	"additionalProperties" : false
+}

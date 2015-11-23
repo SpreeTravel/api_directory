@@ -1,0 +1,155 @@
+{
+  "alert" : {
+    "event" : {
+      "type" : "EN_ROUTE"
+    } ,
+    "dataSource" : "Simulated Event Source" ,
+    "dateTimeRecorded" : "2015-05-04T08:48:11.207Z" ,
+    "rule" : {
+      "id" : "1" ,
+      "name" : "name" ,
+      "description" : "description" ,
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "1113" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "departure" : "2015-05-04T04:48:11.206" ,
+      "arrival" : "2015-05-04T12:48:11.206" ,
+      "ruleEvents" : [
+        {
+          "type" : "ALL_CHANGES"
+        }
+      ] ,
+      "nameValues" : [
+      ] ,
+      "delivery" : {
+        "format" : "json" ,
+        "destination" : "smtp://your@email.com"
+      }
+    } ,
+    "flightStatus" : {
+      "flightId" : 1 ,
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "1113" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "departureDate" : {
+        "dateLocal" : "2015-05-04T04:48:11.000" ,
+        "dateUtc" : "2015-05-04T04:48:11.000Z"
+      } ,
+      "arrivalDate" : {
+        "dateLocal" : "2015-05-04T12:48:11.000" ,
+        "dateUtc" : "2015-05-04T12:48:11.000Z"
+      } ,
+      "status" : "A" ,
+      "operationalTimes" : {
+        "publishedDeparture" : {
+          "dateLocal" : "2015-05-04T04:48:11.000" ,
+          "dateUtc" : "2015-05-04T04:48:11.000Z"
+        } ,
+        "publishedArrival" : {
+          "dateLocal" : "2015-05-04T12:48:11.000" ,
+          "dateUtc" : "2015-05-04T12:48:11.000Z"
+        } ,
+        "estimatedGateDeparture" : {
+          "dateLocal" : "2015-05-04T04:48:11.000" ,
+          "dateUtc" : "2015-05-04T04:48:11.000Z"
+        } ,
+        "actualGateDeparture" : {
+          "dateLocal" : "2015-05-04T04:48:11.000" ,
+          "dateUtc" : "2015-05-04T04:48:11.000Z"
+        } ,
+        "estimatedGateArrival" : {
+          "dateLocal" : "2015-05-04T12:48:11.000" ,
+          "dateUtc" : "2015-05-04T12:48:11.000Z"
+        } ,
+        "actualGateArrival" : {
+          "dateLocal" : "2015-05-04T12:48:11.000" ,
+          "dateUtc" : "2015-05-04T12:48:11.000Z"
+        }
+      } ,
+      "flightDurations" : {
+        "blockMinutes" : 480
+      } ,
+      "flightStatusUpdates" : [
+        {
+          "updatedAt" : {
+            "dateUtc" : "2015-05-04T08:48:11.208Z"
+          } ,
+          "source" : "Simulated Event Source" ,
+          "updatedTextFields" : [
+            {
+              "field" : "STS" ,
+              "originalText" : "S" ,
+              "newText" : "A"
+            }
+          ] ,
+          "updatedDateFields" : [
+          ]
+        }
+      ]
+    }
+  } ,
+  "appendix" : {
+    "airlines" : [
+      {
+        "fs" : "AA" ,
+        "iata" : "AA" ,
+        "icao" : "AAL" ,
+        "name" : "American Airlines" ,
+        "phoneNumber" : "1-800-433-7300" ,
+        "active" : true
+      }
+    ] ,
+    "airports" : [
+      {
+        "fs" : "ORD" ,
+        "iata" : "ORD" ,
+        "icao" : "KORD" ,
+        "faa" : "ORD" ,
+        "name" : "O'Hare International Airport" ,
+        "street1" : "10000 West O'Hare" ,
+        "city" : "Chicago" ,
+        "cityCode" : "CHI" ,
+        "stateCode" : "IL" ,
+        "postalCode" : "60666" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Chicago" ,
+        "weatherZone" : "ILZ014" ,
+        "localTime" : "2015-05-04T03:48:11.208" ,
+        "utcOffsetHours" : -5 ,
+        "latitude" : 41.976912 ,
+        "longitude" : -87.904876 ,
+        "elevationFeet" : 668 ,
+        "classification" : 1 ,
+        "active" : true
+      } , {
+        "fs" : "LAX" ,
+        "iata" : "LAX" ,
+        "icao" : "KLAX" ,
+        "faa" : "LAX" ,
+        "name" : "Los Angeles International Airport" ,
+        "street1" : "One World Way" ,
+        "street2" : "" ,
+        "city" : "Los Angeles" ,
+        "cityCode" : "LAX" ,
+        "stateCode" : "CA" ,
+        "postalCode" : "90045-5803" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Los_Angeles" ,
+        "weatherZone" : "CAZ041" ,
+        "localTime" : "2015-05-04T01:48:11.208" ,
+        "utcOffsetHours" : -7 ,
+        "latitude" : 33.943399 ,
+        "longitude" : -118.408279 ,
+        "elevationFeet" : 126 ,
+        "classification" : 1 ,
+        "active" : true
+      }
+    ]
+  }
+}

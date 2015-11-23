@@ -1,0 +1,15 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "parentId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "expanded" : {
+      "type" : "boolean" ,
+      "required" : false
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+    "": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+        "api_version": {
+            "required": false, 
+            "type": "string"
+        },
+        "subresource_uris": {
+            "required": false, 
+            "type": "object"
+        },
+        "sid": {
+            "type": "string",
+            "minLength": 34,
+            "maxLength": 34
+        },
+        "date_created": {
+            "description": "GMT in RFC 2822 format.",            
+            "type": "string"
+        },
+        "date_updated": {
+            "type": "string"
+        },
+        "parent_call_sid": {
+            "type": "string",
+            "minLength": 34,
+            "maxLength": 34
+        },
+        "account_sid": {
+            "description": "The unique id of the Account responsible for creating this call.",            
+            "type": "string"
+        },
+        "to": {
+            "description": "Phone numbers are in E.164 format (e.g. +16175551212). SIP addresses are formated as name@company.com. Client identifiers are formatted client:name.",
+            "type": "string"
+        },
+        "from": {
+            "description": "The phone number, SIP address or Client identifier that made this call. Phone numbers are in E.164 format (e.g. +16175551212).",            
+            "type": "string"
+        },
+        "phone_number_sid": {
+            "description": "If the call was inbound, this is the Sid of the IncomingPhoneNumber that received the call. If the call was outbound, it is the Sid of the OutgoingCallerId from which the call was placed.",
+            "type": "string"
+        },
+        "status": {
+            "description": "A string representing the status of the call.",            
+            "enum": [
+                "queued", "ringing", "in-progress", "canceled", "completed", "failed", "busy", "no-answer"
+            ]
+        },
+        "start_time": {
+            "description": "Given as GMT in RFC 2822 format.",            
+            "type": "string"
+        },
+        "end_time": {
+            "description": "Given as GMT in RFC 2822 format.",
+            "type": "string"
+        },
+        "duration": {
+            "description": "The length of the call in seconds.",            
+            "type": "string"
+        },
+        "price": {
+            "description": "The charge for this call, in the currency associated with the account. Populated after the call is completed. May not be immediately available.",            
+            "type": "string"
+        },
+        "price_unit": {
+            "description": "The currency in which Price is measured, in ISO 4127 format.",
+            "type": "string"  
+        },
+        "direction": {
+            "description": "A string describing the direction of the call. inbound for inbound calls, outbound-api for calls initiated via the REST API or outbound-dial for calls initiated by a <Dial> verb.",            
+            "enum": [
+                "inbound",
+                "outbound-api",
+                "outbound-dial"
+            ]
+        },
+        "answered_by": {
+            "description": "If this call was initiated with answering machine detection, either human or machine. Empty otherwise.",            
+            "enum": [
+                "null",
+                "human",
+                "machine"
+            ]
+        },
+        "forwarded_from": {
+            "description": "If this call was an incoming call forwarded from another number, the forwarding phone number (depends on carrier supporting forwarding). Empty otherwise.",            
+            "type": "string"
+        },
+        "caller_name": {
+            "description": "If this call was an incoming call to a phone number with Caller ID Lookup enabled, the caller's name. Empty otherwise.",            
+            "type": "string"
+        },
+        "uri": {
+            "description": "The URI for this resource, relative to https://api.twilio.com",            
+            "type": "string"
+        }
+    }
+}

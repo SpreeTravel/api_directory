@@ -1,0 +1,24 @@
+post: 
+  description: |
+    Creates a sheet from scratch. Sheets can be created in your default "Sheets" collection, into a workspace or into any folder whether that folder is in a shared workspace or your personal "Sheets" collection. See "Method" below for the URL to use for each of these operations.
+     Allowed For: [CREATE_SHEETS]
+  queryParameters: 
+    include: 
+      description: |
+        Comma separated list of the following optional elements to be copied from the template to the sheet :
+        data
+        attachments
+        discussions
+        cellLinks
+        forms
+      example: data
+  body: 
+    application/json: 
+      schema: createSheetRequest
+      example: !include ../examples/createSheetRequest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: createSheetResponse
+          example: !include ../examples/createSheetResponse-example.json

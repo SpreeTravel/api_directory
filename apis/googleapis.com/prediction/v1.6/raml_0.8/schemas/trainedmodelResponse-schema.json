@@ -1,0 +1,61 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "kind" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "selfLink" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "created" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "trainingComplete" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "modelInfo" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "numberInstances" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "modelType" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "numberLabels" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "classificationAccuracy" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "classWeightedAccuracy" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "meanSquaredError" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "trainingStatus" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

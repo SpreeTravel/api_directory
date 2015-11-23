@@ -1,0 +1,1 @@
+Office 365 is the brand name used by Microsoft for a group of software plus services subscriptions that provides productivity software and related services to its subscribers.

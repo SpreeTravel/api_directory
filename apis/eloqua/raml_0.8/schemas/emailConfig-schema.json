@@ -1,0 +1,84 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "subscriptionLandingPageId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "unsubscriptionLandingPageId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "replyToName" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "replyToAddress" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "fromAddress" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "bouncebackAddresses" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object"
+        }
+      ]
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "description" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "permissions" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "folderId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "sourceTemplateId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "createdBy" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "createdAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "updatedBy" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "updatedAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "accessedAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "scheduledFor" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "depth" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

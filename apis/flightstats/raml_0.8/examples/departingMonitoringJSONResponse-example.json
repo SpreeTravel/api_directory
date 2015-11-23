@@ -1,0 +1,139 @@
+{
+  "request" : {
+    "airport" : {
+      "requestedCode" : "LAX" ,
+      "fsCode" : "LAX"
+    } ,
+    "url" : "https://api.flightstats.com/flex/alerts/rest/v1/json/create/AA/1113/from/LAX/departing/2015/5/2" ,
+    "airlineCode" : {
+      "requestedCode" : "AA" ,
+      "fsCode" : "AA"
+    } ,
+    "flightNumber" : {
+      "requested" : "1113" ,
+      "interpreted" : "1113"
+    } ,
+    "date" : {
+      "year" : "2015" ,
+      "month" : "5" ,
+      "day" : "2" ,
+      "interpreted" : "2015-05-02"
+    } ,
+    "name" : {
+      "interpreted" : "Default"
+    } ,
+    "description" : {
+    } ,
+    "type" : {
+      "requested" : "json" ,
+      "interpreted" : "JSON"
+    } ,
+    "deliverTo" : {
+      "requested" : "your@email.com" ,
+      "interpreted" : "your@email.com"
+    } ,
+    "events" : [
+      {
+        "interpreted" : "all"
+      }
+    ] ,
+    "nameValues" : [
+    ] ,
+    "codeType" : {
+    } ,
+    "extendedOptions" : {
+    }
+  } ,
+  "rule" : {
+    "id" : "264821650" ,
+    "name" : "Default" ,
+    "carrierFsCode" : "AA" ,
+    "flightNumber" : "1113" ,
+    "departureAirportFsCode" : "LAX" ,
+    "arrivalAirportFsCode" : "ORD" ,
+    "departure" : "2015-05-02T01:30:00.000" ,
+    "arrival" : "2015-05-02T07:38:00.000" ,
+    "ruleEvents" : [
+      {
+        "type" : "ALL_CHANGES"
+      }
+    ] ,
+    "nameValues" : [
+    ] ,
+    "delivery" : {
+      "format" : "json" ,
+      "destination" : "your@email.com"
+    }
+  } ,
+  "appendix" : {
+    "airlines" : [
+      {
+        "fs" : "AA" ,
+        "iata" : "AA" ,
+        "icao" : "AAL" ,
+        "name" : "American Airlines" ,
+        "phoneNumber" : "1-800-433-7300" ,
+        "active" : true
+      }
+    ] ,
+    "airports" : [
+      {
+        "fs" : "ORD" ,
+        "iata" : "ORD" ,
+        "icao" : "KORD" ,
+        "faa" : "ORD" ,
+        "name" : "O'Hare International Airport" ,
+        "street1" : "10000 West O'Hare" ,
+        "city" : "Chicago" ,
+        "cityCode" : "CHI" ,
+        "stateCode" : "IL" ,
+        "postalCode" : "60666" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Chicago" ,
+        "weatherZone" : "ILZ014" ,
+        "localTime" : "2015-04-27T21:56:06.532" ,
+        "utcOffsetHours" : -5 ,
+        "latitude" : 41.976912 ,
+        "longitude" : -87.904876 ,
+        "elevationFeet" : 668 ,
+        "classification" : 1 ,
+        "active" : true
+      } , {
+        "fs" : "LAX" ,
+        "iata" : "LAX" ,
+        "icao" : "KLAX" ,
+        "faa" : "LAX" ,
+        "name" : "Los Angeles International Airport" ,
+        "street1" : "One World Way" ,
+        "street2" : "" ,
+        "city" : "Los Angeles" ,
+        "cityCode" : "LAX" ,
+        "stateCode" : "CA" ,
+        "postalCode" : "90045-5803" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Los_Angeles" ,
+        "weatherZone" : "CAZ041" ,
+        "localTime" : "2015-04-27T19:56:05.906" ,
+        "utcOffsetHours" : -7 ,
+        "latitude" : 33.943399 ,
+        "longitude" : -118.408279 ,
+        "elevationFeet" : 126 ,
+        "classification" : 1 ,
+        "active" : true
+      }
+    ]
+  } ,
+  "alertCapabilities" : {
+    "baggage" : true ,
+    "departureGateChange" : true ,
+    "arrivalGateChange" : true ,
+    "gateDeparture" : true ,
+    "gateArrival" : true ,
+    "runwayDeparture" : true ,
+    "runwayArrival" : true
+  }
+}

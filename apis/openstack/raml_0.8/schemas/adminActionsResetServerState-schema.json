@@ -1,0 +1,17 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "reset_state" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "state" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

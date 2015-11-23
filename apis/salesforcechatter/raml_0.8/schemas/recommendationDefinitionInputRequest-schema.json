@@ -1,0 +1,27 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "actionUrl": {
+      "type": "string",
+      "required": false
+    },
+    "actionUrlName": {
+      "type": "string",
+      "required": false
+    },
+    "explanation": {
+      "type": "string",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "title": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

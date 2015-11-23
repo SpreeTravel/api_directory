@@ -1,0 +1,46 @@
+{
+  "blog" : [
+    {
+      "categories" : [
+        "es" ,
+        "blog"
+      ] ,
+      "lang" : "es" ,
+      "published" : true ,
+      "title" : "Mantenimiento del sistema del Seguro Social" ,
+      "layout" : "blog" ,
+      "meta-title" : "Mantenimiento del sistema del Seguro Social" ,
+      "meta-description" : "Desde el 15 de febrero de 2014 a las 3:00 p.m. hasta el martes 18 de febrero de 2014 a las 5:00 a.m. Hora del Este, se estara haciendo el mantenimiento programado del sistema del Seguro Social. Durante este pero­odo, usted no podra presentar su solicitud en CuidadoDeSalud.gov ni averiguar para quo© es elegible." ,
+      "seo-keywords" : "CuidadoDeSalud.gov" ,
+      "topics" : [
+        "health-insurance-marketplace"
+      ] ,
+      "url" : "/es/blog/how-we-are-working-to-improve-healthcare-gov" ,
+      "content" : "La solicitud electroіnica usa un servicio de datos que se comunica con otros sistema para verificar la informacioіn que nos ha dado. Uno de estos sistemas pertenece al Seguro Social y verifica su noєmero de Seguro Social y otros datos. Desde el 15 de febrero de 2014 a las 3:00 p.m. hasta el martes 18 de febrero de 2014 a las 5:00 a.m. Hora del Este, se estara haciendo el mantenimiento programado del sistema del Seguro Social. Durante este pero­odo, usted no podra presentar su solicitud en CuidadoDeSalud.gov ni averiguar para quo© es elegible. Si esta tratando de inscribirse antes de la fecha lo­mite del 15 de febrero para que su cobertura comience el 1 de marzo, debe presentar la solicitud antes de las 3:00 p.m. del 15 de febrero para que el mantenimiento del sistema no le afecte.\r\n\r\n[Lea mas informacioіn sobre coіmo le puede afectar el mantenimiento del sistema del Seguro Socia...](/es/blog/want-coverage-starting-march-1-plan-ahead-for-best-results/)\r\n\r\n\r\n" ,
+      "date" : "2014-02-13 00:00:00 -0500" ,
+      "tags" : [
+      ] ,
+      "sort" : 0
+    } , {
+      "categories" : [
+        "blog"
+      ] ,
+      "published" : true ,
+      "title" : "We're working to improve HealthCare.gov" ,
+      "lang" : "en" ,
+      "layout" : "blog" ,
+      "meta-title" : "We're working to improve HealthCare.gov" ,
+      "meta-description" : "We're committed to updating you on our progress as we work to improve HealthCare.gov. Check back often to get the latest information on the status of our site." ,
+      "seo-keywords" : "HealthCare.gov, tech surge, technology surge, Health Insurance Marketplace, Obamacare website," ,
+      "topics" : [
+        "using-the-marketplace"
+      ] ,
+      "url" : "/blog/how-we-are-working-to-improve-healthcare-gov" ,
+      "content" : "We're committed to updating you on our progress as we work to improve HealthCare.gov. Check back often to get the latest information on the status of our site.\r\n\r\nAnd remember, there are [several different ways you can apply for coverage](/how-do-i-apply-for-marketplace-coverage/).\r\n\r\n## [Thursday, February 13: Upcoming System Maintenance at Social Security](/blog/want-coverage-starting-march-1-plan-ahead-for-best-results/) \r\n\r\nOur online application uses a Data Services Hub to \"talk to\" other data systems to verify information that you enter. One of these systems belongs to the Social Security Administration, which verifies Social Security Numbers and other related data.  From Saturday February 15, 2014 at 3:00 p.m. until Tuesday, February 18, 2014 at 5:00 a.m. EST, the Social Security Administration will conduct required, regularly scheduled systems maintenance activities. During this period, you won't be able to submit an application at HealthCare.gov and find out what you are eligible for. If you are trying to enroll by the February 15 deadline for coverage beginning March 1, you should try to submit your application before 3:00 p.m. on February 15, so the outage doesn't affect you.\r\n\r\n[Read more about how the Social Security system outage will affect you...](/blog/want-coverage-starting-march-1-plan-ahead-for-best-results/)\r\n\r\n\r\n##[Thursday, January 16: HealthCare.gov Moving Forward](http://www.hhs.gov/digitalstrategy/blog/2014/01/healthcare-gov-moving-forward.html) \r\nWe're pleased that HealthCare.gov has helped millions of Americans access health care, but our work is not over. And we're keeping our eye on the ball to make sure that the website works well -- and steadily improves -- as we invite new consumers to sign up for affordable, quality health coverage in the months ahead. \r\n\r\n[Read more about how HealthCare.gov is moving forward...](http://www.hhs.gov/digitalstrategy/blog/2014/01/healthcare-gov-moving-forward.html)\r\n" ,
+      "date" : "2014-02-13 00:00:00 -0500" ,
+      "tags" : [
+      ] ,
+      "sort" : 0
+    }
+  ]
+}

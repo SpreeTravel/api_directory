@@ -1,0 +1,18 @@
+head: 
+  description: Topic opt outs. Get a list of topic opt outs for the specified topic.
+  responses: 
+    200: 
+post: 
+  description: Topic opt outs. Hide yourself from the Knowledgeable People list for the specified topic.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: topicOptOutResponse
+get: 
+  description: Topic opt outs. Get a list of topic opt outs for the specified topic.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: topicOptOutCollectionResponse

@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "album_id": {
+      "required": false,
+      "type": "integer"
+    },
+    "created": {
+      "required": false,
+      "type": "integer"
+    },
+    "event_photo_id": {
+      "required": false,
+      "type": "integer"
+    },
+    "member": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "member_id": {
+          "required": false,
+          "type": "integer"
+        },
+        "name": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    },
+    "photo_url": {
+      "required": false,
+      "type": "string"
+    },
+    "site_link": {
+      "required": false,
+      "type": "string"
+    },
+    "title": {
+      "required": false,
+      "type": "integer"
+    },
+    "updated": {
+      "required": false,
+      "type": "integer"
+    }
+  }
+}

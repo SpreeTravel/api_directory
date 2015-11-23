@@ -1,0 +1,76 @@
+{
+  "kind" : "blogger#postList" ,
+  "nextPageToken" : "string" ,
+  "items" : [
+    {
+      "kind" : "blogger#post" ,
+      "id" : "string" ,
+      "blog" : {
+        "id" : "string"
+      } ,
+      "published" : "datetime" ,
+      "updated" : "datetime" ,
+      "url" : "string" ,
+      "selfLink" : "string" ,
+      "title" : "string" ,
+      "titleLink" : "string" ,
+      "content" : "string" ,
+      "images" : [
+        {
+          "url" : "string"
+        }
+      ] ,
+      "customMetaData" : "string" ,
+      "author" : {
+        "id" : "string" ,
+        "displayName" : "string" ,
+        "url" : "string" ,
+        "image" : {
+          "url" : "string"
+        }
+      } ,
+      "replies" : {
+        "totalItems" : "long" ,
+        "selfLink" : "string" ,
+        "items" : [
+          {
+            "kind" : "blogger#comment" ,
+            "status" : "string" ,
+            "id" : "string" ,
+            "inReplyTo" : {
+              "id" : "string"
+            } ,
+            "post" : {
+              "id" : "string"
+            } ,
+            "blog" : {
+              "id" : "string"
+            } ,
+            "published" : "datetime" ,
+            "updated" : "datetime" ,
+            "selfLink" : "string" ,
+            "content" : "string" ,
+            "author" : {
+              "id" : "string" ,
+              "displayName" : "string" ,
+              "url" : "string" ,
+              "image" : {
+                "url" : "string"
+              }
+            }
+          }
+        ]
+      } ,
+      "labels" : [
+        "string"
+      ] ,
+      "location" : {
+        "name" : "string" ,
+        "lat" : "double" ,
+        "lng" : "double" ,
+        "span" : "string"
+      } ,
+      "status" : "string"
+    }
+  ]
+}

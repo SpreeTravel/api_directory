@@ -1,0 +1,11 @@
+{
+  "id" : "2009dd06-4fee-492b-bcff-ff7b45404557" ,
+  "price_money" : {
+    "currency_code" : "USD" ,
+    "amount" : 50
+  } ,
+  "on_by_default" : false ,
+  "name" : "Sprinkles" ,
+  "ordinal" : 1 ,
+  "modifier_list_id" : "dcd7e350-c50f-421f-ada1-23a825b008b2"
+}

@@ -1,0 +1,170 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "firstName" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "lastName" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "emailAddress" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "emailFormatPreference" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "isTracked" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "isSubscribed" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "isBounceback" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "accountName" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "accountId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "title" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "subscriptionDate" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "unsubscriptionDate" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "bouncebackDate" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "fieldValues" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "value" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    } ,
+    "address1" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "address2" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "address3" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "city" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "province" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "postalCode" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "country" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "businessPhone" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "mobilePhone" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "fax" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "salesPerson" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "description" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "permissions" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "folderId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "sourceTemplateId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "createdBy" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "createdAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "updatedBy" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "updatedAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "accessedAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "scheduledFor" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "depth" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

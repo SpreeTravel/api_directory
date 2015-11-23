@@ -1,0 +1,23 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "Name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Color" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "InboundHash" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "SmtpApiActivated" : {
+      "type" : "boolean" ,
+      "required" : false
+    }
+  }
+}

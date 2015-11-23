@@ -1,0 +1,31 @@
+{
+  "@odata.id": "https://outlook.office365.com/EWS/OData/Users('sadie@contoso.com')/Events('AAMkAGI3...')",
+  "@odata.editLink": "https://outlook.office365.com/EWS/OData/Users('sadie@contoso.com')/Events('AAMkAGI3...')",
+  "Id": "AAMkAGI3...",
+  "ChangeKey": "R9CVg8njOEeBFPLI1qvQugAABHL2eg==",
+  "Subject": "Lunch",
+  "BodyPreview": "Let's meet for lunch and go over the project plan.",
+  "Body": {
+    "ContentType": "HTML",
+    "Content": "Let's meet for lunch and go over the project plan."
+  },
+  "Importance": "Normal",
+  "Categories": [],
+  "HasAttachments": false,
+  "Start": "2014-02-13T20:30:00Z",
+  "End": "2014-02-13T21:00:00Z",
+  "Location": {
+    "DisplayName": "Cafeteria"
+  },
+  "ShowAs": "Tentative",
+  "IsAllDay": false,
+  "IsCancelled": false,
+  "IsOrganizer": false,
+  "ResponseRequested": true,
+  "Type": "SingleInstance",
+  "SeriesId": null,
+  "Attendees": [],
+  "Recurrence": null,
+  "Attachments@odata.navigationLink": "https://outlook.office365.com/EWS/OData/Users('sadie@contoso.com')/Events('AAMkAGI3...')/Attachments",
+  "Calendar@odata.navigationLink": "https://outlook.office365.com/EWS/OData/Users('sadie@contoso.com')/Events('AAMkAGI3...')/Calendar"
+}

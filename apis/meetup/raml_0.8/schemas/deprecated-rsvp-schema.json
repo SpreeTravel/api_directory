@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "answers": {
+      "required": false,
+      "type": "string"
+    },
+    "city": {
+      "required": false,
+      "type": "string"
+    },
+    "comment": {
+      "required": false,
+      "type": "string"
+    },
+    "country": {
+      "required": false,
+      "type": "string"
+    },
+    "created": {
+      "required": false,
+      "type": "integer"
+    },
+    "event_id": {
+      "required": false,
+      "type": "integer"
+    },
+    "id": {
+      "required": false,
+      "type": "integer"
+    },
+    "lat": {
+      "required": false,
+      "type": "number"
+    },
+    "link": {
+      "required": false,
+      "type": "string"
+    },
+    "lon": {
+      "required": false,
+      "type": "number"
+    },
+    "member_id": {
+      "required": false,
+      "type": "integer"
+    },
+    "name": {
+      "required": false,
+      "type": "string"
+    },
+    "response": {
+      "required": false,
+      "type": "string"
+    },
+    "state": {
+      "required": false,
+      "type": "integer"
+    },
+    "updated:": {
+      "required": false,
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "subnet" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "network_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "ip_version" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "cidr" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

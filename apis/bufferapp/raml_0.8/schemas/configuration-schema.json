@@ -1,0 +1,410 @@
+{
+  "type": "object",
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "services": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "twitter": {
+          "type": "object",
+          "required": false,
+          "properties": {
+            "types": {
+              "type": "object",
+              "required": false,
+              "properties": {
+                "profile": {
+                  "type": "object",
+                  "required": false,
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "required": false
+                    },
+                    "character_limit": {
+                      "type": "number",
+                      "required": false
+                    },
+                    "schedule_limit": {
+                      "type": "number",
+                      "required": false
+                    },
+                    "icons": {
+                      "type": "object",
+                      "required": false,
+                      "properties": {
+                        "16": {
+                          "type": "string",
+                          "required": false
+                        },
+                        "32": {
+                          "type": "string",
+                          "required": false
+                        },
+                        "64": {
+                          "type": "string",
+                          "required": false
+                        }
+                      }
+                    },
+                    "supported_interactions": {
+                      "type": "array",
+                      "required": false,
+                      "items": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "urls": {
+              "type": "object",
+              "required": false,
+              "properties": {
+                "user": {
+                  "type": "string",
+                  "required": false
+                },
+                "hashtag": {
+                  "type": "string",
+                  "required": false
+                },
+                "cashtag": {
+                  "type": "string",
+                  "required": false
+                }
+              }
+            }
+          }
+        },
+        "facebook": {
+          "type": "object",
+          "required": false,
+          "properties": {
+            "types": {
+              "type": "object",
+              "required": false,
+              "properties": {
+                "profile": {
+                  "type": "object",
+                  "required": false,
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "required": false
+                    },
+                    "character_limit": {
+                      "type": "number",
+                      "required": false
+                    },
+                    "schedule_limit": {
+                      "type": "number",
+                      "required": false
+                    },
+                    "icons": {
+                      "type": "object",
+                      "required": false,
+                      "properties": {
+                        "16": {
+                          "type": "string",
+                          "required": false
+                        },
+                        "32": {
+                          "type": "string",
+                          "required": false
+                        },
+                        "64": {
+                          "type": "string",
+                          "required": false
+                        }
+                      }
+                    },
+                    "supported_interactions": {
+                      "type": "array",
+                      "required": false,
+                      "items": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "page": {
+                  "type": "object",
+                  "required": false,
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "required": false
+                    },
+                    "character_limit": {
+                      "type": "number",
+                      "required": false
+                    },
+                    "schedule_limit": {
+                      "type": "number",
+                      "required": false
+                    },
+                    "icons": {
+                      "type": "object",
+                      "required": false,
+                      "properties": {
+                        "16": {
+                          "type": "string",
+                          "required": false
+                        },
+                        "32": {
+                          "type": "string",
+                          "required": false
+                        },
+                        "64": {
+                          "type": "string",
+                          "required": false
+                        }
+                      }
+                    },
+                    "supported_interactions": {
+                      "type": "array",
+                      "required": false,
+                      "items": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "urls": {
+              "type": "object",
+              "required": false,
+              "properties": {
+                "user": {
+                  "type": "string",
+                  "required": false
+                }
+              }
+            }
+          }
+        },
+        "linkedin": {
+          "type": "object",
+          "required": false,
+          "properties": {
+            "types": {
+              "type": "object",
+              "required": false,
+              "properties": {
+                "profile": {
+                  "type": "object",
+                  "required": false,
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "required": false
+                    },
+                    "character_limit": {
+                      "type": "number",
+                      "required": false
+                    },
+                    "schedule_limit": {
+                      "type": "number",
+                      "required": false
+                    },
+                    "icons": {
+                      "type": "object",
+                      "required": false,
+                      "properties": {
+                        "16": {
+                          "type": "string",
+                          "required": false
+                        },
+                        "32": {
+                          "type": "string",
+                          "required": false
+                        },
+                        "64": {
+                          "type": "string",
+                          "required": false
+                        }
+                      }
+                    },
+                    "supported_interactions": {
+                      "type": "array",
+                      "required": false,
+                      "items": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "group": {
+                  "type": "object",
+                  "required": false,
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "required": false
+                    },
+                    "character_limit": {
+                      "type": "number",
+                      "required": false
+                    },
+                    "schedule_limit": {
+                      "type": "number",
+                      "required": false
+                    },
+                    "icons": {
+                      "type": "object",
+                      "required": false,
+                      "properties": {
+                        "16": {
+                          "type": "string",
+                          "required": false
+                        },
+                        "32": {
+                          "type": "string",
+                          "required": false
+                        },
+                        "64": {
+                          "type": "string",
+                          "required": false
+                        }
+                      }
+                    },
+                    "supported_interactions": {
+                      "type": "array",
+                      "required": false,
+                      "items": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "urls": {
+              "type": "object",
+              "required": false,
+              "properties": {
+                "user": {
+                  "type": "string",
+                  "required": false
+                }
+              }
+            }
+          }
+        },
+        "appdotnet": {
+          "type": "object",
+          "required": false,
+          "properties": {
+            "types": {
+              "type": "object",
+              "required": false,
+              "properties": {
+                "profile": {
+                  "type": "object",
+                  "required": false,
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "required": false
+                    },
+                    "character_limit": {
+                      "type": "number",
+                      "required": false
+                    },
+                    "schedule_limit": {
+                      "type": "number",
+                      "required": false
+                    },
+                    "icons": {
+                      "type": "object",
+                      "required": false,
+                      "properties": {
+                        "16": {
+                          "type": "string",
+                          "required": false
+                        },
+                        "32": {
+                          "type": "string",
+                          "required": false
+                        },
+                        "64": {
+                          "type": "string",
+                          "required": false
+                        }
+                      }
+                    },
+                    "supported_interactions": {
+                      "type": "array",
+                      "required": false,
+                      "items": {
+                        "type": "array"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "urls": {
+              "type": "object",
+              "required": false,
+              "properties": {
+                "user": {
+                  "type": "string",
+                  "required": false
+                },
+                "hashtag": {
+                  "type": "string",
+                  "required": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "media": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "picture_size_min": {
+          "type": "number",
+          "required": false
+        },
+        "picture_size_max": {
+          "type": "number",
+          "required": false
+        },
+        "picture_filetypes": {
+          "type": "array",
+          "required": false,
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

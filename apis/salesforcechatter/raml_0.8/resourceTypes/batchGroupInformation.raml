@@ -1,0 +1,15 @@
+head: 
+  description: |
+    Returns information about more than one group at the same time.
+    Where group_list is a comma separated list of up to 500 group IDs.
+  responses: 
+    200: 
+get: 
+  description: |
+    Returns information about more than one group at the same time.
+    Where group_list is a comma separated list of up to 500 group IDs.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: batchResultsResponse

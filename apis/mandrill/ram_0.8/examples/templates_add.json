@@ -1,0 +1,13 @@
+{
+  "key": "example key",
+  "name": "Example Template",
+  "from_email": "from_email@example.com",
+  "from_name": "Example Name",
+  "subject": "example subject",
+  "code": "<div>example code</div>",
+  "text": "Example text content",
+  "publish": false,
+  "labels": [
+    "example-label"
+  ]
+}

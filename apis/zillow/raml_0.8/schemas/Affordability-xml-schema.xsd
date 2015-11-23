@@ -1,0 +1,71 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="request">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:int" name="annualincome"/>
+        <xs:element type="xs:short" name="monthlypayment"/>
+        <xs:element type="xs:int" name="down"/>
+        <xs:element type="xs:short" name="monthlydebts"/>
+        <xs:element type="xs:float" name="rate"/>
+        <xs:element type="xs:string" name="schedule"/>
+        <xs:element type="xs:short" name="terminmonths"/>
+        <xs:element type="xs:float" name="debttoincome"/>
+        <xs:element type="xs:float" name="incometax"/>
+        <xs:element type="xs:string" name="estimate"/>
+        <xs:element type="xs:float" name="propertytax"/>
+        <xs:element type="xs:short" name="hazard"/>
+        <xs:element type="xs:short" name="pmi"/>
+        <xs:element type="xs:short" name="hoa"/>
+        <xs:element type="xs:int" name="zip"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="message">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="text"/>
+        <xs:element type="xs:byte" name="code"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:int" name="affordabilityamount"/>
+        <xs:element type="xs:short" name="monthlyprincipalandinterest"/>
+        <xs:element type="xs:short" name="monthlypropertytaxes"/>
+        <xs:element type="xs:short" name="monthlyhazardinsurance"/>
+        <xs:element type="xs:byte" name="monthlypmi"/>
+        <xs:element type="xs:short" name="monthlyhoadues"/>
+        <xs:element type="xs:short" name="totalmonthlypayment"/>
+        <xs:element type="xs:int" name="totalpayments"/>
+        <xs:element type="xs:int" name="totalinterestpayments"/>
+        <xs:element type="xs:int" name="totalprincipal"/>
+        <xs:element type="xs:int" name="totaltaxesfeesandinsurance"/>
+        <xs:element type="xs:int" name="monthlyincome"/>
+        <xs:element type="xs:short" name="monthlydebts"/>
+        <xs:element type="xs:short" name="monthlyincometax"/>
+        <xs:element type="xs:short" name="monthlyremainingbudget"/>
+        <xs:element name="amortizationschedule">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="payment" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:byte" name="period"/>
+                    <xs:element type="xs:int" name="beginningbalance"/>
+                    <xs:element type="xs:short" name="payment"/>
+                    <xs:element type="xs:short" name="principal"/>
+                    <xs:element type="xs:short" name="interest"/>
+                    <xs:element type="xs:int" name="endingbalance"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="type"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

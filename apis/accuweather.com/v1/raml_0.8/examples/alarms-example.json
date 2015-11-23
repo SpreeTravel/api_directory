@@ -1,0 +1,48 @@
+[
+  {
+    "Date" : "2012-12-21T00:00:00-05:00" ,
+    "Alarms" : [
+      {
+        "AlarmType" : "Snow" ,
+        "Value" : {
+          "Metric" : {
+            "Value" : 3.43 ,
+            "Unit" : "cm" ,
+            "UnitType" : 4
+          } ,
+          "Imperial" : {
+            "Value" : 1.35 ,
+            "Unit" : "in" ,
+            "UnitType" : 1
+          }
+        } ,
+        "Day" : {
+          "Metric" : {
+            "Value" : 0.74 ,
+            "Unit" : "cm" ,
+            "UnitType" : 4
+          } ,
+          "Imperial" : {
+            "Value" : 0.29 ,
+            "Unit" : "in" ,
+            "UnitType" : 1
+          }
+        } ,
+        "Night" : {
+          "Metric" : {
+            "Value" : 2.69 ,
+            "Unit" : "cm" ,
+            "UnitType" : 4
+          } ,
+          "Imperial" : {
+            "Value" : 1.06 ,
+            "Unit" : "in" ,
+            "UnitType" : 1
+          }
+        }
+      }
+    ] ,
+    "MobileLink" : "http://m.accuweather.com/en/us/state-college-pa/16801/daily-weather-forecast/335315?day=1&lang=en-us" ,
+    "Link" : "http://www.accuweather.com/en/us/state-college-pa/16801/daily-weather-forecast/335315?day=1&lang=en-us"
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "host" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "resource" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "cpu" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "disk_gb" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "host" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "memory_mb" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "project" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

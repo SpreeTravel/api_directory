@@ -1,0 +1,174 @@
+#%RAML 0.8
+title: Get Started with the Freebase API
+version: v1
+baseUri: https://www.googleapis.com/freebase/{version}
+schemas:
+  - search: !include schemas/search-schema.json
+  - reconcile: !include schemas/reconcile-schema.json
+  - mqlread: !include schemas/mqlread-schema.json
+  - error: !include schemas/error-schema.json
+  - topic: !include schemas/topic-schema.json
+resourceTypes:
+  - base: !include resourceTypes/base.raml
+traits:
+  - dataBaseAccessable: !include traits/dataBaseAccessable.raml
+  - limitable: !include traits/limitable.raml
+  - languageSupportable: !include traits/languageSupportable.raml
+/search: 
+  type: base
+  get: 
+    is: [ languageSupportable , limitable , dataBaseAccessable ]
+    description: The Search API provides access to Freebase data given a free text query. Please consult Search Overview and the Search Cookbook for more information on how to construct detailed search queries.
+    queryParameters: 
+      "as_of_time  ": 
+        description: A MQL as_of_time value to use with mql_output queries.
+      cursor: 
+        description: The cursor parameter along with the limit parameter allows you to page through a defined number of results at a time. For example, to present 3 pages of successive 10 results, use  limit=10 and cursor=0, then cursor=10, and cursor=20.
+        type: integer
+        example: cursor=0
+      domain: 
+        description: Restrict to topics with this Freebase domain ID.
+      encode: 
+        description: The encoding of the response. You can use this parameter to enable HTML encoding.
+        enum: [ off , html ]
+        default: off
+      exact: 
+        description: Query on exact name and keys only.
+        type: boolean
+        example: ""
+      format: 
+        description: Structural format of the JSON response. 
+        enum: 
+          - ids
+          - entity
+          - mids
+      mql_output: 
+        description: "The MQL query to run againist the results to extract more data. After the query is run, the matching documents' IDs are passed to the mql_output MQL query to retrieve actual data about the matches. The MQL results are sorted by decreasing relevance score. "
+      prefixed: 
+        description: Prefix match against names and aliases.
+        type: boolean
+      scoring: 
+        description: Relevance scoring algorithm to use. 
+        enum: 
+          - schema
+          - entity
+          - freebase
+      spell: 
+        description: "Request 'did you mean' suggestions"
+        enum: 
+          - no_results
+          - no_spelling
+          - always
+        default: no_spelling
+      stemmed: 
+        description: Query on stemmed names and aliases. May not be used with prefixed.
+        type: boolean
+      type: 
+        description: Restrict to topics with this Freebase type id.
+      with: 
+        description: A filter rule to match against.
+      without: 
+        description: A filter rule to not match against.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: search
+            example: !include examples/search-example.json
+/reconcile: 
+  type: base
+  get: 
+    is: [ languageSupportable , limitable ]
+    description: The Reconciliation API matches structured data about entities against potential matching entiities in Freebase. Please consult Reconciliation Overview for more information on how to reconcile your data.
+    queryParameters: 
+      kind: 
+        description: Classifications of entity e.g. type, category, title. Should be a type id if possible.
+        required: true
+      name: 
+        description: The name of root entity to reconcile.
+      prop: 
+        description: "Property values for entity formatted as <predicate>:<value>"
+      confidence: 
+        description: Required confidence for a candidate to match. Must be between .5 and 1.0 and defaults to .99
+        type: number
+        default: .99
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: reconcile
+            example: !include examples/reconcile-example.json
+/mqlread: 
+  type: base
+  get: 
+    is: [ languageSupportable , dataBaseAccessable ]
+    description: The mqlread API provides access to the Freebase database using the Metaweb query language (MQL).
+    queryParameters: 
+      "as_of_time  ": 
+        description: A MQL as_of_time value to use with mql_output queries.
+      cursor: 
+        description: The cursor parameter along with the limit parameter allows you to page through a defined number of results at a time. For example, to present 3 pages of successive 10 results, use  limit=10 and cursor=0, then cursor=10, and cursor=20.
+        type: integer
+        example: cursor=0
+      cost: 
+        description: "Toggles whether or not to show the costs. (Default: false)"
+        type: boolean
+      dateline: 
+        description: The dateline that you get in a mqlwrite response to ensure consistent results.
+      html_escape: 
+        description: "Whether or not to escape entities. (Default: true)"
+        type: boolean
+        default:  true
+      uniqueness_failure: 
+        description: How MQL responds to uniqueness failures. 
+        enum: [ hard , soft ]
+        default: hard
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: mqlread
+            example: !include examples/mqlread-example.json
+/mqlwrite: 
+  type: base
+  get: 
+    is: [ dataBaseAccessable ]
+    description: The mqlwrite API provides access to the Freebase database using the Metaweb query language (MQL).
+    queryParameters: 
+      dateline: 
+        description: The dateline that you get in a mqlwrite response to ensure consistent results.
+      use_permission_of: 
+        description: Use the same permission node of the object with the specified id.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+/rdf{/id}: 
+  type: base
+  get: 
+    description: |
+      The Freebase RDF API is a web service that will return all the known facts for a given topic including images and text blurbs. You can apply filters to the Topic API so that it only returns the property values that you're interested. This is ideal for building topic pages and short summaries of an entity.
+      The RDF API returns an Turtle serialization of the first 100 values for each predicate for a given Freebase topic.
+/topic{/id}: 
+  type: base
+  get: 
+    is: [ languageSupportable , limitable ]
+    description: If successful, this method returns a response body that depends on the query. Please see Topic API Responses for an overview of the response format and types of responses.
+    queryParameters: 
+      dateline: 
+        description: Determines how up-to-date the data returned is. A UNIX epoch time, a guid or now.
+      filter: 
+        description: A Freebase domain, type or property ID. suggest, commons, or all. Filter the results and return only appropriate properties. See filters parameter details for more information.
+      raw: 
+        description: "Do not apply any constraints, or get any names. (Default: false)"
+        type: boolean
+    responses: 
+      200: 
+        description: ""
+        body: 
+          application/json: 
+            schema: topic
+            example: !include examples/topic-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

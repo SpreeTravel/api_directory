@@ -1,0 +1,13 @@
+{
+  "member": {
+    "name": "name",
+    "member_id": 100
+  },
+  "album_id": 100,
+  "title": 100,
+  "site_link": "site_link",
+  "event_photo_id": 100,
+  "updated": 100,
+  "created": 100,
+  "photo_url": "photo_url"
+}

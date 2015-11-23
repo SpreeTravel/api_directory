@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "city": {
+      "required": false,
+      "type": "string"
+    },
+    "container": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "id": {
+          "required": false,
+          "type": "integer"
+        },
+        "name": {
+          "required": false,
+          "type": "string"
+        },
+        "urlname": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    },
+    "country": {
+      "required": false,
+      "type": "string"
+    },
+    "created": {
+      "required": false,
+      "type": "integer"
+    },
+    "id": {
+      "required": false,
+      "type": "integer"
+    },
+    "lat": {
+      "required": false,
+      "type": "number"
+    },
+    "lon": {
+      "required": false,
+      "type": "number"
+    },
+    "meetup_count": {
+      "required": false,
+      "type": "integer"
+    },
+    "meetup_url": {
+      "required": false,
+      "type": "string"
+    },
+    "name": {
+      "required": false,
+      "type": "string"
+    },
+    "past_meetup_count": {
+      "required": false,
+      "type": "integer"
+    },
+    "state": {
+      "required": false,
+      "type": "integer"
+    },
+    "udf_{varname}": {
+      "required": false,
+      "type": "string"
+    },
+    "updated": {
+      "required": false,
+      "type": "integer"
+    },
+    "urlname": {
+      "required": false,
+      "type": "string"
+    },
+    "zip": {
+      "required": false,
+      "type": "string"
+    }
+  }
+}

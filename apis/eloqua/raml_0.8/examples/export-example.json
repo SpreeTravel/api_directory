@@ -1,0 +1,14 @@
+{
+  "notification" : {
+  } ,
+  "fileFormat" : {
+    "columnDelimiter" : "undefined" ,
+    "encoding" : "undefined" ,
+    "extension" : "undefined" ,
+    "rowDelimiter" : "undefined" ,
+    "textQualifier" : "undefined"
+  } ,
+  "fileLifetime" : "undefined" ,
+  "isFileCompressed" : "undefined" ,
+  "isDelta" : "undefined"
+}

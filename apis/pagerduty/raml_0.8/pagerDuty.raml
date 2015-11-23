@@ -1,0 +1,1069 @@
+#%RAML 0.8
+title: PagerDuty
+version: v1
+baseUri: https://{serviceName}.pagerduty.com/api/{version}
+baseUriParameters: 
+  serviceName: 
+mediaType: application/json
+securitySchemes:
+  - basic: !include securitySchemes/basic.raml
+  - tokenSchema: !include securitySchemes/tokenSchema.raml
+schemas:
+  - alerts: !include schemas/alerts.json
+  - concatMethodGet: !include schemas/concatMethodGet.json
+  - concatMethodPutBody: !include schemas/concatMethodPutBody.json
+  - concatMethodPutResponse: !include schemas/concatMethodPutResponse.json
+  - concatMethodsGet: !include schemas/concatMethodsGet.json
+  - concatMethodsPostBody: !include schemas/concatMethodsPostBody.json
+  - concatMethodsPostResponse: !include schemas/concatMethodsPostResponse.json
+  - emailFilterPostBody: !include schemas/emailFilterPostBody.json
+  - emailFilterPostResponse: !include schemas/emailFilterPostResponse.json
+  - emailFilterPutBody: !include schemas/emailFilterPutBody.json
+  - emailFilterPutResponse: !include schemas/emailFilterPutResponse.json
+  - error: !include schemas/error.json
+  - escalationPoliciesQuery: !include schemas/escalationPoliciesQuery.json
+  - escalationPolicyCreated: !include schemas/escalationPolicyCreated.json
+  - escalationPolicyGet: !include schemas/escalationPolicyGet.json
+  - escalationPolicyPost: !include schemas/escalationPolicyPost.json
+  - escalationPolicyPut: !include schemas/escalationPolicyPut.json
+  - escalationRuleGet: !include schemas/escalationRuleGet.json
+  - escalationRulePutBody: !include schemas/escalationRulePutBody.json
+  - escalationRulePutResponse: !include schemas/escalationRulePutResponse.json
+  - escalationRulesPostBody: !include schemas/escalationRulesPostBody.json
+  - escalationRulesPostResponse: !include schemas/escalationRulesPostResponse.json
+  - escalationRulesPutBody: !include schemas/escalationRulesPutBody.json
+  - escalationRulesPutResponse: !include schemas/escalationRulesPutResponse.json
+  - escalationRulesQuery: !include schemas/escalationRulesQuery.json
+  - incidentGet: !include schemas/incidentGet.json
+  - incidentsCount: !include schemas/incidentsCount.json
+  - incidentsPutBody: !include schemas/incidentsPutBody.json
+  - incidentsPutResponse: !include schemas/incidentsPutResponse.json
+  - incidentsQuery: !include schemas/incidentsQuery.json
+  - logEntriesForIncident: !include schemas/logEntriesForIncident.json
+  - logEntriesForUser: !include schemas/logEntriesForUser.json
+  - logEntriesQuery: !include schemas/logEntriesQuery.json
+  - logEntry: !include schemas/logEntry.json
+  - maintenanceWindowGet: !include schemas/maintenanceWindowGet.json
+  - maintenanceWindowPostBody: !include schemas/maintenanceWindowPostBody.json
+  - maintenanceWindowPostResponse: !include schemas/maintenanceWindowPostResponse.json
+  - maintenanceWindowPutBody: !include schemas/maintenanceWindowPutBody.json
+  - maintenanceWindowPutResponse: !include schemas/maintenanceWindowPutResponse.json
+  - maintenanceWindowsQuery: !include schemas/maintenanceWindowsQuery.json
+  - notesGet: !include schemas/notesGet.json
+  - notesPostBody: !include schemas/notesPostBody.json
+  - notesPostResponse: !include schemas/notesPostResponse.json
+  - notificationRuleGet: !include schemas/notificationRuleGet.json
+  - notificationRulePutBody: !include schemas/notificationRulePutBody.json
+  - notificationRulePutResponse: !include schemas/notificationRulePutResponse.json
+  - notificationRulesGet: !include schemas/notificationRulesGet.json
+  - notificationRulesPostBody: !include schemas/notificationRulesPostBody.json
+  - notificationRulesPostResponse: !include schemas/notificationRulesPostResponse.json
+  - overridesGet: !include schemas/overridesGet.json
+  - overridesPostBody: !include schemas/overridesPostBody.json
+  - overridesPostResponse: !include schemas/overridesPostResponse.json
+  - reportsAlertsPerTime: !include schemas/reportsAlertsPerTime.json
+  - reportsIncidentsPerTime: !include schemas/reportsIncidentsPerTime.json
+  - scheduleEntries: !include schemas/scheduleEntries.json
+  - scheduleGet: !include schemas/scheduleGet.json
+  - schedulePreviewBody: !include schemas/schedulePreviewBody.json
+  - schedulePreviewResponse: !include schemas/schedulePreviewResponse.json
+  - schedulePutBody: !include schemas/schedulePutBody.json
+  - schedulePutResponse: !include schemas/schedulePutResponse.json
+  - schedulesGet: !include schemas/schedulesGet.json
+  - schedulesPostBody: !include schemas/schedulesPostBody.json
+  - schedulesPostResponse: !include schemas/schedulesPostResponse.json
+  - scheduleUsers: !include schemas/scheduleUsers.json
+  - serviceDisable: !include schemas/serviceDisable.json
+  - serviceGet: !include schemas/serviceGet.json
+  - servicePutBody: !include schemas/servicePutBody.json
+  - servicePutResponse: !include schemas/servicePutResponse.json
+  - serviceRegenerateKey: !include schemas/serviceRegenerateKey.json
+  - servicesPostBody: !include schemas/servicesPostBody.json
+  - servicesPostResponse: !include schemas/servicesPostResponse.json
+  - servicesQuery: !include schemas/servicesQuery.json
+  - userGet: !include schemas/userGet.json
+  - userPutBody: !include schemas/userPutBody.json
+  - userPutResponse: !include schemas/userPutResponse.json
+  - usersPostBody: !include schemas/usersPostBody.json
+  - usersPostResponse: !include schemas/usersPostResponse.json
+  - usersQuery: !include schemas/usersQuery.json
+resourceTypes:
+  - pagerDutyResource: !include resourceTypes/pagerDutyResource.raml
+  - overrideResource: !include resourceTypes/overrideResource.raml
+traits:
+  - reports: !include traits/reports.raml
+  - incidentsQuery: !include traits/incidentsQuery.raml
+  - logging: !include traits/logging.raml
+  - allowsRange: !include traits/allowsRange.raml
+  - paginated: !include traits/paginated.raml
+/alerts: 
+  type: pagerDutyResource
+  description: |
+    When an incident is triggered or when it is escalated it creates an alert (also known as a notification).
+    Alerts are messages containing the details of the incident, and can be sent through SMS,
+    email, phone calls, and push notifications.
+    This API allows you to access read-only data regarding what alerts have been sent to your users.
+  get: 
+    is: [ paginated , allowsRange ]
+    description: List existing alerts for a given time range, optionally filtered by type (SMS, Email, Phone, or Push).
+    body: 
+      application/x-www-form-urlencoded: 
+        formParameters: 
+          since: 
+            required: true
+          until: 
+            description: |
+              The end of the date range over which you want to search.
+              This should be in the same format as since. The size of the date range must be less than 3 months.
+            required: true
+          filter[type]: 
+            description: Returns only the alerts of the said types.
+            enum: 
+              - sms
+              - email
+              - phone
+              - push
+          time_zone: 
+            description: Time zone in which dates in the result will be rendered. Defaults to account time zone.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: alerts
+            example: !include examples/alerts.json
+/incidents: 
+  type: pagerDutyResource
+  description: This API lets you access and manipulate incidents.
+  get: 
+    is: [ paginated , allowsRange , incidentsQuery ]
+    description: List existing incidents.
+    body: 
+      application/x-www-form-urlencoded: 
+        formParameters: 
+          fields: 
+            description: |
+              Used to restrict the properties of each incident returned to a set of pre-defined fields.
+              If omitted, returned incidents have all fields present. See below for a list of possible fields.
+          time_zone: 
+            description: Time zone in which dates in the result will be rendered. Defaults to UTC.
+          sort_by: 
+            description: |
+              Used to specify both the field you wish to sort the results on,
+              as well as the direction (ascending/descending) of the results.
+              |               |                                           |
+              |---------------|-------------------------------------------|
+              |incident_number| The number of your incident.              |
+              |created_on     | The date/time the incident was triggered. |
+              |resolved_on    |The date/time the incident was resolved.   |
+              Valid values
+              |    |                                          |
+              |----|------------------------------------------|
+              |asc |This sorts ascending (default if omitted).|
+              |desc|This sorts descending.                    |
+              The sort_by field and direction should be separated by a colon.
+            enum: 
+              - "incident_number:asc"
+              - "incident_number:desc"
+              - "created_on:asc"
+              - "created_on:desc"
+              - "resolved_on:asc"
+              - "resolved_on:desc"
+            example: |
+              {
+                 "sort_by": "created_on:desc"
+              }
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: incidentsQuery
+            example: !include examples/incidentsQuery.json
+  put: 
+    description: Acknowledge, resolve, escalate or reassign one or more incidents.
+    body: 
+      application/json: 
+        schema: incidentsPutBody
+        example: !include examples/incidentsPutBody.json
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: incidentsPutResponse
+            example: !include examples/incidentsPutResponse.json
+  /count: 
+    type: pagerDutyResource
+    get: 
+      is: [ allowsRange , incidentsQuery ]
+      description: Count the number of incidents matching certain criteria.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: incidentsCount
+              example: !include examples/incidentsCount.json
+  /{incident_id}: 
+    type: pagerDutyResource
+    uriParameters: 
+      incident_id: 
+        description: "Either incident id or incident number may be used as parameter's value."
+        example: |
+          https://acme.pagerduty.com/api/v1/incidents/PIJ90N7
+          
+          https://acme.pagerduty.com/api/v1/incidents/1
+          required:true
+    get: 
+      description: Show detailed information about an incident. Accepts either an incident id, or an incident number.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: incidentGet
+              example: !include examples/incidentGet.json
+    /resolve: 
+      type: pagerDutyResource
+      put: 
+        description: Resolve an incident.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              requester_id: 
+                description: |
+                  The user id of the user making the request.
+                  This will be added to the incident log entry.
+                  This is only needed if you are using token based authentication.
+        responses: 
+          200: 
+    /acknowledge: 
+      type: pagerDutyResource
+      put: 
+        description: Acknowledge an incident.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              requester_id: 
+                description: |
+                  The user id of the user making the request.
+                  This will be added to the incident log entry.
+                  This is only needed if you are using token based authentication.
+        responses: 
+          200: 
+    /reassign: 
+      type: pagerDutyResource
+      put: 
+        description: |
+          Reassign an incident.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              requester_id: 
+                description: |
+                  The user id of the user making the request.
+                  This will be added to the incident log entry.
+                  This is only needed if you are using token based authentication.
+              escalation_level: 
+                description: Escalate incident to this level in the escalation policy.
+                type: integer
+              assigned_to_user: 
+                description: Assign this incident to the specified user id.
+        responses: 
+          200: 
+    /notes: 
+      type: pagerDutyResource
+      description: The Incident Notes API allows you to add notes to a specified incident.
+      get: 
+        description: List existing notes for the specified incident.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: notesGet
+                example: !include examples/notesGet.json
+      post: 
+        description: Create a new note for the specified incident.
+        body: 
+          application/json: 
+            schema: notesPostBody
+            example: !include examples/notesPostBody.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: notesPostResponse
+                example: !include examples/notesPostResponse.json
+    /log_entries: 
+      type: pagerDutyResource
+      get: 
+        is: [ paginated , allowsRange , logging ]
+        description: |
+          List all incident log entries for a specific incident.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: logEntriesForIncident
+                example: !include examples/logEntriesForIncident.json
+/log_entries: 
+  type: pagerDutyResource
+  description: |
+    PagerDuty keeps a log of all the events that happen to an incident.
+    The following APIs provide fine-grained access to this incident log entry data to give you more insight
+    into how your team or organization is handling your incidents.
+    Log entry data includes details about the event(s) that triggered the incident, who was notified and when,
+    how they were notified, and who acknowledged or resolved it, amongst a few other things.
+  get: 
+    is: [ paginated , allowsRange , logging ]
+    description: List all incident log entries across the entire account.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: logEntriesQuery
+            example: !include examples/logEntriesQuery.json
+  /{id}: 
+    type: pagerDutyResource
+    get: 
+      description: |
+        Get details for a specific incident log entry. This method provides additional information you can use to get at raw event data.
+      body: 
+        application/x-www-form-urlencoded: 
+          formParameters: 
+            time_zone: 
+              description: Time zone in which dates in the result will be rendered. Defaults to UTC
+            include[]: 
+              description: |
+                Array of additional details to include. This API accepts 'channel', 'incident', and 'service'.
+                If 'channel' is not included, a summary will be returned (See channel format information for more information.)
+              enum: 
+                - channel
+                - incident
+                - service
+              example: include[]=contact_methods&include[]=notification_rules
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: logEntry
+              example: !include examples/logEntry.json
+/maintenance_windows: 
+  type: pagerDutyResource
+  description: Maintenance windows allow you to schedule service maintenance periods, during which no incidents will be created.
+  get: 
+    is: [ paginated ]
+    description: |
+      List existing maintenance windows, optionally filtered by service,
+      or whether they are from the past, present or future.
+    body: 
+      application/x-www-form-urlencoded: 
+        formParameters: 
+          query: 
+            description: Filters the results, showing only the maintenance windows whose descriptions contain the query.
+          service_ids: 
+            description: An array of service IDs, specifying services whose maintenance windows shall be returned.
+            example: service_ids[]=PF9KMXH&service_ids[]=qwerty
+          filter: 
+            description: |
+              Only return maintenance windows that are of this type.
+              Possible values are 'past', 'future', 'ongoing'.
+              If this parameter is omitted, all maintenance windows will be returned.
+            enum: 
+              - past
+              - future
+              - ongoing
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: maintenanceWindowsQuery
+            example: !include examples/maintenanceWindowsQuery.json
+  post: 
+    description: |
+      Create a new maintenance window for the specified services.
+      No new incidents will be created for a service that is currently in maintenance.
+    body: 
+      application/json: 
+        schema: maintenanceWindowPostBody
+        example: !include examples/maintenanceWindowPostBody.json
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: maintenanceWindowPostResponse
+            example: !include examples/maintenanceWindowPostResponse.json
+  /{id}: 
+    type: pagerDutyResource
+    get: 
+      description: Get details about an existing maintenance window.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: maintenanceWindowGet
+              example: !include examples/maintenanceWindowGet.json
+    put: 
+      description: Update an existing maintenance window.
+      body: 
+        application/json: 
+          schema: maintenanceWindowPutBody
+          example: !include examples/maintenanceWindowPutBody.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: maintenanceWindowPutResponse
+              example: !include examples/maintenanceWindowPutResponse.json
+    delete: 
+      description: Cancel or delete an existing maintenance window.
+      responses: 
+        204: 
+/reports: 
+  description: Access high level reports about alerts and incidents. Useful for creating graphs.
+  /incidents_per_time: 
+    type: pagerDutyResource
+    description: Access high level reports about alerts and incidents. Useful for creating graphs.
+    get: 
+      is: [ reports ]
+      description: |
+        Get high level statistics about the number of alerts (SMSes, phone calls and emails)
+        sent for the desired time period, summed daily, weekly or monthly.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: reportsIncidentsPerTime
+              example: !include examples/reportsIncidentsPerTime.json
+  /alerts_per_time: 
+    type: pagerDutyResource
+    get: 
+      is: [ reports ]
+      description: Get high level statistics about the number of incidents created for the desired time period, summed daily, weekly or monthly.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: reportsAlertsPerTime
+              example: !include examples/reportsAlertsPerTime.json
+/schedules: 
+  type: pagerDutyResource
+  description: This API allows users to manipulate on-call schedules.
+  get: 
+    is: [ paginated ]
+    description: List existing on-call schedules.
+    body: 
+      application/x-www-form-urlencoded: 
+        formParameters: 
+          query: 
+            description: Filters the result, showing only the schedules whose name matches the query.
+          requester_id: 
+            description: |
+              The user id of the user making the request. This will be used to generate the calendar private urls.
+              This is only needed if you are using token based authentication.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: schedulesGet
+            example: !include examples/schedulesGet.json
+  post: 
+    description: Create a new on-call schedule.
+    body: 
+      application/json: 
+        schema: schedulesPostBody
+        example: !include examples/schedulesPostBody.json
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: schedulesPostResponse
+            example: !include examples/schedulesPostResponse.json
+  /{schedule_id}: 
+    type: pagerDutyResource
+    get: 
+      is: [ allowsRange ]
+      description: Show detailed information about a schedule, including entries for each layer and sub-schedule.
+      body: 
+        application/x-www-form-urlencoded: 
+          formParameters: 
+            time_zone: 
+              description: Time zone in which dates in the result will be rendered. Defaults to account time zone.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: scheduleGet
+              example: !include examples/scheduleGet.json
+    put: 
+      description: Update an existing on-call schedule.
+      body: 
+        application/json: 
+          schema: schedulePutBody
+          example: !include examples/schedulePutBody.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: schedulePutResponse
+              example: !include examples/schedulePutResponse.json
+    delete: 
+      description: Delete an on-call schedule.
+      responses: 
+        204: 
+    /users: 
+      type: pagerDutyResource
+      get: 
+        is: [ allowsRange ]
+        description: List all the users on-call in a given schedule for a given time range.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: scheduleUsers
+                example: !include examples/scheduleUsers.json
+    /entries: 
+      type: pagerDutyResource
+      get: 
+        is: [ allowsRange ]
+        description: List schedule entries that are active for a given time range for a specified on-call schedule.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              since: 
+                required: true
+              until: 
+                required: true
+              overflow: 
+                description: |
+                  Any on-call schedule entries that pass the date range bounds will be truncated at the bounds,
+                  unless the parameter overflow=true is passed. This parameter defaults to false. For instance,
+                  if your schedule is a rotation that changes daily at midnight UTC, and your date range is
+                  from 2011-06-01T10:00:00Z to 2011-06-01T14:00:00Z:
+                  
+                  If you don't pass the overflow=true parameter,
+                  you will get one schedule entry returned with a start of 2011-06-01T10:00:00Z and end of 2011-06-01T14:00:00Z.
+                  
+                  If you do pass the overflow=true parameter, you will get one schedule entry returned with a
+                  start of 2011-06-01T00:00:00Z and end of 2011-06-02T00:00:00Z.
+                type: boolean
+              time_zone: 
+                description: Time zone in which dates in the result will be rendered. Defaults to account time zone.
+              user_id: 
+                description: |
+                  To filter the returned on-call schedule entries by a specific user,
+                  you can optionally add the user_id parameter to the query.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: scheduleEntries
+                example: !include examples/scheduleEntries.json
+    /overrides: 
+      type: overrideResource
+      description: |
+        Schedule overrides are custom, non-recurring exceptions to your regular on-call schedules.
+        Use them when your team members go on vacation, swap shifts, or when you simply cannot
+        achieve your normal scheduling with recurring layers.
+      get: 
+        is: [ paginated ]
+        description: List overrides for a given time range.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              since: 
+                required: true
+              until: 
+                required: true
+              editable: 
+                description: |
+                  When this parameter is present, only editable overrides will be returned.
+                  The result will only include the id the override if this parameter is present.
+                  Only future overrides are editable.
+                type: boolean
+              overflow: 
+                description: |
+                  Any on-call schedule entries that pass the date range bounds will be truncated at the bounds,
+                  unless the parameter overflow=true is passed. This parameter defaults to false.
+                  For instance, if your schedule is a rotation that changes daily at midnight UTC,
+                  and your date range is from 2011-06-01T10:00:00Z to 2011-06-01T14:00:00Z:
+                  
+                  If you don't pass the overflow=true parameter,
+                  you will get one schedule entry returned with a start of 2011-06-01T10:00:00Z and end of 2011-06-01T14:00:00Z.
+                  
+                  If you do pass the overflow=true parameter, you will get one schedule entry returned with a
+                  start of 2011-06-01T00:00:00Z and end of 2011-06-02T00:00:00Z.
+                type: boolean
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: overridesGet
+                example: !include examples/overridesGet.json
+      post: 
+        description: Create an override for a specific user covering the specified time range.
+        body: 
+          application/json: 
+            schema: overridesPostBody
+            example: !include examples/overridesPostBody.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: overridesPostResponse
+                example: !include examples/overridesPostResponse.json
+      /{id}: 
+        type: overrideResource
+        delete: 
+          description: Remove an override.
+          responses: 
+            200: 
+            204: 
+  /preview: 
+    type: pagerDutyResource
+    post: 
+      description: Preview the configuration of an on-call schedule.
+      body: 
+        application/json: 
+          schema: schedulePreviewBody
+          example: !include examples/schedulePreviewBody.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: schedulePreviewResponse
+              example: !include examples/schedulePreviewResponse.json
+/services: 
+  type: pagerDutyResource
+  description: This API lets you access and manipulate the services across your account.
+  get: 
+    is: [ paginated ]
+    description: List existing services.
+    body: 
+      application/x-www-form-urlencoded: 
+        formParameters: 
+          include[]: 
+            description: |
+              Include extra information in the response.
+              Possible values are 'escalation_policy' (for inline Escalation Policy) and
+              'email_filters' (for inline Email Filters).
+            enum: [ escalation_policy , email_filters ]
+            example: include[]=escalation_policy&include[]=email_filters
+          time_zone: 
+            description: Time zone in which dates in the result will be rendered. Defaults to account default time zone.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: servicesQuery
+            example: !include examples/servicesQuery.json
+  post: 
+    description: Create a new service.
+    body: 
+      application/json: 
+        schema: servicesPostBody
+        example: !include examples/servicesPostBody.json
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: servicesPostResponse
+            example: !include examples/servicesPostResponse.json
+  /{service_id}: 
+    type: pagerDutyResource
+    get: 
+      description: Get details about an existing service.
+      body: 
+        application/x-www-form-urlencoded: 
+          formParameters: 
+            include[]: 
+              description: |
+                Include extra information in the response.
+                Possible values are 'escalation_policy' (for inline Escalation Policy) and
+                'email_filters' (for inline Email Filters).
+              enum: [ escalation_policy , email_filters ]
+              example: include[]=escalation_policy&include[]=email_filters
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: serviceGet
+              example: !include examples/serviceGet.json
+    put: 
+      description: Update an existing service.
+      body: 
+        application/json: 
+          schema: servicePutBody
+          example: !include examples/servicePutBody.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: servicePutResponse
+              example: !include examples/servicePutResponse.json
+    delete: 
+      description: |
+        Delete an existing service. Once the service is deleted, it will not be accessible
+        from the web UI and new incidents won't be able to be created for this service.
+      responses: 
+        204: 
+    /disable: 
+      type: pagerDutyResource
+      put: 
+        description: |
+          Disable a service. Once a service is disabled, it will not be
+          able to create incidents until it is enabled again.
+        body: 
+          application/json: 
+            schema: serviceDisable
+            example: !include examples/serviceDisable.json
+        responses: 
+          200: 
+    /enable: 
+      type: pagerDutyResource
+      put: 
+        description: Enable a previously disabled service.
+        responses: 
+          200: 
+    /regenerate_key: 
+      type: pagerDutyResource
+      post: 
+        description: Regenerate a new service key for an existing service.
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: serviceRegenerateKey
+                example: !include examples/serviceRegenerateKey.json
+    /email_filters: 
+      type: pagerDutyResource
+      description: |
+        Email Filters are a set of rules that are applied to triggering email's body, subject and from address.
+        It only applies to generic_email kind of Services. The way multiple filters are combined depends on the
+        email_filter_mode attribute of the service.
+      post: 
+        description: Create a new Email Filter for the specified service.
+        body: 
+          application/json: 
+            schema: emailFilterPostBody
+            example: !include examples/emailFilterPostBody.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: emailFilterPostResponse
+                example: !include examples/emailFilterPostResponse.json
+      /{id}: 
+        type: pagerDutyResource
+        put: 
+          description: Update an existing Email Filter.
+          body: 
+            application/json: 
+              schema: emailFilterPutBody
+              example: !include examples/emailFilterPutBody.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: emailFilterPutResponse
+                  example: !include examples/emailFilterPutResponse.json
+        delete: 
+          description: Delete an existing Email Filter.
+          responses: 
+            204: 
+/users: 
+  type: pagerDutyResource
+  description: |
+    Access and manipulate user data for your PagerDuty account.
+    When a user is shown inlined in other resources, a deleted user will its html_url attribute set to null.
+  get: 
+    is: [ paginated ]
+    description: List existing users.
+    body: 
+      application/x-www-form-urlencoded: 
+        formParameters: 
+          query: 
+            description: Filters the result, showing only the users whose names or email addresses match the query
+          include[]: 
+            description: |
+              Array of additional details to include.
+              This API accepts 'contact_methods', and 'notification_rules'.
+            enum: [ contact_methods , notification_rules ]
+            example: include[]=contact_methods&include[]=notification_rules
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: usersQuery
+            example: !include examples/usersQuery.json
+  post: 
+    description: Create a new user.
+    body: 
+      application/json: 
+        schema: usersPostBody
+        example: !include examples/usersPostBody-example.json
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: usersPostResponse
+            example: !include examples/usersPostResponse.json
+  /{user_id}: 
+    type: pagerDutyResource
+    get: 
+      description: Get information about an existing user.
+      body: 
+        application/x-www-form-urlencoded: 
+          formParameters: 
+            include[]: 
+              description: |
+                Array of additional details to include.
+                This API accepts 'contact_methods', and 'notification_rules'.
+              enum: [ contact_methods , notification_rules ]
+              example: include[]=contact_methods&include[]=notification_rules
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: userGet
+              example: !include examples/userGet.json
+    put: 
+      description: Update an existing user.
+      body: 
+        application/json: 
+          schema: userPutBody
+          example: !include examples/userPutBody.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: userPutResponse
+              example: !include examples/userPutResponse.json
+    delete: 
+      description: Remove an existing user.
+      responses: 
+        204: 
+    /contact_methods: 
+      type: pagerDutyResource
+      description: Access and manipulate the contact methods for a user.
+      get: 
+        description: List existing contact methods for the specified user.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: concatMethodsGet
+                example: !include examples/concatMethodsGet.json
+      post: 
+        description: Create a new contact method for the specified user.
+        body: 
+          application/json: 
+            schema: concatMethodsPostBody
+            example: !include examples/concatMethodsPostBody.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: concatMethodsPostResponse
+                example: !include examples/concatMethodsPostResponse.json
+      /{id}: 
+        type: pagerDutyResource
+        get: 
+          description: Get details for a contact method.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: concatMethodGet
+                  example: !include examples/concatMethodGet.json
+        put: 
+          description: Update an existing contact method.
+          body: 
+            application/json: 
+              schema: concatMethodPutBody
+              example: !include examples/concatMethodPutBody.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: concatMethodPutResponse
+                  example: !include examples/concatMethodPutResponse.json
+        delete: 
+          description: Remove a contact method and any corresponding notification rules.
+          responses: 
+            204: 
+    /notification_rules: 
+      type: pagerDutyResource
+      description: Access and manipulate the notification rules for a user.
+      get: 
+        description: List existing notification rules for the specified user.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: notificationRulesGet
+                example: !include examples/notificationRulesGet.json
+      post: 
+        description: Create a new notification rule for the specified user.
+        body: 
+          application/json: 
+            schema: notificationRulesPostBody
+            example: !include examples/notificationRulesPostBody.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: notificationRulesPostResponse
+                example: !include examples/notificationRulesPostResponse.json
+      /{id}: 
+        type: pagerDutyResource
+        get: 
+          description: Get details for a notification rule.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: notificationRuleGet
+                  example: !include examples/notificationRuleGet.json
+        put: 
+          description: Update an existing notification rule.
+          body: 
+            application/json: 
+              schema: notificationRulePutBody
+              example: !include examples/notificationRulePutBody.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: notificationRulePutResponse
+                  example: !include examples/notificationRulePutResponse.json
+        delete: 
+          description: Remove a notification rule.
+          responses: 
+            204: 
+    /log_entries: 
+      type: pagerDutyResource
+      get: 
+        is: [ paginated , allowsRange , logging ]
+        description: List all incident log entries that describe interactions with a specific user.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: logEntriesForUser
+                example: !include examples/logEntriesForUser.json
+/escalation_policies: 
+  type: pagerDutyResource
+  description: This API lets you access and manipulate escalation policies and rules.
+  get: 
+    is: [ paginated ]
+    description: List existing escalation policies.
+    body: 
+      application/x-www-form-urlencoded: 
+        formParameters: 
+          query: 
+            description: Filters the result, showing only the escalation policies whose names match the query.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: escalationPoliciesQuery
+            example: !include examples/escalationPoliciesQuery.json
+  post: 
+    description: Create a new escalation policy.
+    body: 
+      application/json: 
+        schema: escalationPolicyPost
+        example: !include examples/escalationPolicyPost.json
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: escalationPolicyCreated
+            example: !include examples/escalationPolicyCreated.json
+  /{escalation_policy_id}: 
+    type: pagerDutyResource
+    get: 
+      description: Get details about an escalation policy.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: escalationPolicyGet
+              example: !include examples/escalationPolicyGet.json
+    put: 
+      description: Update an escalation policy.
+      body: 
+        application/json: 
+          schema: escalationPolicyPut
+          example: !include examples/escalationPolicyPut.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: escalationPolicyGet
+              example: !include examples/escalationPolicyGet.json
+    delete: 
+      description: Delete an escalation policy.
+      responses: 
+        204: 
+    /escalation_rules: 
+      type: pagerDutyResource
+      description: This API lets you access and manipulate escalation rules of an existing escalation policy.
+      get: 
+        description: List escalation rules for an escalation policy.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: escalationRulesQuery
+                example: !include examples/escalationRulesQuery.json
+      post: 
+        description: Creates a new escalation rule for an escalation policy and appends it to the end of the existing escalation rules.
+        body: 
+          application/json: 
+            schema: escalationRulesPostBody
+            example: !include examples/escalationRulesPostBody.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: escalationRulesPostResponse
+                example: !include examples/escalationRulesPostResponse.json
+      put: 
+        description: Updates the entire collection of escalation rules.
+        body: 
+          application/json: 
+            schema: escalationRulesPutBody
+            example: !include examples/escalationRulesPutBody.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: escalationRulesPutResponse
+                example: !include examples/escalationRulesPutResponse.json
+      /{escalation_rule_id}: 
+        type: pagerDutyResource
+        get: 
+          description: Get details about an escalation rule.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: escalationRuleGet
+                  example: !include examples/escalationRuleGet.json
+        put: 
+          description: Update an escalation rule.
+          body: 
+            application/json: 
+              schema: escalationRulePutBody
+              example: !include examples/escalationRulePutBody.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: escalationRulePutResponse
+                  example: !include examples/escalationRulePutResponse.json
+        delete: 
+          description: Delete an escalation rule.
+          responses: 
+            204: 
+documentation: 
+  - title: Headline
+    content: !include docs/pagerDuty/headline.md

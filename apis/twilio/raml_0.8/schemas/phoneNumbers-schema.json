@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "uri": {
+      "type": "string"
+    },
+    "available_phone_numbers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "friendly_name": {
+            "description": "A nicely-formatted version of the phone number.",
+            "type": "string"
+          },
+          "phone_number": {
+            "description": "The phone number, in E.164 (i.e. '+1') format.",
+            "type": "string"
+          },
+          "lata": {
+            "description": "The LATA of this phone number.",
+            "type": "string"
+          },
+          "rate_center": {
+            "description": "The rate center of this phone number.",
+            "type": "string"
+          },
+          "latitude": {
+            "description": "The latitude coordinate of this phone number.",
+            "type": "string"
+          },
+          "longitude": {
+            "description": "The longitude coordinate of this phone number.",
+            "type": "string"
+          },
+          "region": {
+            "description": "The two-letter state or province abbreviation of this phone number.",
+            "type": "string",
+            "maxLength": 2,
+            "minLength": 2
+          },
+          "postal_code": {
+            "description": "The postal (zip) code of this phone number.",
+            "type": "string"
+          },
+          "iso_country": {
+            "description": "The ISO country code of this phone number.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

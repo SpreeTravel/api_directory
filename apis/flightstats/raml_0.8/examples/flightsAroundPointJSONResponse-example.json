@@ -1,0 +1,25 @@
+{
+  "request" : {
+    "latitude" : {
+      "requested" : "3.543056" ,
+      "interpreted" : 3.543056
+    } ,
+    "longitude" : {
+      "requested" : "-76.381389" ,
+      "interpreted" : -76.381389
+    } ,
+    "radiusMiles" : {
+      "requested" : "8" ,
+      "interpreted" : 8
+    } ,
+    "maxFlights" : {
+    } ,
+    "extendedOptions" : {
+    } ,
+    "url" : "https://api.flightstats.com/flex/flightstatus/rest/v2/json/flightsNear/3.543056/-76.381389/8"
+  } ,
+  "appendix" : {
+  } ,
+  "flightPositions" : [
+  ]
+}

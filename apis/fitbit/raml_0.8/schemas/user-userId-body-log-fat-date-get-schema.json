@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "fat": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string"
+          },
+          "fat": {
+            "type": "integer"
+          },
+          "logId": {
+            "type": "integer"
+          },
+          "time": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

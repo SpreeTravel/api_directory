@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Contacts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Contact"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Contact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ContactID"/>
+        <xs:element ref="ContactStatus"/>
+        <xs:element ref="Name"/>
+        <xs:element ref="FirstName"/>
+        <xs:element ref="LastName"/>
+        <xs:element ref="EmailAddress"/>
+        <xs:element ref="SkypeUserName"/>
+        <xs:element ref="BankAccountDetails"/>
+        <xs:element ref="TaxNumber"/>
+        <xs:element ref="AccountsReceivableTaxType"/>
+        <xs:element ref="AccountsPayableTaxType"/>
+        <xs:element ref="Addresses"/>
+        <xs:element ref="Phones"/>
+        <xs:element ref="UpdatedDateUTC"/>
+        <xs:element ref="IsSupplier"/>
+        <xs:element ref="IsCustomer"/>
+        <xs:element ref="DefaultCurrency"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContactID" type="xs:string"/>
+  <xs:element name="ContactStatus" type="xs:NCName"/>
+  <xs:element name="Name" type="xs:string"/>
+  <xs:element name="FirstName" type="xs:NCName"/>
+  <xs:element name="LastName" type="xs:NCName"/>
+  <xs:element name="EmailAddress" type="xs:string"/>
+  <xs:element name="SkypeUserName" type="xs:string"/>
+  <xs:element name="BankAccountDetails" type="xs:string"/>
+  <xs:element name="TaxNumber" type="xs:string"/>
+  <xs:element name="AccountsReceivableTaxType" type="xs:NCName"/>
+  <xs:element name="AccountsPayableTaxType" type="xs:NCName"/>
+  <xs:element name="Addresses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Address"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Address">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="AddressType"/>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="AddressLine1"/>
+          <xs:element ref="City"/>
+          <xs:element ref="PostalCode"/>
+          <xs:element ref="AttentionTo"/>
+        </xs:sequence>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddressType" type="xs:NCName"/>
+  <xs:element name="AddressLine1" type="xs:string"/>
+  <xs:element name="City" type="xs:NCName"/>
+  <xs:element name="PostalCode" type="xs:integer"/>
+  <xs:element name="AttentionTo" type="xs:NCName"/>
+  <xs:element name="Phones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Phone"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Phone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PhoneType"/>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="PhoneNumber"/>
+          <xs:element ref="PhoneAreaCode"/>
+          <xs:element ref="PhoneCountryCode"/>
+        </xs:sequence>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PhoneType" type="xs:NCName"/>
+  <xs:element name="PhoneNumber" type="xs:integer"/>
+  <xs:element name="PhoneAreaCode" type="xs:integer"/>
+  <xs:element name="PhoneCountryCode" type="xs:integer"/>
+  <xs:element name="UpdatedDateUTC" type="xs:dateTime"/>
+  <xs:element name="IsSupplier" type="xs:boolean"/>
+  <xs:element name="IsCustomer" type="xs:boolean"/>
+  <xs:element name="DefaultCurrency" type="xs:NCName"/>
+</xs:schema>

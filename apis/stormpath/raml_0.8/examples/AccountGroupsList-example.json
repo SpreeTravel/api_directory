@@ -1,0 +1,25 @@
+{
+  "href" : "https://api.stormpath.com/v1/accounts/cJoiwcorTTmkDDBsf02AbA/groups" ,
+  "offset" : 0 ,
+  "limit" : 25 ,
+  "items" : [
+    {
+      "href" : "https://api.stormpath.com/v1/groups/ZgoHUG0oSoVNeU0K4GZeVQ" ,
+      "name" : "Red Shirts" ,
+      "description" : "" ,
+      "status" : "ENABLED" ,
+      "directory" : {
+        "href" : "http://api.stormpath.com/v1/directories/1FaQ6kZxTL4DVJXWeXtUh7"
+      } ,
+      "tenant" : {
+        "href" : "http://api.stormpath.com/v1/tenants/tqjB6LiESGO00qvC5dkNw"
+      } ,
+      "accounts" : {
+        "href" : "http://api.stormpath.com/v1/groups/ZgoHUG0oSoVNeU0K4GZeVQ/accounts"
+      } ,
+      "accountMemberships" : {
+        "href" : "http://api.stormpath.com/v1/groups/ZgoHUG0oSoVNeU0K4GZeVQ/accountMemberships"
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "type": "object",
+  "": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "end": {
+      "type": "integer"
+    },
+    "first_page_uri": {
+      "type": "string"
+    },
+    "last_page_uri": {
+      "type": "string"
+    },
+    "next_page_uri": {
+      "type": "string"
+    },
+    "num_pages": {
+      "type": "integer"
+    },
+    "page": {
+      "type": "integer"
+    },
+    "page_size": {
+      "type": "integer"
+    },
+    "previous_page_uri": {
+      "type": "string"
+    },
+    "start": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    },
+    "uri": {
+      "type": "string"
+    },
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "account_sid": {
+            "type": "string"
+          },
+          "call_sid": {
+            "type": "string"
+          },
+          "conference_sid": {
+            "type": "string"
+          },
+          "date_created": {
+            "type": "string"
+          },
+          "date_updated": {
+            "type": "string"
+          },
+          "end_conference_on_exit": {
+            "type": "boolean"
+          },
+          "muted": {
+            "type": "boolean"
+          },
+          "start_conference_on_enter": {
+            "type": "boolean"
+          },
+          "uri": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

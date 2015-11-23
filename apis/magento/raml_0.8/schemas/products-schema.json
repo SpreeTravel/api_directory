@@ -1,0 +1,171 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "1" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "entity_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "type_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "sku" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "status" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "visibility" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "tax_class_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "weight" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "price" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "special_price" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "url_key" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "country_of_manufacture" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "msrp_display_actual_price_type" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "gift_message_available" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "news_from_date" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "news_to_date" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "special_from_date" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "special_to_date" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "description" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "2" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "entity_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "type_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "sku" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "status" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "visibility" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "tax_class_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "weight" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "price" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "special_price" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "url_key" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "country_of_manufacture" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "msrp_display_actual_price_type" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "gift_message_available" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "news_from_date" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "news_to_date" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "special_from_date" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "special_to_date" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "description" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "official_definitions" : [
+    {
+      "word" : "draw" ,
+      "speech_part" : "verb" ,
+      "definition" : "allow a draft" ,
+      "examples" : [
+        "This chimney draws very well"
+      ]
+    } , {
+      "word" : "draw" ,
+      "speech_part" : "verb" ,
+      "definition" : "engage in drawing" ,
+      "examples" : [
+        "He spent the day drawing in the garden"
+      ]
+    }
+  ] ,
+  "user_definitions" : [
+    {
+      "definition" : "dibujar" ,
+      "set_count" : 154
+    } , {
+      "definition" : "drew" ,
+      "set_count" : 64
+    }
+  ]
+}

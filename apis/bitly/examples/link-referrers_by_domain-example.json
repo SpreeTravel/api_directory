@@ -1,0 +1,45 @@
+{
+  "data": {
+    "referrers": {
+      "Twitter": [
+        {
+          "clicks": 41,
+          "referrer": "http://twitter.com/"
+        },
+        {
+          "clicks": 4,
+          "referrer": "http://t.co/123"
+        }
+      ],
+      "direct": [
+        {
+          "clicks": 1129,
+          "referrer": "direct"
+        }
+      ],
+      "localhost": [
+        {
+          "clicks": 24,
+          "referrer": "http://localhost/www/2ii.jp/ii.php"
+        }
+      ],
+      "news.ycombinator.com": [
+        {
+          "clicks": 55,
+          "referrer": "http://news.ycombinator.com/item"
+        }
+      ],
+      "yxG0tQXMY40=": [
+        {
+          "clicks": 25,
+          "referrer": "yxG0tQXMY40="
+        }
+      ]
+    },
+    "tz_offset": -5,
+    "unit": "day",
+    "units": -1
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

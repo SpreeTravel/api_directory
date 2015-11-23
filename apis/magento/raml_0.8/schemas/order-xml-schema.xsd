@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="magento_api">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="customer_id" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="base_discount_amount" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+        <xsd:element name="base_shipping_amount" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+        <xsd:element name="base_shipping_tax_amount" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+        <xsd:element name="base_subtotal" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+        <xsd:element name="base_tax_amount" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+        <xsd:element name="base_total_paid" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="base_total_refunded" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="tax_amount" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+        <xsd:element name="total_paid" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="total_refunded" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="base_shipping_discount_amount" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+        <xsd:element name="base_subtotal_incl_tax" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="base_total_due" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="total_due" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="base_currency_code" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="tax_name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="tax_rate" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+        <xsd:element name="addresses" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="data_item" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="region" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="postcode" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="lastname" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="street" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="city" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="telephone" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="country_id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="firstname" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="address_type" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="prefix" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="middlename" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="suffix" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="company" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="order_items" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="data_item" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="sku" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="price" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                    <xsd:element name="base_price" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                    <xsd:element name="base_original_price" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                    <xsd:element name="tax_percent" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                    <xsd:element name="tax_amount" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                    <xsd:element name="base_tax_amount" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                    <xsd:element name="base_discount_amount" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                    <xsd:element name="base_row_total" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                    <xsd:element name="base_price_incl_tax" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                    <xsd:element name="base_row_total_incl_tax" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

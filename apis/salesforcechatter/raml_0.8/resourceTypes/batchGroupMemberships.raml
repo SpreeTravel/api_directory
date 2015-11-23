@@ -1,0 +1,27 @@
+head: 
+  description: |
+    Access information about a list of group members. The members don’t have to belong to the same group. Each membership ID is associated with a specific group.
+    {membershipIds} is a comma separated list of up to 500 membership IDs.
+    Membership IDs are returned in the response bodies of several groups resources.
+    
+    The following groups resource lists every member of a group in its own Group Member response body. The id property of every Group Member response body contains a membership Id:
+    
+    /chatter/groups/groupId/members
+  responses: 
+    200: 
+get: 
+  description: |
+    Access information about a list of group members. The members don’t have to belong to the same group. Each membership ID is associated with a specific group.
+    {membershipIds} is a comma separated list of up to 500 membership IDs.
+    /chatter/group-memberships/batch/0FBD00000003GAPOA2,0FBD00000003GAKOA
+    Membership IDs are returned in the response bodies of several groups resources.
+    
+    The following groups resource lists every member of a group in its own Group Member response body. The id property of every Group Member response body contains a membership Id:
+    
+    /chatter/groups/groupId/members
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: batchResultsResponse
+          example: !include examples/batchGroupMembershipsResponse-example.json

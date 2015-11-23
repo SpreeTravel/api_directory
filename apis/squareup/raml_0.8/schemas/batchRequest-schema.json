@@ -1,0 +1,44 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "requests" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "method" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "relative_path" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "access_token" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "body" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "request_id" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

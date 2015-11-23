@@ -1,0 +1,23 @@
+[
+  {
+    "account_id": 1,
+    "answer_count": 1,
+    "badge_counts": {
+      "bronze": 1,
+      "gold": 1,
+      "silver": 1
+    },
+    "creation_date": 1,
+    "last_access_date": 1,
+    "question_count": 1,
+    "reputation": 1,
+    "site_name": "some string",
+    "site_url": "some string",
+    "top_answers": [
+    ],
+    "top_questions": [
+    ],
+    "user_id": 1,
+    "user_type": "some string"
+  }
+]

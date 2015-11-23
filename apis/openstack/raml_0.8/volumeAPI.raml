@@ -1,0 +1,737 @@
+#%RAML 0.8
+title: OpenStack Block Storage API
+version: v2
+baseUri: https://volume.example.com/
+schemas:
+  - attachInterfacesCreateReq: !include schemas/attachInterfacesCreateReq-schema.json
+  - attachInterfacesCreateReqXSD: !include schemas/attachInterfacesCreateReq-schema.xsd
+  - attachInterfacesCreateResp: !include schemas/attachInterfacesCreateResp-schema.json
+  - attachInterfacesCreateRespXSD: !include schemas/attachInterfacesCreateResp-schema.xsd
+  - attachInterfacesListResp: !include schemas/attachInterfacesListResp-schema.json
+  - attachInterfacesListRespXSD: !include schemas/attachInterfacesListResp-schema.xsd
+  - attachInterfacesShowResp: !include schemas/attachInterfacesShowResp-schema.json
+  - attachInterfacesShowRespXSD: !include schemas/attachInterfacesShowResp-schema.xsd
+  - backupCreateRequest: !include schemas/backupCreateRequest-schema.json
+  - backupCreateResponse: !include schemas/backupCreateResponse-schema.json
+  - backupListDetailResponse: !include schemas/backupListDetailResponse-schema.json
+  - backupListSimpleResponse: !include schemas/backupListSimpleResponse-schema.json
+  - backupRestoreRequest: !include schemas/backupRestoreRequest-schema.json
+  - backupRestoreResponse: !include schemas/backupRestoreResponse-schema.json
+  - backupShowResponse: !include schemas/backupShowResponse-schema.json
+  - cinderExtensionsResponse: !include schemas/cinderExtensionsResponse-schema.json
+  - cinderExtensionsResponseXSD: !include schemas/cinderExtensionsResponse-schema.xsd
+  - cinderVersionsResponse: !include schemas/cinderVersionsResponse-schema.json
+  - limitsShowGetResp: !include schemas/limitsShowGetResp-schema.json
+  - limitsShowGetRespXSD: !include schemas/limitsShowGetResp-schema.xsd
+  - listQosResponse: !include schemas/listQosResponse-schema.json
+  - listQosResponseXSD: !include schemas/listQosResponse-schema.xsd
+  - manageExistingRequest: !include schemas/manageExistingRequest-schema.json
+  - manageExistingResponse: !include schemas/manageExistingResponse-schema.json
+  - qosCreateRequest: !include schemas/qosCreateRequest-schema.json
+  - qosCreateRequestXSD: !include schemas/qosCreateRequest-schema.xsd
+  - qosCreateResponse: !include schemas/qosCreateResponse-schema.json
+  - qosCreateResponseXSD: !include schemas/qosCreateResponse-schema.xsd
+  - qosDetailsShowResponse: !include schemas/qosDetailsShowResponse-schema.json
+  - qosDetailsShowResponseXSD: !include schemas/qosDetailsShowResponse-schema.xsd
+  - qosShowResponse: !include schemas/qosShowResponse-schema.json
+  - qosShowResponseXSD: !include schemas/qosShowResponse-schema.xsd
+  - qosUpdateRequest: !include schemas/qosUpdateRequest-schema.json
+  - qosUpdateRequestXSD: !include schemas/qosUpdateRequest-schema.xsd
+  - qosUpdateResponse: !include schemas/qosUpdateResponse-schema.json
+  - qosUpdateResponseXSD: !include schemas/qosUpdateResponse-schema.xsd
+  - quotasShowDefaultsGetResp: !include schemas/volumeQuotasShowDefaultsGetResp-schema.json
+  - quotasShowDefaultsGetRespXSD: !include schemas/quotasShowDefaultsGetResp-schema.xsd
+  - quotasShowGetResp: !include schemas/volumeQuotasShowGetResp-schema.json
+  - quotasShowGetRespXSD: !include schemas/quotasShowGetResp-schema.xsd
+  - quotasUpdatePostReq: !include schemas/quotasUpdatePostReq-schema.json
+  - quotasUpdatePostReqXSD: !include schemas/quotasUpdatePostReq-schema.xsd
+  - quotasUpdatePostResp: !include schemas/volumeQuotasUpdatePostResp-schema.json
+  - quotasUpdatePostRespXSD: !include schemas/quotasUpdatePostResp-schema.xsd
+  - quotasUserShowDetailGetResp: !include schemas/quotasUserShowDetailGetResp-schema.json
+  - snapshotCreateRequest: !include schemas/snapshotCreateRequest-schema.json
+  - snapshotCreateRequestXSD: !include schemas/snapshotCreateRequest-schema.xsd
+  - snapshotCreateResponse: !include schemas/snapshotCreateResponse-schema.json
+  - snapshotCreateResponseXSD: !include schemas/snapshotCreateResponse-schema.xsd
+  - snapshotListDetailResponse: !include schemas/snapshotListDetailResponse-schema.json
+  - snapshotListDetailResponseXSD: !include schemas/snapshotListDetailResponse-schema.xsd
+  - snapshotListSimpleResponse: !include schemas/snapshotListSimpleResponse-schema.json
+  - snapshotListSimpleResponseXSD: !include schemas/snapshotListSimpleResponse-schema.xsd
+  - snapshotMetadataResponse: !include schemas/snapshotMetadataResponse-schema.json
+  - snapshotMetadataResponseXSD: !include schemas/snapshotMetadataResponse-schema.xsd
+  - snapshotShowResponse: !include schemas/snapshotShowResponse-schema.json
+  - snapshotShowResponseXSD: !include schemas/snapshotShowResponse-schema.xsd
+  - snapshotUpdateMetadataRequest: !include schemas/snapshotUpdateMetadataRequest-schema.json
+  - snapshotUpdateMetadataRequestXSD: !include schemas/snapshotUpdateMetadataRequest-schema.xsd
+  - snapshotUpdateMetadataResponse: !include schemas/snapshotUpdateMetadataResponse-schema.json
+  - snapshotUpdateMetadataResponseXSD: !include schemas/snapshotUpdateMetadataResponse-schema.xsd
+  - snapshotUpdateRequest: !include schemas/snapshotUpdateRequest-schema.json
+  - snapshotUpdateRequestXSD: !include schemas/snapshotUpdateRequest-schema.xsd
+  - snapshotUpdateResponse: !include schemas/snapshotUpdateResponse-schema.json
+  - snapshotUpdateResponseXSD: !include schemas/snapshotUpdateResponse-schema.xsd
+  - userQuotasShowGetResp: !include schemas/volumeUserQuotasShowGetResp-schema.json
+  - userQuotasShowGetRespXSD: !include schemas/userQuotasShowGetResp-schema.xsd
+  - userQuotasUpdatePostReq: !include schemas/userQuotasUpdatePostReq-schema.json
+  - userQuotasUpdatePostReqXSD: !include schemas/userQuotasUpdatePostReq-schema.xsd
+  - userQuotasUpdatePostResp: !include schemas/volumeUserQuotasUpdatePostResp-schema.json
+  - userQuotasUpdatePostRespXSD: !include schemas/userQuotasUpdatePostResp-schema.xsd
+  - versionv2GetResp: !include schemas/versionv2GetResp-schema.json
+  - volumeCreateRequest: !include schemas/volumeCreateRequest-schema.json
+  - volumeCreateRequestXSD: !include schemas/volumeCreateRequest-schema.xsd
+  - volumeCreateResponse: !include schemas/volumeCreateResponse-schema.json
+  - volumeCreateResponseXSD: !include schemas/volumeCreateResponse-schema.xsd
+  - volumeExtendRequest: !include schemas/volumeExtendRequest-schema.json
+  - volumeListDetailResponse: !include schemas/volumeListDetailResponse-schema.json
+  - volumeListDetailResponseXSD: !include schemas/volumeListDetailResponse-schema.xsd
+  - volumeListSimpleResponse: !include schemas/volumeListSimpleResponse-schema.json
+  - volumeListSimpleResponseXSD: !include schemas/volumeListSimpleResponse-schema.xsd
+  - volumeShowResponse: !include schemas/volumeShowResponse-schema.json
+  - volumeShowResponseXSD: !include schemas/volumeShowResponse-schema.xsd
+  - volumeTypeCreateRequest: !include schemas/volumeTypeCreateRequest-schema.json
+  - volumeTypeCreateRequestXSD: !include schemas/volumeTypeCreateRequest-schema.xsd
+  - volumeTypeListResponse: !include schemas/volumeTypeListResponse-schema.json
+  - volumeTypeListResponseXSD: !include schemas/volumeTypeListResponse-schema.xsd
+  - volumeTypeShow: !include schemas/volumeTypeShow-schema.json
+  - volumeTypeShowXSD: !include schemas/volumeTypeShow-schema.xsd
+  - volumeTypeShowResponse: !include schemas/volumeTypeShowResponse-schema.json
+  - volumeTypeShowResponseXSD: !include schemas/volumeTypeShowResponse-schema.xsd
+  - volumeUpdateRequest: !include schemas/volumeUpdateRequest-schema.json
+  - volumeUpdateRequestXSD: !include schemas/volumeUpdateRequest-schema.xsd
+  - volumeUpdateResponse: !include schemas/volumeUpdateResponse-schema.json
+  - volumeUpdateResponseXSD: !include schemas/volumeUpdateResponse-schema.xsd
+  - apiVersionDetailsRes: !include /schemas/apiVersionDetailsRes-schema.json
+  - showQoSSpecificationDetails: !include /schemas/showQoSSpecificationDetails-schema.json
+  - showQoSSpecificationDetailsXSD: !include /schemas/showQoSSpecificationDetailsXSD-schema.xsd
+  - showTenantQuotas: !include /schemas/showTenantQuotas-schema.json
+  - showTenantQuotasXML: !include /schemas/showTenantQuotasXML-schema.xsd
+  - updateQuotaReq: !include /schemas/updateQuotaReq-schema.json
+  - updateQuotaReqXML: !include /schemas/updateQuotaReqXML-schema.xsd
+  - updateQuota: !include /schemas/updateQuota-schema.json
+  - updateQuotaXml: !include /schemas/updateQuotaXml-schema.xsd
+traits:
+  - delimeter: !include traits/delimeter.raml
+/: 
+  get: 
+    description: List API versions
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: cinderVersionsResponse
+            example: !include examples/cinderVersionsResponse-example.json
+/{version}: 
+  get: 
+    description: Show API version details
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: apiVersionDetailsRes
+            example: !include examples/apiVersionDetailsRes-example.json
+  /{tenant_id}: 
+    /backups: 
+      post: 
+        description: Create backup
+        body: 
+          application/json: 
+            schema: backupCreateRequest
+            example: !include examples/backupCreateRequest-example.json
+        responses: 
+          202: 
+            body: 
+              application/json: 
+                schema: backupCreateResponse
+                example: !include examples/backupCreateResponse-example.json
+      get: 
+        description: List backups
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: backupListSimpleResponse
+                example: !include examples/backupListSimpleResponse-example.json
+      /detail: 
+        get: 
+          description: List backups (detailed)
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: backupListDetailResponse
+                  example: !include examples/backupListDetailResponse-example.json
+      /{backup_id}: 
+        get: 
+          description: Show backup details
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: backupShowResponse
+                  example: !include examples/backupShowResponse-example.json
+        delete: 
+          description: Delete backup
+          responses: 
+            202: 
+        /restore: 
+          post: 
+            description: Restore backup
+            body: 
+              application/json: 
+                schema: backupRestoreRequest
+                example: !include examples/backupRestoreRequest-example.json
+            responses: 
+              202: 
+                body: 
+                  application/json: 
+                    schema: backupRestoreResponse
+                    example: !include examples/backupRestoreResponse-example.json
+    /extensions: 
+      get: 
+        description: List API extensions
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: cinderExtensionsResponseXSD
+                example: !include examples/cinderExtensionsResponse-example.xml
+              application/json: 
+                schema: cinderExtensionsResponse
+                example: !include examples/cinderExtensionsResponse-example.json
+      /{alias}: 
+    /limits: 
+      get: 
+        description: Show absolute limits
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: limitsShowGetRespXSD
+                example: !include examples/limitsShowGetResp-example.xml
+              application/json: 
+                schema: limitsShowGetResp
+                example: !include examples/limitsShowGetResp-example.json
+    /os-quota-sets: 
+      /defaults: 
+        get: 
+          description: Get default quotas
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: quotasShowDefaultsGetRespXSD
+                  example: !include examples/quotasShowDefaultsGetResp-example.xml
+                application/json: 
+                  schema: quotasShowDefaultsGetResp
+                  example: !include examples/volumeQuotasShowDefaultsGetResp-example.json
+      /{tenant_id}: 
+        get: 
+          description: Show quotas
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: showTenantQuotasXML
+                  example: !include examples/showTenantQuotasXML-example.xml
+                application/json: 
+                  schema: showTenantQuotas
+                  example: !include examples/showTenantQuotas-example.json
+        put: 
+          description: Update quotas.
+          body: 
+            application/json: 
+              schema: updateQuotaReq
+              example: !include examples/updateQuotaReq-example.json
+            application/xml: 
+              schema: updateQuotaReqXML
+              example: !include examples/updateQuotaReqXML-example.xml
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: updateQuotaXml
+                  example: !include examples/updateQuotaXml-example.xml
+                application/json: 
+                  schema: updateQuota
+                  example: !include examples/updateQuota-example.json
+        delete: 
+          description: Delete quotas
+          responses: 
+            200: 
+        /detail: 
+          /{user_id}: 
+            get: 
+              description: Show quota details for user
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      schema: quotasUserShowDetailGetResp
+                      example: !include examples/quotasUserShowDetailGetResp-example.json
+        /{user_id}: 
+          get: 
+            description: Show quotas for user
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    schema: userQuotasShowGetRespXSD
+                    example: !include examples/volumeUserQuotasShowGetResp-example.xml
+                  application/json: 
+                    schema: userQuotasShowGetResp
+                    example: !include examples/volumeUserQuotasShowGetResp-example.json
+          post: 
+            description: Update quotas for user
+            body: 
+              application/json: 
+                schema: userQuotasUpdatePostReq
+                example: !include examples/userQuotasUpdatePostReq-example.json
+              application/xml: 
+                schema: userQuotasUpdatePostReqXSD
+                example: !include examples/userQuotasUpdatePostReq-example.xml
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    schema: userQuotasUpdatePostRespXSD
+                    example: !include examples/userQuotasUpdatePostResp-example.xml
+                  application/json: 
+                    schema: userQuotasUpdatePostResp
+                    example: !include examples/volumeUserQuotasUpdatePostResp-example.json
+          delete: 
+            description: Delete quotas for user
+            responses: 
+              200: 
+    /os-volume-manage: 
+      post: 
+        description: Manage existing volume
+        body: 
+          application/json: 
+            schema: manageExistingRequest
+            example: !include examples/manageExistingRequest-example.json
+        responses: 
+          202: 
+            body: 
+              application/json: 
+                schema: manageExistingResponse
+                example: !include examples/manageExistingResponse-example.json
+    /qos-specs: 
+      post: 
+        description: Create QoS specification
+        body: 
+          application/json: 
+            schema: qosCreateRequest
+            example: !include examples/qosCreateRequest-example.json
+          application/xml: 
+            schema: qosCreateRequestXSD
+            example: !include examples/qosCreateRequest-example.xml
+        responses: 
+          202: 
+            body: 
+              application/xml: 
+                schema: qosCreateResponseXSD
+                example: !include examples/qosCreateResponse-example.xml
+              application/json: 
+                schema: qosCreateResponse
+                example: !include examples/qosCreateResponse-example.json
+      get: 
+        description: List QoS specs
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: listQosResponseXSD
+                example: !include examples/listQosResponse-example.xml
+              application/json: 
+                schema: listQosResponse
+                example: !include examples/listQosResponse-example.json
+      /{qos_id}: 
+        get: 
+          description: Show QoS specification details
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: showQoSSpecificationDetailsXSD
+                  example: !include examples/showQoSSpecificationDetailsXSD-example.xml
+                application/json: 
+                  schema: showQoSSpecificationDetails
+                  example: !include examples/showQoSSpecificationDetails-example.json
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailableXSD
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequestXSD
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorizedXSD
+            403: 
+              body: 
+                application/xml: 
+                  schema: forbiddenXSD
+            405: 
+              body: 
+                application/xml: 
+                  schema: badMethodXSD
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimitXSD
+        delete: 
+          description: Delete QoS specification
+          responses: 
+            202: 
+        /associate: 
+          get: 
+            description: Associate QoS specification with volume type
+            queryParameters: 
+              vol_type_id: 
+                description: The unique ID of the volume type.
+            responses: 
+              202: 
+        /associations: 
+          get: 
+            description: Get all associations for QoS specification
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    schema: qosShowResponseXSD
+                    example: !include examples/qosShowResponse-example.xml
+                  application/json: 
+                    schema: qosShowResponse
+                    example: !include examples/qosShowResponse-example.json
+        /disassociate: 
+          get: 
+            description: Disassociate QoS specification from volume type
+            queryParameters: 
+              vol_type_id: 
+                description: The unique ID of the volume type.
+            responses: 
+              202: 
+        /disassociate_all: 
+          get: 
+            description: Disassociate QoS specification from all associations
+            responses: 
+              202: 
+    /servers: 
+      /{server_id}: 
+        /os-attach-interfaces: 
+          post: 
+            description: Create interface
+            body: 
+              application/json: 
+                schema: attachInterfacesCreateReq
+                example: !include examples/attachInterfacesCreateReq-example.json
+              application/xml: 
+                schema: attachInterfacesCreateReqXSD
+                example: !include examples/attachInterfacesCreateReq-example.xml
+            responses: 
+              202: 
+                body: 
+                  application/xml: 
+                    schema: attachInterfacesCreateRespXSD
+                    example: !include examples/attachInterfacesCreateResp-example.xml
+                  application/json: 
+                    schema: attachInterfacesCreateResp
+                    example: !include examples/attachInterfacesCreateResp-example.json
+          get: 
+            description: List interfaces
+            responses: 
+              202: 
+                body: 
+                  application/xml: 
+                    schema: attachInterfacesListRespXSD
+                    example: !include examples/attachInterfacesListResp-example.xml
+                  application/json: 
+                    schema: attachInterfacesListResp
+                    example: !include examples/attachInterfacesListResp-example.json
+          /{attachment_id}: 
+            get: 
+              description: Show attached interface information
+              responses: 
+                202: 
+                  body: 
+                    application/xml: 
+                      schema: attachInterfacesShowRespXSD
+                      example: !include examples/attachInterfacesShowResp-example.xml
+                    application/json: 
+                      schema: attachInterfacesShowResp
+                      example: !include examples/attachInterfacesShowResp-example.json
+    /snapshots: 
+      post: 
+        description: Create snapshot
+        queryParameters: 
+          snapshot: 
+            description: A partial representation of a snapshot used in the creation process.
+            required: true
+          volume_id: 
+            description: To create a snapshot from an existing volume, specify the ID of the existing volume.
+            required: true
+          "force ": 
+            description: Indicate whether to snapshot, even if the volume is attached. Default==False.
+            type: boolean
+            default: false
+            example: true
+          "name ": 
+            description: Name of the snapshot. Default==None.
+            default: None
+          "description ": 
+            description: Description of snapshot. Default==None.
+            default: None
+        body: 
+          application/xml: 
+            schema: snapshotCreateRequestXSD
+            example: !include examples/snapshotCreateRequest-example.xml
+          application/json: 
+            schema: snapshotCreateRequest
+            example: !include examples/snapshotCreateRequest-example.json
+        responses: 
+          202: 
+            body: 
+              application/xml: 
+                schema: snapshotCreateResponseXSD
+                example: !include examples/snapshotCreateResponse-example.xml
+              application/json: 
+                schema: snapshotCreateResponse
+                example: !include examples/snapshotCreateResponse-example.json
+      get: 
+        description: List snapshots
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: snapshotListSimpleResponseXSD
+                example: !include examples/snapshotListSimpleResponse-example.xml
+              application/json: 
+                schema: snapshotListSimpleResponse
+                example: !include examples/snapshotListSimpleResponse-example.json
+      /detail: 
+        get: 
+          description: List snapshots (detailed)
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: snapshotListDetailResponseXSD
+                  example: !include examples/snapshotListDetailResponse-example.xml
+                application/json: 
+                  schema: snapshotListDetailResponse
+                  example: !include examples/snapshotListDetailResponse-example.json
+      /{snapshot_id}: 
+        get: 
+          description: Show snapshot information
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: snapshotShowResponseXSD
+                  example: !include examples/snapshotShowResponse-example.xml
+                application/json: 
+                  schema: snapshotShowResponse
+                  example: !include examples/snapshotShowResponse-example.json
+        put: 
+          description: Update snapshot
+          body: 
+            application/xml: 
+              schema: snapshotUpdateRequestXSD
+              example: !include examples/snapshotUpdateRequest-example.xml
+            application/json: 
+              schema: snapshotUpdateRequest
+              example: !include examples/snapshotUpdateRequest-example.json
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: snapshotUpdateResponseXSD
+                  example: !include examples/snapshotUpdateResponse-example.xml
+                application/json: 
+                  schema: snapshotUpdateResponse
+                  example: !include examples/snapshotUpdateResponse-example.json
+        delete: 
+          description: Delete snapshot
+          responses: 
+            202: 
+        /metadata: 
+          get: 
+            description: Show snapshot metadata
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    schema: snapshotMetadataResponseXSD
+                    example: !include examples/snapshotMetadataResponse-example.xml
+                  application/json: 
+                    schema: snapshotMetadataResponse
+                    example: !include examples/snapshotMetadataResponse-example.json
+          put: 
+            description: Update snapshot metadata
+            body: 
+              application/xml: 
+                schema: snapshotUpdateMetadataRequestXSD
+                example: !include examples/snapshotUpdateMetadataRequest-example.xml
+              application/json: 
+                schema: snapshotUpdateMetadataRequest
+                example: !include examples/snapshotUpdateMetadataRequest-example.json
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    schema: snapshotUpdateMetadataResponseXSD
+                    example: !include examples/snapshotUpdateMetadataResponse-example.xml
+                  application/json: 
+                    schema: snapshotUpdateMetadataResponse
+                    example: !include examples/snapshotUpdateMetadataResponse-example.json
+    /types: 
+      get: 
+        description: List volume types
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: volumeTypeListResponseXSD
+                example: !include examples/volumeTypeListResponse-example.xml
+              application/json: 
+                schema: volumeTypeListResponse
+                example: !include examples/volumeTypeListResponse-example.json
+      post: 
+        description: Create volume type
+        body: 
+          application/xml: 
+            schema: volumeTypeCreateRequestXSD
+            example: !include examples/volumeTypeCreateRequest-example.xml
+          application/json: 
+            schema: volumeTypeCreateRequest
+            example: !include examples/volumeTypeCreateRequest-example.json
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: volumeTypeShowResponseXSD
+                example: !include examples/volumeTypeShowResponse-example.xml
+              application/json: 
+                schema: volumeTypeShowResponse
+                example: !include examples/volumeTypeShowResponse-example.json
+      /{volume_type_id}: 
+        put: 
+          description: Update extra specs for a volume type
+          body: 
+            application/xml: 
+              schema: volumeTypeCreateRequestXSD
+              example: !include examples/volumeTypeCreateRequest-example.xml
+            application/json: 
+              schema: volumeTypeCreateRequest
+              example: !include examples/volumeTypeCreateRequest-example.json
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: volumeTypeShowXSD
+                  example: !include examples/volumeTypeShow-example.xml
+                application/json: 
+                  schema: volumeTypeShow
+                  example: !include examples/volumeTypeShow-example.json
+        get: 
+          description: Show volume type information
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: volumeTypeShowResponseXSD
+                  example: !include examples/volumeTypeShowResponse-example.xml
+                application/json: 
+                  schema: volumeTypeShowResponse
+                  example: !include examples/volumeTypeShowResponse-example.json
+        delete: 
+          description: Delete volume type
+          responses: 
+            202: 
+    /volumes: 
+      post: 
+        description: Create volume
+        body: 
+          application/json: 
+            schema: volumeCreateRequest
+            example: !include examples/volumeCreateRequest-example.json
+          application/xml: 
+            schema: volumeCreateRequestXSD
+            example: !include examples/volumeCreateRequest-example.xml
+        responses: 
+          202: 
+            body: 
+              application/xml: 
+                schema: volumeCreateResponseXSD
+                example: !include examples/volumeCreateResponse-example.xml
+              application/json: 
+                schema: volumeCreateResponse
+                example: !include examples/volumeCreateResponse-example.json
+      get: 
+        is: [ delimeter ]
+        description: List volumes
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: volumeListSimpleResponseXSD
+                example: !include examples/volumeListSimpleResponse-example.xml
+              application/json: 
+                schema: volumeListSimpleResponse
+                example: !include examples/volumeListSimpleResponse-example.json
+      /detail: 
+        get: 
+          is: [ delimeter ]
+          description: List volumes (detailed)
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: volumeListDetailResponseXSD
+                  example: !include examples/volumeListDetailResponse-example.xml
+                application/json: 
+                  schema: volumeListDetailResponse
+                  example: !include examples/volumeListDetailResponse-example.json
+      /{volume_id}: 
+        get: 
+          description: Show volume information
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: volumeShowResponseXSD
+                  example: !include examples/volumeShowResponse-example.xml
+                application/json: 
+                  schema: volumeShowResponse
+                  example: !include examples/volumeShowResponse-example.json
+        put: 
+          description: Update volume
+          body: 
+            application/xml: 
+              schema: volumeUpdateRequestXSD
+              example: !include examples/volumeUpdateRequest-example.xml
+            application/json: 
+              schema: volumeUpdateRequest
+              example: !include examples/volumeUpdateRequest-example.json
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: volumeUpdateResponseXSD
+                  example: !include examples/volumeUpdateResponse-example.xml
+                application/json: 
+                  schema: volumeUpdateResponse
+                  example: !include examples/volumeUpdateResponse-example.json
+        delete: 
+          description: Delete volume
+          responses: 
+            202: 
+        /action: 
+          post: 
+            description: Extend volume
+            body: 
+              application/json: 
+                schema: volumeExtendRequest
+                example: !include examples/volumeExtendRequest-example.json
+            responses: 
+              202: 

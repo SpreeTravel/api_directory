@@ -1,0 +1,37 @@
+body: 
+  application/x-www-form-urlencoded: 
+    formParameters: 
+      where: 
+        description: |
+          Provides query parameters. The value should be JSON.
+          |Key         |Operation                                    |
+          |------------|---------------------------------------------|
+          |$lt         |Less Than                                    |
+          |$lte        |Less Than Or Equal To                        |
+          |$gt         |Greater Than                                 |
+          |$gte        |Greater Than Or Equal To                     |
+          |$ne         |Not Equal To                                 |
+          |$in         |Contained In                                 |
+          |$nin        |Not Contained in                             |
+          |$exists     |A value is set for the key                   |
+          |$select     |This matches a value for a key in the result of a different query|
+          |$dontSelect |Requires that a key's value not match a value for a key in the result of a different query|
+          |$all        |Contains all of the given values             |
+        example: 'where={"cheatMode":false,"score":{"$gte":1000,"$lte":3000}}'
+      order: 
+        description: "Specifies a field to sort by. Use '-' to obtain descending order. Accepts multiple fields."
+        example: order=score,-name
+      limit: 
+        description: Pagination parameter. Maximal size of the results array.
+        type: integer
+      skip: 
+        description: Pagination parameter. Offset used to form the results array.
+        type: integer
+      keys: 
+        description: Restricts returned fields.
+        example: keys=score,playerName
+      count: 
+        description: |
+          If you are limiting your query, or if there are a very large number of results, and you want to
+          know how many total results there are without returning them all, you can use the count parameter.
+        type: integer

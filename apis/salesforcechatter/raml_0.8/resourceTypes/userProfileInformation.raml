@@ -1,0 +1,22 @@
+head: 
+  description: "Get information about the context or specified user's Chatter profile."
+  responses: 
+    200: 
+patch: 
+  description: "Update information about the context or specified user's Chatter profile."
+  body: 
+    application/json: 
+      schema: updateUserInfoRequest
+      example: !include examples/updateUserInfoRequest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: userDetailResponse
+get: 
+  description: "Get information about the context or specified user's Chatter profile."
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: userDetailResponse

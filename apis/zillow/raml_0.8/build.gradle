@@ -1,0 +1,147 @@
+buildscript {
+    repositories {
+
+        maven {
+            name = "mule"
+            url = "https://repository-master.mulesoft.org/snapshots/"
+        }
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.raml:raml-parser:0.9-SNAPSHOT'
+    }
+}
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.util.HashSet;
+import java.util.List;
+
+import org.raml.model.Raml;
+import org.raml.parser.loader.FileResourceLoader;
+import org.raml.parser.loader.ResourceLoader;
+import org.raml.parser.rule.NodeRuleFactory;
+import org.raml.parser.rule.ValidationResult;
+import org.raml.parser.tagresolver.TagResolver;
+import org.raml.parser.visitor.RamlDocumentBuilder;
+import org.raml.parser.visitor.RamlDocumentValidator;
+import org.raml.parser.visitor.RamlValidationService;
+
+public class RAMLProjectVisitor {
+
+    static HashSet<String> dirToIgnore = new HashSet<String>();
+
+    static {
+        dirToIgnore.add("traits");
+        dirToIgnore.add("resourceTypes");
+        dirToIgnore.add("securitySchemes");
+    }
+    boolean isValid=true;
+
+    public void visit(File folder) {
+        File[] listFiles = folder.listFiles();
+        for (File f : listFiles) {
+            String name = f.getName();
+            if (name.endsWith(".raml")) {
+                validateRAML(f);
+            }
+            if (f.isDirectory()) {
+                if (!dirToIgnore.contains(f.getName())) {
+                    visit(f);
+                }
+            }
+        }
+    }
+
+    private void validateRAML(File f) {
+        ResourceLoader fileResourceLoader = new ResourceLoader(){
+            @Override
+            public InputStream fetchResource(String resourceName)
+            {
+
+                File includedFile = new File(f.getParentFile(), resourceName);
+                FileInputStream inputStream = null;
+                try
+                {
+                    return new FileInputStream(includedFile);
+                }
+                catch (FileNotFoundException e)
+                {
+					try
+					{
+						return new FileInputStream(resourceName);
+					}
+					catch (FileNotFoundException ex)
+					{
+					
+					}
+                    //ignore
+                }
+                return inputStream;
+            }
+        };
+        RamlValidationService createDefault = createDefault(fileResourceLoader,
+                new NodeRuleFactory());
+        try {
+            BufferedReader createReader = createFileReader(f);
+            List<ValidationResult> validate = createDefault.validate(
+                    createReader, f.getAbsolutePath());
+            // doing basic validation first
+            boolean canStartMoreAdvancedValidation = true;
+            for (ValidationResult q : validate) {
+                if (!q.isValid()) {
+                    report(f,q);
+                    canStartMoreAdvancedValidation = false;
+                }
+            }
+            if (!canStartMoreAdvancedValidation) {
+                return;
+            }
+            createReader.close();
+            RamlDocumentBuilder ramlDocumentBuilder = new RamlDocumentBuilder(
+                    fileResourceLoader);
+            createReader = createFileReader(f);
+            Raml build = ramlDocumentBuilder.build(createReader,
+                    f.getAbsolutePath());
+
+            createReader.close();
+        } catch (UnsupportedEncodingException e) {
+            throw new IllegalStateException("Should never happen");
+        } catch (FileNotFoundException e) {
+            throw new IllegalStateException("Should never happen", e);
+        } catch (IOException e) {
+            throw new IllegalStateException("IO Exception inside", e);
+        }
+    }
+
+    private BufferedReader createFileReader(File f)
+            throws UnsupportedEncodingException, FileNotFoundException {
+        return new BufferedReader(new InputStreamReader(new FileInputStream(f),
+                "UTF-8"));
+    }
+
+    private void report(File fl,ValidationResult q) {
+        isValid=false;
+        System.err.println(fl.getAbsolutePath()+" - "+q.getMessage() + ":" + q.getIncludeName()
+                + " line: " + q.getLine());
+    }
+
+    public static RamlValidationService createDefault(ResourceLoader loader,
+                                                      NodeRuleFactory nodeRuleFactory, TagResolver... tagResolvers) {
+        return new RamlValidationService(loader, new RamlDocumentValidator(
+                nodeRuleFactory), tagResolvers);
+    }
+}
+//throw new IllegalStateException("error");
+
+task testValidate {
+    def visitor = new RAMLProjectVisitor()
+    visitor.visit(projectDir);
+    if (!visitor.isValid){
+        throw new IllegalStateException("Build failed");
+    }
+}

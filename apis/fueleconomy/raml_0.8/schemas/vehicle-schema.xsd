@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="vehicle">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="atvType" type="xs:string"></xs:element>
+				<xs:element name="barrels08" type="xs:double"></xs:element>
+				<xs:element name="barrelsA08" type="xs:double"></xs:element>
+				<xs:element name="charge120" type="xs:int"></xs:element>
+				<xs:element name="charge240" type="xs:int"></xs:element>
+				<xs:element name="city08" type="xs:int"></xs:element>
+				<xs:element name="city08U" type="xs:double"></xs:element>
+				<xs:element name="cityA08" type="xs:int"></xs:element>
+				<xs:element name="cityA08U" type="xs:double"></xs:element>
+				<xs:element name="cityCD" type="xs:int"></xs:element>
+				<xs:element name="cityE" type="xs:int"></xs:element>
+				<xs:element name="cityUF" type="xs:int"></xs:element>
+				<xs:element name="co2" type="xs:int"></xs:element>
+				<xs:element name="co2A" type="xs:int"></xs:element>
+				<xs:element name="co2TailpipeAGpm" type="xs:double"></xs:element>
+				<xs:element name="co2TailpipeGpm" type="xs:double"></xs:element>
+				<xs:element name="comb08" type="xs:int"></xs:element>
+				<xs:element name="comb08U" type="xs:double"></xs:element>
+				<xs:element name="combA08" type="xs:int"></xs:element>
+				<xs:element name="combA08U" type="xs:double"></xs:element>
+				<xs:element name="combE" type="xs:int"></xs:element>
+				<xs:element name="combinedCD" type="xs:int"></xs:element>
+				<xs:element name="combinedUF" type="xs:int"></xs:element>
+				<xs:element name="cylinders" type="xs:int"></xs:element>
+				<xs:element name="displ" type="xs:double"></xs:element>
+				<xs:element name="drive" type="xs:string"></xs:element>
+				<xs:element name="emissionsList">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="emissionsInfo" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="efid" type="xs:string"></xs:element>
+										<xs:element name="id" type="xs:int"></xs:element>
+										<xs:element name="salesArea" type="xs:int"></xs:element>
+										<xs:element name="score" type="xs:int"></xs:element>
+										<xs:element name="scoreAlt" type="xs:int"></xs:element>
+										<xs:element name="smartwayScore" type="xs:int"></xs:element>
+										<xs:element name="standard" type="xs:string"></xs:element>
+										<xs:element name="stdText" type="xs:string"></xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="engId" type="xs:int"></xs:element>
+				<xs:element name="eng_dscr" type="xs:string"></xs:element>
+				<xs:element name="evMotor"></xs:element>
+				<xs:element name="feScore" type="xs:int"></xs:element>
+				<xs:element name="fuelCost08" type="xs:int"></xs:element>
+				<xs:element name="fuelCostA08" type="xs:int"></xs:element>
+				<xs:element name="fuelType" type="xs:string"></xs:element>
+				<xs:element name="fuelType1" type="xs:string"></xs:element>
+				<xs:element name="fuelType2" type="xs:string"></xs:element>
+				<xs:element name="ghgScore" type="xs:int"></xs:element>
+				<xs:element name="ghgScoreA" type="xs:int"></xs:element>
+				<xs:element name="guzzler"></xs:element>
+				<xs:element name="highway08" type="xs:int"></xs:element>
+				<xs:element name="highway08U" type="xs:double"></xs:element>
+				<xs:element name="highwayA08" type="xs:int"></xs:element>
+				<xs:element name="highwayA08U" type="xs:double"></xs:element>
+				<xs:element name="highwayCD" type="xs:int"></xs:element>
+				<xs:element name="highwayE" type="xs:int"></xs:element>
+				<xs:element name="highwayUF" type="xs:int"></xs:element>
+				<xs:element name="hlv" type="xs:int"></xs:element>
+				<xs:element name="hpv" type="xs:int"></xs:element>
+				<xs:element name="id" type="xs:int"></xs:element>
+				<xs:element name="lv2" type="xs:int"></xs:element>
+				<xs:element name="lv4" type="xs:int"></xs:element>
+				<xs:element name="make" type="xs:string"></xs:element>
+				<xs:element name="mfrCode" type="xs:string"></xs:element>
+				<xs:element name="model" type="xs:string"></xs:element>
+				<xs:element name="mpgData" type="xs:string"></xs:element>
+				<xs:element name="phevBlended" type="xs:string"></xs:element>
+				<xs:element name="pv2" type="xs:int"></xs:element>
+				<xs:element name="pv4" type="xs:int"></xs:element>
+				<xs:element name="rangeA" type="xs:int"></xs:element>
+				<xs:element name="rangeCityA" type="xs:int"></xs:element>
+				<xs:element name="rangeHwyA" type="xs:int"></xs:element>
+				<xs:element name="trans_dscr"></xs:element>
+				<xs:element name="trany" type="xs:string"></xs:element>
+				<xs:element name="UCity" type="xs:double"></xs:element>
+				<xs:element name="UCityA" type="xs:double"></xs:element>
+				<xs:element name="UHighway" type="xs:double"></xs:element>
+				<xs:element name="UHighwayA" type="xs:double"></xs:element>
+				<xs:element name="VClass" type="xs:string"></xs:element>
+				<xs:element name="year" type="xs:int"></xs:element>
+				<xs:element name="youSaveSpend" type="xs:int"></xs:element>
+				<xs:element name="sCharger"></xs:element>
+				<xs:element name="tCharger"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

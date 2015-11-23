@@ -1,0 +1,20 @@
+body: 
+  application/x-www-form-urlencoded: 
+    formParameters: 
+      since: 
+        description: The start of the date range over which you want to search. The time element is optional.
+        required: true
+      until: 
+        description: "The end of the date range over which you want to search. This should be in the same format as 'since'."
+        required: true
+      rollup: 
+        description: |
+          Possible values are 'daily', 'weekly' or 'monthly'.
+          Specifies the bucket duration for each summation.
+          Defaults to 'monthly'.
+          For example, A time window of two years (based on 'since' and 'until') with a rollup of 'monthly'
+          will result in 24 sets of data points being returned (one for each month in the span).
+        enum: 
+          - daily
+          - weekly
+          - monthly

@@ -1,0 +1,40 @@
+{
+  "createdDate" : "2013-04-02T23:44:25.000Z" ,
+  "id" : "0I5D000000002kOKAQ" ,
+  "lastUpdateDate" : "2013-04-02T23:44:25.000Z" ,
+  "requestedGroup" : {
+    "id" : "0F9D00000000lpKKAQ" ,
+    "url" : "/services/data/v34.0/chatter/groups/0F9D00000000lpKKAQ"
+  } ,
+  "responseMessage" : null ,
+  "status" : "Pending" ,
+  "url" : "/services/data/v34.0/chatter/group-membership-requests/0I5D000000002kOKAQ" ,
+  "user" : {
+    "companyName" : "Universal Containers" ,
+    "firstName" : "Gordon" ,
+    "id" : "005D0000001LLO1IAO" ,
+    "isActive" : true ,
+    "isInThisCommunity" : true ,
+    "lastName" : "Johnson" ,
+    "motif" : {
+      "color" : "1797C0" ,
+      "largeIconUrl" : "/img/icon/profile64.png" ,
+      "mediumIconUrl" : "/img/icon/profile32.png" ,
+      "smallIconUrl" : "/img/icon/profile16.png"
+    } ,
+    "mySubscription" : null ,
+    "name" : "Gordon Johnson" ,
+    "photo" : {
+      "fullEmailPhotoUrl" : "https://instance_name/ncsphoto/SqRfG_-PUTY6KtfOp_f0cPhKrC7plNhUw5eOz7Aj1u-oFL0K-ff2oe04ZAmT2MqC" ,
+      "largePhotoUrl" : "https://instance_name/profilephoto/729D00000000LJL/F" ,
+      "photoVersionId" : "729D00000000LJLIA2" ,
+      "smallPhotoUrl" : "https://instance_name/profilephoto/729D00000000LJL/T" ,
+      "standardEmailPhotoUrl" : "https://instance_name/ncsphoto/SqRfG_-PUTY6KtfOp_f0cPhKrC7plNhUw5eOz7Aj1u-6d5rE2mNaMaBZfGnFX65O" ,
+      "url" : "/services/data/v34.0/chatter/users/005D0000001LLO1IAO/photo"
+    } ,
+    "title" : "VP Sales" ,
+    "type" : "User" ,
+    "url" : "/services/data/v34.0/chatter/users/005D0000001LLO1IAO" ,
+    "userType" : "Internal"
+  }
+}

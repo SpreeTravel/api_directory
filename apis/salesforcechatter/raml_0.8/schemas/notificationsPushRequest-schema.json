@@ -1,0 +1,28 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "appName" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "namespace" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "userIds" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "string"
+        }
+      ]
+    } ,
+    "payload" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

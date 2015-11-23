@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Receipt>
+  <Date>2011-09-30</Date>
+  <Contact>
+    <Name>City Coffeeworks</Name>
+  </Contact>
+  <LineAmountTypes>Inclusive</LineAmountTypes>
+  <LineItems>
+    <LineItem>
+      <Description>Coffee with client to discuss support contract</Description>
+      <UnitAmount>13.80</UnitAmount>
+      <AccountCode>420</AccountCode>
+    </LineItem>
+  </LineItems>
+  <Total>13.80</Total>
+  <User>
+    <UserID>c81045b2-5740-4aea-bf8a-3956941af387</UserID>
+  </User>
+</Receipt>

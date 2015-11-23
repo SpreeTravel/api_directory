@@ -1,0 +1,22 @@
+head: 
+  description: People who are knowledgeable about topics. Get a list of knowledgeable people for the specified topic.
+  responses: 
+    200: 
+get: 
+  description: People who are knowledgeable about topics. Get a list of knowledgeable people for the specified topic.
+  queryParameters: 
+    page: 
+      description: An integer greater than 0 specifying a page of topics. The default value is zero.
+      type: integer
+      default: 0
+      example: 5
+    pageSize: 
+      description: Specifies the number of items per page. Valid values are between 1 and 100. The default value is 25.
+      type: integer
+      default: 25
+      example: 5
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: knowledgeablePeopleCollectionResponse

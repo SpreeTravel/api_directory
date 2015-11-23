@@ -1,0 +1,90 @@
+{
+  "type": "object",
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "blog": {
+      "type": "array",
+      "required": false,
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "categories": {
+              "type": "array",
+              "required": false,
+              "items": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+              }
+            },
+            "lang": {
+              "type": "string",
+              "required": false
+            },
+            "published": {
+              "type": "boolean",
+              "required": false
+            },
+            "title": {
+              "type": "string",
+              "required": false
+            },
+            "layout": {
+              "type": "string",
+              "required": false
+            },
+            "meta-title": {
+              "type": "string",
+              "required": false
+            },
+            "meta-description": {
+              "type": "string",
+              "required": false
+            },
+            "seo-keywords": {
+              "type": "string",
+              "required": false
+            },
+            "topics": {
+              "type": "array",
+              "required": false,
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "url": {
+              "type": "string",
+              "required": false
+            },
+            "content": {
+              "type": "string",
+              "required": false
+            },
+            "date": {
+              "type": "string",
+              "required": false
+            },
+            "tags": {
+              "type": "array",
+              "required": false,
+              "items": {
+                "type": "array"
+              }
+            },
+            "sort": {
+              "type": "number",
+              "required": false
+            }
+          }
+        }
+      }
+    }
+  }
+}

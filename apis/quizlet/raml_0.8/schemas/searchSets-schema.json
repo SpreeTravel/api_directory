@@ -1,0 +1,75 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "total_results" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "total_pages" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "image_set_count" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "page" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "sets" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "id" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "url" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "title" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "created_by" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "term_count" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "created_date" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "modified_date" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "has_images" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "subjects" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

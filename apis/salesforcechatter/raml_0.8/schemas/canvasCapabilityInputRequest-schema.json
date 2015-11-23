@@ -1,0 +1,35 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": "string",
+      "required": false
+    },
+    "developerName": {
+      "type": "string",
+      "required": false
+    },
+    "height": {
+      "type": "string",
+      "required": false
+    },
+    "namespacePrefix": {
+      "type": "string",
+      "required": false
+    },
+    "parameters": {
+      "type": "string",
+      "required": false
+    },
+    "thumbnailUrl": {
+      "type": "string",
+      "required": false
+    },
+    "title": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

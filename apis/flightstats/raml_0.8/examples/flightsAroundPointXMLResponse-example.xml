@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+	<appendix/>
+	<flightPositions>
+		<flightPosition>
+			<flightId>534373480</flightId>
+			<callsign>AVA9760</callsign>
+			<heading>199.93620899191106</heading>
+			<source>derived</source>
+			<positions>
+				<position>
+					<lon>-76.3711</lon>
+					<lat>3.5716</lat>
+					<speedMph>175</speedMph>
+					<altitudeFt>3602</altitudeFt>
+					<source>derived</source>
+					<date>2015-04-29T12:50:44.000Z</date>
+				</position>
+				<position>
+					<lon>-76.3562</lon>
+					<lat>3.6126</lat>
+					<speedMph>186</speedMph>
+					<altitudeFt>4199</altitudeFt>
+					<source>derived</source>
+					<date>2015-04-29T12:51:44.000Z</date>
+				</position>
+			</positions>
+		</flightPosition>
+	</flightPositions>
+	<request>
+		<url>https://api.flightstats.com/flex/flightstatus/rest/v2/xml/flightsNear/3.543056/-76.381389/8</url>
+		<latitude>
+			<requested>3.543056</requested>
+			<interpreted>3.543056</interpreted>
+		</latitude>
+		<longitude>
+			<requested>-76.381389</requested>
+			<interpreted>-76.381389</interpreted>
+		</longitude>
+		<radiusMiles>
+			<requested>8</requested>
+			<interpreted>8</interpreted>
+		</radiusMiles>
+		<maxFlights/>
+		<extendedOptions/>
+	</request>
+</response>

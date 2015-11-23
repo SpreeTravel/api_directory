@@ -1,0 +1,8 @@
+{
+  "@odata.id": "https://outlook.office365.com/EWS/OData/Users('sadie@contoso.com')/Calendars('AQMkAGI3...')",
+  "@odata.editLink": "https://outlook.office365.com/EWS/OData/Users('sadie@contoso.com')/Calendars('AQMkAGI3...')",
+  "Id": "AQMkAGI3...",
+  "Name": "Calendar",
+  "ChangeKey": "R9CVg8njOEeBFPLI1qvQugAAAAAI5Q==",
+  "Events@odata.navigationLink": "https://outlook.office365.com/EWS/OData/Users('sadie@contoso.com')/Calendars('AQMkAGI3...')/Events"
+}

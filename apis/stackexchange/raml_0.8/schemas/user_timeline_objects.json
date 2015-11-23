@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "array",
+  "items": {
+    "required": false,
+    "type": "object",
+    "properties": {
+      "badge_id": {
+        "required": false,
+        "type": "integer"
+      },
+      "comment_id": {
+        "required": false,
+        "type": "integer"
+      },
+      "creation_date": {
+        "required": false,
+        "type": "integer"
+      },
+      "detail": {
+        "required": false,
+        "type": "string"
+      },
+      "link": {
+        "required": false,
+        "type": "string"
+      },
+      "post_id": {
+        "required": false,
+        "type": "integer"
+      },
+      "post_type": {
+        "required": false,
+        "type": "string"
+      },
+      "suggested_edit_id": {
+        "required": false,
+        "type": "integer"
+      },
+      "timeline_type": {
+        "required": false,
+        "type": "string"
+      },
+      "title": {
+        "required": false,
+        "type": "string"
+      },
+      "user_id": {
+        "required": false,
+        "type": "integer"
+      }
+    }
+  }
+}

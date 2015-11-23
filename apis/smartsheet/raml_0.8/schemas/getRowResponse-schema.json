@@ -1,0 +1,58 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "id" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "sheetId" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "rowNumber" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "expanded" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "cells" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "value" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "displayValue" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "columnId" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    } ,
+    "createdAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "modifiedAt" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

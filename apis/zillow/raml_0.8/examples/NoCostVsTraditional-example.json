@@ -1,0 +1,33 @@
+cb({
+  "request" : {
+    "closingcosts" : "2000" ,
+    "amount" : "10000000" ,
+    "callback" : "cb" ,
+    "comparisonyears" : "50" ,
+    "output" : "json" ,
+    "terminmonths" : "360" ,
+    "taxbracket" : "15.0" ,
+    "rollfees" : "false" ,
+    "nocostrate" : "4.503" ,
+    "costofmoney" : "0.0" ,
+    "rate" : "6.504"
+  } ,
+  "message" : {
+    "text" : "Request successfully processed" ,
+    "code" : "0"
+  } ,
+  "response" : {
+    "monthlyPrincipalAndInterest" : "63233" ,
+    "monthlyPrincipalAndInterestNoCost" : "50686" ,
+    "discountedPayments" : "37939866" ,
+    "noCostDiscountedPayments" : "30411815" ,
+    "remainingPrincipal" : "0" ,
+    "noCostRemainingPrincipal" : "0" ,
+    "taxSavings" : "1914588" ,
+    "noCostTaxSavings" : "1237063" ,
+    "paidAtClose" : "2000" ,
+    "totalCost" : "36027278" ,
+    "noCostTotalCost" : "29174752" ,
+    "result" : "The no cost loan looks like it will save you $6,852,526 over the 50.00 year period."
+  }
+});

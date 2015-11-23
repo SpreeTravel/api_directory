@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "subject": {
+      "required": false,
+      "type": "string"
+    },
+    "from_email": {
+      "required": false,
+      "type": "string"
+    },
+    "from_name": {
+      "required": false,
+      "type": "string"
+    },
+    "to": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "email": {
+            "required": false,
+            "type": "string"
+          },
+          "name": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      }
+    },
+    "headers": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "Reply-To": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    },
+    "text": {
+      "required": false,
+      "type": "string"
+    },
+    "html": {
+      "required": false,
+      "type": "string"
+    },
+    "attachments": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "binary": {
+            "required": false,
+            "type": "boolean"
+          },
+          "content": {
+            "required": false,
+            "type": "string"
+          },
+          "name": {
+            "required": false,
+            "type": "string"
+          },
+          "type": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      }
+    },
+    "images": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "content": {
+            "required": false,
+            "type": "string"
+          },
+          "name": {
+            "required": false,
+            "type": "string"
+          },
+          "type": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

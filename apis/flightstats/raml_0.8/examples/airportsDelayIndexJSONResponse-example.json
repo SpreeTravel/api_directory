@@ -1,0 +1,59 @@
+{
+  "request" : {
+    "airportCodes" : [
+      {
+        "requestedCode" : "LAX" ,
+        "fsCode" : "LAX"
+      }
+    ] ,
+    "codeType" : {
+    } ,
+    "url" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/LAX" ,
+    "classification" : {
+    } ,
+    "score" : {
+    }
+  } ,
+  "delayIndexes" : [
+    {
+      "airport" : {
+        "fs" : "LAX" ,
+        "iata" : "LAX" ,
+        "icao" : "KLAX" ,
+        "faa" : "LAX" ,
+        "name" : "Los Angeles International Airport" ,
+        "street1" : "One World Way" ,
+        "street2" : "" ,
+        "city" : "Los Angeles" ,
+        "cityCode" : "LAX" ,
+        "stateCode" : "CA" ,
+        "postalCode" : "90045-5803" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Los_Angeles" ,
+        "weatherZone" : "CAZ041" ,
+        "localTime" : "2015-04-27T22:13:43.436" ,
+        "utcOffsetHours" : -7 ,
+        "latitude" : 33.943399 ,
+        "longitude" : -118.408279 ,
+        "elevationFeet" : 126 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/LAX?codeType=fs"
+      } ,
+      "rawScore" : 13.120000000000001 ,
+      "normalizedScore" : 0.25 ,
+      "dateStart" : "2015-04-28T04:00:00.000Z" ,
+      "dateEnd" : "2015-04-28T07:00:00.000Z" ,
+      "flights" : 111 ,
+      "observations" : 102 ,
+      "canceled" : 0 ,
+      "onTime" : 95 ,
+      "delayed15" : 3 ,
+      "delayed30" : 2 ,
+      "delayed45" : 2 ,
+      "delta" : -10
+    }
+  ]
+}

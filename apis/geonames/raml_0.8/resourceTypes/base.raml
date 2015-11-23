@@ -1,0 +1,27 @@
+get?: 
+  queryParameters: 
+    username: 
+      required: true
+      example: username=demo
+  responses: 
+    200: 
+      description: |
+        If a request for a geonames web service encounters an error the following exception format will be used for the returned document. GeoNames supports two flavor of web services - JSON and XML. 
+        The exception message returned is either JSON or XML and consists of a status element with a numeric error code and a message string.
+      body: 
+        application/xml: 
+post?: 
+  queryParameters: 
+    username: 
+      required: true
+  responses: 
+    200: 
+      description: |
+        If a request for a geonames web service encounters an error the following exception format will be used for the returned document. GeoNames supports two flavor of web services - JSON and XML. 
+        The exception message returned is either JSON or XML and consists of a status element with a numeric error code and a message string.
+      body: 
+        application/xml: 
+uriParameters: 
+  mediaTypeSuffix: 
+    description: empty value stands for XML
+    enum: [ JSON , "" ]

@@ -1,0 +1,31 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "@odata.type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "GivenName" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Surname" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "EmailAddress1" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "BusinessPhone1" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Birthday" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

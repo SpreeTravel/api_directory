@@ -1,0 +1,95 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "avatar" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "created_at" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "default" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "formatted_username" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "schedules" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : 
+        {
+          "type" : "object" ,
+          "properties" : {
+            "days" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : 
+                {
+                  "type" : "string"
+                }
+              
+            } ,
+            "times" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : 
+                {
+                  "type" : "string"
+                }
+              
+            }
+          }
+        }
+      
+    } ,
+    "service" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "service_id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "service_username" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "statistics" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "followers" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    } ,
+    "team_members" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : 
+        {
+          "type" : "string"
+        }
+      
+    } ,
+    "timezone" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "user_id" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

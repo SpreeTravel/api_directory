@@ -1,0 +1,16 @@
+{
+  "title": 100,
+  "album_photo": {
+    "photo_link": "photo_link",
+    "highres_link": "highres_link",
+    "thumb_link": "thumb_link",
+    "photo_id": 100
+  },
+  "updated": 100,
+  "created": 100,
+  "group_id": 100,
+  "photo_album_id": 100,
+  "ordering": 100,
+  "event_id": 100,
+  "photo_count": 100
+}

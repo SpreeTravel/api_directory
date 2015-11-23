@@ -1,0 +1,10 @@
+{
+  "value" : [
+    {
+      "PartitionKey" : "Customer" ,
+      "RowKey" : "Name" ,
+      "Timestamp" : "2013-08-22T00:20:16.3134645Z" ,
+      "CustomerSince" : "2008-10-01T15:25:05.2852025Z"
+    }
+  ]
+}

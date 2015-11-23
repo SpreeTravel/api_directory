@@ -1,0 +1,11 @@
+{
+    "service": {
+        "description": "Keystone Identity Service",
+        "id": "--service-id--",
+        "links": {
+            "self": "http://identity:5000/v3/services/--service-id--"
+        },
+        "name": "keystone",
+        "type": "identity"
+    }
+}

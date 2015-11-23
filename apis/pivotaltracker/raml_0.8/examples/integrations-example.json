@@ -1,0 +1,16 @@
+[
+  {
+    "kind" : "other_integration" ,
+    "import_api_url" : "http://localhost:3000/starwars.xml" ,
+    "id" : 30 ,
+    "project_id" : 99 ,
+    "can_import" : true ,
+    "base_url" : "http://localhost:3000" ,
+    "is_other" : true ,
+    "story_name" : "item" ,
+    "name" : "Sounder Flats Computer Complex" ,
+    "active" : true ,
+    "created_at" : "2014-08-12T12:00:00Z" ,
+    "updated_at" : "2014-08-12T12:00:00Z"
+  }
+]

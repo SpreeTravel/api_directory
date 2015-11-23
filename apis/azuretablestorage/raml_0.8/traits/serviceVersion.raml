@@ -1,0 +1,29 @@
+description: |
+  You must specify the OData data service version, using one of the following request headers:  MaxDataServiceVersion or DataServiceVersion.
+  
+  If both headers are present, precedence is given to MaxDataServiceVersion.
+headers: 
+  MaxDataServiceVersion: 
+    description: |
+      Specifies the maximum data service version.
+      |Header Value|Compatible Table Service Versions (x-ms-version Header Values)|
+      |---|---|
+      |1.0;NetFx|Any version|
+      |2.0;NetFx|2011-08-18 or later|
+      |3.0;NetFx|2013-08-15 or later|
+    enum: 
+      - 2.0;NetFx
+      - 3.0;NetFx
+      - 1.0;NetFx
+  DataServiceVersion: 
+    description: |
+      Specifies the exact data service version.
+      |Header Value|Compatible Table Service Versions (x-ms-version Header Values)|
+      |---|---|
+      |1.0;NetFx|Any version|
+      |2.0;NetFx|2011-08-18 or later|
+      |3.0;NetFx|2013-08-15 or later|
+    enum: 
+      - 2.0;NetFx
+      - 3.0;NetFx
+      - 1.0;NetFx

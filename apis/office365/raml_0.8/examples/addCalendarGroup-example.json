@@ -1,0 +1,4 @@
+{
+  "@odata.type": "#Microsoft.Exchange.Services.OData.Model.CalendarGroup",
+  "Name": <new_calendargroup_name>
+}

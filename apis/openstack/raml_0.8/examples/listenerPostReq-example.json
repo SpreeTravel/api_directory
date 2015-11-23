@@ -1,0 +1,11 @@
+{
+    "listener": {
+        "admin_state_up": true,
+        "connection_limit": 100,
+        "description": "listener one",
+        "loadbalancer_id": "a36c20d0-18e9-42ce-88fd-82a35977ee8c",
+        "name": "listener1",
+        "protocol": "HTTP",
+        "protocol_port": "80"
+    }
+}

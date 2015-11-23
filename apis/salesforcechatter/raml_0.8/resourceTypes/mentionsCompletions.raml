@@ -1,0 +1,41 @@
+head: 
+  responses: 
+    200: 
+get: 
+  queryParameters: 
+    contextId: 
+      description: A feed item ID (for a mention in a comment) or a feed subject ID (for a mention in a feed item) that narrows search results, with more useful results listed first.
+    page: 
+      description: |
+        The number of the page you want returned. Numbering starts at 0. If you pass 0 or omit the property, the first page is returned.
+        Attempting to page beyond 500 results returns an empty response.
+      type: integer
+    pageSize: 
+      description: |
+        The number of items per page. Valid values are between 1 and 100. The default size is 25.
+        Attempting to retrieve more than 500 results returns an empty response.
+      type: integer
+      default: 25
+      example: 5
+    q: 
+      description: A search term. Searches for matching user and group names. To search for a user, a minimum of 1 character is required. To search for a group, a minimum of 2 characters is required. This parameter does not support wildcards.
+      required: true
+    type: 
+      description: |
+        The type of mention completion. One of these values:
+        All—All mention completions, regardless of the type of record to which the mention refers.
+        Group—Mention completions for groups.
+        User—Mention completions for users.
+        The default value is All.
+      enum: 
+        - User
+        - All
+        - Group
+      default: All
+      example: Group
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: mentionCompletionPageResponse
+          example: !include examples/mentionsCompletionsResponse-example.json

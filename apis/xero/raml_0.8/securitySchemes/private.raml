@@ -1,0 +1,19 @@
+description: |
+  Private applications use 2 legged OAuth and bypass the user authorization workflow in the standard OAuth process. Private applications are linked to a single Xero organisation which is chosen when you register your application. Access tokens for private applications don't expire unless the application is deleted or disconnected from within the Xero organisation.
+  You can create a maximum of 2 private applications against a single Xero organisation.
+type: OAuth 1.0
+describedBy: 
+  headers: 
+    Authorization: 
+      description: |
+        Used to send a valid OAuth 2 access token. Do not use together with
+        the "access_token" query string parameter.
+  queryParameters: 
+    access_token: 
+      description: |
+        Used to send a valid OAuth 2 access token. Do not use together with
+        the "Authorization" header
+settings: 
+  requestTokenUri: https://api.xero.com/oauth/RequestToken
+  authorizationUri: https://api.xero.com/oauth/Authorize
+  tokenCredentialsUri: https://api.xero.com/oauth/AccessToken

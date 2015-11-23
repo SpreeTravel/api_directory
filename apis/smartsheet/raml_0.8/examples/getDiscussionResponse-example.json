@@ -1,0 +1,14 @@
+{
+  "title" : "This is a new discussion" ,
+  "id" : 2331373580117892 ,
+  "comments" : [
+    {
+      "id" : 2331373580117892 ,
+      "text" : "This text is the body of the discussion" ,
+      "createdBy" : {
+        "email" : "john.doe@smartsheet.com"
+      } ,
+      "modifiedDate" : "2012-07-25T00:02:42-07:00"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+    "goals":{
+        "distance":60,
+        "floors":250,
+        "steps":70000
+    }
+}

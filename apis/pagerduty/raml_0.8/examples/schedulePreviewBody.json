@@ -1,0 +1,48 @@
+{
+	"schedule" : {
+		"id" : null ,
+		"name" : "Tertiary" ,
+		"time_zone" : "Eastern Time (US & Canada)" ,
+		"schedule_layers" : [ {
+			"restriction_type" : "Daily" ,
+			"priority" : 0 ,
+			"start" : "2012-01-01T00:00:00" ,
+			"rotation_turn_length_seconds" : 604800 ,
+			"rotation_virtual_start" : "2012-01-01T00:00:00" ,
+			"users" : [ {
+				"user" : {
+					"id" : "PPSFHH7"
+				} ,
+				"member_order" : 1
+			} , {
+				"user" : {
+					"id" : "PRDFNAL"
+				} ,
+				"member_order" : 2
+			} ] ,
+			"end" : null ,
+			"id" : null ,
+			"restrictions" : [ {
+				"duration_seconds" : 43200 ,
+				"start_time_of_day" : "00:00:00"
+			} ] ,
+			"name" : "Schedule Layer 1"
+		} , {
+			"restriction_type" : null ,
+			"priority" : 1 ,
+			"start" : "2012-01-01T00:00:00" ,
+			"rotation_turn_length_seconds" : 604800 ,
+			"rotation_virtual_start" : "2012-01-01T00:00:00" ,
+			"users" : [ {
+				"user" : {
+					"id" : "PT23IWX"
+				} ,
+				"member_order" : 1
+			} ] ,
+			"end" : null ,
+			"id" : null ,
+			"restrictions" : [ ] ,
+			"name" : "Schedule Layer 2"
+		} ]
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "status" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "incident_key" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "message" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

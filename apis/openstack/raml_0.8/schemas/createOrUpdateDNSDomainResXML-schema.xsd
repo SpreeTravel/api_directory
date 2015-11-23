@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="domain_entry">
+    <xsd:complexType>
+      <xsd:sequence/>
+      <xsd:attribute name="project" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="scope" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="domain" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="availability_zone" type="xsd:normalizedString" use="required"/>
+    </xsd:complexType>
+    <xsd:attribute name="project" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="scope" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="domain" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="availability_zone" type="xsd:normalizedString" use="required"/>
+  </xsd:element>
+</xsd:schema>

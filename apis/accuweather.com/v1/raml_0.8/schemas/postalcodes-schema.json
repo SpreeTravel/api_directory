@@ -1,0 +1,217 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "array",
+  "items": {
+    "required": false,
+    "type": "object",
+    "properties": {
+      "AdministrativeArea": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "ID": {
+            "required": false,
+            "type": "string"
+          },
+          "LocalizedName": {
+            "required": false,
+            "type": "string"
+          },
+          "EnglishName": {
+            "required": false,
+            "type": "string"
+          },
+          "Level": {
+            "required": false,
+            "type": "integer"
+          },
+          "LocalizedType": {
+            "required": false,
+            "type": "string"
+          },
+          "EnglishType": {
+            "required": false,
+            "type": "string"
+          },
+          "CountryID": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      },
+      "Country": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "ID": {
+            "required": false,
+            "type": "string"
+          },
+          "LocalizedName": {
+            "required": false,
+            "type": "string"
+          },
+          "EnglishName": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      },
+      "EnglishName": {
+        "required": false,
+        "type": "string"
+      },
+      "GeoPosition": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "Latitude": {
+            "required": false,
+            "type": "number"
+          },
+          "Longitude": {
+            "required": false,
+            "type": "number"
+          },
+          "Elevation": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "Metric": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "Unit": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "UnitType": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              },
+              "Imperial": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "Unit": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "UnitType": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "IsAlias": {
+        "required": false,
+        "type": "boolean"
+      },
+      "Key": {
+        "required": false,
+        "type": "string"
+      },
+      "LocalizedName": {
+        "required": false,
+        "type": "string"
+      },
+      "PrimaryPostalCode": {
+        "required": false,
+        "type": "string"
+      },
+      "Rank": {
+        "required": false,
+        "type": "integer"
+      },
+      "Region": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "ID": {
+            "required": false,
+            "type": "string"
+          },
+          "LocalizedName": {
+            "required": false,
+            "type": "string"
+          },
+          "EnglishName": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      },
+      "SupplementalAdminAreas": {
+        "required": false,
+        "type": "array",
+        "items": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "EnglishName": {
+              "required": false,
+              "type": "string"
+            },
+            "Level": {
+              "required": false,
+              "type": "integer"
+            },
+            "LocalizedName": {
+              "required": false,
+              "type": "string"
+            }
+          }
+        }
+      },
+      "TimeZone": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "Code": {
+            "required": false,
+            "type": "string"
+          },
+          "Name": {
+            "required": false,
+            "type": "string"
+          },
+          "GmtOffset": {
+            "required": false,
+            "type": "integer"
+          },
+          "IsDaylightSaving": {
+            "required": false,
+            "type": "boolean"
+          },
+          "NextOffsetChange": {
+            "required": false,
+            "type": "null"
+          }
+        }
+      },
+      "Type": {
+        "required": false,
+        "type": "string"
+      },
+      "Version": {
+        "required": false,
+        "type": "integer"
+      }
+    }
+  }
+}

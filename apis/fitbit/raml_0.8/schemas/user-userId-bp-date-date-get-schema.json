@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "average": {
+      "type": "object",
+      "properties": {
+        "condition": {
+          "type": "string"
+        },
+        "diastolic": {
+          "type": "integer"
+        },
+        "systolic": {
+          "type": "integer"
+        }
+      }
+    },
+    "bp": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "diastolic": {
+            "type": "integer"
+          },
+          "logId": {
+            "type": "integer"
+          },
+          "systolic": {
+            "type": "integer"
+          },
+          "time": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

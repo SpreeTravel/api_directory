@@ -1,0 +1,219 @@
+description: |
+  Returns information about current hurricanes and tropical storms.
+  
+  This feature can be used with other weather API features. However, location query options do not apply to the results for currenthurricane.
+  
+  Also, if you are requesting only the currenthurricane, use the following request format:
+  
+  http://api.wunderground.com/api/Your_Key/currenthurricane/view.format
+  format - Response data format, json or xml.
+  
+  #Examples:
+  http://api.wunderground.com/api/Your_Key/currenthurricane/view.json
+  (See description of the response.)
+responses: 
+  200: 
+    description: |
+      The response will be a JSON-encoded object.
+      |name|description|
+      |-|
+      |currenthurricane|Type: array. JSON type: array. The official API documentation provides no description. |
+      |currenthurricane.item|Type: object. JSON type: object. The official API documentation provides no description. |
+      |currenthurricane.item.Current|Type: object. JSON type: object. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Category|Type: Integer. JSON type: string. -5 Remnants -4 Invest -3 Extratropical -2 Tropical Depression -1 Subtropical Storm 0 Tropical Storm 1-5 Category [Nice] Hurricane These are based on the Saffir-Simpson hurricane scale. Typhoons are classified into these bins.. |
+      |currenthurricane.item.Current.Fspeed|Type: object. JSON type: object. Forward speed of the storm. |
+      |currenthurricane.item.Current.Fspeed.Kph|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Fspeed.Kts|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Fspeed.Mph|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Movement|Type: object. JSON type: object. Forward direction and cardinal direction. |
+      |currenthurricane.item.Current.Movement.Degrees|Type: Integer. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Movement.Text|Type: String. JSON type: string. A cardinal direction. |
+      |currenthurricane.item.Current.Pressure|Type: object. JSON type: object. Minimum central pressure. |
+      |currenthurricane.item.Current.Pressure.inches|Type: Float. JSON type: number. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Pressure.mb|Type: Integer. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.SaffirSimpsonCategory|Type: Integer. JSON type: integer. -5 Remnants -4 Invest -3 Extratropical -2 Tropical Depression -1 Subtropical Storm 0 Tropical Storm 1-5 Category [Nice] Hurricane These are based on the Saffir-Simpson hurricane scale. Typhoons are classified into these bins.. |
+      |currenthurricane.item.Current.SeaQuadrants|Type: object. JSON type: object. The official API documentation provides no description. |
+      |currenthurricane.item.Current.SeaQuadrants.comment|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.SeaQuadrants.quad_1|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.SeaQuadrants.quad_2|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.SeaQuadrants.quad_3|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.SeaQuadrants.quad_4|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.SeaRadius|Type: object. JSON type: object. (distances are in nautical miles). |
+      |currenthurricane.item.Current.SeaRadius.12|Type: object. JSON type: object. The official API documentation provides no description. |
+      |currenthurricane.item.Current.SeaRadius.12.NE|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.SeaRadius.12.NW|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.SeaRadius.12.SE|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.SeaRadius.12.SW|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Time|Type: object. JSON type: object. See Time and TimeGMT. |
+      |currenthurricane.item.Current.Time.ampm|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Time.civil|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Time.epoch|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Time.hour|Type: String. JSON type: string. Descriptive string, time in the future after the current position fix. |
+      |currenthurricane.item.Current.Time.hour_padded|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Time.isdst|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Time.mday|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Time.mday_padded|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Time.mon|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Time.mon_abbrev|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Time.mon_padded|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Time.month_name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Time.month_name_abbrev|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Time.pretty|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Time.weekday_name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Time.weekday_name_abbrev|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Time.weekday_name_night|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Time.weekday_name_night_unlang|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Time.weekday_name_unlang|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Time.yday|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.Time.year|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.TimeGMT|Type: object. JSON type: object. The official API documentation provides no description. |
+      |currenthurricane.item.Current.TimeGMT.ampm|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.TimeGMT.civil|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.TimeGMT.epoch|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.TimeGMT.hour|Type: String. JSON type: string. Descriptive string, time in the future after the current position fix. |
+      |currenthurricane.item.Current.TimeGMT.hour_padded|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.TimeGMT.mday|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.TimeGMT.mday_padded|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.TimeGMT.mon|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.TimeGMT.mon_abbrev|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.TimeGMT.mon_padded|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.TimeGMT.month_name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.TimeGMT.month_name_abbrev|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.TimeGMT.pretty|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.TimeGMT.weekday_name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.TimeGMT.weekday_name_abbrev|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.TimeGMT.weekday_name_night|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.TimeGMT.weekday_name_night_unlang|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.TimeGMT.weekday_name_unlang|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.TimeGMT.yday|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.TimeGMT.year|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindGust|Type: object. JSON type: object. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindGust.Kph|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindGust.Kts|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindGust.Mph|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindQuadrants|Type: object. JSON type: object. Furthest distance from the center of the storm where winds of a certain speed can be measured. |
+      |currenthurricane.item.Current.WindQuadrants.comment|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindQuadrants.quad_1|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindQuadrants.quad_2|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindQuadrants.quad_3|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindQuadrants.quad_4|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindRadius|Type: object. JSON type: object. (speeds are in knots). |
+      |currenthurricane.item.Current.WindRadius.34|Type: object. JSON type: object. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindRadius.34.NE|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindRadius.34.NW|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindRadius.34.SE|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindRadius.34.SW|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindRadius.50|Type: object. JSON type: object. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindRadius.50.NE|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindRadius.50.NW|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindRadius.50.SE|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindRadius.50.SW|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindRadius.64|Type: object. JSON type: object. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindRadius.64.NE|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindRadius.64.NW|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindRadius.64.SE|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindRadius.64.SW|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindSpeed|Type: object. JSON type: object. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindSpeed.Kph|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindSpeed.Kts|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.WindSpeed.Mph|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.Current.lat|Type: Float. JSON type: number. Latitude in degrees -90 - 90. |
+      |currenthurricane.item.Current.lon|Type: Float. JSON type: number. Longitude in degrees -180 - 180. |
+      |currenthurricane.item.ExtendedForecast|Type: array. JSON type: array. The official API documentation provides no description. |
+      |currenthurricane.item.ExtendedForecast.item|Type: object. JSON type: object. The official API documentation provides no description. |
+      |currenthurricane.item.ExtendedForecast.item.ForecastHour|Type: String. JSON type: string. Descriptive string, time in the future after the current position fix. |
+      |currenthurricane.item.forecast|Type: String. JSON type: array. Descriptive string, time in the future after the current position fix. |
+      |currenthurricane.item.forecast.item|Type: object. JSON type: object. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.Category|Type: Integer. JSON type: string. -5 Remnants -4 Invest -3 Extratropical -2 Tropical Depression -1 Subtropical Storm 0 Tropical Storm 1-5 Category [Nice] Hurricane These are based on the Saffir-Simpson hurricane scale. Typhoons are classified into these bins.. |
+      |currenthurricane.item.forecast.item.ForecastHour|Type: String. JSON type: string. Descriptive string, time in the future after the current position fix. |
+      |currenthurricane.item.forecast.item.SaffirSimpsonCategory|Type: Integer. JSON type: integer. -5 Remnants -4 Invest -3 Extratropical -2 Tropical Depression -1 Subtropical Storm 0 Tropical Storm 1-5 Category [Nice] Hurricane These are based on the Saffir-Simpson hurricane scale. Typhoons are classified into these bins.. |
+      |currenthurricane.item.forecast.item.Time|Type: object. JSON type: object. See Time and TimeGMT. |
+      |currenthurricane.item.forecast.item.Time.ampm|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.Time.civil|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.Time.epoch|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.Time.hour|Type: String. JSON type: string. Descriptive string, time in the future after the current position fix. |
+      |currenthurricane.item.forecast.item.Time.hour_padded|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.Time.isdst|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.Time.mday|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.Time.mday_padded|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.Time.mon|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.Time.mon_abbrev|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.Time.mon_padded|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.Time.month_name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.Time.month_name_abbrev|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.Time.pretty|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.Time.weekday_name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.Time.weekday_name_abbrev|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.Time.weekday_name_night|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.Time.weekday_name_night_unlang|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.Time.weekday_name_unlang|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.Time.yday|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.Time.year|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.TimeGMT|Type: object. JSON type: object. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.TimeGMT.ampm|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.TimeGMT.civil|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.TimeGMT.epoch|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.TimeGMT.hour|Type: String. JSON type: string. Descriptive string, time in the future after the current position fix. |
+      |currenthurricane.item.forecast.item.TimeGMT.hour_padded|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.TimeGMT.mday|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.TimeGMT.mday_padded|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.TimeGMT.mon|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.TimeGMT.mon_abbrev|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.TimeGMT.mon_padded|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.TimeGMT.month_name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.TimeGMT.month_name_abbrev|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.TimeGMT.pretty|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.TimeGMT.weekday_name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.TimeGMT.weekday_name_abbrev|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.TimeGMT.weekday_name_night|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.TimeGMT.weekday_name_night_unlang|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.TimeGMT.weekday_name_unlang|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.TimeGMT.yday|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.TimeGMT.year|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindGust|Type: object. JSON type: object. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindGust.Kph|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindGust.Kts|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindGust.Mph|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindQuadrants|Type: object. JSON type: object. Furthest distance from the center of the storm where winds of a certain speed can be measured. |
+      |currenthurricane.item.forecast.item.WindQuadrants.comment|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindQuadrants.quad_1|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindQuadrants.quad_2|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindQuadrants.quad_3|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindQuadrants.quad_4|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindRadius|Type: object. JSON type: object. (speeds are in knots). |
+      |currenthurricane.item.forecast.item.WindRadius.34|Type: object. JSON type: object. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindRadius.34.NE|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindRadius.34.NW|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindRadius.34.SE|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindRadius.34.SW|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindRadius.50|Type: object. JSON type: object. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindRadius.50.NE|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindRadius.50.NW|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindRadius.50.SE|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindRadius.50.SW|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindRadius.64|Type: object. JSON type: object. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindRadius.64.NE|Type: unknown. JSON type: null. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindRadius.64.NW|Type: unknown. JSON type: null. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindRadius.64.SE|Type: unknown. JSON type: null. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindRadius.64.SW|Type: unknown. JSON type: null. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindSpeed|Type: object. JSON type: object. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindSpeed.Kph|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindSpeed.Kts|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.WindSpeed.Mph|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |currenthurricane.item.forecast.item.lat|Type: Float. JSON type: number. Latitude in degrees -90 - 90. |
+      |currenthurricane.item.forecast.item.lon|Type: Float. JSON type: number. Longitude in degrees -180 - 180. |
+      |currenthurricane.item.stormInfo|Type: object. JSON type: object. The official API documentation provides no description. |
+      |currenthurricane.item.stormInfo.stormName|Type: string. JSON type: string. Just the name. |
+      |currenthurricane.item.stormInfo.stormName_Nice|Type: string. JSON type: string. Name prefixed by the type of the storm. |
+      |currenthurricane.item.stormInfo.stormNumber|Type: string. JSON type: string. ID of the storm, useful for checking other tropical products: 8 characters with 2 letter basin id (at ep wp ni si). |
+      |currenthurricane.item.track|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |response|Type: object. JSON type: object. The official API documentation provides no description. |
+      |response.features|Type: object. JSON type: object. The official API documentation provides no description. |
+      |response.features.currenthurricane|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |response.termsofService|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |response.version|Type: unknown. JSON type: string. The official API documentation provides no description. |
+    body: 
+      application/json: 
+        schema: currenthurricaneSchema
+        example: !include ../examples/currenthurricane.json
+      application/xml: 

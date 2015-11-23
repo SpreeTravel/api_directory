@@ -1,0 +1,33 @@
+cb({
+  "request" : {
+    "price" : "300000" ,
+    "down" : "15" ,
+    "zip" : "98104" ,
+    "output" : "json" ,
+    "callback" : "cb"
+  } ,
+  "message" : {
+    "text" : "Request successfully processed" ,
+    "code" : "0"
+  } ,
+  "response" : {
+    "thirtyYearFixed" : {
+      "rate" : "0.0" ,
+      "monthlyPrincipalAndInterest" : "0" ,
+      "monthlyMortgageInsurance" : "68"
+    } ,
+    "fifteenYearFixed" : {
+      "rate" : "0.0" ,
+      "monthlyPrincipalAndInterest" : "0" ,
+      "monthlyMortgageInsurance" : "68"
+    } ,
+    "fiveOneARM" : {
+      "rate" : "0.0" ,
+      "monthlyPrincipalAndInterest" : "0" ,
+      "monthlyMortgageInsurance" : "70"
+    } ,
+    "downPayment" : "45000" ,
+    "monthlyPropertyTaxes" : "20" ,
+    "monthlyHazardInsurance" : "49"
+  }
+});

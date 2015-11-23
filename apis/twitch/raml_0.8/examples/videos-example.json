@@ -1,0 +1,45 @@
+{
+  "_links" : {
+    "next" : "https://api.twitch.tv/kraken/videos/top?game=League+of+Legends&limit=10&offset=10&period=month" ,
+    "self" : "https://api.twitch.tv/kraken/videos/top?game=League+of+Legends&limit=10&offset=0&period=month"
+  } ,
+  "videos" : [
+    {
+      "recorded_at" : "2013-03-13T09:51:31Z" ,
+      "preview" : "http://static-cdn.jtvnw.net/jtv.thumbs/archive-377199700-320x240.jpg" ,
+      "description" : "dat trist jump" ,
+      "url" : "http://www.twitch.tv/chaoxlol/c/2023831" ,
+      "title" : "Almost the great escape" ,
+      "channel" : {
+        "name" : "chaoxlol" ,
+        "display_name" : "chaoxlol"
+      } ,
+      "length" : 71 ,
+      "game" : "League of Legends" ,
+      "views" : 66436 ,
+      "_id" : "c2023831" ,
+      "_links" : {
+        "channel" : "https://api.twitch.tv/kraken/channels/chaoxlol" ,
+        "self" : "https://api.twitch.tv/kraken/videos/c2023831"
+      }
+    } , {
+      "recorded_at" : "2013-03-13T09:51:31Z" ,
+      "preview" : "http://static-cdn.jtvnw.net/jtv.thumbs/archive-377199700-320x240.jpg" ,
+      "description" : "dat trist jump" ,
+      "url" : "http://www.twitch.tv/chaoxlol/c/2023831" ,
+      "title" : "Almost the great escape" ,
+      "channel" : {
+        "name" : "chaoxlol" ,
+        "display_name" : "chaoxlol"
+      } ,
+      "length" : 71 ,
+      "game" : "League of Legends" ,
+      "views" : 66436 ,
+      "_id" : "c2023831" ,
+      "_links" : {
+        "channel" : "https://api.twitch.tv/kraken/channels/chaoxlol" ,
+        "self" : "https://api.twitch.tv/kraken/videos/c2023831"
+      }
+    }
+  ]
+}

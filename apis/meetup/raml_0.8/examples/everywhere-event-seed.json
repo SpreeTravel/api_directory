@@ -1,0 +1,15 @@
+{
+  "local_time": 100,
+  "id": 100,
+  "short_description": "short_description",
+  "updated": 100,
+  "udf_{varname}": "udf_{varname}",
+  "status": "status",
+  "created": 100,
+  "description": "description",
+  "container": {
+    "id": 100,
+    "name": "name",
+    "urlname": "urlname"
+  }
+}

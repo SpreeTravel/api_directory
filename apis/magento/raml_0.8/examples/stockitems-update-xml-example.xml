@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<magento_api>
+  <success>
+    <data_item>
+      <message>Resource updated successful.</message>
+      <code>200</code>
+      <item_id>157</item_id>
+    </data_item>
+  </success>
+  <error>
+    <data_item>
+      <message>Resource not found.</message>
+      <code>404</code>
+      <item_id>158</item_id>
+    </data_item>
+    <data_item>
+      <message>Resource not found.</message>
+      <code>404</code>
+      <item_id>159</item_id>
+    </data_item>
+    <data_item>
+      <message>Empty value for "product_id" in request.</message>
+      <code>400</code>
+      <item_id>153</item_id>
+    </data_item>
+  </error>
+</magento_api>

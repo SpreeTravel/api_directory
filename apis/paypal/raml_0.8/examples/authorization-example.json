@@ -1,0 +1,25 @@
+{
+  "id" : "6CR34526N64144512" ,
+  "create_time" : "2013-05-06T21:56:50Z" ,
+  "update_time" : "2013-05-06T21:57:51Z" ,
+  "state" : "voided" ,
+  "amount" : {
+    "total" : "110.54" ,
+    "currency" : "USD" ,
+    "details" : {
+      "subtotal" : "110.54"
+    }
+  } ,
+  "parent_payment" : "PAY-0PL82432AD7432233KGECOIQ" ,
+  "links" : [
+    {
+      "href" : "https://api.sandbox.paypal.com/v1/payments/authorization/6CR34526N64144512" ,
+      "rel" : "self" ,
+      "method" : "GET"
+    } , {
+      "href" : "https://api.sandbox.paypal.com/v1/payments/payment/PAY-0PL82432AD7432233KGECOIQ" ,
+      "rel" : "parent_payment" ,
+      "method" : "GET"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "firstName" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "lastName" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "email" : {
+      "type" : "string" ,
+      "required" : true
+    } ,
+    "admin" : {
+      "type" : "boolean" ,
+      "required" : true
+    } ,
+    "licensedSheetCreator" : {
+      "type" : "boolean" ,
+      "required" : true
+    }
+  }
+}

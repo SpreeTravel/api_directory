@@ -1,0 +1,8 @@
+{
+  "message" : "SUCCESS" ,
+  "result" : {
+    "admin" : true ,
+    "licensedSheetCreator" : true
+  } ,
+  "resultCode" : 0
+}

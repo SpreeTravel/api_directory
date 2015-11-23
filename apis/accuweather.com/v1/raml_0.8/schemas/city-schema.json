@@ -1,0 +1,205 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "Version": {
+      "required": false,
+      "type": "integer"
+    },
+    "Key": {
+      "required": false,
+      "type": "string"
+    },
+    "Type": {
+      "required": false,
+      "type": "string"
+    },
+    "Rank": {
+      "required": false,
+      "type": "integer"
+    },
+    "LocalizedName": {
+      "required": false,
+      "type": "string"
+    },
+    "EnglishName": {
+      "required": false,
+      "type": "string"
+    },
+    "PrimaryPostalCode": {
+      "required": false,
+      "type": "string"
+    },
+    "Region": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "ID": {
+          "required": false,
+          "type": "string"
+        },
+        "LocalizedName": {
+          "required": false,
+          "type": "string"
+        },
+        "EnglishName": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    },
+    "Country": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "ID": {
+          "required": false,
+          "type": "string"
+        },
+        "LocalizedName": {
+          "required": false,
+          "type": "string"
+        },
+        "EnglishName": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    },
+    "AdministrativeArea": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "ID": {
+          "required": false,
+          "type": "string"
+        },
+        "LocalizedName": {
+          "required": false,
+          "type": "string"
+        },
+        "EnglishName": {
+          "required": false,
+          "type": "string"
+        },
+        "Level": {
+          "required": false,
+          "type": "integer"
+        },
+        "LocalizedType": {
+          "required": false,
+          "type": "string"
+        },
+        "EnglishType": {
+          "required": false,
+          "type": "string"
+        },
+        "CountryID": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    },
+    "TimeZone": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "Code": {
+          "required": false,
+          "type": "string"
+        },
+        "Name": {
+          "required": false,
+          "type": "string"
+        },
+        "GmtOffset": {
+          "required": false,
+          "type": "integer"
+        },
+        "IsDaylightSaving": {
+          "required": false,
+          "type": "boolean"
+        },
+        "NextOffsetChange": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    },
+    "GeoPosition": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "Latitude": {
+          "required": false,
+          "type": "number"
+        },
+        "Longitude": {
+          "required": false,
+          "type": "number"
+        },
+        "Elevation": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "Metric": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "Value": {
+                  "required": false,
+                  "type": "number"
+                },
+                "Unit": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "Imperial": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "Value": {
+                  "required": false,
+                  "type": "integer"
+                },
+                "Unit": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "IsAlias": {
+      "required": false,
+      "type": "boolean"
+    },
+    "SupplementalAdminAreas": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "EnglishName": {
+            "required": false,
+            "type": "string"
+          },
+          "Level": {
+            "required": false,
+            "type": "integer"
+          },
+          "LocalizedName": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

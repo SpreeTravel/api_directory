@@ -1,0 +1,29 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "backup" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "container" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "description" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "volume_id" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "listpoolCreditsAvailable": {
+      "type": "integer",
+      "required": false
+    },
+    "listpoolCreditsUsed": {
+      "type": "integer",
+      "required": false
+    },
+    "monthlyCreditsAvailable": {
+      "type": "integer",
+      "required": false
+    },
+    "monthlyCreditsUsed": {
+      "type": "integer",
+      "required": false
+    }
+  }
+}

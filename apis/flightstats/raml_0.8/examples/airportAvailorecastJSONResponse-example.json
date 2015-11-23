@@ -1,0 +1,200 @@
+{
+  "request" : {
+    "url" : "https://api.flightstats.com/flex/weather/rest/v1/json/zf/ORD" ,
+    "airport" : {
+      "requestedCode" : "ORD" ,
+      "fsCode" : "ORD"
+    } ,
+    "codeType" : {
+    }
+  } ,
+  "zoneForecast" : {
+    "header" : "COOK-INCLUDING THE OF...CHICAGO    850 PM CDT MON APR 27 2015" ,
+    "general" : "Expires:201504281615;;912780    FPUS53 KLOT 280150    ZFPLOT    ZONE FORECAST PRODUCT    NATIONAL WEATHER SERVICE CHICAGO/ROMEOVILLE IL    850 PM CDT MON APR 27 2015" ,
+    "zones" : [
+      "ILZ014"
+    ] ,
+    "reportTime" : "2015-04-27T20:50:00.000-05:00" ,
+    "cities" : [
+      "Chicago"
+    ] ,
+    "zoneNames" : [
+      "Cook"
+    ] ,
+    "dayForecasts" : [
+      {
+        "day" : "Rest Of Tonight" ,
+        "forecast" : "Clear. Patchy frost outlying areas after midnight. Lows in the mid 30s in the suburbs...but around 40 downtown. North winds 5 to 10 mph." ,
+        "start" : "2015-04-27T20:50:00.000" ,
+        "end" : "2015-04-28T06:00:00.000" ,
+        "tags" : [
+          {
+            "key" : "Prevailing Conditions" ,
+            "value" : "Clear"
+          }
+        ]
+      } , {
+        "day" : "Tuesday" ,
+        "forecast" : "Sunny. Highs in the upper 50s inland...but only in the lower 50s near the lake. Northeast winds 10 to 15 mph." ,
+        "start" : "2015-04-28T06:00:00.000" ,
+        "end" : "2015-04-28T18:00:00.000" ,
+        "tags" : [
+          {
+            "key" : "Prevailing Conditions" ,
+            "value" : "Sunny"
+          }
+        ]
+      } , {
+        "day" : "Tuesday Night" ,
+        "forecast" : "Mostly clear. Lows in the upper 30s. North winds 5 to 10 mph." ,
+        "start" : "2015-04-28T18:00:00.000" ,
+        "end" : "2015-04-29T06:00:00.000" ,
+        "tags" : [
+          {
+            "key" : "Prevailing Conditions" ,
+            "value" : "Mostly Clear"
+          }
+        ]
+      } , {
+        "day" : "Wednesday" ,
+        "forecast" : "Partly cloudy. Highs in the lower 60s inland...but only in the lower 50s near the lake. North winds 10 to 15 mph." ,
+        "start" : "2015-04-29T06:00:00.000" ,
+        "end" : "2015-04-29T18:00:00.000" ,
+        "tags" : [
+          {
+            "key" : "Prevailing Conditions" ,
+            "value" : "Partly Cloudy"
+          }
+        ]
+      } , {
+        "day" : "Wednesday Night" ,
+        "forecast" : "Partly cloudy. Lows around 40. North winds 10 to 15 mph." ,
+        "start" : "2015-04-29T18:00:00.000" ,
+        "end" : "2015-04-30T06:00:00.000" ,
+        "tags" : [
+          {
+            "key" : "Prevailing Conditions" ,
+            "value" : "Partly Cloudy"
+          }
+        ]
+      } , {
+        "day" : "Thursday" ,
+        "forecast" : "Partly cloudy. Highs in the mid 50s inland...but only around 50 near the lake." ,
+        "start" : "2015-04-30T06:00:00.000" ,
+        "end" : "2015-04-30T18:00:00.000" ,
+        "tags" : [
+          {
+            "key" : "Prevailing Conditions" ,
+            "value" : "Partly Cloudy"
+          }
+        ]
+      } , {
+        "day" : "Thursday Night" ,
+        "forecast" : "Mostly clear. Lows in the lower 40s. " ,
+        "start" : "2015-04-30T18:00:00.000" ,
+        "end" : "2015-05-01T06:00:00.000" ,
+        "tags" : [
+          {
+            "key" : "Prevailing Conditions" ,
+            "value" : "Mostly Clear"
+          }
+        ]
+      } , {
+        "day" : "Friday" ,
+        "forecast" : "Mostly sunny. Highs in the mid 60s inland...but only in the mid 50s near the lake." ,
+        "start" : "2015-05-01T06:00:00.000" ,
+        "end" : "2015-05-01T18:00:00.000" ,
+        "tags" : [
+          {
+            "key" : "Prevailing Conditions" ,
+            "value" : "Sunny"
+          }
+        ]
+      } , {
+        "day" : "Friday Night" ,
+        "forecast" : "Partly cloudy. Lows in the upper 40s. " ,
+        "start" : "2015-05-01T18:00:00.000" ,
+        "end" : "2015-05-02T06:00:00.000" ,
+        "tags" : [
+          {
+            "key" : "Prevailing Conditions" ,
+            "value" : "Partly Cloudy"
+          }
+        ]
+      } , {
+        "day" : "Saturday And Saturday Night" ,
+        "forecast" : "Partly cloudy. Highs in the mid 70s. Lows around 50." ,
+        "start" : "2015-05-02T06:00:00.000" ,
+        "end" : "2015-05-03T06:00:00.000" ,
+        "tags" : [
+          {
+            "key" : "Prevailing Conditions" ,
+            "value" : "Partly Cloudy"
+          }
+        ]
+      } , {
+        "day" : "Sunday" ,
+        "forecast" : "Partly sunny with a 30 percent chance of showers and thunderstorms. Highs in the mid 70s inland...but only in the mid to upper 60s near the lake." ,
+        "start" : "2015-05-03T06:00:00.000" ,
+        "end" : "2015-05-03T18:00:00.000" ,
+        "tags" : [
+          {
+            "key" : "Prevailing Conditions" ,
+            "value" : "Thunderstorms"
+          }
+        ]
+      } , {
+        "day" : "Sunday Night" ,
+        "forecast" : "Mostly cloudy with a 50 percent chance of showers and thunderstorms. Lows in the upper 50s." ,
+        "start" : "2015-05-03T18:00:00.000" ,
+        "end" : "2015-05-04T06:00:00.000" ,
+        "tags" : [
+          {
+            "key" : "Prevailing Conditions" ,
+            "value" : "Thunderstorms"
+          }
+        ]
+      } , {
+        "day" : "Monday" ,
+        "forecast" : "Mostly cloudy with a 40 percent chance of showers and thunderstorms. Highs in the upper 70s." ,
+        "start" : "2015-04-27T20:50:00.000" ,
+        "end" : "2015-04-27T18:00:00.000" ,
+        "tags" : [
+          {
+            "key" : "Prevailing Conditions" ,
+            "value" : "Thunderstorms"
+          }
+        ]
+      }
+    ]
+  } ,
+  "appendix" : {
+    "airports" : [
+      {
+        "fs" : "ORD" ,
+        "iata" : "ORD" ,
+        "icao" : "KORD" ,
+        "faa" : "ORD" ,
+        "name" : "O'Hare International Airport" ,
+        "street1" : "10000 West O'Hare" ,
+        "city" : "Chicago" ,
+        "cityCode" : "CHI" ,
+        "stateCode" : "IL" ,
+        "postalCode" : "60666" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Chicago" ,
+        "weatherZone" : "ILZ014" ,
+        "localTime" : "2015-04-28T03:27:13.155" ,
+        "utcOffsetHours" : -5 ,
+        "latitude" : 41.976912 ,
+        "longitude" : -87.904876 ,
+        "elevationFeet" : 668 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/ORD?codeType=fs"
+      }
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+<menuItems>
+<menuItem>
+<text>Accord</text>
+<value>Accord</value>
+</menuItem>
+<menuItem>
+<text>Accord Coupe</text>
+<value>Accord Coupe</value>
+</menuItem>
+<menuItem>
+<text>Civic</text>
+<value>Civic</value>
+</menuItem>
+<menuItem>
+<text>Civic HF</text>
+<value>Civic HF</value>
+</menuItem>
+<menuItem>
+<text>Civic Hybrid</text>
+<value>Civic Hybrid</value>
+</menuItem>
+<menuItem>
+<text>Civic Natural Gas</text>
+<value>Civic Natural Gas</value>
+</menuItem>
+<menuItem>
+<text>CR-V 2WD</text>
+<value>CR-V 2WD</value>
+</menuItem>
+<menuItem>
+<text>CR-V 4WD</text>
+<value>CR-V 4WD</value>
+</menuItem>
+<menuItem>
+<text>CR-Z</text>
+<value>CR-Z</value>
+</menuItem>
+<menuItem>
+<text>Crosstour 2WD</text>
+<value>Crosstour 2WD</value>
+</menuItem>
+<menuItem>
+<text>Crosstour 4WD</text>
+<value>Crosstour 4WD</value>
+</menuItem>
+<menuItem>
+<text>Fit</text>
+<value>Fit</value>
+</menuItem>
+<menuItem>
+<text>Insight</text>
+<value>Insight</value>
+</menuItem>
+<menuItem>
+<text>Odyssey</text>
+<value>Odyssey</value>
+</menuItem>
+<menuItem>
+<text>Pilot 2WD</text>
+<value>Pilot 2WD</value>
+</menuItem>
+<menuItem>
+<text>Pilot 4WD</text>
+<value>Pilot 4WD</value>
+</menuItem>
+<menuItem>
+<text>Ridgeline Truck 4WD</text>
+<value>Ridgeline Truck 4WD</value>
+</menuItem>
+</menuItems>

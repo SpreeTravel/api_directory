@@ -1,0 +1,84 @@
+{
+  "request" : {
+    "url" : "https://api.flightstats.com/flex/weather/rest/v1/json/metar/ORD" ,
+    "airport" : {
+      "requestedCode" : "ORD" ,
+      "fsCode" : "ORD"
+    } ,
+    "codeType" : {
+    }
+  } ,
+  "metar" : {
+    "report" : "KORD 280651Z 00000KT 10SM CLR 04/01 A3013 RMK AO2 SLP204 T00390006" ,
+    "reportTime" : "2015-04-28T06:51:00.000Z" ,
+    "weatherStationIcao" : "KORD" ,
+    "tags" : [
+      {
+        "key" : "Freezing" ,
+        "value" : "4"
+      } , {
+        "key" : "Instrumentation" ,
+        "value" : "VFR"
+      } , {
+        "key" : "Prevailing Conditions" ,
+        "value" : "Clear"
+      }
+    ] ,
+    "conditions" : {
+      "wind" : {
+        "direction" : 0 ,
+        "directionIsVariable" : false ,
+        "speedKnots" : "0.00"
+      } ,
+      "visibility" : {
+        "miles" : "10.00" ,
+        "lessThan" : false ,
+        "cavok" : false
+      } ,
+      "weatherConditions" : [
+      ] ,
+      "skyConditions" : [
+        {
+          "coverage" : "Clear"
+        }
+      ] ,
+      "pressureInchesHg" : "30.13"
+    } ,
+    "temperatureCelsius" : "3.90" ,
+    "dewPointCelsius" : "0.60" ,
+    "runwayVisualRanges" : [
+    ] ,
+    "obscurations" : [
+    ] ,
+    "noSignificantChange" : false
+  } ,
+  "appendix" : {
+    "airports" : [
+      {
+        "fs" : "ORD" ,
+        "iata" : "ORD" ,
+        "icao" : "KORD" ,
+        "faa" : "ORD" ,
+        "name" : "O'Hare International Airport" ,
+        "street1" : "10000 West O'Hare" ,
+        "city" : "Chicago" ,
+        "cityCode" : "CHI" ,
+        "stateCode" : "IL" ,
+        "postalCode" : "60666" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Chicago" ,
+        "weatherZone" : "ILZ014" ,
+        "localTime" : "2015-04-28T03:10:04.885" ,
+        "utcOffsetHours" : -5 ,
+        "latitude" : 41.976912 ,
+        "longitude" : -87.904876 ,
+        "elevationFeet" : 668 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/ORD?codeType=fs"
+      }
+    ]
+  }
+}

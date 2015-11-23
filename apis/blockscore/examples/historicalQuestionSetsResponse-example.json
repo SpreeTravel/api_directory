@@ -1,0 +1,31 @@
+{
+  "total_count": 5,
+  "has_more": false,
+  "object": "list",
+  "data": [
+    {
+      "object": "question_set",
+      "id": "533ce7e5627463792f010000",
+      "created_at": 1402450269,
+      "updated_at": 1403742375,
+      "livemode": false,
+      "person_id": "530c48b2627463452b570000",
+      "score": 60.0,
+      "expired": false,
+      "time_limit": 300,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Which of these people do you know?",
+          "answers": [
+            { "id": 1, "answer": "Alain" },
+            { "id": 2, "answer": "John" },
+            { "id": 3, "answer": "Chris" },
+            { "id": 4, "answer": "Connor" },
+            { "id": 5, "answer": "None Of The Above" }
+          ]
+        }
+      ]
+    }
+  ]
+}

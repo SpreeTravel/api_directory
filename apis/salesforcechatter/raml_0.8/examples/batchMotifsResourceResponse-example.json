@@ -1,0 +1,21 @@
+{
+  "results" : [
+    {
+      "result" : {
+        "color" : "1797C0" ,
+        "largeIconUrl" : "/img/icon/profile64.png" ,
+        "mediumIconUrl" : "/img/icon/profile32.png" ,
+        "smallIconUrl" : "/img/icon/profile16.png"
+      } ,
+      "statusCode" : 200
+    } , {
+      "result" : {
+        "color" : "993333" ,
+        "largeIconUrl" : "/img/content/content64.png" ,
+        "mediumIconUrl" : "/img/content/content32.png" ,
+        "smallIconUrl" : "/img/icon/files16.png"
+      } ,
+      "statusCode" : 200
+    }
+  ]
+}

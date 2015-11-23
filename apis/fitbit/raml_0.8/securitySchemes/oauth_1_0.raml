@@ -1,0 +1,11 @@
+#%RAML 0.8
+---
+description: |
+  The Fitbit API uses OAuth Authentication as described in The OAuth 1.0 Protocol
+  (draft-hammer-oauth-10). OAuth is an open protocol for clients of the Fitbi
+  API to access Fitbit content on behalf of a Fitbit user.
+type: OAuth 1.0
+settings:
+  requestTokenUri: https://api.fitbit.com/oauth/request_token
+  authorizationUri: http://www.fitbit.com/oauth/authorize
+  tokenCredentialsUri: https://api.fitbit.com/oauth/access_token

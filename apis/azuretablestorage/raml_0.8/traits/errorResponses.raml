@@ -1,0 +1,179 @@
+responses: 
+  409: 
+    description: |
+      Conflict
+      
+      Table Service specific errors:
+      |Error code|UserMessage|
+      |---|---|
+      |EntityAlreadyExists|The specified entity already exists.|
+      |TableAlreadyExists|The table specified already exists.|
+      |TableBeingDeleted|The specified table is being deleted.|
+      
+      Common errors:
+      |Error code|UserMessage|
+      |---|---|
+      |AccountAlreadyExists|The specified account already exists.|
+      |AccountBeingCreated|The specified account is in the process of being created.|
+  503: 
+    description: |
+      Service Unavailable
+      
+      Common errors:
+      |Error code|UserMessage|
+      |---|---|
+      |ServerBusy|The server is currently unable to receive requests. Please retry your request.|
+  404: 
+    description: |
+      Not Found
+      
+      Table Service specific errors:
+      |Error code|UserMessage|
+      |---|---|
+      |TableNotFound|The table specified does not exist.|
+      
+      Common errors:
+      |Error code|UserMessage|
+      |---|---|
+      |ResourceNotFound|The specified resource does not exist.|
+  400: 
+    description: |
+      Bad Request
+      
+      Table Service specific errors:
+      |Error code|UserMessage|
+      |---|---|
+      |DuplicatePropertiesSpecified|A property is specified more than one time.|
+      |EntityTooLarge|The entity is larger than the maximum size permitted.|
+      |HostInformationNotPresent|The required host information is not present in the request. You must send a non-empty Host header or include the absolute URI in the request line.|
+      |InvalidValueType|The value specified is invalid.|
+      |PropertiesNeedValue|Values have not been specified for all properties in the entity.|
+      |PropertyNameInvalid|The property name is invalid.|
+      |PropertyNameTooLong|The property name exceeds the maximum allowed length.|
+      |PropertyValueTooLarge|The property value is larger than the maximum size permitted.|
+      |TooManyProperties|The entity contains more properties than allowed.|
+      |XMethodIncorrectCount|More than one X-HTTP-Method is specified.|
+      |XMethodIncorrectValue|The specified X-HTTP-Method is invalid.|
+      |XMethodNotUsingPost|The request uses X-HTTP-Method with an HTTP verb other than POST.|
+      
+      Common errors:
+      |Error code|UserMessage|
+      |---|---|
+      |MissingRequiredHeader|A required HTTP header was not specified.|
+      |MissingRequiredXmlNode|A required XML node was not specified in the request body.|
+      |UnsupportedHeader|One of the HTTP headers specified in the request is not supported.|
+      |UnsupportedXmlNode|One of the XML nodes specified in the request body is not supported.|
+      |InvalidHeaderValue|The value provided for one of the HTTP headers was not in the correct format.|
+      |InvalidXmlNodeValue|The value provided for one of the XML nodes in the request body was not in the correct format.|
+      |MissingRequiredQueryParameter|A required query parameter was not specified for this request.|
+      |UnsupportedQueryParameter|One of the query parameters specified in the request URI is not supported.|
+      |InvalidQueryParameterValue|An invalid value was specified for one of the query parameters in the request URI.|
+      |OutOfRangeQueryParameterValue|A query parameter specified in the request URI is outside the permissible range.|
+      |RequestUrlFailedToParse|The url in the request could not be parsed.|
+      |InvalidUri|The requested URI does not represent any resource on the server.|
+      |InvalidHttpVerb|The HTTP verb specified was not recognized by the server.|
+      |EmptyMetadataKey|The key for one of the metadata key-value pairs is empty.|
+      |InvalidXmlDocument|The specified XML is not syntactically valid.|
+      |Md5Mismatch|The MD5 value specified in the request did not match the MD5 value calculated by the server.|
+      |InvalidMd5|The MD5 value specified in the request is invalid. The MD5 value must be 128 bits and Base64-encoded.|
+      |OutOfRangeInput|One of the request inputs is out of range.|
+      |InvalidAuthenticationInfo|The authentication information was not provided in the correct format. Verify the value of Authorization header.|
+      |InvalidInput|One of the request inputs is not valid.|
+      |InvalidMetadata|The specified metadata is invalid. It includes characters that are not permitted.|
+      |MetadataTooLarge|The size of the specified metadata exceeds the maximum size permitted.|
+  403: 
+    description: |
+      Forbidden
+      
+      Common errors:
+      |Error code|UserMessage|
+      |---|---|
+      |AuthenticationFailed|Server failed to authenticate the request. Make sure the value of the Authorization header is formed correctly including the signature.|
+      |InsufficientAccountPermissions|Read-access geo-redundant replication is not enabled for the account.|
+      |InsufficientAccountPermissions|Write operations to the secondary location are not allowed.|
+      |AccountIsDisabled|The specified account is disabled.|
+      |InsufficientAccountPermissions|The account being accessed does not have sufficient permissions to execute this operation.|
+  500: 
+    description: |
+      Internal Server Error
+      
+      Common errors:
+      |Error code|UserMessage|
+      |---|---|
+      |InternalError|The server encountered an internal error. Please retry the request.|
+      |OperationTimedOut|The operation could not be completed within the permitted time.|
+  304: 
+    description: |
+      Not Modified
+      
+      Common errors:
+      |Error code|UserMessage|
+      |---|---|
+      |ConditionNotMet|The condition specified in the conditional header(s) was not met for a read operation.|
+  405: 
+    description: |
+      Method Not Allowed
+      
+      Table Service specific errors:
+      |Error code|UserMessage|
+      |---|---|
+      |MethodNotAllowed|The requested method is not allowed on the specified resource.|
+      
+      Common errors:
+      |Error code|UserMessage|
+      |---|---|
+      |UnsupportedHttpVerb|The resource doesn't support the specified HTTP verb.|
+  411: 
+    description: |
+      Length Required
+      
+      Common errors:
+      |Error code|UserMessage|
+      |---|---|
+      |MissingContentLengthHeader|The Content-Length header was not specified.|
+  412: 
+    description: |
+      Precondition Failed
+      
+      Table Service specific errors:
+      |Error code|UserMessage|
+      |---|---|
+      |UpdateConditionNotSatisfied|The update condition specified in the request was not satisfied.|
+      
+      Common errors:
+      |Error code|UserMessage|
+      |---|---|
+      |ConditionNotMet|The condition specified in the conditional header(s) was not met for a write operation.|
+  413: 
+    description: |
+      RequestBodyTooLarge
+      
+      Common errors:
+      |Error code|UserMessage|
+      |---|---|
+      |RequestBodyTooLarge|The size of the request body exceeds the maximum size permitted.|
+  416: 
+    description: |
+      Requested Range Not Satisfiable
+      
+      Common errors:
+      |Error code|UserMessage|
+      |---|---|
+      |InvalidRange|The range specified is invalid for the current size of the resource.|
+  501: 
+    description: |
+      Not Implemented
+      
+      Table Service specific errors:
+      |Error code|UserMessage|
+      |---|---|
+      |NotImplemented|The requested operation is not implemented on the specified resource.|
+  415: 
+    description: |
+      Unsupported Media Type
+      
+      Table Service specific errors:
+      |Error code|UserMessage|
+      |---|---|
+      |JsonFormatNotSupported|JSON format is not supported.|
+securedBy: [ customSchema ]

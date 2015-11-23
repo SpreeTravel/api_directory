@@ -1,0 +1,7 @@
+[
+  {
+    "email": "mailbox-123@inbound.example.com",
+    "pattern": "mailbox-*",
+    "url": "http://example.com/webhook-url"
+  }
+]

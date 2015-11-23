@@ -1,0 +1,11 @@
+[
+  {
+    "can_add": true,
+    "can_delete": true,
+    "can_edit": true,
+    "max_daily_actions": 1,
+    "min_seconds_between_actions": 1,
+    "object_type": "some string",
+    "user_id": 1
+  }
+]

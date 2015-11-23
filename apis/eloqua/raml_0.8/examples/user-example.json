@@ -1,0 +1,48 @@
+{
+  "loginName" : "Orion.Full" ,
+  "company" : "undefined" ,
+  "emailAddress" : "fred.sakr@eloqua.com" ,
+  "loggedInAt" : "undefined" ,
+  "preferences" : {
+    "timezoneId" : "undefined" ,
+    "isMasterViewDocked" : "undefined"
+  } ,
+  "typePermissions" : [
+    {
+      "objectType" : "undefined" ,
+      "permissions" : {
+      }
+    }
+  ] ,
+  "capabilities" : [
+    null ,
+    null
+  ] ,
+  "betaAccess" : [
+    null ,
+    null
+  ] ,
+  "defaultContactViewId" : "100084" ,
+  "defaultAccountViewId" : "100124" ,
+  "interfacePermissions" : [
+    {
+    }
+  ] ,
+  "productPermissions" : [
+    {
+      "productCode" : "undefined"
+    }
+  ] ,
+  "name" : "undefined" ,
+  "description" : "Eloqua" ,
+  "permissions" : "undefined" ,
+  "folderId" : "undefined" ,
+  "sourceTemplateId" : "undefined" ,
+  "createdBy" : "undefined" ,
+  "createdAt" : "undefined" ,
+  "updatedBy" : "undefined" ,
+  "updatedAt" : "undefined" ,
+  "accessedAt" : "undefined" ,
+  "scheduledFor" : "undefined" ,
+  "depth" : "minimal"
+}

@@ -1,0 +1,37 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "vip" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "protocol" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "admin_state_up" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "subnet_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "pool_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "protocol_port" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

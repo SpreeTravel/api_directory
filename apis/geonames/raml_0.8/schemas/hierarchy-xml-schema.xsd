@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="geonames">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="geoname" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="toponymName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="name" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="lat" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="lng" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="geonameId" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="countryCode" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="countryName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="fcl" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="fcode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

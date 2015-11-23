@@ -1,0 +1,311 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "key": {
+      "required": false,
+      "type": "string"
+    },
+    "template_name": {
+      "required": false,
+      "type": "string"
+    },
+    "template_content": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "content": {
+            "required": false,
+            "type": "string"
+          },
+          "name": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      }
+    },
+    "message": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "html": {
+          "required": false,
+          "type": "string"
+        },
+        "text": {
+          "required": false,
+          "type": "string"
+        },
+        "subject": {
+          "required": false,
+          "type": "string"
+        },
+        "from_email": {
+          "required": false,
+          "type": "string"
+        },
+        "from_name": {
+          "required": false,
+          "type": "string"
+        },
+        "to": {
+          "required": false,
+          "type": "array",
+          "items": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "email": {
+                "required": false,
+                "type": "string"
+              },
+              "name": {
+                "required": false,
+                "type": "string"
+              },
+              "type": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          }
+        },
+        "headers": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "Reply-To": {
+              "required": false,
+              "type": "string"
+            }
+          }
+        },
+        "important": {
+          "required": false,
+          "type": "boolean"
+        },
+        "track_opens": {
+          "required": false,
+          "type": "null"
+        },
+        "track_clicks": {
+          "required": false,
+          "type": "null"
+        },
+        "auto_text": {
+          "required": false,
+          "type": "null"
+        },
+        "auto_html": {
+          "required": false,
+          "type": "null"
+        },
+        "inline_css": {
+          "required": false,
+          "type": "null"
+        },
+        "url_strip_qs": {
+          "required": false,
+          "type": "null"
+        },
+        "preserve_recipients": {
+          "required": false,
+          "type": "null"
+        },
+        "view_content_link": {
+          "required": false,
+          "type": "null"
+        },
+        "bcc_address": {
+          "required": false,
+          "type": "string"
+        },
+        "tracking_domain": {
+          "required": false,
+          "type": "null"
+        },
+        "signing_domain": {
+          "required": false,
+          "type": "null"
+        },
+        "return_path_domain": {
+          "required": false,
+          "type": "null"
+        },
+        "merge": {
+          "required": false,
+          "type": "boolean"
+        },
+        "global_merge_vars": {
+          "required": false,
+          "type": "array",
+          "items": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "content": {
+                "required": false,
+                "type": "string"
+              },
+              "name": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          }
+        },
+        "merge_vars": {
+          "required": false,
+          "type": "array",
+          "items": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "rcpt": {
+                "required": false,
+                "type": "string"
+              },
+              "vars": {
+                "required": false,
+                "type": "array",
+                "items": {
+                  "required": false,
+                  "type": "object",
+                  "properties": {
+                    "content": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "name": {
+                      "required": false,
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": {
+          "required": false,
+          "type": "array",
+          "items": {
+            "required": false,
+            "type": "string"
+          }
+        },
+        "subaccount": {
+          "required": false,
+          "type": "string"
+        },
+        "google_analytics_domains": {
+          "required": false,
+          "type": "array",
+          "items": {
+            "required": false,
+            "type": "string"
+          }
+        },
+        "google_analytics_campaign": {
+          "required": false,
+          "type": "string"
+        },
+        "metadata": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "website": {
+              "required": false,
+              "type": "string"
+            }
+          }
+        },
+        "recipient_metadata": {
+          "required": false,
+          "type": "array",
+          "items": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "rcpt": {
+                "required": false,
+                "type": "string"
+              },
+              "values": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "user_id": {
+                    "required": false,
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "attachments": {
+          "required": false,
+          "type": "array",
+          "items": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "content": {
+                "required": false,
+                "type": "string"
+              },
+              "name": {
+                "required": false,
+                "type": "string"
+              },
+              "type": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          }
+        },
+        "images": {
+          "required": false,
+          "type": "array",
+          "items": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "content": {
+                "required": false,
+                "type": "string"
+              },
+              "name": {
+                "required": false,
+                "type": "string"
+              },
+              "type": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "async": {
+      "required": false,
+      "type": "boolean"
+    },
+    "ip_pool": {
+      "required": false,
+      "type": "string"
+    },
+    "send_at": {
+      "required": false,
+      "type": "string"
+    }
+  }
+}

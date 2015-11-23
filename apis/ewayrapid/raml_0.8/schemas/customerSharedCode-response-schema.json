@@ -1,0 +1,156 @@
+{
+    "type":"object",
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "properties":{
+        "AccessCode": {
+            "type":"string",
+            "maxLength": 512            
+        },
+        "Customer": {
+            "type":"object",
+            "properties":{
+                "CardExpiryMonth": {
+                    "type": "string",
+                    "maxLength": 2
+                },
+                "CardExpiryYear": {
+                    "type": "string",
+                    "maxLength": 2
+                },
+                "CardIssueNumber": {
+                    "type": "string",
+                    "maxLength": 2
+                },
+                "CardName": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "CardNumber": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "CardStartMonth": {
+                    "type": "string",
+                    "maxLength": 2
+                },
+                "CardStartYear": {
+                    "type": "string",
+                    "maxLength": 2
+                },
+                "City": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "Comments": {
+                    "type": "string",
+                    "maxLength": 255
+                },
+                "CompanyName": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "Country": {
+                    "type": "string",
+                    "maxLength": 2
+                },
+                "Email": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "Fax": {
+                    "type": "string",
+                    "maxLength": 32
+                },
+                "FirstName": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "IsActive": {
+                    "type": "boolean"
+                },
+                "JobDescription": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "LastName": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "Mobile": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "Phone": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "PostalCode": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "Reference": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "State": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "Street1": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "Street2": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "Title": {
+                    "type": "string",
+                    "maxLength": 5
+                },
+                "TokenCustomerID": {
+                    "type": "string"
+                },
+                "Url": {
+                    "type": "string",
+                    "maxLength": 512
+                }
+            }
+        },
+        "Errors": {
+            "type":"string"
+        },
+        "FormActionURL": {
+            "type": "string",
+            "maxLength": 512
+        },
+        "Payment": {
+            "type": "object",
+            "properties": {
+                "CurrencyCode": {
+                    "type": "string",
+                    "maxLength": 3
+                },
+                "InvoiceDescription": {
+                    "type": "string",
+                    "maxLength": 64
+                },
+                "InvoiceNumber": {
+                    "type": "string",
+                    "maxLength": 16
+                },
+                "InvoiceReference": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "TotalAmount": {
+                    "type": "number"
+                }
+            }
+        },
+        "SharedPaymentUrl": {
+            "type":"string",
+            "maxLength": 512
+        }
+    }
+}

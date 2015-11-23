@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>435ff851-3700-458f-b5ce-365a0eda7b4d</Id>
+  <Status>OK</Status>
+  <ProviderName>Xero API Previewer</ProviderName>
+  <DateTimeUTC>2011-02-21T00:36:14.3339709Z</DateTimeUTC>
+  <Reports>
+    <Report>
+      <ReportID>3d0a1240-e606-4fae-a823-77bcf79d5e79</ReportID>
+      <ReportName>Activity Statement</ReportName>
+      <ReportType>SalesTaxReturn</ReportType>
+      <ReportDate>1 Nov 2011 to 30 Nov 2011</ReportDate>
+      <UpdatedDateUTC>2011-12-18T19:59:27.84</UpdatedDateUTC>
+      <Attributes>
+        <ReportAttribute>
+          <Name>fromDate</Name>
+          <Description>From</Description>
+          <Value>2011-11-01T00:00:00</Value>
+        </ReportAttribute>
+        <ReportAttribute>
+          <Name>dateTo</Name>
+          <Description>To</Description>
+          <Value>2011-11-30T00:00:00</Value>
+        </ReportAttribute>
+      </Attributes>
+      <Fields>
+        <ReportField>
+          <FieldID>ABN</FieldID>
+          <Description>ABN</Description>
+          <Value>53003086616</Value>
+        </ReportField>
+        <ReportField>
+          <FieldID>GSTBasis</FieldID>
+          <Description>GST Accounting Method</Description>
+          <Value>Accruals Basis</Value>
+        </ReportField>
+        <ReportField>
+          <FieldID>W1</FieldID>
+          <Description>Total salary, wages and other payments</Description>
+          <Value>0</Value>
+        </ReportField>
+        <ReportField>
+          <FieldID>W2</FieldID>
+          <Description>Amount withheld from payments shown at W1</Description>
+          <Value>0</Value>
+        </ReportField>
+        <ReportField>
+          <FieldID>W4</FieldID>
+          <Description>Amount withheld where no ABN is quoted</Description>
+          <Value>0</Value>
+        </ReportField>
+        <ReportField>
+          <FieldID>W3</FieldID>
+          <Description>Other amounts withheld (excluding any amount shown in W2 or W4)</Description>
+          <Value>0</Value>
+        </ReportField>
+        <ReportField>
+          <FieldID>W5</FieldID>
+          <Description>Total amounts withheld (W2 + W4 + W3)</Description>
+          <Value>0</Value>
+        </ReportField>
+        <ReportField>
+          <FieldID>4</FieldID>
+          <Description>PAYG tax withheld</Description>
+          <Value>0</Value>
+        </ReportField>
+        <ReportField>
+          <FieldID>7</FieldID>
+          <Description>Deferred company/fund instalment</Description>
+          <Value>0</Value>
+        </ReportField>
+        <ReportField>
+          <FieldID>8A</FieldID>
+          <Description>4+7</Description>
+          <Value>0</Value>
+        </ReportField>
+        <ReportField>
+          <FieldID>8B</FieldID>
+          <Value>0</Value>
+        </ReportField>
+        <ReportField>
+          <FieldID>9</FieldID>
+          <Description>Your refund</Description>
+          <Value>0</Value>
+        </ReportField>
+      </Fields>
+    </Report>
+  </Reports>
+</Response>

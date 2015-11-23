@@ -1,0 +1,145 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "address1": {
+      "required": false,
+      "type": "string"
+    },
+    "city": {
+      "required": false,
+      "type": "string"
+    },
+    "community": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "id": {
+          "required": false,
+          "type": "integer"
+        },
+        "name": {
+          "required": false,
+          "type": "string"
+        },
+        "urlname": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    },
+    "container": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "id": {
+          "required": false,
+          "type": "integer"
+        },
+        "name": {
+          "required": false,
+          "type": "string"
+        },
+        "urlname": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    },
+    "country": {
+      "required": false,
+      "type": "string"
+    },
+    "created": {
+      "required": false,
+      "type": "integer"
+    },
+    "description": {
+      "required": false,
+      "type": "string"
+    },
+    "helpers": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "member_city": {
+          "required": false,
+          "type": "string"
+        },
+        "member_country": {
+          "required": false,
+          "type": "string"
+        },
+        "member_id": {
+          "required": false,
+          "type": "integer"
+        },
+        "member_state": {
+          "required": false,
+          "type": "string"
+        },
+        "name": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    },
+    "id": {
+      "required": false,
+      "type": "integer"
+    },
+    "lat": {
+      "required": false,
+      "type": "number"
+    },
+    "lon": {
+      "required": false,
+      "type": "number"
+    },
+    "link": {
+      "required": false,
+      "type": "string"
+    },
+    "meetup_url": {
+      "required": false,
+      "type": "string"
+    },
+    "rsvp_count": {
+      "required": false,
+      "type": "integer"
+    },
+    "short_description": {
+      "required": false,
+      "type": "string"
+    },
+    "state": {
+      "required": false,
+      "type": "integer"
+    },
+    "status": {
+      "required": false,
+      "type": "string"
+    },
+    "time": {
+      "required": false,
+      "type": "integer"
+    },
+    "udf_{varname}": {
+      "required": false,
+      "type": "string"
+    },
+    "updated": {
+      "required": false,
+      "type": "integer"
+    },
+    "venue_name": {
+      "required": false,
+      "type": "string"
+    },
+    "zip": {
+      "required": false,
+      "type": "string"
+    }
+  }
+}

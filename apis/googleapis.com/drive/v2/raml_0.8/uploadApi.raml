@@ -1,0 +1,176 @@
+#%RAML 0.8
+title: Google Drive Upload
+version: v2
+baseUri: https://www.googleapis.com/upload/drive/{version}
+mediaType: application/json
+securitySchemes:
+  - oauth_2_0: !include securitySchemes/oauth_2_0.raml
+schemas:
+  - file: !include /schemas/file-schema.json
+  - newFileRequest: !include /schemas/newFileRequest-schema.json
+securedBy: [ oauth_2_0 ]
+/files: 
+  post: 
+    description: Insert a new file.
+    headers: 
+      X-Upload-Content-Type: 
+        description: Set to the media MIME type of the upload data to be transferred in subsequent requests.
+        example: image/jpeg
+      X-Upload-Content-Length: 
+        description: Set to the number of bytes of upload data to be transferred in subsequent requests.  If the length is unknown at the time of this request, you can omit this header.
+        example: 8000000
+    queryParameters: 
+      uploadType: 
+        description: |
+          The type of upload request to the /upload URI. Acceptable values are:
+          media - Simple upload. Upload the media only, without any metadata.
+          multipart - Multipart upload. Upload both the media and its metadata, in a single request.
+          resumable - Resumable upload. Upload the file in a resumable fashion, using a series of at least two requests where the first request includes the metadata.
+        required: true
+        example: multipart
+      convert: 
+        description: "Whether to convert this file to the corresponding Google Docs format. (Default: false)"
+        type: boolean
+        default: false
+        example: false
+      ocr: 
+        description: "Whether to attempt OCR on .jpg, .png, .gif, or .pdf uploads. (Default: false)"
+        type: boolean
+        default: false
+        example: false
+      ocrLanguage: 
+        description: If ocr is true, hints at the language to use. Valid values are ISO 639-1 codes.
+        example: ab
+      pinned: 
+        description: "Whether to pin the head revision of the uploaded file. A file can have a maximum of 200 pinned revisions. (Default: false)"
+        type: boolean
+        default: false
+        example: false
+      timedTextLanguage: 
+        description: The language of the timed text.
+      timedTextTrackName: 
+        description: The timed text track name.
+      useContentAsIndexableText: 
+        description: "Whether to use the content as indexable text. (Default: false)"
+        type: boolean
+        default: false
+        example: false
+      visibility: 
+        description: |
+          The visibility of the new file. This parameter is only relevant when convert=false. 
+          
+          Acceptable values are:
+          "DEFAULT": The visibility of the new file is determined by the user's default visibility/sharing policies. (default)
+          "PRIVATE": The new file will be visible to only the owner.
+        example: DEFAULT
+    body: 
+      application/json: 
+        schema: newFileRequest
+        example: !include examples/newFileRequest-example.json
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: file
+            example: !include examples/file-example.json
+  /{fileId}: 
+    put: 
+      description: Updates file metadata and/or content.
+      headers: 
+        X-Upload-Content-Type: 
+          description: Set to the media MIME type of the upload data to be transferred in subsequent requests.
+          example: image/jpeg
+        X-Upload-Content-Length: 
+          description: Set to the number of bytes of upload data to be transferred in subsequent requests.  If the length is unknown at the time of this request, you can omit this header.
+          example: 8000000
+      queryParameters: 
+        uploadType: 
+          description: |
+            The type of upload request to the /upload URI. Acceptable values are:
+            media - Simple upload. Upload the media only, without any metadata.
+            multipart - Multipart upload. Upload both the media and its metadata, in a single request.
+            resumable - Resumable upload. Upload the file in a resumable fashion, using a series of at least two requests where the first request includes the metadata.
+          required: true
+          example: multipart
+        addParents: 
+          description: Comma-separated list of parent IDs to add.
+        convert: 
+          description: "Whether to convert this file to the corresponding Google Docs format. (Default: false)"
+          type: boolean
+          default: false
+          example: false
+        newRevision: 
+          description: "Whether a blob upload should create a new revision. If false, the blob data in the current head revision is replaced. If true or not set, a new blob is created as head revision, and previous revisions are preserved (causing increased use of the user's data storage quota). (Default: true)"
+          type: boolean
+          default: true
+          example: true
+        ocr: 
+          description: "Whether to attempt OCR on .jpg, .png, .gif, or .pdf uploads. (Default: false)"
+          type: boolean
+          default: false
+          example: false
+        ocrLanguage: 
+          description: If ocr is true, hints at the language to use. Valid values are ISO 639-1 codes.
+          example: ab
+        pinned: 
+          description: "Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. (Default: false)"
+          type: boolean
+          default: false
+          example: false
+        removeParents: 
+          description: Comma-separated list of parent IDs to remove.
+        setModifiedDate: 
+          description: "Whether to set the modified date with the supplied modified date. (Default: false)"
+          type: boolean
+          default: false
+          example: true
+        timedTextLanguage: 
+          description: The language of the timed text.
+        timedTextTrackName: 
+          description: The timed text track name.
+        updateViewedDate: 
+          description: "Whether to update the view date after successfully updating the file. (Default: true)"
+          type: boolean
+          default: false
+          example: true
+        useContentAsIndexableText: 
+          description: "Whether to use the content as indexable text. (Default: false)"
+          type: boolean
+          default: false
+          example: true
+      body: 
+        application/json: 
+          schema: newFileRequest
+          example: !include examples/newFileRequest-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: file
+              example: !include examples/file-example.json
+    /realtime: 
+      put: 
+        description: |
+          Overwrites the Realtime API data model associated with this file with the provided JSON data model.
+          
+          This method supports an /upload URI and accepts uploaded media with the following characteristics:
+          
+          Maximum file size: 10MB
+          Accepted Media MIME types: */*
+          
+          If successful, this method returns an empty response body.
+        queryParameters: 
+          uploadType: 
+            description: |
+              The type of upload request to the /upload URI. Acceptable values are:
+              media - Simple upload. Upload the media data.
+              resumable - Resumable upload. Upload the file in a resumable fashion, using a series of at least two requests.
+            required: true
+            example: media
+          baseRevision: 
+            description: The revision of the model to diff the uploaded model against. If set, the uploaded model is diffed against the provided revision and those differences are merged with any changes made to the model after the provided revision. If not set, the uploaded model replaces the current model on the server.
+        responses: 
+          200: 
+documentation: 
+  - title: Headline
+    content: !include docs/uploadApi/headline.md

@@ -1,0 +1,89 @@
+#%RAML 0.8
+title: Files REST API in Office 365
+baseUri: https://outlook.office365.com/ews/odata/Me
+schemas:
+  - newFile: !include schemas/newFile-schema.json
+resourceTypes:
+  - operation: !include resourceTypes/operation.raml
+traits:
+  - getOption: !include traits/getOption.raml
+/files: 
+  get: 
+    is: [ getOption ]
+    description: Recursively retrieves a list of all files and folder that reside in the default document library.
+    responses: 
+      200: 
+        description: The request completed successfully.
+  post: 
+    description: Creates an empty file and provides it with a name. (If there is no folder in the specified location, the method creates a folder).
+    body: 
+      application/json: 
+        schema: newFile
+        example: !include examples/newFile-example.json
+    responses: 
+      201: 
+        description: The request has been fulfilled and resulted in the creation of a new resource.
+  /Add{name}{overwrite}: 
+    post: 
+      description: |
+        Creates a new file and provisions the file with content. Provide the content as a bit stream in the POST body. The body is required. 
+        Updates the content in an existing file with content provided as bit stream. Overwriting existing content is optional.
+        The body is required.
+      body: 
+        application/json: 
+      responses: 
+        201: 
+          description: |
+            The request has been fulfilled and resulted in the creation of a new resource.
+/files{file_path}: 
+  get: 
+    description: Retrieves all of the properties of a specified file.
+    responses: 
+      200: 
+        description: The request completed successfully.
+  delete: 
+    description: Deletes a specified file
+    responses: 
+      200: 
+  /download: 
+    get: 
+      description: Retrieves a file stream comprising the contents of the specified file.
+      responses: 
+        200: 
+          description: The request completed successfully.
+  /{property_name}: 
+    get: 
+      description: Retrieves a single specified property of the specified file.
+      responses: 
+        200: 
+          description: The request completed successfully.
+  /MoveTo{file_path}{overwrite}: 
+    type: operation
+  /CopyTo{file_path}{overwrite}: 
+    type: operation
+/files{folder_path}: 
+  get: 
+    description: Retrieves all of the properties of a specified folder.
+    responses: 
+      200: 
+        description: Returns all of the properties as name/value pairs.
+  delete: 
+    description: Deletes a specified folder and all of its contents.
+    responses: 
+      200: 
+  /{property_name}: 
+    get: 
+      description: Retrieves the specified property of a given folder.
+      responses: 
+        200: 
+          description: Returns the name/value of the specified property.
+  /Children: 
+    get: 
+      is: [ getOption ]
+      description: Retrieves the files and/or folders that are direct children of the specified folder.
+      responses: 
+        200: 
+          description: Returns all children of the folder.
+documentation: 
+  - title: Headline
+    content: !include docs/fileAPI/headline.md

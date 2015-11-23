@@ -1,0 +1,21 @@
+{
+  "member": {
+    "id": 100,
+    "name": "name",
+    "state": 100,
+    "photo": {
+      "thumb": 100
+    },
+    "country": "country",
+    "city": "city"
+  },
+  "id": 100,
+  "body": "body",
+  "discussion": {
+    "id": 100
+  },
+  "updated": 100,
+  "created": 100,
+  "subject": "subject",
+  "in_reply_to": 100
+}

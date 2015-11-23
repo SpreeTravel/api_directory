@@ -1,0 +1,47 @@
+{
+    "activities":[
+        {
+            "activityId":"value",
+            "activityParentId":"value",
+            "calories":"value",
+            "description":"value",
+            "distance":"value",
+            "duration":"value",
+            "hasStartTime":"value",
+            "isFavorite":"value",
+            "logId":"value",
+            "name":"value",
+            "startTime":"value",
+            "steps":"value"
+        }
+    ],
+    "goals":{
+        "caloriesOut":"value",
+        "distance":"value",
+        "floors":[],
+        "steps":"value"
+    },
+    "summary":{
+        "activityCalories":"value",
+        "caloriesBMR":"value",
+        "caloriesOut":"value",
+        "distances":[
+            {"activity":"tracker", "distance":"value"},
+            {"activity":"loggedActivities", "distance":"value"},
+            {"activity":"total", "distance":"value"},
+            {"activity":"veryActive", "distance":"value"},
+            {"activity":"moderatelyActive", "distance":"value"},
+            {"activity":"lightlyActive", "distance":"value"},
+            {"activity":"sedentaryActive", "distance":"value"},
+            {"activity":"ACTIVITY NAME", "distance":"value"}
+        ],
+        "elevation":"value",
+        "fairlyActiveMinutes":"value",
+        "floors":"value",
+        "lightlyActiveMinutes":"value",
+        "marginalCalories":"value",
+        "sedentaryMinutes":"value",
+        "steps":"value",
+        "veryActiveMinutes":"value"
+    }
+}

@@ -1,0 +1,47 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "PartitionKey" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "RowKey" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Timestamp" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Address" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Age" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "AmountDue" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "CustomerCode" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "CustomerSince" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "IsActive" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "NumberOfOrders" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

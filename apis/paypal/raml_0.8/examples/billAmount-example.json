@@ -1,0 +1,7 @@
+{
+  "note" : "Billing Balance Amount" ,
+  "amount" : {
+    "value" : "100" ,
+    "currency" : "USD"
+  }
+}

@@ -1,0 +1,11 @@
+type: { superPage: { type: <<type>> } }
+uriParameters: 
+  mediaTypeExtension: 
+    description: Omiting the param causes html to be returned.
+    required: false
+    enum: [ .json ]
+get: 
+  responses: 
+    200: 
+      body: 
+        application/html: 

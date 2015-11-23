@@ -1,0 +1,469 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "checkSum": {
+      "type": "string",
+      "required": false
+    },
+    "contentSize": {
+      "type": "integer",
+      "required": false
+    },
+    "contentHubRepository": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "features": {
+          "type": "object",
+          "required": false,
+          "properties": {
+            "canBrowse": {
+              "type": "boolean",
+              "required": false
+            },
+            "canSearch": {
+              "type": "boolean",
+              "required": false
+            }
+          }
+        },
+        "id": {
+          "type": "string",
+          "required": false
+        },
+        "label": {
+          "type": "string",
+          "required": false
+        },
+        "motif": {
+          "type": "object",
+          "required": false,
+          "properties": {
+            "color": {
+              "type": "string",
+              "required": false
+            },
+            "largeIconUrl": {
+              "type": "string",
+              "required": false
+            },
+            "mediumIconUrl": {
+              "type": "string",
+              "required": false
+            },
+            "smallIconUrl": {
+              "type": "string",
+              "required": false
+            },
+            "svgIconUrl": {
+              "type": "string",
+              "required": false
+            }
+          }
+        },
+        "mySubscription": {
+          "type": "object",
+          "required": false,
+          "properties": {
+            "id": {
+              "type": "string",
+              "required": false
+            },
+            "url": {
+              "type": "string",
+              "required": false
+            }
+          }
+        },
+        "name": {
+          "type": "string",
+          "required": false
+        },
+        "providerType": {
+          "type": "object",
+          "required": false,
+          "properties": {
+            "label": {
+              "type": "string",
+              "required": false
+            },
+            "type": {
+              "type": "string",
+              "required": false
+            }
+          }
+        },
+        "rootFolderItemsUrl": {
+          "type": "string",
+          "required": false
+        },
+        "type": {
+          "type": "string",
+          "required": false
+        },
+        "url": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "contentModifiedDate": {
+      "type": "string",
+      "required": false
+    },
+    "contentUrl": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "string",
+      "required": false
+    },
+    "downloadUrl": {
+      "type": "string",
+      "required": false
+    },
+    "externalDocumentUrl": {
+      "type": "string",
+      "required": false
+    },
+    "flashRenditionStatus": {
+      "type": "string",
+      "required": false
+    },
+    "fileExtension": {
+      "type": "string",
+      "required": false
+    },
+    "fileType": {
+      "type": "string",
+      "required": false
+    },
+    "id": {
+      "type": "string",
+      "required": false
+    },
+    "isInMyFileSync": {
+      "type": "boolean",
+      "required": false
+    },
+    "isMajorVersion": {
+      "type": "boolean",
+      "required": false
+    },
+    "mimeType": {
+      "type": "string",
+      "required": false
+    },
+    "moderationFlags": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "flagCount": {
+          "type": "integer",
+          "required": false
+        },
+        "flaggedByMe": {
+          "type": "boolean",
+          "required": false
+        }
+      }
+    },
+    "modifiedDate": {
+      "type": "string",
+      "required": false
+    },
+    "motif": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "color": {
+          "type": "string",
+          "required": false
+        },
+        "largeIconUrl": {
+          "type": "string",
+          "required": false
+        },
+        "mediumIconUrl": {
+          "type": "string",
+          "required": false
+        },
+        "smallIconUrl": {
+          "type": "string",
+          "required": false
+        },
+        "svgIconUrl": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "mySubscription": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "required": false
+        },
+        "url": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "origin": {
+      "type": "string",
+      "required": false
+    },
+    "owner": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "additionalLabel": {
+          "type": "string",
+          "required": false
+        },
+        "communityNickname": {
+          "type": "string",
+          "required": false
+        },
+        "companyName": {
+          "type": "string",
+          "required": false
+        },
+        "displayName": {
+          "type": "string",
+          "required": false
+        },
+        "firstName": {
+          "type": "string",
+          "required": false
+        },
+        "id": {
+          "type": "string",
+          "required": false
+        },
+        "isActive": {
+          "type": "boolean",
+          "required": false
+        },
+        "isChatterGuest": {
+          "type": "boolean",
+          "required": false
+        },
+        "isInThisCommunity": {
+          "type": "boolean",
+          "required": false
+        },
+        "lastName": {
+          "type": "string",
+          "required": false
+        },
+        "motif": {
+          "type": "object",
+          "required": false,
+          "properties": {
+            "color": {
+              "type": "string",
+              "required": false
+            },
+            "largeIconUrl": {
+              "type": "string",
+              "required": false
+            },
+            "mediumIconUrl": {
+              "type": "string",
+              "required": false
+            },
+            "smallIconUrl": {
+              "type": "string",
+              "required": false
+            },
+            "svgIconUrl": {
+              "type": "string",
+              "required": false
+            }
+          }
+        },
+        "mySubscription": {
+          "type": "object",
+          "required": false,
+          "properties": {
+            "id": {
+              "type": "string",
+              "required": false
+            },
+            "url": {
+              "type": "string",
+              "required": false
+            }
+          }
+        },
+        "name": {
+          "type": "string",
+          "required": false
+        },
+        "photo": {
+          "type": "object",
+          "required": false,
+          "properties": {
+            "fullEmailPhotoUrl": {
+              "type": "string",
+              "required": false
+            },
+            "largePhotoUrl": {
+              "type": "string",
+              "required": false
+            },
+            "photoVersionId": {
+              "type": "string",
+              "required": false
+            },
+            "smallPhotoUrl": {
+              "type": "string",
+              "required": false
+            },
+            "standardEmailPhotoUrl": {
+              "type": "string",
+              "required": false
+            },
+            "url": {
+              "type": "string",
+              "required": false
+            }
+          }
+        },
+        "reputation": {
+          "type": "object",
+          "required": false,
+          "properties": {
+            "reputationLevel": {
+              "type": "object",
+              "required": false,
+              "properties": {
+                "levelImageUrl": {
+                  "type": "string",
+                  "required": false
+                },
+                "levelName": {
+                  "type": "string",
+                  "required": false
+                },
+                "levelNumber": {
+                  "type": "integer",
+                  "required": false
+                }
+              }
+            },
+            "reputationPoints": {
+              "type": "number",
+              "required": false
+            },
+            "url": {
+              "type": "string",
+              "required": false
+            }
+          }
+        },
+        "title": {
+          "type": "string",
+          "required": false
+        },
+        "type": {
+          "type": "string",
+          "required": false
+        },
+        "url": {
+          "type": "string",
+          "required": false
+        },
+        "userType": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "parentFolder": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "required": false
+        },
+        "url": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "pdfRenditionStatus": {
+      "type": "string",
+      "required": false
+    },
+    "publishStatus": {
+      "type": "string",
+      "required": false
+    },
+    "renditionUrl": {
+      "type": "string",
+      "required": false
+    },
+    "renditionUrl240By180": {
+      "type": "string",
+      "required": false
+    },
+    "renditionUrl720By480": {
+      "type": "string",
+      "required": false
+    },
+    "repositoryFileUrl": {
+      "type": "string",
+      "required": false
+    },
+    "sharingRole": {
+      "type": "string",
+      "required": false
+    },
+    "textPreview": {
+      "type": "string",
+      "required": false
+    },
+    "thumb120By90RenditionStatus": {
+      "type": "string",
+      "required": false
+    },
+    "thumb240By180RenditionStatus": {
+      "type": "string",
+      "required": false
+    },
+    "thumb720By480RenditionStatus": {
+      "type": "string",
+      "required": false
+    },
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "type": {
+      "type": "string",
+      "required": false
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    },
+    "versionNumber": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

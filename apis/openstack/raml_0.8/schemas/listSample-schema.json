@@ -1,0 +1,66 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : [
+    {
+      "type" : "object" ,
+      "properties" : {
+        "counter_name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "counter_type" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "counter_unit" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "counter_volume" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "message_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "project_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "resource_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "resource_metadata" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "name1" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "name2" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "source" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "timestamp" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "user_id" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  ]
+}

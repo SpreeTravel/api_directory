@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+    	"systolic": {
+    		"description": "Systolic measurement.",
+    		"type": "integer",
+			"required": true
+    	},
+    	"diastolic": {
+    		"description": "Diastolic measurement.",
+    		"type": "integer",
+			"required": true
+    	},
+    	"date": {
+    		"description": "Log entry date; in the format yyyy-MM-dd.",
+    		"type": "string",
+			"required": true
+    	},
+    	"time": {
+    		"description": "Time of the measurement; hours and minutes in the format HH:mm.",
+    		"type": "string"
+    	}
+	}
+}

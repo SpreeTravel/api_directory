@@ -1,0 +1,13 @@
+{
+  "@odata.id": "https://outlook.office365.com/EWS/OData/Users('sadie@contoso.com')/Folders('AAMkAGI3...')",
+  "@odata.editLink": "https://outlook.office365.com/EWS/OData/Users('sadie@contoso.com')/Folders('AAMkAGI3...')",
+  "Id": "AAMkAGI3...",
+  "ParentFolderId": "AQMkAGI3...",
+  "DisplayName": "Inbox",
+  "ClassName": "IPF.Note",
+  "TotalCount": 0,
+  "ChildFolderCount": 0,
+  "UnreadItemCount": 0,
+  "ChildFolders@odata.navigationLink": "https://outlook.office365.com/EWS/OData/Users('sadie@contoso.com')/Folders('AAMkAGI3...')/ChildFolders",
+  "Messages@odata.navigationLink": "https://outlook.office365.com/EWS/OData/Users('sadie@contoso.com')/Folders('AAMkAGI3...')/Messages"
+}

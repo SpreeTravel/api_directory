@@ -1,0 +1,151 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "results": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "country": {
+            "required": false,
+            "type": "string"
+          },
+          "city": {
+            "required": false,
+            "type": "string"
+          },
+          "state": {
+            "required": false,
+            "type": "integer"
+          },
+          "created": {
+            "required": false,
+            "type": "integer"
+          },
+          "daysleft": {
+            "required": false,
+            "type": "string"
+          },
+          "description": {
+            "required": false,
+            "type": "string"
+          },
+          "group_urlname": {
+            "required": false,
+            "type": "string"
+          },
+          "id": {
+            "required": false,
+            "type": "integer"
+          },
+          "join_info": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "intro_required": {
+                "required": false,
+                "type": "string"
+              },
+              "questions": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "question": {
+                    "required": false,
+                    "type": "string"
+                  }
+                }
+              },
+              "questions_required": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "lat": {
+            "required": false,
+            "type": "number"
+          },
+          "link": {
+            "required": false,
+            "type": "string"
+          },
+          "lon": {
+            "required": false,
+            "type": "number"
+          },
+          "members": {
+            "required": false,
+            "type": "string"
+          },
+          "name": {
+            "required": false,
+            "type": "string"
+          },
+          "organizerName": {
+            "required": false,
+            "type": "string"
+          },
+          "organizerProfileURL": {
+            "required": false,
+            "type": "string"
+          },
+          "photo_url": {
+            "required": false,
+            "type": "string"
+          },
+          "rating": {
+            "required": false,
+            "type": "string"
+          },
+          "short_link": {
+            "required": false,
+            "type": "string"
+          },
+          "topics": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "id": {
+                "required": false,
+                "type": "integer"
+              },
+              "name": {
+                "required": false,
+                "type": "string"
+              },
+              "urlkey": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "updated": {
+            "required": false,
+            "type": "integer"
+          },
+          "visibility": {
+            "required": false,
+            "type": "string"
+          },
+          "who": {
+            "required": false,
+            "type": "string"
+          },
+          "zip": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

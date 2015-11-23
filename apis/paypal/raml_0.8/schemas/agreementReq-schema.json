@@ -1,0 +1,65 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "description" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "start_date" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "plan" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "payer" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "payment_method" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "shipping_address" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "line1" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "line2" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "city" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "state" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "postal_code" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "country_code" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

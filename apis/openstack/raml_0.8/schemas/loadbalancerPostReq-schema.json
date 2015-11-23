@@ -1,0 +1,37 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "loadbalancer" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "description" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "tenant_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "vip_subnet_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "vip_address" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "admin_state_up" : {
+          "type" : "boolean" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

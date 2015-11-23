@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://openstack.org/quantum/api/v2.0" xmlns:provider="http://docs.openstack.org/ext/provider/api/v1.0" xmlns:quantum="http://openstack.org/quantum/api/v2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <xsd:element name="networks">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="network" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="status" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="subnets" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:extension base="xsd:string">
+                      <xsd:attribute name="type" type="xsd:normalizedString" use="required"/>
+                    </xsd:extension>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="name" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="physical_network" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:extension base="xsd:string">
+                      <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                    </xsd:extension>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="admin_state_up" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:extension base="xsd:normalizedString">
+                      <xsd:attribute name="type" type="xsd:normalizedString" use="required"/>
+                    </xsd:extension>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="tenant_id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="network_type" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="shared" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:extension base="xsd:normalizedString">
+                      <xsd:attribute name="type" type="xsd:normalizedString" use="required"/>
+                    </xsd:extension>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="segmentation_id" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:extension base="xsd:string">
+                      <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                    </xsd:extension>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,2153 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "request" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "airport" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "requestedCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "fsCode" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "codeType" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "departing" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "date" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "year" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "month" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "day" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "interpreted" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "hourOfDay" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "requested" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "interpreted" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "url" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "scheduledFlights" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "carrierFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightNumber" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "brand" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "stops" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "departureTerminal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightEquipmentIataCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "isCodeshare" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "isWetlease" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "serviceType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "serviceClasses" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "trafficRestrictions" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "codeshares" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "wetleaseOperatorFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "referenceCode" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "carrierFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightNumber" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "stops" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "departureTerminal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalTerminal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightEquipmentIataCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "isCodeshare" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "isWetlease" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "serviceType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "serviceClasses" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "trafficRestrictions" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "codeshares" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "carrierFsCode" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "flightNumber" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "serviceType" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "serviceClasses" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "string"
+                        }
+                      ]
+                    } ,
+                    "trafficRestrictions" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "string"
+                        }
+                      ]
+                    } ,
+                    "referenceCode" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            } ,
+            "referenceCode" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "carrierFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightNumber" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "stops" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "departureTerminal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalTerminal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightEquipmentIataCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "isCodeshare" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "isWetlease" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "serviceType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "serviceClasses" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "trafficRestrictions" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "operator" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "carrierFsCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "flightNumber" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "serviceType" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "serviceClasses" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                    {
+                      "type" : "string"
+                    }
+                  ]
+                } ,
+                "trafficRestrictions" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                  ]
+                }
+              }
+            } ,
+            "codeshares" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "referenceCode" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "carrierFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightNumber" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "stops" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "departureTerminal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightEquipmentIataCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "isCodeshare" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "isWetlease" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "serviceType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "serviceClasses" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "trafficRestrictions" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "codeshares" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "referenceCode" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "carrierFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightNumber" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "stops" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "departureTerminal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightEquipmentIataCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "isCodeshare" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "isWetlease" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "serviceType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "serviceClasses" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "trafficRestrictions" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "operator" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "carrierFsCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "flightNumber" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "serviceType" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "serviceClasses" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                    {
+                      "type" : "string"
+                    }
+                  ]
+                } ,
+                "trafficRestrictions" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                  ]
+                }
+              }
+            } ,
+            "codeshares" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "referenceCode" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "carrierFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightNumber" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "stops" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "departureTerminal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightEquipmentIataCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "isCodeshare" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "isWetlease" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "serviceType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "serviceClasses" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "trafficRestrictions" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "codeshares" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "carrierFsCode" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "flightNumber" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "serviceType" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "serviceClasses" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "string"
+                        }
+                      ]
+                    } ,
+                    "trafficRestrictions" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "string"
+                        }
+                      ]
+                    } ,
+                    "referenceCode" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            } ,
+            "wetleaseOperatorFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "referenceCode" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "carrierFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightNumber" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "stops" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "departureTerminal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightEquipmentIataCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "isCodeshare" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "isWetlease" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "serviceType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "serviceClasses" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "trafficRestrictions" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "operator" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "carrierFsCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "flightNumber" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "serviceType" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "serviceClasses" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                    {
+                      "type" : "string"
+                    }
+                  ]
+                } ,
+                "trafficRestrictions" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                  ]
+                }
+              }
+            } ,
+            "codeshares" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "wetleaseOperatorFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "referenceCode" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "carrierFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightNumber" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "brand" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "stops" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "departureTerminal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalTerminal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightEquipmentIataCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "isCodeshare" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "isWetlease" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "serviceType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "serviceClasses" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "trafficRestrictions" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "codeshares" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "carrierFsCode" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "flightNumber" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "serviceType" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "serviceClasses" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "string"
+                        }
+                      ]
+                    } ,
+                    "trafficRestrictions" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "string"
+                        }
+                      ]
+                    } ,
+                    "referenceCode" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            } ,
+            "wetleaseOperatorFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "referenceCode" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "carrierFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightNumber" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "brand" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "stops" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "departureTerminal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalTerminal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightEquipmentIataCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "isCodeshare" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "isWetlease" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "serviceType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "serviceClasses" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "trafficRestrictions" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "operator" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "carrierFsCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "flightNumber" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "serviceType" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "serviceClasses" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                    {
+                      "type" : "string"
+                    }
+                  ]
+                } ,
+                "trafficRestrictions" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                  ]
+                }
+              }
+            } ,
+            "codeshares" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "wetleaseOperatorFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "referenceCode" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "carrierFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightNumber" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "brand" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "stops" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "departureTerminal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightEquipmentIataCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "isCodeshare" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "isWetlease" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "serviceType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "serviceClasses" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "trafficRestrictions" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "operator" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "carrierFsCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "flightNumber" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "serviceType" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "serviceClasses" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                    {
+                      "type" : "string"
+                    }
+                  ]
+                } ,
+                "trafficRestrictions" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                  ]
+                }
+              }
+            } ,
+            "codeshares" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "wetleaseOperatorFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "referenceCode" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "carrierFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightNumber" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "stops" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "departureTerminal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalTerminal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightEquipmentIataCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "isCodeshare" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "isWetlease" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "serviceType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "serviceClasses" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "trafficRestrictions" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "codeshares" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "carrierFsCode" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "flightNumber" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "serviceType" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "serviceClasses" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "string"
+                        }
+                      ]
+                    } ,
+                    "trafficRestrictions" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "string"
+                        }
+                      ]
+                    } ,
+                    "referenceCode" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            } ,
+            "wetleaseOperatorFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "referenceCode" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "carrierFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightNumber" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "stops" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "departureTerminal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalTerminal" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightEquipmentIataCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "isCodeshare" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "isWetlease" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "serviceType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "serviceClasses" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "trafficRestrictions" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "operator" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "carrierFsCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "flightNumber" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "serviceType" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "serviceClasses" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                    {
+                      "type" : "string"
+                    }
+                  ]
+                } ,
+                "trafficRestrictions" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                  ]
+                }
+              }
+            } ,
+            "codeshares" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "wetleaseOperatorFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "referenceCode" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    } ,
+    "appendix" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "airlines" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "fs" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "iata" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "icao" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "active" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                }
+              }
+            } , {
+              "type" : "object" ,
+              "properties" : {
+                "fs" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "iata" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "icao" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "phoneNumber" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "active" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        } ,
+        "airports" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "fs" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "iata" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "icao" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "faa" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "street1" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "city" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "cityCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "stateCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "postalCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "regionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "timeZoneRegionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "weatherZone" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "localTime" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "utcOffsetHours" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "latitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "longitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "elevationFeet" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "classification" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "active" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                }
+              }
+            } , {
+              "type" : "object" ,
+              "properties" : {
+                "fs" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "iata" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "icao" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "city" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "cityCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "regionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "timeZoneRegionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "localTime" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "utcOffsetHours" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "latitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "longitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "elevationFeet" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "classification" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "active" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                }
+              }
+            } , {
+              "type" : "object" ,
+              "properties" : {
+                "fs" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "iata" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "icao" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "faa" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "street1" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "street2" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "city" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "cityCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "stateCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "postalCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "regionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "timeZoneRegionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "weatherZone" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "localTime" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "utcOffsetHours" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "latitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "longitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "elevationFeet" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "classification" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "active" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                }
+              }
+            } , {
+              "type" : "object" ,
+              "properties" : {
+                "fs" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "iata" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "icao" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "street1" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "street2" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "city" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "cityCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "stateCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "postalCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "regionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "timeZoneRegionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "localTime" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "utcOffsetHours" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "latitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "longitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "elevationFeet" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "classification" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "active" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                }
+              }
+            } , {
+              "type" : "object" ,
+              "properties" : {
+                "fs" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "iata" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "icao" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "faa" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "city" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "cityCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "stateCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "postalCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "regionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "timeZoneRegionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "weatherZone" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "localTime" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "utcOffsetHours" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "latitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "longitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "elevationFeet" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "classification" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "active" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                }
+              }
+            } , {
+              "type" : "object" ,
+              "properties" : {
+                "fs" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "iata" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "icao" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "street1" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "city" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "cityCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "stateCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "regionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "timeZoneRegionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "localTime" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "utcOffsetHours" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "latitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "longitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "elevationFeet" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "classification" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "active" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                }
+              }
+            } , {
+              "type" : "object" ,
+              "properties" : {
+                "fs" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "iata" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "icao" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "faa" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "city" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "cityCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "stateCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "regionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "timeZoneRegionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "localTime" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "utcOffsetHours" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "latitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "longitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "elevationFeet" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "classification" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "active" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        } ,
+        "equipments" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "iata" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "turboProp" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                } ,
+                "jet" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                } ,
+                "widebody" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                } ,
+                "regional" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

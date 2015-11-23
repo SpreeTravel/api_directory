@@ -1,0 +1,21 @@
+description: ""
+type: OAuth 2.0
+describedBy: 
+  headers: 
+    Authorization: 
+      description: |
+        Used to send a valid OAuth 2 access token.
+      example: Bearer ACCESS_TOKEN
+settings: 
+  authorizationUri: https://connect.squareup.com/oauth2/authorize
+  authorizationGrants: [ code ]
+  scopes: 
+    - MERCHANT_PROFILE_READ
+    - PAYMENTS_READ
+    - PAYMENTS_WRITE
+    - SETTLEMENTS_READ
+    - BANK_ACCOUNTS_READ
+    - ITEMS_READ
+    - ITEMS_WRITE
+    - ORDERS_READ
+    - ORDERS_WRITE

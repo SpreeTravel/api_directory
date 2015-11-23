@@ -1,0 +1,17 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "remove_fixed_ip" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "address" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

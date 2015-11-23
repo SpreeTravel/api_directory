@@ -1,0 +1,22 @@
+{
+  "actionLinks" : [
+    {
+      "actionType" : "Api" ,
+      "labelKey" : "Like" ,
+      "groupDefault" : "true" ,
+      "actionUrl" : "https://test.com/this" ,
+      "method" : "HttpPost" ,
+      "requiresConfirmation" : "false"
+    } , {
+      "actionType" : "Api" ,
+      "labelKey" : "Unlike" ,
+      "groupDefault" : "false" ,
+      "actionUrl" : "https://test.com/that" ,
+      "method" : "HttpPost" ,
+      "requiresConfirmation" : "false"
+    }
+  ] ,
+  "executionsAllowed" : "OncePerUser" ,
+  "expirationDate" : "2014-07-07T23:59:11.168Z" ,
+  "category" : "Primary"
+}

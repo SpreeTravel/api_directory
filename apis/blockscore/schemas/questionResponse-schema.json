@@ -1,0 +1,81 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "object" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "created_at" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "updated_at" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "livemode" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "person_id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "score" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "expired" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "time_limit" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "questions" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "id" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "question" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "answers" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "id" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "answer" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

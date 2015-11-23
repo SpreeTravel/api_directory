@@ -1,0 +1,36 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "cells" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "columnId" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "value" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "hyperlink" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "url" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

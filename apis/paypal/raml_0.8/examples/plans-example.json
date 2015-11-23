@@ -1,0 +1,192 @@
+{
+  "plans" : [
+    {
+      "id" : "P-8DY604244K970170GOALWR3I" ,
+      "state" : "CREATED" ,
+      "name" : "Fast Speed Plan" ,
+      "description" : "Template creation." ,
+      "type" : "FIXED" ,
+      "payee" : {
+        "merchant_id" : "1515831003405719294"
+      } ,
+      "create_time" : "2014-06-06T07:32:00.877Z" ,
+      "update_time" : "2014-06-06T07:32:00.877Z" ,
+      "links" : [
+        {
+          "href" : "https://api.sandbox.paypal.com/v1/payments/billing-plans/P-8DY604244K970170GOALWR3I" ,
+          "rel" : "self" ,
+          "method" : "GET"
+        }
+      ]
+    } , {
+      "id" : "P-5DG449941S849481HOANAHEY" ,
+      "state" : "CREATED" ,
+      "name" : "Fast Speed Plan" ,
+      "description" : "Template creation." ,
+      "type" : "INFINITE" ,
+      "payee" : {
+        "merchant_id" : "1515831003405719294"
+      } ,
+      "create_time" : "2014-06-06T07:34:51.539Z" ,
+      "update_time" : "2014-06-06T07:34:51.539Z" ,
+      "links" : [
+        {
+          "href" : "https://api.sandbox.paypal.com/v1/payments/billing-plans/P-5DG449941S849481HOANAHEY" ,
+          "rel" : "self" ,
+          "method" : "GET"
+        }
+      ]
+    } , {
+      "id" : "P-72813841X1545245COAM5OAQ" ,
+      "state" : "CREATED" ,
+      "name" : "Fast Speed Plan" ,
+      "description" : "Template creation." ,
+      "type" : "INFINITE" ,
+      "payee" : {
+        "merchant_id" : "1515831003405719294"
+      } ,
+      "create_time" : "2014-06-06T07:34:40.130Z" ,
+      "update_time" : "2014-06-06T07:34:40.130Z" ,
+      "links" : [
+        {
+          "href" : "https://api.sandbox.paypal.com/v1/payments/billing-plans/P-72813841X1545245COAM5OAQ" ,
+          "rel" : "self" ,
+          "method" : "GET"
+        }
+      ]
+    } , {
+      "id" : "P-01D75598YC3824520OAMZ44Q" ,
+      "state" : "CREATED" ,
+      "name" : "Fast Speed Plan" ,
+      "description" : "Template creation." ,
+      "type" : "INFINITE" ,
+      "payee" : {
+        "merchant_id" : "1515831003405719294"
+      } ,
+      "create_time" : "2014-06-06T07:34:25.650Z" ,
+      "update_time" : "2014-06-06T07:34:25.650Z" ,
+      "links" : [
+        {
+          "href" : "https://api.sandbox.paypal.com/v1/payments/billing-plans/P-01D75598YC3824520OAMZ44Q" ,
+          "rel" : "self" ,
+          "method" : "GET"
+        }
+      ]
+    } , {
+      "id" : "P-7T4654075U514300LOAMDWUA" ,
+      "state" : "CREATED" ,
+      "name" : "Fast Speed Plan" ,
+      "description" : "Template creation." ,
+      "type" : "INFINITE" ,
+      "payee" : {
+        "merchant_id" : "1515831003405719294"
+      } ,
+      "create_time" : "2014-06-06T07:32:54.736Z" ,
+      "update_time" : "2014-06-06T07:32:54.736Z" ,
+      "links" : [
+        {
+          "href" : "https://api.sandbox.paypal.com/v1/payments/billing-plans/P-7T4654075U514300LOAMDWUA" ,
+          "rel" : "self" ,
+          "method" : "GET"
+        }
+      ]
+    } , {
+      "id" : "P-4J557194H86981423OAAJPYY" ,
+      "state" : "CREATED" ,
+      "name" : "Fast Speed Plan" ,
+      "description" : "Template creation." ,
+      "type" : "FIXED" ,
+      "payee" : {
+        "merchant_id" : "1515831003405719294"
+      } ,
+      "create_time" : "2014-06-06T07:07:05.571Z" ,
+      "update_time" : "2014-06-06T07:07:05.571Z" ,
+      "links" : [
+        {
+          "href" : "https://api.sandbox.paypal.com/v1/payments/billing-plans/P-4J557194H86981423OAAJPYY" ,
+          "rel" : "self" ,
+          "method" : "GET"
+        }
+      ]
+    } , {
+      "id" : "P-44049660G8624215XN77ODSA" ,
+      "state" : "CREATED" ,
+      "name" : "Fast Speed Plan" ,
+      "description" : "Template creation." ,
+      "type" : "FIXED" ,
+      "payee" : {
+        "merchant_id" : "1515831003405719294"
+      } ,
+      "create_time" : "2014-06-06T07:05:13.416Z" ,
+      "update_time" : "2014-06-06T07:05:13.416Z" ,
+      "links" : [
+        {
+          "href" : "https://api.sandbox.paypal.com/v1/payments/billing-plans/P-44049660G8624215XN77ODSA" ,
+          "rel" : "self" ,
+          "method" : "GET"
+        }
+      ]
+    } , {
+      "id" : "P-7XA68785WX8747635N55DG4A" ,
+      "state" : "CREATED" ,
+      "name" : "Plan with multi pymt def" ,
+      "description" : "Plan with multiple payment definition" ,
+      "type" : "FIXED" ,
+      "payee" : {
+        "merchant_id" : "1515831003405719294"
+      } ,
+      "create_time" : "2014-06-06T04:40:18.032Z" ,
+      "update_time" : "2014-06-06T04:40:31.287Z" ,
+      "links" : [
+        {
+          "href" : "https://api.sandbox.paypal.com/v1/payments/billing-plans/P-7XA68785WX8747635N55DG4A" ,
+          "rel" : "self" ,
+          "method" : "GET"
+        }
+      ]
+    } , {
+      "id" : "P-7AB8522151191562KN5ZRZJY" ,
+      "state" : "CREATED" ,
+      "name" : "Plan with multi pymt def" ,
+      "description" : "Plan with multiple payment definition" ,
+      "type" : "FIXED" ,
+      "payee" : {
+        "merchant_id" : "1515831003405719294"
+      } ,
+      "create_time" : "2014-06-06T04:32:33.447Z" ,
+      "update_time" : "2014-06-06T04:32:33.447Z" ,
+      "links" : [
+        {
+          "href" : "https://api.sandbox.paypal.com/v1/payments/billing-plans/P-7AB8522151191562KN5ZRZJY" ,
+          "rel" : "self" ,
+          "method" : "GET"
+        }
+      ]
+    } , {
+      "id" : "P-1V9487606L2793837N4YISZI" ,
+      "state" : "CREATED" ,
+      "name" : "Fast Speed Plan" ,
+      "description" : "Template creation." ,
+      "type" : "FIXED" ,
+      "payee" : {
+        "merchant_id" : "1515831003405719294"
+      } ,
+      "create_time" : "2014-06-06T03:19:50.373Z" ,
+      "update_time" : "2014-06-06T03:19:50.373Z" ,
+      "links" : [
+        {
+          "href" : "https://api.sandbox.paypal.com/v1/payments/billing-plans/P-1V9487606L2793837N4YISZI" ,
+          "rel" : "self" ,
+          "method" : "GET"
+        }
+      ]
+    }
+  ] ,
+  "links" : [
+    {
+      "href" : "https://api.sandbox.paypal.com/v1/payments/templates?start_id=10&sort_order=desc&status=CREATED" ,
+      "rel" : "next_page" ,
+      "method" : "GET"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<magento_api>
+  <data_item>
+    <entity_id>16</entity_id>
+    <type_id>simple</type_id>
+    <sku>n2610</sku>
+    <description>The Nokia 2610 is an easy to use device that combines multiple messaging options including email, instant messaging, and more. You can even download MP3 ringtones, graphics, and games straight to the phone, or surf the Internet with Cingular's MEdia Net service. It's the perfect complement to Cingular service for those even remotely interested in mobile Web capabilities in an affordable handset.
+Design
+Compact and stylish, the 2610 features a candybar design sporting a bright 128 x 128 pixel display capable of displaying over 65,000 colors. Most of the phone's features and on-screen menus are controlled by a center toggle on the control pad. A standard hands-free headphone jack is provided, as are volume control keys, and there's even a "Go-To" button that can be assigned by the user for quick access to favorite applications. Lastly, the included speakerphone allows you to talk handsfree, and because the phone sports an internal antenna, there's nothing to snag or break off.
+</description>
+    <meta_keyword>Nokia 2610, cell, phone, </meta_keyword>
+    <short_description>The words "entry level" no longer mean "low-end," especially when it comes to the Nokia 2610. Offering advanced media and calling features without breaking the bank</short_description>
+    <name>Nokia 2610 Phone</name>
+    <meta_title>Nokia 2610</meta_title>
+    <meta_description>Offering advanced media and calling features without breaking the bank, The Nokia 2610 is an easy to use</meta_description>
+    <regular_price_with_tax>149.99</regular_price_with_tax>
+    <regular_price_without_tax>149.99</regular_price_without_tax>
+    <final_price_with_tax>149.99</final_price_with_tax>
+    <final_price_without_tax>149.99</final_price_without_tax>
+    <is_saleable>1</is_saleable>
+    <image_url>http://magentohost/imageulr/nokia.jpg</image_url>
+  </data_item>
+  <data_item>
+    <entity_id>17</entity_id>
+    <type_id>simple</type_id>
+    <sku>bb8100</sku>
+    <description> Like the BlackBerry 7105t, the BlackBerry 8100 Pearl is
+The BlackBerry 8100 Pearl sports a large 240 x 260 screen that supports over 65,000 colors-- plenty of real estate to view your e-mails, Web browser content, messaging sessions, and attachments. The venerable BlackBerry trackwheel has been replaced on this model with an innovative four-way trackball placed below the screen. On the rear of the handheld, you'll find a 1.3-megapixel camera and a self portrait mirror. The handheld's microSD memory card slot is located inside the device, behind the battery. There's also a standard 2.5mm headset jack that can be used with the included headset, as well as a mini-USB port for data connectivity.</description>
+    <meta_keyword>Blackberry, 8100, pearl, cell, phone</meta_keyword>
+    <short_description>The BlackBerry 8100 Pearl is a departure from the form factor of previous BlackBerry devices. This BlackBerry handset is far more phone-like, and RIM's engineers have managed to fit a QWERTY keyboard onto the handset's slim frame.</short_description>
+    <name>BlackBerry 8100 Pearl</name>
+    <meta_title>BlackBerry 8100 Pearl</meta_title>
+    <meta_description>BlackBerry 8100 Pearl sports a large 240 x 260 screen that supports over 65,000 colors-- plenty of real estate to view your e-mails, Web browser content, messaging sessions, and attachments.</meta_description>
+    <regular_price_with_tax>349.99</regular_price_with_tax>
+    <regular_price_without_tax>349.99</regular_price_without_tax>
+    <final_price_with_tax>349.99</final_price_with_tax>
+    <final_price_without_tax>349.99</final_price_without_tax>
+    <is_saleable>1</is_saleable>
+    <image_url>http://magentohost/imageulr/blackberry.jpg</image_url>
+  </data_item>
+</magento_api>

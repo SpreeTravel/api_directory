@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "response": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "version": {
+          "required": false,
+          "type": "string"
+        },
+        "termsofService": {
+          "required": false,
+          "type": "string"
+        },
+        "features": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "astronomy": {
+              "required": false,
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "moon_phase": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "percentIlluminated": {
+          "required": false,
+          "type": "string"
+        },
+        "ageOfMoon": {
+          "required": false,
+          "type": "string"
+        },
+        "current_time": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "hour": {
+              "required": false,
+              "type": "string"
+            },
+            "minute": {
+              "required": false,
+              "type": "string"
+            }
+          }
+        },
+        "sunrise": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "hour": {
+              "required": false,
+              "type": "string"
+            },
+            "minute": {
+              "required": false,
+              "type": "string"
+            }
+          }
+        },
+        "sunset": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "hour": {
+              "required": false,
+              "type": "string"
+            },
+            "minute": {
+              "required": false,
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

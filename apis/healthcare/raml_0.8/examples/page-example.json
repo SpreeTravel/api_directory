@@ -1,0 +1,18 @@
+{
+  "published" : true ,
+  "layout" : "basic-full-page" ,
+  "lang" : "en" ,
+  "experience" : "learn" ,
+  "url" : "/developers" ,
+  "title" : "Developers" ,
+  "content" : "<h1>HealthCare.gov for Developers</h1>\r\n\r\n<p>We're making our source code freely available on GitHub. All of our educational content about the <a href=\"/marketplace/individual\">Health Insurance Marketplace</a> is available in machine-readable formats so that innovators, entrepreneurs, and partners can turn it into new products and services.</p>\r\n\r\n<h2>Open Source and Accessible</h2>\r\n\r\n<p><strong>All content is available through an API.</strong> Everyone can use the API to embed content from HealthCare.gov. As official content gets updated on HealthCare.gov, the new content will update automatically and appear on websites using the HealthCare.gov API.</p>\r\n\r\n<p>From day one, we embraced the principles of open data, universal access, and accessibility through simplicity. We produce standards compliant code to make our content <a href=\"/accessibility\">accessible</a> to people with disabilities.</p>\r\n\r\n<h2>HealthCare.gov Content API</h2>\r\n" ,
+  "date" : "2013-06-12 00:00:00 -0400" ,
+  "tags" : [
+  ] ,
+  "sort" : 0 ,
+  "id" : "/developers" ,
+  "categories" : [
+  ] ,
+  "excerpt" : "<h1>HealthCare.gov for Developers</h1>\r\n" ,
+  "path" : "_posts/2013-06-12-developers.md"
+}

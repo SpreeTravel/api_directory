@@ -1,0 +1,14 @@
+post: 
+  description: You can create a contact by sending a POST request with a JSON representation in the payload of a Contact entity to the Contacts property on either the User entity (to create a contact in the default contact folder), or on the ContactFolder entity (to create a contact in that contact folder).
+  body: 
+    application/json: 
+      schema: createContact
+      example: !include ../examples/createContact-example.json
+  responses: 
+    201: 
+      description: A successful response contains a JSON representation of the new contact.
+get: 
+  description: "You can request all contacts (or a filtered set by using the $filter OData query parameter) in the user's default contact folder via the Contacts property on the User entity. To request contacts in a non-default contact folder, use the Contacts property on the corresponding ContactFolder entity."
+  responses: 
+    200: 
+      description: The request completed successfully.

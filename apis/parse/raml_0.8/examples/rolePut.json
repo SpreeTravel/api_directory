@@ -1,0 +1,22 @@
+{
+	"users" : {
+		"__op" : "AddRelation" ,
+		"objects" : [ {
+			"__type" : "Pointer" ,
+			"className" : "_User" ,
+			"objectId" : "8TOXdXf3tz"
+		} , {
+			"__type" : "Pointer" ,
+			"className" : "_User" ,
+			"objectId" : "g7y9tkhB7O"
+		} ]
+	} ,
+	"roles" : {
+		"__op" : "RemoveRelation" ,
+		"objects" : [ {
+			"__type" : "Pointer" ,
+			"className" : "_Role" ,
+			"objectId" : "Ed1nuqPvc"
+		} ]
+	}
+}

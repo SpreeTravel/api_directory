@@ -1,0 +1,161 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "total_count" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "has_more" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "object" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "data" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "object" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "created_at" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "updated_at" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "status" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "livemode" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "phone_number" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "ip_address" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "birth_day" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "birth_month" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "birth_year" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "name_first" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "name_middle" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "name_last" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "address_street1" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "address_street2" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "address_city" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "address_subdivision" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "address_postal_code" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "address_country_code" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "document_type" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "document_value" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "note" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "details" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "address" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "address_risk" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "identification" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "date_of_birth" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "ofac" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "pep" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "question_sets" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

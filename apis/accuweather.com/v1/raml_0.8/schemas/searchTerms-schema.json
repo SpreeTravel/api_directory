@@ -1,0 +1,36 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : [
+    {
+      "type" : "object" ,
+      "properties" : {
+        "EnglishText" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "LanguageCode" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "LanguageId" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "PhraseCode" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "PhraseId" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Text" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  ]
+}

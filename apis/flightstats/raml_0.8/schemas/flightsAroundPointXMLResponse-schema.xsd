@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="response">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="appendix" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="flightPositions" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="flightPosition" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="flightId" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="callsign" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="heading" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                    <xsd:element name="source" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="positions" minOccurs="0" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="position" maxOccurs="unbounded">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="lon" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                                <xsd:element name="lat" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                                <xsd:element name="speedMph" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                                <xsd:element name="altitudeFt" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                                <xsd:element name="source" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                                <xsd:element name="date" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="request" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="url" minOccurs="0" maxOccurs="1" type="xsd:anyURI"/>
+              <xsd:element name="latitude" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="requested" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                    <xsd:element name="interpreted" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="longitude" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="requested" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                    <xsd:element name="interpreted" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="radiusMiles" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="requested" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="interpreted" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="maxFlights" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="extendedOptions" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

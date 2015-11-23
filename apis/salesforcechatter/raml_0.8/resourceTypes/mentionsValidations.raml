@@ -1,0 +1,24 @@
+head: 
+  description: Information about whether the specified mentions are valid for the context user. For example, the context user can’t mention private groups he doesn’t belong to. If such a group were included in the list of mention validations, the hasErrors property of the Mention Validations response body would be true and the group would have a validationStatus of Disallowed in its mention validation.
+  responses: 
+    200: 
+get: 
+  description: Information about whether the specified mentions are valid for the context user. For example, the context user can’t mention private groups he doesn’t belong to. If such a group were included in the list of mention validations, the hasErrors property of the Mention Validations response body would be true and the group would have a validationStatus of Disallowed in its mention validation.
+  queryParameters: 
+    parentId: 
+      description: The feed item parent ID (for new feed items) or feed item ID (for comments).
+      required: true
+    recordIds: 
+      description: A comma separated list of IDs to be mentioned. The maximum value is 25.
+      required: true
+    visibility: 
+      description: |
+        Specifies the type of users who can see a feed item.
+        AllUsers—Visibility is not limited to internal users.
+        InternalUsers—Visibility is limited to internal users.
+      required: true
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: mentionValidationResponse

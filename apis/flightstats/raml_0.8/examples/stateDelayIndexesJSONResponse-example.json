@@ -1,0 +1,92 @@
+{
+  "request" : {
+    "state" : {
+      "requested" : "IL" ,
+      "interpreted" : "IL"
+    } ,
+    "url" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/state/IL" ,
+    "classification" : {
+    } ,
+    "score" : {
+    }
+  } ,
+  "delayIndexes" : [
+    {
+      "airport" : {
+        "fs" : "MLI" ,
+        "iata" : "MLI" ,
+        "icao" : "KMLI" ,
+        "faa" : "MLI" ,
+        "name" : "Quad City International Airport" ,
+        "street1" : "2200 69th Ave." ,
+        "city" : "Moline" ,
+        "cityCode" : "MLI" ,
+        "stateCode" : "IL" ,
+        "postalCode" : "61265" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Chicago" ,
+        "weatherZone" : "ILZ015" ,
+        "localTime" : "2015-04-28T00:48:07.672" ,
+        "utcOffsetHours" : -5 ,
+        "latitude" : 41.453897 ,
+        "longitude" : -90.506111 ,
+        "elevationFeet" : 590 ,
+        "classification" : 3 ,
+        "active" : true ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/MLI?codeType=fs"
+      } ,
+      "rawScore" : 0 ,
+      "normalizedScore" : 0 ,
+      "dateStart" : "2015-04-28T04:30:00.000Z" ,
+      "dateEnd" : "2015-04-28T07:30:00.000Z" ,
+      "flights" : 0 ,
+      "observations" : 0 ,
+      "canceled" : 0 ,
+      "onTime" : 0 ,
+      "delayed15" : 0 ,
+      "delayed30" : 0 ,
+      "delayed45" : 0 ,
+      "delta" : 0
+    } , {
+      "airport" : {
+        "fs" : "RFD" ,
+        "iata" : "RFD" ,
+        "icao" : "KRFD" ,
+        "faa" : "RFD" ,
+        "name" : "Chicago Rockford International Airport" ,
+        "street1" : "2 Airport Cir" ,
+        "city" : "Rockford" ,
+        "cityCode" : "RFD" ,
+        "stateCode" : "IL" ,
+        "postalCode" : "61109" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Chicago" ,
+        "weatherZone" : "ILZ003" ,
+        "localTime" : "2015-04-28T00:48:07.672" ,
+        "utcOffsetHours" : -5 ,
+        "latitude" : 42.201748 ,
+        "longitude" : -89.095372 ,
+        "elevationFeet" : 732 ,
+        "classification" : 4 ,
+        "active" : true ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/RFD?codeType=fs"
+      } ,
+      "rawScore" : 0 ,
+      "normalizedScore" : 0 ,
+      "dateStart" : "2015-04-28T04:30:00.000Z" ,
+      "dateEnd" : "2015-04-28T07:30:00.000Z" ,
+      "flights" : 1 ,
+      "observations" : 1 ,
+      "canceled" : 0 ,
+      "onTime" : 1 ,
+      "delayed15" : 0 ,
+      "delayed30" : 0 ,
+      "delayed45" : 0 ,
+      "delta" : 0
+    }
+  ]
+}

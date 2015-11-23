@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "array",
+  "items": {
+    "required": false,
+    "type": "object",
+    "properties": {
+      "count": {
+        "required": false,
+        "type": "integer"
+      },
+      "has_synonyms": {
+        "required": false,
+        "type": "boolean"
+      },
+      "is_moderator_only": {
+        "required": false,
+        "type": "boolean"
+      },
+      "is_required": {
+        "required": false,
+        "type": "boolean"
+      },
+      "last_activity_date": {
+        "required": false,
+        "type": "integer"
+      },
+      "name": {
+        "required": false,
+        "type": "string"
+      },
+      "synonyms": {
+        "required": false,
+        "type": "array"
+      },
+      "user_id": {
+        "required": false,
+        "type": "integer"
+      }
+    }
+  }
+}

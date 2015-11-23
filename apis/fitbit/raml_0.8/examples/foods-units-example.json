@@ -1,0 +1,12 @@
+[
+    {
+        "id":1,
+        "name":"almond",
+        "plural":"almonds"
+    },
+    {
+        "id":2,
+        "name":"anchovy",
+        "plural":"anchovies"
+    }
+]

@@ -1,0 +1,80 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "request" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "callback" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "value" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "balance" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "ltv" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "output" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "message" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "text" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "code" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "response" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "loanAmount" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "loanAmountPairs" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "ltv" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "loanAmount" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        } ,
+        "result" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

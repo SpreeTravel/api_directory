@@ -1,0 +1,36 @@
+[
+  {
+    "Name" : "Lawn Mowing Forecast" ,
+    "ID" : 28 ,
+    "Ascending" : true ,
+    "LocalDateTime" : "2013-02-07T07:00:00-05:00" ,
+    "EpochDateTime" : 1360213200 ,
+    "Value" : 0 ,
+    "Category" : "Poor" ,
+    "CategoryValue" : 1 ,
+    "MobileLink" : "http://m.accuweather.com/en/us/state-college-pa/16801/lawnmowing/335315?lang=en-us" ,
+    "Link" : "http://www.accuweather.com/en/us/state-college-pa/16801/lawn-garden-weather/335315?lang=en-us"
+  } , {
+    "Name" : "Field Readiness Forecast" ,
+    "ID" : 32 ,
+    "Ascending" : true ,
+    "LocalDateTime" : "2013-02-07T07:00:00-05:00" ,
+    "EpochDateTime" : 1360213200 ,
+    "Value" : 0 ,
+    "Category" : "Poor" ,
+    "CategoryValue" : 1 ,
+    "MobileLink" : "http://m.accuweather.com/en/us/state-college-pa/16801/farming-field-readiness/335315?lang=en-us" ,
+    "Link" : null
+  } , {
+    "Name" : "Soil Moisture Forecast" ,
+    "ID" : 34 ,
+    "Ascending" : true ,
+    "LocalDateTime" : "2013-02-07T07:00:00-05:00" ,
+    "EpochDateTime" : 1360213200 ,
+    "Value" : 4 ,
+    "Category" : "Fair" ,
+    "CategoryValue" : 2 ,
+    "MobileLink" : "http://m.accuweather.com/en/us/state-college-pa/16801/soil-moisture/335315?lang=en-us" ,
+    "Link" : null
+  }
+]

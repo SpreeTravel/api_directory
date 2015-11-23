@@ -1,0 +1,14 @@
+{
+  "href" : "https://api.stormpath.com/v1/tenants/Gh9238fksJlsieJkPkQuW/directories" ,
+  "offset" : 0 ,
+  "limit" : 25 ,
+  "items" : [
+    {
+      "href" : "https://api.stormpath.com/v1/directories/bckhcGMXQDujIXpbCDRb2Q"
+    } , {
+      "href" : "https://api.stormpath.com/v1/directories/lIKeabOss8w9fJf0fJfb34"
+    } , {
+      "href" : "https://api.stormpath.com/v1/directories/Hfjks7kj9sfKfh9fhsPifa"
+    }
+  ]
+}

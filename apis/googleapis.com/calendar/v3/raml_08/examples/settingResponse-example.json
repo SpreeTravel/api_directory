@@ -1,0 +1,6 @@
+{
+  "kind" : "calendar#setting" ,
+  "etag" : "etag" ,
+  "id" : "string" ,
+  "value" : "string"
+}

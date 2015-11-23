@@ -1,0 +1,24 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="geonames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="geoname" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="toponymName"/>
+              <xs:element type="xs:string" name="name"/>
+              <xs:element type="xs:float" name="lat"/>
+              <xs:element type="xs:float" name="lng"/>
+              <xs:element type="xs:int" name="geonameId"/>
+              <xs:element type="xs:string" name="countryCode"/>
+              <xs:element type="xs:string" name="countryName"/>
+              <xs:element type="xs:string" name="fcl"/>
+              <xs:element type="xs:string" name="fcode"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="style"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

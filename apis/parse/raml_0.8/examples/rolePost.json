@@ -1,0 +1,24 @@
+{
+	"name" : "Moderators" ,
+	"ACL" : {
+		"*" : {
+			"read" : true
+		}
+	} ,
+	"roles" : {
+		"__op" : "AddRelation" ,
+		"objects" : [ {
+			"__type" : "Pointer" ,
+			"className" : "_Role" ,
+			"objectId" : "Ed1nuqPvc"
+		} ]
+	} ,
+	"users" : {
+		"__op" : "AddRelation" ,
+		"objects" : [ {
+			"__type" : "Pointer" ,
+			"className" : "_User" ,
+			"objectId" : "8TOXdXf3tz"
+		} ]
+	}
+}

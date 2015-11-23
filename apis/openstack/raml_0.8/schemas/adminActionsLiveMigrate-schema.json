@@ -1,0 +1,25 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "migrate_live" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "host" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "block_migration" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "disk_over_commit" : {
+          "type" : "boolean" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

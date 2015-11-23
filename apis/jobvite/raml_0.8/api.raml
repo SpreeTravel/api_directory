@@ -1,0 +1,116 @@
+#%RAML 0.8
+title: Jobvite API v1
+version: v1
+baseUri: https://api.jobvite.com/{version}
+mediaType: application/json
+schemas:
+  - candidate: !include schemas/candidate-schema.xsd
+  - employee: !include schemas/employee-schema.json
+  - job: !include schemas/job-schema.json
+  - jobXml: !include schemas/jobXml-schema.xsd
+  - updateCandidates: !include schemas/updateCandidates-schema.json
+  - jobFeed: !include schemas/jobFeed-schema.json
+  - newHiresUnableConnect: !include schemas/newHiresUnableConnect-schema.xsd
+  - employeeXml: !include schemas/employeeXml-schema.xsd
+traits:
+  - candidateGet: !include traits/candidateGet.raml
+/candidate: 
+  description: |
+    This service can be used to get information about candidates and new hires with the
+    following actions. We will return up to 500 candidates. Please note that this API returns HR-XML.
+  get: 
+    is: [ candidateGet ]
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: candidate
+            example: !include examples/candidatesOrNewHires-example.xml
+      201: 
+        description: Unable to open connection.
+        body: 
+          application/xml: 
+            schema: newHiresUnableConnect
+            example: !include examples/newHiresUnableConnect-example.xml
+  /updateCandidates: 
+    post: 
+      body: 
+        application/json: 
+          schema: updateCandidates
+          example: !include examples/updateCandidates-example.json
+/employee: 
+  description: This service is used to keep your employee roster in Jobvite up to date.
+  post: 
+    description: This service is used to keep your employee roster in Jobvite up to date.
+    body: 
+      application/json: 
+        schema: employee
+        example: !include examples/employee-example.json
+      application/xml: 
+        schema: employeeXml
+        example: !include examples/employeeXml-example.xml
+    responses: 
+      200: 
+/job: 
+  description: |
+    This service can be used to create new requisitions in Jobvite, or synchronize/update requisitions in Jobvite from
+    your external system.
+  post: 
+    body: 
+      application/json: 
+        schema: job
+        example: !include examples/job-example.json
+      application/xml: 
+        schema: jobXml
+        example: !include examples/jobXml-example.xml
+/jobFeed: 
+  get: 
+    queryParameters: 
+      api: 
+        description: The API key issued by Jobvite.
+        required: true
+        example: api=<api_key>
+      sc: 
+        description: The secret for this service, issued by Jobvite.
+        required: true
+        example: sc=<secret>
+      companyId: 
+        description: You can find your company ID by looking in Admin/Profile and looking under the Career Site section. The company ID is the numbers and letters after the c= in the url.
+        required: true
+        example: companyId=dah4p0sl
+      start: 
+        description: Pagination Option. Denotes the starting index.
+        default: 1
+        example: start=10
+      count: 
+        description: Pagination Option. Denotes the number of jobs from the starting index.
+        default: 100
+        example: count=100
+      type: 
+        description: Job type, configured in Admin
+        example: type=full-time
+      availableTo: 
+        description: Publishing settings for your jobs -- on your career site or only available internally.
+        default: external
+        example: availableTo=internal
+      category: 
+        description: The categories used on your career site, configured in Admin.
+        example: category=Finance
+      location: 
+        description: City, state, Country
+        example: location=Burlingame, CA, USA
+      region: 
+        description: Region, configured in Admin
+        example: region=Europe
+      department: 
+        description: Jobs by department
+        example: department=Human Resource
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: jobFeed
+            example: !include examples/jobFeed-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

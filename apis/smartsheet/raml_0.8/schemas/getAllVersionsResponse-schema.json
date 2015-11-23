@@ -1,0 +1,32 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : [
+    {
+      "type" : "object" ,
+      "properties" : {
+        "id" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "attachmentType" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "mimeType" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "createdAt" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  ]
+}

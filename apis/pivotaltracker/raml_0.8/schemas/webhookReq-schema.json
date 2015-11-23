@@ -1,0 +1,15 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "webhook_url" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "webhook_version" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

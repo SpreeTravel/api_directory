@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "0": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "created": {
+          "required": false,
+          "type": "integer"
+        },
+        "discussion_count": {
+          "required": false,
+          "type": "integer"
+        },
+        "group": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "id": {
+              "required": false,
+              "type": "integer"
+            }
+          }
+        },
+        "id": {
+          "required": false,
+          "type": "integer"
+        },
+        "latest_reply": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "created": {
+              "required": false,
+              "type": "integer"
+            },
+            "member": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "name": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "name": {
+          "required": false,
+          "type": "string"
+        },
+        "post_count": {
+          "required": false,
+          "type": "integer"
+        },
+        "updated": {
+          "required": false,
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

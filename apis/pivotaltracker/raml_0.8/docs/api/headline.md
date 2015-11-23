@@ -1,0 +1,1 @@
+Tracker is a simple, story-based project planning tool that allows teams to collaborate and react instantly to real-world changes. It's based on agile software development methods, but it can be used on a variety of types of projects. Tracker frees you up to focus on getting things done, without getting bogged down keeping your plans in sync with reality.

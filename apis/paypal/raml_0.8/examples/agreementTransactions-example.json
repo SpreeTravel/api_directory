@@ -1,0 +1,49 @@
+{
+  "agreement_transaction_list" : [
+    {
+      "transaction_id" : "I-XEV0M1AYVDVX" ,
+      "status" : "Created" ,
+      "transaction_type" : "Recurring Payment" ,
+      "payer_email" : "" ,
+      "payer_name" : "Jose Ramirez" ,
+      "time_stamp" : "2014-06-09T09:29:36Z" ,
+      "time_zone" : "GMT"
+    } , {
+      "transaction_id" : "928415314Y5640008" ,
+      "status" : "Completed" ,
+      "transaction_type" : "Recurring Payment" ,
+      "amount" : {
+        "currency" : "USD" ,
+        "value" : "1.00"
+      } ,
+      "fee_amount" : {
+        "currency" : "USD" ,
+        "value" : "-0.33"
+      } ,
+      "net_amount" : {
+        "currency" : "USD" ,
+        "value" : "0.67"
+      } ,
+      "payer_email" : "sai@paypal.com" ,
+      "payer_name" : "Jose Ramirez" ,
+      "time_stamp" : "2014-06-09T09:42:47Z" ,
+      "time_zone" : "GMT"
+    } , {
+      "transaction_id" : "I-XEV0M1AYVDVX" ,
+      "status" : "Suspended" ,
+      "transaction_type" : "Recurring Payment" ,
+      "payer_email" : "" ,
+      "payer_name" : "Jose Ramirez" ,
+      "time_stamp" : "2014-06-09T11:18:34Z" ,
+      "time_zone" : "GMT"
+    } , {
+      "transaction_id" : "I-XEV0M1AYVDVX" ,
+      "status" : "Reactivated" ,
+      "transaction_type" : "Recurring Payment" ,
+      "payer_email" : "" ,
+      "payer_name" : "Jose Ramirez" ,
+      "time_stamp" : "2014-06-09T11:18:48Z" ,
+      "time_zone" : "GMT"
+    }
+  ]
+}

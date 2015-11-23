@@ -1,0 +1,19 @@
+get: 
+  description: To get attachments, send a GET request to the Attachments property on the entity that contains the attachments.
+  responses: 
+    200: 
+      description: The request completed successfully.
+delete: 
+  description: To delete an attachment, send a DELETE request to the URL of the Attachment entity.
+  responses: 
+    200: 
+      description: The request completed successfully.
+post: 
+  description: To add an attachment to an item, send a POST request to the Attachments property on the item with a JSON representation of the new attachment in the request payload. The following example adds an item attachment to an existing message.
+  body: 
+    application/json: 
+      schema: newAttachment
+      example: !include ../examples/newAttachment-example.json
+  responses: 
+    201: 
+      description: The request completed successfully. The server responds with a JSON representation of each attachment. Note that both FileAttachment entities and ItemAttachment entities are returned, as applicable. You can tell them apart by checking the @odata.type property on the attachment entity.

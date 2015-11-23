@@ -1,0 +1,8 @@
+{
+  "updateRules" : [
+    {
+      "targetFieldId" : "undefined"
+    }
+  ] ,
+  "scope" : "global"
+}

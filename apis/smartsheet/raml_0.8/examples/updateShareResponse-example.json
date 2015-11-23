@@ -1,0 +1,9 @@
+{
+  "message" : "SUCCESS" ,
+  "result" : {
+    "accessLevel" : "VIEWER" ,
+    "email" : "jane.doe@smartsheet.com" ,
+    "id" : 6834973207488388
+  } ,
+  "resultCode" : 0
+}

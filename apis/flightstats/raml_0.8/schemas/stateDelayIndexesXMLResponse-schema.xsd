@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="response">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="delayIndexes" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="delayIndex" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="airport" minOccurs="0" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="fs" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                          <xsd:element name="iata" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                          <xsd:element name="icao" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                          <xsd:element name="faa" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                          <xsd:element name="name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                          <xsd:element name="street1" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                          <xsd:element name="city" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                          <xsd:element name="cityCode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                          <xsd:element name="stateCode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                          <xsd:element name="postalCode" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                          <xsd:element name="countryCode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                          <xsd:element name="countryName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                          <xsd:element name="regionName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                          <xsd:element name="timeZoneRegionName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                          <xsd:element name="weatherZone" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                          <xsd:element name="localTime" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                          <xsd:element name="utcOffsetHours" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                          <xsd:element name="latitude" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                          <xsd:element name="longitude" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                          <xsd:element name="elevationFeet" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                          <xsd:element name="classification" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                          <xsd:element name="active" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+                          <xsd:element name="weatherUrl" minOccurs="0" maxOccurs="1" type="xsd:anyURI"/>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="rawScore" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                    <xsd:element name="normalizedScore" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                    <xsd:element name="dateStart" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="dateEnd" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="flights" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="observations" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="canceled" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="onTime" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="delayed15" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="delayed30" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="delayed45" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="delta" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="request" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="url" minOccurs="0" maxOccurs="1" type="xsd:anyURI"/>
+              <xsd:element name="classification" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="score" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="state" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="requested" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="interpreted" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,60 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "kind" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "nextPageToken" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "items" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "kind" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "post" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "post_user_info" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "kind" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "userId" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "blogId" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "postId" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "hasEditAccess" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

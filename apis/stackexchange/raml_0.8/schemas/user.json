@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "about_me": {
+      "required": false,
+      "type": "string"
+    },
+    "accept_rate": {
+      "required": false,
+      "type": "integer"
+    },
+    "account_id": {
+      "required": false,
+      "type": "integer"
+    },
+    "age": {
+      "required": false,
+      "type": "integer"
+    },
+    "answer_count": {
+      "required": false,
+      "type": "integer"
+    },
+    "badge_counts": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "bronze": {
+          "required": false,
+          "type": "integer"
+        },
+        "gold": {
+          "required": false,
+          "type": "integer"
+        },
+        "silver": {
+          "required": false,
+          "type": "integer"
+        }
+      }
+    },
+    "creation_date": {
+      "required": false,
+      "type": "integer"
+    },
+    "display_name": {
+      "required": false,
+      "type": "string"
+    },
+    "down_vote_count": {
+      "required": false,
+      "type": "integer"
+    },
+    "is_employee": {
+      "required": false,
+      "type": "boolean"
+    },
+    "last_access_date": {
+      "required": false,
+      "type": "integer"
+    },
+    "last_modified_date": {
+      "required": false,
+      "type": "integer"
+    },
+    "link": {
+      "required": false,
+      "type": "string"
+    },
+    "location": {
+      "required": false,
+      "type": "string"
+    },
+    "profile_image": {
+      "required": false,
+      "type": "string"
+    },
+    "question_count": {
+      "required": false,
+      "type": "integer"
+    },
+    "reputation": {
+      "required": false,
+      "type": "integer"
+    },
+    "reputation_change_day": {
+      "required": false,
+      "type": "integer"
+    },
+    "reputation_change_month": {
+      "required": false,
+      "type": "integer"
+    },
+    "reputation_change_quarter": {
+      "required": false,
+      "type": "integer"
+    },
+    "reputation_change_week": {
+      "required": false,
+      "type": "integer"
+    },
+    "reputation_change_year": {
+      "required": false,
+      "type": "integer"
+    },
+    "timed_penalty_date": {
+      "required": false,
+      "type": "integer"
+    },
+    "up_vote_count": {
+      "required": false,
+      "type": "integer"
+    },
+    "user_id": {
+      "required": false,
+      "type": "integer"
+    },
+    "user_type": {
+      "required": false,
+      "type": "string"
+    },
+    "view_count": {
+      "required": false,
+      "type": "integer"
+    },
+    "website_url": {
+      "required": false,
+      "type": "string"
+    }
+  }
+}

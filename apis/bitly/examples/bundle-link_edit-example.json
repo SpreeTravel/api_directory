@@ -1,0 +1,41 @@
+{
+  "data": {
+    "bundle": {
+      "bundle_link": "http://bitly.com/bundles/bitlyapioauthdemo/1",
+      "bundle_owner": "bitlyapioauthdemo",
+      "created_ts": 1332175561,
+      "description": "",
+      "last_modified_ts": 1332184258,
+      "links": [
+        {
+          "aggregate_link": "http://bit.ly/xx2UTg",
+          "description": "Animated GIFs 4 Lyfe!",
+          "display_order": 0,
+          "link": "http://bit.ly/FWfWFP",
+          "long_url": "http://bukk.it/asdf.gif",
+          "title": "AAAAHHHH"
+        },
+        {
+          "aggregate_link": "http://bit.ly/K49Ze",
+          "description": "O LOOK IT'S KEYBOARD CAT",
+          "display_order": 1,
+          "link": "http://bit.ly/w8gWsd",
+          "long_url": "http://www.youtube.com/watch?v=J---aiyznGQ",
+          "title": "Keyboard Cat!"
+        },
+        {
+          "aggregate_link": "http://bit.ly/gHwqEE",
+          "description": "",
+          "display_order": 2,
+          "link": "http://bit.ly/wc5dQK",
+          "long_url": "http://icanhascheezburger.com/lolrus/",
+          "title": "I AM TEH LOLRUS"
+        }
+      ],
+      "private": false,
+      "title": "Here is a Bundle of Links!"
+    }
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

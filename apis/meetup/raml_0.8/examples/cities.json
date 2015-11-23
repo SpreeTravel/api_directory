@@ -1,0 +1,30 @@
+{
+  "results": [
+    {
+      "id": 0,
+      "zip": "zip 0",
+      "lon": 1.0,
+      "distance": 1.0,
+      "member_count": 0,
+      "name_string": "name_string 0",
+      "state": 0,
+      "ranking": "ranking 0",
+      "lat": 1.0,
+      "country": "country 0",
+      "city": "city 0"
+    },
+    {
+      "id": 1,
+      "zip": "zip 1",
+      "lon": 1.0,
+      "distance": 1.0,
+      "member_count": 1,
+      "name_string": "name_string 1",
+      "state": 1,
+      "ranking": "ranking 1",
+      "lat": 1.0,
+      "country": "country 1",
+      "city": "city 1"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "timeMin" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "timeMax" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "timeZone" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "groupExpansionMax" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "calendarExpansionMax" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "items" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

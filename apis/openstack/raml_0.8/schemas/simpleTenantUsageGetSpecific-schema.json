@@ -1,0 +1,100 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "tenant_usage" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "server_usages" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "ended_at" : {
+                  "type" : "object" ,
+                  "required" : false
+                } ,
+                "flavor" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "hours" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "instance_id" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "local_gb" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "memory_mb" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "started_at" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "state" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "tenant_id" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "uptime" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "vcpus" : {
+                  "type" : "number" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        } ,
+        "start" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "stop" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "tenant_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "total_hours" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "total_local_gb_usage" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "total_memory_mb_usage" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "total_vcpus_usage" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

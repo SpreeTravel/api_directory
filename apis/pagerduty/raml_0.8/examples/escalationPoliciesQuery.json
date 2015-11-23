@@ -1,0 +1,86 @@
+{
+	"escalation_policies" : [ {
+		"id" : "PAM4FGS" ,
+		"name" : "All" ,
+		"escalation_rules" : [ {
+			"id" : "PZ8X4N7" ,
+			"escalation_delay_in_minutes" : 30 ,
+			"rule_object" : {
+				"id" : "PEPV0NJ" ,
+				"name" : "Cordell Simonis" ,
+				"type" : "user" ,
+				"email" : "simonis_cordell@acme.com" ,
+				"time_zone" : "Eastern Time (US & Canada)" ,
+				"color" : "dark-slate-blue"
+			}
+		} , {
+			"id" : "POQA264" ,
+			"escalation_delay_in_minutes" : 34 ,
+			"rule_object" : {
+				"id" : "PF9KMXH" ,
+				"name" : "Layered" ,
+				"type" : "schedule"
+			}
+		} ] ,
+		"services" : [ {
+			"id" : "PBAZLIU" ,
+			"name" : "Service Alpha" ,
+			"integration_email" : "alpha@acme.pagerduty.dev" ,
+			"html_url" : "http://acme.pageduty.com/services/PBAZLIU" ,
+			"escalation_policy_id" : "PAM4FGS"
+		} , {
+			"id" : "PIJ90N7" ,
+			"name" : "Service Mail" ,
+			"integration_email" : "email_1@acme.pagerduty.dev" ,
+			"html_url" : "http://acme.pageduty.com/services/PIJ90N7" ,
+			"escalation_policy_id" : "PAM4FGS"
+		} ] ,
+		"num_loops" : 0
+	} , {
+		"id" : "P29NBY9" ,
+		"name" : "Beta" ,
+		"escalation_rules" : [ {
+			"id" : "PP3NI0M" ,
+			"escalation_delay_in_minutes" : 30 ,
+			"rule_object" : {
+				"id" : "PF9KMXH" ,
+				"name" : "Layered" ,
+				"type" : "schedule"
+			}
+		} ] ,
+		"services" : [ {
+			"id" : "P2KFHAO" ,
+			"name" : "BetaDense" ,
+			"service_key" : "665ee8b4ab8446d1b7a8675b40047a2f" ,
+			"html_url" : "http://acme.pageduty.com/services/P2KFHAO" ,
+			"escalation_policy_id" : "P29NBY9"
+		} , {
+			"id" : "PUS0KTE" ,
+			"name" : "Note of Keys" ,
+			"integration_email" : "note-of-keys@acme.pagerduty.com" ,
+			"html_url" : "http://acme.pageduty.com/services/PUS0KTE" ,
+			"escalation_policy_id" : "P29NBY9"
+		} ] ,
+		"num_loops" : 1
+	} , {
+		"id" : "PF106PL" ,
+		"name" : "Escalation Policy" ,
+		"escalation_rules" : [ {
+			"id" : "PQZKDEQ" ,
+			"escalation_delay_in_minutes" : 22 ,
+			"rule_object" : {
+				"id" : "PAD6MYW" ,
+				"name" : "Aliya Bradtke" ,
+				"type" : "user" ,
+				"email" : "bradtke.aliya@acme.com" ,
+				"time_zone" : "Eastern Time (US & Canada)" ,
+				"color" : "cayenne"
+			}
+		} ] ,
+		"services" : [ ] ,
+		"num_loops" : 2
+	} ] ,
+	"limit" : 25 ,
+	"offset" : 0 ,
+	"total" : 14
+}

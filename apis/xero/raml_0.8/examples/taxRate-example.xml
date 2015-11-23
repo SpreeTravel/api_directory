@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TaxRate>
+  <Name>Oakdale Sales Tax</Name>
+  <TaxComponents>
+    <TaxComponent>
+      <Name>State Tax</Name>
+      <Rate>7.5</Rate>
+      <IsCompound>false</IsCompound>
+    </TaxComponent>
+    <TaxComponent>
+      <Name>Local Sales Tax</Name>
+      <Rate>0.625</Rate>
+      <IsCompound>false</IsCompound>
+    </TaxComponent>
+  </TaxComponents>
+</TaxRate>

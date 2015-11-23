@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://docs.openstack.org/volume/api/v1">
+  <xsd:element name="volume_type">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="extra_specs" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="extra_spec" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:extension base="xsd:normalizedString">
+                      <xsd:attribute name="key" type="xsd:normalizedString" use="required"/>
+                    </xsd:extension>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="id" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="name" type="xsd:normalizedString" use="required"/>
+    </xsd:complexType>
+    <xsd:attribute name="id" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="name" type="xsd:normalizedString" use="required"/>
+  </xsd:element>
+</xsd:schema>

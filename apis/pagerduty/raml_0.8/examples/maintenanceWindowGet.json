@@ -1,0 +1,28 @@
+{
+	"maintenance_window" : {
+		"id" : "P9UJCMM" ,
+		"sequence_number" : 1 ,
+		"start_time" : "2012-06-16T13:00:00-04:00Z" ,
+		"end_time" : "2012-06-16T14:00:00-04:00Z" ,
+		"description" :
+		"This service is in maintenance due to a scheduled ruby 1.9 migration" ,
+		"created_by" : {
+			"id" : "PP1565R" ,
+			"name" : "John Smith" ,
+			"email" : "john@example.com" ,
+			"time_zone" : "Eastern Time (US & Canada)" ,
+			"color" : "grey20" ,
+			"role" : "user" ,
+			"avatar_url" :
+			"https://secure.gravatar.com/avatar/2e32280905f296791ed387cd0f61ec6b.png?d=mm&r=PG"
+			,
+			"user_url" : "/users/PP1565R" ,
+			"invitation_sent" : true
+		} ,
+		"services" : [ {
+			"name" : "Mail Service 12345677" ,
+			"url" : "/services/PF9KMXH" ,
+			"id" : "PF9KMXH"
+		} ]
+	}
+}

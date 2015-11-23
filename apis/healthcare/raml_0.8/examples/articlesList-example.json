@@ -1,0 +1,66 @@
+{
+  "articles" : [
+    {
+      "published" : true ,
+      "title" : "If I'm a college student, what do I need to know about the Marketplace? " ,
+      "lang" : "en" ,
+      "layout" : "basic" ,
+      "featured" : false ,
+      "bite" : "College students have several choices for health coverage. But there's no special student exemption from the penalty that people without coverage must pay." ,
+      "meta-title" : "What college students need to know about the Health Insurance Marketplace? " ,
+      "meta-description" : "Learn about the health insurance choices for college students in the Health Insurance Marketplace" ,
+      "title-short" : "College students and the Marketplace" ,
+      "topics" : [
+        "young-adults" ,
+        "the-marketplace-and-you"
+      ] ,
+      "related" : [
+        "why-should-i-have-health-coverage" ,
+        "can-i-keep-my-child-on-my-insurance-until-age-26" ,
+        "can-i-buy-a-catastrophic-plan"
+      ] ,
+      "url" : "/if-i-m-a-college-student-what-do-i-need-to-know-about-the-marketplace" ,
+      "content" : "<p>College students have several choices for health coverage. But there's no special student exemption from the penalty that people without coverage must pay.</p>\r\n<h2>If you have a student health plan</h2>\r\n\r\n<ul>\r\n<li>If you're covered by your school's student health plan, in most cases you're considered covered under the health care law. You won't have to pay the penalty that people without coverage must generally pay. Check with your student health plan to see if it qualifies as coverage under the health law.</li>\r\n<li>Even if you have access to a student health plan, you can choose to buy a health plan through the Marketplace instead. You may qualify for <a href=\"/how-can-i-save-money-on-marketplace-coverage/\">lower costs</a> based on your income. Fill out a <a href=\"/marketplace/individual/\">Marketplace application</a> to find out if you qualify for lower costs, or use our quick <a href=\"/find-premium-estimates/\">plan and cost preview tool</a> first.</li>\r\n</ul>\r\n\r\n" ,
+      "date" : "2014-01-27 00:00:00 -0500" ,
+      "tags" : [
+      ] ,
+      "sort" : 0 ,
+      "id" : "/if-i-m-a-college-student-what-do-i-need-to-know-about-the-marketplace" ,
+      "categories" : [
+      ] ,
+      "excerpt" : "<p>College students have several choices for health coverage. But there's no special student exemption from the penalty that people without coverage must pay.</p>\r\n\r\n" ,
+      "path" : "_posts/articles/2014-01-27-if-i-m-a-college-student-what-do-i-need-to-know-about-the-marketplace.md"
+    } , {
+      "published" : true ,
+      "title" : "Tengo nueva cobertura de Medicaid o CHIP" ,
+      "lang" : "es" ,
+      "layout" : "basic" ,
+      "categories" : [
+        "es"
+      ] ,
+      "featured" : false ,
+      "meta-description" : "Si usted esta actualmente inscrito en Medicaid o en el Programa de Seguro Medico para Ninos de su estado, debe saber lo siguiente." ,
+      "meta-title" : "Si tengo nueva cobertura de Medicaid o CHIP?" ,
+      "bite" : "Si usted esta actualmente inscrito en Medicaid o en el Programa de Seguro Medico para Ninos de su estado, debe saber lo siguiente" ,
+      "title-short" : "Mo utilizo mi nueva cobertura de Medicaid o CHIP?" ,
+      "topics" : [
+        "other-health-insurance-programs"
+      ] ,
+      "related" : [
+        "do-i-qualify-for-medicaid" ,
+        "what-if-my-state-is-not-expanding-medicaid" ,
+        "are-my-children-eligible-for-chip"
+      ] ,
+      "seo-keywords" : "Medicaid, CHIP, Children's Health Insurance Program, nueva cobertura de Medicaid, nueva cobertura de CHIP" ,
+      "url" : "/es/what-if-i-have-new-medicaid-or-chip-coverage" ,
+      "content" : "<p>Si usted esta actualmente inscrito en <a href=\"/es/do-i-qualify-for-medicaid/\">Medicaid</a> o en el <a href=\"/es/are-my-children-eligible-for-chip/\">Programa de Seguro Medico para Ninos</a> de su estado, debe saber lo siguiente:</p>\r\n\r\n<h2>Preguntas sobre cГіmo usar su nueva cobertura de Medicaid o CHIP</h2>\r\n\r\n<p>Use los siguientes recursos para obtener ayuda con respecto a sus preguntas de cobertura con el Programa de Seguro Medico para Ninos (CHIP), Medicaid, materiales de inscripciГіn, beneficios y proveedores:</p>",
+      "date" : "2013-12-31 00:00:00 -0500" ,
+      "tags" : [
+      ] ,
+      "sort" : 0 ,
+      "id" : "/es/what-if-i-have-new-medicaid-or-chip-coverage" ,
+      "excerpt" : "<p>Si usted esta actualmente inscrito en <a href=\"/es/do-i-qualify-for-medicaid/\">Medicaid</a> o en el <a href=\"/es/are-my-children-eligible-for-chip/\">Programa de Seguro Medico para Ninos</a> de su estado, debe saber lo siguiente:</p>\r\n\r\n" ,
+      "path" : "_posts/articles/es/2013-12-31-what-if-i-have-new-medicaid-or-chip-coverage.md"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "apiVersion" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "swaggerVersion" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "basePath" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

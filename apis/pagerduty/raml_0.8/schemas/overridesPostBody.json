@@ -1,0 +1,11 @@
+{
+	"type" : "object" ,
+	"required" : true ,
+	"$schema" : "http://json-schema.org/draft-03/schema" ,
+	"properties" : {
+		"override" : {
+			"type" : "object" ,
+			"required" : false
+		}
+	}
+}

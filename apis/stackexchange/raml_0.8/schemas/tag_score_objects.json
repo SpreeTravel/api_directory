@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "array",
+  "items": {
+    "required": false,
+    "type": "object",
+    "properties": {
+      "post_count": {
+        "required": false,
+        "type": "integer"
+      },
+      "score": {
+        "required": false,
+        "type": "integer"
+      },
+      "user": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "accept_rate": {
+            "required": false,
+            "type": "integer"
+          },
+          "badge_counts": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "bronze": {
+                "required": false,
+                "type": "integer"
+              },
+              "gold": {
+                "required": false,
+                "type": "integer"
+              },
+              "silver": {
+                "required": false,
+                "type": "integer"
+              }
+            }
+          },
+          "display_name": {
+            "required": false,
+            "type": "string"
+          },
+          "link": {
+            "required": false,
+            "type": "string"
+          },
+          "profile_image": {
+            "required": false,
+            "type": "string"
+          },
+          "reputation": {
+            "required": false,
+            "type": "integer"
+          },
+          "user_id": {
+            "required": false,
+            "type": "integer"
+          },
+          "user_type": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

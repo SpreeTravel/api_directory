@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://docs.openstack.org/common/api/v1.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <xsd:element name="extensions">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="extension" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="description" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+            </xsd:sequence>
+            <xsd:attribute name="alias" type="xsd:normalizedString" use="required"/>
+            <xsd:attribute name="updated" type="xsd:normalizedString" use="required"/>
+            <xsd:attribute name="namespace" type="xsd:anyURI" use="required"/>
+            <xsd:attribute name="name" type="xsd:normalizedString" use="required"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

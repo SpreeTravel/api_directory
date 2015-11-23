@@ -1,0 +1,98 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "_total" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "_links" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "next" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "self" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "subscriptions" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : 
+        {
+          "type" : "object" ,
+          "properties" : {
+            "_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "user" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "_id" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "logo" : {
+                  "type" : "object" ,
+                  "required" : false
+                } ,
+                "staff" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                } ,
+                "created_at" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "updated_at" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "display_name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "_links" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "self" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              }
+            } ,
+            "created_at" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "_links" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "self" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        }
+      
+    }
+  }
+}

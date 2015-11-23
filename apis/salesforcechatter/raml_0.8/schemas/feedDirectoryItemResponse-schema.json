@@ -1,0 +1,31 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "feedElementsUrl": {
+      "type": "string",
+      "required": false
+    },
+    "feedItemsUrl": {
+      "type": "string",
+      "required": false
+    },
+    "feedType": {
+      "type": "string",
+      "required": false
+    },
+    "feedUrl": {
+      "type": "string",
+      "required": false
+    },
+    "keyPrefix": {
+      "type": "string",
+      "required": false
+    },
+    "label": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

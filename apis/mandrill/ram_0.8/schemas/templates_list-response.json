@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "array",
+  "items": {
+    "required": false,
+    "type": "object",
+    "properties": {
+      "code": {
+        "required": false,
+        "type": "string"
+      },
+      "created_at": {
+        "required": false,
+        "type": "string"
+      },
+      "from_email": {
+        "required": false,
+        "type": "string"
+      },
+      "from_name": {
+        "required": false,
+        "type": "string"
+      },
+      "labels": {
+        "required": false,
+        "type": "array",
+        "items": {
+          "required": false,
+          "type": "string"
+        }
+      },
+      "name": {
+        "required": false,
+        "type": "string"
+      },
+      "publish_code": {
+        "required": false,
+        "type": "string"
+      },
+      "publish_from_email": {
+        "required": false,
+        "type": "string"
+      },
+      "publish_from_name": {
+        "required": false,
+        "type": "string"
+      },
+      "publish_name": {
+        "required": false,
+        "type": "string"
+      },
+      "publish_subject": {
+        "required": false,
+        "type": "string"
+      },
+      "publish_text": {
+        "required": false,
+        "type": "string"
+      },
+      "published_at": {
+        "required": false,
+        "type": "string"
+      },
+      "slug": {
+        "required": false,
+        "type": "string"
+      },
+      "subject": {
+        "required": false,
+        "type": "string"
+      },
+      "text": {
+        "required": false,
+        "type": "string"
+      },
+      "updated_at": {
+        "required": false,
+        "type": "string"
+      }
+    }
+  }
+}

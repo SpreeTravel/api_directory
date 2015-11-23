@@ -1,0 +1,39 @@
+{
+  "questions" : [
+    {
+      "categories" : [
+        "question"
+      ] ,
+      "tags" : [
+        "question"
+      ] ,
+      "published" : true ,
+      "title" : "What plans should I consider if I travel a lot or spend time in more than one state?" ,
+      "lang" : "en" ,
+      "url" : "/question/what-plans-should-i-consider-if-i-travel-a-lot-or-spend-time-in-more-than-one-state" ,
+      "content" : "<p>If you live in one state and work or spend a lot of time in another state, carefully check the provider directories of the plans you're thinking about buying.</p>\r\n\r\n<p>See if their networks have doctors, hospitals, and other health care providers in the places you'll be. Also check out the plan's payment policies for out-of-network care.</p>\r\n\r\n<ul>\r\n\r\n<li>Some plans have networks that cover only part of one state. Other plans have networks that cover much of the country.</li>\r\n<li>If you use a doctor or facility that's not in your plan's network, you may have to pay more for the services you get.</li>\r\n</ul>\r\n\r\n\r\n<p>Marketplace plans must have a link to a provider network directory on their website and the directory must have the most current listing of in-network providers. You can also contact  the plan to confirm your doctor or facility is part of the network.</p>\r\n\r\n<p>HealthCare.gov provides direct links to provider directories for all Marketplace plans, so you can easily tell what your plan covers.</p>\r\n" ,
+      "date" : "2014-01-17 00:00:00 -0500" ,
+      "sort" : 0 ,
+      "id" : "/question/what-plans-should-i-consider-if-i-travel-a-lot-or-spend-time-in-more-than-one-state" ,
+      "excerpt" : "<p>If you live in one state and work or spend a lot of time in another state, carefully check the provider directories of the plans you're thinking about buying.</p>\r\n" ,
+      "path" : "_posts/questions/2014-01-17-what-plans-should-i-consider-if-i-travel-a-lot-or-spend-time-in-more-than-one-state.md"
+    } , {
+      "categories" : [
+        "question"
+      ] ,
+      "tags" : [
+        "question"
+      ] ,
+      "published" : true ,
+      "title" : "Do Marketplace plans cover breastfeeding and contraception benefits?  " ,
+      "lang" : "en" ,
+      "url" : "/question/do-marketplace-plans-cover-breastfeeding-and-contraception-benefits" ,
+      "content" : "<p>Generally, yes. Learn more about <a href=\"/what-are-my-breastfeeding-benefits/\">breastfeeding</a> and <a href=\"/what-are-my-birth-control-benefits/\">contraception</a> benefits under the health care law.</p>\r\n" ,
+      "date" : "2014-01-29 00:00:00 -0500" ,
+      "sort" : 0 ,
+      "id" : "/question/do-marketplace-plans-cover-breastfeeding-and-contraception-benefits" ,
+      "excerpt" : "<p>Generally, yes. Learn more about <a href=\"/what-are-my-breastfeeding-benefits/\">breastfeeding</a> and <a href=\"/what-are-my-birth-control-benefits/\">contraception</a> benefits under the health care law.</p>\r\n" ,
+      "path" : "_posts/questions/2014-01-29-do-marketplace-plans-cover-breastfeeding-and-contraception-benefits.md"
+    }
+  ]
+}

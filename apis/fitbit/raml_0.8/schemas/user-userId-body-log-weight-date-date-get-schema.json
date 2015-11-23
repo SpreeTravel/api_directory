@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "weight": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "bmi": {
+            "required": false,
+            "type": "number"
+          },
+          "date": {
+            "required": false,
+            "type": "string"
+          },
+          "logId": {
+            "required": false,
+            "type": "integer"
+          },
+          "time": {
+            "required": false,
+            "type": "string"
+          },
+          "weight": {
+            "required": false,
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}

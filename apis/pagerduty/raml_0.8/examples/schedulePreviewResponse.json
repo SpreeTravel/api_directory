@@ -1,0 +1,158 @@
+{
+	"schedule" : {
+		"id" : null ,
+		"name" : "Tertiary" ,
+		"time_zone" : "Eastern Time (US & Canada)" ,
+		"today" : "2013-03-26" ,
+		"escalation_policies" : [ ] ,
+		"schedule_layers" : [ {
+			"name" : "Schedule Layer 1" ,
+			"rendered_schedule_entries" : [ {
+				"start" : "2013-03-27T00:00:00-04:00" ,
+				"end" : "2013-03-27T12:00:00-04:00" ,
+				"user" : {
+					"id" : "PPSFHH7" ,
+					"name" : "Bob Smith" ,
+					"email" : "bob@acme.com" ,
+					"color" : "red"
+				} ,
+				"id" : null
+			} , {
+				"start" : "2013-03-28T00:00:00-04:00" ,
+				"end" : "2013-03-28T12:00:00-04:00" ,
+				"user" : {
+					"id" : "PPSFHH7" ,
+					"name" : "Bob Smith" ,
+					"email" : "bob@acme.com" ,
+					"color" : "red"
+				} ,
+				"id" : null
+			} , {
+				"start" : "2013-03-29T00:00:00-04:00" ,
+				"end" : "2013-03-29T12:00:00-04:00" ,
+				"user" : {
+					"id" : "PPSFHH7" ,
+					"name" : "Bob Smith" ,
+					"email" : "bob@acme.com" ,
+					"color" : "red"
+				} ,
+				"id" : null
+			} , {
+				"start" : "2013-03-30T00:00:00-04:00" ,
+				"end" : "2013-03-30T12:00:00-04:00" ,
+				"user" : {
+					"id" : "PPSFHH7" ,
+					"name" : "Bob Smith" ,
+					"email" : "bob@acme.com" ,
+					"color" : "red"
+				} ,
+				"id" : null
+			} , {
+				"start" : "2013-03-31T00:00:00-04:00" ,
+				"end" : "2013-03-31T12:00:00-04:00" ,
+				"user" : {
+					"id" : "PRDFNAL" ,
+					"name" : "Sarah Jones" ,
+					"email" : "sarah@acme.com" ,
+					"color" : "green"
+				} ,
+				"id" : null
+			} , {
+				"start" : "2013-04-01T00:00:00-04:00" ,
+				"end" : "2013-04-01T12:00:00-04:00" ,
+				"user" : {
+					"id" : "PRDFNAL" ,
+					"name" : "Sarah Jones" ,
+					"email" : "sarah@acme.com" ,
+					"color" : "green"
+				} ,
+				"id" : null
+			} , {
+				"start" : "2013-04-02T00:00:00-04:00" ,
+				"end" : "2013-04-02T12:00:00-04:00" ,
+				"user" : {
+					"id" : "PRDFNAL" ,
+					"name" : "Sarah Jones" ,
+					"email" : "sarah@acme.com" ,
+					"color" : "green"
+				} ,
+				"id" : null
+			} ] ,
+			"id" : null ,
+			"priority" : 0 ,
+			"start" : "2013-03-26T20:42:15-04:00" ,
+			"end" : null ,
+			"restriction_type" : "Daily" ,
+			"rotation_virtual_start" : "2012-01-01T00:00:00-05:00" ,
+			"rotation_turn_length_seconds" : 604800 ,
+			"users" : [ {
+				"member_order" : 1 ,
+				"user" : {
+					"id" : "PPSFHH7" ,
+					"name" : "Bob Smith" ,
+					"email" : "bob@acme.com" ,
+					"color" : "red"
+				}
+			} , {
+				"member_order" : 2 ,
+				"user" : {
+					"id" : "PRDFNAL" ,
+					"name" : "Sarah Jones" ,
+					"email" : "sarah@acme.com" ,
+					"color" : "green"
+				}
+			} ] ,
+			"restrictions" : [ {
+				"start_time_of_day" : "00:00:00" ,
+				"duration_seconds" : 43200
+			} ] ,
+			"rendered_coverage_percentage" : 55.2
+		} , {
+			"name" : "Schedule Layer 2" ,
+			"rendered_schedule_entries" : [ {
+				"start" : "2013-03-26T20:42:16-04:00" ,
+				"end" : "2013-04-02T20:42:16-04:00" ,
+				"user" : {
+					"id" : "PT23IWX" ,
+					"name" : "Tim Wright" ,
+					"email" : "tim@acme.com" ,
+					"color" : "purple"
+				} ,
+				"id" : null
+			} ] ,
+			"id" : null ,
+			"priority" : 1 ,
+			"start" : "2013-03-26T20:42:15-04:00" ,
+			"end" : null ,
+			"restriction_type" : null ,
+			"rotation_virtual_start" : "2012-01-01T00:00:00-05:00" ,
+			"rotation_turn_length_seconds" : 604800 ,
+			"users" : [ {
+				"member_order" : 1 ,
+				"user" : {
+					"id" : "PT23IWX" ,
+					"name" : "Tim Wright" ,
+					"email" : "tim@acme.com" ,
+					"color" : "purple"
+				}
+			} ] ,
+			"restrictions" : [ ] ,
+			"rendered_coverage_percentage" : 100.0
+		} ] ,
+		"final_schedule" : {
+			"name" : "Final Schedule" ,
+			"rendered_schedule_entries" : [ {
+				"start" : "2013-03-26T20:42:16-04:00" ,
+				"end" : "2013-04-02T20:42:16-04:00" ,
+				"user" : {
+					"id" : "PT23IWX" ,
+					"name" : "Tim Wright" ,
+					"email" : "tim@acme.com" ,
+					"color" : "purple"
+				} ,
+				"id" : null
+			} ] ,
+			"rendered_coverage_percentage" : 100.0
+		}
+	}
+}

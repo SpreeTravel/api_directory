@@ -1,0 +1,26 @@
+[
+  {
+    "id" : "JGHJ0343" ,
+    "name" : "Dave Davis" ,
+    "email" : "dave@example.com" ,
+    "country_code" : "US" ,
+    "language_code" : "en-US" ,
+    "business_name" : "Dave's Milkshakes" ,
+    "business_address" : {
+      "address_line_1" : "1455 Market St" ,
+      "locality" : "San Francisco" ,
+      "administrative_district_level_1" : "CA" ,
+      "postal_code" : "94103"
+    } ,
+    "business_phone" : {
+      "calling_code" : "+1" ,
+      "number" : "4155551234"
+    } ,
+    "business_type" : "restaurants" ,
+    "account_type" : "LOCATION" ,
+    "location_details" : {
+      "nickname" : "Milkshakes"
+    } ,
+    "market_url" : "https://mkt.com/squared"
+  }
+]

@@ -1,0 +1,49 @@
+{
+  "request" : {
+    "airport" : {
+      "requestedCode" : "UUS" ,
+      "fsCode" : "UUS"
+    } ,
+    "includeFlightPlan" : {
+      "interpreted" : false
+    } ,
+    "maxPositions" : {
+    } ,
+    "maxPositionAgeMinutes" : {
+    } ,
+    "codeType" : {
+    } ,
+    "maxFlights" : {
+    } ,
+    "extendedOptions" : {
+    } ,
+    "url" : "https://api.flightstats.com/flex/flightstatus/rest/v2/json/airport/tracks/UUS/arr"
+  } ,
+  "appendix" : {
+    "airports" : [
+      {
+        "fs" : "UUS" ,
+        "iata" : "UUS" ,
+        "icao" : "UHSS" ,
+        "name" : "Yuzhno-Sakhalinsk Airport" ,
+        "city" : "Yuzhno-Sakhalinsk" ,
+        "cityCode" : "UUS" ,
+        "countryCode" : "RU" ,
+        "countryName" : "Russian Federation" ,
+        "regionName" : "Europe" ,
+        "timeZoneRegionName" : "Asia/Sakhalin" ,
+        "localTime" : "2015-04-29T22:25:29.646" ,
+        "utcOffsetHours" : 10 ,
+        "latitude" : 46.885341 ,
+        "longitude" : 142.721561 ,
+        "elevationFeet" : 71 ,
+        "classification" : 4 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/UUS?codeType=fs" ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/UUS?codeType=fs"
+      }
+    ]
+  } ,
+  "flightTracks" : [
+  ]
+}

@@ -1,0 +1,15 @@
+{
+	"type" : "object" ,
+	"required" : true ,
+	"$schema" : "http://json-schema.org/draft-03/schema" ,
+	"properties" : {
+		"schedule" : {
+			"type" : "object" ,
+			"required" : false
+		} ,
+		"id" : {
+			"type" : "string" ,
+			"required" : false
+		}
+	}
+}

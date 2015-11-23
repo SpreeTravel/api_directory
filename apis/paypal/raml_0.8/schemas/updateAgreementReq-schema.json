@@ -1,0 +1,64 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : [
+    {
+      "type" : "object" ,
+      "properties" : {
+        "op" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "path" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "value" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "shipping_address" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "line1" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "line2" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "city" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "state" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "postal_code" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "country_code" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+head: 
+  description: Information about the context user’s Chatter settings for the specified group.
+  responses: 
+    200: 
+get: 
+  description: Information about the context user’s Chatter settings for the specified group.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: groupChatterSettingsResponse
+patch: 
+  description: Update information about the context user’s Chatter settings for the specified group.
+  queryParameters: 
+    emailFrequency: 
+  body: 
+    application/json: 
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: groupChatterSettingsResponse

@@ -1,0 +1,42 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : [
+    {
+      "type" : "object" ,
+      "properties" : {
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "status" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "bank_account_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "initiated_at" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "total_money" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "amount" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "currency_code" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      }
+    }
+  ]
+}

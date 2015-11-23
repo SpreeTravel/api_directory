@@ -1,0 +1,23 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "languages" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "distance" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "countryName" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "countryCode" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

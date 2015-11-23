@@ -1,0 +1,4 @@
+{
+  "odata.metadata" : "https://myaccount.table.core.windows.net/$metadata#Tables/@Element" ,
+  "TableName" : "mytable"
+}

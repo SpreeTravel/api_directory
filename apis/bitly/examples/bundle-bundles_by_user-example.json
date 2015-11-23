@@ -1,0 +1,26 @@
+{
+  "data": {
+    "bundles": [
+      {
+        "bundle_link": "http://bitly.com/bundles/bitlyapioauthdemo/1",
+        "bundle_owner": "bitlyapioauthdemo",
+        "created_ts": 1332175561,
+        "description": "Kittehs FTW",
+        "last_modified_ts": 1332185530,
+        "private": false,
+        "title": ""
+      },
+      {
+        "bundle_link": "http://bitly.com/bundles/bitlyapioauthdemo/2",
+        "bundle_owner": "bitlyapioauthdemo",
+        "created_ts": 1332185626,
+        "description": "",
+        "last_modified_ts": 1332185626,
+        "private": false,
+        "title": ""
+      }
+    ]
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

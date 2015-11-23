@@ -1,0 +1,20 @@
+{
+  "hasErrors" : false ,
+  "results" : [
+    {
+      "result" : {
+        "feedElementPostUrl" : "/services/data/v34.0/chatter/feed-elements" ,
+        "feedElementsUrl" : "/services/data/v34.0/chatter/feeds/user-profile/005D0000001LL8OIAW/feed-elements" ,
+        "isModifiedUrl" : null
+      } ,
+      "statusCode" : 200
+    } , {
+      "result" : {
+        "feedElementPostUrl" : "/services/data/v34.0/chatter/feed-elements" ,
+        "feedElementsUrl" : "/services/data/v34.0/chatter/feeds/news/005D0000001LL8OIAW/feed-elements" ,
+        "isModifiedUrl" : null
+      } ,
+      "statusCode" : 200
+    }
+  ]
+}

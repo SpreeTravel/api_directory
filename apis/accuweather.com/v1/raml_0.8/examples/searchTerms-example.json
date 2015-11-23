@@ -1,0 +1,31 @@
+[
+  {
+    "EnglishText" : "Empty Search Text" ,
+    "LanguageCode" : "ar" ,
+    "LanguageId" : 26 ,
+    "PhraseCode" : "EmptySearchText" ,
+    "PhraseId" : "304" ,
+    "Text" : "?? ????? ????"
+  } , {
+    "EnglishText" : "Empty Search Text" ,
+    "LanguageCode" : "bg" ,
+    "LanguageId" : 37 ,
+    "PhraseCode" : "EmptySearchText" ,
+    "PhraseId" : "304" ,
+    "Text" : ""
+  } , {
+    "EnglishText" : "Empty Search Text" ,
+    "LanguageCode" : "ca" ,
+    "LanguageId" : 22 ,
+    "PhraseCode" : "EmptySearchText" ,
+    "PhraseId" : "304" ,
+    "Text" : "No s'ha introdu?t text de cerca"
+  } , {
+    "EnglishText" : "Empty Search Text" ,
+    "LanguageCode" : "cs" ,
+    "LanguageId" : 19 ,
+    "PhraseCode" : "EmptySearchText" ,
+    "PhraseId" : "304" ,
+    "Text" : "Nebyl zad?n text vyhled?v?n?"
+  }
+]

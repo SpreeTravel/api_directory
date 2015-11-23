@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NoCostVsTraditional:nocostvstraditional xsi:schemaLocation="http://www.zillow.com/static/xsd/NoCostVsTraditional.xsd http://www.zillow.com/vstatic/b6056a4bb80057099e3a3d751accac26/static/xsd/NoCostVsTraditional.xsd" xmlns:NoCostVsTraditional="http://www.zillow.com/static/xsd/NoCostVsTraditional.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <request>
+        <amount>10000000</amount>
+        <rate>6.504</rate>
+        <nocostrate>4.503</nocostrate>
+        <terminmonths>360</terminmonths>
+        <closingcosts>2000</closingcosts>
+        <rollfees>false</rollfees>
+        <costofmoney>0.0</costofmoney>
+        <taxbracket>15.0</taxbracket>
+        <comparisonyears>50</comparisonyears>
+        <output>xml</output>
+    </request>
+    <message>
+        <text>Request successfully processed</text>
+        <code>0</code>
+    </message>
+    <response>
+        <monthlyprincipalandinterest>63233</monthlyprincipalandinterest>
+        <monthlyprincipalandinterestnocost>50686</monthlyprincipalandinterestnocost>
+        <discountedpayments>37939866</discountedpayments>
+        <nocostdiscountedpayments>30411815</nocostdiscountedpayments>
+        <remainingprincipal>0</remainingprincipal>
+        <nocostremainingprincipal>0</nocostremainingprincipal>
+        <taxsavings>1914588</taxsavings>
+        <nocosttaxsavings>1237063</nocosttaxsavings>
+        <paidatclose>2000</paidatclose>
+        <totalcost>36027278</totalcost>
+        <nocosttotalcost>29174752</nocosttotalcost>
+        <result>The no cost loan looks like it will save you $6,852,526 over the 50.00 year period.</result>
+    </response>
+</NoCostVsTraditional:nocostvstraditional>

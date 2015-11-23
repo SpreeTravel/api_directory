@@ -1,0 +1,19 @@
+{
+  "data": {
+    "share_counts_by_share_type": [
+      {
+        "share_type": "twitter",
+        "shares": 10
+      },
+      {
+        "share_type": "email",
+        "shares": 7
+      }
+    ],
+    "tz_offset": -4,
+    "unit": "day",
+    "units": -1
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

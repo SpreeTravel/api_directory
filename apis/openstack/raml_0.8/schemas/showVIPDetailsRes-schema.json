@@ -1,0 +1,79 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "vip" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "status" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "protocol" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "description" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "admin_state_up" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "subnet_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "tenant_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "connection_limit" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "pool_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "session_persistence" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "cookie_name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "address" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "protocol_port" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "port_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

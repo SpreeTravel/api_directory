@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StorageServiceProperties>
+    <Logging>
+        <Version>version-number</Version>
+        <Delete>true|false</Delete>
+        <Read>true|false</Read>
+        <Write>true|false</Write>
+        <RetentionPolicy>
+            <Enabled>true|false</Enabled>
+            <Days>number-of-days</Days>
+        </RetentionPolicy>
+    </Logging>
+    <HourMetrics>
+        <Version>version-number</Version>
+        <Enabled>true|false</Enabled>
+        <IncludeAPIs>true|false</IncludeAPIs>
+        <RetentionPolicy>
+            <Enabled>true|false</Enabled>
+            <Days>number-of-days</Days>
+        </RetentionPolicy>
+    </HourMetrics>
+    <MinuteMetrics>
+        <Version>version-number</Version>
+        <Enabled>true|false</Enabled>
+        <IncludeAPIs>true|false</IncludeAPIs>
+        <RetentionPolicy>
+            <Enabled>true|false</Enabled>
+            <Days>number-of-days</Days>
+        </RetentionPolicy>
+    </MinuteMetrics>
+    <Cors>
+        <CorsRule>
+            <AllowedOrigins>comma-separated-list-of-allowed-origins</AllowedOrigins>
+            <AllowedMethods>comma-separated-list-of-HTTP-verb</AllowedMethods>
+            <MaxAgeInSeconds>max-caching-age-in-seconds</MaxAgeInSeconds>
+            <ExposedHeaders>comma-seperated-list-of-response-headers</ExposedHeaders>
+            <AllowedHeaders> comma-seperated-list-of-request-headers </AllowedHeaders>
+        </CorsRule>
+    </Cors>
+</StorageServiceProperties>

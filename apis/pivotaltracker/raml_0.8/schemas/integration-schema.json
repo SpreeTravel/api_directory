@@ -1,0 +1,55 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "kind" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "import_api_url" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "id" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "project_id" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "can_import" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "base_url" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "is_other" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "story_name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "active" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "created_at" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "updated_at" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

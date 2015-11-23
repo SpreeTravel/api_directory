@@ -1,0 +1,27 @@
+get?: 
+  is: [ commonMethods ]
+  responses: 
+    200: 
+      description: |
+        OK - The request you sent was successful (and there is content in the body of the response).
+post?: 
+  responses: 
+    200: 
+      description: |
+        OK - The request you sent was successful (and there is content in the body of the response).
+    201: 
+      description: |
+        Created - You created a new resource (e.g. you created a new set) and it was successful. The HTTP response will include the location of the new resource you created.
+put?: 
+  responses: 
+    200: 
+      description: |
+        OK - The request you sent was successful (and there is content in the body of the response).
+    204: 
+      description: |
+        The request you sent was successful, and there is no content in the body of the response (this is common with delete and some edit actions).
+delete?: 
+  responses: 
+    204: 
+      description: |
+        The request you sent was successful, and there is no content in the body of the response (this is common with delete and some edit actions).

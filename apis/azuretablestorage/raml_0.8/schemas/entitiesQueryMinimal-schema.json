@@ -1,0 +1,42 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "odata.metadata" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "value" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : 
+        {
+          "type" : "object" ,
+          "properties" : {
+            "PartitionKey" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "RowKey" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "Timestamp" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "CustomerSince@odata.type" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "CustomerSince" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      
+    }
+  }
+}

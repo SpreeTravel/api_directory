@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "commentCount": {
+      "type": "integer",
+      "required": false
+    },
+    "commentReceivedCount": {
+      "type": "integer",
+      "required": false
+    },
+    "likeReceivedCount": {
+      "type": "integer",
+      "required": false
+    },
+    "postCount": {
+      "type": "integer",
+      "required": false
+    }
+  }
+}

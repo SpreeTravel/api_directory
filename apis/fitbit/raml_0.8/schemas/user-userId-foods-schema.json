@@ -1,0 +1,35 @@
+{
+    "": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "Food name.",
+            "type": "string",
+            "required": true
+        },
+        "defaultFoodMeasurementUnitId": {
+            "description": "Unit id; default measurement unit; full list of units could be retrieved via a previous calls to Get Food Units.",
+            "type": "string",
+            "required": true
+        },
+        "defaultServingSize": {
+            "description": "Size of the default serving; nutritional values should be provided for this serving size.",
+            "type": "integer",
+            "required": true
+        },
+        "calories": {
+            "description": "Calories in the default serving size.",
+            "type": "integer",
+            "required": true
+        },
+        "formType": {
+            "enum": [
+                "LIQUID",
+                "DRY"
+            ]
+        },
+        "description": {
+            "type": "string"
+        }
+    }
+}

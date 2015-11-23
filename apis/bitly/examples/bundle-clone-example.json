@@ -1,0 +1,16 @@
+{
+  "data": {
+    "bundle": {
+      "bundle_link": "http://bitly.com/bundles/bitlyapioauthdemo/3",
+      "bundle_owner": "bitlyapioauthdemo",
+      "created_ts": 1332185633,
+      "description": "",
+      "last_modified_ts": 1332185633,
+      "links": [],
+      "private": false,
+      "title": ""
+    }
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

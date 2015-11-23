@@ -1,0 +1,92 @@
+{
+    "": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+        "sid": {
+            "type": "string",
+            "minLength": 34,
+            "maxLength": 34
+        },
+        "date_created": {
+            "description": "GMT in RFC 2822 format.",            
+            "type": "string"
+        },
+        "date_updated": {
+            "type": "string"
+        },
+        "parent_call_sid": {
+            "type": "string",
+            "minLength": 34,
+            "maxLength": 34
+        },
+        "account_sid": {
+            "description": "The unique id of the Account responsible for creating this call.",            
+            "type": "string"
+        },
+        "to": {
+            "type": "string",
+            "description": "Phone numbers are in E.164 format (e.g. +16175551212). SIP addresses are formated as name@company.com. Client identifiers are formatted client:name."            
+        },
+        "formatted_to": {
+            "type": "string"
+        },
+        "from": {
+            "description": "The phone number, SIP address or Client identifier that made this call. Phone numbers are in E.164 format (e.g. +16175551212).",            
+            "type": "string"
+        },
+        "formatted_from": {
+            "type": "string"
+        },
+        "phone_number_sid": {
+            "type": "string"
+        },
+        "status": {
+            "enum": [
+                "queued", "ringing", "in-progress", "canceled", "completed", "failed", "busy", "no-answer"
+            ]
+        },
+        "start_time": {
+            "description": "Given as GMT in RFC 2822 format.",            
+            "type": "string"
+        },
+        "end_time": {
+            "description": "Given as GMT in RFC 2822 format.",
+            "type": "string"
+        },
+        "duration": {
+            "type": "string"
+        },
+        "price": {
+            "type": "string"
+        },
+        "direction": {
+            "type": "string"
+        },
+        "answered_by": {
+            "type": "string"
+        },
+        "api_version": {
+            "type": "string"
+        },
+        "forwarded_from": {
+            "type": "string"
+        },
+        "caller_name": {
+            "type": "string"
+        },
+        "uri": {
+            "type": "string"
+        },
+        "subresource_uris": {
+            "properties": {
+                "notifications": {
+                    "type": "string"
+                },
+                "recordings": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

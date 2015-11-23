@@ -1,0 +1,8 @@
+<messages>
+    <error>
+      <data_item>
+        <code>404</code>
+        <message>Resource not found.</message>
+      </data_item>
+    </error>
+  </messages>

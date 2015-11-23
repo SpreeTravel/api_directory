@@ -1,0 +1,1287 @@
+#%RAML 0.8
+title: "Mandrill API"
+version: 1.0
+baseUri: "https://mandrillapp.com/api/"
+protocols: [ HTTPS ]
+schemas:
+  - users_info-response: !include schemas/users_info-response.json
+  - users_ping2-response: !include schemas/users_ping2-response.json
+  - messages_send: !include schemas/messages_send.json
+  - messages_send-template: !include schemas/messages_send-template.json
+  - messages_search: !include schemas/messages_search.json
+  - messages_search-response: !include schemas/messages_search-response.json
+  - messages_search-time-series: !include schemas/messages_search-time-series.json
+  - messages_info-response: !include schemas/messages_info-response.json
+  - messages_content-response: !include schemas/messages_content-response.json
+  - messages_parse: !include schemas/messages_parse.json
+  - messages_parse-response: !include schemas/messages_parse-response.json
+  - messages_send-raw: !include schemas/messages_send-raw.json
+  - messages_list-scheduled: !include schemas/messages_list-scheduled.json
+  - messages_list-scheduled-response: !include schemas/messages_list-scheduled-response.json
+  - messages_cancel-scheduled: !include schemas/messages_cancel-scheduled.json
+  - messages_reschedule: !include schemas/messages_reschedule.json
+  - tags_list-response: !include schemas/tags_list-response.json
+  - tags_delete-response: !include schemas/tags_delete-response.json
+  - tags_info-response: !include schemas/tags_info-response.json
+  - rejects_add: !include schemas/rejects_add.json
+  - rejects_add-response: !include schemas/rejects_add-response.json
+  - rejects_list: !include schemas/rejects_list.json
+  - rejects_list-response: !include schemas/rejects_list-response.json
+  - rejects_delete: !include schemas/rejects_delete.json
+  - rejects_delete-response: !include schemas/rejects_delete-response.json
+  - whitelists_add-response: !include schemas/whitelists_add-response.json
+  - whitelists_list-response: !include schemas/whitelists_list-response.json
+  - whitelists_delete-response: !include schemas/whitelists_delete-response.json
+  - senders_domains-response: !include schemas/senders_domains-response.json
+  - senders_verify-domain: !include schemas/senders_verify-domain.json
+  - senders_verify-domain-response: !include schemas/senders_verify-domain-response.json
+  - senders_info-response: !include schemas/senders_info-response.json
+  - urls_time-series: !include schemas/urls_time-series.json
+  - urls_time-series-response: !include schemas/urls_time-series-response.json
+  - urls_tracking-domains-response: !include schemas/urls_tracking-domains-response.json
+  - templates_list: !include schemas/templates_list.json
+  - templates_list-response: !include schemas/templates_list-response.json
+  - templates_render: !include schemas/templates_render.json
+  - templates_render-response: !include schemas/templates_render-response.json
+  - webhooks_list-response: !include schemas/webhooks_list-response.json
+  - webhooks_add: !include schemas/webhooks_add.json
+  - webhooks_update: !include schemas/webhooks_update.json
+  - subaccounts_list-response: !include schemas/subaccounts_list-response.json
+  - subaccounts_info-response: !include schemas/subaccounts_info-response.json
+  - inbound_domains-response: !include schemas/inbound_domains-response.json
+  - inbound_routes-response: !include schemas/inbound_routes-response.json
+  - inbound_add-route: !include schemas/inbound_add-route.json
+  - inbound_update-route: !include schemas/inbound_update-route.json
+  - inbound_send-raw: !include schemas/inbound_send-raw.json
+  - inbound_send-raw-response: !include schemas/inbound_send-raw-response.json
+  - exports_info-response: !include schemas/exports_info-response.json
+  - exports_list-response: !include schemas/exports_list-response.json
+  - exports_activity: !include schemas/exports_activity.json
+  - ips_list-response: !include schemas/ips_list-response.json
+  - ips_provision: !include schemas/ips_provision.json
+  - ips_provision-response: !include schemas/ips_provision-response.json
+  - ips_set-pool: !include schemas/ips_set-pool.json
+  - ips_delete-response: !include schemas/ips_delete-response.json
+  - ips_list-pools-response: !include schemas/ips_list-pools-response.json
+  - ips_delete-pool-response: !include schemas/ips_delete-pool-response.json
+  - ips_check-custom-dns-response: !include schemas/ips_check-custom-dns-response.json
+  - metadata_list-response: !include schemas/metadata_list-response.json
+  - tracking-domain-status: !include schemas/tracking-domain-status.json
+  - senders: !include schemas/senders.json
+  - webhook: !include schemas/webhook.json
+  - tag_key: !include schemas/tag_key.json
+  - url_key: !include schemas/url_key.json
+  - ips_pool: !include schemas/ips_pool.json
+  - webhook_key: !include schemas/webhook_key.json
+  - time-series: !include schemas/time-series.json
+  - timeseries: !include schemas/timeseries.json
+  - email: !include schemas/email.json
+  - ip: !include schemas/ip.json
+  - subaccount_info: !include schemas/subaccount_info.json
+  - ips_pool-key: !include schemas/ips_pool-key.json
+  - notify_email: !include schemas/notify_email.json
+  - domain: !include schemas/domain.json
+  - metadata_info: !include schemas/metadata_info.json
+  - inbound_info: !include schemas/inbound_info.json
+  - sender_address: !include schemas/sender_address.json
+  - name: !include schemas/name.json
+  - template: !include schemas/template.json
+  - ip_domain: !include schemas/ip_domain.json
+  - message_send-status: !include schemas/message_send-status.json
+  - subaccount_info2: !include schemas/subaccount_info2.json
+  - sender_domain_info: !include schemas/sender_domain_info.json
+  - schedulingchange_info: !include schemas/schedulingchange_info.json
+  - url_infos: !include schemas/url_infos.json
+  - template_detailed: !include schemas/template_detailed.json
+  - exports_satus: !include schemas/exports_satus.json
+  - api_key: !include schemas/api_key.json
+  - id: !include schemas/id.json
+  - metadata_template: !include schemas/metadata_template.json
+  - route: !include schemas/route.json
+  - ip_info: !include schemas/ip_info.json
+/users: 
+  /senders.json: 
+    post: 
+      description: "Return the senders that have tried to use this account, both verified and unverified"
+      body: 
+        application/json: 
+          schema: api_key
+          example: !include examples/users_senders.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: senders
+              example: !include examples/users_senders-response.json
+  /ping.json: 
+    post: 
+      description: "Validate an API key and respond to a ping"
+      body: 
+        application/json: 
+          schema: api_key
+          example: !include examples/users_ping.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: PONG!!!
+  /ping2.json: 
+    post: 
+      description: "Validate an API key and respond to a ping (anal JSON parser version)"
+      body: 
+        application/json: 
+          schema: api_key
+          example: !include examples/users_ping2.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: users_ping2-response
+              example: !include examples/users_ping2-response.json
+  /info.json: 
+    post: 
+      description: "Return the information about the API-connected user"
+      body: 
+        application/json: 
+          schema: api_key
+          example: !include examples/users_info.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: users_info-response
+              example: !include examples/users_info-response.json
+/messages: 
+  /send.json: 
+    post: 
+      description: "Send a new transactional message through Mandrill"
+      body: 
+        application/json: 
+          schema: messages_send
+          example: !include examples/messages_send.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: message_send-status
+              example: !include examples/messages_send-response.json
+  /send-raw.json: 
+    post: 
+      description: "Take a raw MIME document for a message, and send it exactly as if it were sent through Mandrill's SMTP servers"
+      body: 
+        application/json: 
+          schema: messages_send-raw
+          example: !include examples/messages_send-raw.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: message_send-status
+              example: !include examples/messages_send-raw-response.json
+  /list-scheduled.json: 
+    post: 
+      description: "Queries your scheduled emails by sender or recipient, or both."
+      body: 
+        application/json: 
+          schema: messages_list-scheduled
+          example: !include examples/messages_list-scheduled.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: messages_list-scheduled-response
+              example: !include examples/messages_list-scheduled-response.json
+  /cancel-scheduled.json: 
+    post: 
+      description: "Cancels a scheduled email."
+      body: 
+        application/json: 
+          schema: messages_cancel-scheduled
+          example: !include examples/messages_cancel-scheduled.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: schedulingchange_info
+              example: !include examples/messages_cancel-scheduled-response.json
+  /send-template.json: 
+    post: 
+      description: "Send a new transactional message through Mandrill using a template"
+      body: 
+        application/json: 
+          schema: messages_send-template
+          example: !include examples/messages_send-template.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: message_send-status
+              example: !include examples/messages_send-template-response.json
+  /info.json: 
+    post: 
+      description: "Get the information for a single recently sent message"
+      body: 
+        application/json: 
+          schema: id
+          example: !include examples/messages_info.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: messages_info-response
+              example: !include examples/messages_info-response.json
+  /content.json: 
+    post: 
+      description: "Get the full content of a recently sent message"
+      body: 
+        application/json: 
+          schema: id
+          example: !include examples/messages_content.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: messages_content-response
+              example: !include examples/messages_content-response.json
+  /parse.json: 
+    post: 
+      description: "Parse the full MIME document for an email message, returning the content of the message broken into its constituent pieces"
+      body: 
+        application/json: 
+          schema: messages_parse
+          example: !include examples/messages_parse.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: messages_parse-response
+              example: !include examples/messages_parse-response.json
+  /reschedule.json: 
+    post: 
+      description: "Reschedules a scheduled email."
+      body: 
+        application/json: 
+          schema: messages_reschedule
+          example: !include examples/messages_reschedule.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: schedulingchange_info
+              example: !include examples/messages_reschedule-response.json
+  /search.json: 
+    post: 
+      description: "Search the content of recently sent messages and optionally narrow by date range, tags and senders. This method may be called up to 20 times per minute. If you need the data more often, you can use /messages/info.json to get the information for a single message, or webhooks to push activity to your own application for querying."
+      body: 
+        application/json: 
+          schema: messages_search
+          example: !include examples/messages_search.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: messages_search-response
+              example: !include examples/messages_search-response.json
+  /search-time-series.json: 
+    post: 
+      description: "Search the content of recently sent messages and return the aggregated hourly stats for matching messages"
+      body: 
+        application/json: 
+          schema: messages_search-time-series
+          example: !include examples/messages_search-time-series.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: timeseries
+              example: !include examples/messages_search-time-series-response.json
+/inbound: 
+  /send-raw.json: 
+    post: 
+      description: "Take a raw MIME document destined for a domain with inbound domains set up, and send it to the inbound hook exactly as if it had been sent over SMTP"
+      body: 
+        application/json: 
+          schema: inbound_send-raw
+          example: !include examples/inbound_send-raw.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: inbound_send-raw-response
+              example: !include examples/inbound_send-raw-response.json
+  /check-domain.json: 
+    post: 
+      description: "Check the MX settings for an inbound domain. The domain must have already been added with the add-domain call"
+      body: 
+        application/json: 
+          schema: domain
+          example: !include examples/inbound_check-domain.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: inbound_info
+              example: !include examples/inbound_check-domain-response.json
+  /delete-route.json: 
+    post: 
+      description: "Delete an existing inbound mailbox route"
+      body: 
+        application/json: 
+          schema: id
+          example: !include examples/inbound_delete-route.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: route
+              example: !include examples/inbound_delete-route-response.json
+  /domains.json: 
+    post: 
+      description: "List the domains that have been configured for inbound delivery"
+      body: 
+        application/json: 
+          schema: api_key
+          example: !include examples/inbound_domains.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: inbound_domains-response
+              example: !include examples/inbound_domains-response.json
+  /add-route.json: 
+    post: 
+      description: "Add a new mailbox route to an inbound domain"
+      body: 
+        application/json: 
+          schema: inbound_add-route
+          example: !include examples/inbound_add-route.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: route
+              example: !include examples/inbound_add-route-response.json
+  /add-domain.json: 
+    post: 
+      description: "Add an inbound domain to your account"
+      body: 
+        application/json: 
+          schema: domain
+          example: !include examples/inbound_add-domain.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: inbound_info
+              example: !include examples/inbound_add-domain-response.json
+  /routes.json: 
+    post: 
+      description: "List the mailbox routes defined for an inbound domain"
+      body: 
+        application/json: 
+          schema: domain
+          example: !include examples/inbound_routes.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: inbound_routes-response
+              example: !include examples/inbound_routes-response.json
+  /delete-domain.json: 
+    post: 
+      description: "Delete an inbound domain from the account. All mail will stop routing for this domain immediately."
+      body: 
+        application/json: 
+          schema: domain
+          example: !include examples/inbound_delete-domain.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: inbound_info
+              example: !include examples/inbound_delete-domain-response.json
+  /update-route.json: 
+    post: 
+      description: "Update the pattern or webhook of an existing inbound mailbox route. If null is provided for any fields, the values will remain unchanged."
+      body: 
+        application/json: 
+          schema: inbound_update-route
+          example: !include examples/inbound_update-route.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: route
+              example: !include examples/inbound_update-route-response.json
+/ips: 
+  /create-pool.json: 
+    post: 
+      description: "Creates a pool and returns it. If a pool already exists with this name, no action will be performed."
+      body: 
+        application/json: 
+          schema: ips_pool-key
+          example: !include examples/ips_create-pool.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: ips_pool
+              example: !include examples/ips_create-pool-response.json
+  /set-custom-dns.json: 
+    post: 
+      description: "Configures the custom DNS name for a dedicated IP."
+      body: 
+        application/json: 
+          schema: ip_domain
+          example: !include examples/ips_set-custom-dns.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: ip_info
+              example: !include examples/ips_set-custom-dns-response.json
+  /list-pools.json: 
+    post: 
+      description: "Lists your dedicated IP pools."
+      body: 
+        application/json: 
+          schema: api_key
+          example: !include examples/ips_list-pools.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: ips_list-pools-response
+              example: !include examples/ips_list-pools-response.json
+  /start-warmup.json: 
+    post: 
+      description: "Begins the warmup process for a dedicated IP. During the warmup process, Mandrill will gradually increase the percentage of your mail that is sent over the warming-up IP, over a period of roughly 30 days. The rest of your mail will be sent over shared IPs or other dedicated IPs in the same pool."
+      body: 
+        application/json: 
+          schema: ip
+          example: !include examples/ips_start-warmup.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: ip_info
+              example: !include examples/ips_start-warmup-response.json
+  /delete.json: 
+    post: 
+      description: "Deletes a dedicated IP. This is permanent and cannot be undone."
+      body: 
+        application/json: 
+          schema: ip
+          example: !include examples/ips_delete.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: ips_delete-response
+              example: !include examples/ips_delete-response.json
+  /cancel-warmup.json: 
+    post: 
+      description: "Cancels the warmup process for a dedicated IP."
+      body: 
+        application/json: 
+          schema: ip
+          example: !include examples/ips_cancel-warmup.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: ip_info
+              example: !include examples/ips_cancel-warmup-response.json
+  /delete-pool.json: 
+    post: 
+      description: "Deletes a pool. A pool must be empty before you can delete it, and you cannot delete your default pool."
+      body: 
+        application/json: 
+          schema: ips_pool-key
+          example: !include examples/ips_delete-pool.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: ips_delete-pool-response
+              example: !include examples/ips_delete-pool-response.json
+  /provision.json: 
+    post: 
+      description: "Requests an additional dedicated IP for your account. Accounts may have one outstanding request at any time, and provisioning requests are processed within 24 hours."
+      body: 
+        application/json: 
+          schema: ips_provision
+          example: !include examples/ips_provision.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: ips_provision-response
+              example: !include examples/ips_provision-response.json
+  /pool-info.json: 
+    post: 
+      description: "Describes a single dedicated IP pool."
+      body: 
+        application/json: 
+          schema: ips_pool-key
+          example: !include examples/ips_pool-info.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: ips_pool
+              example: !include examples/ips_pool-info-response.json
+  /check-custom-dns.json: 
+    post: 
+      description: "Tests whether a domain name is valid for use as the custom reverse DNS for a dedicated IP."
+      body: 
+        application/json: 
+          schema: ip_domain
+          example: !include examples/ips_check-custom-dns.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: ips_check-custom-dns-response
+              example: !include examples/ips_check-custom-dns-response.json
+  /set-pool.json: 
+    post: 
+      description: "Moves a dedicated IP to a different pool."
+      body: 
+        application/json: 
+          schema: ips_set-pool
+          example: !include examples/ips_set-pool.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: ip_info
+              example: !include examples/ips_set-pool-response.json
+  /info.json: 
+    post: 
+      description: "Retrieves information about a single dedicated ip."
+      body: 
+        application/json: 
+          schema: ip
+          example: !include examples/ips_info.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: ip_info
+              example: !include examples/ips_info-response.json
+  /list.json: 
+    post: 
+      description: "Lists your dedicated IPs."
+      body: 
+        application/json: 
+          schema: api_key
+          example: !include examples/ips_list.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: ips_list-response
+              example: !include examples/ips_list-response.json
+/templates: 
+  /render.json: 
+    post: 
+      description: "Inject content and optionally merge fields into a template, returning the HTML that results"
+      body: 
+        application/json: 
+          schema: templates_render
+          example: !include examples/templates_render.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: templates_render-response
+              example: !include examples/templates_render-response.json
+  /list.json: 
+    post: 
+      description: "Return a list of all the templates available to this user"
+      body: 
+        application/json: 
+          schema: templates_list
+          example: !include examples/templates_list.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: templates_list-response
+              example: !include examples/templates_list-response.json
+  /update.json: 
+    post: 
+      description: "Update the code for an existing template. If null is provided for any fields, the values will remain unchanged."
+      body: 
+        application/json: 
+          schema: template
+          example: !include examples/templates_update.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: template_detailed
+              example: !include examples/templates_update-response.json
+  /info.json: 
+    post: 
+      description: "Get the information for an existing template"
+      body: 
+        application/json: 
+          schema: name
+          example: !include examples/templates_info.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: template_detailed
+              example: !include examples/templates_info-response.json
+  /delete.json: 
+    post: 
+      description: "Delete a template"
+      body: 
+        application/json: 
+          schema: name
+          example: !include examples/templates_delete.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: template_detailed
+              example: !include examples/templates_delete-response.json
+  /add.json: 
+    post: 
+      description: "Add a new template"
+      body: 
+        application/json: 
+          schema: template
+          example: !include examples/templates_add.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: template_detailed
+              example: !include examples/templates_add-response.json
+  /time-series.json: 
+    post: 
+      description: "Return the recent history (hourly stats for the last 30 days) for a template"
+      body: 
+        application/json: 
+          schema: name
+          example: !include examples/templates_time-series.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: time-series
+              example: !include examples/templates_time-series-response.json
+  /publish.json: 
+    post: 
+      description: "Publish the content for the template. Any new messages sent using this template will start using the content that was previously in draft."
+      body: 
+        application/json: 
+          schema: name
+          example: !include examples/templates_publish.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: template_detailed
+              example: !include examples/templates_publish-response.json
+/metadata: 
+  /add.json: 
+    post: 
+      description: "Add a new custom metadata field to be indexed for the account."
+      body: 
+        application/json: 
+          schema: metadata_template
+          example: !include examples/metadata_add.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: metadata_info
+              example: !include examples/metadata_add-response.json
+  /update.json: 
+    post: 
+      description: "Update an existing custom metadata field."
+      body: 
+        application/json: 
+          schema: metadata_template
+          example: !include examples/metadata_update.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: metadata_info
+              example: !include examples/metadata_update-response.json
+  /list.json: 
+    post: 
+      description: "Get the list of custom metadata fields indexed for the account."
+      body: 
+        application/json: 
+          schema: api_key
+          example: !include examples/metadata_list.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: metadata_list-response
+              example: !include examples/metadata_list-response.json
+  /delete.json: 
+    post: 
+      description: "Delete an existing custom metadata field. Deletion isn't instataneous, and /metadata/list will continue to return the field until the asynchronous deletion process is complete."
+      body: 
+        application/json: 
+          schema: name
+          example: !include examples/metadata_delete.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: metadata_info
+              example: !include examples/metadata_delete-response.json
+/urls: 
+  /time-series.json: 
+    post: 
+      description: "Return the recent history (hourly stats for the last 30 days) for a url"
+      body: 
+        application/json: 
+          schema: urls_time-series
+          example: !include examples/urls_time-series.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: urls_time-series-response
+              example: !include examples/urls_time-series-response.json
+  /add-tracking-domain.json: 
+    post: 
+      description: "Add a tracking domain to your account"
+      body: 
+        application/json: 
+          schema: domain
+          example: !include examples/urls_add-tracking-domain.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: tracking-domain-status
+              example: !include examples/urls_add-tracking-domain-response.json
+  /check-tracking-domain.json: 
+    post: 
+      description: "Checks the CNAME settings for a tracking domain. The domain must have been added already with the add-tracking-domain call"
+      body: 
+        application/json: 
+          schema: domain
+          example: !include examples/urls_check-tracking-domain.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: tracking-domain-status
+              example: !include examples/urls_check-tracking-domain-response.json
+  /list.json: 
+    post: 
+      description: "Get the 100 most clicked URLs"
+      body: 
+        application/json: 
+          schema: api_key
+          example: !include examples/urls_list.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: url_infos
+              example: !include examples/urls_list-response.json
+  /tracking-domains.json: 
+    post: 
+      description: "Get the list of tracking domains set up for this account"
+      body: 
+        application/json: 
+          schema: api_key
+          example: !include examples/urls_tracking-domains.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: urls_tracking-domains-response
+              example: !include examples/urls_tracking-domains-response.json
+  /search.json: 
+    post: 
+      description: "Return the 100 most clicked URLs that match the search query given"
+      body: 
+        application/json: 
+          schema: url_key
+          example: !include examples/urls_search.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: url_infos
+              example: !include examples/urls_search-response.json
+/rejects: 
+  /list.json: 
+    post: 
+      description: "Retrieves your email rejection blacklist. You can provide an email address to limit the results. Returns up to 1000 results. By default, entries that have expired are excluded from the results; set include_expired to true to include them."
+      body: 
+        application/json: 
+          schema: rejects_list
+          example: !include examples/rejects_list.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: rejects_list-response
+              example: !include examples/rejects_list-response.json
+  /add.json: 
+    post: 
+      description: "Adds an email to your email rejection blacklist. Addresses that you add manually will never expire and there is no reputation penalty for removing them from your blacklist. Attempting to blacklist an address that has been whitelisted will have no effect."
+      body: 
+        application/json: 
+          schema: rejects_add
+          example: !include examples/rejects_add.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: rejects_add-response
+              example: !include examples/rejects_add-response.json
+  /delete.json: 
+    post: 
+      description: "Deletes an email rejection. There is no limit to how many rejections you can remove from your blacklist, but keep in mind that each deletion has an affect on your reputation."
+      body: 
+        application/json: 
+          schema: rejects_delete
+          example: !include examples/rejects_delete.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: rejects_delete-response
+              example: !include examples/rejects_delete-response.json
+/subaccounts: 
+  /list.json: 
+    post: 
+      description: "Get the list of subaccounts defined for the account, optionally filtered by a prefix"
+      body: 
+        application/json: 
+          schema: url_key
+          example: !include examples/subaccounts_list.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: subaccounts_list-response
+              example: !include examples/subaccounts_list-response.json
+  /info.json: 
+    post: 
+      description: "Given the ID of an existing subaccount, return the data about it"
+      body: 
+        application/json: 
+          schema: id
+          example: !include examples/subaccounts_info.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: subaccounts_info-response
+              example: !include examples/subaccounts_info-response.json
+  /update.json: 
+    post: 
+      description: "Update an existing subaccount"
+      body: 
+        application/json: 
+          schema: subaccount_info
+          example: !include examples/subaccounts_update.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: subaccount_info2
+              example: !include examples/subaccounts_update-response.json
+  /resume.json: 
+    post: 
+      description: "Resume a paused subaccount's sending"
+      body: 
+        application/json: 
+          schema: id
+          example: !include examples/subaccounts_resume.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: subaccount_info2
+              example: !include examples/subaccounts_resume-response.json
+  /delete.json: 
+    post: 
+      description: "Delete an existing subaccount. Any email related to the subaccount will be saved, but stats will be removed and any future sending calls to this subaccount will fail."
+      body: 
+        application/json: 
+          schema: id
+          example: !include examples/subaccounts_delete.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: subaccount_info2
+              example: !include examples/subaccounts_delete-response.json
+  /pause.json: 
+    post: 
+      description: "Pause a subaccount's sending. Any future emails delivered to this subaccount will be queued for a maximum of 3 days until the subaccount is resumed."
+      body: 
+        application/json: 
+          schema: id
+          example: !include examples/subaccounts_pause.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: subaccount_info2
+              example: !include examples/subaccounts_pause-response.json
+  /add.json: 
+    post: 
+      description: "Add a new subaccount"
+      body: 
+        application/json: 
+          schema: subaccount_info
+          example: !include examples/subaccounts_add.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: subaccount_info2
+              example: !include examples/subaccounts_add-response.json
+/exports: 
+  /rejects.json: 
+    post: 
+      description: "Begins an export of your rejection blacklist. The blacklist will be exported to a zip archive containing a single file named rejects.csv that includes the following fields: email, reason, detail, created_at, expires_at, last_event_at, expires_at."
+      body: 
+        application/json: 
+          schema: notify_email
+          example: !include examples/exports_rejects.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: exports_satus
+              example: !include examples/exports_rejects-response.json
+  /list.json: 
+    post: 
+      description: "Returns a list of your exports."
+      body: 
+        application/json: 
+          schema: api_key
+          example: !include examples/exports_list.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: exports_list-response
+              example: !include examples/exports_list-response.json
+  /whitelist.json: 
+    post: 
+      description: "Begins an export of your rejection whitelist. The whitelist will be exported to a zip archive containing a single file named whitelist.csv that includes the following fields: email, detail, created_at."
+      body: 
+        application/json: 
+          schema: notify_email
+          example: !include examples/exports_whitelist.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: exports_satus
+              example: !include examples/exports_whitelist-response.json
+  /info.json: 
+    post: 
+      description: "Returns information about an export job. If the export job's state is 'complete', the returned data will include a URL you can use to fetch the results. Every export job produces a zip archive, but the format of the archive is distinct for each job type. The api calls that initiate exports include more details about the output format for that job type."
+      body: 
+        application/json: 
+          schema: id
+          example: !include examples/exports_info.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: exports_info-response
+              example: !include examples/exports_info-response.json
+  /activity.json: 
+    post: 
+      description: "Begins an export of your activity history. The activity will be exported to a zip archive containing a single file named activity.csv in the same format as you would be able to export from your account's activity view. It includes the following fields: Date, Email Address, Sender, Subject, Status, Tags, Opens, Clicks, Bounce Detail. If you have configured any custom metadata fields, they will be included in the exported data."
+      body: 
+        application/json: 
+          schema: exports_activity
+          example: !include examples/exports_activity.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: exports_satus
+              example: !include examples/exports_activity-response.json
+/senders: 
+  /info.json: 
+    post: 
+      description: "Return more detailed information about a single sender, including aggregates of recent stats"
+      body: 
+        application/json: 
+          schema: sender_address
+          example: !include examples/senders_info.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: senders_info-response
+              example: !include examples/senders_info-response.json
+  /domains.json: 
+    post: 
+      description: "Returns the sender domains that have been added to this account."
+      body: 
+        application/json: 
+          schema: api_key
+          example: !include examples/senders_domains.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: senders_domains-response
+              example: !include examples/senders_domains-response.json
+  /time-series.json: 
+    post: 
+      description: "Return the recent history (hourly stats for the last 30 days) for a sender"
+      body: 
+        application/json: 
+          schema: sender_address
+          example: !include examples/senders_time-series.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: time-series
+              example: !include examples/senders_time-series-response.json
+  /check-domain.json: 
+    post: 
+      description: "Checks the SPF and DKIM settings for a domain. If you haven't already added this domain to your account, it will be added automatically."
+      body: 
+        application/json: 
+          schema: domain
+          example: !include examples/senders_check-domain.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: sender_domain_info
+              example: !include examples/senders_check-domain-response.json
+  /add-domain.json: 
+    post: 
+      description: "Adds a sender domain to your account. Sender domains are added automatically as you send, but you can use this call to add them ahead of time."
+      body: 
+        application/json: 
+          schema: domain
+          example: !include examples/senders_add-domain.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: sender_domain_info
+              example: !include examples/senders_add-domain-response.json
+  /list.json: 
+    post: 
+      description: "Return the senders that have tried to use this account."
+      body: 
+        application/json: 
+          schema: api_key
+          example: !include examples/senders_list.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: senders
+              example: !include examples/senders_list-response.json
+  /verify-domain.json: 
+    post: 
+      description: "Sends a verification email in order to verify ownership of a domain. Domain verification is an optional step to confirm ownership of a domain. Once a domain has been verified in a Mandrill account, other accounts may not have their messages signed by that domain unless they also verify the domain. This prevents other Mandrill accounts from sending mail signed by your domain."
+      body: 
+        application/json: 
+          schema: senders_verify-domain
+          example: !include examples/senders_verify-domain.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: senders_verify-domain-response
+              example: !include examples/senders_verify-domain-response.json
+/webhooks: 
+  /update.json: 
+    post: 
+      description: "Update an existing webhook"
+      body: 
+        application/json: 
+          schema: webhooks_update
+          example: !include examples/webhooks_update.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: webhook
+              example: !include examples/webhooks_update-response.json
+  /add.json: 
+    post: 
+      description: "Add a new webhook"
+      body: 
+        application/json: 
+          schema: webhooks_add
+          example: !include examples/webhooks_add.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: webhook
+              example: !include examples/webhooks_add-response.json
+  /delete.json: 
+    post: 
+      description: "Delete an existing webhook"
+      body: 
+        application/json: 
+          schema: webhook_key
+          example: !include examples/webhooks_delete.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: webhook
+              example: !include examples/webhooks_delete-response.json
+  /info.json: 
+    post: 
+      description: "Given the ID of an existing webhook, return the data about it"
+      body: 
+        application/json: 
+          schema: webhook_key
+          example: !include examples/webhooks_info.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: webhook
+              example: !include examples/webhooks_info-response.json
+  /list.json: 
+    post: 
+      description: "Get the list of all webhooks defined on the account"
+      body: 
+        application/json: 
+          schema: api_key
+          example: !include examples/webhooks_list.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: webhooks_list-response
+              example: !include examples/webhooks_list-response.json
+/whitelists: 
+  /add.json: 
+    post: 
+      description: "Adds an email to your email rejection whitelist. If the address is currently on your blacklist, that blacklist entry will be removed automatically."
+      body: 
+        application/json: 
+          schema: email
+          example: !include examples/whitelists_add.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: whitelists_add-response
+              example: !include examples/whitelists_add-response.json
+  /list.json: 
+    post: 
+      description: "Retrieves your email rejection whitelist. You can provide an email address or search prefix to limit the results. Returns up to 1000 results."
+      body: 
+        application/json: 
+          schema: email
+          example: !include examples/whitelists_list.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: whitelists_list-response
+              example: !include examples/whitelists_list-response.json
+  /delete.json: 
+    post: 
+      description: "Removes an email address from the whitelist."
+      body: 
+        application/json: 
+          schema: email
+          example: !include examples/whitelists_delete.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: whitelists_delete-response
+              example: !include examples/whitelists_delete-response.json
+/tags: 
+  /list.json: 
+    post: 
+      description: "Return all of the user-defined tag information"
+      body: 
+        application/json: 
+          schema: api_key
+          example: !include examples/tags_list.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: tags_list-response
+              example: !include examples/tags_list-response.json
+  /info.json: 
+    post: 
+      description: "Return more detailed information about a single tag, including aggregates of recent stats"
+      body: 
+        application/json: 
+          schema: tag_key
+          example: !include examples/tags_info.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: tags_info-response
+              example: !include examples/tags_info-response.json
+  /time-series.json: 
+    post: 
+      description: "Return the recent history (hourly stats for the last 30 days) for a tag"
+      body: 
+        application/json: 
+          schema: tag_key
+          example: !include examples/tags_time-series.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: timeseries
+              example: !include examples/tags_time-series-response.json
+  /all-time-series.json: 
+    post: 
+      description: "Return the recent history (hourly stats for the last 30 days) for all tags"
+      body: 
+        application/json: 
+          schema: api_key
+          example: !include examples/tags_all-time-series.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: timeseries
+              example: !include examples/tags_all-time-series-response.json
+  /delete.json: 
+    post: 
+      description: "Deletes a tag permanently. Deleting a tag removes the tag from any messages that have been sent, and also deletes the tag's stats. There is no way to undo this operation, so use it carefully."
+      body: 
+        application/json: 
+          schema: tag_key
+          example: !include examples/tags_delete.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: tags_delete-response
+              example: !include examples/tags_delete-response.json
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

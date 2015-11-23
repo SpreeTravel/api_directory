@@ -1,0 +1,269 @@
+#%RAML 0.8
+title: Azure Table Storage
+version: v1
+baseUri: https://{accountName}.table.core.windows.net
+baseUriParameters: 
+  accountName: 
+securitySchemes:
+  - customSchema: !include securitySchemes/customSchema.raml
+schemas:
+  - atom: !include schemas/atom.xsd
+  - tableServices-xml: !include schemas/tableServices-xml-schema.xsd
+  - tableAclPut-xml: !include schemas/tableAclPut-xml-schema.xsd
+  - entitiesQueryFull: !include schemas/entitiesQueryFull-schema.json
+  - entitiesQueryMinimal: !include schemas/entitiesQueryMinimal-schema.json
+  - entitiesQueryNoMeta: !include schemas/entitiesQueryNoMeta-schema.json
+  - entityInsertResponseFull: !include schemas/entityInsertResponseFull-schema.json
+  - entityInsertResponseMinimal: !include schemas/entityInsertResponseMinimal-schema.json
+  - entityInsertResponseNoMeta: !include schemas/entityInsertResponseNoMeta-schema.json
+  - entityInsert: !include schemas/entityInsert-schema.json
+  - tablesQueryFull: !include schemas/tablesQueryFull-schema.json
+  - tablesQueryMinimal: !include schemas/tablesQueryMinimal-schema.json
+  - tablesQueryNoMeta: !include schemas/tablesQueryNoMeta-schema.json
+  - tablesPost: !include schemas/tablesPost-schema.json
+  - entitiesPutBody: !include schemas/entitiesPutBody-schema.json
+  - tablePostResponseFull: !include schemas/tablePostResponseFull-schema.json
+  - tablePostResponseMinimal: !include schemas/tablePostResponseMinimal-schema.json
+  - tablePostResponseNoMeta: !include schemas/tablePostResponseNoMeta-schema.json
+  - tableAclGet-xml: !include schemas/tableAclGet-xml-schema.xsd
+resourceTypes:
+  - azureResource: !include resourceTypes/azureResource.raml
+traits:
+  - basicTrait: !include traits/basicTrait.raml
+  - serviceProperties: !include traits/serviceProperties.raml
+  - acl: !include traits/acl.raml
+  - complexRequest: !include traits/complexRequest.raml
+  - query: !include traits/query.raml
+  - errorResponses: !include traits/errorResponses.raml
+  - serviceVersion: !include traits/serviceVersion.raml
+/: 
+  type: azureResource
+  is: [ serviceProperties ]
+  get: 
+    description: |
+      The Get Table Service Properties operation (comp="properties") gets the properties of a storage account's Table service, including properties for Storage Analytics and CORS (Cross-Origin Resource Sharing) rules.
+      
+      The Get Table Service Stats operation (comp="stats") retrieves statistics related to replication for the Table service. It is only available on the secondary location endpoint when read-access geo-redundant replication is enabled for the storage account.
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: tableServices-xml
+            example: !include examples/tableServices-xml-example.xml
+  put: 
+    description: "The Set Table Service Properties operation sets properties for a storage account's Table service endpoint, including properties for Storage Analytics and CORS (Cross-Origin Resource Sharing) rules. See Cross-Origin Resource Sharing (CORS) Support for the Windows Azure Storage Services for more information on CORS rules."
+    body: 
+      application/xml: 
+        schema: tableServices-xml
+        example: !include examples/tableServices-xml-example.xml
+    responses: 
+      202: 
+/Tables: 
+  type: azureResource
+  is: [ serviceVersion ]
+  get: 
+    is: [ query ]
+    description: The Query Tables operation returns a list of tables under the specified account.
+    responses: 
+      200: 
+        body: 
+          application/atom+xml: 
+            schema: atom
+            example: !include examples/tablesQuery-atom-example.xml
+          application/json;odata=nometadata: 
+            schema: tablesQueryNoMeta
+            example: !include examples/tablesQueryNoMeta-example.json
+          application/json;odata=minimalmetadata: 
+            schema: tablesQueryMinimal
+            example: !include examples/tablesQueryMinimal-example.json
+          application/json;odata=fullmetadata: 
+            schema: tablesQueryFull
+            example: !include examples/tablesQueryFull-example.json
+        headers: 
+          x-ms-continuation-NextTableName: 
+            description: If the number of tables to be returned exceeds 1,000 or the query does not complete within the timeout interval, the response header includes the x-ms-continuation-NextTableName continuation header. This header returns the continuation token value. For more information about using the continuation token, see Query Timeout and Pagination.
+  post: 
+    is: [ complexRequest ]
+    description: The Create Table operation creates a new table in the storage account.
+    body: 
+      application/atom+xml: 
+        schema: atom
+        example: !include examples/tablesPost-atom-example.xml
+      application/json: 
+        schema: tablesPost
+        example: !include examples/tablesPost-example.json
+    responses: 
+      201: 
+        body: 
+          application/atom+xml: 
+            schema: atom
+            example: !include examples/tablesPostResponse-atom-example.xml
+          application/json;odata=nometadata: 
+            schema: tablePostResponseNoMeta
+            example: !include examples/tablePostResponseNoMeta-example.json
+          application/json;odata=minimalmetadata: 
+            schema: tablePostResponseMinimal
+            example: !include examples/tablePostResponseMinimal-example.json
+          application/json;odata=fullmetadata: 
+            schema: tablePostResponseFull
+            example: !include examples/tablePostResponseFull-example.json
+"/{myTable}(PartitionKey='{partitionKey}',RowKey='{rowKey}')": 
+  type: azureResource
+  is: [ serviceVersion ]
+  get: 
+    is: [ query ]
+    description: 'The Query Entities operation queries entities in a table and includes the"filter" and "select" options.'
+    responses: 
+      200: 
+        body: 
+          application/atom+xml: 
+            schema: atom
+          application/json;odata=nometadata: 
+          application/json;odata=minimalmetadata: 
+          application/json;odata=fullmetadata: 
+        headers: 
+          x-ms-continuation-NextPartitionKey: 
+            description: The header contains a hash of the next partition key to be returned in a subsequent query against the table.
+          x-ms-continuation-NextRowKey: 
+            description: The header contains a hash of the next row key to be returned in a subsequent query against the table.
+  put: 
+    description: The Insert Or Replace Entity operation replaces an existing entity or inserts a new entity if it does not exist in the table. Because this operation can insert or update an entity, it is also known as an upsert operation.
+    headers: 
+      Content-Type: 
+        description: Specifies the content type of the payload.
+        required: true
+        enum: [ application/atom+xml , application/json ]
+      Content-Length: 
+        description: The length of the request body.
+        type: integer
+        required: true
+      If-Match: 
+        description: Specifies the condition for which the update should be performed.
+        required: true
+    body: 
+      application/atom+xml: 
+        schema: atom
+        example: !include examples/entitiesPutBody-atom-example.xml
+      application/json: 
+        schema: entitiesPutBody
+        example: !include examples/entitiesPutBody-example.json
+    responses: 
+      204: 
+        description: Ok. No Content.
+        headers: 
+          ETag: 
+            description: The ETag for the entity.
+  delete: 
+    description: The Delete Entity operation deletes an existing entity in a table.
+    headers: 
+      If-Match: 
+        description: Specifies the condition for which the update should be performed.
+        required: true
+    responses: 
+      204: 
+"/Tables('{myTable}')": 
+  type: azureResource
+  delete: 
+    description: The Delete Table operation deletes the specified table and any data it contains.
+    headers: 
+      Content-Type: 
+        description: The content type of the request body. Currently, this header should be set to application/atom+xml.
+        required: true
+        enum: [ application/atom+xml ]
+    responses: 
+      204: 
+/{myTable}: 
+  is: [ errorResponses ]
+  put: 
+    is: [ basicTrait , acl ]
+    description: The Set Table ACL operation sets the stored access policies for the table that may be used with Shared Access Signatures. For more information, see Creating a Shared Access Signature.
+    body: 
+      application/xml: 
+    responses: 
+      204: 
+        body: 
+          application/xml: 
+            schema: tableAclPut-xml
+            example: !include examples/tableAclPut-xml-example.xml
+  post: 
+    is: [ basicTrait , complexRequest , serviceVersion ]
+    description: The Insert Entity operation inserts a new entity into a table.
+    body: 
+      application/atom+xml: 
+        schema: atom
+        example: !include examples/entityInsert-atom-example.xml
+      application/json: 
+        schema: entityInsert
+        example: !include examples/entityInsert-example.json
+    responses: 
+      201: 
+        body: 
+          application/atom+xml: 
+            schema: atom
+            example: !include examples/entityInsertResponse-atom-example.xml
+          application/json;odata=nometadata: 
+            example: !include examples/entityInsertResponseNoMeta-example.json
+          application/json;odata=minimalmetadata: 
+            example: !include examples/entityInsertResponseMinimal-example.json
+          application/json;odata=fullmetadata: 
+            example: !include examples/entityInsertResponseFull-example.json
+  head: 
+    is: [ basicTrait , acl ]
+    responses: 
+      200: 
+  get: 
+    is: [ basicTrait , acl ]
+    description: The Get Table ACL operation returns details about any stored access policies specified on the table that may be used with Shared Access Signatures. For more information, see Establishing a Stored Access Policy (REST API).
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: tableAclGet-xml
+            example: !include examples/tableAclGet-xml-example.xml
+/{myTable}(): 
+  type: azureResource
+  is: [ serviceVersion ]
+  get: 
+    is: [ query ]
+    description: 'The Query Entities operation queries entities in a table and includes the"filter" and "select" options.'
+    responses: 
+      200: 
+        body: 
+          application/atom+xml: 
+            schema: atom
+            example: !include examples/entitiesQuery-atom-example.xml
+          application/json;odata=nometadata: 
+            schema: entitiesQueryNoMeta
+            example: !include examples/entitiesQueryNoMeta-example.json
+          application/json;odata=minimalmetadata: 
+            schema: entitiesQueryMinimal
+            example: !include examples/entitiesQueryMinimal-example.json
+          application/json;odata=fullmetadata: 
+            schema: entitiesQueryFull
+            example: !include examples/entitiesQueryFull-example.json
+        headers: 
+          x-ms-continuation-NextPartitionKey: 
+            description: The header contains a hash of the next partition key to be returned in a subsequent query against the table.
+          x-ms-continuation-NextRowKey: 
+            description: The header contains a hash of the next row key to be returned in a subsequent query against the table.
+/$batch: 
+  type: azureResource
+  is: [ serviceVersion ]
+  description: |
+    The Table service supports batch transactions on entities that are in the same table and belong to the same partition group.
+    Multiple Insert Entity (REST API), Update Entity (REST API), Merge Entity (REST API), Delete Entity (REST API),
+    Insert Or Replace Entity (REST API), and Insert Or Merge Entity (REST API) operations are supported within a single transaction.
+    You can perform entity group transactions either via REST or by using the .NET Client Library for WCF Data Services.
+  post: 
+    body: 
+      multipart/mixed: 
+        example: !include examples/batchRequest.txt
+    responses: 
+      202: 
+        description: Accepted.
+        body: 
+          multipart/mixed: 
+            example: !include examples/batchResponse.txt
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

@@ -1,0 +1,20 @@
+[
+  {
+    "post_count": 1,
+    "score": 1,
+    "user": {
+      "accept_rate": 1,
+      "badge_counts": {
+        "bronze": 1,
+        "gold": 1,
+        "silver": 1
+      },
+      "display_name": "some string",
+      "link": "some string",
+      "profile_image": "some string",
+      "reputation": 1,
+      "user_id": 1,
+      "user_type": "some string"
+    }
+  }
+]

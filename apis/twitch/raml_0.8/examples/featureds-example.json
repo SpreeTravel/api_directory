@@ -1,0 +1,19 @@
+{
+  "_links" : {
+    "self" : "https://api.twitch.tv/kraken/streams/featured?limit=25&offset=0" ,
+    "next" : "https://api.twitch.tv/kraken/streams/featured?limit=25&offset=25"
+  } ,
+  "featured" : [
+    {
+      "image" : "http://s.jtvnw.net/jtv_user_pictures/hosted_images/therun.jpg" ,
+      "text" : "This is the run! Watch as multi-time world record Super Mario 64 gamer, Siglemic, pushes the N64 classic to its absolute limits." ,
+      "stream" : {
+      }
+    } , {
+      "image" : "http://s.jtvnw.net/jtv_user_pictures/hosted_images/therun.jpg" ,
+      "text" : "This is the run! Watch as multi-time world record Super Mario 64 gamer, Siglemic, pushes the N64 classic to its absolute limits." ,
+      "stream" : {
+      }
+    }
+  ]
+}

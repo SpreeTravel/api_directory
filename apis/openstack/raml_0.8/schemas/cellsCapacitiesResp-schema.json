@@ -1,0 +1,91 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "cell" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "capacities" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "disk_free" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "total_mb" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "units_by_mb" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "0" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "163840" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "20480" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "40960" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "81920" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                }
+              }
+            } ,
+            "ram_free" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "total_mb" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "units_by_mb" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "16384" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "2048" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "4096" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "512" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "8192" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

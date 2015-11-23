@@ -1,0 +1,89 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "email" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "country_code" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "language_code" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "business_name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "business_address" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "address_line_1" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "locality" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "administrative_district_level_1" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "postal_code" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "business_phone" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "calling_code" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "number" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "business_type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "account_type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "location_details" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "nickname" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "market_url" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

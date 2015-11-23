@@ -1,0 +1,24 @@
+queryParameters: 
+  endDate: 
+    description: Latest date of comment to fetch, a date-time with RFC 3339 formatting.
+  fetchBodies: 
+    description: Whether the body content of the comments is included.
+  maxResults: 
+    description: Maximum number of comments to include in the result.
+  pageToken: 
+    description: Continuation token if request is paged.
+  startDate: 
+    description: Earliest date of comment to fetch, a date-time with RFC 3339 formatting.
+  status: 
+    description: |
+      Acceptable values are:
+      "emptied": Comments that have had their content removed
+      "live": Comments that are publicly visible
+      "pending": Comments that are awaiting administrator approval
+      "spam": Comments marked as spam by the administrator
+  view: 
+    description: |
+      Acceptable values are:
+      "ADMIN": Admin level detail
+      "AUTHOR": Author level detail
+      "READER": Admin level detail

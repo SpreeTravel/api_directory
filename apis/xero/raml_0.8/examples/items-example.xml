@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Item>
+  <ItemID>9a59ea90-942e-484d-9b71-d00ab607e03b</ItemID>
+  <Code>Merino-2011-LG</Code>
+  <Description>2011 Merino Sweater - LARGE</Description>
+  <PurchaseDetails>
+    <UnitPrice>149.00</UnitPrice>
+    <AccountCode>300</AccountCode>
+  </PurchaseDetails>
+  <SalesDetails>
+    <UnitPrice>299.00</UnitPrice>
+    <AccountCode>200</AccountCode>
+  </SalesDetails>
+</Item>

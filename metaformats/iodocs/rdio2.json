@@ -1,0 +1,397 @@
+{
+    "auth": {
+        "oauth": {
+            "access_token_uri": "oauth2/authorize",
+            "base_uri": "https://www.rdio.com/",
+            "token": {
+                "location": "header"
+            },
+            "type": "implicit",
+            "version": "2.0"
+        }
+    },
+    "basePath": "https://www.rdio.com",
+    "headers": {
+        "Content-Type": "application/json"
+    },
+    "name": "Rdio Beta (OAuth 2.0 Implicit Grant)",
+    "privatePath": "/api/1",
+    "protocol": "rest",
+    "publicPath": "/api/1",
+    "resources": {
+        "ActivityMethods": {
+            "methods": {
+                "getActivityStream": {
+                    "description": "Gets the activity events for a user, a user's friends, or everyone on Rdio.",
+                    "httpMethod": "POST",
+                    "name": "getActivityStream",
+                    "path": "",
+                    "request": {
+                        "$ref": "getActivityStream"
+                    }
+                },
+                "getHeavyRotation": {
+                    "description": "Find the most popular content for a user, their friends or the whole site.",
+                    "httpMethod": "POST",
+                    "name": "getHeavyRotation",
+                    "parameters": {
+                        "count": {
+                            "default": "10",
+                            "description": "The maximum number of results to return.",
+                            "required": false,
+                            "title": "count",
+                            "type": "integer"
+                        },
+                        "extras": {
+                            "default": "",
+                            "description": "A list of additional fields to return - a list, comma separated.",
+                            "required": false,
+                            "title": "extras",
+                            "type": "string"
+                        },
+                        "friends": {
+                            "default": "false",
+                            "description": "The user's friend's heavy rotation instead of the user's. true/false",
+                            "required": false,
+                            "title": "friends",
+                            "type": "string"
+                        },
+                        "limit": {
+                            "default": "",
+                            "description": "The maximum number of results to return.",
+                            "required": false,
+                            "title": "limit",
+                            "type": "integer"
+                        },
+                        "start": {
+                            "default": "0",
+                            "description": "The offset of the first result to return.",
+                            "required": false,
+                            "title": "start",
+                            "type": "integer"
+                        },
+                        "type": {
+                            "default": "albums",
+                            "description": "Type of content to return.",
+                            "enum": [
+                                "albums",
+                                "artists",
+                                "playlists",
+                                "tracks",
+                                "stations"
+                            ],
+                            "required": false,
+                            "title": "type",
+                            "type": "string"
+                        },
+                        "user": {
+                            "default": "s3828768",
+                            "description": "The user, or everyone if this is missing.",
+                            "required": false,
+                            "title": "user",
+                            "type": "string"
+                        }
+                    },
+                    "path": "",
+                    "request": {
+                        "$ref": "getHeavyRotation"
+                    }
+                },
+                "getNewReleases": {
+                    "description": "Return new albums released across a timeframe.",
+                    "httpMethod": "POST",
+                    "name": "getNewReleases",
+                    "parameters": {
+                        "count": {
+                            "default": "20",
+                            "description": "The maximum number of results to return.",
+                            "required": false,
+                            "title": "count",
+                            "type": "integer"
+                        },
+                        "extras": {
+                            "default": "",
+                            "description": "A list of additional fields to return - a list, comma separated.",
+                            "required": false,
+                            "title": "extras",
+                            "type": "string"
+                        },
+                        "start": {
+                            "default": "0",
+                            "description": "The offset of the first result to return.",
+                            "required": false,
+                            "title": "start",
+                            "type": "integer"
+                        },
+                        "time": {
+                            "default": "thisweek",
+                            "description": "Timeframe. Examples: thisweek, overview, lastweek, twoweeks.",
+                            "enum": [
+                                "thisweek",
+                                "overview",
+                                "lastweek",
+                                "twoweeks"
+                            ],
+                            "required": false,
+                            "title": "time",
+                            "type": "string"
+                        }
+                    },
+                    "path": "",
+                    "request": {
+                        "$ref": "getNewReleases"
+                    }
+                },
+                "getTopCharts": {
+                    "description": "Return the site-wide most popular items for a given type.",
+                    "httpMethod": "POST",
+                    "name": "getTopCharts",
+                    "parameters": {
+                        "count": {
+                            "default": "20",
+                            "description": "The maximum number of results to return.",
+                            "required": false,
+                            "title": "count",
+                            "type": "integer"
+                        },
+                        "extras": {
+                            "default": "",
+                            "description": "A list of additional fields to return - a list, comma separated.",
+                            "required": false,
+                            "title": "extras",
+                            "type": "string"
+                        },
+                        "start": {
+                            "default": "0",
+                            "description": "The offset of the first result to return.",
+                            "required": false,
+                            "title": "start",
+                            "type": "integer"
+                        }
+                    },
+                    "path": "",
+                    "request": {
+                        "$ref": "getTopCharts"
+                    }
+                }
+            }
+        },
+        "Catalog": {
+            "methods": {
+                "getAlbumsByUPC": {
+                    "description": "Finds and returns albums based on their Universal Product Code (UPC).",
+                    "httpMethod": "POST",
+                    "name": "getAlbumsByUPC",
+                    "path": "",
+                    "request": {
+                        "$ref": "getAlbumsByUPC"
+                    }
+                }
+            }
+        },
+        "Playlists": {
+            "methods": {
+                "getPlaylists": {
+                    "description": "Returns a user\u2019s playlists. If no user is specified then the current user will be used.",
+                    "httpMethod": "POST",
+                    "name": "getPlaylists",
+                    "parameters": {
+                        "user": {
+                            "default": "s422965",
+                            "description": "The user.",
+                            "required": true,
+                            "title": "user",
+                            "type": "string"
+                        }
+                    },
+                    "path": "",
+                    "request": {
+                        "$ref": "getPlaylists"
+                    }
+                }
+            }
+        },
+        "Social": {
+            "methods": {
+                "currentUser": {
+                    "description": "Get information about the currently logged in user.",
+                    "httpMethod": "POST",
+                    "name": "currentUser",
+                    "parameters": {
+                        "extras": {
+                            "default": "",
+                            "description": "a list of additional fields to return \u2013 a list, comma separated.",
+                            "required": false,
+                            "title": "extras",
+                            "type": "string"
+                        }
+                    },
+                    "path": "",
+                    "request": {
+                        "$ref": "currentUser"
+                    }
+                },
+                "findUser": {
+                    "description": "Find a user either by email address or by their username. Exactly one of email or vanityName must be supplied.",
+                    "httpMethod": "POST",
+                    "name": "findUser",
+                    "path": "",
+                    "request": {
+                        "$ref": "findUser"
+                    }
+                }
+            }
+        }
+    },
+    "schemas": {
+        "currentUser": {
+            "properties": {
+                "method": {
+                    "default": "currentUser",
+                    "description": "Method name.",
+                    "required": true,
+                    "title": "method",
+                    "type": "string"
+                }
+            }
+        },
+        "findUser": {
+            "properties": {
+                "email": {
+                    "default": "",
+                    "description": "An email address.",
+                    "required": false,
+                    "title": "email",
+                    "type": "string"
+                },
+                "extras": {
+                    "default": "",
+                    "description": "A list of additional fields to return \u2013 a list, comma separated.",
+                    "required": false,
+                    "title": "extras",
+                    "type": "string"
+                },
+                "method": {
+                    "default": "findUser",
+                    "description": "Method name.",
+                    "required": true,
+                    "title": "method",
+                    "type": "string"
+                },
+                "vanityName": {
+                    "default": "",
+                    "description": "A username.",
+                    "required": false,
+                    "title": "vanityName",
+                    "type": "string"
+                }
+            }
+        },
+        "getActivityStream": {
+            "properties": {
+                "method": {
+                    "default": "getActivityStream",
+                    "description": "Method name.",
+                    "required": true,
+                    "title": "method",
+                    "type": "string"
+                },
+                "scope": {
+                    "default": "user",
+                    "description": "The scope of the activity stream, either \u201cuser\u201d, \u201cfriends\u201d or \u201ceveryone\u201d.",
+                    "enum": [
+                        "user",
+                        "friends",
+                        "everyone"
+                    ],
+                    "required": true,
+                    "title": "scope",
+                    "type": "string"
+                },
+                "user": {
+                    "default": "s3828768",
+                    "description": "",
+                    "required": true,
+                    "title": "user",
+                    "type": "string"
+                }
+            }
+        },
+        "getAlbumsByUPC": {
+            "properties": {
+                "method": {
+                    "default": "getAlbumsByUPC",
+                    "description": "Method name.",
+                    "required": true,
+                    "title": "method",
+                    "type": "string"
+                },
+                "upc": {
+                    "default": "602498177068",
+                    "description": "The UPC code to search for.",
+                    "required": true,
+                    "title": "upc",
+                    "type": "string"
+                }
+            }
+        },
+        "getHeavyRotation": {
+            "properties": {
+                "method": {
+                    "default": "getHeavyRotation",
+                    "description": "Method name.",
+                    "location": "body",
+                    "required": true,
+                    "title": "method",
+                    "type": "string"
+                }
+            }
+        },
+        "getNewReleases": {
+            "properties": {
+                "method": {
+                    "default": "getNewReleases",
+                    "description": "Method name.",
+                    "required": true,
+                    "title": "method",
+                    "type": "string"
+                }
+            }
+        },
+        "getPlaylists": {
+            "properties": {
+                "method": {
+                    "default": "getPlaylists",
+                    "description": "Method name.",
+                    "required": true,
+                    "title": "method",
+                    "type": "string"
+                }
+            }
+        },
+        "getTopCharts": {
+            "properties": {
+                "method": {
+                    "default": "getTopCharts",
+                    "description": "Method name.",
+                    "required": true,
+                    "title": "method",
+                    "type": "string"
+                },
+                "methodType": {
+                    "default": "Album",
+                    "description": "Type to include in results - An object type name. Examples: Album, Artist, Playlist, Track",
+                    "enum": [
+                        "Album",
+                        "Arist",
+                        "Playlist",
+                        "Track"
+                    ],
+                    "required": true,
+                    "title": "type",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

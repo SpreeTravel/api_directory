@@ -1,0 +1,17 @@
+{
+    "food":
+        {
+            "accessLevel":"PRIVATE",
+            "brand":"",
+            "calories":100,
+            "defaultServingSize":1,
+            "defaultUnit":{
+                "id":100,
+                "name":"dolma",
+                "plural":"dolmas"
+            },
+            "foodId":490768,
+            "name":"TestFood",
+            "units":[541]
+        }
+}

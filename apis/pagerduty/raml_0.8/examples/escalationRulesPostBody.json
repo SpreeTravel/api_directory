@@ -1,0 +1,9 @@
+{
+	"escalation_rule" : {
+		"escalation_delay_in_minutes" : 2 ,
+		"rule_object" : {
+			"type" : "user" ,
+			"id" : "PAD6MYW"
+		}
+	}
+}

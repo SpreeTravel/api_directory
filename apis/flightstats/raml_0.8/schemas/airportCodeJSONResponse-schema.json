@@ -1,0 +1,109 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "airport" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "fs" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "iata" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "icao" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "faa" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "street1" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "city" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "cityCode" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "stateCode" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "postalCode" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "countryCode" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "countryName" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "regionName" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "timeZoneRegionName" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "weatherZone" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "localTime" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "utcOffsetHours" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "latitude" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "longitude" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "elevationFeet" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "classification" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "active" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "delayIndexUrl" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "weatherUrl" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

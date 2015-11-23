@@ -1,0 +1,32 @@
+get: 
+  description: Get information about a request to join a private group. Get the value of requestId from the Group Membership Request response from a POST request to /chatter/groups/groupId/members/requests.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: groupMembershipRequestResponse
+head: 
+  description: Get information about a request to join a private group. Get the value of requestId from the Group Membership Request response from a POST request to /chatter/groups/groupId/members/requests.
+  responses: 
+    200: 
+patch: 
+  description: Update the status of a request by a user to join a private group. Get the value of requestId from the Group Membership Request response from a POST request to /chatter/groups/groupId/members/requests.
+  queryParameters: 
+    responseMessage: 
+      description: |
+        Use this property to provide a message to the user if their membership request is declined. The value of this property is used only when the value of the status property is Declined.
+        The maximum length is 756 characters.
+    status: 
+      description: |
+        Valid values:
+        Accepted
+        Declined
+      enum: [ Accepted , Declined ]
+  body: 
+    application/json: 
+      schema: groupMembershipRequestUpdateRequest
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: groupMembershipRequestResponse

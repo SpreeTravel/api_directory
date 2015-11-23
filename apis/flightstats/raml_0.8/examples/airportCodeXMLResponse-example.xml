@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+	<airport>
+		<fs>PDX</fs>
+		<iata>PDX</iata>
+		<icao>KPDX</icao>
+		<faa>PDX</faa>
+		<name>Portland International Airport</name>
+		<street1>7000 NE Airport Way</street1>
+		<city>Portland</city>
+		<cityCode>PDX</cityCode>
+		<stateCode>OR</stateCode>
+		<postalCode>97218</postalCode>
+		<countryCode>US</countryCode>
+		<countryName>United States</countryName>
+		<regionName>North America</regionName>
+		<timeZoneRegionName>America/Los_Angeles</timeZoneRegionName>
+		<weatherZone>ORZ006</weatherZone>
+		<localTime>2015-04-24T02:50:45.367</localTime>
+		<utcOffsetHours>-7.0</utcOffsetHours>
+		<latitude>45.588995</latitude>
+		<longitude>-122.592901</longitude>
+		<elevationFeet>30</elevationFeet>
+		<classification>1</classification>
+		<active>true</active>
+		<delayIndexUrl>https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/PDX?codeType=fs</delayIndexUrl>
+		<weatherUrl>https://api.flightstats.com/flex/weather/rest/v1/json/all/PDX?codeType=fs</weatherUrl>
+	</airport>
+</response>

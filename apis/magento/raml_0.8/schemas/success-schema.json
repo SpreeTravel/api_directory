@@ -1,0 +1,32 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : [
+    {
+      "type" : "object" ,
+      "properties" : {
+        "item_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "product_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "stock_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "qty" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "low_stock_date" : {
+          "type" : "object" ,
+          "required" : false
+        }
+      }
+    }
+  ]
+}

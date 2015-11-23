@@ -1,0 +1,25 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "evacuate" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "host" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "admin_password" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "on_shared_storage" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

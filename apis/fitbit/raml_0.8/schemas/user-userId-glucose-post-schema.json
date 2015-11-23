@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+		"hba1c": {
+			"type": "number"
+		},
+		"glucose": {
+			"glucose": {
+				"type": "integer"
+			},
+            "tracker": {
+            	"type": "string"
+            },
+            "time": {
+            	"type": "string"
+            }
+		}
+	}
+}

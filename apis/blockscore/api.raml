@@ -1,0 +1,345 @@
+#%RAML 0.8
+title: BlockScore
+version: 4
+baseUri: https://api.blockscore.com
+securitySchemes:
+  - basic: !include securitySchemes/basic.raml
+schemas:
+  - peopleResponse: !include /schemas/peopleResponse-schema.json
+  - verificationsListResponse: !include /schemas/verificationsListResponse-schema.json
+  - questionResponse: !include /schemas/questionResponse-schema.json
+  - historicalQuestionSetsResponse: !include /schemas/historicalQuestionSetsResponse-schema.json
+  - companyResponse: !include /schemas/companyResponse-schema.json
+  - listAllCompaniesResponse: !include /schemas/listAllCompaniesResponse-schema.json
+  - candidateResponse: !include /schemas/candidateResponse-schema.json
+  - candidateDeleteResponse: !include /schemas/candidateDeleteResponse-schema.json
+  - listAllCandidatesResponse: !include /schemas/listAllCandidatesResponse-schema.json
+  - candidatesHistoryResponse: !include /schemas/candidatesHistoryResponse-schema.json
+  - candidateHitsResponse: !include /schemas/candidateHitsResponse-schema.json
+  - watchlistsResponse: !include /schemas/watchlistsResponse-schema.json
+traits:
+  - person: !include traits/person.raml
+  - address: !include traits/address.raml
+  - additionalInfo: !include traits/additionalInfo.raml
+securedBy: [ basic ]
+/people: 
+  post: 
+    is: [ additionalInfo ]
+    description: This endpoint creates a new person. The information will be run through our verification process and then returned with additional information that will help you determine the authenticity of the information given.
+    queryParameters: 
+      name_first: 
+        description: The legal first name of the customer.
+        required: true
+      name_last: 
+        description: The legal middle name of the customer.
+        required: true
+      document_type: 
+        description: Must be one of the document types described in the Documents section.
+        required: true
+      name_middle: 
+        description: The legal middle name of the customer.
+      document_value: 
+        description: The number associated with the form of documentation used.
+        required: true
+      birth_day: 
+        description: The integer associated with the day of birth.
+        required: true
+      birth_month: 
+        description: The integer associated with the month of birth.
+        required: true
+      birth_year: 
+        description: The full 4-digit year of birth.
+        required: true
+      address_street1: 
+        description: The primary street address of the customer. This is automatically normalized.
+        required: true
+      address_city: 
+        description: The city name of the customer. This is automatically normalized.
+        required: true
+      address_subdivision: 
+        description: "The subdivision of the entered country. For instance in the United States, this would be a 'state'."
+        required: true
+      address_postal_code: 
+        description: The postal code of the person. Also known as a ZIP code.
+        required: true
+      address_country_code: 
+        description: The country of the customer. Should be of the ISO code form.
+        required: true
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: peopleResponse
+            example: !include examples/peopleResponse-example.json
+  get: 
+    description: |
+      This endpoint will allow you to see a historical record of all verifications that you have completed.
+      
+      The list is displayed in reverse chronological order (newer people appear first).
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: verificationsListResponse
+            example: !include examples/verificationsListResponse-example.json
+  /{PERSON_ID}: 
+    get: 
+      description: You can pull up a single person at any time (typically this is used for auditing purposes).
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: peopleResponse
+              example: !include examples/peopleResponse-example.json
+/question_sets: 
+  post: 
+    description: This method will create a new question set to ask your users. You can call this endpoint multiple times with the same person ID and the questions asked as well as the order that everything is presented in will be randomized.
+    queryParameters: 
+      person_id: 
+        description: The ID of the person, and thus the identity, on which to base the question sets. You can create multiple question sets using the same question set ID.
+        required: true
+      time_limit: 
+        description: How long after creating a question set that the `expired` boolean will remain `false`. This is inputted in seconds and defaults to `0`, which means no time limit. This allows you to make sure that your customer does not take too long to answer a question set.
+        default: 0
+        example: 300
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: questionResponse
+            example: !include examples/questionResponse-example.json
+  get: 
+    description: |
+      List all question sets
+      
+      This endpoint will allow you to see a historical record of all question sets that you have created.
+      
+      The list is displayed in reverse chronological order (newer question sets appear first).
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: historicalQuestionSetsResponse
+            example: !include examples/historicalQuestionSetsResponse-example.json
+  /{QUESTION_SET_ID}: 
+    get: 
+      description: |
+        Retrieve an existing question set
+        
+        This allows you to retrieve a question set you have created. If you have already scored the question set, we will also return the last score of your submitted answers.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: questionResponse
+              example: !include examples/questionSetResponse-example.json
+    /score: 
+      post: 
+        description: Once the user has finished answering the questions, you will need to send us their answers so that we can score it. The scoring system will score it based on how many questions you submit, so if you would only like to ask 3 questions, only submit the 3 questions which you would like scored.
+        queryParameters: 
+          answers: 
+            description: "An array of objects containing question_id and answer_id pairs. This is the container for all of the user's answers."
+            required: true
+          answers[][question_id]: 
+            description: The ID of the question to which the user is responding. This ID is found in the response when creating a question set.
+            required: true
+            example: answers[][question_id]=3
+          answers[][answer_id]: 
+            description: The ID of the answer that the user picks while answering questions. The ID is found in the response when creating a question set.
+            required: true
+            example: answers[][answer_id]=2
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: questionResponse
+                example: !include examples/questionSetResponse-example.json
+/companies: 
+  post: 
+    is: [ additionalInfo ]
+    description: |
+      Create a new company
+      
+      This endpoint creates a new company. The information will be run through our company verification process and then returned with additional information that will help you determine the authenticity of the information given.
+      
+      Please be aware that the response time can sometimes be more than 6 seconds due to the speed of some government data sources.
+    queryParameters: 
+      entity_name: 
+        description: "This should exclude any legal endings like 'Co' or 'Inc' for best results."
+        required: true
+      tax_id: 
+        description: The tax ID should only include the digits of the ID with no extraneous characters like dashes.
+        required: true
+      incorporation_state: 
+        description: Can be either of ISO code form or the full length name of the state.
+      incorporation_country_code: 
+        description: Should be of the ISO alpha-2 code form.
+        required: true
+      incorporation_type: 
+        description: "Must be one of the pre-defined incorporation types listed in the 'Incorporation types' table."
+        required: true
+      incorporation_day: 
+        description: "The day in integer form of the company's incorporation."
+      incorporation_month: 
+        description: "The month in integer form of the company's incorporation."
+      incorporation_year: 
+        description: "The year in 4-digit integer form of the company's incorporation."
+      dbas: 
+        description: Both commas and spaces are acceptable for delimiting multiple names.
+      registration_number: 
+        description: Should only include the digits of the registration number with no extraneous characters like dashes.
+      email: 
+        description: Any form of valid email is accepted.
+      url: 
+        description: "Can either contain protocol information or not (ex. www.example.com and http://www.example.com)."
+      address_street1: 
+        description: The primary street address of the customer. This is automatically normalized.
+        required: true
+      address_city: 
+        description: The city name of the customer. This is automatically normalized.
+        required: true
+      address_subdivision: 
+        description: The state of the customer. Should be of the FIPS code form. For example California would be CA.
+        required: true
+      address_postal_code: 
+        description: The country of the customer. Should be of the ISO code form.
+        required: true
+      address_country_code: 
+        description: The country of the customer. Should be of the ISO code form.
+        required: true
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: companyResponse
+            example: !include examples/companyResponse-example.json
+  get: 
+    description: |
+      List all companies
+      
+      This endpoint will allow you to see a historical record of all company verifications that you have completed.
+      
+      The list is displayed in reverse chronological order (newer company verifications appear first).
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: listAllCompaniesResponse
+            example: !include examples/listAllCompaniesResponse-example.json
+  /{COMPANY_ID}: 
+    get: 
+      description: |
+        Retrieve an existing company
+        
+        You can pull up a single company verification at any time (typically this is used for auditing purposes).
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: companyResponse
+              example: !include examples/companyResponse-example.json
+/candidates: 
+  post: 
+    is: [ address , person ]
+    description: |
+      Create a new candidate.
+      This endpoint creates a new candidate.
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: candidateResponse
+            example: !include examples/candidateResponse-example.json
+  get: 
+    description: |
+      List all candidates
+      
+      This endpoint will allow you to see a historical record of all candidates you have created.
+      
+      The list is displayed in reverse chronological order (newer candidates appear first).
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: listAllCandidatesResponse
+            example: !include examples/listAllCandidatesResponse-example.json
+  /{CANDIDATE_ID}: 
+    patch: 
+      is: [ address , person ]
+      description: |
+        Edit a candidate
+        If you'd like to amend the information associated with a candidate, you can modify it using this route. For instance, if your candidate changes addresses or you learn additional information about them. Only the information you send us will be updated - the rest will remain the same.
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: candidateResponse
+              example: !include examples/candidateResponse-example.json
+    delete: 
+      description: |
+        Delete a candidate
+        This endpoint allows you to remove a candidate from our system. If you have signed up for continuous verification, then the deleted candidate will no longer be scanned.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: candidateDeleteResponse
+              example: !include examples/candidateDeleteResponse-example.json
+    get: 
+      description: |
+        Retrieve an existing candidate
+        
+        This endpoint allows you to retrieve the record of a candidate using their stored candidate_id.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: candidateResponse
+              example: !include examples/candidateResponse-example.json
+    /history: 
+      get: 
+        description: |
+          View a candidate's revision history
+          
+          We store a complete revision history of a candidate's edits. This allows you to maintain a full audit trail of when and how you update a client's profile over time.
+          
+          The latest revision is presented at the top of the array, and the original is at the end of the array.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: candidatesHistoryResponse
+                example: !include examples/candidatesHistoryResponse-example.json
+    /hits: 
+      get: 
+        description: |
+          View a candidate's past hits
+          
+          Whenever a search is executed for a candidate, we store the results of that search with timestamps of when those hits occurred. This endpoint allows you to view all historical watchlist hits for a given candidate.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: candidateHitsResponse
+                example: !include examples/candidateHitsResponse-example.json
+/watchlists: 
+  post: 
+    description: This endpoint creates a new verification. The information will be run through our verification process and then returned with additional information that will help you determine the authenticity of the information given.
+    queryParameters: 
+      candidate_id: 
+        description: The ID the candidate you have created. We search on all of the information provided in the associated profile.
+        required: true
+      match_type: 
+        description: Can be either the value person or company and will restrict the search to only search for people or entities on the watchlists.
+      similarity_threshold: 
+        description: The sensitivity of search results. Expects a float between 0.0 and 1.0 where 1.0 is exact matches only and 0.0 is lenient matching. The default value is 0.7.
+        default: 0.7
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: watchlistsResponse
+            example: !include examples/watchlistsResponse-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

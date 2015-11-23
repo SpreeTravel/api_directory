@@ -1,0 +1,6 @@
+{
+  "name" : "{ERROR NAME}" ,
+  "message" : "{Error description}" ,
+  "information_link" : "{Link to error documentation}" ,
+  "details" : "[Additional details about the error]"
+}

@@ -1,0 +1,196 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "request" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "output" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthlydebts" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "terminmonths" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthlypayment" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "schedule" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "pmi" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "debttoincome" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "hazard" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "hoa" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "callback" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "propertytax" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "estimate" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "annualincome" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "incometax" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "zip" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "down" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "rate" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "message" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "text" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "code" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "response" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "affordabilityAmount" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthlyPrincipalAndInterest" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthlyPropertyTaxes" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthlyHazardInsurance" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthlyPmi" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthlyHoaDues" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "totalMonthlyPayment" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "totalPayments" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "totalInterestPayments" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "totalPrincipal" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "totalTaxesFeesAndInsurance" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthlyIncome" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthlyDebts" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthlyIncomeTax" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthlyRemainingBudget" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "annualAmortizationSchedule" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "period" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "beginningBalance" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "amount" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "principal" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "interest" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "endingBalance" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

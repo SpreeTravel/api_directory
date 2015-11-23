@@ -1,0 +1,10 @@
+{
+  "title" : "First Column" ,
+  "index" : 0 ,
+  "sheetId" : SHEET_ID ,
+  "type" : "PICKLIST" ,
+  "options" : [
+    "One" ,
+    "Two"
+  ]
+}

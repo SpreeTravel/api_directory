@@ -1,0 +1,40 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : [
+    {
+      "type" : "object" ,
+      "properties" : {
+        "id" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "description" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "owner" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "ownerId" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "createdAt" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "modifiedAt" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  ]
+}

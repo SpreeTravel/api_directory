@@ -1,0 +1,17 @@
+post?: 
+  body: 
+    application/json: 
+  responses: 
+    201?: 
+      body: 
+        application/json: 
+          schema: refund
+          example: !include ../examples/refund-example.json
+get?: 
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: refund
+          example: !include ../examples/refund-example.json
+type: base

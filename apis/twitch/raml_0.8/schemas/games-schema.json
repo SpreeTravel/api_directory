@@ -1,0 +1,110 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "_links" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "self" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "next" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "_total" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "top" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : 
+        {
+          "type" : "object" ,
+          "properties" : {
+            "game" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "box" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "large" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "medium" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "small" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "template" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "logo" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "large" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "medium" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "small" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "template" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "_links" : {
+                  "type" : "object" ,
+                  "required" : false
+                } ,
+                "_id" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "giantbomb_id" : {
+                  "type" : "number" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "viewers" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "channels" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        }
+      
+    }
+  }
+}

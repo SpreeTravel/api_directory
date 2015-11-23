@@ -1,0 +1,622 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "properties" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "first" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "images" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "items" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "properties" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "architecture" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "checksum" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "maxLength" : {
+                          "type" : "number" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "container_format" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "enum" : {
+                          "type" : "array" ,
+                          "required" : false ,
+                          "items" : [
+                            {
+                              "type" : "string"
+                            }
+                          ]
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "created_at" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "direct_url" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "disk_format" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "enum" : {
+                          "type" : "array" ,
+                          "required" : false ,
+                          "items" : [
+                            {
+                              "type" : "string"
+                            }
+                          ]
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "file" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "id" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "pattern" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "instance_uuid" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "kernel_id" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "pattern" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "locations" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "items" : {
+                          "type" : "object" ,
+                          "required" : false ,
+                          "properties" : {
+                            "properties" : {
+                              "type" : "object" ,
+                              "required" : false ,
+                              "properties" : {
+                                "metadata" : {
+                                  "type" : "object" ,
+                                  "required" : false ,
+                                  "properties" : {
+                                    "type" : {
+                                      "type" : "string" ,
+                                      "required" : false
+                                    }
+                                  }
+                                } ,
+                                "url" : {
+                                  "type" : "object" ,
+                                  "required" : false ,
+                                  "properties" : {
+                                    "maxLength" : {
+                                      "type" : "number" ,
+                                      "required" : false
+                                    } ,
+                                    "type" : {
+                                      "type" : "string" ,
+                                      "required" : false
+                                    }
+                                  }
+                                }
+                              }
+                            } ,
+                            "required" : {
+                              "type" : "array" ,
+                              "required" : false ,
+                              "items" : [
+                                {
+                                  "type" : "string"
+                                }
+                              ]
+                            } ,
+                            "type" : {
+                              "type" : "string" ,
+                              "required" : false
+                            }
+                          }
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "min_disk" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "min_ram" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "name" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "maxLength" : {
+                          "type" : "number" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "os_distro" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "os_version" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "owner" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "maxLength" : {
+                          "type" : "number" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "protected" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "ramdisk_id" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "pattern" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "schema" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "self" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "size" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "status" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "enum" : {
+                          "type" : "array" ,
+                          "required" : false ,
+                          "items" : [
+                            {
+                              "type" : "string"
+                            }
+                          ]
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "tags" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "items" : {
+                          "type" : "object" ,
+                          "required" : false ,
+                          "properties" : {
+                            "maxLength" : {
+                              "type" : "number" ,
+                              "required" : false
+                            } ,
+                            "type" : {
+                              "type" : "string" ,
+                              "required" : false
+                            }
+                          }
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "updated_at" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "virtual_size" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "visibility" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "description" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "enum" : {
+                          "type" : "array" ,
+                          "required" : false ,
+                          "items" : [
+                            {
+                              "type" : "string"
+                            }
+                          ]
+                        } ,
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    }
+                  }
+                } ,
+                "additionalProperties" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "type" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "links" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                    {
+                      "type" : "object" ,
+                      "properties" : {
+                        "href" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "rel" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            } ,
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "next" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "schema" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      }
+    } ,
+    "links" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "href" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "rel" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "key": "example key",
+  "warmup": true,
+  "pool": "Main Pool"
+}

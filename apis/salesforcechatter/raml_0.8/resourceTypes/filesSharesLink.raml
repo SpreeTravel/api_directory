@@ -1,0 +1,23 @@
+head: 
+  description: Access a file’s share link.
+  responses: 
+    200: 
+get: 
+  description: Access a file’s share link.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+put: 
+  description: Create a file’s share link.
+  body: 
+    application/json: 
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: fileShareLinkResponse
+delete: 
+  description: Delete a file’s share link.
+  responses: 
+    204: 

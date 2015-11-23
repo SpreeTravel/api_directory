@@ -1,0 +1,206 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "request" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "topLatitude" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "requested" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "interpreted" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "leftLongitude" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "requested" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "interpreted" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "bottomLatitude" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "requested" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "interpreted" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "rightLongitude" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "requested" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "interpreted" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "maxFlights" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "extendedOptions" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "url" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "appendix" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "flightPositions" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "flightId" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "callsign" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "heading" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "source" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "positions" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "lon" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "lat" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "speedMph" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "altitudeFt" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "source" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "date" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "flightId" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "callsign" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "tailNumber" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "heading" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "source" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "positions" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "lon" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "lat" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "speedMph" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "altitudeFt" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "source" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "date" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

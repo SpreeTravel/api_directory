@@ -1,0 +1,151 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "count" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "relatives" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "match_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "first_name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "last_name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "sex" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "birth_year" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "birthplace" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "ancestry" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "family_locations" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "family_surnames" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "shared_segments" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "relationship" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "predicted_relationship_code" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "user_relationship_code" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "range" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "similarity" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "maternal_haplogroup" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "paternal_haplogroup" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "maternal_side" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "paternal_side" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "notes" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "added" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "updated" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "residence" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "intro_status" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "share_status" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "profile_picture_urls" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "url_size_40_40" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "channel" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "status" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "game" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

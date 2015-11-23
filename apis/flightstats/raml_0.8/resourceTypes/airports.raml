@@ -1,0 +1,16 @@
+get: 
+  description: Returns a listing of airports
+  queryParameters: 
+    appId: 
+    appKey: 
+    extendedOptions: 
+    callback: 
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: activeAirportsJSONResponse
+          example: !include ../examples/airportsJSONResponse-example.json
+        application/xml: 
+          schema: activeAirportsXMLResponse
+          example: !include ../examples/airportsXMLResponse-example.xml

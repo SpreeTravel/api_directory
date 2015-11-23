@@ -1,0 +1,4047 @@
+#%RAML 0.8
+title: OpenStack Identity API
+version: v3
+baseUri: "http://localhost:35357"
+schemas:
+  - endpoints: !include schemas/endpoints-schema.xsd
+  - role: !include schemas/role-schema.xsd
+  - projects: !include schemas/projects-schema.xsd
+  - auth: !include schemas/auth-schema.xsd
+  - credentials: !include schemas/credentials-schema.xsd
+  - roles: !include schemas/roles-schema.xsd
+  - link: !include schemas/link-schema.xsd
+  - Service: !include schemas/Service-schema.xsd
+  - project: !include schemas/project-schema.xsd
+  - domains: !include schemas/domains-schema.xsd
+  - groups: !include schemas/groups-schema.xsd
+  - error: !include schemas/error-schema.xsd
+  - users: !include schemas/identityUsers-schema.xsd
+  - token: !include schemas/token-schema.xsd
+  - Services: !include schemas/Services-schema.xsd
+  - endpoint: !include schemas/endpoint-schema.xsd
+  - credential: !include schemas/credential-schema.xsd
+  - domain: !include schemas/domain-schema.xsd
+  - links: !include schemas/links-schema.xsd
+  - user: !include schemas/identityUser-schema.xsd
+  - group: !include schemas/group-schema.xsd
+  - credentialcreaterequest: !include schemas/credentialcreaterequest-schema.json
+  - credentialcreateresponse: !include schemas/credentialcreateresponse-schema.json
+  - credentialgetresponse: !include schemas/credentialgetresponse-schema.json
+  - credentialslistresponse: !include schemas/credentialslistresponse-schema.json
+  - credentialupdaterequest: !include schemas/credentialupdaterequest-schema.json
+  - credentialupdateresponse: !include schemas/credentialupdateresponse-schema.json
+  - domaincreaterequest: !include schemas/domaincreaterequest-schema.json
+  - domaincreateresponse: !include schemas/domaincreateresponse-schema.json
+  - domaingetresponse: !include schemas/domaingetresponse-schema.json
+  - domainlistgrouprolesresponse: !include schemas/domainlistgrouprolesresponse-schema.json
+  - domainlistuserrolesresponse: !include schemas/domainlistuserrolesresponse-schema.json
+  - domainslistresponse: !include schemas/domainslistresponse-schema.json
+  - domainupdaterequest: !include schemas/domainupdaterequest-schema.json
+  - domainupdateresponse: !include schemas/domainupdateresponse-schema.json
+  - endpointcreaterequest: !include schemas/endpointcreaterequest-schema.json
+  - endpointcreateresponse: !include schemas/endpointcreateresponse-schema.json
+  - endpointslistresponse: !include schemas/endpointslistresponse-schema.json
+  - endpointupdaterequest: !include schemas/endpointupdaterequest-schema.json
+  - endpointupdateresponse: !include schemas/endpointupdateresponse-schema.json
+  - groupcreaterequest: !include schemas/groupcreaterequest-schema.json
+  - groupcreateresponse: !include schemas/groupcreateresponse-schema.json
+  - groupgetresponse: !include schemas/groupgetresponse-schema.json
+  - grouplistusersresponse: !include schemas/grouplistusersresponse-schema.json
+  - groupslistresponse: !include schemas/groupslistresponse-schema.json
+  - groupupdaterequest: !include schemas/groupupdaterequest-schema.json
+  - groupupdateresponse: !include schemas/groupupdateresponse-schema.json
+  - identityVersionResp: !include schemas/identityVersionResp-schema.json
+  - identityVersionRespXML: !include schemas/identityVersionResp-schema.xsd
+  - listroleassignments: !include schemas/listroleassignments-schema.json
+  - listroleassignmentseffective: !include schemas/listroleassignmentseffective-schema.json
+  - policieslistresponse: !include schemas/policieslistresponse-schema.json
+  - policycreaterequest: !include schemas/policycreaterequest-schema.json
+  - policycreateresponse: !include schemas/policycreateresponse-schema.json
+  - policygetresponse: !include schemas/policygetresponse-schema.json
+  - policyupdaterequest: !include schemas/policyupdaterequest-schema.json
+  - policyupdateresponse: !include schemas/policyupdateresponse-schema.json
+  - projectcreaterequest: !include schemas/projectcreaterequest-schema.json
+  - projectcreateresponse: !include schemas/projectcreateresponse-schema.json
+  - projectgetresponse: !include schemas/projectgetresponse-schema.json
+  - projectlistgrouprolesresponse: !include schemas/projectlistgrouprolesresponse-schema.json
+  - projectlistuserrolesresponse: !include schemas/projectlistuserrolesresponse-schema.json
+  - projectslistresponse: !include schemas/projectslistresponse-schema.json
+  - projectupdaterequest: !include schemas/projectupdaterequest-schema.json
+  - projectupdateresponse: !include schemas/projectupdateresponse-schema.json
+  - revokedlistrequest: !include schemas/revokedlistrequest-schema.json
+  - revokedlistresponse: !include schemas/revokedlistresponse-schema.json
+  - rolecreaterequest: !include schemas/rolecreaterequest-schema.json
+  - rolecreateresponse: !include schemas/rolecreateresponse-schema.json
+  - rolegetresponse: !include schemas/rolegetresponse-schema.json
+  - roleslistresponse: !include schemas/roleslistresponse-schema.json
+  - roleupdaterequest: !include schemas/roleupdaterequest-schema.json
+  - roleupdateresponse: !include schemas/roleupdateresponse-schema.json
+  - servicecreaterequest: !include schemas/servicecreaterequest-schema.json
+  - servicecreateresponse: !include schemas/servicecreateresponse-schema.json
+  - servicegetresponse: !include schemas/servicegetresponse-schema.json
+  - serviceslistresponse: !include schemas/serviceslistresponse-schema.json
+  - serviceupdaterequest: !include schemas/serviceupdaterequest-schema.json
+  - serviceupdateresponse: !include schemas/serviceupdateresponse-schema.json
+  - tokenauthfail401aresponse: !include schemas/tokenauthfail401aresponse-schema.json
+  - tokenauthnoscoperesponse: !include schemas/tokenauthnoscoperesponse-schema.json
+  - tokenauthpasswordidrequest: !include schemas/tokenauthpasswordidrequest-schema.json
+  - tokenvalidaterequest: !include schemas/tokenvalidaterequest-schema.json
+  - usercreaterequest: !include schemas/usercreaterequest-schema.json
+  - usercreateresponse: !include schemas/usercreateresponse-schema.json
+  - usergetresponse: !include schemas/usergetresponse-schema.json
+  - userlistgroupsresponse: !include schemas/userlistgroupsresponse-schema.json
+  - userlistprojectsresponse: !include schemas/userlistprojectsresponse-schema.json
+  - userslistresponse: !include schemas/userslistresponse-schema.json
+  - userupdaterequest: !include schemas/userupdaterequest-schema.json
+  - userupdateresponse: !include schemas/userupdateresponse-schema.json
+  - listVersionsIdentityAPIRes: !include /schemas/listVersionsIdentityAPIRes-schema.json
+  - listVersionsIdentityAPIResXML: !include /schemas/listVersionsIdentityAPIResXML-schema.xsd
+traits:
+  - xAuthToken: !include traits/xAuthToken.raml
+/: 
+  get: 
+    description: List versions
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: listVersionsIdentityAPIResXML
+            example: !include examples/listVersionsIdentityAPIResXML-example.xml
+          application/json: 
+            schema: listVersionsIdentityAPIRes
+            example: !include examples/listVersionsIdentityAPIRes-example.json
+      400: 
+        body: 
+          application/xml: 
+            schema: badRequest
+          application/json: 
+            schema: ""
+      401: 
+        body: 
+          application/xml: 
+            schema: unauthorized
+          application/json: 
+            schema: ""
+      403: 
+        body: 
+          application/xml: 
+            schema: forbidden
+          application/json: 
+            schema: ""
+      405: 
+        body: 
+          application/xml: 
+            schema: badMethod
+          application/json: 
+            schema: ""
+      413: 
+        body: 
+          application/xml: 
+            schema: overLimit
+          application/json: 
+            schema: ""
+      503: 
+        body: 
+          application/xml: 
+            schema: serviceUnavailable
+          application/json: 
+            schema: ""
+      404: 
+        body: 
+          application/xml: 
+            schema: itemNotFound
+          application/json: 
+            schema: ""
+/{version}: 
+  get: 
+    description: Show API version details
+    responses: 
+      400: 
+        body: 
+          application/xml: 
+            schema: badRequest
+          application/json: 
+            schema: ""
+      401: 
+        body: 
+          application/xml: 
+            schema: unauthorized
+          application/json: 
+            schema: ""
+      403: 
+        body: 
+          application/xml: 
+            schema: forbidden
+          application/json: 
+            schema: ""
+      405: 
+        body: 
+          application/xml: 
+            schema: badMethod
+          application/json: 
+            schema: ""
+      413: 
+        body: 
+          application/xml: 
+            schema: overLimit
+          application/json: 
+            schema: ""
+      503: 
+        body: 
+          application/xml: 
+            schema: serviceUnavailable
+          application/json: 
+            schema: ""
+      404: 
+        body: 
+          application/xml: 
+            schema: itemNotFound
+          application/json: 
+            schema: ""
+      200: 
+        body: 
+          application/xml: 
+            schema: identityVersionRespXML
+            example: !include examples/identityVersionResp-example.xml
+          application/json: 
+            schema: identityVersionResp
+            example: !include examples/identityVersionResp-example.json
+  /OS-PKI: 
+    /revoked: 
+      get: 
+        description: List revoked tokens
+        body: 
+          application/json: 
+            schema: revokedlistrequest
+            example: !include examples/revokedlistrequest-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: revokedlistresponse
+                example: !include examples/revokedlistresponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+  /auth: 
+    /tokens: 
+      post: 
+        description: Authenticate
+        body: 
+          application/json: 
+            schema: tokenauthpasswordidrequest
+            example: !include examples/tokenauthpasswordidrequest-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: tokenauthnoscoperesponse
+                example: !include examples/tokenauthnoscoperesponse-example.json
+          401: 
+            body: 
+              application/json: 
+                schema: tokenauthfail401aresponse
+                example: !include examples/tokenauthfail401aresponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      get: 
+        description: Validate token
+        headers: 
+          X-Auth-Token: 
+            description: A valid authentication token for an administrative user.
+            required: true
+            example: 1dd7e3
+          X-Subject-Token: 
+            description: The token ID.
+            example: c67580
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: tokenauthnoscoperesponse
+                example: !include examples/tokenauthnoscoperesponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      head: 
+        description: Check token
+        headers: 
+          X-Auth-Token: 
+            description: A valid authentication token for an administrative user.
+            required: true
+            example: 1dd7e3
+          X-Subject-Token: 
+            description: c67580
+            required: true
+            example: The token ID.
+        responses: 
+          204: 
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      delete: 
+        description: Revoke token
+        headers: 
+          X-Auth-Token: 
+            description: A valid authentication token for an administrative user.
+            example: 1dd7e3
+          X-Subject-Token: 
+            description: The token ID.
+            example: c67580
+        responses: 
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+  /credentials: 
+    post: 
+      description: Add credential
+      body: 
+        application/json: 
+          schema: credentialcreaterequest
+          example: !include examples/credentialcreaterequest-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: credentialcreateresponse
+              example: !include examples/credentialcreateresponse-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        405: 
+          body: 
+            application/xml: 
+              schema: badMethod
+            application/json: 
+              schema: ""
+        413: 
+          body: 
+            application/xml: 
+              schema: overLimit
+            application/json: 
+              schema: ""
+        503: 
+          body: 
+            application/xml: 
+              schema: serviceUnavailable
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+    get: 
+      is: [ xAuthToken ]
+      description: List credentials
+      queryParameters: 
+        page: 
+          description: Enables you to page through the list.
+        per_page: 
+          description: Sets the page size for paging through the list. Default page size is 30.
+          default: 30
+          example: 20
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: credentialslistresponse
+              example: !include examples/credentialslistresponse-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        405: 
+          body: 
+            application/xml: 
+              schema: badMethod
+            application/json: 
+              schema: ""
+        413: 
+          body: 
+            application/xml: 
+              schema: overLimit
+            application/json: 
+              schema: ""
+        503: 
+          body: 
+            application/xml: 
+              schema: serviceUnavailable
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+    /{credential_id}: 
+      get: 
+        description: Show credential details
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: credentialgetresponse
+                example: !include examples/credentialgetresponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      patch: 
+        description: Update credential
+        body: 
+          application/json: 
+            schema: credentialupdaterequest
+            example: !include examples/credentialupdaterequest-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: credentialupdateresponse
+                example: !include examples/credentialupdateresponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      delete: 
+        description: Delete credential
+        responses: 
+          204: 
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+  /domains: 
+    post: 
+      description: Add domain
+      headers: 
+        X-Auth-Token: 
+          description: A valid authentication token for an administrative user.
+          example: 1dd7e3
+      body: 
+        application/json: 
+          schema: domaincreaterequest
+          example: !include examples/domaincreaterequest-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: domaincreateresponse
+              example: !include examples/domaincreateresponse-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        405: 
+          body: 
+            application/xml: 
+              schema: badMethod
+            application/json: 
+              schema: ""
+        413: 
+          body: 
+            application/xml: 
+              schema: overLimit
+            application/json: 
+              schema: ""
+        503: 
+          body: 
+            application/xml: 
+              schema: serviceUnavailable
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+    get: 
+      description: List domains
+      queryParameters: 
+        name: 
+          description: Filters on a name.
+        enabled: 
+          description: Filters on enabled or disabled roles. Values are true or false.
+        page: 
+          description: Enables you to page through the list.
+        per_page: 
+          description: Sets the page size for paging through the list. Default page size is 30.
+          default: 30
+          example: 20
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: domainslistresponse
+              example: !include examples/domainslistresponse-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        405: 
+          body: 
+            application/xml: 
+              schema: badMethod
+            application/json: 
+              schema: ""
+        413: 
+          body: 
+            application/xml: 
+              schema: overLimit
+            application/json: 
+              schema: ""
+        503: 
+          body: 
+            application/xml: 
+              schema: serviceUnavailable
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+    /{domain_id}: 
+      get: 
+        description: Show domain details
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: domaingetresponse
+                example: !include examples/domaingetresponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      patch: 
+        description: Update domain
+        headers: 
+          X-Auth-Token: 
+            description: A valid authentication token for an administrative user.
+            required: true
+            example: 1dd7e3
+        body: 
+          application/json: 
+            schema: domainupdaterequest
+            example: !include examples/domainupdaterequest-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: domainupdateresponse
+                example: !include examples/domainupdateresponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      delete: 
+        description: Delete domain
+        responses: 
+          204: 
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      /groups: 
+        /{group_id}: 
+          /roles: 
+            get: 
+              description: List roles for domain group
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      schema: domainlistgrouprolesresponse
+                      example: !include examples/domainlistgrouprolesresponse-example.json
+                400: 
+                  body: 
+                    application/xml: 
+                      schema: badRequest
+                    application/json: 
+                      schema: ""
+                401: 
+                  body: 
+                    application/xml: 
+                      schema: unauthorized
+                    application/json: 
+                      schema: ""
+                403: 
+                  body: 
+                    application/xml: 
+                      schema: forbidden
+                    application/json: 
+                      schema: ""
+                405: 
+                  body: 
+                    application/xml: 
+                      schema: badMethod
+                    application/json: 
+                      schema: ""
+                413: 
+                  body: 
+                    application/xml: 
+                      schema: overLimit
+                    application/json: 
+                      schema: ""
+                503: 
+                  body: 
+                    application/xml: 
+                      schema: serviceUnavailable
+                    application/json: 
+                      schema: ""
+                404: 
+                  body: 
+                    application/xml: 
+                      schema: itemNotFound
+                    application/json: 
+                      schema: ""
+            /{role_id}: 
+              put: 
+                description: Grant role to domain group
+                responses: 
+                  204: 
+                  400: 
+                    body: 
+                      application/xml: 
+                        schema: badRequest
+                      application/json: 
+                        schema: ""
+                  401: 
+                    body: 
+                      application/xml: 
+                        schema: unauthorized
+                      application/json: 
+                        schema: ""
+                  403: 
+                    body: 
+                      application/xml: 
+                        schema: forbidden
+                      application/json: 
+                        schema: ""
+                  405: 
+                    body: 
+                      application/xml: 
+                        schema: badMethod
+                      application/json: 
+                        schema: ""
+                  413: 
+                    body: 
+                      application/xml: 
+                        schema: overLimit
+                      application/json: 
+                        schema: ""
+                  503: 
+                    body: 
+                      application/xml: 
+                        schema: serviceUnavailable
+                      application/json: 
+                        schema: ""
+                  404: 
+                    body: 
+                      application/xml: 
+                        schema: itemNotFound
+                      application/json: 
+                        schema: ""
+              head: 
+                description: Check role for domain group
+                responses: 
+                  204: 
+                  400: 
+                    body: 
+                      application/xml: 
+                        schema: badRequest
+                      application/json: 
+                        schema: ""
+                  401: 
+                    body: 
+                      application/xml: 
+                        schema: unauthorized
+                      application/json: 
+                        schema: ""
+                  403: 
+                    body: 
+                      application/xml: 
+                        schema: forbidden
+                      application/json: 
+                        schema: ""
+                  405: 
+                    body: 
+                      application/xml: 
+                        schema: badMethod
+                      application/json: 
+                        schema: ""
+                  413: 
+                    body: 
+                      application/xml: 
+                        schema: overLimit
+                      application/json: 
+                        schema: ""
+                  503: 
+                    body: 
+                      application/xml: 
+                        schema: serviceUnavailable
+                      application/json: 
+                        schema: ""
+                  404: 
+                    body: 
+                      application/xml: 
+                        schema: itemNotFound
+                      application/json: 
+                        schema: ""
+              delete: 
+                description: Revoke role from domain group
+                responses: 
+                  204: 
+                  400: 
+                    body: 
+                      application/xml: 
+                        schema: badRequest
+                      application/json: 
+                        schema: ""
+                  401: 
+                    body: 
+                      application/xml: 
+                        schema: unauthorized
+                      application/json: 
+                        schema: ""
+                  403: 
+                    body: 
+                      application/xml: 
+                        schema: forbidden
+                      application/json: 
+                        schema: ""
+                  405: 
+                    body: 
+                      application/xml: 
+                        schema: badMethod
+                      application/json: 
+                        schema: ""
+                  413: 
+                    body: 
+                      application/xml: 
+                        schema: overLimit
+                      application/json: 
+                        schema: ""
+                  503: 
+                    body: 
+                      application/xml: 
+                        schema: serviceUnavailable
+                      application/json: 
+                        schema: ""
+                  404: 
+                    body: 
+                      application/xml: 
+                        schema: itemNotFound
+                      application/json: 
+                        schema: ""
+      /users: 
+        /{user_id}: 
+          /roles: 
+            get: 
+              description: List roles for domain user
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      schema: domainlistuserrolesresponse
+                      example: !include examples/domainlistuserrolesresponse-example.json
+                400: 
+                  body: 
+                    application/xml: 
+                      schema: badRequest
+                    application/json: 
+                      schema: ""
+                401: 
+                  body: 
+                    application/xml: 
+                      schema: unauthorized
+                    application/json: 
+                      schema: ""
+                403: 
+                  body: 
+                    application/xml: 
+                      schema: forbidden
+                    application/json: 
+                      schema: ""
+                405: 
+                  body: 
+                    application/xml: 
+                      schema: badMethod
+                    application/json: 
+                      schema: ""
+                413: 
+                  body: 
+                    application/xml: 
+                      schema: overLimit
+                    application/json: 
+                      schema: ""
+                503: 
+                  body: 
+                    application/xml: 
+                      schema: serviceUnavailable
+                    application/json: 
+                      schema: ""
+                404: 
+                  body: 
+                    application/xml: 
+                      schema: itemNotFound
+                    application/json: 
+                      schema: ""
+            /{role_id}: 
+              put: 
+                description: Grant role to domain user
+                responses: 
+                  204: 
+                  400: 
+                    body: 
+                      application/xml: 
+                        schema: badRequest
+                      application/json: 
+                        schema: ""
+                  401: 
+                    body: 
+                      application/xml: 
+                        schema: unauthorized
+                      application/json: 
+                        schema: ""
+                  403: 
+                    body: 
+                      application/xml: 
+                        schema: forbidden
+                      application/json: 
+                        schema: ""
+                  405: 
+                    body: 
+                      application/xml: 
+                        schema: badMethod
+                      application/json: 
+                        schema: ""
+                  413: 
+                    body: 
+                      application/xml: 
+                        schema: overLimit
+                      application/json: 
+                        schema: ""
+                  503: 
+                    body: 
+                      application/xml: 
+                        schema: serviceUnavailable
+                      application/json: 
+                        schema: ""
+                  404: 
+                    body: 
+                      application/xml: 
+                        schema: itemNotFound
+                      application/json: 
+                        schema: ""
+              head: 
+                description: Check role for domain user
+                responses: 
+                  204: 
+                  400: 
+                    body: 
+                      application/xml: 
+                        schema: badRequest
+                      application/json: 
+                        schema: ""
+                  401: 
+                    body: 
+                      application/xml: 
+                        schema: unauthorized
+                      application/json: 
+                        schema: ""
+                  403: 
+                    body: 
+                      application/xml: 
+                        schema: forbidden
+                      application/json: 
+                        schema: ""
+                  405: 
+                    body: 
+                      application/xml: 
+                        schema: badMethod
+                      application/json: 
+                        schema: ""
+                  413: 
+                    body: 
+                      application/xml: 
+                        schema: overLimit
+                      application/json: 
+                        schema: ""
+                  503: 
+                    body: 
+                      application/xml: 
+                        schema: serviceUnavailable
+                      application/json: 
+                        schema: ""
+                  404: 
+                    body: 
+                      application/xml: 
+                        schema: itemNotFound
+                      application/json: 
+                        schema: ""
+              delete: 
+                description: Revoke role from domain user
+                responses: 
+                  204: 
+                  400: 
+                    body: 
+                      application/xml: 
+                        schema: badRequest
+                      application/json: 
+                        schema: ""
+                  401: 
+                    body: 
+                      application/xml: 
+                        schema: unauthorized
+                      application/json: 
+                        schema: ""
+                  403: 
+                    body: 
+                      application/xml: 
+                        schema: forbidden
+                      application/json: 
+                        schema: ""
+                  405: 
+                    body: 
+                      application/xml: 
+                        schema: badMethod
+                      application/json: 
+                        schema: ""
+                  413: 
+                    body: 
+                      application/xml: 
+                        schema: overLimit
+                      application/json: 
+                        schema: ""
+                  503: 
+                    body: 
+                      application/xml: 
+                        schema: serviceUnavailable
+                      application/json: 
+                        schema: ""
+                  404: 
+                    body: 
+                      application/xml: 
+                        schema: itemNotFound
+                      application/json: 
+                        schema: ""
+  /endpoints: 
+    post: 
+      description: Add endpoint
+      headers: 
+        X-Auth-Token: 
+          required: true
+      body: 
+        application/json: 
+          schema: endpointcreaterequest
+          example: !include examples/endpointcreaterequest-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: endpointcreateresponse
+              example: !include examples/endpointcreateresponse-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        405: 
+          body: 
+            application/xml: 
+              schema: badMethod
+            application/json: 
+              schema: ""
+        413: 
+          body: 
+            application/xml: 
+              schema: overLimit
+            application/json: 
+              schema: ""
+        503: 
+          body: 
+            application/xml: 
+              schema: serviceUnavailable
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+    get: 
+      description: List endpoints
+      headers: 
+        X-Auth-Token: 
+          required: true
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: endpointslistresponse
+              example: !include examples/endpointslistresponse-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        405: 
+          body: 
+            application/xml: 
+              schema: badMethod
+            application/json: 
+              schema: ""
+        413: 
+          body: 
+            application/xml: 
+              schema: overLimit
+            application/json: 
+              schema: ""
+        503: 
+          body: 
+            application/xml: 
+              schema: serviceUnavailable
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+    /{endpoint_id}: 
+      patch: 
+        description: Update endpoint
+        headers: 
+          X-Auth-Token: 
+            description: A valid authentication token for an administrative user.
+            example: 1dd7e3
+        body: 
+          application/json: 
+            schema: endpointupdaterequest
+            example: !include examples/endpointupdaterequest-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: endpointupdateresponse
+                example: !include examples/endpointupdateresponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      delete: 
+        description: Delete endpoint
+        headers: 
+          X-Auth-Token: 
+            description: A valid authentication token for an administrative user.
+            example: 1dd7e3
+        responses: 
+          204: 
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+  /groups: 
+    post: 
+      description: Add group
+      body: 
+        application/json: 
+          schema: groupcreaterequest
+          example: !include examples/groupcreaterequest-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: groupcreateresponse
+              example: !include examples/groupcreateresponse-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        405: 
+          body: 
+            application/xml: 
+              schema: badMethod
+            application/json: 
+              schema: ""
+        413: 
+          body: 
+            application/xml: 
+              schema: overLimit
+            application/json: 
+              schema: ""
+        503: 
+          body: 
+            application/xml: 
+              schema: serviceUnavailable
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+    get: 
+      description: List groups
+      headers: 
+        X-Auth-Token: 
+          required: true
+      queryParameters: 
+        domain_id: 
+        page: 
+        per_page: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: groupslistresponse
+              example: !include examples/groupslistresponse-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        405: 
+          body: 
+            application/xml: 
+              schema: badMethod
+            application/json: 
+              schema: ""
+        413: 
+          body: 
+            application/xml: 
+              schema: overLimit
+            application/json: 
+              schema: ""
+        503: 
+          body: 
+            application/xml: 
+              schema: serviceUnavailable
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+    /{group_id}: 
+      get: 
+        description: Show group details
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: groupgetresponse
+                example: !include examples/groupgetresponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      patch: 
+        description: Update group
+        body: 
+          application/json: 
+            schema: groupupdaterequest
+            example: !include examples/groupupdaterequest-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: groupupdateresponse
+                example: !include examples/groupupdateresponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      delete: 
+        description: Delete group
+        responses: 
+          204: 
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      /users: 
+        get: 
+          description: List users in group
+          queryParameters: 
+            name: 
+            page: 
+            per_page: 
+            group_id: 
+              description: The group ID.
+            "domain_id ": 
+              description: Filters on domain_id.
+            "description ": 
+              description: Filters on a description.
+            enabled: 
+              description: Filters on enabled or disabled roles. Values are true or false.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: grouplistusersresponse
+                  example: !include examples/grouplistusersresponse-example.json
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            403: 
+              body: 
+                application/xml: 
+                  schema: forbidden
+                application/json: 
+                  schema: ""
+            405: 
+              body: 
+                application/xml: 
+                  schema: badMethod
+                application/json: 
+                  schema: ""
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimit
+                application/json: 
+                  schema: ""
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailable
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+        /{user_id}: 
+          put: 
+            description: Add user to group
+            responses: 
+              204: 
+              400: 
+                body: 
+                  application/xml: 
+                    schema: badRequest
+                  application/json: 
+                    schema: ""
+              401: 
+                body: 
+                  application/xml: 
+                    schema: unauthorized
+                  application/json: 
+                    schema: ""
+              403: 
+                body: 
+                  application/xml: 
+                    schema: forbidden
+                  application/json: 
+                    schema: ""
+              405: 
+                body: 
+                  application/xml: 
+                    schema: badMethod
+                  application/json: 
+                    schema: ""
+              413: 
+                body: 
+                  application/xml: 
+                    schema: overLimit
+                  application/json: 
+                    schema: ""
+              503: 
+                body: 
+                  application/xml: 
+                    schema: serviceUnavailable
+                  application/json: 
+                    schema: ""
+              404: 
+                body: 
+                  application/xml: 
+                    schema: itemNotFound
+                  application/json: 
+                    schema: ""
+          delete: 
+            description: Remove user from group
+            responses: 
+              204: 
+              400: 
+                body: 
+                  application/xml: 
+                    schema: badRequest
+                  application/json: 
+                    schema: ""
+              401: 
+                body: 
+                  application/xml: 
+                    schema: unauthorized
+                  application/json: 
+                    schema: ""
+              403: 
+                body: 
+                  application/xml: 
+                    schema: forbidden
+                  application/json: 
+                    schema: ""
+              405: 
+                body: 
+                  application/xml: 
+                    schema: badMethod
+                  application/json: 
+                    schema: ""
+              413: 
+                body: 
+                  application/xml: 
+                    schema: overLimit
+                  application/json: 
+                    schema: ""
+              503: 
+                body: 
+                  application/xml: 
+                    schema: serviceUnavailable
+                  application/json: 
+                    schema: ""
+              404: 
+                body: 
+                  application/xml: 
+                    schema: itemNotFound
+                  application/json: 
+                    schema: ""
+          head: 
+            description: Check user membership in group
+            responses: 
+              204: 
+              400: 
+                body: 
+                  application/xml: 
+                    schema: badRequest
+                  application/json: 
+                    schema: ""
+              401: 
+                body: 
+                  application/xml: 
+                    schema: unauthorized
+                  application/json: 
+                    schema: ""
+              403: 
+                body: 
+                  application/xml: 
+                    schema: forbidden
+                  application/json: 
+                    schema: ""
+              405: 
+                body: 
+                  application/xml: 
+                    schema: badMethod
+                  application/json: 
+                    schema: ""
+              413: 
+                body: 
+                  application/xml: 
+                    schema: overLimit
+                  application/json: 
+                    schema: ""
+              503: 
+                body: 
+                  application/xml: 
+                    schema: serviceUnavailable
+                  application/json: 
+                    schema: ""
+              404: 
+                body: 
+                  application/xml: 
+                    schema: itemNotFound
+                  application/json: 
+                    schema: ""
+  /policies: 
+    post: 
+      description: Add policy
+      headers: 
+        X-Auth-Token: 
+          required: true
+      body: 
+        application/json: 
+          schema: policycreaterequest
+          example: !include examples/policycreaterequest-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: policycreateresponse
+              example: !include examples/policycreateresponse-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        405: 
+          body: 
+            application/xml: 
+              schema: badMethod
+            application/json: 
+              schema: ""
+        413: 
+          body: 
+            application/xml: 
+              schema: overLimit
+            application/json: 
+              schema: ""
+        503: 
+          body: 
+            application/xml: 
+              schema: serviceUnavailable
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+    get: 
+      description: List policies
+      headers: 
+        X-Auth-Token: 
+          required: true
+      queryParameters: 
+        type: 
+          description: Filters by service type. Service types include compute, ec2, image, and identity.
+        page: 
+          description: Enables you to page through the list.
+        per_page: 
+          description: Sets the page size for paging through the list. Default page size is 30.
+          default: 30
+          example: 20
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: policieslistresponse
+              example: !include examples/policieslistresponse-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        405: 
+          body: 
+            application/xml: 
+              schema: badMethod
+            application/json: 
+              schema: ""
+        413: 
+          body: 
+            application/xml: 
+              schema: overLimit
+            application/json: 
+              schema: ""
+        503: 
+          body: 
+            application/xml: 
+              schema: serviceUnavailable
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+    /{policy_id}: 
+      get: 
+        is: [ xAuthToken ]
+        description: Show policy details
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: policygetresponse
+                example: !include examples/policygetresponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      patch: 
+        is: [ xAuthToken ]
+        description: Update policy
+        body: 
+          application/json: 
+            schema: policyupdaterequest
+            example: !include examples/policyupdaterequest-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: policyupdateresponse
+                example: !include examples/policyupdateresponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      delete: 
+        is: [ xAuthToken ]
+        description: Delete policy
+        responses: 
+          204: 
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+  /projects: 
+    post: 
+      description: Add project
+      headers: 
+        X-Auth-Token: 
+          required: true
+      body: 
+        application/json: 
+          schema: projectcreaterequest
+          example: !include examples/projectcreaterequest-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: projectcreateresponse
+              example: !include examples/projectcreateresponse-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        405: 
+          body: 
+            application/xml: 
+              schema: badMethod
+            application/json: 
+              schema: ""
+        413: 
+          body: 
+            application/xml: 
+              schema: overLimit
+            application/json: 
+              schema: ""
+        503: 
+          body: 
+            application/xml: 
+              schema: serviceUnavailable
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+    get: 
+      description: List projects
+      headers: 
+        X-Auth-Token: 
+          required: true
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: projectslistresponse
+              example: !include examples/projectslistresponse-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        405: 
+          body: 
+            application/xml: 
+              schema: badMethod
+            application/json: 
+              schema: ""
+        413: 
+          body: 
+            application/xml: 
+              schema: overLimit
+            application/json: 
+              schema: ""
+        503: 
+          body: 
+            application/xml: 
+              schema: serviceUnavailable
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+    /{project_id}: 
+      get: 
+        description: Show project details
+        headers: 
+          X-Auth-Token: 
+            description: A valid authentication token for an administrative user.
+            example: 1dd7e3
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: projectgetresponse
+                example: !include examples/projectgetresponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      patch: 
+        description: Update project
+        headers: 
+          X-Auth-Token: 
+            description: A valid authentication token for an administrative user.
+            example: 1dd7e3
+        body: 
+          application/json: 
+            schema: projectupdaterequest
+            example: !include examples/projectupdaterequest-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: projectupdateresponse
+                example: !include examples/projectupdateresponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      delete: 
+        description: Delete project
+        headers: 
+          X-Auth-Token: 
+            description: A valid authentication token for an administrative user.
+            example: 1dd7e3
+        responses: 
+          204: 
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      /groups: 
+        /{group_id}: 
+          /roles: 
+            get: 
+              is: [ xAuthToken ]
+              description: List roles for project group
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      schema: projectlistgrouprolesresponse
+                      example: !include examples/projectlistgrouprolesresponse-example.json
+                400: 
+                  body: 
+                    application/xml: 
+                      schema: badRequest
+                    application/json: 
+                      schema: ""
+                401: 
+                  body: 
+                    application/xml: 
+                      schema: unauthorized
+                    application/json: 
+                      schema: ""
+                403: 
+                  body: 
+                    application/xml: 
+                      schema: forbidden
+                    application/json: 
+                      schema: ""
+                405: 
+                  body: 
+                    application/xml: 
+                      schema: badMethod
+                    application/json: 
+                      schema: ""
+                413: 
+                  body: 
+                    application/xml: 
+                      schema: overLimit
+                    application/json: 
+                      schema: ""
+                503: 
+                  body: 
+                    application/xml: 
+                      schema: serviceUnavailable
+                    application/json: 
+                      schema: ""
+                404: 
+                  body: 
+                    application/xml: 
+                      schema: itemNotFound
+                    application/json: 
+                      schema: ""
+            /{role_id}: 
+              put: 
+                is: [ xAuthToken ]
+                description: Grant role to project group
+                responses: 
+                  204: 
+                  400: 
+                    body: 
+                      application/xml: 
+                        schema: badRequest
+                      application/json: 
+                        schema: ""
+                  401: 
+                    body: 
+                      application/xml: 
+                        schema: unauthorized
+                      application/json: 
+                        schema: ""
+                  403: 
+                    body: 
+                      application/xml: 
+                        schema: forbidden
+                      application/json: 
+                        schema: ""
+                  405: 
+                    body: 
+                      application/xml: 
+                        schema: badMethod
+                      application/json: 
+                        schema: ""
+                  413: 
+                    body: 
+                      application/xml: 
+                        schema: overLimit
+                      application/json: 
+                        schema: ""
+                  503: 
+                    body: 
+                      application/xml: 
+                        schema: serviceUnavailable
+                      application/json: 
+                        schema: ""
+                  404: 
+                    body: 
+                      application/xml: 
+                        schema: itemNotFound
+                      application/json: 
+                        schema: ""
+              head: 
+                is: [ xAuthToken ]
+                description: Check role for project group
+                responses: 
+                  204: 
+                  400: 
+                    body: 
+                      application/xml: 
+                        schema: badRequest
+                      application/json: 
+                        schema: ""
+                  401: 
+                    body: 
+                      application/xml: 
+                        schema: unauthorized
+                      application/json: 
+                        schema: ""
+                  403: 
+                    body: 
+                      application/xml: 
+                        schema: forbidden
+                      application/json: 
+                        schema: ""
+                  405: 
+                    body: 
+                      application/xml: 
+                        schema: badMethod
+                      application/json: 
+                        schema: ""
+                  413: 
+                    body: 
+                      application/xml: 
+                        schema: overLimit
+                      application/json: 
+                        schema: ""
+                  503: 
+                    body: 
+                      application/xml: 
+                        schema: serviceUnavailable
+                      application/json: 
+                        schema: ""
+                  404: 
+                    body: 
+                      application/xml: 
+                        schema: itemNotFound
+                      application/json: 
+                        schema: ""
+              delete: 
+                is: [ xAuthToken ]
+                description: Revoke role from project group
+                responses: 
+                  204: 
+                  400: 
+                    body: 
+                      application/xml: 
+                        schema: badRequest
+                      application/json: 
+                        schema: ""
+                  401: 
+                    body: 
+                      application/xml: 
+                        schema: unauthorized
+                      application/json: 
+                        schema: ""
+                  403: 
+                    body: 
+                      application/xml: 
+                        schema: forbidden
+                      application/json: 
+                        schema: ""
+                  405: 
+                    body: 
+                      application/xml: 
+                        schema: badMethod
+                      application/json: 
+                        schema: ""
+                  413: 
+                    body: 
+                      application/xml: 
+                        schema: overLimit
+                      application/json: 
+                        schema: ""
+                  503: 
+                    body: 
+                      application/xml: 
+                        schema: serviceUnavailable
+                      application/json: 
+                        schema: ""
+                  404: 
+                    body: 
+                      application/xml: 
+                        schema: itemNotFound
+                      application/json: 
+                        schema: ""
+      /users: 
+        /{user_id}: 
+          /roles: 
+            get: 
+              description: List roles for project user
+              headers: 
+                X-Auth-Token: 
+                  description: A valid authentication token for an administrative user.
+                  required: true
+                  example: 1dd7e3
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      schema: projectlistuserrolesresponse
+                      example: !include examples/projectlistuserrolesresponse-example.json
+                400: 
+                  body: 
+                    application/xml: 
+                      schema: badRequest
+                    application/json: 
+                      schema: ""
+                401: 
+                  body: 
+                    application/xml: 
+                      schema: unauthorized
+                    application/json: 
+                      schema: ""
+                403: 
+                  body: 
+                    application/xml: 
+                      schema: forbidden
+                    application/json: 
+                      schema: ""
+                405: 
+                  body: 
+                    application/xml: 
+                      schema: badMethod
+                    application/json: 
+                      schema: ""
+                413: 
+                  body: 
+                    application/xml: 
+                      schema: overLimit
+                    application/json: 
+                      schema: ""
+                503: 
+                  body: 
+                    application/xml: 
+                      schema: serviceUnavailable
+                    application/json: 
+                      schema: ""
+                404: 
+                  body: 
+                    application/xml: 
+                      schema: itemNotFound
+                    application/json: 
+                      schema: ""
+            /{role_id}: 
+              put: 
+                description: Grant role to project user
+                headers: 
+                  X-Auth-Token: 
+                    description: A valid authentication token for an administrative user.
+                    required: true
+                    example: 1dd7e3
+                responses: 
+                  204: 
+                  400: 
+                    body: 
+                      application/xml: 
+                        schema: badRequest
+                      application/json: 
+                        schema: ""
+                  401: 
+                    body: 
+                      application/xml: 
+                        schema: unauthorized
+                      application/json: 
+                        schema: ""
+                  403: 
+                    body: 
+                      application/xml: 
+                        schema: forbidden
+                      application/json: 
+                        schema: ""
+                  405: 
+                    body: 
+                      application/xml: 
+                        schema: badMethod
+                      application/json: 
+                        schema: ""
+                  413: 
+                    body: 
+                      application/xml: 
+                        schema: overLimit
+                      application/json: 
+                        schema: ""
+                  503: 
+                    body: 
+                      application/xml: 
+                        schema: serviceUnavailable
+                      application/json: 
+                        schema: ""
+                  404: 
+                    body: 
+                      application/xml: 
+                        schema: itemNotFound
+                      application/json: 
+                        schema: ""
+              head: 
+                description: Check role for project user
+                headers: 
+                  X-Auth-Token: 
+                    description: A valid authentication token for an administrative user.
+                    required: true
+                    example: 1dd7e3
+                responses: 
+                  204: 
+                  400: 
+                    body: 
+                      application/xml: 
+                        schema: badRequest
+                      application/json: 
+                        schema: ""
+                  401: 
+                    body: 
+                      application/xml: 
+                        schema: unauthorized
+                      application/json: 
+                        schema: ""
+                  403: 
+                    body: 
+                      application/xml: 
+                        schema: forbidden
+                      application/json: 
+                        schema: ""
+                  405: 
+                    body: 
+                      application/xml: 
+                        schema: badMethod
+                      application/json: 
+                        schema: ""
+                  413: 
+                    body: 
+                      application/xml: 
+                        schema: overLimit
+                      application/json: 
+                        schema: ""
+                  503: 
+                    body: 
+                      application/xml: 
+                        schema: serviceUnavailable
+                      application/json: 
+                        schema: ""
+                  404: 
+                    body: 
+                      application/xml: 
+                        schema: itemNotFound
+                      application/json: 
+                        schema: ""
+              delete: 
+                description: Revoke role from project user
+                headers: 
+                  X-Auth-Token: 
+                    description: A valid authentication token for an administrative user.
+                    required: true
+                    example: 1dd7e3
+                responses: 
+                  204: 
+                  400: 
+                    body: 
+                      application/xml: 
+                        schema: badRequest
+                      application/json: 
+                        schema: ""
+                  401: 
+                    body: 
+                      application/xml: 
+                        schema: unauthorized
+                      application/json: 
+                        schema: ""
+                  403: 
+                    body: 
+                      application/xml: 
+                        schema: forbidden
+                      application/json: 
+                        schema: ""
+                  405: 
+                    body: 
+                      application/xml: 
+                        schema: badMethod
+                      application/json: 
+                        schema: ""
+                  413: 
+                    body: 
+                      application/xml: 
+                        schema: overLimit
+                      application/json: 
+                        schema: ""
+                  503: 
+                    body: 
+                      application/xml: 
+                        schema: serviceUnavailable
+                      application/json: 
+                        schema: ""
+                  404: 
+                    body: 
+                      application/xml: 
+                        schema: itemNotFound
+                      application/json: 
+                        schema: ""
+  /role_assignments: 
+    get: 
+      description: List role assignments
+      queryParameters: 
+        group.id: 
+        role.id: 
+        scope.domain.id: 
+        scope.project.id: 
+        user.id: 
+        effective: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: listroleassignmentseffective
+              example: !include examples/listroleassignmentseffective-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        405: 
+          body: 
+            application/xml: 
+              schema: badMethod
+            application/json: 
+              schema: ""
+        413: 
+          body: 
+            application/xml: 
+              schema: overLimit
+            application/json: 
+              schema: ""
+        503: 
+          body: 
+            application/xml: 
+              schema: serviceUnavailable
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+  /roles: 
+    post: 
+      description: Add role
+      headers: 
+        X-Auth-Token: 
+          required: true
+      body: 
+        application/json: 
+          schema: rolecreaterequest
+          example: !include examples/rolecreaterequest-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: rolecreateresponse
+              example: !include examples/rolecreateresponse-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        405: 
+          body: 
+            application/xml: 
+              schema: badMethod
+            application/json: 
+              schema: ""
+        413: 
+          body: 
+            application/xml: 
+              schema: overLimit
+            application/json: 
+              schema: ""
+        503: 
+          body: 
+            application/xml: 
+              schema: serviceUnavailable
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+    get: 
+      description: List roles
+      headers: 
+        X-Auth-Token: 
+          required: true
+      queryParameters: 
+        name: 
+          description: Filters on a name.
+        page: 
+          description: Enables you to page through the list.
+        per_page: 
+          description: Sets the page size for paging through the list. Default page size is 30.
+          default: 30
+          example: 20
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: roleslistresponse
+              example: !include examples/roleslistresponse-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        405: 
+          body: 
+            application/xml: 
+              schema: badMethod
+            application/json: 
+              schema: ""
+        413: 
+          body: 
+            application/xml: 
+              schema: overLimit
+            application/json: 
+              schema: ""
+        503: 
+          body: 
+            application/xml: 
+              schema: serviceUnavailable
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+    /{role_id}: 
+      get: 
+        description: Show role details
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: rolegetresponse
+                example: !include examples/rolegetresponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      patch: 
+        description: Update role
+        body: 
+          application/json: 
+            schema: roleupdaterequest
+            example: !include examples/roleupdaterequest-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: roleupdateresponse
+                example: !include examples/roleupdateresponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      delete: 
+        description: Delete role
+        responses: 
+          204: 
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+  /services: 
+    post: 
+      description: Add service
+      headers: 
+        X-Auth-Token: 
+          required: true
+      body: 
+        application/json: 
+          schema: servicecreaterequest
+          example: !include examples/servicecreaterequest-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: servicecreateresponse
+              example: !include examples/servicecreateresponse-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        405: 
+          body: 
+            application/xml: 
+              schema: badMethod
+            application/json: 
+              schema: ""
+        413: 
+          body: 
+            application/xml: 
+              schema: overLimit
+            application/json: 
+              schema: ""
+        503: 
+          body: 
+            application/xml: 
+              schema: serviceUnavailable
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+    get: 
+      description: List services
+      headers: 
+        X-Auth-Token: 
+          required: true
+      queryParameters: 
+        type: 
+          description: Filters by service type. Service types include compute, ec2, image, and identity.
+        page: 
+          description: Enables you to page through the list.
+        "per_page ": 
+          description: Sets the page size for paging through the list. Default page size is 30.
+          default: 30
+          example: 20
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: serviceslistresponse
+              example: !include examples/serviceslistresponse-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        405: 
+          body: 
+            application/xml: 
+              schema: badMethod
+            application/json: 
+              schema: ""
+        413: 
+          body: 
+            application/xml: 
+              schema: overLimit
+            application/json: 
+              schema: ""
+        503: 
+          body: 
+            application/xml: 
+              schema: serviceUnavailable
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+    /{service_id}: 
+      get: 
+        description: Show service details
+        headers: 
+          X-Auth-Token: 
+            description: A valid authentication token for an administrative user.
+            example: 1dd7e3
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: servicegetresponse
+                example: !include examples/servicegetresponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      patch: 
+        description: Update service
+        headers: 
+          X-Auth-Token: 
+            description: A valid authentication token for an administrative user.
+            required: true
+            example: 1dd7e3
+        body: 
+          application/json: 
+            schema: serviceupdaterequest
+            example: !include examples/serviceupdaterequest-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: serviceupdateresponse
+                example: !include examples/serviceupdateresponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      delete: 
+        description: Delete service
+        headers: 
+          X-Auth-Token: 
+            description: A valid authentication token for an administrative user.
+            required: true
+            example: 1dd7e3
+        responses: 
+          204: 
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+  /users: 
+    post: 
+      is: [ xAuthToken ]
+      description: Add user
+      body: 
+        application/json: 
+          schema: usercreaterequest
+          example: !include examples/usercreaterequest-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: usercreateresponse
+              example: !include examples/usercreateresponse-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        405: 
+          body: 
+            application/xml: 
+              schema: badMethod
+            application/json: 
+              schema: ""
+        413: 
+          body: 
+            application/xml: 
+              schema: overLimit
+            application/json: 
+              schema: ""
+        503: 
+          body: 
+            application/xml: 
+              schema: serviceUnavailable
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+    get: 
+      description: List users
+      headers: 
+        X-Auth-Token: 
+          required: true
+      queryParameters: 
+        "domain_id ": 
+          description: Filters on domain_id.
+        name: 
+          description: Filters on a name.
+        enabled: 
+          description: Filters on enabled or disabled roles. Values are true or false.
+        page: 
+          description: Enables you to page through the list.
+        per_page: 
+          description: Sets the page size for paging through the list. Default page size is 30.
+          default: 30
+          example: 20
+      body: 
+        application/json: 
+          schema: ""
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: userslistresponse
+              example: !include examples/userslistresponse-example.json
+        400: 
+          body: 
+            application/xml: 
+              schema: badRequest
+            application/json: 
+              schema: ""
+        401: 
+          body: 
+            application/xml: 
+              schema: unauthorized
+            application/json: 
+              schema: ""
+        403: 
+          body: 
+            application/xml: 
+              schema: forbidden
+            application/json: 
+              schema: ""
+        405: 
+          body: 
+            application/xml: 
+              schema: badMethod
+            application/json: 
+              schema: ""
+        413: 
+          body: 
+            application/xml: 
+              schema: overLimit
+            application/json: 
+              schema: ""
+        503: 
+          body: 
+            application/xml: 
+              schema: serviceUnavailable
+            application/json: 
+              schema: ""
+        404: 
+          body: 
+            application/xml: 
+              schema: itemNotFound
+            application/json: 
+              schema: ""
+    /{user_id}: 
+      get: 
+        is: [ xAuthToken ]
+        description: Show user details
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: usergetresponse
+                example: !include examples/usergetresponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      patch: 
+        is: [ xAuthToken ]
+        description: Update user
+        body: 
+          application/json: 
+            schema: userupdaterequest
+            example: !include examples/userupdaterequest-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: userupdateresponse
+                example: !include examples/userupdateresponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      delete: 
+        is: [ xAuthToken ]
+        description: Delete user
+        responses: 
+          204: 
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      /groups: 
+        get: 
+          is: [ xAuthToken ]
+          description: List groups for user
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: userlistgroupsresponse
+                  example: !include examples/userlistgroupsresponse-example.json
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            403: 
+              body: 
+                application/xml: 
+                  schema: forbidden
+                application/json: 
+                  schema: ""
+            405: 
+              body: 
+                application/xml: 
+                  schema: badMethod
+                application/json: 
+                  schema: ""
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimit
+                application/json: 
+                  schema: ""
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailable
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+      /projects: 
+        get: 
+          is: [ xAuthToken ]
+          description: List projects for user
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: userlistprojectsresponse
+                  example: !include examples/userlistprojectsresponse-example.json
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            403: 
+              body: 
+                application/xml: 
+                  schema: forbidden
+                application/json: 
+                  schema: ""
+            405: 
+              body: 
+                application/xml: 
+                  schema: badMethod
+                application/json: 
+                  schema: ""
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimit
+                application/json: 
+                  schema: ""
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailable
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+      /roles: 

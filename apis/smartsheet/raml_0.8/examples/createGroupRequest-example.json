@@ -1,0 +1,9 @@
+{
+  "name" : "API-created Group" ,
+  "description" : "Group created via API" ,
+  "members" : [
+    {
+      "email" : "john.doe@smartsheet.com"
+    }
+  ]
+}

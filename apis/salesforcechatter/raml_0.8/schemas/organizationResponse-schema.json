@@ -1,0 +1,283 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "accessTimeout": {
+      "type": "integer",
+      "required": false
+    },
+    "features": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "chatter": {
+          "type": "boolean",
+          "required": false
+        },
+        "chatterActivity": {
+          "type": "boolean",
+          "required": false
+        },
+        "chatterAnswers": {
+          "type": "boolean",
+          "required": false
+        },
+        "chatterGlobalInfluence": {
+          "type": "boolean",
+          "required": false
+        },
+        "chatterGroupRecords": {
+          "type": "boolean",
+          "required": false
+        },
+        "chatterGroupRecordSharing": {
+          "type": "boolean",
+          "required": false
+        },
+        "chatterMessages": {
+          "type": "boolean",
+          "required": false
+        },
+        "chatterTopics": {
+          "type": "boolean",
+          "required": false
+        },
+        "communitiesEnabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "communityModeration": {
+          "type": "boolean",
+          "required": false
+        },
+        "communityReputation": {
+          "type": "boolean",
+          "required": false
+        },
+        "dashboardComponentSnapshots": {
+          "type": "boolean",
+          "required": false
+        },
+        "defaultCurrencyIsoCode": {
+          "type": "string",
+          "required": false
+        },
+        "feedPolling": {
+          "type": "boolean",
+          "required": false
+        },
+        "files": {
+          "type": "boolean",
+          "required": false
+        },
+        "filesOnComments": {
+          "type": "boolean",
+          "required": false
+        },
+        "groupsCanFollow": {
+          "type": "boolean",
+          "required": false
+        },
+        "ideas": {
+          "type": "boolean",
+          "required": false
+        },
+        "managedTopicsEnabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "mobileNotificationsEnabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "multiCurrency": {
+          "type": "boolean",
+          "required": false
+        },
+        "publisherActions": {
+          "type": "boolean",
+          "required": false
+        },
+        "storeDataOnDevicesEnabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "trendingTopics": {
+          "type": "boolean",
+          "required": false
+        },
+        "viralInvitesAllowed": {
+          "type": "boolean",
+          "required": false
+        }
+      }
+    },
+    "maintenanceInfo": {
+      "type": "array",
+      "required": false,
+      "items": [{
+        "type": "object",
+        "required": false,
+        "properties": {
+          "description": {
+            "type": "string",
+            "required": false
+          },
+          "maintenanceTitle": {
+            "type": "string",
+            "required": false
+          },
+          "maintenanceType": {
+            "type": "string",
+            "required": false
+          },
+          "messageEffectiveTime": {
+            "type": "string",
+            "required": false
+          },
+          "messageExpirationTime": {
+            "type": "string",
+            "required": false
+          },
+          "scheduledEndDowntime": {
+            "type": "string",
+            "required": false
+          },
+          "scheduledEndMaintenanceTime": {
+            "type": "string",
+            "required": false
+          },
+          "scheduledStartDowntime": {
+            "type": "string",
+            "required": false
+          },
+          "scheduledStartMaintenanceTime": {
+            "type": "string",
+            "required": false
+          }
+        }
+      }]
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "orgId": {
+      "type": "string",
+      "required": false
+    },
+    "userSettings": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "approvalPosts": {
+          "type": "boolean",
+          "required": false
+        },
+        "canFollow": {
+          "type": "boolean",
+          "required": false
+        },
+        "canModifyAllData": {
+          "type": "boolean",
+          "required": false
+        },
+        "canOwnGroups": {
+          "type": "boolean",
+          "required": false
+        },
+        "canViewAllData": {
+          "type": "boolean",
+          "required": false
+        },
+        "canViewAllGroups": {
+          "type": "boolean",
+          "required": false
+        },
+        "canViewAllUsers": {
+          "type": "boolean",
+          "required": false
+        },
+        "canViewCommunitySwitcher": {
+          "type": "boolean",
+          "required": false
+        },
+        "canViewFullUserProfile": {
+          "type": "boolean",
+          "required": false
+        },
+        "canViewPublicFiles": {
+          "type": "boolean",
+          "required": false
+        },
+        "currencySymbol": {
+          "type": "string",
+          "required": false
+        },
+        "externalUser": {
+          "type": "boolean",
+          "required": false
+        },
+        "fileSyncLimit": {
+          "type": "integer",
+          "required": false
+        },
+        "fileSyncStorageLimit": {
+          "type": "integer",
+          "required": false
+        },
+        "folderSyncLimit": {
+          "type": "integer",
+          "required": false
+        },
+        "hasAccessToInternalOrg": {
+          "type": "boolean",
+          "required": false
+        },
+        "hasChatter": {
+          "type": "boolean",
+          "required": false
+        },
+        "hasFileSync": {
+          "type": "boolean",
+          "required": false
+        },
+        "hasFileSyncManagedClientAutoUpdate": {
+          "type": "boolean",
+          "required": false
+        },
+        "hasRestDataApiAccess": {
+          "type": "boolean",
+          "required": false
+        },
+        "timeZone": {
+          "type": "object",
+          "required": false,
+          "properties": {
+            "gmtOffset": {
+              "type": "number",
+              "required": false
+            },
+            "name": {
+              "type": "string",
+              "required": false
+            }
+          }
+        },
+        "userDefaultCurrencyIsoCode": {
+          "type": "string",
+          "required": false
+        },
+        "userId": {
+          "type": "string",
+          "required": false
+        },
+        "userLocale": {
+          "type": "string",
+          "required": false
+        }
+      }
+    }
+  }
+}

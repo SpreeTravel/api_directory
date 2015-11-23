@@ -1,0 +1,37 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "service_key" : {
+      "type" : "string" ,
+      "required" : true
+    } ,
+    "incident_key" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "event_type" : {
+      "type" : "string" ,
+      "required" : true
+    } ,
+    "description" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "client" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "client_url" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "details" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+      }
+    }
+  }
+}

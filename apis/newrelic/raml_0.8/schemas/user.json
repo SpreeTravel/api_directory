@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "user": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "id": {
+          "required": false,
+          "type": "integer"
+        },
+        "first_name": {
+          "required": false,
+          "type": "string"
+        },
+        "last_name": {
+          "required": false,
+          "type": "string"
+        },
+        "email": {
+          "required": false,
+          "type": "string"
+        },
+        "role": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "emailHeaderId" : "undefined" ,
+  "emailFooterId" : "undefined" ,
+  "subscriptionLandingPageId" : "undefined" ,
+  "unsubscriptionLandingPageId" : "2" ,
+  "isVisibleInPublicSubscriptionList" : "undefined" ,
+  "isVisibleInOutlookPlugin" : "false" ,
+  "emailIds" : [
+    null ,
+    null
+  ] ,
+  "displayName" : "Sample Campaign" ,
+  "subscriptionListId" : "undefined" ,
+  "unSubscriptionListId" : "undefined" ,
+  "subscriptionListDataLookupId" : "undefined" ,
+  "unSubscriptionListDataLookupId" : "undefined" ,
+  "name" : "undefined" ,
+  "description" : "Eloqua" ,
+  "permissions" : "undefined" ,
+  "folderId" : "undefined" ,
+  "sourceTemplateId" : "undefined" ,
+  "createdBy" : "undefined" ,
+  "createdAt" : "undefined" ,
+  "updatedBy" : "undefined" ,
+  "updatedAt" : "undefined" ,
+  "accessedAt" : "undefined" ,
+  "scheduledFor" : "undefined" ,
+  "depth" : "minimal"
+}

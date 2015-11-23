@@ -1,0 +1,278 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" :
+    {
+      "type" : "object" ,
+      "properties" : {
+        "Version" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "Key" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Type" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Rank" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "LocalizedName" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "EnglishName" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "PrimaryPostalCode" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Region" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "ID" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "LocalizedName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "EnglishName" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "Country" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "ID" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "LocalizedName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "EnglishName" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "AdministrativeArea" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "ID" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "LocalizedName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "EnglishName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "Level" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "LocalizedType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "EnglishType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "CountryID" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "TimeZone" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "Code" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "Name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "GmtOffset" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "IsDaylightSaving" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "NextOffsetChange" : {
+              "type" : "object" ,
+              "required" : false
+            }
+          }
+        } ,
+        "GeoPosition" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "Latitude" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "Longitude" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "Elevation" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "Metric" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "Value" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "Unit" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "UnitType" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "Imperial" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "Value" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "Unit" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "UnitType" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        } ,
+        "IsAlias" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "SupplementalAdminAreas" : {
+          "type" : "array" ,
+          "required" : false
+        } ,
+        "Details" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "Key" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "StationCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "StationGmtOffset" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "BandMap" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "Climo" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "LocalRadar" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "MediaRegion" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "Metar" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "NXMetro" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "NXState" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "Population" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "PrimaryWarningCountyCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "PrimaryWarningZoneCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "Satellite" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "Synoptic" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "MarineStation" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "MarineStationGMTOffset" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "VideoCode" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      }
+    }
+  
+}

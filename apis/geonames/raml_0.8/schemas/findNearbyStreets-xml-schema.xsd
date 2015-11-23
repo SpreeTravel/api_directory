@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="geonames">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="streetSegment" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="line" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="distance" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="mtfcc" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="fraddl" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="fraddr" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="toaddl" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="toaddr" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="postalcode" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="placename" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="adminCode2" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="adminName2" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="adminCode1" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="adminName1" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="countryCode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

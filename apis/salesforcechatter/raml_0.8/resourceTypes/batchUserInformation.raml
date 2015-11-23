@@ -1,0 +1,15 @@
+head: 
+  description: |
+    Returns information about the specified users’ profiles.
+    Where user_list is a comma separated list of up to 500 user IDs.
+  responses: 
+    200: 
+get: 
+  description: |
+    Returns information about the specified users’ profiles.
+    Where user_list is a comma separated list of up to 500 user IDs.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: batchResultsResponse

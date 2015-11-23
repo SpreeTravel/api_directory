@@ -1,0 +1,179 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "recordView": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "required": false
+        },
+        "motif": {
+          "type": "object",
+          "required": false,
+          "properties": {
+            "color": {
+              "type": "string",
+              "required": false
+            },
+            "largeIconUrl": {
+              "type": "string",
+              "required": false
+            },
+            "mediumIconUrl": {
+              "type": "string",
+              "required": false
+            },
+            "smallIconUrl": {
+              "type": "string",
+              "required": false
+            },
+            "svgIconUrl": {
+              "type": "string",
+              "required": false
+            }
+          }
+        },
+        "mySubscription": {
+          "type": "object",
+          "required": false,
+          "properties": {
+            "id": {
+              "type": "string",
+              "required": false
+            },
+            "url": {
+              "type": "string",
+              "required": false
+            }
+          }
+        },
+        "name": {
+          "type": "string",
+          "required": false
+        },
+        "relatedListDefinitions": {
+          "type": "array",
+          "required": false,
+          "items": [{
+            "type": "object",
+            "required": false,
+            "properties": {
+              "columns": {
+                "type": "array",
+                "required": false,
+                "items": [{
+                  "type": "object",
+                  "required": false,
+                  "properties": {
+                    "dataType": {
+                      "type": "string",
+                      "required": false
+                    },
+                    "fieldId": {
+                      "type": "string",
+                      "required": false
+                    },
+                    "label": {
+                      "type": "string",
+                      "required": false
+                    },
+                    "name": {
+                      "type": "string",
+                      "required": false
+                    }
+                  }
+                }]
+              },
+              "label": {
+                "type": "string",
+                "required": false
+              },
+              "objectType": {
+                "type": "object",
+                "required": false,
+                "properties": {
+                  "fieldId": {
+                    "type": "string",
+                    "required": false
+                  },
+                  "type": {
+                    "type": "string",
+                    "required": false
+                  }
+                }
+              },
+              "rowLimit": {
+                "type": "integer",
+                "required": false
+              },
+              "sortColumns": {
+                "type": "array",
+                "required": false,
+                "items": [{
+                  "type": "object",
+                  "required": false,
+                  "properties": {
+                    "column": {
+                      "type": "string",
+                      "required": false
+                    },
+                    "order": {
+                      "type": "string",
+                      "required": false
+                    }
+                  }
+                }]
+              }
+            }
+          }]
+        },
+        "sections": {
+          "type": "array",
+          "required": false,
+          "items": [{
+            "type": "object",
+            "required": false,
+            "properties": {
+              "columnCount": {
+                "type": "string",
+                "required": false
+              },
+              "columnOrder": {
+                "type": "string",
+                "required": false
+              },
+              "fields": {
+                "type": "string",
+                "required": false
+              },
+              "heading": {
+                "type": "string",
+                "required": false
+              },
+              "isCollapsible": {
+                "type": "boolean",
+                "required": false
+              }
+            }
+          }]
+        },
+        "type": {
+          "type": "string",
+          "required": false
+        },
+        "url": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "type": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

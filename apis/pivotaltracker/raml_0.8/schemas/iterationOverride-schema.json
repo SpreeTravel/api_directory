@@ -1,0 +1,27 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "kind" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "length" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "number" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "project_id" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "team_strength" : {
+      "type" : "number" ,
+      "required" : false
+    }
+  }
+}

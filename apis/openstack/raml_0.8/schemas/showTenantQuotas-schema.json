@@ -1,0 +1,65 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "quota_set" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "cores" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "fixed_ips" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "floating_ips" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "injected_file_content_bytes" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "injected_file_path_bytes" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "injected_files" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "instances" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "key_pairs" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "metadata_items" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "ram" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "security_group_rules" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "security_groups" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

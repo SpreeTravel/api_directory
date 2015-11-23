@@ -1,0 +1,21 @@
+head: 
+  description: Get information about the followers of the specified record.
+  responses: 
+    200: 
+get: 
+  description: Get information about the followers of the specified record.
+  queryParameters: 
+    page: 
+      description: An integer specifying a page of items. The default value is 0, which returns the first page.
+      type: integer
+      default: 0
+    pageSize: 
+      description: "Specifies the number of items per page. Valid values are between 1 and 1000. If you don't specify a size, the default is 25."
+      type: integer
+      default: 25
+      example: 5
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: subscriptionPageResponse

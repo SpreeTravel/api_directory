@@ -1,0 +1,7 @@
+[
+  {
+    "id": "7.23",
+    "pattern": "mailbox-*",
+    "url": "http://example.com/webhook-url"
+  }
+]

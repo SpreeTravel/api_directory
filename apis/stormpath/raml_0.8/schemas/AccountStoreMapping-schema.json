@@ -1,0 +1,35 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "application" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "href" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "accountStore" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "href" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "isDefaultAccountStore" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "isDefaultGroupStore" : {
+      "type" : "boolean" ,
+      "required" : false
+    }
+  }
+}

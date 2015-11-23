@@ -1,0 +1,53 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "bundleType": {
+      "type": "string",
+      "required": false
+    },
+    "page": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "currentPageUrl": {
+          "type": "string",
+          "required": false
+        },
+        "elements": {
+          "type": "string",
+          "required": false
+        },
+        "isModifiedToken": {
+          "type": "string",
+          "required": false
+        },
+        "isModifiedUrl": {
+          "type": "string",
+          "required": false
+        },
+        "nextPageToken": {
+          "type": "string",
+          "required": false
+        },
+        "nextPageUrl": {
+          "type": "string",
+          "required": false
+        },
+        "updatesToken": {
+          "type": "string",
+          "required": false
+        },
+        "updatesUrl": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "totalElements": {
+      "type": "integer",
+      "required": false
+    }
+  }
+}

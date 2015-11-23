@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "new_hash": {
+          "description": "Designates if this is the first time this long_url was shortened by this user. The return value will equal 1 the first time a long_url is shortened. It will also then be added to the user  history.",
+          "type": "string"
+        },
+        "url": {
+          "description": "The actual link that should be used, and is a unique value for the given bitly account.",
+          "type": "string"
+        },
+        "hash": {
+          "description": "A bitly identifier for long_url which is unique to the given account.",
+          "type": "string"
+        },
+        "global_hash": {
+          "description": "A bitly identifier for long_url which can be used to track aggregate stats across all bitly links that point to the same long_url.",
+          "type": "string"
+        },
+        "long_url": {
+          "description": "an echo back of the longUrl request parameter. This may not always be equal to the URL requested, as some URL normalization may occur (e.g., due to encoding differences, or case differences in the domain). This long_url will always be functionally identical the the request parameter. ",
+          "type": "string"
+        }
+      }
+    },
+    "status_code": {
+      "type": "integer",
+      "required": true
+    },
+    "status_txt": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "results": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "allow_maybe_rsvp": {
+            "required": false,
+            "type": "string"
+          },
+          "attendee_count": {
+            "required": false,
+            "type": "integer"
+          },
+          "description": {
+            "required": false,
+            "type": "string"
+          },
+          "event_hosts": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "member_id": {
+                "required": false,
+                "type": "integer"
+              },
+              "member_name": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "fee": {
+            "required": false,
+            "type": "string"
+          },
+          "feecurrency": {
+            "required": false,
+            "type": "string"
+          },
+          "feedesc": {
+            "required": false,
+            "type": "string"
+          },
+          "feelabel": {
+            "required": false,
+            "type": "string"
+          },
+          "guest_limit": {
+            "required": false,
+            "type": "string"
+          },
+          "how_to_find_us": {
+            "required": false,
+            "type": "string"
+          },
+          "id": {
+            "required": false,
+            "type": "integer"
+          },
+          "ismeetup": {
+            "required": false,
+            "type": "string"
+          },
+          "lat": {
+            "required": false,
+            "type": "number"
+          },
+          "lon": {
+            "required": false,
+            "type": "number"
+          },
+          "maybe_rsvpcount": {
+            "required": false,
+            "type": "string"
+          },
+          "member_status": {
+            "required": false,
+            "type": "string"
+          },
+          "my_waitlist_status": {
+            "required": false,
+            "type": "string"
+          },
+          "myrsvp": {
+            "required": false,
+            "type": "string"
+          },
+          "name": {
+            "required": false,
+            "type": "string"
+          },
+          "no_rsvpcount": {
+            "required": false,
+            "type": "string"
+          },
+          "organizer_id": {
+            "required": false,
+            "type": "integer"
+          },
+          "organizer_name": {
+            "required": false,
+            "type": "string"
+          },
+          "photo_album_id": {
+            "required": false,
+            "type": "integer"
+          },
+          "photo_count": {
+            "required": false,
+            "type": "integer"
+          },
+          "photo_url": {
+            "required": false,
+            "type": "string"
+          },
+          "rating": {
+            "required": false,
+            "type": "string"
+          },
+          "rating_count": {
+            "required": false,
+            "type": "integer"
+          },
+          "rsvpcount": {
+            "required": false,
+            "type": "string"
+          },
+          "short_link": {
+            "required": false,
+            "type": "string"
+          },
+          "status": {
+            "required": false,
+            "type": "string"
+          },
+          "time": {
+            "required": false,
+            "type": "string"
+          },
+          "updated": {
+            "required": false,
+            "type": "integer"
+          },
+          "utc_rsvp_cutoff": {
+            "required": false,
+            "type": "integer"
+          },
+          "utc_rsvp_open_time": {
+            "required": false,
+            "type": "integer"
+          },
+          "utc_time": {
+            "required": false,
+            "type": "integer"
+          },
+          "venue_address1": {
+            "required": false,
+            "type": "string"
+          },
+          "venue_address2": {
+            "required": false,
+            "type": "string"
+          },
+          "venue_city": {
+            "required": false,
+            "type": "string"
+          },
+          "venue_id": {
+            "required": false,
+            "type": "integer"
+          },
+          "venue_lat": {
+            "required": false,
+            "type": "string"
+          },
+          "venue_lon": {
+            "required": false,
+            "type": "string"
+          },
+          "venue_map": {
+            "required": false,
+            "type": "string"
+          },
+          "venue_name": {
+            "required": false,
+            "type": "string"
+          },
+          "venue_phone": {
+            "required": false,
+            "type": "string"
+          },
+          "venue_state": {
+            "required": false,
+            "type": "string"
+          },
+          "venue_visibility": {
+            "required": false,
+            "type": "string"
+          },
+          "venue_zip": {
+            "required": false,
+            "type": "string"
+          },
+          "waiting_rsvpcount": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

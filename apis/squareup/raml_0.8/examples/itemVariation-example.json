@@ -1,0 +1,15 @@
+{
+  "pricing_type" : "FIXED_PRICING" ,
+  "track_inventory" : true ,
+  "inventory_alert_type" : "LOW_QUANTITY" ,
+  "id" : "cb890728-cfdc-4690-9e03-349f964f756r" ,
+  "name" : "Small" ,
+  "price_money" : {
+    "currency_code" : "USD" ,
+    "amount" : 400
+  } ,
+  "ordinal" : 0 ,
+  "item_id" : "442d1344-6d2b-4238-83d0-0284dfd335d8" ,
+  "inventory_alert_threshold" : 10 ,
+  "user_data" : "SEASONAL=TRUE"
+}

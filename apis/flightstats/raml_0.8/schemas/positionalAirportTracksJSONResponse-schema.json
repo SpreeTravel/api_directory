@@ -1,0 +1,160 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "request" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "airport" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "requestedCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "fsCode" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "includeFlightPlan" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "interpreted" : {
+              "type" : "boolean" ,
+              "required" : false
+            }
+          }
+        } ,
+        "maxPositions" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "maxPositionAgeMinutes" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "codeType" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "maxFlights" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "extendedOptions" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "url" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "appendix" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "airports" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "fs" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "iata" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "icao" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "city" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "cityCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "regionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "timeZoneRegionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "localTime" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "utcOffsetHours" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "latitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "longitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "elevationFeet" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "classification" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "active" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                } ,
+                "delayIndexUrl" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "weatherUrl" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        }
+      }
+    } ,
+    "flightTracks" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+      ]
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "port" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "status" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "binding:host_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "allowed_address_pairs" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+          ]
+        } ,
+        "admin_state_up" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "network_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "tenant_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "binding:vif_details" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "binding:vnic_type" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "binding:vif_type" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "device_owner" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "mac_address" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "binding:profile" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "fixed_ips" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "subnet_id" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "ip_address" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "security_groups" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "string"
+            }
+          ]
+        } ,
+        "device_id" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

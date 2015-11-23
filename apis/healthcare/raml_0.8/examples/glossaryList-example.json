@@ -1,0 +1,42 @@
+{
+  "glossary" : [
+    {
+      "categories" : [
+        "es" ,
+        "glossary"
+      ] ,
+      "layout" : "glossary-word" ,
+      "published" : true ,
+      "title" : "Ingreso Bruto Ajustado Modificado (MAGI en inglГ©s)" ,
+      "lang" : "es" ,
+      "tags" : [
+        "glossary"
+      ] ,
+      "url" : "/es/glossary/modified-adjusted-gross-income-magi" ,
+      "content" : "<p>La cifra utilizada para determinar la elegibilidad de costos reducidos en el Mercado y para Medicaid y CHIP. El ingreso bruto ajusto modificado es el ingreso bruto ajustado (que paga impuestos) mas los ingresos por concepto de intereses exentos de impuestos.</p>\r\n\r\n" ,
+      "date" : "2013-07-08 00:00:00 -0400" ,
+      "sort" : 0 ,
+      "id" : "/es/glossary/modified-adjusted-gross-income-magi" ,
+      "excerpt" : "<p>La cifra utilizada para determinar la elegibilidad de costos reducidos en el Mercado y para Medicaid y CHIP. El ingreso bruto ajusto modificado es el ingreso bruto ajustado (que paga impuestos) mas los ingresos por concepto de intereses exentos de impuestos.</p>\r\n\r\n" ,
+      "path" : "_posts/glossary/es/2013-07-08-modified-adjusted-gross-income-magi.md"
+    } , {
+      "categories" : [
+        "glossary"
+      ] ,
+      "layout" : "glossary-word" ,
+      "published" : true ,
+      "title" : "Modified Adjusted Gross Income (MAGI)" ,
+      "lang" : "en" ,
+      "tags" : [
+        "glossary"
+      ] ,
+      "url" : "/glossary/modified-adjusted-gross-income-magi" ,
+      "content" : "<p>The figure used to determine eligibility for lower costs in the Marketplace and for Medicaid and CHIP. Generally, modified adjusted gross income is your adjusted gross income plus any tax-exempt Social Security, interest, or foreign income you have.</p>\r\n\r\n" ,
+      "date" : "2013-07-08 00:00:00 -0400" ,
+      "sort" : 0 ,
+      "id" : "/glossary/modified-adjusted-gross-income-magi" ,
+      "excerpt" : "<p>The figure used to determine eligibility for lower costs in the Marketplace and for Medicaid and CHIP. Generally, modified adjusted gross income is your adjusted gross income plus any tax-exempt Social Security, interest, or foreign income you have.</p>\r\n\r\n" ,
+      "path" : "_posts/glossary/2013-07-08-modified-adjusted-gross-income-magi.md"
+    }
+  ] 
+}

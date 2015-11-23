@@ -1,0 +1,31 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "fullEmailPhotoUrl": {
+      "type": "string",
+      "required": false
+    },
+    "largePhotoUrl": {
+      "type": "string",
+      "required": false
+    },
+    "photoVersionId": {
+      "type": "string",
+      "required": false
+    },
+    "smallPhotoUrl": {
+      "type": "string",
+      "required": false
+    },
+    "standardEmailPhotoUrl": {
+      "type": "string",
+      "required": false
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "error" : {
+    "message" : "Error Message String" ,
+    "code" : 2001 ,
+    "errors" : [
+      "human-readable error details" ,
+      "more details"
+    ]
+  }
+}

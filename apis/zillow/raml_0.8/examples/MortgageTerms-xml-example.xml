@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<MortgageTerms:mortgageterms xsi:schemaLocation="http://www.zillow.com/static/xsd/MortgageTerms.xsd http://www.zillow.com/vstatic/254f791ffb969e3098e3544e029df057/static/xsd/MortgageTerms.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MortgageTerms="http://www.zillow.com/static/xsd/MortgageTerms.xsd">
+    <request>
+        <amount>10000000</amount>
+        <rate>6.504</rate>
+        <rate2>5.45</rate2>
+        <rate3>7.806</rate3>
+        <terminmonths>360</terminmonths>
+        <terminmonths2>480</terminmonths2>
+        <terminmonths3>360</terminmonths3>
+        <costofmoney>0.0</costofmoney>
+        <taxbracket>20.0</taxbracket>
+        <comparisonyears>20</comparisonyears>
+        <output>xml</output>
+    </request>
+    <message>
+        <text>Request successfully processed</text>
+        <code>0</code>
+    </message>
+    <response>
+        <monthlyprincipalandinterest>63233</monthlyprincipalandinterest>
+        <monthlyprincipalandinterest2>51237</monthlyprincipalandinterest2>
+        <monthlyprincipalandinterest3>72029</monthlyprincipalandinterest3>
+        <discountedcost>15175920</discountedcost>
+        <discountedcost2>12296880</discountedcost2>
+        <discountedcost3>17286960</discountedcost3>
+        <remainingprincipal>5567904</remainingprincipal>
+        <remainingprincipal2>7479282</remainingprincipal2>
+        <remainingprincipal3>5986956</remainingprincipal3>
+        <taxsavings>2148765</taxsavings>
+        <taxsavings2>1955232</taxsavings2>
+        <taxsavings3>2654781</taxsavings3>
+        <totalcost>18595059</totalcost>
+        <totalcost2>17820930</totalcost2>
+        <totalcost3>20619135</totalcost3>
+        <result>The 40.00 year loan at the rate of 5.45% looks to be the cheapest over the 20.00 year period.</result>
+    </response>
+</MortgageTerms:mortgageterms>

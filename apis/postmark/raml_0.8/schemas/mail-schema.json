@@ -1,0 +1,87 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "From" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "To" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Cc" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Bcc" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Subject" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Tag" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "HtmlBody" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "TextBody" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "ReplyTo" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Headers" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "Name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "Value" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    } ,
+    "Attachments" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : {
+        "type" : "object" ,
+        "properties" : {
+          "Name" : {
+            "type" : "string" ,
+            "required" : false
+          } ,
+          "Content" : {
+            "type" : "string" ,
+            "required" : false
+          } ,
+          "ContentType" : {
+            "type" : "string" ,
+            "required" : false
+          } ,
+          "ContentID" : {
+            "type" : "string" ,
+            "required" : false
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "neighbourhood" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "adminName2" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "adminCode2" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "adminCode1" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "countryName" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "countryCode" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "city" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "adminName1" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

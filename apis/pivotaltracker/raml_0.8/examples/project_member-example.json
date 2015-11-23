@@ -1,0 +1,17 @@
+{
+  "id" : 16100 ,
+  "kind" : "project_membership" ,
+  "person" : {
+    "kind" : "person" ,
+    "id" : 300 ,
+    "name" : "Vestara Khai" ,
+    "email" : "vkhai@sith.mil" ,
+    "initials" : "VK" ,
+    "username" : "vestarak"
+  } ,
+  "project_color" : "b800bb" ,
+  "project_id" : 99 ,
+  "role" : "member" ,
+  "wants_comment_notification_emails" : true ,
+  "will_receive_mention_notifications_or_emails" : true
+}

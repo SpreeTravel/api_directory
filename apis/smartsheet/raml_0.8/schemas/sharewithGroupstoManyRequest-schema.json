@@ -1,0 +1,54 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "shares" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "userId" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "groupId" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    } ,
+    "subject" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "message" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "accessLevel" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "ccMe" : {
+      "type" : "boolean" ,
+      "required" : false
+    }
+  }
+}

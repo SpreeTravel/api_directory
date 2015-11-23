@@ -1,0 +1,559 @@
+#%RAML 0.8
+title: "Quizlet"
+version: 2.0
+baseUri: "https://api.quizlet.com/{version}"
+schemas:
+  - error: !include schemas/error-schema.json
+  - error401-500: !include schemas/error401-500-schema.json
+  - addClass: !include schemas/addClass-schema.json
+  - class: !include schemas/class-schema.json
+  - setsGet: !include schemas/setsGet-schema.json
+  - member: !include schemas/member-schema.json
+  - classPut: !include schemas/classPut-schema.json
+  - images: !include schemas/images-schema.json
+  - set: !include schemas/set-schema.json
+  - newSet: !include schemas/newSet-schema.json
+  - setPut: !include schemas/setPut-schema.json
+  - terms: !include schemas/terms-schema.json
+  - studied: !include schemas/studied-schema.json
+  - user: !include schemas/user-schema.json
+  - searchSets: !include schemas/searchSets-schema.json
+  - searchDefinitions: !include schemas/searchDefinitions-schema.json
+  - searchClasses: !include schemas/searchClasses-schema.json
+  - searchUniversal: !include schemas/searchUniversal-schema.json
+resourceTypes:
+  - setsType: !include resourceTypes/setsType.raml
+  - base: !include resourceTypes/base.raml
+traits:
+  - commonMethods: !include traits/commonMethods.raml
+  - pageable: !include traits/pageable.raml
+  - hasDescription: !include traits/hasDescription.raml
+  - hasTerm: !include traits/hasTerm.raml
+/classes: 
+  displayName: Classes
+  type: base
+  post: 
+    description: "Add a New Class"
+    queryParameters: 
+      name: 
+        displayName: Name
+        description: |
+          The name of the class.
+        required: true
+      description: 
+        displayName: Description
+        description: |
+          A description of what the class is about and who it's for.
+        required: true
+      school_id: 
+        displayName: "School ID"
+        description: |
+          The ID of hte school to which this class belongs. Either this must be specified, or new_school_name, city, state, and country must be specified in the case of a new school.
+        type: integer
+        required: true
+      new_school_name: 
+        displayName: "New School Name"
+        description: |
+          The name of the school to which this class belongs. Either this must be specified, or school_id must be specified if the school already exists
+        required: true
+      city: 
+        displayName: City
+        description: |
+          The city of the school to which this class belongs. Either this must be specified, or school_id must be specified if the school already exists
+        required: true
+      state: 
+        displayName: State
+        description: |
+          The 2 digit state code of the school to which this class belongs. This is only required for US schools.
+        required: true
+      country: 
+        displayName: Country
+        description: |
+          The country of the school to which this class belongs. Either this must be specified, or school_id must be specified if the school already exists.
+        required: true
+      allow_discussion: 
+        displayName: "Allow Discussion"
+        description: |
+          Flag of whether users are allowed to use the discussion box in this class.
+        enum: [ "0 or 1" ]
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: addClass
+            example: !include examples/addClass-example.json
+  "/{class_id}": 
+    displayName: "A Single Class"
+    type: base
+    get: 
+      description: "Returns the class details. The amount of detail returns depends on the authenticated user's permissions."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: class
+              example: !include examples/class-example.json
+    put: 
+      is: [ hasDescription ]
+      description: "Edits an existing Class"
+      queryParameters: 
+        name: 
+          displayName: Name
+          description: |
+            The name of the class
+        allow_discussion: 
+          displayName: "Allow Discussion"
+          description: |
+            Flag of whether users are allowed to use the discussion box in this class.
+          enum: [ "0 or 1" ]
+        admin_only: 
+          displayName: "Admin Only"
+          description: |
+            Flag of whether non-admin users are allowed to invite other members and add sets to this class.
+          enum: [ "0 or 1" ]
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: classPut
+              example: !include examples/classPut-example.json
+    delete: 
+      description: |
+        Deletes a class
+        Requires a write_group-scoped access token authorized by the creator of the class.
+    /sets: 
+      displayName: "Sets in a Clas"
+      type: setsType
+      get: 
+      "/{set_id}": 
+        displayName: "A Single Se"
+        type: base
+        put: 
+          description: |
+            Add a set to a class
+        delete: 
+          description: |
+            Remove a set from a class
+    "/members/{username}": 
+      displayName: "Manipulate Class Membership"
+      type: base
+      put: 
+        description: |
+          Join, or apply to join, a class
+        queryParameters: 
+          application: 
+            displayName: Application
+            description: |
+              A brief message to send to managers of the class when requesting access.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: member
+                example: !include examples/member-example.json
+      delete: 
+        description: |
+          Leave a class
+/images: 
+  displayName: Images
+  type: base
+  description: |
+    The form encoding of the POST request must be [multipart/form-data](http://www.w3.org/TR/html4/interact/forms.html#h-17.13.4.2).
+    
+    All images uploaded to our server are resized and stored with a maximum of 1024 pixels on the longest side (so there's no point in uploading huge files).
+    
+    The maximum size per image is 5Mb (but, as per the previous point, there's no need for images anywhere near that large).
+    
+    The total size of all images in a single request must be less than 20Mb.
+    
+    If you exceed any size restrictions you will get a validation error explaining that the file size is too big (and no images will be saved).
+    
+    It is recommended that you resize large files before uploading them to Quizlet for a few reasons:
+      1. It will reduce the upload time and save the user's bandwidth.
+      2. We only store images with 1024 pixels on the longest edge, so there is no quality advantage of sending large files.
+      3. With an upper limit of 20Mb per request, you could upload 10 x 2Mb images vs 100 x 200Kb images!
+    
+    To make the user experience better (and to avoid sending unnecessarily large amounts of data), the best practice is to check the image size and total size before posting images to our server.
+  post: 
+    description: |
+      Upload one or more images
+    body: 
+      multipart/form-data: 
+        formParameters: 
+          imageData: 
+            description: "An array of one or more images."
+            example: imageData[]=@/path/to/images/milk.jpg
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: images
+            example: !include examples/images-example.json
+/search: 
+  /sets: 
+    displayName: "Search for Sets"
+    type: base
+    get: 
+      is: [ pageable , hasDescription , hasTerm ]
+      description: |
+        Search for sets by title, description, or term. Returns limited information
+      queryParameters: 
+        q: 
+          displayName: Q
+          description: |
+            Returns sets with titles and/or subjects that match your query.
+          example: q=french%20animals
+        creator: 
+          displayName: Creator
+          description: |
+            Return sets created by the specified Quizlet user.
+          example: creator=USERNAME
+        images_only: 
+          displayName: "Images Only"
+          description: |
+            When 1, limits results to sets with images only.
+          enum: [ 0 , 1 ]
+        autocomplete: 
+          displayName: "Auto complete"
+          type: date
+          default: 0
+        sort: 
+          displayName: Sor
+          description: |
+            The field to sort by. Currently only "most_studied", "title", and "most_recent" are supported.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: searchSets
+              example: !include examples/searchSets-example.json
+  /definitions: 
+    displayName: "Search for Definitions"
+    type: base
+    get: 
+      description: "Find the definitions of a word."
+      queryParameters: 
+        q: 
+          displayName: Q
+          description: |
+            The search query (case-insensitive)
+          required: true
+        type: 
+          displayName: Type
+          description: |
+            one of "all", "user", "official"
+          default: user
+        limit: 
+          displayName: Limi
+          description: |
+            Number of definitions to limit of each type. For example, if type is set to "all" and limit is set to 2, you will get 2 user and 2 official definitions (for a total of 4).
+          type: integer
+          default: 10
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: searchDefinitions
+              example: !include examples/searchDefinitions-example.json
+  /classes: 
+    displayName: "Search for Classes"
+    type: base
+    get: 
+      is: [ pageable ]
+      description: |
+        General way to search for classes. Returns minimal information about classes.
+      queryParameters: 
+        q: 
+          displayName: Q
+          description: |
+            the search query (case-insensitive)
+          required: true
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: searchClasses
+              example: !include examples/searchClasses-example.json
+  /universal: 
+    displayName: "Universal Search"
+    type: base
+    get: 
+      is: [ pageable ]
+      description: |
+        General way to search for classes, sets, and users all in one.
+      queryParameters: 
+        q: 
+          displayName: Q
+          description: |
+            the search query (case-insensitive)
+          required: true
+      responses: 
+        200: 
+          description: |
+            Item object: The returned item objects are identical to the user, class, and set items returned in other areas of the API, with the exception that there is also a type field included with all returned items indicating whether the item is a class, set, or user. In all cases, only minimal information is returned about each item in the resulting JSON.
+          body: 
+            application/json: 
+              schema: searchUniversal
+              example: !include examples/searchUniversal-example.json
+/users: 
+  "/{username}": 
+    displayName: "View User Info"
+    type: base
+    get: 
+      description: |
+        Returns all the user's details, and minimal information of all their sets, classes, favorites and 25 most recent study sessions.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: user
+              example: !include examples/user-example.json
+    /sets: 
+      displayName: "User Sets"
+      type: setsType
+      get: 
+        description: "Returns full details about sets they created."
+    /favorites: 
+      displayName: "Favorite User Sets"
+      type: setsType
+      get: 
+        description: "Returns full details of all the user's favorite sets."
+      "/{set_id}": 
+        displayName: "Manipulate Favorite Sets"
+        type: base
+        put: 
+          description: |
+            Mark a set as favorite.
+        delete: 
+          description: |
+            Unmark a set as favorite
+    /studied: 
+      displayName: "View Recently Studied Sessions"
+      type: base
+      get: 
+        description: |
+          Returns full details for their 100 most recent study sessions.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: studied
+                example: !include examples/studied-example.json
+/sets: 
+  displayName: Sets
+  type: setsType
+  post: 
+    description: "Adds a new set"
+    body: 
+      multipart/form-data: 
+        formParameters: 
+          terms: 
+            description: "The title of the set"
+            required: true
+            example: terms[]=lait
+          definitions: 
+            description: "The text of a new definition. The number of definitions[] must match that of terms[]."
+            required: true
+            example: definitions[]=milk
+          images: 
+            description: "The identifier of the image for a term. If present, the number of images[] must match that of terms[]. Specify empty identifiers for terms that have no image. You get image identifiers when you upload images."
+            example: images[]=aGFzaD04WEFtRGQxcVh5M2VLcXo2RW92S0t3JmFzcGVjdD0yNDB4MTYw
+          title: 
+            description: "The title of the set"
+            required: true
+            example: "title=My first set with images via the API"
+          lang_terms: 
+            description: "Language of the terms. See the list of possible languages."
+            required: true
+            example: lang_terms=fr
+          lang_definitions: 
+            description: "Language of the definitions. See the list of possible languages."
+            required: true
+            example: lang_definitions=en
+          description: 
+            description: "A text description of the set."
+          subjects: 
+            description: "Deprecated. An array which will be ignored."
+          allow_discussion: 
+            description: "0 or 1. Flag of whether users are allowed to use the discussion box on this set"
+            type: boolean
+          visibility: 
+            description: "Define who is allowed to view/use this set."
+            enum: 
+              - classes
+              - only_me
+              - public
+              - password
+          editable: 
+            description: "Define who is allowed to edit this set."
+            enum: 
+              - classes
+              - only_me
+              - password
+          classes[]: 
+            description: 'Only required when visibility="classes" or editable="classes"'
+          password: 
+            description: 'Only required when visibility="password" or editable="password"'
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: newSet
+            example: !include examples/newSet-example.json
+  get: 
+    description: "Returns multiple unrelated sets."
+  "/{set_id}": 
+    displayName: "Manipulate an Existing Se"
+    type: base
+    put: 
+      is: [ hasDescription ]
+      description: |
+        Edit an existing se
+      queryParameters: 
+        title: 
+          displayName: Title
+          description: |
+            The title of the set.
+        term_ids[]: 
+          displayName: "Term IDs"
+          description: |
+            The array of term ids.
+            - For new terms, use a zero value
+              * e.g. "term_ids[]=0"
+            - For already-existing terms, use the term id from the term you're editing
+              * e.g. "term_ids[]=81892"
+            - If you don't want to replace all the terms at once, then use editing terms instead.
+        terms[]: 
+          displayName: Terms
+          description: |
+            A replacement array of terms. If you don't want to replace all the terms at once, then use editing terms instead.
+        definitions[]: 
+          displayName: Definitions
+          description: |
+            A replacement array of definitions. If present, the length of this array must match the terms array. If you don't want to replace all the definitions at once, then use editing terms instead.
+        images[]: 
+          displayName: Images
+          description: |
+            A replacement array of image identifiers. If present, the length of this array must match the terms array. See the notes above for details about replacing images. If you don't want to replace all the images at once, then use editing terms instead.
+        subjects[]: 
+          displayName: Subjects
+          description: "An array of plaintext subjects with which to tag this set."
+        allow_discussion: 
+          displayName: "Allow Discussion"
+          description: "Flag of whether users are allowed to use the discussion box on this set."
+          type: boolean
+          enum: [ 0 , 1 ]
+        visibility: 
+          displayName: Visibility
+          description: |
+            Define who is allowed to view/use this set. If set to classes, the parameter classes becomes mandatory. If set to password, the parameter password becomes mandatory.
+          enum: 
+            - public
+            - only_me
+            - classes
+            - password
+        editable: 
+          displayName: Editable
+          description: |
+            Define who is allowed to edit this set. If set to classes, the parameter classes becomes mandatory. If set to password, the parameter password becomes mandatory.
+          enum: 
+            - only_me
+            - classes
+            - password
+        classes[]: 
+          displayName: Classes
+          description: |
+            Only required when visibility="classes" or editable="classes". An array of class IDs (integers) that this set is visible and/or editable for.
+        password: 
+          displayName: Password
+          description: |
+            Only required when visibility="password" or editable="password". The password required to view and/or edit this set.
+        lang_terms: 
+          displayName: "Term Language"
+          description: "Language of the terms."
+        lang_definitions: 
+          displayName: "Definition Language"
+          description: "Language of the definitions."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: setPut
+              example: !include examples/setPut-example.json
+    delete: 
+      description: |
+        delete an existing se
+    get: 
+      description: |
+        View complete details (including all terms) of a single set.
+      queryParameters: 
+        modified_since: 
+          displayName: "Modified Since"
+          description: |
+            If you specify this timestamp and the set has not changed, then a 304 not modified response will be returned with no content.
+          type: date
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: set
+              example: !include examples/set-example.json
+        304: 
+          description: |
+            Not Modified
+            Example output when specifying modified_since
+    /terms: 
+      displayName: "Manipulate Terms in an Existing Se"
+      type: base
+      get: 
+        description: |
+          View just the terms in a single set.
+        queryParameters: 
+          modified_since: 
+            description: |
+              If you specify this timestamp and the set has not changed, then a 304 not modified response will be returned with no content.
+            type: date
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: terms
+                example: !include examples/terms-example.json
+          304: 
+      post: 
+        is: [ hasDescription , hasTerm ]
+        description: |
+          Add a single term to a set.
+        queryParameters: 
+          image: 
+            displayName: Image
+            description: "The identifier of the image for the term. You get image identifiers when you upload images."
+      "/{term_id}": 
+        displayName: "Manipulate a Single Term"
+        type: base
+        put: 
+          is: [ hasDescription , hasTerm ]
+          description: |
+            Edit a single term within a se
+          queryParameters: 
+            image: 
+              displayName: Image
+              description: "The identifier of the image for the term. You get image identifiers when you upload images."
+        delete: 
+          is: [ hasDescription , hasTerm ]
+          description: |
+            Delete a single term from a set.
+          queryParameters: 
+            image: 
+              displayName: Image
+              description: "The identifier of the image for the term. You get image identifiers when you upload images."
+    /password: 
+      type: base
+      post: 
+        description: "Submits the password for a password-protected set"
+        queryParameters: 
+          password: 
+            description: "Your password"
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

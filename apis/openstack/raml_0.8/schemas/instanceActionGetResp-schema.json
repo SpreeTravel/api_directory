@@ -1,0 +1,72 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "instance_action" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "action" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "events" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "event" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "finish_time" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "result" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "start_time" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "traceback" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        } ,
+        "instance_uuid" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "message" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "project_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "request_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "start_time" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "user_id" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

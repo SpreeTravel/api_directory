@@ -1,0 +1,179 @@
+#%RAML 0.8
+title: Postmark
+baseUri: "http://api.postmarkapp.com"
+schemas:
+  - mail: !include schemas/mail-schema.json
+  - sendResponse: !include schemas/sendResponse-schema.json
+  - emails: !include schemas/emails-schema.json
+  - sendEmailsResponse: !include schemas/sendEmailsResponse-schema.json
+  - bounces: !include schemas/bounces-schema.json
+  - bounce: !include schemas/bounce-schema.json
+  - bounceDump: !include schemas/bounceDump-schema.json
+  - tags: !include schemas/tags-schema.json
+  - bounceAndStatus: !include schemas/bounceAndStatus-schema.json
+  - inboundServerInfo: !include schemas/inboundServerInfo-schema.json
+/email: 
+  description: "Sending email through Postmark"
+  post: 
+    description: |
+      Sending mails through Postmark is as simple as sending HTTP Post request to the service. 
+      
+      Currently Postmark supports JSON message format.
+      
+      You should pass the json encoded message in the body of the request. Both from and to accept name, in the format of John Doe <email@example.com>. You can provide HtmlBody for html formatted messages, TextBody for plain text, or both for multipart. Multipart sends html with a text version for clients that don't support html. Passing headers is optional.
+      
+      You should have a registered and confirmed sender signature with the sender email. Otherwise you will receive HTTP Response 422 (Unprocessable Entity).
+      It is possible to override the Name in the sender signature through the API. This is useful if you want to use member's information in the email while keeping your from email address. just pass the name in the From parameter, From: "John Smith <sender@example.com>".
+      
+      You can pass multiple recipient addresses in the 'To' field and the optional 'Cc' and 'Bcc' fields. Separate multiple addresses with a comma. Note that Postmark has a limit of twenty recipients per message in total. You need to take care not to exceed that limit. Otherwise you will get an error.
+      You can categorize outgoing email using the optional Tag property. If you use different tags for the different types of emails your application generates, you will be able to get detailed statistics for them through the Postmark user interface.
+      
+      *Limitations:*
+      
+      Only allowed file types can be sent as attachments. The message will be rejected (or you will get an SMTP API bounce if using SMTP) with a description of the rejected file, if you try to send a file with a disallowed extension.
+      
+      Attachment size can be 10 MB at most. That means you can send three attachments weighing at three megabytes each, but you won't be able to send a single 11MB attachment. Don't worry about base64 encoding making your data larger than it really is. Attachment size is calculated using the real binary data (after base64-decoding it).
+      
+      Many applications can get away with sending email as a response to a user action and do that right in the same web request handler. Sending attachments changes that. Message size can and will get bigger and the time to submit it to the Postmark servers will get longer. That is why we recommend that you send email with attachments from a background job. Your users will love you for that!
+    body: 
+      application/json: 
+        schema: mail
+        example: !include examples/mail-example.json
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: sendResponse
+            example: !include examples/sendResponse-example.json
+  /batch: 
+    description: "Batching messages"
+    post: 
+      description: |
+        While Postmark is focused on transactional email, we understand that developers with higher volumes or processing time constraints need to send their messages in batches. To facilitate this we provide a batching endpoint that permits you to send up to 500 well-formed Postmark messages in a single API call.
+        
+        The format of the batched message is a JSON array containing multiple message requests.
+      body: 
+        application/json: 
+          schema: emails
+          example: !include examples/emails-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: sendEmailsResponse
+              example: !include examples/sendEmailsResponse-example.json
+/deliverystats: 
+  description: "Returns a summary of inactive emails and bounces by type over the entire history of the server."
+  get: 
+    responses: 
+      200: 
+        body: 
+          application/json: 
+/bounces: 
+  description: "Fetches a portion of bounces according to the specified input criteria. Supported filters: type, inactive, email like, tag. Paging: page_size (count), page_start (offset). Bounces are sorted by BouncedAt in a descending order."
+  get: 
+    description: "Note:  the count and offset parameters are mandatory except of  messageID search."
+    queryParameters: 
+      type: 
+        description: "filter by bounce type"
+        enum: 
+          - Transient
+          - HardBounce
+          - DnsError
+          - SMTPApiError
+          - BadEmailAddress
+          - Unknown
+          - AddressChange
+          - Blocked
+          - SpamNotification
+          - InboundError
+          - ManuallyDeactivated
+          - SoftBounce
+          - ChallengeVerification
+          - Unconfirmed
+          - SpamComplaint
+          - OpenRelayTest
+          - AutoResponder
+          - VirusNotification
+          - Subscribe
+          - Unsubscribe
+      inactive: 
+        description: "filter by active/inactive status."
+        enum: 
+          - true
+          - false
+          - null
+      emailFilter: 
+        description: " return only bounces whose recipient address contains the provided string."
+      messageID: 
+        description: "return only bounces that match the messageID in the query string. (count and offset not required for this search)"
+      count: 
+        type: integer
+        default: 25
+      offset: 
+        type: integer
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: bounces
+            example: !include examples/bounces-example.json
+  "/{bounceID}": 
+    description: "Get details about a single bounce. Note that the bounce ID is a numeric value that you typically obtain after a getting a list of bounces."
+    uriParameters: 
+      bounceID: 
+        displayName: bounceID
+        description: "Note that the bounce ID is a numeric value that you typically obtain after a getting a list of bounces."
+        type: number
+        required: true
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: bounce
+              example: !include examples/bounce-example.json
+    /dump: 
+      get: 
+        description: "Returns the raw source of the bounce we accepted. If Postmark does not have a dump for that bounce, it will return an empty string."
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: bounceDump
+                example: !include examples/bounceDump-example.json
+    /activate: 
+      description: "Activates a deactivated bounce. Note that you do not need to send anything in the request body."
+      put: 
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: bounceAndStatus
+                example: !include examples/bounceAndStatus-example.json
+  /tags: 
+    description: "Returns a list of tags used for the current server."
+    get: 
+      description: |
+        [
+          "Signup",
+          "Commit Notification"
+        ]
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: tags
+              example: !include examples/tags-example.json
+/server: 
+  description: "Configuring Postmark's Inbound API Server"
+  get: 
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: inboundServerInfo
+            example: !include examples/inboundServerInfo-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

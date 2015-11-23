@@ -1,0 +1,40 @@
+{
+	"notification_rules" : [ {
+		"id" : "PHU1XBC" ,
+		"start_delay_in_minutes" : 0 ,
+		"contact_method" : {
+			"id" : "PNGKILZ" ,
+			"label" : "Work" ,
+			"type" : "email" ,
+			"email" : "bob@acme.com" ,
+			"address" : "bob@acme.com" ,
+			"send_short_email" : false ,
+			"user_id" : "PPSFHH7"
+		}
+	} , {
+		"id" : "PPRB3LC" ,
+		"start_delay_in_minutes" : 1 ,
+		"contact_method" : {
+			"id" : "P1Q6FET" ,
+			"label" : "Work" ,
+			"type" : "phone" ,
+			"country_code" : 1 ,
+			"phone_number" : "5551234567" ,
+			"address" : "5551234567" ,
+			"user_id" : "PPSFHH7"
+		}
+	} , {
+		"id" : "P8FQ39P" ,
+		"start_delay_in_minutes" : 2 ,
+		"contact_method" : {
+			"id" : "PK9SG1A" ,
+			"label" : "Mobile" ,
+			"type" : "SMS" ,
+			"country_code" : 1 ,
+			"address" : "5551234567" ,
+			"phone_number" : "5551234567" ,
+			"user_id" : "PPSFHH7"
+		}
+	} ] ,
+	"total" : 3
+}

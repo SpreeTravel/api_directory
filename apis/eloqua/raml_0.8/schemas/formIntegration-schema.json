@@ -1,0 +1,23 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "trackingScriptHtml" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "trackingInputHtml" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "postUrl" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "requiredInputHtml" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "response": {
+    "version": "0.1",
+    "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
+    "features": {
+      "rawtide": 1
+    }
+  },
+  "rawtide": {
+    "tideInfo": [
+      {
+        "tideSite": "Newport Beach, Newport Bay Entrance, Corona del Mar, California",
+        "lat": "33.6033",
+        "lon": "-117.883",
+        "units": "feet",
+        "type": "tide",
+        "tzname": "America/Los_Angeles"
+      }
+    ],
+    "rawTideObs": [
+      {
+        "epoch": 1341355282,
+        "height": 1.818341
+      },
+      {
+        "epoch": 1341355582,
+        "height": 1.841344
+      },
+      {
+        "epoch": 1341700282,
+        "height": 3.54422
+      },
+      {
+        "epoch": 1341700582,
+        "height": 3.484692
+      }
+    ],
+    "rawTideStats": [
+      {
+        "maxheight": 6.874717,
+        "minheight": -1.447848
+      }
+    ]
+  }
+}

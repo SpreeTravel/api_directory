@@ -1,0 +1,9 @@
+{
+  "airline" : {
+    "fs" : "LCI" ,
+    "iata" : "LF" ,
+    "icao" : "LCI" ,
+    "name" : "Lao Central Airlines " ,
+    "active" : true
+  }
+}

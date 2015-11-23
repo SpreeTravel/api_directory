@@ -1,0 +1,44 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TwilioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="UsageRecords">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UsageRecord" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Category"/>
+                    <xs:element type="xs:string" name="Description"/>
+                    <xs:element type="xs:string" name="AccountSid"/>
+                    <xs:element type="xs:date" name="StartDate"/>
+                    <xs:element type="xs:date" name="EndDate"/>
+                    <xs:element type="xs:byte" name="Count"/>
+                    <xs:element type="xs:string" name="CountUnit"/>
+                    <xs:element type="xs:byte" name="Usage"/>
+                    <xs:element type="xs:string" name="UsageUnit"/>
+                    <xs:element type="xs:byte" name="Price"/>
+                    <xs:element type="xs:string" name="PriceUnit"/>
+                    <xs:element type="xs:string" name="Uri"/>
+                    <xs:element type="xs:string" name="SubresourceUris"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:byte" name="numpages"/>
+            <xs:attribute type="xs:byte" name="end"/>
+            <xs:attribute type="xs:byte" name="pagesize"/>
+            <xs:attribute type="xs:string" name="nextpageuri"/>
+            <xs:attribute type="xs:string" name="uri"/>
+            <xs:attribute type="xs:byte" name="start"/>
+            <xs:attribute type="xs:string" name="firstpageuri"/>
+            <xs:attribute type="xs:string" name="previouspageuri"/>
+            <xs:attribute type="xs:string" name="lastpageuri"/>
+            <xs:attribute type="xs:byte" name="total"/>
+            <xs:attribute type="xs:byte" name="page"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,55 @@
+{
+  "fields" : [
+    {
+      "displayType" : "undefined" ,
+      "dataType" : "undefined" ,
+      "defaultValue" : "undefined" ,
+      "name" : "undefined" ,
+      "description" : "Eloqua" ,
+      "permissions" : "undefined" ,
+      "folderId" : "undefined" ,
+      "sourceTemplateId" : "undefined" ,
+      "createdBy" : "undefined" ,
+      "createdAt" : "undefined" ,
+      "updatedBy" : "undefined" ,
+      "updatedAt" : "undefined" ,
+      "accessedAt" : "undefined" ,
+      "scheduledFor" : "undefined" ,
+      "depth" : "minimal"
+    }
+  ] ,
+  "sessionFields" : [
+    {
+      "dataType" : "undefined" ,
+      "outputFormat" : {
+        "id" : "undefined" ,
+        "format" : "undefined" ,
+        "dataType" : "undefined"
+      } ,
+      "name" : "undefined" ,
+      "description" : "Eloqua" ,
+      "permissions" : "undefined" ,
+      "folderId" : "undefined" ,
+      "sourceTemplateId" : "undefined" ,
+      "createdBy" : "undefined" ,
+      "createdAt" : "undefined" ,
+      "updatedBy" : "undefined" ,
+      "updatedAt" : "undefined" ,
+      "accessedAt" : "undefined" ,
+      "scheduledFor" : "undefined" ,
+      "depth" : "minimal"
+    }
+  ] ,
+  "name" : "undefined" ,
+  "description" : "Eloqua" ,
+  "permissions" : "undefined" ,
+  "folderId" : "undefined" ,
+  "sourceTemplateId" : "undefined" ,
+  "createdBy" : "undefined" ,
+  "createdAt" : "undefined" ,
+  "updatedBy" : "undefined" ,
+  "updatedAt" : "undefined" ,
+  "accessedAt" : "undefined" ,
+  "scheduledFor" : "undefined" ,
+  "depth" : "minimal"
+}

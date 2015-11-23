@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "valid": {
+      "required": false,
+      "type": "boolean"
+    },
+    "error": {
+      "required": false,
+      "type": "string"
+    }
+  }
+}

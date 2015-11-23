@@ -1,0 +1,28 @@
+{
+	"since" : "2012-08-05T00:00:00" ,
+	"until" : "2012-08-19T00:00:00" ,
+	"overflow" : 1 ,
+	"schedule" : {
+		"time_zone" : "UTC" ,
+		"name" : "new name" ,
+		"schedule_layers" : [ {
+			"name" : "Schedule Layer 1" ,
+			"id" : "P07F6S3" ,
+			"start" : "2012-08-05T00:00:00" ,
+			"rotation_virtual_start" : "2012-08-05T00:00:00" ,
+			"priority" : 0 ,
+			"rotation_turn_length_seconds" : 604800 ,
+			"users" : [ {
+				"user" : {
+					"id" : "PPI9KUT"
+				} ,
+				"member_order" : 1
+			} ] ,
+			"restriction_type" : "Daily" ,
+			"restrictions" : [ {
+				"duration_seconds" : "43200" ,
+				"start_time_of_day" : "00:00:00"
+			} ]
+		} ]
+	}
+}

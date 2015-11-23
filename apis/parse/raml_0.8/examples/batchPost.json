@@ -1,0 +1,17 @@
+{
+	"requests" : [ {
+		"method" : "POST" ,
+		"path" : "/1/classes/GameScore" ,
+		"body" : {
+			"score" : 1337 ,
+			"playerName" : "Sean Plott"
+		}
+	} , {
+		"method" : "POST" ,
+		"path" : "/1/classes/GameScore" ,
+		"body" : {
+			"score" : 1338 ,
+			"playerName" : "ZeroCool"
+		}
+	} ]
+}

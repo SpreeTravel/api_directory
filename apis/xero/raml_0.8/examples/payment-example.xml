@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Payments>
+  <Payment>
+    <Invoice>
+      <InvoiceID>4ff40be5-89ba-4b94-a8d0-33f156965718</InvoiceID>
+    </Invoice>
+    <Account>
+      <AccountID>297c2dc5-cc47-4afd-8ec8-74990b8761e9</AccountID>
+    </Account>
+    <Date>2009-07-13</Date>
+    <Amount>3375.00</Amount>
+  </Payment>
+  <Payment>
+    <Invoice>
+      <InvoiceID>0a1d0d71-b001-4c71-a260-31e77c9d4a92</InvoiceID>
+    </Invoice>
+    <Account>
+      <AccountID>a65b0dac-b444-4b41-959b-c1580cd6268f</AccountID>
+    </Account>
+    <Date>2009-09-01</Date>
+    <Amount>393.75</Amount>
+  </Payment>
+  <Payment>
+    <Invoice>
+      <InvoiceID>93c9be81-1df4-4338-b5dc-e67a89cd2d7c</InvoiceID>
+    </Invoice>
+    <Account>
+      <AccountID>a65b0dac-b444-4b41-959b-c1580cd6268f</AccountID>
+    </Account>
+    <Date>2009-07-21</Date>
+    <Amount>398</Amount>
+  </Payment>
+</Payments>

@@ -1,0 +1,44 @@
+queryParameters: 
+  lang: 
+    description: ISO language code of article text
+  title: 
+    description: the article title
+  summary: 
+    description: a short summary of the article text. Around 300 chars. The text is truncated at a full stop if one is available near char 300, otherwise at the end of a word.
+    maxLength: 300
+  feature: 
+    description: the wikipedia feature type.
+    enum: 
+      - landmark
+      - null
+      - city
+      - railwaystation
+      - edu
+      - adm2nd
+      - waterbody
+      - mountain
+      - airport
+      - isle
+      - river
+      - adm3rd
+      - adm1st
+      - event
+      - country
+      - glacier
+      - pass
+      - forest
+      - landscape
+      - church
+  countryCode: 
+    description: the ISO country code of the article
+  elevation: 
+    description: the elevation in metres (optional may be null), parsed from the article or reverse geocoded.
+  population: 
+    description: the population (optional may be null)
+  wikipediaUrl: 
+    description: URL of the article
+  thumbnailImg: 
+    description: URL of a small thumbnail image (ca 100x75 px)
+  rank: 
+    description: indication of the popularity or relevancy of an article. The rank is an integer number from 1 for the least popular articles to 100 for the most popular articles. It is calculated from the number of links pointing to an article and the article length. The articles are more or less evenly distributed over the 100 ranks.
+    type: integer

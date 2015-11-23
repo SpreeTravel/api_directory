@@ -1,0 +1,42 @@
+description: |
+  Records within the United States come from the National Weather Service, with approximately 120 reporting stations giving records. Records for the rest of the United States, and locations outside of the United States, come from the data we have stored. These are compiled records and only go as far back as we have data for.
+  
+  The average high and low temperature going back as far as Weather Underground has data for OR from National Weather Service going back 30 years.
+  
+  #Examples:
+  http://api.wunderground.com/api/Your_Key/almanac/q/CA/San_Francisco.json
+  (See description of the response.)
+responses: 
+  200: 
+    description: |
+      The response will be a JSON-encoded object.
+      |name|description|
+      |-|
+      |almanac|Type: object. JSON type: object. The official API documentation provides no description. |
+      |almanac.airport_code|Type: unknown. JSON type: string. Observed location. |
+      |almanac.temp_high|Type: object. JSON type: object. Average high temperature in fahrenheit. |
+      |almanac.temp_high.normal|Type: object. JSON type: object. Average high temperature in fahrenheit. |
+      |almanac.temp_high.normal.C|Type: unknown. JSON type: string. Average high temperature in celsius. |
+      |almanac.temp_high.normal.F|Type: unknown. JSON type: string. Average high temperature in fahrenheit. |
+      |almanac.temp_high.record|Type: object. JSON type: object. The highest temperature in fahrenheit measured on this date. |
+      |almanac.temp_high.record.C|Type: unknown. JSON type: string. The highest temperature in celsius measured on this date. |
+      |almanac.temp_high.record.F|Type: unknown. JSON type: string. The highest temperature in fahrenheit measured on this date. |
+      |almanac.temp_high.recordyear|Type: unknown. JSON type: string. The year the highest temperature was measured on this date. |
+      |almanac.temp_low|Type: object. JSON type: object. Average low temperature in fahrenheit. |
+      |almanac.temp_low.normal|Type: object. JSON type: object. Average low temperature in fahrenheit. |
+      |almanac.temp_low.normal.C|Type: unknown. JSON type: string. Average low temperature in celsius. |
+      |almanac.temp_low.normal.F|Type: unknown. JSON type: string. Average low temperature in fahrenheit. |
+      |almanac.temp_low.record|Type: object. JSON type: object. The lowest temperature in fahrenheit measured on this date. |
+      |almanac.temp_low.record.C|Type: unknown. JSON type: string. The lowest temperature in celsius measured on this date. |
+      |almanac.temp_low.record.F|Type: unknown. JSON type: string. The lowest temperature in fahrenheit measured on this date. |
+      |almanac.temp_low.recordyear|Type: unknown. JSON type: string. The year the lowest temperature was measured on this date. |
+      |response|Type: object. JSON type: object. The official API documentation provides no description. |
+      |response.features|Type: object. JSON type: object. The official API documentation provides no description. |
+      |response.features.almanac|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |response.termsofService|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |response.version|Type: unknown. JSON type: string. The official API documentation provides no description. |
+    body: 
+      application/json: 
+        schema: almanacSchema
+        example: !include ../examples/almanac.json
+      application/xml: 

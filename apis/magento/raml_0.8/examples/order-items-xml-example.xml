@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<magento_api>
+  <data_item>
+    <item_id>43</item_id>
+    <parent_item_id></parent_item_id>
+    <sku>Sunglasses_1</sku>
+    <name>Sunglasses 1</name>
+    <qty_canceled>0.0000</qty_canceled>
+    <qty_invoiced>0.0000</qty_invoiced>
+    <qty_ordered>3.0000</qty_ordered>
+    <qty_refunded>0.0000</qty_refunded>
+    <qty_shipped>0.0000</qty_shipped>
+    <price>74.9137</price>
+    <base_price>106.0050</base_price>
+    <original_price>106.0050</original_price>
+    <base_original_price>150.0000</base_original_price>
+    <tax_percent>8.2500</tax_percent>
+    <tax_amount>26.2500</tax_amount>
+    <base_tax_amount>37.1400</base_tax_amount>
+    <discount_amount>212.0100</discount_amount>
+    <base_discount_amount>300.0000</base_discount_amount>
+    <row_total>318.0300</row_total>
+    <base_row_total>450.0000</base_row_total>
+    <price_incl_tax>114.7550</price_incl_tax>
+    <base_price_incl_tax>162.3800</base_price_incl_tax>
+    <row_total_incl_tax>344.2650</row_total_incl_tax>
+    <base_row_total_incl_tax>487.1400</base_row_total_incl_tax>
+    <status>Ordered</status>
+  </data_item>
+  <data_item>
+    <item_id>44</item_id>
+    <parent_item_id></parent_item_id>
+    <sku>test_simple_product</sku>
+    <name>test simple product</name>
+    <qty_canceled>0.0000</qty_canceled>
+    <qty_invoiced>0.0000</qty_invoiced>
+    <qty_ordered>10.0000</qty_ordered>
+    <qty_refunded>0.0000</qty_refunded>
+    <qty_shipped>0.0000</qty_shipped>
+    <price>249.7124</price>
+    <base_price>353.3500</base_price>
+    <original_price>353.3500</original_price>
+    <base_original_price>500.0000</base_original_price>
+    <tax_percent>8.2500</tax_percent>
+    <tax_amount>291.5000</tax_amount>
+    <base_tax_amount>412.5000</base_tax_amount>
+    <discount_amount>706.7000</discount_amount>
+    <base_discount_amount>1000.0000</base_discount_amount>
+    <row_total>3533.5000</row_total>
+    <base_row_total>5000.0000</base_row_total>
+    <price_incl_tax>382.5000</price_incl_tax>
+    <base_price_incl_tax>541.2500</base_price_incl_tax>
+    <row_total_incl_tax>3825.0000</row_total_incl_tax>
+    <base_row_total_incl_tax>5412.5000</base_row_total_incl_tax>
+    <status>Ordered</status>
+  </data_item>
+</magento_api>

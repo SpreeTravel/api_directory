@@ -1,0 +1,15 @@
+{ 
+   "body" : {
+      "messageSegments" : [
+         {
+            "type" : "Text",
+            "text" : "When should we meet for release planning? "
+         },
+         {   
+            "type" : "Mention",
+            "id" : "005D00000016Qxp"
+         }]
+       },
+   "feedElementType" : "FeedItem",
+   "subjectId" : "005D00000016Qxp"
+}

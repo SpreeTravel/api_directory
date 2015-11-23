@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+ <xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <xsd:import namespace="http://www.zillow.com/vstatic/2/static/xsd/ZillowTypes.xsd" /> 
+  <xsd:complexType name="Message">
+         <xsd:sequence>
+             <xsd:element name="text" type="xsd:string"/>
+             <xsd:element name="code" type="xsd:integer"/>
+             <xsd:element name="limit-warning" type="xsd:boolean" fixed="true" minOccurs="0" />
+         </xsd:sequence>
+     </xsd:complexType>
+ <xsd:element name="chart">
+ <xsd:complexType>
+ <xsd:sequence>
+ <xsd:element name="request">
+ <xsd:complexType>
+ <xsd:sequence>
+ <xsd:element name="zpid" type="xsd:string" /> 
+ <xsd:element name="unit-type" type="xsd:string" /> 
+ <xsd:element minOccurs="0" name="width" type="xsd:string" /> 
+ <xsd:element minOccurs="0" name="height" type="xsd:string" /> 
+ </xsd:sequence>
+ </xsd:complexType>
+ </xsd:element>
+ <xsd:element name="message" type="Message" /> 
+ <xsd:element minOccurs="0" name="response">
+ <xsd:complexType>
+ <xsd:sequence>
+ <xsd:element name="url" type="xsd:string" /> 
+ </xsd:sequence>
+ </xsd:complexType>
+ </xsd:element>
+ </xsd:sequence>
+ </xsd:complexType>
+ </xsd:element>
+ </xsd:schema>

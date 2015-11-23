@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+	<ratings>
+		<rating>
+			<departureAirportFsCode>LAX</departureAirportFsCode>
+			<arrivalAirportFsCode>ORD</arrivalAirportFsCode>
+			<airlineFsCode>VA</airlineFsCode>
+			<flightNumber>5216</flightNumber>
+			<codeshares>50</codeshares>
+			<directs>0</directs>
+			<observations>50</observations>
+			<ontime>44</ontime>
+			<late15>4</late15>
+			<late30>1</late30>
+			<late45>1</late45>
+			<cancelled>0</cancelled>
+			<diverted>0</diverted>
+			<ontimePercent>0.88</ontimePercent>
+			<delayObservations>16</delayObservations>
+			<delayMean>13.0</delayMean>
+			<delayStandardDeviation>13.961853</delayStandardDeviation>
+			<delayMin>0</delayMin>
+			<delayMax>52</delayMax>
+			<allOntimeCumulative>0.98210001</allOntimeCumulative>
+			<allOntimeStars>4.9000001</allOntimeStars>
+			<allDelayCumulative>0.90319997</allDelayCumulative>
+			<allDelayStars>4.5</allDelayStars>
+			<allStars>4.6999998</allStars>
+		</rating>
+		<rating>
+			<departureAirportFsCode>LAX</departureAirportFsCode>
+			<arrivalAirportFsCode>ORD</arrivalAirportFsCode>
+			<airlineFsCode>VA</airlineFsCode>
+			<flightNumber>5214</flightNumber>
+			<codeshares>60</codeshares>
+			<directs>0</directs>
+			<observations>60</observations>
+			<ontime>48</ontime>
+			<late15>4</late15>
+			<late30>3</late30>
+			<late45>5</late45>
+			<cancelled>0</cancelled>
+			<diverted>0</diverted>
+			<ontimePercent>0.80000001</ontimePercent>
+			<delayObservations>34</delayObservations>
+			<delayMean>33.0</delayMean>
+			<delayStandardDeviation>67.177711</delayStandardDeviation>
+			<delayMin>0</delayMin>
+			<delayMax>343</delayMax>
+			<allOntimeCumulative>0.81590003</allOntimeCumulative>
+			<allOntimeStars>4.0999999</allOntimeStars>
+			<allDelayCumulative>0.242</allDelayCumulative>
+			<allDelayStars>1.2</allDelayStars>
+			<allStars>2.6500001</allStars>
+		</rating>
+	</ratings>
+	<appendix>
+		<airlines>
+			<airline>
+				<fs>JL</fs>
+				<iata>JL</iata>
+				<icao>JAL</icao>
+				<name>JAL</name>
+				<active>true</active>
+			</airline>
+			<airline>
+				<fs>VX</fs>
+				<iata>VX</iata>
+				<icao>VRD</icao>
+				<name>Virgin America</name>
+				<active>true</active>
+			</airline>
+			<airline>
+				<fs>LO</fs>
+				<iata>LO</iata>
+				<icao>LOT</icao>
+				<name>LOT - Polish Airlines</name>
+				<active>true</active>
+			</airline>
+			<airline>
+				<fs>RU</fs>
+				<iata>RU</iata>
+				<icao>ABW</icao>
+				<name>AirBridgeCargo</name>
+				<active>true</active>
+			</airline>
+		</airlines>
+		<airports>
+			<airport>
+				<fs>ORD</fs>
+				<iata>ORD</iata>
+				<icao>KORD</icao>
+				<faa>ORD</faa>
+				<name>O'Hare International Airport</name>
+				<street1>10000 West O'Hare</street1>
+				<city>Chicago</city>
+				<cityCode>CHI</cityCode>
+				<stateCode>IL</stateCode>
+				<postalCode>60666</postalCode>
+				<countryCode>US</countryCode>
+				<countryName>United States</countryName>
+				<regionName>North America</regionName>
+				<timeZoneRegionName>America/Chicago</timeZoneRegionName>
+				<weatherZone>ILZ014</weatherZone>
+				<localTime>2015-04-28T02:40:43.691</localTime>
+				<utcOffsetHours>-5.0</utcOffsetHours>
+				<latitude>41.976912</latitude>
+				<longitude>-87.904876</longitude>
+				<elevationFeet>668</elevationFeet>
+				<classification>1</classification>
+				<active>true</active>
+			</airport>
+			<airport>
+				<fs>LAX</fs>
+				<iata>LAX</iata>
+				<icao>KLAX</icao>
+				<faa>LAX</faa>
+				<name>Los Angeles International Airport</name>
+				<street1>One World Way</street1>
+				<street2/>
+				<city>Los Angeles</city>
+				<cityCode>LAX</cityCode>
+				<stateCode>CA</stateCode>
+				<postalCode>90045-5803</postalCode>
+				<countryCode>US</countryCode>
+				<countryName>United States</countryName>
+				<regionName>North America</regionName>
+				<timeZoneRegionName>America/Los_Angeles</timeZoneRegionName>
+				<weatherZone>CAZ041</weatherZone>
+				<localTime>2015-04-28T00:40:43.691</localTime>
+				<utcOffsetHours>-7.0</utcOffsetHours>
+				<latitude>33.943399</latitude>
+				<longitude>-118.408279</longitude>
+				<elevationFeet>126</elevationFeet>
+				<classification>1</classification>
+				<active>true</active>
+			</airport>
+		</airports>
+	</appendix>
+	<request>
+		<url>https://api.flightstats.com/flex/ratings/rest/v1/xml/route/LAX/ORD</url>
+		<departureAirport>
+			<requestedCode>LAX</requestedCode>
+			<fsCode>LAX</fsCode>
+		</departureAirport>
+		<arrivalAirport>
+			<requestedCode>ORD</requestedCode>
+			<fsCode>ORD</fsCode>
+		</arrivalAirport>
+		<codeType/>
+	</request>
+</response>
+

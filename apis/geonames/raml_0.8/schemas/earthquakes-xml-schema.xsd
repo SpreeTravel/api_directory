@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="geonames">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="earthquake" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="src" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="eqid" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="datetime" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="lat" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="lng" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="magnitude" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="depth" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

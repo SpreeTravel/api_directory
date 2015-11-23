@@ -1,0 +1,271 @@
+{
+  "swaggerVersion" : "1.0" ,
+  "resourcePath" : "/v1/json/" ,
+  "apis" : [
+    {
+      "path" : "/v1/json/all/{airport}" ,
+      "description" : "Weather API returning results in JSON format" ,
+      "operations" : [
+        {
+          "httpMethod" : "GET" ,
+          "summary" : "All weather products for airport" ,
+          "notes" : "Retrieve all weather products (METAR, TAF, and Zone Forecast) for the airport." ,
+          "responseClass" : "com.flightstats.weather.service.v1.model.AllWeatherV1" ,
+          "nickname" : "all" ,
+          "errorResponses" : [
+            {
+              "code" : 400 ,
+              "reason" : "Client request error. Consult error response for specifics."
+            } , {
+              "code" : 403 ,
+              "reason" : "Authorization failure. Invalid 'appId', 'appKey', or rate limit violation."
+            } , {
+              "code" : 404 ,
+              "reason" : "Resource not found. Request did not match a URL for the service."
+            } , {
+              "code" : 500 ,
+              "reason" : "Service error. Consult error response for specifics."
+            }
+          ] ,
+          "parameters" : [
+            {
+              "name" : "appId" ,
+              "description" : "Application ID" ,
+              "paramType" : "query" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "appKey" ,
+              "description" : "Application key" ,
+              "paramType" : "query" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "airport" ,
+              "description" : "Airport code" ,
+              "paramType" : "path" ,
+              "defaultValue" : "ABQ" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "codeType" ,
+              "description" : "Type of airport code: 'IATA', 'ICAO', or 'FS'. If not specified, all domains will be searched in the order stated." ,
+              "paramType" : "query" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "extendedOptions" ,
+              "description" : "Extended options for modifying standard API behavior to fit special use cases. Options: useHttpErrors, useInlinedReferences" ,
+              "paramType" : "query" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            }
+          ]
+        }
+      ]
+    } , {
+      "path" : "/v1/json/metar/{airport}" ,
+      "description" : "Weather API returning results in JSON format" ,
+      "operations" : [
+        {
+          "httpMethod" : "GET" ,
+          "summary" : "METAR for airport" ,
+          "notes" : "Retrieve the most current available METAR weather report for the aerodrome around a given airport.  METAR reports describe current conditions and are updated about once an hour." ,
+          "responseClass" : "com.flightstats.weather.service.v1.model.MetarV1" ,
+          "nickname" : "metar" ,
+          "errorResponses" : [
+            {
+              "code" : 400 ,
+              "reason" : "Client request error. Consult error response for specifics."
+            } , {
+              "code" : 403 ,
+              "reason" : "Authorization failure. Invalid 'appId', 'appKey', or rate limit violation."
+            } , {
+              "code" : 404 ,
+              "reason" : "Resource not found. Request did not match a URL for the service."
+            } , {
+              "code" : 500 ,
+              "reason" : "Service error. Consult error response for specifics."
+            }
+          ] ,
+          "parameters" : [
+            {
+              "name" : "appId" ,
+              "description" : "Application ID" ,
+              "paramType" : "query" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "appKey" ,
+              "description" : "Application key" ,
+              "paramType" : "query" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "airport" ,
+              "description" : "Airport code" ,
+              "paramType" : "path" ,
+              "defaultValue" : "ABQ" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "codeType" ,
+              "description" : "Type of airport code: 'IATA', 'ICAO', or 'FS'. If not specified, all domains will be searched in the order stated." ,
+              "paramType" : "query" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "extendedOptions" ,
+              "description" : "Extended options for modifying standard API behavior to fit special use cases. Options: useHttpErrors, useInlinedReferences" ,
+              "paramType" : "query" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            }
+          ]
+        }
+      ]
+    } , {
+      "path" : "/v1/json/zf/{airport}" ,
+      "description" : "Weather API returning results in JSON format" ,
+      "operations" : [
+        {
+          "httpMethod" : "GET" ,
+          "summary" : "Zone Forecast for airport" ,
+          "notes" : "Retrieve the most current available zone forecast for the airport.  Zone forecasts can cover several days, and apply to a more extensive area around the airport than TAFs." ,
+          "responseClass" : "com.flightstats.weather.service.v1.model.ZoneForecastV1" ,
+          "nickname" : "zoneForecasts" ,
+          "errorResponses" : [
+            {
+              "code" : 400 ,
+              "reason" : "Client request error. Consult error response for specifics."
+            } , {
+              "code" : 403 ,
+              "reason" : "Authorization failure. Invalid 'appId', 'appKey', or rate limit violation."
+            } , {
+              "code" : 404 ,
+              "reason" : "Resource not found. Request did not match a URL for the service."
+            } , {
+              "code" : 500 ,
+              "reason" : "Service error. Consult error response for specifics."
+            }
+          ] ,
+          "parameters" : [
+            {
+              "name" : "appId" ,
+              "description" : "Application ID" ,
+              "paramType" : "query" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "appKey" ,
+              "description" : "Application key" ,
+              "paramType" : "query" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "airport" ,
+              "description" : "Airport code" ,
+              "paramType" : "path" ,
+              "defaultValue" : "ABQ" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "codeType" ,
+              "description" : "Type of airport code: 'IATA', 'ICAO', or 'FS'. If not specified, all domains will be searched in the order stated." ,
+              "paramType" : "query" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "extendedOptions" ,
+              "description" : "Extended options for modifying standard API behavior to fit special use cases. Options: useHttpErrors, useInlinedReferences" ,
+              "paramType" : "query" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            }
+          ]
+        }
+      ]
+    } , {
+      "path" : "/v1/json/taf/{airport}" ,
+      "description" : "Weather API returning results in JSON format" ,
+      "operations" : [
+        {
+          "httpMethod" : "GET" ,
+          "summary" : "TAF for airport" ,
+          "notes" : "Retrieve the most current available Terminal Aerodrome Forecast (TAF) for the airport.  TAFs forecast weather conditions for the area within a 5 mile radius from the center of the airport runway complex." ,
+          "responseClass" : "com.flightstats.weather.service.v1.model.TafV1" ,
+          "nickname" : "taf" ,
+          "errorResponses" : [
+            {
+              "code" : 400 ,
+              "reason" : "Client request error. Consult error response for specifics."
+            } , {
+              "code" : 403 ,
+              "reason" : "Authorization failure. Invalid 'appId', 'appKey', or rate limit violation."
+            } , {
+              "code" : 404 ,
+              "reason" : "Resource not found. Request did not match a URL for the service."
+            } , {
+              "code" : 500 ,
+              "reason" : "Service error. Consult error response for specifics."
+            }
+          ] ,
+          "parameters" : [
+            {
+              "name" : "appId" ,
+              "description" : "Application ID" ,
+              "paramType" : "query" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "appKey" ,
+              "description" : "Application key" ,
+              "paramType" : "query" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "airport" ,
+              "description" : "Airport code" ,
+              "paramType" : "path" ,
+              "defaultValue" : "ABQ" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "codeType" ,
+              "description" : "Type of airport code: 'IATA', 'ICAO', or 'FS'. If not specified, all domains will be searched in the order stated." ,
+              "paramType" : "query" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "extendedOptions" ,
+              "description" : "Extended options for modifying standard API behavior to fit special use cases. Options: useHttpErrors, useInlinedReferences" ,
+              "paramType" : "query" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

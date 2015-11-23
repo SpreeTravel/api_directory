@@ -1,0 +1,18 @@
+{
+  "fullImageUrl" : "/EloquaImages/clients/ORSE/{ffaa51ba-220e-43da-994f-197338be7d35}_sample.jpg" ,
+  "size" : {
+  } ,
+  "thumbnailUrl" : "/EloquaImages/clients/ORSE/imagethumbnails/{ffaa51ba-220e-43da-994f-197338be7d35}_sample.jpg" ,
+  "name" : "string string" ,
+  "description" : "string string" ,
+  "permissions" : "InstancePermissions InstancePermissions" ,
+  "folderId" : "string string" ,
+  "sourceTemplateId" : "string string" ,
+  "createdBy" : "string string" ,
+  "createdAt" : "dateTime dateTime" ,
+  "updatedBy" : "string string" ,
+  "updatedAt" : "dateTime dateTime" ,
+  "accessedAt" : "dateTime dateTime" ,
+  "scheduledFor" : "dateTime dateTime" ,
+  "depth" : "RequestDepth RequestDepth"
+}

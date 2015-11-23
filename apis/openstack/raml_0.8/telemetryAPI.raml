@@ -1,0 +1,254 @@
+#%RAML 0.8
+title: OpenStack Telemetry API
+version: v2
+baseUri: http://www.example.com
+schemas:
+  - alarm: !include schemas/alarm-schema.json
+  - alarmXML: !include schemas/alarm-schema.xml
+  - listAlarm: !include schemas/listAlarm-schema.json
+  - listAlarmXML: !include schemas/listAlarm-schema.xml
+  - listMeter: !include schemas/listMeter-schema.json
+  - listMeterXML: !include schemas/listMeter-schema.xml
+  - listResource: !include schemas/listResource-schema.json
+  - listResourceXML: !include schemas/listResource-schema.xml
+  - listSample: !include schemas/listSample-schema.json
+  - listSampleXML: !include schemas/listSample-schema.xml
+  - listSamples: !include schemas/listSamples-schema.json
+  - listSamplesXML: !include schemas/listSamples-schema.xml
+  - listStatistics: !include schemas/listStatistics-schema.json
+  - listStatisticsXML: !include schemas/listStatistics-schema.xml
+  - newSample: !include schemas/newSample-schema.json
+  - newSampleXML: !include schemas/newSample-schema.xml
+  - resource: !include schemas/resource-schema.json
+  - resourceXML: !include schemas/resource-schema.xml
+  - storageCapabilities: !include /schemas/storageCapabilities-schema.json
+  - storageCapabilitiesXML: !include /schemas/storageCapabilitiesXML-schema.xsd
+/{version}: 
+  /alarms: 
+    get: 
+      description: List alarms
+      queryParameters: 
+        q: 
+          description: Filter rules for the alarms to be returned.
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: listAlarmXML
+              example: !include examples/listAlarm-example.xml
+            application/json: 
+              schema: listAlarm
+              example: !include examples/listAlarm-example.json
+    post: 
+      description: Create alarm
+      queryParameters: 
+        data: 
+          description: A alarm within the request body.
+      body: 
+        application/xml: 
+          schema: ""
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: alarmXML
+              example: !include examples/alarm-example.xml
+            application/json: 
+              schema: alarm
+              example: !include examples/alarm-example.json
+    /{alarm_id}: 
+      get: 
+        description: Show alarm
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: alarmXML
+                example: !include examples/alarm-example.xml
+              application/json: 
+                schema: alarm
+                example: !include examples/alarm-example.json
+      put: 
+        description: Update alarm
+        queryParameters: 
+          "data ": 
+            description: a alarm within the request body.
+        body: 
+          application/xml: 
+            schema: ""
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: alarmXML
+                example: !include examples/alarm-example.xml
+              application/json: 
+                schema: alarm
+                example: !include examples/alarm-example.json
+      delete: 
+        description: Delete alarm
+        responses: 
+          204: 
+      /history: 
+        get: 
+          description: Show alarm history
+          queryParameters: 
+            q: 
+              description: Filter rules for the changes to be described.
+          responses: 
+            200: 
+      /state: 
+        put: 
+          description: Update alarm state
+          queryParameters: 
+            "state ": 
+              description: An alarm state within the request body. Valid values are ok, alarm, or insufficient data.
+              example: alarm
+          body: 
+            application/xml: 
+              schema: ""
+          responses: 
+            200: 
+        get: 
+          description: Show alarm state
+          responses: 
+            200: 
+  /meters: 
+    get: 
+      description: List meters
+      queryParameters: 
+        q: 
+          description: Filter rules for the meters to be returned.
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: listMeterXML
+              example: !include examples/listMeter-example.xml
+            application/json: 
+              schema: listMeter
+              example: !include examples/listMeter-example.json
+    /{meter_name}: 
+      get: 
+        description: Show meter
+        body: 
+          application/xml: 
+            schema: ""
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: listSampleXML
+                example: !include examples/listSample-example.xml
+              application/json: 
+                schema: listSample
+                example: !include examples/listSample-example.json
+      post: 
+        description: Create meter
+        queryParameters: 
+          "samples ": 
+            description: A list of samples within the request body.
+        body: 
+          application/xml: 
+            schema: ""
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: listSampleXML
+                example: !include examples/listSample-example.xml
+              application/json: 
+                schema: listSample
+                example: !include examples/listSample-example.json
+      /statistics: 
+        get: 
+          description: Show meter statistics
+          queryParameters: 
+            q: 
+              description: Filter rules for the data to be returned.
+            "groupby ": 
+              example: Fields for group by aggregation
+            "period ": 
+              description: Returned result will be an array of statistics for a period long of that number of seconds.
+              type: integer
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: listStatisticsXML
+                  example: !include examples/listStatistics-example.xml
+                application/json: 
+                  schema: listStatistics
+                  example: !include examples/listStatistics-example.json
+  /resources: 
+    get: 
+      description: List resources
+      queryParameters: 
+        q: 
+          description: Filter rules for the resources to be returned.
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: listResourceXML
+              example: !include examples/listResource-example.xml
+            application/json: 
+              schema: listResource
+              example: !include examples/listResource-example.json
+    /{resource_id}: 
+      get: 
+        description: Show resource information
+        queryParameters: 
+          "resource_id ": 
+            description: The UUID of the resource.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: resourceXML
+                example: !include examples/resource-example.xml
+              application/json: 
+                schema: resource
+                example: !include examples/resource-example.json
+  /samples: 
+    get: 
+      description: List samples
+      queryParameters: 
+        q: 
+          description: Filter rules for the samples to be returned.
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: listSamplesXML
+              example: !include examples/listSamples-example.xml
+            application/json: 
+              schema: listSamples
+              example: !include examples/listSamples-example.json
+    /{sample_id}: 
+      get: 
+        description: Show sample
+        queryParameters: 
+          "sample_id ": 
+            description: The id of the sample.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: newSampleXML
+                example: !include examples/newSample-example.xml
+              application/json: 
+                schema: newSample
+                example: !include examples/newSample-example.json
+  /capabilities: 
+    get: 
+      description: List capabilities
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: storageCapabilitiesXML
+              example: !include examples/storageCapabilitiesXML-example.xml
+            application/json: 
+              schema: storageCapabilities
+              example: !include examples/storageCapabilities-example.json

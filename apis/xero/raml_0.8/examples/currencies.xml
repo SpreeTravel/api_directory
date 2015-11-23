@@ -1,0 +1,10 @@
+<Currencies>
+  <Currency>
+    <Code>NZD</Code>
+    <Description>New Zealand Dollar</Description>
+  </Currency>
+  <Currency>
+    <Code>USD</Code>
+    <Description>United States Dollar</Description>
+  </Currency>
+</Currencies>

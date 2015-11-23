@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "array",
+  "items": {
+    "required": false,
+    "type": "object",
+    "properties": {
+      "AlertID": {
+        "required": false,
+        "type": "integer"
+      },
+      "Area": {
+        "required": false,
+        "type": "array",
+        "items": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "EndTime": {
+              "required": false,
+              "type": "string"
+            },
+            "EpochEndTime": {
+              "required": false,
+              "type": "integer"
+            },
+            "EpochStartTime": {
+              "required": false,
+              "type": "integer"
+            },
+            "LastAction": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "Localized": {
+                  "required": false,
+                  "type": "string"
+                },
+                "English": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "Name": {
+              "required": false,
+              "type": "string"
+            },
+            "StartTime": {
+              "required": false,
+              "type": "string"
+            },
+            "Text": {
+              "required": false,
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Category": {
+        "required": false,
+        "type": "string"
+      },
+      "CountryCode": {
+        "required": false,
+        "type": "string"
+      },
+      "Description": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "Localized": {
+            "required": false,
+            "type": "string"
+          },
+          "English": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      },
+      "Link": {
+        "required": false,
+        "type": "string"
+      },
+      "MobileLink": {
+        "required": false,
+        "type": "string"
+      },
+      "Priority": {
+        "required": false,
+        "type": "integer"
+      },
+      "Source": {
+        "required": false,
+        "type": "string"
+      },
+      "Type": {
+        "required": false,
+        "type": "string"
+      }
+    }
+  }
+}

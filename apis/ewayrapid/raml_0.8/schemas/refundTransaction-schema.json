@@ -1,0 +1,302 @@
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "required": false,
+    "properties": {
+        "CustomerIP": {
+            "type": "string",
+            "maxLength": 50,
+            "required": false
+        },
+        "Customer": {
+            "type": "object",
+            "required": false,
+            "properties": {
+                "CardDetails": {
+                    "type": "object",
+                    "required": false,
+                    "properties": {
+                        "ExpiryMonth": {
+                            "type": "string",
+                            "maxLength": 2,
+                            "required": false
+                        },
+                        "ExpiryYear": {
+                            "type": "string",                            
+                            "maxLength": 2,
+                            "required": false
+                        }
+                    }
+                },
+                "City": {
+                    "type": "string",
+                    "maxLength": 50,
+                    "required": false
+                },
+                "Comments": {
+                    "type": "string",
+                    "maxLength": 255,
+                    "required": false
+                },
+                "CompanyName": {
+                    "type": "string",
+                    "maxLength": 50,
+                    "required": false
+                },
+                "Country": {
+                    "type": "string",
+                    "maxLength": 2,
+                    "required": false
+                },
+                "Email": {
+                    "type": "string",
+                    "maxLength": 50,
+                    "required": false
+                },
+                "Fax": {
+                    "type": "string",
+                    "maxLength": 32,
+                    "required": false
+                },
+                "FirstName": {
+                    "type": "string",
+                    "maxLength": 50,
+                    "required": false
+                },
+                "JobDescription": {
+                    "type": "string",
+                    "maxLength": 50,
+                    "required": false
+                },
+                "LastName": {
+                    "type": "string",
+                    "maxLength": 50,
+                    "required": false
+                },
+                "Mobile": {
+                    "type": "string",
+                    "maxLength": 32,
+                    "required": false
+                },
+                "Phone": {
+                    "type": "string",
+                    "maxLength": 32,
+                    "required": false
+                },
+                "PostalCode": {
+                    "type": "string",
+                    "maxLength": 30,
+                    "required": false
+                },
+                "Reference": {
+                    "type": "string",
+                    "maxLength": 50,
+                    "required": false
+                },
+                "State": {
+                    "type": "string",
+                    "maxLength": 50,
+                    "required": false
+                },
+                "Street1": {
+                    "type": "string",
+                    "maxLength": 50,
+                    "required": false
+                },
+                "Street2": {
+                    "type": "string",
+                    "maxLength": 50,
+                    "required": false
+                },
+                "Title": {
+                    "type": "string",
+                    "maxLength": 5,
+                    "required": false
+                },
+                "Url": {
+                    "type": "string",
+                    "maxLength": 512,
+                    "required": false
+                }
+            }
+        },
+        "DeviceID": {
+            "type": "string",
+            "maxLength": 50,
+            "required": false
+        },
+        "Items": {
+            "type": "array",
+            "required": false,
+            "items": {
+                "type": "object",
+                "required": false,
+                "properties": {
+                    "Description": {
+                        "type": "string",
+                        "maxLength": 26,
+                        "required": false
+                    },
+                    "Quantity": {
+                        "type": "string",
+                        "maxLength": 6,
+                        "required": false
+                    },
+                    "SKU": {
+                        "type": "string",
+                        "maxLength": 12,
+                        "required": false
+                    },
+                    "Tax": {
+                        "type": "string",
+                        "maxLength": 8,
+                        "required": false
+                    },
+                    "Total": {
+                        "type": "string",
+                        "maxLength": 8,
+                        "required": false
+                    },
+                    "UnitCost": {
+                        "type": "string",
+                        "maxLength": 8,
+                        "required": false
+                    }
+                }
+            }
+        },
+        "Options": {
+            "type": "array",
+            "required": false,
+            "items": {
+                "type": "object",
+                "required": false,
+                "properties": {
+                    "Value": {
+                        "type": "string",
+                        "maxLength": 254,
+                        "required": false
+                    }
+                }
+            }
+        },
+        "PartnerID": {
+            "type": "string",
+            "maxLength": 50,
+            "required": false
+        },
+        "Refund": {
+            "type": "object",
+            "required": false,
+            "properties": {
+                "CurrencyCode": {
+                    "type": "string",
+                    "maxLength": 3,
+                    "required": false
+                },
+                "InvoiceDescription": {
+                    "type": "string",
+                    "maxLength": 64,
+                    "required": false
+                },
+                "InvoiceNumber": {
+                    "type": "string",
+                    "maxLength": 16,
+                    "required": false
+                },
+                "InvoiceReference": {
+                    "type": "string",
+                    "maxLength": 50,
+                    "required": false
+                },
+                "TotalAmount": {
+                    "type": "number"
+                },
+                "TransactionID": {
+                    "type": "string",
+                    "maxLength": 8
+                }
+            }
+        },
+        "ShippingAddress": {
+            "type": "object",
+            "required": false,
+            "properties": {
+                "City": {
+                    "type": "string",
+                    "maxLength": 50,
+                    "required": false
+                },
+                "Country": {
+                    "type": "string",
+                    "maxLength": 2,
+                    "required": false
+                },
+                "FirstName": {
+                    "type": "string",
+                    "maxLength": 50,
+                    "required": false
+                },
+                "LastName": {
+                    "type": "string",
+                    "maxLength": 50,
+                    "required": false
+                },
+                "Phone": {
+                    "type": "string",
+                    "required": false
+                },
+                "PostalCode": {
+                    "type": "string",
+                    "maxLength": 30,
+                    "required": false
+                },
+                "ShippingMethod": {
+                    "enum": [
+                        "Unknown",
+                        "LowCost",
+                        "DesignatedByCustomer",
+                        "International",
+                        "Military",
+                        "NextDay",
+                        "StorePickup",
+                        "TwoDayService",
+                        "ThreeDayService",
+                        "Other"
+                    ],
+                    "required": false
+                },
+                "State": {
+                    "type": "string",
+                    "maxLength": 50,
+                    "required": false
+                },
+                "Street1": {
+                    "type": "string",
+                    "maxLength": 50,
+                    "required": false
+                },
+                "Street2": {
+                    "type": "string",
+                    "maxLength": 50,
+                    "required": false
+                },
+                "Email": {
+                    "type": "string",
+                    "maxLength": 50,
+                    "required": false
+                },
+                "Phone": {
+                    "type": "string",
+                    "maxLength": 32,
+                    "required": false
+                },
+                "Fax": {
+                    "type": "string",
+                    "maxLength": 32,
+                    "required": false
+                }
+            }
+        }
+    }
+}

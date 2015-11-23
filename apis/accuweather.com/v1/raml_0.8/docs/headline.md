@@ -1,0 +1,1 @@
+The AccuWeather API provides subscribers access to location based weather data via a simple RESTful web interface

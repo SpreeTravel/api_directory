@@ -1,0 +1,27 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TwilioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="AuthorizedConnectApp">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="AccountSid"/>
+              <xs:element name="Permissions">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Permission" maxOccurs="unbounded" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="ConnectAppSid"/>
+              <xs:element type="xs:string" name="ConnectAppFriendlyName"/>
+              <xs:element type="xs:string" name="ConnectAppDescription"/>
+              <xs:element type="xs:string" name="ConnectAppCompanyName"/>
+              <xs:element type="xs:anyURI" name="ConnectAppHomepageUrl"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

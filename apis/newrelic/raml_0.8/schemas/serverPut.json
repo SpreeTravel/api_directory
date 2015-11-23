@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "server": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "display_name": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    }
+  }
+}

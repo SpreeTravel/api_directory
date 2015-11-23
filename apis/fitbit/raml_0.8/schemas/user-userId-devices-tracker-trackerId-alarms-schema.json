@@ -1,0 +1,49 @@
+{
+    "": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+        "time": {
+            "description": "Time of the alarm; in the format XX:XX+XX:XX, time with timezone; on backend will be converted to timezone of the user's profile.",
+            "type": "string",
+            "required": true
+        },
+        "enabled": {
+            "type": "boolean",
+            "required": true
+        },
+        "recurring": {
+            "description": "One time or recurring alarm.",
+            "type": "boolean",
+            "required": true
+        },
+        "weekDays": {
+            "description": "The days alarm active on; for recurring alarm only, otherwise alarm active only next time.",
+            "enum": [
+                "MONDAY",
+                "TUESDAY",
+                "WEDNESDAY",
+                "THURSDAY",
+                "FRIDAY",
+                "SATURDAY",
+                "SUNDAY"
+            ],
+            "required": true
+        },
+        "label": {
+            "description": "Label for the alarm.",
+            "type": "string"
+        },
+        "snoozeLength": {
+            "description": "Minutes between alarms.",
+            "type": "integer"
+        },
+        "snoozeCount": {
+            "description": "Maximum snooze count.",
+            "type": "integer"
+        },
+        "vibe": {
+            "description": "Vibe pattern; only one value for now – DEFAULT",
+            "type": "string"
+        }
+    }
+}

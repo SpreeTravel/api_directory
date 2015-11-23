@@ -1,0 +1,1 @@
+Magento is the eCommerce software and platform.

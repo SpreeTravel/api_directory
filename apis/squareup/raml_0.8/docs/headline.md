@@ -1,0 +1,1 @@
+As a Square merchant, you can retrieve activity reports for your processed payments, refunds, and deposits with the Square Connect API. You can also manage your item library by creating and modifying items with Square Connect. Pull this data into your own custom-made apps to help you manage your business.

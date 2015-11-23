@@ -1,0 +1,13 @@
+{
+  "key": "example key",
+  "raw_message": "From: sender@example.comTo: recipient.email@example.comSubject: Some SubjectSome content.",
+  "from_email": "sender@example.com",
+  "from_name": "From Name",
+  "to": [
+    "recipient.email@example.com"
+  ],
+  "async": false,
+  "ip_pool": "Main Pool",
+  "send_at": "example send_at",
+  "return_path_domain": null
+}

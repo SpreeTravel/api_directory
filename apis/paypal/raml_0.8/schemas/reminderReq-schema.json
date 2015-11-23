@@ -1,0 +1,19 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "subject" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "note" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "send_to_merchant" : {
+      "type" : "boolean" ,
+      "required" : false
+    }
+  }
+}

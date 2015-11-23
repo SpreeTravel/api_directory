@@ -1,0 +1,86 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "alarm_actions" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "string"
+        }
+      ]
+    } ,
+    "alarm_id" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "combination_rule" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "description" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "enabled" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "insufficient_data_actions" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "string"
+        }
+      ]
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "ok_actions" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "string"
+        }
+      ]
+    } ,
+    "project_id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "repeat_actions" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "state" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "state_timestamp" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "threshold_rule" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "timestamp" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "user_id" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

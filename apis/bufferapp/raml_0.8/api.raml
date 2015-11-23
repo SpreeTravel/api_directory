@@ -1,0 +1,437 @@
+#%RAML 0.8
+title: Bufferapp
+version: 1
+baseUri: https://api.bufferapp.com/{version}/
+mediaType: application/json
+securitySchemes:
+  - oauth_2_0: !include securitySchemes/oauth_2_0.raml
+schemas:
+  - user: !include schemas/user-schema.json
+  - profiles: !include schemas/profiles-schema.json
+  - profile: !include schemas/profile-schema.json
+  - schedules: !include schemas/schedules-schema.json
+  - schedules-update: !include schemas/schedules-update-schema.json
+  - update: !include schemas/update-schema.json
+  - updates-array: !include schemas/updates-array-schema.json
+  - interactions: !include schemas/interactions-schema.json
+  - reorder: !include schemas/reorder-schema.json
+  - shuffle: !include schemas/shuffle-schema.json
+  - newUpdate: !include schemas/newUpdate-schema.json
+  - individual-update: !include schemas/individual-update-schema.json
+  - share: !include schemas/share-schema.json
+  - shares: !include schemas/shares-schema.json
+  - configuration: !include schemas/configuration-schema.json
+  - success: !include schemas/success-schema.json
+resourceTypes:
+  - standardResource: !include resourceTypes/standardResource.raml
+securedBy: [ oauth_2_0 ]
+/user{mediaTypeExtension}: 
+  type: standardResource
+  uriParameters: 
+    mediaTypeExtension: 
+      displayName: mediaTypeExtension
+      required: true
+      enum: [ .json ]
+  get: 
+    description: Returns a single user.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: user
+            example: !include examples/user-example.json
+/profiles{mediaTypeExtension}: 
+  type: standardResource
+  uriParameters: 
+    mediaTypeExtension: 
+      displayName: mediaTypeExtension
+      required: true
+      enum: [ .json ]
+  get: 
+    description: Returns an array of social media profiles connected to a users account.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: profiles
+            example: !include examples/profiles-example.json
+/profiles: 
+  /{id}{mediaTypeExtension}: 
+    type: standardResource
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .json ]
+    get: 
+      description: Returns details of the single specified social media profile.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: profile
+              example: !include examples/profile-example.json
+  /{id}: 
+    /schedules{mediaTypeExtension}: 
+      type: standardResource
+      uriParameters: 
+        mediaTypeExtension: 
+          displayName: mediaTypeExtension
+          required: true
+          enum: [ .json ]
+      get: 
+        description: Returns details of the posting schedules associated with a social media profile.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: schedules
+                example: !include examples/schedules-example.json
+    /schedules/update{mediaTypeExtension}: 
+      type: standardResource
+      uriParameters: 
+        mediaTypeExtension: 
+          displayName: mediaTypeExtension
+          required: true
+          enum: [ .json ]
+      post: 
+        description: |
+          "Set the posting schedules for the specified social media profile.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              schedules: 
+                description: Each item in the array is an individual posting schedule which consists of days and times to match the format return by the above method.
+                required: true
+                example: schedules[0][days][]=mon&
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: schedules-update
+                example: !include examples/schedules-update-example.json
+    /updates: 
+      /pending{mediaTypeExtension}: 
+        type: standardResource
+        uriParameters: 
+          mediaTypeExtension: 
+            displayName: mediaTypeExtension
+            required: true
+            enum: [ .json ]
+        get: 
+          description: |
+            "Returns an array of updates that are currently in the buffer for an individual social media profile.
+          queryParameters: 
+            page: 
+              description: Specifies the page of status updates to receive. If not specified the first page of results will be returned.
+              type: integer
+            count: 
+              description: Specifies the number of status updates to receive. If provided, must be between 1 and 100.
+              type: integer
+            since: 
+              description: Specifies a unix timestamp which only status updates created after this time will be retrieved.
+              type: date
+            utc: 
+              description: If utc is set times will be returned relative to UTC rather than the users associated timezone.
+              type: boolean
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: updates-array
+                  example: !include examples/updates-array-example.json
+      /sent{mediaTypeExtension}: 
+        type: standardResource
+        uriParameters: 
+          mediaTypeExtension: 
+            displayName: mediaTypeExtension
+            required: true
+            enum: [ .json ]
+        get: 
+          description: |
+            Returns an array of updates that have been sent from the buffer for an individual social media profile.
+          queryParameters: 
+            page: 
+              description: Specifies the page of status updates to receive. If not specified the first page of results will be returned.
+              type: integer
+            count: 
+              description: Specifies the number of status updates to receive. If provided, must be between 1 and 100.
+              type: integer
+            since: 
+              description: Specifies a unix timestamp which only status updates created after this time will be retrieved.
+              type: date
+            utc: 
+              description: If utc is set times will be returned relative to UTC rather than the users associated timezone.
+              type: boolean
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: updates-array
+                  example: !include examples/updates-array-example.json
+      /reorder{mediaTypeExtension}: 
+        type: standardResource
+        uriParameters: 
+          mediaTypeExtension: 
+            displayName: mediaTypeExtension
+            required: true
+            enum: [ .json ]
+        post: 
+          description: |
+            Edit the order at which statuses for the specified social media profile will be sent out of the buffer.
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                order: 
+                  description: "An ordered array of status update id's. This can be a partial array in combination with the offset parameter or a full array of every update in the profiles Buffer."
+                  type: integer
+                offset: 
+                  description: Specifies the number of status updates to receive. If provided, must be between 1 and 100.
+                  type: integer
+                utc: 
+                  description: If utc is set times will be returned relative to UTC rather than the users associated timezone
+                  type: boolean
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: reorder
+                  example: !include examples/reorder-example.json
+      /shuffle{mediaTypeExtension}: 
+        type: standardResource
+        uriParameters: 
+          mediaTypeExtension: 
+            displayName: mediaTypeExtension
+            required: true
+            enum: [ .json ]
+        post: 
+          description: |
+            Randomize the order at which statuses for the specified social media profile will be sent out of the buffer.
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                count: 
+                  description: Specifies the number of status updates to receive. If provided, must be between 1 and 100.
+                  type: integer
+                utc: 
+                  description: If utc is set times will be returned relative to UTC rather than the users associated timezone
+                  type: boolean
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: shuffle
+                  example: !include examples/shuffle-example.json
+/updates: 
+  /{id}{mediaTypeExtension}: 
+    type: standardResource
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .json ]
+    get: 
+      description: Returns a single social media update.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: update
+              example: !include examples/update-example.json
+  /{id}: 
+    /interactions{mediaTypeExtension}: 
+      type: standardResource
+      uriParameters: 
+        mediaTypeExtension: 
+          displayName: mediaTypeExtension
+          required: true
+          enum: [ .json ]
+      get: 
+        description: |
+          Returns the detailed information on individual interactions with the social media update such as favorites, retweets and likes.
+        queryParameters: 
+          event: 
+            description: |
+              Specifies a type of event to be retrieved, for example "retweet", "like", "comment", "mention" or "reshare". They can also be plural (e.g., "reshares"). Plurality has no effect other than visual semantics. See /info/configuration for more information on supported interaction events.
+            required: true
+          page: 
+            description: Specifies the page of status updates to receive. If not specified the first page of results will be returned.
+            type: integer
+          count: 
+            description: Specifies the number of status updates to receive. If provided, must be between 1 and 100.
+            type: integer
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: interactions
+                example: !include examples/interactions-example.json
+    /update{mediaTypeExtension}: 
+      type: standardResource
+      uriParameters: 
+        mediaTypeExtension: 
+          displayName: mediaTypeExtension
+          required: true
+          enum: [ .json ]
+      post: 
+        description: |
+          Edit an existing, individual status update.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              text: 
+                description: The status update text.
+                required: true
+              now: 
+                description: |
+                  If now is set, this update will be sent immediately to all profiles instead of being added to the buffer.
+                type: boolean
+              media: 
+                description: |
+                  An associative array of media to be attached to the update, currently accepts link, description, title and picture parameters.
+              scheduled_at: 
+                description: |
+                  A date describing when the update should be posted. Overrides any top or now parameter. 
+                  When using ISO 8601 format, if no UTC offset is specified, UTC is assumed.
+              utc: 
+                description: |
+                  If utc is set times will be returned relative to UTC rather than the users associated timezone
+                type: boolean
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: individual-update
+                example: !include examples/individual-update-example.json
+    /share{mediaTypeExtension}: 
+      type: standardResource
+      uriParameters: 
+        mediaTypeExtension: 
+          displayName: mediaTypeExtension
+          required: true
+          enum: [ .json ]
+      post: 
+        description: Immediately shares a single pending update and recalculates times for updates remaining in the queue.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: success
+                example: !include examples/share-example.json
+    /destroy{mediaTypeExtension}: 
+      type: standardResource
+      uriParameters: 
+        mediaTypeExtension: 
+          displayName: mediaTypeExtension
+          required: true
+          enum: [ .json ]
+      post: 
+        description: Permanently delete an existing status update.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: success
+                example: !include examples/share-example.json
+    /move_to_top{mediaTypeExtension}: 
+      type: standardResource
+      uriParameters: 
+        mediaTypeExtension: 
+          displayName: mediaTypeExtension
+          required: true
+          enum: [ .json ]
+      post: 
+        description: Move an existing status update to the top of the queue and recalculate times for all updates in the queue. Returns the update with its new posting time.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: update
+                example: !include examples/update-example.json
+  /create{mediaTypeExtension}: 
+    type: standardResource
+    uriParameters: 
+      mediaTypeExtension: 
+        displayName: mediaTypeExtension
+        required: true
+        enum: [ .json ]
+    post: 
+      description: |
+        Create one or more new status updates.
+      body: 
+        application/x-www-form-urlencoded: 
+          formParameters: 
+            text: 
+              description: The status update text.
+              required: true
+            profile_ids[]: 
+              description: |
+                An array of profile id's that the status update should be sent to. Invalid profile_id's will be silently ignored
+              required: true
+            shorten: 
+              description: |
+                If shorten is false links within the text will not be automatically shortened, otherwise they will
+              type: boolean
+            now: 
+              description: |
+                If now is set, this update will be sent immediately to all profiles instead of being added to the buffer.
+              type: boolean
+            top: 
+              description: |
+                If top is set, this update will be added to the top of the buffer and will become the next update sent
+              type: boolean
+            media: 
+              description: |
+                An associative array of media to be attached to the update, currently accepts link, description, title and picture parameters.
+            scheduled_at: 
+              description: |
+                A date describing when the update should be posted. Overrides any top or now parameter. 
+                When using ISO 8601 format, if no UTC offset is specified, UTC is assumed.
+            utc: 
+              description: |
+                If utc is set times will be returned relative to UTC rather than the users associated timezone
+              type: boolean
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: newUpdate
+              example: !include examples/newUpdate-example.json
+/links/shares{mediaTypeExtension}: 
+  type: standardResource
+  uriParameters: 
+    mediaTypeExtension: 
+      displayName: mediaTypeExtension
+      required: true
+      enum: [ .json ]
+  get: 
+    description: Returns an object with a the numbers of shares a link has had using Buffer.
+    queryParameters: 
+      url: 
+        description: URL-encoded URL of the page for which the number of shares is requested.
+        required: true
+        example: http%3A%2F%2Fbufferapp.com
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: shares
+            example: !include examples/shares-example.json
+/info/configuration{mediaTypeExtension}: 
+  type: standardResource
+  uriParameters: 
+    mediaTypeExtension: 
+      displayName: mediaTypeExtension
+      required: true
+      enum: [ .json ]
+  get: 
+    description: Returns an object with the current configuration that Buffer is using, including supported services, their icons and the varying limits of character and schedules.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: configuration
+            example: !include examples/configuration-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

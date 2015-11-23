@@ -1,0 +1,23 @@
+{
+  "key_transaction" : {
+    "id" : "integer" ,
+    "name" : "string" ,
+    "transaction_name" : "string" ,
+    "application_summaries" : {
+      "response_time" : "float" ,
+      "throughput" : "float" ,
+      "error_rate" : "float" ,
+      "apdex_target" : "float" ,
+      "apdex_score" : "float"
+    } ,
+    "end_user_summaries" : {
+      "response_time" : "float" ,
+      "throughput" : "float" ,
+      "apdex_target" : "float" ,
+      "apdex_score" : "float"
+    } ,
+    "links" : {
+      "application" : "integer"
+    }
+  }
+}

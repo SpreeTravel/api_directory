@@ -1,0 +1,57 @@
+{
+  "birthday": {
+    "month": 100,
+    "year": "year",
+    "day": "day"
+  },
+  "messaging_pref": "messaging_pref",
+  "link": "link",
+  "state": 100,
+  "self": {
+    "common": {
+      "friends": "friends",
+      "groups": "groups"
+    }
+  },
+  "lang": "lang",
+  "city": "city",
+  "visited": 100,
+  "id": 100,
+  "joined": 100,
+  "reachable": "reachable",
+  "name": "name",
+  "gender": "gender",
+  "other_services": {
+    "[service-name]": {
+      "identifier": "identifier"
+    }
+  },
+  "lat": 1.0,
+  "lon": 1.0,
+  "hometown": "hometown",
+  "membership_count": 100,
+  "photo_url": "photo_url",
+  "privacy": {
+    "photos": "photos",
+    "topics": "topics",
+    "bio": "bio",
+    "facebook": "facebook",
+    "groups": "groups"
+  },
+  "photo": {
+    "photo_link": "photo_link",
+    "highres_link": "highres_link",
+    "thumb_link": "thumb_link",
+    "photo_id": 100
+  },
+  "country": "country",
+  "photos": "photos",
+  "topics": {
+    "id": 100,
+    "urlkey": "urlkey",
+    "name": "name"
+  },
+  "bio": "bio",
+  "email": 100,
+  "messagable": "messagable"
+}

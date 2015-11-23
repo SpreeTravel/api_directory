@@ -1,0 +1,67 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "account_sid" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "api_version" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "body" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "num_segments" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "num_media" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "date_created" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "date_sent" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "date_updated" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "direction" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "from" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "price" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "sid" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "status" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "to" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "uri" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

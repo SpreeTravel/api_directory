@@ -1,0 +1,35 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "required": false
+    },
+    "rank": {
+      "type": "integer",
+      "required": false
+    },
+    "recommendationDefinitionId": {
+      "type": "string",
+      "required": false
+    },
+    "ScheduledRecommendationA": {
+      "type": "string",
+      "required": false
+    },
+    "ScheduledRecommendationB": {
+      "type": "string",
+      "required": false
+    },
+    "ScheduledRecommendationC": {
+      "type": "string",
+      "required": false
+    },
+    "ScheduledRecommendationD": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

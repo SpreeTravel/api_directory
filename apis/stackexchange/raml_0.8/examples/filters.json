@@ -1,0 +1,8 @@
+[
+  {
+    "filter": "some string",
+    "filter_type": "some string",
+    "included_fields": [
+    ]
+  }
+]

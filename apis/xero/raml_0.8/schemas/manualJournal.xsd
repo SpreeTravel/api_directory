@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="ManualJournal">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Narration"/>
+    <xs:element ref="JournalLines"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Narration" type="xs:string"/>
+  <xs:element name="JournalLines">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element maxOccurs="unbounded" ref="JournalLine"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="JournalLine">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="LineAmount"/>
+    <xs:element ref="AccountCode"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="LineAmount" type="xs:decimal"/>
+  <xs:element name="AccountCode" type="xs:integer"/>
+</xs:schema>

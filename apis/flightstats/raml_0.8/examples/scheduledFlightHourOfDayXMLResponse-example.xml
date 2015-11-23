@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+	<scheduledFlights>
+		<scheduledFlight>
+			<carrierFsCode>DL</carrierFsCode>
+			<flightNumber>3285</flightNumber>
+			<brand>Delta Connection</brand>
+			<departureAirportFsCode>CVG</departureAirportFsCode>
+			<arrivalAirportFsCode>ORD</arrivalAirportFsCode>
+			<stops>0</stops>
+			<departureTerminal>3</departureTerminal>
+			<arrivalTerminal>2</arrivalTerminal>
+			<departureTime>2015-05-02T08:00:00.000</departureTime>
+			<arrivalTime>2015-05-02T08:17:00.000</arrivalTime>
+			<flightEquipmentIataCode>EMJ</flightEquipmentIataCode>
+			<isCodeshare>false</isCodeshare>
+			<isWetlease>true</isWetlease>
+			<serviceType>J</serviceType>
+			<serviceClasses>
+				<serviceClass>F</serviceClass>
+				<serviceClass>Y</serviceClass>
+			</serviceClasses>
+			<trafficRestrictions/>
+			<codeshares>
+				<codeshare>
+					<carrierFsCode>VS</carrierFsCode>
+					<flightNumber>4550</flightNumber>
+					<serviceType>J</serviceType>
+					<serviceClasses>
+						<serviceClass>R</serviceClass>
+						<serviceClass>J</serviceClass>
+						<serviceClass>Y</serviceClass>
+					</serviceClasses>
+					<trafficRestrictions>
+						<trafficRestriction>Q</trafficRestriction>
+					</trafficRestrictions>
+					<referenceCode>835590</referenceCode>
+				</codeshare>
+			</codeshares>
+			<wetleaseOperatorFsCode>S5</wetleaseOperatorFsCode>
+			<referenceCode>1342-836447--</referenceCode>
+		</scheduledFlight>
+		<scheduledFlight>
+			<carrierFsCode>VS</carrierFsCode>
+			<flightNumber>4550</flightNumber>
+			<brand>Delta Connection</brand>
+			<departureAirportFsCode>CVG</departureAirportFsCode>
+			<arrivalAirportFsCode>ORD</arrivalAirportFsCode>
+			<stops>0</stops>
+			<departureTerminal>3</departureTerminal>
+			<arrivalTerminal>2</arrivalTerminal>
+			<departureTime>2015-05-02T08:00:00.000</departureTime>
+			<arrivalTime>2015-05-02T08:17:00.000</arrivalTime>
+			<flightEquipmentIataCode>EMJ</flightEquipmentIataCode>
+			<isCodeshare>true</isCodeshare>
+			<isWetlease>true</isWetlease>
+			<serviceType>J</serviceType>
+			<serviceClasses>
+				<serviceClass>R</serviceClass>
+				<serviceClass>J</serviceClass>
+				<serviceClass>Y</serviceClass>
+			</serviceClasses>
+			<trafficRestrictions>
+				<trafficRestriction>Q</trafficRestriction>
+			</trafficRestrictions>
+			<operator>
+				<carrierFsCode>DL</carrierFsCode>
+				<flightNumber>3285</flightNumber>
+				<serviceType>J</serviceType>
+				<serviceClasses>
+					<serviceClass>F</serviceClass>
+					<serviceClass>Y</serviceClass>
+				</serviceClasses>
+				<trafficRestrictions/>
+			</operator>
+			<codeshares/>
+			<wetleaseOperatorFsCode>S5</wetleaseOperatorFsCode>
+			<referenceCode>1342-836447--835590</referenceCode>
+		</scheduledFlight>
+	</scheduledFlights>
+	<appendix>
+		<airlines>
+			<airline>
+				<fs>NK</fs>
+				<iata>NK</iata>
+				<icao>NKS</icao>
+				<name>Spirit Airlines</name>
+				<active>true</active>
+			</airline>
+			<airline>
+				<fs>VS</fs>
+				<iata>VS</iata>
+				<icao>VIR</icao>
+				<name>Virgin Atlantic</name>
+				<active>true</active>
+			</airline>
+			<airline>
+				<fs>BA</fs>
+				<iata>BA</iata>
+				<icao>BAW</icao>
+				<name>British Airways</name>
+				<phoneNumber>1-800-AIRWAYS</phoneNumber>
+				<active>true</active>
+			</airline>
+		</airlines>
+			<airport>
+				<fs>CLE</fs>
+				<iata>CLE</iata>
+				<icao>KCLE</icao>
+				<faa>CLE</faa>
+				<name>Cleveland Hopkins International Airport</name>
+				<street1>5300 Riverside Drive</street1>
+				<city>Cleveland</city>
+				<cityCode>CLE</cityCode>
+				<stateCode>OH</stateCode>
+				<postalCode>44135-3193</postalCode>
+				<countryCode>US</countryCode>
+				<countryName>United States</countryName>
+				<regionName>North America</regionName>
+				<timeZoneRegionName>America/New_York</timeZoneRegionName>
+				<weatherZone>OHZ011</weatherZone>
+				<localTime>2015-04-28T05:33:39.308</localTime>
+				<utcOffsetHours>-4.0</utcOffsetHours>
+				<latitude>41.410856</latitude>
+				<longitude>-81.83821</longitude>
+				<elevationFeet>791</elevationFeet>
+				<classification>1</classification>
+				<active>true</active>
+			</airport>
+			<airport>
+				<fs>DAY</fs>
+				<iata>DAY</iata>
+				<icao>KDAY</icao>
+				<faa>DAY</faa>
+				<name>James M. Cox Dayton International Airport</name>
+				<street1>Terminal Building</street1>
+				<city>Dayton</city>
+				<cityCode>DAY</cityCode>
+				<stateCode>OH</stateCode>
+				<postalCode>45377</postalCode>
+				<countryCode>US</countryCode>
+				<countryName>United States</countryName>
+				<regionName>North America</regionName>
+				<timeZoneRegionName>America/New_York</timeZoneRegionName>
+				<weatherZone>OHZ061</weatherZone>
+				<localTime>2015-04-28T05:33:39.308</localTime>
+				<utcOffsetHours>-4.0</utcOffsetHours>
+				<latitude>39.898007</latitude>
+				<longitude>-84.220767</longitude>
+				<elevationFeet>1009</elevationFeet>
+				<classification>3</classification>
+				<active>true</active>
+			</airport>
+		</airports>
+		<equipments>
+			<equipment>
+				<iata>EMJ</iata>
+				<name>Embraer RJ170/190</name>
+				<turboProp>false</turboProp>
+				<jet>true</jet>
+				<widebody>false</widebody>
+				<regional>true</regional>
+			</equipment>
+			<equipment>
+				<iata>32S</iata>
+				<name>Airbus Industrie A318/319/320/321</name>
+				<turboProp>false</turboProp>
+				<jet>true</jet>
+				<widebody>false</widebody>
+				<regional>false</regional>
+			</equipment>
+			<equipment>
+				<iata>777</iata>
+				<name>Boeing 777 Passenger</name>
+				<turboProp>false</turboProp>
+				<jet>true</jet>
+				<widebody>true</widebody>
+				<regional>false</regional>
+			</equipment>
+			<equipment>
+				<iata>CRJ</iata>
+				<name>Canadair (Bombardier) Regional Jet</name>
+				<turboProp>false</turboProp>
+				<jet>true</jet>
+				<widebody>false</widebody>
+				<regional>true</regional>
+			</equipment>
+			<equipment>
+				<iata>737</iata>
+				<name>Boeing 737 Passenger</name>
+				<turboProp>false</turboProp>
+				<jet>true</jet>
+				<widebody>false</widebody>
+				<regional>false</regional>
+			</equipment>
+			<equipment>
+				<iata>ERJ</iata>
+				<name>Embraer RJ135/RJ140/RJ145</name>
+				<turboProp>false</turboProp>
+				<jet>true</jet>
+				<widebody>false</widebody>
+				<regional>true</regional>
+			</equipment>
+		</equipments>
+	</appendix>
+	<request>
+		<url>https://api.flightstats.com/flex/schedules/rest/v1/xml/to/ORD/arriving/2015/5/2/8</url>
+		<airport>
+			<requestedCode>ORD</requestedCode>
+			<fsCode>ORD</fsCode>
+		</airport>
+		<codeType/>
+		<departing>false</departing>
+		<date>
+			<year>2015</year>
+			<month>5</month>
+			<day>2</day>
+			<interpreted>2015-05-02</interpreted>
+		</date>
+		<hourOfDay>
+			<requested>8</requested>
+			<interpreted>8</interpreted>
+		</hourOfDay>
+	</request>
+</response>

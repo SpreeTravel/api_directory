@@ -1,0 +1,21 @@
+{
+    "": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+    	"collectionType": {
+    		"type": "string"
+    	},
+        "ownerId": {
+        	"type": "string"
+        },
+        "ownerType": {
+        	"type": "string"
+        },
+        "subscriberId": {
+        	"type": "string"
+        },
+        "subscriptionId": {
+        	"type": "string"
+        }
+    }
+}    

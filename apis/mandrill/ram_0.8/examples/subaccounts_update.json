@@ -1,0 +1,7 @@
+{
+  "key": "example key",
+  "id": "cust-123",
+  "name": "ABC Widgets, Inc.",
+  "notes": "Free plan user, signed up on 2013-01-01 12:00:00",
+  "custom_quota": 42
+}

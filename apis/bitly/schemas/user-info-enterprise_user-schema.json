@@ -1,0 +1,78 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "login": {
+      "description": "The specified bitly login or the login of the authenticated user.",
+      "type": "string"
+    },
+    "profile_url": {
+      "description": "URL of user's profile page.",
+      "type": "string"
+    },
+    "profile_image": {
+      "description": "URL of user's profile image.",
+      "type": "string"
+    },
+    "member_since": {
+      "description": "Unix timestamp for the moment the user signed up.",
+      "type": "string"
+    },
+    "full_name": {
+      "description": "The user's full name, if set.",
+      "type": "string",
+      "required": false
+    },
+    "display_name": {
+      "description": "The user's display name, if set.",
+      "type": "string",
+      "required": false
+    },
+    "share_accounts": {
+      "type": "array",
+      "items": {
+        "description": "A list of the share accounts (Twitter or Facebook) linked to the user's account.",
+        "type": "string",
+        "required": false
+      }
+    },
+    "apiKey": {
+      "description": "The user's bitly API key.",
+      "type": "string"
+    },
+    "is_enterprise": {
+      "description": "0 or 1 to indicate if this account is signed up for bitly enterprise.",
+      "type": "boolean",
+      "default": false
+    },
+    "sub_accounts": {
+      "type": "array",
+      "items": {
+        "description": "List of accounts associated with this account."
+      }
+    },
+    "e2e_domains": {
+      "type": "array",
+      "items": {
+        "description": "List of domains associated with this custom_short_domain."
+      }
+    },
+    "tracking_url_prefxies": {
+      "type": "array",
+      "items": {
+        "description": "A list of owned 3rd party urls such as Facebook tracked for analytics"
+      }
+    },
+    "master_account": {
+      "description": "The login of a master account, if this is associated with an enterprise account.",
+      "type": "string",
+      "required": false
+    },
+    "enterprise_permissions": {
+      "type": "array",
+      "items": {
+        "description": "List of enterprise permissions associated with this account."
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "intersection" : {
+    "street2" : "Curtis Street" ,
+    "street1" : "Roble Avenue" ,
+    "distance" : "0.08" ,
+    "highway2" : "residential" ,
+    "highway1" : "residential" ,
+    "street2Bearing" : "303" ,
+    "street1Bearing" : "213" ,
+    "lng" : "-122.1808293" ,
+    "lat" : "37.4506505"
+  }
+}

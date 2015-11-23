@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="magento_api">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="data_item" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="created_at" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="comment" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="is_customer_notified" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="is_visible_on_front" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="status" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

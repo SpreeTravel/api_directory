@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "results": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "city": {
+            "required": false,
+            "type": "string"
+          },
+          "country": {
+            "required": false,
+            "type": "string"
+          },
+          "state": {
+            "required": false,
+            "type": "integer"
+          },
+          "zip": {
+            "required": false,
+            "type": "string"
+          },
+          "lat": {
+            "required": false,
+            "type": "number"
+          },
+          "lon": {
+            "required": false,
+            "type": "number"
+          },
+          "members": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

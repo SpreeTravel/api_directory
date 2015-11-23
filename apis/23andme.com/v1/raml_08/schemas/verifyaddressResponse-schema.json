@@ -1,0 +1,39 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "city" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "first_name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "last_name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "country" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "address2" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "state" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "postal_code" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "address" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

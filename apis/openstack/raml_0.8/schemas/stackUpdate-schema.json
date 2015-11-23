@@ -1,0 +1,95 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "template" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "heat_template_version" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "description" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "parameters" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "flavor" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "default" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "type" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        } ,
+        "resources" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "hello_world" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "type" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "properties" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "key_name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "flavor" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "get_param" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "image" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "user_data" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    } ,
+    "parameters" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "flavor" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

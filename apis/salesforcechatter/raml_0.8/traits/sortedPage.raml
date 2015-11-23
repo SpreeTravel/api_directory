@@ -1,0 +1,18 @@
+queryParameters: 
+  page: 
+    description: |
+      A generated token that indicates the view of feed elements in the feed. Page tokens are returned as part of the response body, in one of the URL parameters, such as nextPageURL, for example:
+      "nextPageUrl": 
+      "/services/data/v34.0/chatter/feeds/news/005D0000001GLowIAN/feed-elements?page=2011-03-30T17:34:50Z,0D5D0000000DSv4KAG"
+  pageSize: 
+    description: "Specifies the number of elements per page. Valid values are between 1 and 100. If you don't specify a size, the default is 25."
+  q: 
+    description: |
+      One or more keywords to search for in the body and comments of feed elements in this feed.
+      The search string can contain wildcards and must contain at least two characters that aren’t wildcards. See Wildcards.
+  sort: 
+    description: |
+      Specifies the order returned by the sort, such as by date created or last modified:
+      CreatedDateDesc—Sorts by most recent creation date.
+      LastModifiedDateDesc—Sorts by most recent activity.
+      The default value is CreatedDescDate.

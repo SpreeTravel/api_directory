@@ -1,0 +1,21 @@
+{
+  "TotalCount" : 500 ,
+  "Bounces" : [
+    {
+      "ID" : [
+        "ID"
+      ] ,
+      "Type" : "HardBounce" ,
+      "MessageID" : "d12c2f1c-60f3-4258-b163-d17052546ae4" ,
+      "TypeCode" : 1 ,
+      "Details" : "test bounce" ,
+      "Email" : "jim@test.com" ,
+      "BouncedAt" : "[YESTERDAY]" ,
+      "DumpAvailable" : true ,
+      "Inactive" : true ,
+      "CanActivate" : true ,
+      "Content" : "Return-Path:...." ,
+      "Subject" : "Hello from our app!"
+    }
+  ]
+}

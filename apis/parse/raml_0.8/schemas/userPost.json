@@ -1,0 +1,22 @@
+{
+	"type" : "object" ,
+	"$schema" : "http://json-schema.org/draft-03/schema" ,
+	"required" : false ,
+	"properties" : {
+		"username" : {
+			"type" : "string" ,
+			"required" : true
+		},
+		"password" : {
+			"type" : "string" ,
+			"required" : true
+		}
+	},
+	"patternProperties" : {
+		"^[a-zA-Z0-9_]+$" : {
+			"type" : "any" ,
+			"required" : false
+		}
+	} ,
+	"additionalProperties" : false
+}

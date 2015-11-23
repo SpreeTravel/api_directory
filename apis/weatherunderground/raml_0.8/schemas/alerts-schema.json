@@ -1,0 +1,149 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "response": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "version": {
+          "required": false,
+          "type": "string"
+        },
+        "termsofService": {
+          "required": false,
+          "type": "string"
+        },
+        "features": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "alerts": {
+              "required": false,
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "alerts": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "type": {
+            "required": false,
+            "type": "string"
+          },
+          "description": {
+            "required": false,
+            "type": "string"
+          },
+          "date": {
+            "required": false,
+            "type": "string"
+          },
+          "date_epoch": {
+            "required": false,
+            "type": "string"
+          },
+          "expires": {
+            "required": false,
+            "type": "string"
+          },
+          "expires_epoch": {
+            "required": false,
+            "type": "string"
+          },
+          "message": {
+            "required": false,
+            "type": "string"
+          },
+          "phenomena": {
+            "required": false,
+            "type": "string"
+          },
+          "significance": {
+            "required": false,
+            "type": "string"
+          },
+          "ZONES": {
+            "required": false,
+            "type": "array",
+            "items": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "state": {
+                  "required": false,
+                  "type": "string"
+                },
+                "ZONE": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "StormBased": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "vertices": {
+                "required": false,
+                "type": "array",
+                "items": {
+                  "required": false,
+                  "type": "object",
+                  "properties": {
+                    "lat": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "lon": {
+                      "required": false,
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "Vertex_count": {
+                "required": false,
+                "type": "integer"
+              },
+              "stormInfo": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "time_epoch": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Motion_deg": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "Motion_spd": {
+                    "required": false,
+                    "type": "integer"
+                  },
+                  "position_lat": {
+                    "required": false,
+                    "type": "number"
+                  },
+                  "position_lon": {
+                    "required": false,
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

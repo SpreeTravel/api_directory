@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "response": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "version": {
+          "required": false,
+          "type": "string"
+        },
+        "termsofService": {
+          "required": false,
+          "type": "string"
+        },
+        "features": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "almanac": {
+              "required": false,
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "almanac": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "airport_code": {
+          "required": false,
+          "type": "string"
+        },
+        "temp_high": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "normal": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "F": {
+                  "required": false,
+                  "type": "string"
+                },
+                "C": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "record": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "F": {
+                  "required": false,
+                  "type": "string"
+                },
+                "C": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "recordyear": {
+              "required": false,
+              "type": "string"
+            }
+          }
+        },
+        "temp_low": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "normal": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "F": {
+                  "required": false,
+                  "type": "string"
+                },
+                "C": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "record": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "F": {
+                  "required": false,
+                  "type": "string"
+                },
+                "C": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "recordyear": {
+              "required": false,
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

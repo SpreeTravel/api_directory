@@ -1,0 +1,143 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "limit" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "offset" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "count" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "members" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "profile_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "first_name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "middle_name" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "last_name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "birth_surname" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "name_suffix" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "nickname" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "sex" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "adopted" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "deceased" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "partners" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "parents" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "events" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "type" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "date" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "end_date" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "location" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                } , {
+                  "type" : "object" ,
+                  "properties" : {
+                    "type" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "date" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "end_date" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "location" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

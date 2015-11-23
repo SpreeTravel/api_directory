@@ -1,0 +1,68 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "total" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "interactions" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : 
+        {
+          "type" : "object" ,
+          "properties" : {
+            "_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "created_at" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "event" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "interaction_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "user" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "username" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "followers" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "avatar" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "avatar_https" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "twitter_id" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        }
+      
+    }
+  }
+}

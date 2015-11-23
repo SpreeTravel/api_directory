@@ -1,0 +1,28 @@
+{
+  "fields" : [
+    {
+      "optionListId" : "1" ,
+      "checkedValue" : "undefined" ,
+      "uncheckedValue" : "undefined" ,
+      "displayType" : "undefined" ,
+      "dataType" : "undefined" ,
+      "defaultValue" : "undefined" ,
+      "isReadOnly" : "true" ,
+      "isRequired" : "false" ,
+      "isStandard" : "undefined" ,
+      "outputFormatId" : "undefined" ,
+      "name" : "undefined" ,
+      "description" : "Eloqua" ,
+      "permissions" : "undefined" ,
+      "folderId" : "undefined" ,
+      "sourceTemplateId" : "undefined" ,
+      "createdBy" : "undefined" ,
+      "createdAt" : "undefined" ,
+      "updatedBy" : "undefined" ,
+      "updatedAt" : "undefined" ,
+      "accessedAt" : "undefined" ,
+      "scheduledFor" : "undefined" ,
+      "depth" : "minimal"
+    }
+  ]
+}

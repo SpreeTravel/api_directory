@@ -1,0 +1,49 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "intersection" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "street2" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "street1" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "distance" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "highway2" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "highway1" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "street2Bearing" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "street1Bearing" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "lng" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "lat" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

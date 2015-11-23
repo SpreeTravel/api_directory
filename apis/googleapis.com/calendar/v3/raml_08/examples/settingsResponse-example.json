@@ -1,0 +1,19 @@
+{
+  "kind" : "calendar#settings" ,
+  "etag" : "etag" ,
+  "nextPageToken" : "string" ,
+  "nextSyncToken" : "string" ,
+  "items" : [
+    {
+      "kind" : "calendar#setting" ,
+      "etag" : "etag" ,
+      "id" : "string" ,
+      "value" : "string"
+    } , {
+      "kind" : "calendar#setting" ,
+      "etag" : "etag" ,
+      "id" : "string" ,
+      "value" : "string"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+[
+{
+    "Version": 1,
+    "Key": "623",
+    "Type": "City",
+    "Rank": 20,
+    "LocalizedName": "Paris",
+    "EnglishName": "Paris",
+    "PrimaryPostalCode": "",
+    "Region": 
+    {
+        "ID": "EUR",
+        "LocalizedName": "Europe",
+        "EnglishName": "Europe"
+    },
+    "Country": 
+    {
+        "ID": "FR",
+        "LocalizedName": "France",
+        "EnglishName": "France"
+    },
+    "AdministrativeArea": 
+    {
+        "ID": "J",
+        "LocalizedName": "Ile-de-France",
+        "EnglishName": "Ile-De-France",
+        "Level": 1,
+        "LocalizedType": "Province",
+        "EnglishType": "Region",
+        "CountryID": "FR"
+    },
+    "TimeZone": 
+    {
+        "Code": "CEST",
+        "Name": "Europe/Paris",
+        "GmtOffset": 2,
+        "IsDaylightSaving": true,
+        "NextOffsetChange": null
+    },
+    "GeoPosition": 
+    {
+        "Latitude": 48.86,
+        "Longitude": 2.35,
+        "Elevation": 
+        {
+            "Metric": 
+            {
+                "Value": "33",
+                "Unit": "m",
+                "UnitType": 5
+            },
+            "Imperial": 
+            {
+                "Value": "107",
+                "Unit": "ft",
+                "UnitType": 0
+            }
+        }
+    },
+    "IsAlias": false,
+    "SupplementalAdminAreas": [ ],
+    "Details": 
+    {
+        "Key": "623",
+        "StationCode": "LFR8",
+        "StationGmtOffset": 1,
+        "BandMap": "FR",
+        "Climo": "LFPO",
+        "LocalRadar": "",
+        "MediaRegion": null,
+        "Metar": "LFPO",
+        "NXMetro": "",
+        "NXState": "EURM",
+        "Population": 2193030,
+        "PrimaryWarningCountyCode": "",
+        "PrimaryWarningZoneCode": "",
+        "Satellite": "EUR3",
+        "Synoptic": "07156",
+        "MarineStation": "",
+        "MarineStationGMTOffset": null,
+        "VideoCode": ""
+    }
+}
+]

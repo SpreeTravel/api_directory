@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<magento_api>
+  <attribute_set_id>4</attribute_set_id>
+  <type_id>simple</type_id>
+  <sku>test_dress</sku>
+  <name>Test_dress</name>
+  <country_of_manufacture>AD</country_of_manufacture>
+  <price>2000.0000</price>
+  <special_price>1500.0000</special_price>
+  <weight>0.5000</weight>
+  <status>1</status>
+  <visibility>4</visibility>
+  <tax_class_id>7</tax_class_id>
+  <description>dress</description>
+  <short_description>Wedding dress</short_description>
+</magento_api>

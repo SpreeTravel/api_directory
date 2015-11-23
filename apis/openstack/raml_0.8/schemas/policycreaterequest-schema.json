@@ -1,0 +1,29 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "blob" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "default" : {
+          "type" : "boolean" ,
+          "required" : false
+        }
+      }
+    } ,
+    "project_id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "user_id" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

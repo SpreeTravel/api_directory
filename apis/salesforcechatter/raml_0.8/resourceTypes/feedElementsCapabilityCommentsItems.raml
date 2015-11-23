@@ -1,0 +1,29 @@
+post:
+  description: |
+    Add a comment to a feed element.
+    To upload a binary file to attach to a comment, you must send it in a multipart/form-data request. To send the text of the comment, you can choose to include a JSON or XML rich input body part in the multipart/form-data request. Alternately, you can choose to pass the information in request parameter parts. For information about how to create the multipart/form-data message
+  queryParameters:
+    text:
+      description: The comment text.
+  body:
+    application/json:
+  responses:
+    200:
+      body:
+        application/json:
+          schema: commentResponse
+get:
+  description: Access comments for a feed element.
+  queryParameters:
+    page:
+      description: A URL to the next page of comments.
+    pageSize:
+      description: The number of comments per page. The default value is 3.
+      type: integer
+      default: 3
+      example: 5
+  responses:
+    200:
+      body:
+        application/json:
+          schema: commentPageResponse

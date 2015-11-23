@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<magento_api>
+  <region>Massachusetts</region>
+  <postcode>01852</postcode>
+  <lastname>Doe</lastname>
+  <street>1073 Smith Street</street>
+  <city>Lowell</city>
+  <telephone>508-857-6870</telephone>
+  <country_id>US</country_id>
+  <firstname>John</firstname>
+  <address_type>shipping</address_type>
+  <prefix></prefix>
+  <middlename></middlename>
+  <suffix></suffix>
+  <company></company>
+</magento_api>

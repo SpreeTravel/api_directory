@@ -1,0 +1,73 @@
+{
+    "": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+        "sid": {
+            "description": "The trigger's unique Sid.",
+            "type": "string"
+        },
+        "date_created": {
+            "description": "The date the trigger was created, given as GMT RFC 2822 format.",
+            "type": "string"
+        },
+        "date_updated": {
+            "description": "The date the trigger was last updated, given as GMT RFC 2822 format.",
+            "type": "string"
+        },
+        "account_sid": {
+            "description": "The account this trigger monitors.",
+            "type": "string"
+        },
+        "friendly_name": {
+            "description": "A user-specified, human-readable name for the trigger.",
+            "type": "string"
+        },
+        "recurring": {
+            "description": "How this trigger recurs. Empty for non-recurring triggers. One of daily, monthly, or yearly for recurring triggers. A trigger will only fire once during each recurring period. Recurring periods are in GMT.",
+            "type": "string"
+        },
+        "usage_category": {
+            "description": "The usage category the trigger watches. One of the supported usage categories.",
+            "type": "string"
+        },
+        "trigger_by": {
+            "description": "The field in the UsageRecord that fires the trigger. One of count, usage, or price.",
+            "enum": [
+                "count",
+                "usage",
+                "price"
+            ]
+        },
+        "trigger_value": {
+            "description": "The value at which the trigger will fire. Must be a positive numeric value.",
+            "type": "string"
+        },
+        "current_value": {
+            "description": "The current value of the field the trigger is watching.",
+            "type": "string"
+        },
+        "usage_record_uri": {
+            "description": "The URI of the UsageRecord this trigger is watching, relative to https://api.twilio.com.",
+            "type": "string"
+        },
+        "callback_url": {
+            "description": "Twilio will make a request to this url when the trigger fires.",
+            "type": "string"
+        },
+        "callback_method": {
+            "description": "The HTTP method Twilio will use when making a request to the CallbackUrl. GET or POST.",
+            "enum": [
+                "GET",
+                "POST"
+            ]
+        },
+        "date_fired": {
+            "description": "The date the trigger was last fired, given as GMT RFC 2822 format.",
+            "type": "string"
+        },
+        "uri": {
+            "description": "The URI for this resource, relative to https://api.twilio.com.",
+            "type": "string"
+        }
+    }
+}

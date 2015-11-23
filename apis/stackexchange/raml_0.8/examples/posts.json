@@ -1,0 +1,50 @@
+[
+  {
+    "body": "some string",
+    "body_markdown": "some string",
+    "comment_count": 1,
+    "comments": [
+    ],
+    "creation_date": 1,
+    "down_vote_count": 1,
+    "downvoted": true,
+    "last_activity_date": 1,
+    "last_edit_date": 1,
+    "last_editor": {
+      "accept_rate": 1,
+      "badge_counts": {
+        "bronze": 1,
+        "gold": 1,
+        "silver": 1
+      },
+      "display_name": "some string",
+      "link": "some string",
+      "profile_image": "some string",
+      "reputation": 1,
+      "user_id": 1,
+      "user_type": "some string"
+    },
+    "link": "some string",
+    "owner": {
+      "accept_rate": 1,
+      "badge_counts": {
+        "bronze": 1,
+        "gold": 1,
+        "silver": 1
+      },
+      "display_name": "some string",
+      "link": "some string",
+      "profile_image": "some string",
+      "reputation": 1,
+      "user_id": 1,
+      "user_type": "some string"
+    },
+    "post_id": 1,
+    "post_type": "some string",
+    "score": 1,
+    "share_link": "some string",
+    "title": "some string",
+    "up_vote_count": 1,
+    "upvoted": true
+  }
+]

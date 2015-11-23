@@ -1,0 +1,25 @@
+type: OAuth 2.0
+describedBy: 
+  headers: 
+    Authorization: 
+      description: |
+        Used to send a valid OAuth 2 access token. Do not use together with
+        the "access_token" queryParameters string parameter.
+  queryParameters: 
+    access_token: 
+      description: |
+        Used to send a valid OAuth 2 access token. Do not use together with
+        the "Authorization" header
+settings: 
+  authorizationUri: https://www.smartsheet.com/b/authorize
+  accessTokenUri: https://api.smartsheet.com/1.1/token
+  authorizationGrants: [ code ]
+  scopes: 
+    - READ_SHEETS
+    - WRITE_SHEETS
+    - SHARE_SHEETS
+    - DELETE_SHEETS
+    - CREATE_SHEETS
+    - ADMIN_USERS
+    - ADMIN_SHEETS
+    - ADMIN_WORKSPACES

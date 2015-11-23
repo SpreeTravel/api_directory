@@ -1,0 +1,38 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "displayTimeZoneId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "details" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "dailyStartTime" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "dailyEndTime" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "days" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object"
+            }
+          ]
+        }
+      }
+    } ,
+    "executionInterval" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

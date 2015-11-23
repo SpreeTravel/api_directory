@@ -1,0 +1,15 @@
+get: 
+  description: |
+    A list of all of the feeds the context user is able to view.
+    Each user may have a different set of feeds. Use this resource to determine what feeds are available. In addition, the different feeds may have unique labels as well as URLs. Use the given labels returned in this resource and avoid hard-coding any of these values.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: feedDirectoryResponse
+head: 
+  description: |
+    A list of all of the feeds the context user is able to view.
+    Each user may have a different set of feeds. Use this resource to determine what feeds are available. In addition, the different feeds may have unique labels as well as URLs. Use the given labels returned in this resource and avoid hard-coding any of these values.
+  responses: 
+    200: 

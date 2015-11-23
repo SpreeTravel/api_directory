@@ -1,0 +1,15 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Account">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:short" name="Code"/>
+        <xs:element type="xs:string" name="Name"/>
+        <xs:element type="xs:string" name="Type"/>
+        <xs:element type="xs:string" name="Description" minOccurs="0" maxOccurs="1"/>
+        <xs:element type="xs:string" name="TaxType" minOccurs="0" maxOccurs="1"/>
+        <xs:element type="xs:string" name="EnablePaymentsToAccount" minOccurs="0" maxOccurs="1"/>
+        <xs:element type="xs:string" name="ShowInExpenseClaims" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

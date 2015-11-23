@@ -1,0 +1,23 @@
+{
+  "kind" : "blogger#blog" ,
+  "id" : "value" ,
+  "name" : "value" ,
+  "description" : "value" ,
+  "published" : "value" ,
+  "updated" : "value" ,
+  "url" : "value" ,
+  "selfLink" : "value" ,
+  "posts" : {
+    "totalItems" : "value" ,
+    "selfLink" : "value"
+  } ,
+  "pages" : {
+    "totalItems" : "value" ,
+    "selfLink" : "value"
+  } ,
+  "locale" : {
+    "language" : "value" ,
+    "country" : "value" ,
+    "variant" : "value"
+  }
+}

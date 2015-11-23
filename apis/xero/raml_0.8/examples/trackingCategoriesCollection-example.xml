@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TrackingCategories>
+  <TrackingCategory>
+    <Name>Region</Name>
+    <Status>ACTIVE</Status>
+    <TrackingCategoryID>093af706-c2aa-4d97-a4ce-2d205a017eac</TrackingCategoryID>
+    <Options>
+      <Option>
+        <TrackingOptionID>ae777a87-5ef3-4fa0-a4f0-d10e1f13073a</TrackingOptionID>
+        <Name>Eastside</Name>
+      </Option>
+      <Option>
+        <TrackingOptionID>3f05cdf9-246b-46a2-bf6f-441da1b09b89</TrackingOptionID>
+        <Name>North</Name>
+      </Option>
+      <Option>
+        <TrackingOptionID>9f93bb09-3c8c-4d43-a6fe-862772d77bd9</TrackingOptionID>
+        <Name>South</Name>
+      </Option>
+      <Option>
+        <TrackingOptionID>2ba6a2af-11cb-452d-9867-dce88add6856</TrackingOptionID>
+        <Name>West Coast</Name>
+      </Option>
+    </Options>
+  </TrackingCategory>
+</TrackingCategories>

@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "results": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "container": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "id": {
+                "required": false,
+                "type": "integer"
+              },
+              "name": {
+                "required": false,
+                "type": "string"
+              },
+              "urlname": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "created": {
+            "required": false,
+            "type": "integer"
+          },
+          "description": {
+            "required": false,
+            "type": "string"
+          },
+          "id": {
+            "required": false,
+            "type": "integer"
+          },
+          "local_time": {
+            "required": false,
+            "type": "integer"
+          },
+          "short_description": {
+            "required": false,
+            "type": "string"
+          },
+          "status": {
+            "required": false,
+            "type": "string"
+          },
+          "udf_{varname}": {
+            "required": false,
+            "type": "string"
+          },
+          "updated": {
+            "required": false,
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "purpose" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "dataImportPriorityId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "sourceFieldIds" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object"
+        }
+      ]
+    } ,
+    "fieldMappings" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "sourceFieldId" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "targetFieldId" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "isLookup" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "updateType" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    } ,
+    "notification" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "listId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "isAutomated" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "lastUpdatedSourceFieldsAt" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

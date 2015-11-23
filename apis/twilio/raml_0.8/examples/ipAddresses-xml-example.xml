@@ -1,0 +1,12 @@
+<TwilioResponse>
+    <IpAddresses end="0" firstpageuri="/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/SIP/IpAccessControlLists/ALccac9a2c6a6d0354d75b836b45210200/IpAddresses.xml?PageSize=50&amp;Page=0" nextpageuri="" page="0" pagesize="50" previouspageuri="" start="0" uri="/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/SIP/IpAccessControlLists/ALccac9a2c6a6d0354d75b836b45210200/IpAddresses.xml?PageSize=50&amp;Page=0" lastpageuri="/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/SIP/IpAccessControlLists/ALccac9a2c6a6d0354d75b836b45210200/IpAddresses.xml?PageSize=50&amp;Page=0" numpages="1" total="1">
+        <IpAddress>
+            <Sid>IP6fbe2e8619a14fabaefaf4fb131c0b9d</Sid>
+            <FriendlyName>My office IP Address</FriendlyName>
+            <IpAddress>55.102.123.124</IpAddress>
+            <DateCreated>Wed, 11 Sep 2013 04:32:30 -0000</DateCreated>
+            <DateUpdated>Wed, 11 Sep 2013 04:32:30 -0000</DateUpdated>
+            <Uri>/2010-04-01/Accounts/AC32a3c49700934481addd5ce1659f04d2/SIP/IpAccessControlLists/AL0c37d0be69a6a6fe1e270c5fa4a2cac7/Addresses/IP6fbe2e8619a14fabaefaf4fb131c0b9d</Uri>
+        </IpAddress>
+    </IpAddresses>
+</TwilioResponse>

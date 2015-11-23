@@ -1,0 +1,21 @@
+{
+  "comment" : {
+    "text" : "Here are the new plans." ,
+    "file_attachments" : [
+      {
+        "type" : "file_attachment" ,
+        "id" : 21 ,
+        "filename" : "Corellian corvette deck plan.tiff" ,
+        "created_at" : 1406030400000 ,
+        "uploader_id" : 101 ,
+        "thumbnailable" : false ,
+        "height" : 216 ,
+        "width" : 650 ,
+        "size" : 561878 ,
+        "download_url" : "/attachments/0000/0021/Corellian corvette deck plan_big.tiff" ,
+        "thumbnail_url" : "/attachments/0000/0021/Corellian corvette deck plan_thumb.tiff"
+      }
+    ]
+  } ,
+  "current_state" : "rejected"
+}

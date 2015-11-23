@@ -1,0 +1,54 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "actionLinks" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "actionType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "labelKey" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "groupDefault" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "actionUrl" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "method" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "requiresConfirmation" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    } ,
+    "executionsAllowed" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "expirationDate" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "category" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

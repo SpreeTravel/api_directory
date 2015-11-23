@@ -1,0 +1,1163 @@
+#%RAML 0.8
+title: Smartsheet
+version: 1.1
+baseUri: https://api.smartsheet.com/{version}
+mediaType: application/json
+securitySchemes:
+  - oauth_2_0: !include securitySchemes/oauth_2_0.raml
+schemas:
+  - createFavoritesResponse: !include schemas/createFavoritesResponse-schema.json
+  - addUserResponse: !include schemas/addUserResponse-schema.json
+  - listAllGroupsResponse: !include schemas/listAllGroupsResponse-schema.json
+  - deleteSharewithGroupsResponse: !include schemas/deleteSharewithGroupsResponse-schema.json
+  - getAttachmentResponse: !include schemas/getAttachmentResponse-schema.json
+  - insertRowsintoSheetRequest: !include schemas/insertRowsintoSheetRequest-schema.json
+  - addUserRequest: !include schemas/addUserRequest-schema.json
+  - getCurrentUserResponse: !include schemas/getCurrentUserResponse-schema.json
+  - sharewithGroupstoOneResponse: !include schemas/sharewithGroupstoOneResponse-schema.json
+  - updateShareResponse: !include schemas/updateShareResponse-schema.json
+  - deleteCommentResponse: !include schemas/deleteCommentResponse-schema.json
+  - sharetoOneRequest: !include schemas/sharetoOneRequest-schema.json
+  - listChildFoldersResponse: !include schemas/listChildFoldersResponse-schema.json
+  - modifyColumnResponse: !include schemas/modifyColumnResponse-schema.json
+  - getUserResponse: !include schemas/getUserResponse-schema.json
+  - addColumntoSheetRequest: !include schemas/addColumntoSheetRequest-schema.json
+  - createSheetRequest: !include schemas/createSheetRequest-schema.json
+  - getRowbyNumberResponse: !include schemas/getRowbyNumberResponse-schema.json
+  - sharewithGroupstoManyResponse: !include schemas/sharewithGroupstoManyResponse-schema.json
+  - setPublishStatusRequest: !include schemas/setPublishStatusRequest-schema.json
+  - createChildFolderRequest: !include schemas/createChildFolderRequest-schema.json
+  - attachURLResponse: !include schemas/attachURLResponse-schema.json
+  - getColumnsResponse: !include schemas/getColumnsResponse-schema.json
+  - listAllWorkspacesResponse: !include schemas/listAllWorkspacesResponse-schema.json
+  - updateSheetResponse: !include schemas/updateSheetResponse-schema.json
+  - sendSheetRequest: !include schemas/sendSheetRequest-schema.json
+  - getRowResponse: !include schemas/getRowResponse-schema.json
+  - createWorkspaceRequest: !include schemas/createWorkspaceRequest-schema.json
+  - deleteShareResponse: !include schemas/deleteShareResponse-schema.json
+  - createChildFolderResponse: !include schemas/createChildFolderResponse-schema.json
+  - createWorkspaceResponse: !include schemas/createWorkspaceResponse-schema.json
+  - updateSharewithGroupsRequest: !include schemas/updateSharewithGroupsRequest-schema.json
+  - deleteGroupResponse: !include schemas/deleteGroupResponse-schema.json
+  - deleteUserResponse: !include schemas/deleteUserResponse-schema.json
+  - sharetoManyResponse: !include schemas/sharetoManyResponse-schema.json
+  - attachFileResponse: !include schemas/attachFileResponse-schema.json
+  - updateUserRequest: !include schemas/updateUserRequest-schema.json
+  - deleteAllVersionsResponse: !include schemas/deleteAllVersionsResponse-schema.json
+  - createGroupRequest: !include schemas/createGroupRequest-schema.json
+  - updateSharewithGroupsResponse: !include schemas/updateSharewithGroupsResponse-schema.json
+  - sharewithGroupstoOneRequest: !include schemas/sharewithGroupstoOneRequest-schema.json
+  - deleteFolderResponse: !include schemas/deleteFolderResponse-schema.json
+  - deleteRowResponse: !include schemas/deleteRowResponse-schema.json
+  - getFolderResponse: !include schemas/getFolderResponse-schema.json
+  - deleteWorkspaceResponse: !include schemas/deleteWorkspaceResponse-schema.json
+  - updateUserResponse: !include schemas/updateUserResponse-schema.json
+  - getGroupResponse: !include schemas/getGroupResponse-schema.json
+  - addColumntoSheetResponse: !include schemas/addColumntoSheetResponse-schema.json
+  - updateFolderRequest: !include schemas/updateFolderRequest-schema.json
+  - updateGroupResponse: !include schemas/updateGroupResponse-schema.json
+  - getAllVersionsResponse: !include schemas/getAllVersionsResponse-schema.json
+  - uploadNewVersionResponse: !include schemas/uploadNewVersionResponse-schema.json
+  - updateRowCellsResponse: !include schemas/updateRowCellsResponse-schema.json
+  - deleteFavoriteResponse: !include schemas/deleteFavoriteResponse-schema.json
+  - sendSheetResponse: !include schemas/sendSheetResponse-schema.json
+  - updateShareRequest: !include schemas/updateShareRequest-schema.json
+  - getCommentResponse: !include schemas/getCommentResponse-schema.json
+  - getDiscussionAttachmentsResponse: !include schemas/getDiscussionAttachmentsResponse-schema.json
+  - listAllTemplatesResponse: !include schemas/listAllTemplatesResponse-schema.json
+  - getSheetAttachmentsResponse: !include schemas/getSheetAttachmentsResponse-schema.json
+  - setPublishStatusResponse: !include schemas/setPublishStatusResponse-schema.json
+  - getShareswithGroupsResponse: !include schemas/getShareswithGroupsResponse-schema.json
+  - addMemberstoGroupResponse: !include schemas/addMemberstoGroupResponse-schema.json
+  - listAllFavoritesResponse: !include schemas/listAllFavoritesResponse-schema.json
+  - getServerInfoResponse: !include schemas/getServerInfoResponse-schema.json
+  - attachURLRequest: !include schemas/attachURLRequest-schema.json
+  - deleteFavoritesinBulkResponse: !include schemas/deleteFavoritesinBulkResponse-schema.json
+  - listAllContentsResponse: !include schemas/listAllContentsResponse-schema.json
+  - listAllUsersResponse: !include schemas/listAllUsersResponse-schema.json
+  - getReportResponse: !include schemas/getReportResponse-schema.json
+  - getDiscussionResponse: !include schemas/getDiscussionResponse-schema.json
+  - getSheetVersionResponse: !include schemas/getSheetVersionResponse-schema.json
+  - createDiscussionResponse: !include schemas/createDiscussionResponse-schema.json
+  - getWorkspaceResponse: !include schemas/getWorkspaceResponse-schema.json
+  - sendRowResponse: !include schemas/sendRowResponse-schema.json
+  - creatingandUpdatingLinksResponse: !include schemas/creatingandUpdatingLinksResponse-schema.json
+  - addMemberstoGroupRequest: !include schemas/addMemberstoGroupRequest-schema.json
+  - sendReportResponse: !include schemas/sendReportResponse-schema.json
+  - insertRowsintoSheetResponse: !include schemas/insertRowsintoSheetResponse-schema.json
+  - updateWorkspaceRequest: !include schemas/updateWorkspaceRequest-schema.json
+  - updateFolderResponse: !include schemas/updateFolderResponse-schema.json
+  - createfromSheetorTemplateRequest: !include schemas/createfromSheetorTemplateRequest-schema.json
+  - addCommentResponse: !include schemas/addCommentResponse-schema.json
+  - createDiscussionRequest: !include schemas/createDiscussionRequest-schema.json
+  - removeMemeberFromGroupResponse: !include schemas/removeMemeberFromGroupResponse-schema.json
+  - updateSheetRequest: !include schemas/updateSheetRequest-schema.json
+  - deleteDiscussionResponse: !include schemas/deleteDiscussionResponse-schema.json
+  - createfromSheetorTemplateResponse: !include schemas/createfromSheetorTemplateResponse-schema.json
+  - getSharesResponse: !include schemas/getSharesResponse-schema.json
+  - updateGroupRequest: !include schemas/updateGroupRequest-schema.json
+  - creatingandUpdatingLinksRequest: !include schemas/creatingandUpdatingLinksRequest-schema.json
+  - modifyRowResponse: !include schemas/modifyRowResponse-schema.json
+  - createFavoritesRequest: !include schemas/createFavoritesRequest-schema.json
+  - getShareResponse: !include schemas/getShareResponse-schema.json
+  - updateWorkspaceResponse: !include schemas/updateWorkspaceResponse-schema.json
+  - searchSheetResponse: !include schemas/searchSheetResponse-schema.json
+  - sendRowRequest: !include schemas/sendRowRequest-schema.json
+  - searchEverythingResponse: !include schemas/searchEverythingResponse-schema.json
+  - getRowAttachmentsResponse: !include schemas/getRowAttachmentsResponse-schema.json
+  - sharetoManyRequest: !include schemas/sharetoManyRequest-schema.json
+  - getCellHistoryResponse: !include schemas/getCellHistoryResponse-schema.json
+  - deleteSheetResponse: !include schemas/deleteSheetResponse-schema.json
+  - createSheetResponse: !include schemas/createSheetResponse-schema.json
+  - modifyColumnRequest: !include schemas/modifyColumnRequest-schema.json
+  - sharewithGroupstoManyRequest: !include schemas/sharewithGroupstoManyRequest-schema.json
+  - sendReportRequest: !include schemas/sendReportRequest-schema.json
+  - getSharewithGroupsResponse: !include schemas/getSharewithGroupsResponse-schema.json
+  - getPublishStatusResponse: !include schemas/getPublishStatusResponse-schema.json
+  - deleteColumnResponse: !include schemas/deleteColumnResponse-schema.json
+  - deleteAttachmentResponse: !include schemas/deleteAttachmentResponse-schema.json
+  - getSheetincl.RowsResponse: !include schemas/getSheetincl.RowsResponse-schema.json
+  - listAllSheetsResponse: !include schemas/listAllSheetsResponse-schema.json
+  - createGroupResponse: !include schemas/createGroupResponse-schema.json
+  - sharetoOneResponse: !include schemas/sharetoOneResponse-schema.json
+  - addCommentRequest: !include schemas/addCommentRequest-schema.json
+  - updateRowCellsRequest: !include schemas/updateRowCellsRequest-schema.json
+  - modifyRowRequest: !include schemas/modifyRowRequest-schema.json
+  - getSheetIncludeRowsResponse: !include /schemas/getSheetIncludeRowsResponse-schema.json
+resourceTypes:
+  - attachUrlOrFile: !include resourceTypes/attachUrlOrFile.raml
+  - shareWithGroups: !include resourceTypes/shareWithGroups.raml
+  - createSheet: !include resourceTypes/createSheet.raml
+  - createDiscussions: !include resourceTypes/createDiscussions.raml
+  - sharesWithGroups: !include resourceTypes/sharesWithGroups.raml
+  - childFolders: !include resourceTypes/childFolders.raml
+  - multiShareWithGroups: !include resourceTypes/multiShareWithGroups.raml
+traits:
+  - page: !include traits/page.raml
+  - sendEmail: !include traits/sendEmail.raml
+  - include: !include traits/include.raml
+/home: 
+  get: 
+    is: [ include ]
+    description: |
+      Provides a nested list of all Home objects, including sheets, workspaces and folders, and optionally reports and/or templates, as shown on the Home tab. NOTE: if there are no folders, sheets, templates (optional), or workspaces present, empty arrays are returned.
+       Allowed For: [READ_SHEETS]
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: listAllContentsResponse
+            example: !include examples/listAllContentsResponse-example.json
+  /folders: 
+    type: childFolders
+/favorites: 
+  get: 
+    description: List All Favorites
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: listAllFavoritesResponse
+            example: !include examples/listAllFavoritesResponse-example.json
+  post: 
+    description: Create Favorites
+    body: 
+      application/json: 
+        schema: createFavoritesRequest
+        example: !include examples/createFavoritesRequest-example.json
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: createFavoritesResponse
+            example: !include examples/createFavoritesResponse-example.json
+  /{type}: 
+    delete: 
+      description: Delete Favorites in Bulk
+      queryParameters: 
+        objectIds: 
+          description: objectIds is a comma-separated list of object IDs
+          example: 2,7
+      responses: 
+        204: 
+          body: 
+            application/json: 
+              schema: deleteFavoritesinBulkResponse
+              example: !include examples/deleteFavoritesinBulkResponse-example.json
+    /{objectId}: 
+      delete: 
+        description: Delete Favorite
+        responses: 
+          204: 
+            body: 
+              application/json: 
+                schema: deleteFavoriteResponse
+                example: !include examples/deleteFavoriteResponse-example.json
+/workspaces: 
+  get: 
+    description: |
+      Lists all of the Workspaces to which the user has access.
+       Allowed For: [READ_SHEETS]
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: listAllWorkspacesResponse
+            example: !include examples/listAllWorkspacesResponse-example.json
+  post: 
+    description: |
+      Creates a new Workspace.
+       Allowed For: [ADMIN_WORKSPACES]
+    body: 
+      application/json: 
+        schema: createWorkspaceRequest
+        example: !include examples/createWorkspaceRequest-example.json
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: createWorkspaceResponse
+            example: !include examples/createWorkspaceResponse-example.json
+/workspace: 
+  /{workspaceId}: 
+    get: 
+      description: |
+        Lists contents of a Workspace. By default, this only lists the top level items in the workspace. To load all of the contents, including nested folders, include the "loadAll=true" query string parameter. NOTE: if no folders and/or sheets are present in the workspace, the corresponding attribute (e.g., "folders", "sheets") will not be present in the response object.
+         Allowed For: [READ_SHEETS]
+      queryParameters: 
+        loadAll: 
+          description: Load all of the contents, including nested folders
+          type: boolean
+          default: false
+          example: true
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: getWorkspaceResponse
+              example: !include examples/getWorkspaceResponse-example.json
+    put: 
+      description: |
+        Updates a Workspace. Method PUT /workspace/{id} Access Scope ADMIN_WORKSPACES Headers Content-Type: application/json Request Body Workspace object limited to the following attribute: name (string) Returns Result object containing the updated Workspace object.
+         Allowed For: [ADMIN_WORKSPACES]
+      body: 
+        application/json: 
+          schema: updateWorkspaceRequest
+          example: !include examples/updateWorkspaceRequest-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: updateWorkspaceResponse
+              example: !include examples/updateWorkspaceResponse-example.json
+    delete: 
+      description: |
+        Deletes a Workspace and all its contents. Method DELETE /workspace/{id} Access Scope ADMIN_WORKSPACES Returns Result object indicating success..
+         Allowed For: [ADMIN_WORKSPACES]
+      responses: 
+        204: 
+          body: 
+            application/json: 
+              schema: deleteWorkspaceResponse
+              example: !include examples/deleteWorkspaceResponse-example.json
+    /folders: 
+      type: childFolders
+    /sheets: 
+      type: createSheet
+    /shares: 
+      get: 
+        description: |
+          Lists all the Users to whom a Sheet or Workspace is shared, and their access level.
+           Allowed For: [READ_SHEETS]
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: getSharesResponse
+                example: !include examples/getSharesResponse-example.json
+      post: 
+        is: [ sendEmail ]
+        description: |
+          Shares a Sheet or Workspace to the user specified.
+           Allowed For: [SHARE_SHEETS(when working with Sheets) ADMIN_WORKSPACES (when working with Workspaces)]
+        body: 
+          application/json: 
+            schema: sharetoOneRequest
+            example: !include examples/sharetoOneRequest-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: sharetoOneResponse
+                example: !include examples/sharetoOneResponse-example.json
+    /share: 
+      /{userId}: 
+        get: 
+          description: |
+            Returns the access level for the specified user on the specified sheet or workspace .
+             Allowed For: [READ_SHEETS]
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: getShareResponse
+                  example: !include examples/getShareResponse-example.json
+        put: 
+          description: |
+            Updates the access level of a user of the specified Sheet or Workspace.
+             Allowed For: [SHARE_SHEETS(when working with Sheets) ADMIN_WORKSPACES (when working with Workspaces)]
+          body: 
+            application/json: 
+              schema: updateShareRequest
+              example: !include examples/updateShareRequest-example.json
+          responses: 
+            201: 
+              body: 
+                application/json: 
+                  schema: updateShareResponse
+                  example: !include examples/updateShareResponse-example.json
+        delete: 
+          description: |
+            Deletes the Share.
+             Allowed For: [SHARE_SHEETS(when working with Sheets) ADMIN_WORKSPACES (when working with Workspaces)]
+          responses: 
+            204: 
+              body: 
+                application/json: 
+                  schema: deleteShareResponse
+                  example: !include examples/deleteShareResponse-example.json
+    /multishare: 
+      post: 
+        is: [ sendEmail ]
+        description: |
+          Shares a Sheet or Workspace to the users specified.
+           Allowed For: [SHARE_SHEETS(when working with Sheets) ADMIN_WORKSPACES (when working with Workspaces)]
+        body: 
+          application/json: 
+            schema: sharetoManyRequest
+            example: !include examples/sharetoManyRequest-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: sharetoManyResponse
+                example: !include examples/sharetoManyResponse-example.json
+    /shareswithgroups: 
+      type: sharesWithGroups
+    /sharewithgroups: 
+      /{shareId}: 
+        type: shareWithGroups
+    /multisharewithgroups: 
+      type: multiShareWithGroups
+/folder: 
+  /{folderId}: 
+    get: 
+      description: |
+        List contents of a Folder. NOTE: if no folders and/or sheets are present in the folder, the corresponding attribute (e.g., "folders", "sheets") will not be present in the response object.
+         Allowed For: [READ_SHEETS]
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: getFolderResponse
+              example: !include examples/getFolderResponse-example.json
+    put: 
+      description: |
+        Updates folder.
+         Allowed For: [ADMIN_WORKSPACES]
+      body: 
+        application/json: 
+          schema: updateFolderRequest
+          example: !include examples/updateFolderRequest-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: updateFolderResponse
+              example: !include examples/updateFolderResponse-example.json
+    delete: 
+      description: |
+        Deletes folder and its contents.
+         Allowed For: [ADMIN_WORKSPACES]
+      responses: 
+        204: 
+          body: 
+            application/json: 
+              schema: deleteFolderResponse
+              example: !include examples/deleteFolderResponse-example.json
+    /folders: 
+      type: childFolders
+    /sheets: 
+      type: createSheet
+/templates: 
+  get: 
+    description: |
+      Lists all of the templates to which the user has access. Note: only user-created templates will be returned. If you like a public template created by Smartsheet and want to make it available via the API, please save it as your own template.
+       Allowed For: [READ_SHEETS]
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: listAllTemplatesResponse
+            example: !include examples/listAllTemplatesResponse-example.json
+/sheets: 
+  type: createSheet
+  get: 
+    description: |
+      Lists all the sheets in alphabetical order, by name
+       Allowed For: [READ_SHEETS]
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: listAllSheetsResponse
+            example: !include examples/listAllSheetsResponse-example.json
+/sheet: 
+  /{sheetId}: 
+    get: 
+      is: [ page ]
+      description: |
+        Returns the sheet in the format specified. Gantt chart is not generated at this time.
+         Allowed For: [READ_SHEETS]
+      headers: 
+        Accept: 
+          enum: 
+            - application/vnd.ms-excel
+            - text/csv
+            - application/pdf
+          example: application/pdf
+      queryParameters: 
+        rowIds: 
+          description: Comma-separated list of row IDs on which to filter the rows included in the result.
+          example: 2,7
+        columnIds: 
+          description: |
+            Comma-separated list of column IDs .  The response payload will contain only the specified columns in the "columns" array, and individual rows' "cells" array will only contain cells in the specified columns.
+          example: 2,7
+        page: 
+          description: Which page number (1-based) to return.  If not specified, the default value is 1.  If a page number is specified that is greater than the number of total pages, the last page will be returned.
+          example: 2
+        "paperSize ": 
+          description: |
+            query string parameter, applies to PDF only, must be one of: LEGAL, WIDE, ARCHD, A4, A3, A2, A1, A0
+          default: LETTER
+          example: WIDE
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: getSheetIncludeRowsResponse
+              example: !include examples/getSheetIncludeRowsResponse-example.json
+    delete: 
+      description: |
+        Deletes the sheet specified in the URL.
+         Allowed For: [DELETE_SHEETS]
+      responses: 
+        204: 
+          body: 
+            application/json: 
+              schema: deleteSheetResponse
+              example: !include examples/deleteSheetResponse-example.json
+    put: 
+      description: |
+        Updates (renames) the sheet specified in the URL. To modify sheet contents, see Insert Rows into Sheet, Modify Row, Update Row Cells, and Modify Column. Method PUT /sheet/{sheetId} Access Scope ADMIN_SHEETS Headers Content-type: application/json Request Body JSON-formatted Sheet object, limited to the following attribute: name(string) Name need not be unique. Returns Result object containing a Sheet object for the newly updated sheet.
+         Allowed For: [ADMIN_SHEETS]
+      body: 
+        application/json: 
+          schema: updateSheetRequest
+          example: !include examples/updateSheetRequest-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: updateSheetResponse
+              example: !include examples/updateSheetResponse-example.json
+    /version: 
+      get: 
+        description: |
+          Returns the sheet version without loading the entire sheet. The following actions increment sheet version: add/modify cell value add/modify row add/modify discussion/comment change formatting add/remove/update version attachment cell updated via cell link
+           Allowed For: [READ_SHEETS]
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: getSheetVersionResponse
+                example: !include examples/getSheetVersionResponse-example.json
+    /emails: 
+      post: 
+        description: |
+          Sends the sheet as a PDF attachment via email to the designated recipients.
+           Allowed For: [SHARE_SHEETS]
+        body: 
+          application/json: 
+            schema: sendSheetRequest
+            example: !include examples/sendSheetRequest-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: sendSheetResponse
+                example: !include examples/sendSheetResponse-example.json
+    /columns: 
+      get: 
+        is: [ include ]
+        description: |
+          Returns the columns on the sheet.
+           Allowed For: [READ_SHEETS]
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: getColumnsResponse
+                example: !include examples/getColumnsResponse-example.json
+      post: 
+        description: |
+          Inserts a column into the sheet. See Column Types for more information. Result object containing Column object for the newly created column.
+           Allowed For: [ADMIN_SHEETS]
+        body: 
+          application/json: 
+            schema: addColumntoSheetRequest
+            example: !include examples/addColumntoSheetRequest-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: addColumntoSheetResponse
+                example: !include examples/addColumntoSheetResponse-example.json
+    /rows: 
+      post: 
+        description: |
+          Inserts rows into the sheet. Note that all rows are added at the same hierarchical level, as specified by the RowWrapper. Currently we do not support different levels of hierarchy within the inserted rows. See Contact List Columns for information on inserting cells for columns of type CONTACT_LIST. Result object containing an array of newly inserted Row objects. Result object also returns the new version of the sheet.
+           Allowed For: [WRITE_SHEETS]
+        body: 
+          application/json: 
+            schema: insertRowsintoSheetRequest
+            example: !include examples/insertRowsintoSheetRequest-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: insertRowsintoSheetResponse
+                example: !include examples/insertRowsintoSheetResponse-example.json
+    /row: 
+      /{rowNumber}: 
+        get: 
+          description: |
+            Get row by its number in the Sheet. Row object.
+             Allowed For: [READ_SHEETS]
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: getRowbyNumberResponse
+                  example: !include examples/getRowbyNumberResponse-example.json
+      /{rowId}: 
+        get: 
+          is: [ include ]
+          description: |
+            Gets a row by its Id. Result object for the ID provided.
+             Allowed For: [READ_SHEETS]
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: getRowResponse
+                  example: !include examples/getRowResponse-example.json
+        put: 
+          description: |
+            Allows you to expand/collapse a row or modify its position (including indenting/outdenting). All child rows are moved with the row. Result object containing an array of Row objects that have been moved by the operation.
+             Allowed For: [WRITE_SHEETS]
+          body: 
+            application/json: 
+              schema: modifyRowRequest
+              example: !include examples/modifyRowRequest-example.json
+          responses: 
+            201: 
+              body: 
+                application/json: 
+                  schema: modifyRowResponse
+                  example: !include examples/modifyRowResponse-example.json
+        delete: 
+          description: |
+            Deletes the row by its Id. Note that this will delete ALL child rows of the row specified. Result object.
+             Allowed For: [WRITE_SHEETS]
+          responses: 
+            204: 
+              body: 
+                application/json: 
+                  schema: deleteRowResponse
+                  example: !include examples/deleteRowResponse-example.json
+        /emails: 
+          post: 
+            description: |
+              Sends a row via email. Result object.
+               Allowed For: [SHARE_SHEETS]
+            body: 
+              application/json: 
+                schema: sendRowRequest
+                example: !include examples/sendRowRequest-example.json
+            responses: 
+              201: 
+                body: 
+                  application/json: 
+                    schema: sendRowResponse
+                    example: !include examples/sendRowResponse-example.json
+        /column: 
+          /{columnId}: 
+            /history: 
+              get: 
+                description: |
+                  Gets the cell modification history. Note that this is a resource-intensive operation and incurs 10 additional requests against the rate limit. An array of Cell History Objects
+                   Allowed For: [READ_SHEETS]
+                responses: 
+                  200: 
+                    body: 
+                      application/json: 
+                        schema: getCellHistoryResponse
+                        example: !include examples/getCellHistoryResponse-example.json
+        /attachments: 
+          type: attachUrlOrFile
+          get: 
+            description: |
+              Returns a list of all Attachments that are on the row, including row and discussion level Attachments.
+               Allowed For: [READ_SHEETS]
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: getRowAttachmentsResponse
+                    example: !include examples/getRowAttachmentsResponse-example.json
+        /discussions: 
+          type: createDiscussions
+    /attachments: 
+      type: attachUrlOrFile
+      get: 
+        description: |
+          Returns a list of all Attachments that are on the sheet, including sheet, row and discussion level Attachments.
+           Allowed For: [READ_SHEETS]
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: getSheetAttachmentsResponse
+                example: !include examples/getSheetAttachmentsResponse-example.json
+    /publish: 
+      get: 
+        description: |
+          Returns the status of the Publish settings of the sheet, including the URLs of any enabled publishings.
+           Allowed For: [READ_SHEETS]
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: getPublishStatusResponse
+                example: !include examples/getPublishStatusResponse-example.json
+      put: 
+        description: |
+          Sets the publish status of a sheet and returns the new status, including the URLs of any enabled publishings.
+           Allowed For: [ADMIN_SHEETS]
+        body: 
+          application/json: 
+            schema: setPublishStatusRequest
+            example: !include examples/setPublishStatusRequest-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: setPublishStatusResponse
+                example: !include examples/setPublishStatusResponse-example.json
+    /column: 
+      /{columnId}: 
+        put: 
+          description: |
+            Allows you to move, rename, or change column properties. Note that you cannot change the type of a Primary column, or any special calendar/Gantt columns. Also, if the column type is changed, all cells in the column will be converted to the new column type. Type is optional when moving or renaming, but required when changing type or dropdown values. Result object containing Column object that was modified.
+             Allowed For: [ADMIN_SHEETS]
+          body: 
+            application/json: 
+              schema: modifyColumnRequest
+              example: !include examples/modifyColumnRequest-example.json
+          responses: 
+            201: 
+              body: 
+                application/json: 
+                  schema: modifyColumnResponse
+                  example: !include examples/modifyColumnResponse-example.json
+        delete: 
+          description: |
+            Deletes a column. Result object.
+             Allowed For: [ADMIN_SHEETS]
+          responses: 
+            204: 
+              body: 
+                application/json: 
+                  schema: deleteColumnResponse
+                  example: !include examples/deleteColumnResponse-example.json
+    /attachment: 
+      /{attachmentId}: 
+        get: 
+          description: |
+            Fetches an attachment based on the Attachment id.
+             Allowed For: [READ_SHEETS]
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: getAttachmentResponse
+                  example: !include examples/getAttachmentResponse-example.json
+        delete: 
+          description: |
+            Deletes attachment. If the attachment has multiple versions this deletes only the specific version specified by the attachmentId (each version has a different attachment ID).
+             Allowed For: [WRITE_SHEETS]
+          responses: 
+            204: 
+              body: 
+                application/json: 
+                  schema: deleteAttachmentResponse
+                  example: !include examples/deleteAttachmentResponse-example.json
+        /versions: 
+          get: 
+            description: Get All Versions
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: getAllVersionsResponse
+                    example: !include examples/getAllVersionsResponse-example.json
+          post: 
+            description: Upload New Version
+            headers: 
+              Content-Type: 
+                example: application/msword
+              Content-Disposition: 
+                example: 'attachment; filename="ProgressReport.docx"'
+              Content-Length: 
+                example: 5463
+            body: 
+              multipart/form-data: 
+                formParameters: 
+                  data-binary: 
+                    type: file
+                    required: true
+            responses: 
+              201: 
+                body: 
+                  application/json: 
+                    schema: uploadNewVersionResponse
+                    example: !include examples/uploadNewVersionResponse-example.json
+          delete: 
+            description: Delete All Versions
+            responses: 
+              204: 
+                body: 
+                  application/json: 
+                    schema: deleteAllVersionsResponse
+                    example: !include examples/deleteAllVersionsResponse-example.json
+    /comment: 
+      /{commentId}: 
+        get: 
+          description: |
+            Gets a comment by id. Method Access Scope READ_SHEETS Headers Content-Type: application/json Returns A Comment object.
+             Allowed For: [READ_SHEETS]
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: getCommentResponse
+                  example: !include examples/getCommentResponse-example.json
+        delete: 
+          description: |
+            Deletes a comment by id. Method DELETE /sheet/{sheetId}/comment/{commentId} Deprecated as of 11/8/2014: DELETE /comment/{commentId} Access Scope WRITE_SHEETS Headers Content-Type: application/json Returns A Result object indicate success of the operation.
+             Allowed For: [WRITE_SHEETS]
+          responses: 
+            204: 
+              body: 
+                application/json: 
+                  schema: deleteCommentResponse
+                  example: !include examples/deleteCommentResponse-example.json
+        /attachments: 
+          type: attachUrlOrFile
+    /discussion: 
+      /{discussionId}: 
+        get: 
+          description: |
+            Gets a Discussion by its ID.
+             Allowed For: [READ_SHEETS]
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: getDiscussionResponse
+                  example: !include examples/getDiscussionResponse-example.json
+        delete: 
+          description: |
+            Deletes a discussion by id. Method DELETE /sheet/{sheetId}/discussion/{discussionId} Deprecated as of 11/8/2014: DELETE /discussion/{discussionId} Access Scope WRITE_SHEETS Headers Content-Type: application/json Returns A Result object indicate success of the operation.
+             Allowed For: [WRITE_SHEETS]
+          responses: 
+            204: 
+              body: 
+                application/json: 
+                  schema: deleteDiscussionResponse
+                  example: !include examples/deleteDiscussionResponse-example.json
+        /comments: 
+          post: 
+            description: |
+              Adds a Comment to a Discussion.
+               Allowed For: [WRITE_SHEETS]
+            body: 
+              application/json: 
+                schema: addCommentRequest
+                example: !include examples/addCommentRequest-example.json
+            responses: 
+              201: 
+                body: 
+                  application/json: 
+                    schema: addCommentResponse
+                    example: !include examples/addCommentResponse-example.json
+        /attachments: 
+          get: 
+            description: |
+              Returns a list of all Attachments that are in the discussion.
+               Allowed For: [READ_SHEETS]
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: getDiscussionAttachmentsResponse
+                    example: !include examples/getDiscussionAttachmentsResponse-example.json
+    /discussions: 
+      type: createDiscussions
+    /shares: 
+      get: 
+        description: |
+          Lists all the Users to whom a Sheet or Workspace is shared, and their access level.
+           Allowed For: [READ_SHEETS]
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: getSharesResponse
+                example: !include examples/getSharesResponse-example.json
+      post: 
+        is: [ sendEmail ]
+        description: |
+          Shares a Sheet or Workspace to the user specified.
+           Allowed For: [SHARE_SHEETS(when working with Sheets) ADMIN_WORKSPACES (when working with Workspaces)]
+        body: 
+          application/json: 
+            schema: sharetoOneRequest
+            example: !include examples/sharetoOneRequest-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: sharetoOneResponse
+                example: !include examples/sharetoOneResponse-example.json
+    /share: 
+      /{userId}: 
+        get: 
+          description: |
+            Returns the access level for the specified user on the specified sheet or workspace .
+             Allowed For: [READ_SHEETS]
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: getShareResponse
+                  example: !include examples/getShareResponse-example.json
+        put: 
+          description: |
+            Updates the access level of a user of the specified Sheet or Workspace.
+             Allowed For: [SHARE_SHEETS(when working with Sheets) ADMIN_WORKSPACES (when working with Workspaces)]
+          body: 
+            application/json: 
+              schema: updateShareRequest
+              example: !include examples/updateShareRequest-example.json
+          responses: 
+            201: 
+              body: 
+                application/json: 
+                  schema: updateShareResponse
+                  example: !include examples/updateShareResponse-example.json
+        delete: 
+          description: |
+            Deletes the Share.
+             Allowed For: [SHARE_SHEETS(when working with Sheets) ADMIN_WORKSPACES (when working with Workspaces)]
+          responses: 
+            204: 
+              body: 
+                application/json: 
+                  schema: deleteShareResponse
+                  example: !include examples/deleteShareResponse-example.json
+    /multishare: 
+      post: 
+        is: [ sendEmail ]
+        description: |
+          Shares a Sheet or Workspace to the users specified.
+           Allowed For: [SHARE_SHEETS(when working with Sheets) ADMIN_WORKSPACES (when working with Workspaces)]
+        body: 
+          application/json: 
+            schema: sharetoManyRequest
+            example: !include examples/sharetoManyRequest-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: sharetoManyResponse
+                example: !include examples/sharetoManyResponse-example.json
+    /shareswithgroups: 
+      type: sharesWithGroups
+    /multisharewithgroups: 
+      type: multiShareWithGroups
+    /sharewithgroups: 
+      /{shareId}: 
+        type: shareWithGroups
+/report: 
+  /{reportId}: 
+    get: 
+      is: [ page ]
+      description: Get Report
+      queryParameters: 
+        page: 
+          description: Which page number (1-based) to return.  If not specified, the default value is 1.  If a page number is specified that is greater than the number of total pages, the last page will be returned.
+          type: integer
+          example: 7
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: getReportResponse
+              example: !include examples/getReportResponse-example.json
+    /emails: 
+      post: 
+        description: Send Report
+        body: 
+          application/json: 
+            schema: sendReportRequest
+            example: !include examples/sendReportRequest-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: sendReportResponse
+                example: !include examples/sendReportResponse-example.json
+    /shareswithgroups: 
+      type: sharesWithGroups
+    /sharewithgroups: 
+      /{shareId}: 
+        type: shareWithGroups
+    /multisharewithgroups: 
+      type: multiShareWithGroups
+/users: 
+  get: 
+    description: |
+      Lists all users in the organization. You can optionally specify a list of email addresses of users to narrow down the results using the "email" query string parameter.
+      Allowed For [ADMIN_USERS]
+    queryParameters: 
+      email: 
+        description: A comma-separated list of email addresses on which to filter the results.
+        example: john.doe@smartsheet.com
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: listAllUsersResponse
+            example: !include examples/listAllUsersResponse-example.json
+  post: 
+    is: [ sendEmail ]
+    description: |
+      Adds a user to the organization. If successful, will trigger the same invitation flow as it would in the web application.
+       Allowed For: [ADMIN_USERS]
+    body: 
+      application/json: 
+        schema: addUserRequest
+        example: !include examples/addUserRequest-example.json
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: addUserResponse
+            example: !include examples/addUserResponse-example.json
+  /sheets: 
+    get: 
+      description: |
+        Returns the list of all sheets owned by the members of the account (organization).
+         Allowed For: [ADMIN_USERS]
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: listAllSheetsResponse
+              example: !include examples/listAllSheetsResponse-example.json
+/user: 
+  /me: 
+    get: 
+      description: |
+        Gets the current user. Method GET /user/me Access Scope all scopes Headers Content-Type: application/json Returns A User Profile object for the current user.
+         Allowed For: [all scopes]
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: getCurrentUserResponse
+              example: !include examples/getCurrentUserResponse-example.json
+  /{userId}: 
+    get: 
+      description: |
+        Gets a user by id. Method GET /user/{userId} Access Scope ADMIN_USERS Headers Content-Type: application/json Returns A User Profile object for the user specified
+         Allowed For: [ADMIN_USERS]
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: getUserResponse
+              example: !include examples/getUserResponse-example.json
+    put: 
+      description: |
+        Updates a user in the organization.
+         Allowed For: [ADMIN_USERS]
+      body: 
+        application/json: 
+          schema: updateUserRequest
+          example: !include examples/updateUserRequest-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: updateUserResponse
+              example: !include examples/updateUserResponse-example.json
+    delete: 
+      description: |
+        Removes a user from an organization. User is transitioned to a free collaborator with read-only access to owned sheets (unless those are optionally transferred to another user).
+         Allowed For: [ADMIN_USERS]
+      responses: 
+        204: 
+          body: 
+            application/json: 
+              schema: deleteUserResponse
+              example: !include examples/deleteUserResponse-example.json
+/groups: 
+  get: 
+    description: |
+      Returns the list of groups in an organization. To fetch group members, use the GET /group/{id} method.
+       Allowed For: [ADMIN_USERS]
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: listAllGroupsResponse
+            example: !include examples/listAllGroupsResponse-example.json
+  post: 
+    description: |
+      Creates a new group. NOTE: this method is only available to group administrators. Method POST /groups Access Scope ADMIN_USERS Headers Content-Type: application/json Request Body JSON-formatted Group object, limited to the following attributes: name; must be unique within the organization description (optional) members (optional array of Group Member objects limited to the following attributes) email Returns Result object, containing a Group object for the newly-created group.
+       Allowed For: [ADMIN_USERS]
+    body: 
+      application/json: 
+        schema: createGroupRequest
+        example: !include examples/createGroupRequest-example.json
+    responses: 
+      201: 
+        body: 
+          application/json: 
+            schema: createGroupResponse
+            example: !include examples/createGroupResponse-example.json
+/group: 
+  /{groupId}: 
+    get: 
+      description: |
+        Returns group information, including its members. Method GET /group/{groupId} Access Scope ADMIN_USERS Returns Group object, including a list of Group Member objects.
+         Allowed For: [ADMIN_USERS]
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: getGroupResponse
+              example: !include examples/getGroupResponse-example.json
+    put: 
+      description: |
+        Updates a group. NOTE: this method is only available to group administrators and system administrators. Method PUT /group/{groupId} Access Scope ADMIN_USERS Headers Content-type: application/json Request Body JSON-formatted Sheet object, limited to the following attributes: name; must be unique within the organization(optional) description (optional) Returns Result object containing Group object for the updated group.
+         Allowed For: [ADMIN_USERS]
+      body: 
+        application/json: 
+          schema: updateGroupRequest
+          example: !include examples/updateGroupRequest-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: updateGroupResponse
+              example: !include examples/updateGroupResponse-example.json
+    delete: 
+      description: |
+        Deletes a group. NOTES: This method is only available to group administrators and system administarators. This operation is asynchronous, meaning group members may retain their sharing access for a brief period of time after the call returns. For small groups with limited sharing, the operation should complete quickly (within a few seconds). For large groups with many shares, this operation could possibly take more than a minute to complete. Method DELETE /group/{groupId} Access Scope ADMIN_USERS Returns Result object.
+        Allowed For: [ADMIN_USERS]
+      responses: 
+        204: 
+          body: 
+            application/json: 
+              schema: deleteGroupResponse
+              example: !include examples/deleteGroupResponse-example.json
+    /members: 
+      post: 
+        description: |
+          Adds members to a group. NOTES: This method is only available to group administrators and system administrators. This operation is asynchronous, meaning the users may not yet have sharing access to sheets for a period of time after this operation returns. For small groups with limited sharing, the operation should complete quickly (within a few seconds). For large groups with many shares, this operation could possibly take more than a minute to complete. Method POST /group/{groupId}/members Access Scope ADMIN_USERS Headers Content-Type: application/json Request Body Array of JSON-formatted Group Member objects, limited to the following attribute: email Returns Result object, containing an array of the group members that will be added to the group (duplicate members will be filtered out)
+           Allowed For: [ADMIN_USERS]
+        body: 
+          application/json: 
+            schema: addMemberstoGroupRequest
+            example: !include examples/addMemberstoGroupRequest-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: addMemberstoGroupResponse
+                example: !include examples/addMemberstoGroupResponse-example.json
+    /member: 
+      /{userId}: 
+        delete: 
+          description: |
+            Removes member from a group. NOTES: This method is only available to group administrators and system administrators. This operation is asynchronous, meaning group members may retain their sharing access for a brief period of time after the call returns. For small groups with limited sharing, the operation should complete quickly (within a few seconds). For large groups with many shares, this operation could possibly take more than a minute to complete. Method DELETE /group/{groupId}/member/{userId} Access Scope ADMIN_USERS Returns Result object.
+             Allowed For: [ADMIN_USERS]
+          responses: 
+            204: 
+              body: 
+                application/json: 
+                  schema: removeMemeberFromGroupResponse
+                  example: !include examples/removeMemeberFromGroupResponse-example.json
+/search: 
+  get: 
+    description: |
+      Performs a search across all Sheets to which user has access. NOTE: Searching on partial words is supported using wildcards. NOTE: The number of results returned is limited to one hundred. However
+       Allowed For: [READ_SHEETS]
+    queryParameters: 
+      query: 
+        description: Text with which to perform the search.
+        required: true
+        example: mySheet
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: searchEverythingResponse
+            example: !include examples/searchEverythingResponse-example.json
+  /sheet: 
+    /{sheetId}: 
+      get: 
+        description: Search Sheet
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: searchSheetResponse
+                example: !include examples/searchSheetResponse-example.json
+/serverinfo: 
+  get: 
+    description: Get Server Info
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: getServerInfoResponse
+            example: !include examples/getServerInfoResponse-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

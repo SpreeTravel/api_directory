@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "login": {
+      "description": "The specified bitly login or the login of the authenticated user.",
+      "type": "string"
+    },
+    "profile_url": {
+      "description": "URL of user's profile page.",
+      "type": "string"
+    },
+    "profile_image": {
+      "description": "URL of user's profile image.",
+      "type": "string"
+    },
+    "member_since": {
+      "description": "Unix timestamp for the moment the user signed up.",
+      "type": "string"
+    },
+    "full_name": {
+      "description": "The user's full name, if set.",
+      "type": "string",
+      "required": false
+    },
+    "display_name": {
+      "description": "The user's display name, if set.",
+      "type": "string",
+      "required": false
+    },
+    "share_accounts": {
+      "type": "array",
+      "items": {
+        "description": "A list of the share accounts (Twitter or Facebook) linked to the user's account.",
+        "type": "string",
+        "required": false
+      }
+    },
+    "apiKey": {
+      "description": "The user's bitly API key.",
+      "type": "string"
+    },
+    "is_enterprise": {
+      "description": "0 or 1 to indicate if this account is signed up for bitly enterprise.",
+      "type": "boolean",
+      "default": false
+    },
+    "custom_short_domain": {
+      "description": "A short domain registered with this account that can be used in place of bit.ly for shortening links.",
+      "type": "string"
+    },
+    "tracking_domains": {
+      "type": "array",
+      "items": {
+        "description": "A list of domains configured for analytics tracking."
+      }
+    },
+    "default_link_privacy": {
+      "description": "Public or private indicating the default privacy setting for new links.",
+      "enum": [
+        "public",
+        "private"
+      ]
+    },
+    "domain_preference_options": {
+      "type": "array",
+      "items": {
+        "description": "A list of the valid short domains that this account can choose as a default."
+      }
+    }
+  }
+}

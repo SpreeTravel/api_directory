@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Users">
+  <xs:complexType mixed="true">
+    <xs:sequence>
+    <xs:element minOccurs="0" maxOccurs="unbounded" ref="User"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="User">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="UserID"/>
+    <xs:element ref="FirstName"/>
+    <xs:element ref="LastName"/>
+    <xs:element ref="UpdatedDateUTC"/>
+    <xs:element ref="IsSubscriber"/>
+    <xs:element ref="OrganisationRole"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="UserID" type="xs:string"/>
+  <xs:element name="FirstName" type="xs:NCName"/>
+  <xs:element name="LastName" type="xs:NCName"/>
+  <xs:element name="UpdatedDateUTC" type="xs:dateTime"/>
+  <xs:element name="IsSubscriber" type="xs:boolean"/>
+  <xs:element name="OrganisationRole" type="xs:NCName"/>
+</xs:schema>

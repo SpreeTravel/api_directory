@@ -1,0 +1,27 @@
+{
+  "kind" : "blogger#pageList" ,
+  "items" : [
+    {
+      "kind" : "blogger#page" ,
+      "id" : "string" ,
+      "status" : "string" ,
+      "blog" : {
+        "id" : "string"
+      } ,
+      "published" : "datetime" ,
+      "updated" : "datetime" ,
+      "url" : "string" ,
+      "selfLink" : "string" ,
+      "title" : "string" ,
+      "content" : "string" ,
+      "author" : {
+        "id" : "string" ,
+        "displayName" : "string" ,
+        "url" : "string" ,
+        "image" : {
+          "url" : "string"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : 
+    {
+      "type" : "object" ,
+      "properties" : {
+        "Version" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "Key" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Type" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Rank" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "LocalizedName" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Country" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "ID" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "LocalizedName" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "AdministrativeArea" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "ID" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "LocalizedName" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      }
+    }
+  
+}

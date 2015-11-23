@@ -1,0 +1,185 @@
+#%RAML 0.8
+title: Fuel Economy
+baseUri: http://www.fueleconomy.gov/ws/rest
+mediaType: application/xml
+schemas:
+  - vehicle: !include schemas/vehicle-schema.xsd
+  - emissionsInfo: !include schemas/emissionsInfo-schema.xsd
+  - menu: !include schemas/menu-schema.xsd
+  - fuelPrices: !include schemas/fuelPrices-schema.xsd
+  - yourMpgVehicle: !include schemas/yourMpgVehicle-schema.xsd
+  - yourMpgDriverVehicles: !include schemas/yourMpgDriverVehicles-schema.xsd
+  - vehicles: !include schemas/vehicles-schema.xsd
+  - menuYear: !include schemas/menu-year-schema.xsd
+  - menuOptions: !include schemas/menu-options-schema.xsd
+  - recommendationSet: !include schemas/recommendationSet-schema.json
+traits:
+  - hasVclass: !include traits/hasVclass.raml
+  - hasYear: !include traits/hasYear.raml
+  - hasMake: !include traits/hasMake.raml
+  - hasModel: !include traits/hasModel.raml
+/vehicle: 
+  /{id}: 
+    get: 
+      description: Return a specific vehicle record
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: vehicle
+              example: !include examples/vehicle-example.xml
+  /emissions/{id}: 
+    get: 
+      description: Return a list of emission records for specific vehicle record
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: emissionsInfo
+              example: !include examples/emissionsInfo-example.xml
+  /menu: 
+    /year: 
+      get: 
+        description: Returns a list of model years
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: menuYear
+                example: !include examples/menu-year-example.xml
+    /make: 
+      get: 
+        is: [ hasYear ]
+        description: Return a list of makes for a particular year
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: menu
+                example: !include examples/menu-make-example.xml
+    /model: 
+      get: 
+        is: [ hasMake , hasYear ]
+        description: Return a list of models for a particular year and make
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: menu
+                example: !include examples/menu-model-example.xml
+    /options: 
+      get: 
+        is: [ hasModel , hasMake , hasYear ]
+        description: Return a list of model options and the associated vehicle ID for a particular year, make and model
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: menuOptions
+                example: !include examples/menu-options-example.xml
+  /export/all: 
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+            application/json: 
+/fuelprices: 
+  get: 
+    description: Return the current fuel prices
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: fuelPrices
+            example: !include examples/fuelPrices-example.xml
+/ympg/shared: 
+  /ympgVehicle/{id}: 
+    get: 
+      description: Return a summary of shared user MPG data for a specific vehicle ID
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: yourMpgVehicle
+              example: !include examples/yourMpgVehicle-example.xml
+  /ympgDriverVehicle/{id}: 
+    get: 
+      description: Return a list of user MPG records for a specific vehicle ID
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: yourMpgDriverVehicles
+              example: !include examples/yourMpgDriverVehicles-example.xml
+  /menu: 
+    /make: 
+      get: 
+        description: Menu of shared make
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: menu
+                example: !include examples/menu-shared-make-example.xml
+    /model: 
+      get: 
+        is: [ hasMake ]
+        description: Menu of shared models for the specified make
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: menu
+                example: !include examples/menu-shared-models-example.xml
+  /vehicles: 
+    get: 
+      is: [ hasModel , hasMake ]
+      description: List of vehicles with shared Your MPG data
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: vehicles
+              example: !include examples/vehicles-example.xml
+/recommendation/byid: 
+  get: 
+    queryParameters: 
+      id1: 
+      id2: 
+      id3: 
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+          application/json: 
+            schema: recommendationSet
+            example: !include examples/recommendationSet-example.json
+/smartway/vehicles: 
+  is: [ hasYear ]
+  get: 
+    is: [ hasVclass ]
+    queryParameters: 
+      state: 
+      callback: 
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+          application/json: 
+          application/x-javascript: 
+/fleet/eisa141: 
+  get: 
+    is: [ hasVclass ]
+    queryParameters: 
+      ffv: 
+      year1: 
+      year2: 
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+          application/json: 
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

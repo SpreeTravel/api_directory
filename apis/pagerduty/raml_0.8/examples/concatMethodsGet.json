@@ -1,0 +1,30 @@
+{
+	"total" : 3 ,
+	"contact_methods" : [ {
+		"id" : "PWQ8MIH" ,
+		"label" : "Work" ,
+		"address" : "bob@acme.com" ,
+		"user_id" : "PPSFHH7" ,
+		"type" : "email" ,
+		"email" : "bob@acme.com" ,
+		"send_short_email" : false
+	} , {
+		"id" : "P6W4C77" ,
+		"label" : "Work" ,
+		"address" : "5551234567" ,
+		"user_id" : "PPSFHH7" ,
+		"type" : "phone" ,
+		"country_code" : 1 ,
+		"phone_number" : "5551234567" ,
+		"blacklisted" : false
+	} , {
+		"id" : "PK9SG1A" ,
+		"label" : "Mobile" ,
+		"address" : "5551234567" ,
+		"user_id" : "PPSFHH7" ,
+		"type" : "SMS" ,
+		"country_code" : 1 ,
+		"phone_number" : "5551234567" ,
+		"blacklisted" : false
+	} ]
+}

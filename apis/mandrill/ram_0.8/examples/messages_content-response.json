@@ -1,0 +1,26 @@
+{
+  "ts": 1365190000,
+  "_id": "abc123abc123abc123abc123",
+  "from_email": "sender@example.com",
+  "from_name": "Sender Name",
+  "subject": "example subject",
+  "to": {
+    "email": "recipient.email@example.com",
+    "name": "Recipient Name"
+  },
+  "tags": [
+    "password-reset"
+  ],
+  "headers": {
+    "Reply-To": "replies@example.com"
+  },
+  "text": "Some text content",
+  "html": "<p>Some HTML content</p>",
+  "attachments": [
+    {
+      "name": "example.txt",
+      "type": "text/plain",
+      "content": "QSBzaW1wbGUgdGV4dCBzdHJpbmcgYXR0YWNobWVudA=="
+    }
+  ]
+}

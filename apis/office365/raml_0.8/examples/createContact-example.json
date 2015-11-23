@@ -1,0 +1,8 @@
+{
+  "@odata.type": "#Microsoft.Exchange.Services.OData.Model.Contact",
+  "GivenName": "Mara",
+  "Surname": "Whitley",
+  "EmailAddress1": "mara@fabrikam.com",
+  "BusinessPhone1": "425-555-1313",
+  "Birthday": "1974-07-22T07:00:00Z"
+}

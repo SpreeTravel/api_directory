@@ -1,0 +1,113 @@
+{
+  "data": {
+    "canonical_url": "http://blog.bitly.com/post/26449494972/happy-independence-day-america",
+    "category": "text",
+    "content_length": 19582,
+    "content_type": "text/html; charset=UTF-8",
+    "domain": "blog.bitly.com",
+    "favicon_url": "http://bitly.com/s/beta/graphics/vis/bitly-favicon-trans.png",
+    "global_hash": "LNY08h",
+    "html_title": "bitly blog - Happy Independence Day, America!",
+    "http_code": 200,
+    "indexed": 1341355564,
+    "linktags_other": [
+      [
+        "icon",
+        "http://bitly.com/s/beta/graphics/vis/bitly-favicon-trans.png"
+      ],
+      [
+        "alternate",
+        "http://blog.bitly.com/rss"
+      ]
+    ],
+    "metatags_name": [
+      [
+        "color:background",
+        "#666"
+      ],
+      [
+        "color:content background",
+        "#fff"
+      ],
+      [
+        "color:header background",
+        "#fff"
+      ],
+      [
+        "color:title",
+        "#555555"
+      ],
+      [
+        "color:description",
+        "#fff"
+      ],
+      [
+        "color:date",
+        "#666"
+      ],
+      [
+        "color:permalinks",
+        "#4AADF0"
+      ],
+      [
+        "color:post title",
+        "#222"
+      ],
+      [
+        "color:text",
+        "#222"
+      ],
+      [
+        "color:inline link",
+        "#ff9900"
+      ],
+      [
+        "color:quote",
+        "#333"
+      ],
+      [
+        "color:quote source",
+        "#666"
+      ],
+      [
+        "color:link post",
+        "#ff9900"
+      ],
+      [
+        "color:conversation background 1",
+        "#f4f4f4"
+      ],
+      [
+        "color:conversation background 2",
+        "#e8e8e8"
+      ],
+      [
+        "color:conversation border",
+        "#ccc"
+      ],
+      [
+        "color:conversation text",
+        "#000"
+      ],
+      [
+        "color:photo background",
+        "#ccc"
+      ],
+      [
+        "color:video background",
+        "#eee"
+      ],
+      [
+        "viewport",
+        "width=675"
+      ]
+    ],
+    "original_url": "http://blog.bitly.com/post/26449494972/happy-independence-day-america",
+    "robots_allowed": true,
+    "source_domain": "blog.bitly.com",
+    "url": "http://blog.bitly.com/post/26449494972/happy-independence-day-america",
+    "url_fetched": "http://blog.bitly.com/post/26449494972/happy-independence-day-america"
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

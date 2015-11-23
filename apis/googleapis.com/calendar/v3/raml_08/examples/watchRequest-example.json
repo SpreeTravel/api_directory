@@ -1,0 +1,9 @@
+{
+  "id" : "string" ,
+  "token" : "string" ,
+  "type" : "string" ,
+  "address" : "string" ,
+  "params" : {
+    "ttl" : "string"
+  }
+}

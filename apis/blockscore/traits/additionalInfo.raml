@@ -1,0 +1,13 @@
+queryParameters: 
+  address_street2: 
+    description: The second address line typically used for apartment or suite numbers. This is automatically normalized.
+  ip_address: 
+    description: |
+      Your customers' IP address can be passed to us for storage purposes. Soon we will be using this information for anti-fraud and verification purposes. With this information we will be able to back-test your verifications when this feature is released.
+      Both IPv4 and IPv6 style IP addresses are acceptable.
+  note: 
+    description: "You can store additional information about the candidate here such as your internal system's identifier for this individual. This will allow you to keep track of them."
+  phone_number: 
+    description: |
+      If you pass in the phone number, we will use it as an additional 'positive' data point for the consumer. That is, if it is provided, it will help us identify them, but if we cannot, they will not be penalized.
+      Extra characters like parenthesis and dashes are accepted - can either contain the country code or not.

@@ -1,0 +1,21 @@
+{
+  "fidsData" : [
+    {
+      "flightNumber" : "150" ,
+      "airlineLogoUrlPng" : "http://d3o54sf0907rz4.cloudfront.net/airline-logos/v2/centered/logos/png/300x100/as-logo.png" ,
+      "isCodeshare" : false ,
+      "remarks" : "On-Time" ,
+      "city" : "Anchorage" ,
+      "gate" : "65B" ,
+      "currentTime" : "05:52 AM"
+    } , {
+      "flightNumber" : "6786" ,
+      "airlineLogoUrlPng" : "http://d3o54sf0907rz4.cloudfront.net/airline-logos/v2/centered/logos/png/300x100/aa-logo.png" ,
+      "isCodeshare" : true ,
+      "remarks" : "On-Time" ,
+      "city" : "Anchorage" ,
+      "gate" : "65B" ,
+      "currentTime" : "05:52 AM"
+    }
+  ]
+}

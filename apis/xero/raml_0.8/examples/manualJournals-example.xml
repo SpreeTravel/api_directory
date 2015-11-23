@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ManualJournals>
+  <ManualJournal>
+    <Date>2011-01-31T00:00:00</Date>
+    <Status>DRAFT</Status>
+    <LineAmountTypes>NoTax</LineAmountTypes>
+    <UpdatedDateUTC>2011-02-07T20:26:28.757</UpdatedDateUTC>
+    <ManualJournalID>1e6b1916-6d82-4fa2-96f8-f17b33641538</ManualJournalID>
+    <Narration>Accrued expenses - prepaid insurance adjustment for January 2011</Narration>
+    <JournalLines>
+      <JournalLine>
+        <Description>Accrued expenses - prepaid insurance adjustment for January 2011</Description>
+        <TaxType>NONE</TaxType>
+        <LineAmount>55.00</LineAmount>
+        <AccountCode>433</AccountCode>
+      </JournalLine>
+      <JournalLine>
+        <Description>Accrued expenses - prepaid insurance adjustment for January 2011</Description>
+        <TaxType>NONE</TaxType>
+        <LineAmount>-55.00</LineAmount>
+        <AccountCode>620</AccountCode>
+      </JournalLine>
+    </JournalLines>
+  </ManualJournal>
+</ManualJournals>

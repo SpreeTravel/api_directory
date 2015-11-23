@@ -1,0 +1,980 @@
+#%RAML 0.8
+title: Pivotal Tracker
+version: v5
+baseUri: https://www.pivotaltracker.com/services/{version}
+mediaType: application/json
+securitySchemes:
+  - customSchema: !include securitySchemes/customSchema.raml
+schemas:
+  - me: !include schemas/me-schema.json
+  - notifications: !include schemas/notifications-schema.json
+  - notificationTimeStamp: !include schemas/notificationTimeStamp-schema.json
+  - notification: !include schemas/notification-schema.json
+  - projects: !include schemas/projects-schema.json
+  - project: !include schemas/project-schema.json
+  - projectReq: !include schemas/projectReq-schema.json
+  - iterations: !include schemas/iterations-schema.json
+  - iterationOverrideReq: !include schemas/iterationOverrideReq-schema.json
+  - iterationOverride: !include schemas/iterationOverride-schema.json
+  - project_membership: !include schemas/project_membership-schema.json
+  - project_member: !include schemas/project_member-schema.json
+  - memberReq: !include schemas/memberReq-schema.json
+  - member: !include schemas/member-schema.json
+  - updateMemberReq: !include schemas/updateMemberReq-schema.json
+  - accountsMembership: !include schemas/accountsMembership-schema.json
+  - accountCreateReq: !include schemas/accountCreateReq-schema.json
+  - account: !include schemas/account-schema.json
+  - accountUhdateReq: !include schemas/accountUhdateReq-schema.json
+  - accounts: !include schemas/accounts-schema.json
+  - labels: !include schemas/labels-schema.json
+  - labelReq: !include schemas/labelReq-schema.json
+  - label: !include schemas/label-schema.json
+  - lables: !include schemas/lables-schema.json
+  - stories: !include schemas/stories-schema.json
+  - storyReq: !include schemas/storyReq-schema.json
+  - story: !include schemas/story-schema.json
+  - persons: !include schemas/persons-schema.json
+  - ownerReq: !include schemas/ownerReq-schema.json
+  - person: !include schemas/person-schema.json
+  - tasks: !include schemas/tasks-schema.json
+  - task: !include schemas/task-schema.json
+  - taskReq: !include schemas/taskReq-schema.json
+  - epics: !include schemas/epics-schema.json
+  - epicReq: !include schemas/epicReq-schema.json
+  - epic: !include schemas/epic-schema.json
+  - epicUpdate: !include schemas/epicUpdate-schema.json
+  - comments: !include schemas/comments-schema.json
+  - commentReq: !include schemas/commentReq-schema.json
+  - comment: !include schemas/comment-schema.json
+  - file_attachment: !include schemas/file_attachment-schema.json
+  - google_attachments: !include schemas/google_attachments-schema.json
+  - search_result_container: !include schemas/search_result_container-schema.json
+  - saved_search: !include schemas/saved_search-schema.json
+  - saved_searchReq: !include schemas/saved_searchReq-schema.json
+  - activity_types: !include schemas/activity_types-schema.json
+  - source_commitReq: !include schemas/source_commitReq-schema.json
+  - integrationReq: !include schemas/integrationReq-schema.json
+  - integration: !include schemas/integration-schema.json
+  - webhooks: !include schemas/webhooks-schema.json
+  - webhookReq: !include schemas/webhookReq-schema.json
+  - webhook: !include schemas/webhook-schema.json
+  - workspaces: !include schemas/workspaces-schema.json
+  - workspaceReq: !include schemas/workspaceReq-schema.json
+  - workspace: !include schemas/workspace-schema.json
+  - workspaceUpdate: !include schemas/workspaceUpdate-schema.json
+  - integrations: !include schemas/integrations-schema.json
+  - membershipPerson: !include /schemas/membershipPerson-schema.json
+resourceTypes:
+  - member: !include resourceTypes/member.raml
+  - base: !include resourceTypes/base.raml
+  - collection: !include resourceTypes/collection.raml
+  - activityType: !include resourceTypes/activityType.raml
+traits:
+  - pageable: !include traits/pageable.raml
+securedBy: [ customSchema ]
+/me: 
+  type: base
+  get: 
+    description: |
+      In addition to authenticating this request like other API requests, this request can be made with authentication using "basic auth" to pass the user's normal Pivotal Tracker login credentials (their email address or user name plus their password). In this way, client software can use the user's name and password to obtain their API Token, and then use that token to authenticate future API requests made on behalf of that user. Obviously, the user's password should not be stored or otherwise retained.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: me
+            example: !include examples/me-example.json
+/my: 
+  /notifications: 
+    type: { collection: { type: notification } }
+    get: 
+      description: Return list of the notifications
+      queryParameters: 
+        created_after: 
+          description: Show notifications created after this date/time. If this parameter is not provided, the default is 10 days prior to the request time.
+        envelope: 
+          description: The standard formatting parameters cannot be included in requests for this operation. In particular, envelope= is prohibited and Tracker behaves as if envelope=true had been provided.
+          type: boolean
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: notifications
+              example: !include examples/notifications-example.json
+    /mark_read: 
+      type: base
+      put: 
+        description: "Marks the person's notifications as read up to the given notification id."
+        queryParameters: 
+          before: 
+            description: Mark all notifications before this id as read
+            type: integer
+            required: true
+        responses: 
+          204: 
+    /{notification_id}: 
+      type: { member: { type: notification } }
+      put: 
+        description: Mark the notification as read.
+        queryParameters: 
+          read_at: 
+            description: Time notification was read.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                example: !include examples/notification-example.json
+      get: 
+        description: Retrieve particular notification
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                example: !include examples/notification-example.json
+  /activity: 
+    type: activityType
+    get: 
+      is: [ pageable ]
+      description: Return list of the selected activity for the authenticated person.
+  /workspaces: 
+    type: { collection: { type: workspace } }
+    get: 
+      description: Return list of workspaces for the authenticated person.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: workspaces
+              example: !include examples/workspaces-example.json
+    post: 
+      description: Create a new workspace for the authenticated person.
+      body: 
+        application/json: 
+          schema: workspaceReq
+          example: !include examples/workspaceReq-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/workspace-example.json
+    /{workspace_id}: 
+      type: { member: { type: workspace } }
+      put: 
+        description: Return the specified workspace.
+        body: 
+          application/json: 
+            schema: workspaceUpdate
+            example: !include examples/workspaceUpdate-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                example: !include examples/workspace-example.json
+      delete: 
+        description: permanently delete the workspace.
+      get: 
+        description: Return a workspace for the authenticated person.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                example: !include examples/workspace-example.json
+/people/{person_id}/notifications/since/{timestamp}: 
+  type: base
+  get: 
+    description: Returns list of notifications for the specified person whose updated_at values are less than the timestamp.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: notificationTimeStamp
+            example: !include examples/notificationTimeStamp-example.json
+/projects: 
+  type: { collection: { type: project } }
+  get: 
+    description: "Get all of a user's active projects."
+    queryParameters: 
+      account_ids: 
+        description: A comma separated list of account ids whose projects should be returned
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: projects
+            example: !include examples/projects-example.json
+  post: 
+    description: Create a new empty project.
+    body: 
+      application/json: 
+        schema: projectReq
+        example: !include examples/projectReq-example.json
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            example: !include examples/project-example.json
+  /{project_id}: 
+    type: { member: { type: project } }
+    get: 
+      description: Fetch the content of the specified project.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/project-example.json
+    put: 
+      description: Update the specified project.
+      body: 
+        application/json: 
+          schema: projectReq
+          example: !include examples/projectReq-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/project-example.json
+    delete: 
+      description: Permanently delete the specified project.
+    /iterations: 
+      type: { collection: { type: iteration } }
+      get: 
+        is: [ pageable ]
+        description: Return a set of iterations from the project.
+        queryParameters: 
+          scope: 
+            description: Restricts the state of iterations to return. If not specified, it defaults to all iterations including done.
+            enum: 
+              - backlog
+              - done
+              - current
+              - current_backlog
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: iterations
+                example: !include examples/iterations-example.json
+    /integrations: 
+      type: { collection: { type: integration } }
+      get: 
+        description: "Returns a project's integrations."
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: integrations
+                example: !include examples/integrations-example.json
+      post: 
+        description: Create a new integration for a project.
+        body: 
+          application/json: 
+            schema: integrationReq
+            example: !include examples/integrationReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                example: !include examples/integration-example.json
+      /{integration_id}: 
+        type: { member: { type: integration } }
+        get: 
+          description: Returns a project integration.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  example: !include examples/integration-example.json
+        put: 
+          description: Updates a project integration.
+          body: 
+            application/json: 
+              example: !include examples/integrationReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  example: !include examples/integration-example.json
+        delete: 
+          description: Deletes a project integration.
+        /stories: 
+          get: 
+            description: "Provides external_story records for all of the potential stories available through the selected integration (already configured on the selected project). The content of the objects returned is suitable for use as parameters to create stories 'imported from' the selected integration."
+            queryParameters: 
+              exclude_linked: 
+                description: When this parameter is present and true, response will not include external stories which already have matching Pivotal Tracker stories.
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: stories
+                    example: !include examples/stories-example.json
+    /iteration_overrides/{iteration_number}: 
+      put: 
+        description: "Updates an iterration's overrides."
+        body: 
+          application/json: 
+            schema: iterationOverrideReq
+            example: !include examples/iterationOverrideReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: iterationOverride
+                example: !include examples/iterationOverride-example.json
+    /memberships: 
+      get: 
+        description: List all of the memberships in a project.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: project_membership
+                example: !include examples/project_membership-example.json
+      post: 
+        description: Add a user to the project
+        body: 
+          application/json: 
+            schema: memberReq
+            example: !include examples/memberReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: project_member
+                example: !include examples/project_member-example.json
+      /{membership_id}: 
+        get: 
+          description: Returns the specified project membership.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: member
+                  example: !include examples/member-example.json
+        put: 
+          description: Updates the specified project membership.
+          body: 
+            application/json: 
+              schema: updateMemberReq
+              example: !include examples/updateMemberReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: member
+                  example: !include examples/member-example.json
+        delete: 
+          description: Deletes the specified project membership.
+    /labels: 
+      type: { collection: { type: label } }
+      get: 
+        description: "Provides all of the project's labels."
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: labels
+                example: !include examples/labels-example.json
+      post: 
+        description: Creates a label on the project.
+        body: 
+          application/json: 
+            schema: labelReq
+            example: !include examples/labelReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                example: !include examples/label-example.json
+      /{label_id}: 
+        type: { member: { type: label } }
+        get: 
+          description: "Provides a project's label."
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  example: !include examples/label-example.json
+        put: 
+          description: "Updates a project's label."
+          body: 
+            application/json: 
+              schema: labelReq
+              example: !include examples/labelReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  example: !include examples/label-example.json
+        delete: 
+          description: "Delete a project's label."
+    /stories: 
+      type: { collection: { type: story } }
+      get: 
+        is: [ pageable ]
+        description: Provides selected stories.
+        queryParameters: 
+          filter: 
+            description: This parameter supplies a search string; only stories that match the search criteria are returned.
+          with_label: 
+            description: "A story's current_state which all returned stories must match."
+            enum: 
+              - delivered
+              - accepted
+              - unscheduled
+              - rejected
+              - finished
+              - started
+              - planned
+              - unstarted
+          accepted_before: 
+            description: A date and time (ISO 8601 format or milliseconds) which all returned stories are accepted before.
+          accepted_after: 
+            description: A date and time (ISO 8601 format or milliseconds) which all returned stories are accepted after.
+          created_before: 
+            description: A date and time (ISO 8601 format or milliseconds) which all returned stories are created before.
+          created_after: 
+            description: A date and time (ISO 8601 format or milliseconds) which all returned stories are created after.
+          updated_before: 
+            description: A date and time (ISO 8601 format or milliseconds) which all returned stories are updated before.
+          updated_after: 
+            description: A date and time (ISO 8601 format or milliseconds) which all returned stories are updated after.
+          deadline_before: 
+            description: A date and time (ISO 8601 format or milliseconds) that release dates fall before.
+          deadline_after: 
+            description: A date and time (ISO 8601 format or milliseconds) that release dates fall after.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: stories
+                example: !include examples/stories-example.json
+      post: 
+        description: Create a new story.
+        body: 
+          application/json: 
+            schema: storyReq
+            example: !include examples/storyReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                example: !include examples/story-example.json
+      /{story_id}: 
+        type: { member: { type: story } }
+        get: 
+          description: Returns the specified story.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  example: !include examples/story-example.json
+        put: 
+          description: Updates a story.
+          body: 
+            application/json: 
+              schema: storyReq
+              example: !include examples/storyUpdate-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  example: !include examples/story-example.json
+        delete: 
+          description: Deletes a story.
+        /tasks: 
+          type: { collection: { type: task } }
+          get: 
+            description: Returns the tasks on a specified story.
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: tasks
+                    example: !include examples/tasks-example.json
+          post: 
+            description: Returns the task that was created.
+            body: 
+              application/json: 
+                schema: taskReq
+                example: !include examples/taskReq-example.json
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    example: !include examples/task-example.json
+          /{task_id}: 
+            type: { member: { type: task } }
+            get: 
+              description: Returns the specified task on a specified story.
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      example: !include examples/task-example.json
+            put: 
+              description: Updates the specified task
+              body: 
+                application/json: 
+                  schema: taskReq
+                  example: !include examples/taskReq-example.json
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      example: !include examples/task-example.json
+            delete: 
+              description: Deletes the specified task
+        /labels: 
+          type: { collection: { type: label } }
+          post: 
+            description: Returns the label that was created.
+            body: 
+              application/json: 
+                schema: labelReq
+                example: !include examples/labelReq-example.json
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    example: !include examples/label-example.json
+          get: 
+            description: |
+              Returns the labels on a specified story.
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: lables
+                    example: !include examples/lables-example.json
+          /{label_id}: 
+            type: base
+            delete: 
+              description: Removes the label from the story.
+        /owners: 
+          type: base
+          get: 
+            description: Returns the owners of a specified story.
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: persons
+                    example: !include examples/persons-example.json
+          post: 
+            description: Add a user as an owner of the story.
+            body: 
+              application/json: 
+                schema: ownerReq
+                example: !include examples/ownerReq-example.json
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: person
+                    example: !include examples/person-example.json
+          /{person_id}: 
+            delete: 
+              description: Removes ownership of a story from a person.
+        /comments: 
+          type: { collection: { type: comment } }
+          get: 
+            description: "Returns the specified story's comments."
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: comments
+                    example: !include examples/comments-example.json
+          post: 
+            description: Add a new comment.
+            body: 
+              application/json: 
+                schema: commentReq
+                example: !include examples/commentReq-example.json
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    example: !include examples/comment-example.json
+          /{comment_id}: 
+            type: { member: { type: comment } }
+            get: 
+              description: Gets a comment.
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      example: !include examples/comment-example.json
+            put: 
+              description: Updates a comment.
+              body: 
+                application/json: 
+                  schema: commentReq
+                  example: !include examples/commentReq-example.json
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      example: !include examples/comment-example.json
+            delete: 
+              description: Deletes a comment.
+            /google_attachments/{google_attachment_id}: 
+              delete: 
+                description: Deletes a google attachment.
+            /file_attachments/{file_attachment_id}: 
+              delete: 
+                description: Deletes a google attachment.
+        /activity: 
+          type: activityType
+          get: 
+            description: "Return list of the selected story's activity. "
+            queryParameters: 
+              since_version: 
+                description: Activity will be returned only for operations that occurred after the specified version.
+    /epics: 
+      type: { collection: { type: epic } }
+      get: 
+        description: Returns a list of all epics in the project.
+        queryParameters: 
+          filter: 
+            description: This parameter supplies a search string; only epics that match the search criteria are returned.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: epics
+                example: !include examples/epics-example.json
+      post: 
+        description: Create a new epic.
+        body: 
+          application/json: 
+            schema: epicReq
+            example: !include examples/epicReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                example: !include examples/epic-example.json
+      /{epic_id}: 
+        type: { member: { type: epic } }
+        get: 
+          description: Returns the specified epic.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: epic
+                  example: !include examples/epic-example.json
+        put: 
+          description: Updates an epic.
+          body: 
+            application/json: 
+              schema: epicUpdate
+              example: !include examples/epicUpdate-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  example: !include examples/epic-example.json
+        delete: 
+          description: Deletes an epic.
+        /activity: 
+          type: activityType
+          get: 
+            is: [ pageable ]
+            description: "Return list of the selected epic's activity."
+            queryParameters: 
+              since_version: 
+                description: Activity will be returned only for operations that occurred after the specified version.
+        /comments: 
+          type: { collection: { type: comment } }
+          get: 
+            description: "Returns the specified epic's comments."
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: comments
+                    example: !include examples/comments-example.json
+          post: 
+            description: Add a new comment.
+            body: 
+              application/json: 
+                schema: commentReq
+                example: !include examples/commentReq-example.json
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    example: !include examples/comment-example.json
+          /{comment_id}: 
+            type: { member: { type: comment } }
+            get: 
+              description: Gets a comment.
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      example: !include examples/comment-example.json
+            put: 
+              description: Updates a comment.
+              body: 
+                application/json: 
+                  schema: commentReq
+                  example: !include examples/commentReq-example.json
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      example: !include examples/comment-example.json
+            delete: 
+              description: Deletes a comment.
+    /uploads: 
+      post: 
+        description: Upload a file to the Tracker server. Tracker will create a matching file_attachment object which can be attached to a future comment on a story.
+        body: 
+          multipart/form-data: 
+            formParameters: 
+              comment: 
+                description: The comment with which the file attachment will be associated.
+              file: 
+                description: |
+                  The content of the file being uploaded. It is expected to be incorporated in the multipart data with a 'Content-Disposition' of 'form-data; name="file"; filename="imperial_banner.png"'. 
+                  A Content-Type that describes the file being uploaded should be supplied if possible.
+                required: true
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: file_attachment
+                example: !include examples/file_attachment-example.json
+    /search: 
+      get: 
+        description: Search for stories and epics.
+        queryParameters: 
+          query: 
+            description: String containing the search terms and options.
+            required: true
+            default: label%3Amnt
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: search_result_container
+                example: !include examples/search_result_container-example.json
+    /my/searches: 
+      get: 
+        description: Provides a list of the searches which have been saved by the current person.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: saved_search
+                example: !include examples/saved_search-example.json
+      post: 
+        description: Saves a new search.
+        body: 
+          application/json: 
+            schema: saved_searchReq
+            example: !include examples/saved_searchReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: saved_search
+                example: !include examples/saved_search-example.json
+      /{search_id}: 
+        delete: 
+          description: Deletes a saved search.
+    /activity: 
+      type: activityType
+      get: 
+        description: Return list of the selected project activity.
+        queryParameters: 
+          since_version: 
+            description: Activity will be returned only for operations that occurred after the specified version.
+    /export: 
+      post: 
+        description: "POSTing to an individual project resource's URL is used to send story-selection parameters. The server responds with a CSV export file containing data from the selected stories."
+    /webhooks: 
+      type: { collection: { type: webhook } }
+      get: 
+        description: "Return the project's webhooks."
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: webhooks
+                example: !include examples/webhooks-example.json
+      post: 
+        description: Creates a webhook on the project.
+        body: 
+          application/json: 
+            schema: webhookReq
+            example: !include examples/webhookReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                example: !include examples/webhook-example.json
+      /{webhook_id}: 
+        type: { member: { type: webhook } }
+        get: 
+          description: Return the specified project webhook.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  example: !include examples/webhook-example.json
+        put: 
+          description: Update the specified project webhook.
+          body: 
+            application/json: 
+              schema: webhookReq
+              example: !include examples/webhookReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  example: !include examples/webhook-example.json
+        delete: 
+          description: Delete the specified project webhook.
+/accounts: 
+  type: { collection: { type: account } }
+  get: 
+    description: Get all of the accounts a user is an owner or admin of.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            example: !include examples/accounts-example.json
+  /{account_id}: 
+    type: { member: { type: account } }
+    get: 
+      description: Fetch the content of the specified account.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/account-example.json
+    /memberships: 
+      get: 
+        description: List all of the memberships in an account.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: accountsMembership
+                example: !include examples/accountsMembership-example.json
+      post: 
+        description: Create a new membership in an account.
+        body: 
+          application/json: 
+            schema: accountCreateReq
+            example: !include examples/accountCreateReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: membershipPerson
+                example: !include examples/membershipPerson-example.json
+      /{person_id}: 
+        type: base
+        get: 
+          description: Returns the specified account membership.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: membershipPerson
+                  example: !include examples/membershipPerson-example.json
+        put: 
+          description: Updates the specified account membership.
+          body: 
+            application/json: 
+              schema: accountUhdateReq
+              example: !include examples/accountUhdateReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: membershipPerson
+                  example: !include examples/membershipPerson-example.json
+        delete: 
+          description: Delete the specified account membership.
+/stories: 
+  /{story_id}: 
+    type: { member: { type: story } }
+    get: 
+      description: Returns the specified story.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/story-example.json
+    put: 
+      description: Updates the specified story.
+      body: 
+        application/json: 
+          schema: storyReq
+          example: !include examples/storyReq-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              example: !include examples/story-example.json
+    delete: 
+      description: Deletes the specified story.
+  /export: 
+    type: base
+    post: 
+      description: POSTing is used to send story-selection parameters. The server responds with a CSV export file containing data from the selected stories.
+/epics/{epic_id}: 
+  type: { member: { type: epic } }
+  get: 
+    description: Returns the specified epic.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            example: !include examples/epic-example.json
+/file_attachments/{file_attachment_id}/download: 
+  type: base
+  get: 
+    queryParameters: 
+      inline: 
+        description: Determines if server should include response headers that would cause a browser to show the attachment in a new tab or window (inline=true) or show a Save dialog box (inline=false). Default is false.
+        type: boolean
+/google_attachments: 
+  type: base
+  get: 
+    description: "Fetch items describing the user's available Google resources."
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: google_attachments
+            example: !include examples/google_attachments-example.json
+/source_commits: 
+  type: base
+  post: 
+    description: Creates a comment associated with a commit in a Source Control system.
+    body: 
+      application/json: 
+        schema: source_commitReq
+        example: !include examples/source_commitReq-example.json
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: stories
+            example: !include examples/stories-example.json
+/aggregator: 
+  type: base
+  post: 
+    description: |
+      Unimplemented.
+      The aggregator allows the client to make a single request that returns the same information as several separate GETs to other endpoints.
+documentation: 
+  - title: Headline
+    content: !include docs/api/headline.md

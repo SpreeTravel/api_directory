@@ -1,0 +1,70 @@
+{
+  "currentPageUrl" : null ,
+  "files" : [
+    {
+      "checksum" : "a65b71bc6a31fa95dd0a9232c9f58c86" ,
+      "contentSize" : 100377 ,
+      "contentUrl" : null ,
+      "description" : null ,
+      "downloadUrl" : "/services/data/v34.0/chatter/files/069D00000001E32IAE/content?versionNumber=1" ,
+      "fileExtension" : "png" ,
+      "fileType" : "Png" ,
+      "flashRenditionStatus" : "Na" ,
+      "id" : "069D00000001E32IAE" ,
+      "isInMyFileSync" : false ,
+      "mimeType" : "image/png" ,
+      "modifiedDate" : "2012-07-17T21:47:27.000Z" ,
+      "motif" : {
+        "color" : "993333" ,
+        "largeIconUrl" : "/img/content/content64.png" ,
+        "mediumIconUrl" : "/img/content/content32.png" ,
+        "smallIconUrl" : "/img/icon/files16.png"
+      } ,
+      "mySubscription" : {
+        "id" : "0E8D0000000T5JrKAK" ,
+        "url" : "/services/data/v34.0/chatter/subscriptions/0E8D0000000T5JrKAK"
+      } ,
+      "name" : "Recruitment Poster" ,
+      "origin" : "Chatter" ,
+      "owner" : {
+        "companyName" : "SeattleApps" ,
+        "firstName" : "Rene" ,
+        "id" : "005D0000001LFNnIAO" ,
+        "isActive" : true ,
+        "lastName" : "Holmes" ,
+        "motif" : {
+          "color" : "1797C0" ,
+          "largeIconUrl" : "/img/icon/profile64.png" ,
+          "mediumIconUrl" : "/img/icon/profile.png" ,
+          "smallIconUrl" : "/img/icon/profile.png"
+        } ,
+        "mySubscription" : null ,
+        "name" : "Rene Holmes" ,
+        "photo" : {
+          "fullEmailPhotoUrl" : "https://instance_name/ncsphoto/SqRfG_-PUTY6KtfOp_f0cEw-MQI3xmkJ21oNEOQ-5sZVyX4qlsJTXfOWM77RW7yt" ,
+          "largePhotoUrl" : "https://instance_name/profilephoto/729D00000000BDV/F" ,
+          "photoVersionId" : "729D00000000BDV" ,
+          "smallPhotoUrl" : "https://instance_name/profilephoto/729D00000000BDV/T" ,
+          "standardEmailPhotoUrl" : "https://instance_name/ncsphoto/SqRfG_-PUTY6KtfOp_f0cEw-MQI3xmkJ21oNEOQ-5sbktFTIf9vWhFTTALJiaFz_" ,
+          "url" : "/services/data/v34.0/chatter/users/005D0000001LL8OIAW/photo"
+        } ,
+        "title" : null ,
+        "type" : "User" ,
+        "url" : "/services/data/v34.0/chatter/users/005D0000001LFNnIAO" ,
+        "userType" : "Internal"
+      } ,
+      "parentFolder" : "null" ,
+      "pdfRenditionStatus" : "Na" ,
+      "renditionUrl" : "/services/data/v34.0/chatter/files/069D00000001E32IAE/rendition" ,
+      "thumb120By90RenditionStatus" : "Success" ,
+      "thumb240By180RenditionStatus" : "Success" ,
+      "thumb720By480RenditionStatus" : "Success" ,
+      "title" : "Recruitment Poster" ,
+      "type" : "ContentDocument" ,
+      "url" : "/services/data/v34.0/chatter/files/069D00000001E32IAE?versionNumber=1" ,
+      "versionNumber" : "1"
+    }
+  ] ,
+  "nextPageUrl" : null ,
+  "previousPageUrl" : null
+}

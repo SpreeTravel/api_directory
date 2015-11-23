@@ -1,0 +1,9 @@
+{
+  "href" : "https://api.stormpath.com/v1/groupMemberships/249Up9ojT6NUNEYocdG4Dj" ,
+  "account" : {
+    "href" : "https://api.stormpath.com/v1/accounts/k8idbaXRTSKncv3VLffDNw"
+  } ,
+  "group" : {
+    "href" : "https://api.stormpath.com/v1/groups/smJGMBMpQ_-FKvMgCRTdVA"
+  }
+}

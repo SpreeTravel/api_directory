@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ManualJournal>
+  <Narration>Accrued expenses - prepaid insurance adjustment for January 2011</Narration>
+  <JournalLines>
+    <JournalLine>
+      <LineAmount>55.00</LineAmount>
+      <AccountCode>433</AccountCode>
+    </JournalLine>
+    <JournalLine>
+      <LineAmount>-55.00</LineAmount>
+      <AccountCode>620</AccountCode>
+    </JournalLine>
+  </JournalLines>
+</ManualJournal>

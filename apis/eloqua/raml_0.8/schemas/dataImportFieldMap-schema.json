@@ -1,0 +1,23 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "sourceFieldId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "targetFieldId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "isLookup" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "updateType" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

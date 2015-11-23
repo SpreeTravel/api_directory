@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="TwilioResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Participants" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Participant" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="ConferenceSid" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="AccountSid" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="CallSid" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="Muted" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+                    <xsd:element name="EndConferenceOnExit" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+                    <xsd:element name="StartConferenceOnEnter" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+                    <xsd:element name="DateCreated" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="DateUpdated" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="Uri" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="page" type="xsd:int" use="required"/>
+            <xsd:attribute name="numpages" type="xsd:boolean" use="required"/>
+            <xsd:attribute name="pagesize" type="xsd:int" use="required"/>
+            <xsd:attribute name="total" type="xsd:int" use="required"/>
+            <xsd:attribute name="start" type="xsd:int" use="required"/>
+            <xsd:attribute name="end" type="xsd:boolean" use="required"/>
+            <xsd:attribute name="uri" type="xsd:normalizedString" use="required"/>
+            <xsd:attribute name="firstpageuri" type="xsd:normalizedString" use="required"/>
+            <xsd:attribute name="previouspageuri" type="xsd:string" use="required"/>
+            <xsd:attribute name="nextpageuri" type="xsd:string" use="required"/>
+            <xsd:attribute name="lastpageuri" type="xsd:normalizedString" use="required"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

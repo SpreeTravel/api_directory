@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+	<appendix>
+		<airports>
+			<airport>
+				<fs>ORD</fs>
+				<iata>ORD</iata>
+				<icao>KORD</icao>
+				<faa>ORD</faa>
+				<name>O'Hare International Airport</name>
+				<street1>10000 West O'Hare</street1>
+				<city>Chicago</city>
+				<cityCode>CHI</cityCode>
+				<stateCode>IL</stateCode>
+				<postalCode>60666</postalCode>
+				<countryCode>US</countryCode>
+				<countryName>United States</countryName>
+				<regionName>North America</regionName>
+				<timeZoneRegionName>America/Chicago</timeZoneRegionName>
+				<weatherZone>ILZ014</weatherZone>
+				<localTime>2015-04-28T03:17:34.565</localTime>
+				<utcOffsetHours>-5.0</utcOffsetHours>
+				<latitude>41.976912</latitude>
+				<longitude>-87.904876</longitude>
+				<elevationFeet>668</elevationFeet>
+				<classification>1</classification>
+				<active>true</active>
+				<delayIndexUrl>https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/ORD?codeType=fs</delayIndexUrl>
+			</airport>
+		</airports>
+	</appendix>
+	<request>
+		<url>https://api.flightstats.com/flex/weather/rest/v1/xml/taf/ORD</url>
+		<airport>
+			<requestedCode>ORD</requestedCode>
+			<fsCode>ORD</fsCode>
+		</airport>
+		<codeType/>
+	</request>
+	<taf>
+		<report>TAF KORD 280520Z 2806/2912 36003KT P6SM FEW250
+     FM281500 03007KT P6SM FEW250 
+     FM282000 05011KT P6SM FEW250 
+     FM290200 VRB03KT P6SM FEW250</report>
+		<reportTime>2015-04-28T06:21:00.000Z</reportTime>
+		<observationTime>2015-04-28T05:20:00.000Z</observationTime>
+		<reportType>Normal</reportType>
+		<weatherStationIcao>KORD</weatherStationIcao>
+		<forecasts>
+			<forecast>
+				<type>Base</type>
+				<start>2015-04-28T06:00:00.000Z</start>
+				<end>2015-04-29T12:00:00.000Z</end>
+				<conditions>
+					<wind>
+						<direction>360</direction>
+						<directionIsVariable>false</directionIsVariable>
+						<speedKnots>3.00</speedKnots>
+					</wind>
+					<visibility>
+						<miles>6.00</miles>
+						<lessThan>false</lessThan>
+						<cavok>false</cavok>
+					</visibility>
+					<weatherConditions/>
+					<skyConditions>
+						<skyCondition>
+							<coverage>Few clouds</coverage>
+							<base>25000</base>
+						</skyCondition>
+					</skyConditions>
+				</conditions>
+			</forecast>
+			<forecast>
+				<type>From</type>
+				<start>2015-04-28T15:00:00.000Z</start>
+				<end>2015-04-29T00:00:00.000Z</end>
+				<conditions>
+					<wind>
+						<direction>30</direction>
+						<directionIsVariable>false</directionIsVariable>
+						<speedKnots>7.00</speedKnots>
+					</wind>
+					<visibility>
+						<miles>6.00</miles>
+						<lessThan>false</lessThan>
+						<cavok>false</cavok>
+					</visibility>
+					<weatherConditions/>
+					<skyConditions>
+						<skyCondition>
+							<coverage>Few clouds</coverage>
+							<base>25000</base>
+						</skyCondition>
+					</skyConditions>
+				</conditions>
+			</forecast>
+			<forecast>
+				<type>From</type>
+				<start>2015-04-28T20:00:00.000Z</start>
+				<end>2015-04-29T00:00:00.000Z</end>
+				<conditions>
+					<wind>
+						<direction>50</direction>
+						<directionIsVariable>false</directionIsVariable>
+						<speedKnots>11.00</speedKnots>
+					</wind>
+					<visibility>
+						<miles>6.00</miles>
+						<lessThan>false</lessThan>
+						<cavok>false</cavok>
+					</visibility>
+					<weatherConditions/>
+					<skyConditions>
+						<skyCondition>
+							<coverage>Few clouds</coverage>
+							<base>25000</base>
+						</skyCondition>
+					</skyConditions>
+				</conditions>
+			</forecast>
+			<forecast>
+				<type>From</type>
+				<start>2015-04-29T02:00:00.000Z</start>
+				<end>2015-04-30T00:00:00.000Z</end>
+				<conditions>
+					<wind>
+						<directionIsVariable>true</directionIsVariable>
+						<speedKnots>3.00</speedKnots>
+					</wind>
+					<visibility>
+						<miles>6.00</miles>
+						<lessThan>false</lessThan>
+						<cavok>false</cavok>
+					</visibility>
+					<weatherConditions/>
+					<skyConditions>
+						<skyCondition>
+							<coverage>Few clouds</coverage>
+							<base>25000</base>
+						</skyCondition>
+					</skyConditions>
+				</conditions>
+			</forecast>
+		</forecasts>
+	</taf>
+</response>

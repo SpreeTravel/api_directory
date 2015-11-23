@@ -1,0 +1,30 @@
+<geoname>
+<toponymName>Kūh-e Zardar</toponymName>
+<name>Kūh-e Zardar</name>
+<lat>32.98333</lat>
+<lng>49.13333</lng>
+<geonameId>1</geonameId>
+<countryCode>IR</countryCode>
+<countryName>Iran</countryName>
+<fcl>T</fcl>
+<fcode>MT</fcode>
+<fclName>mountain,hill,rock,...</fclName>
+<fcodeName>mountain</fcodeName>
+<population/>
+<alternateNames>Kuh-e Zardar,Kūh-e Zardar</alternateNames>
+<elevation/>
+<srtm3>1473</srtm3>
+<continentCode>AS</continentCode>
+<adminCode1 ISO3166-2="20">23</adminCode1>
+<adminName1>Lorestān</adminName1>
+<adminCode2/>
+<adminName2/>
+<alternateName lang="fa">Kūh-e Zardar</alternateName>
+<timezone dstOffset="4.5" gmtOffset="3.5">Asia/Tehran</timezone>
+<bbox>
+<west>21.72792</west>
+<north>42.39132</north>
+<east>21.74009</east>
+<south>42.38233</south>
+</bbox>
+</geoname>

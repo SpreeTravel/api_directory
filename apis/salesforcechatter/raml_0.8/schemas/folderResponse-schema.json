@@ -1,0 +1,93 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "createdDate": {
+      "type": "string",
+      "required": false
+    },
+    "id": {
+      "type": "string",
+      "required": false
+    },
+    "isInMyFileSync": {
+      "type": "boolean",
+      "required": false
+    },
+    "modifiedDate": {
+      "type": "string",
+      "required": false
+    },
+    "motif": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "color": {
+          "type": "string",
+          "required": false
+        },
+        "largeIconUrl": {
+          "type": "string",
+          "required": false
+        },
+        "mediumIconUrl": {
+          "type": "string",
+          "required": false
+        },
+        "smallIconUrl": {
+          "type": "string",
+          "required": false
+        },
+        "svgIconUrl": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "mySubscription": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "required": false
+        },
+        "url": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "parentFolder": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "required": false
+        },
+        "url": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "path": {
+      "type": "string",
+      "required": false
+    },
+    "type": {
+      "type": "string",
+      "required": false
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

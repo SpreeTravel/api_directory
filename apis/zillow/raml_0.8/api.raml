@@ -1,0 +1,310 @@
+#%RAML 0.8
+title: Zillow
+baseUri: http://www.zillow.com/webservice
+mediaType: application/xml
+securitySchemes:
+  - zwsIdSchema: !include securitySchemes/zwsIdSchema.raml
+schemas:
+  - Zestimate: !include schemas/Zestimate-schema.xsd
+  - Chart: !include schemas/Chart-schema.xsd
+  - InterstOnlyVsTraditional-xml: !include schemas/InterstOnlyVsTraditional-xml-schema.xsd
+  - SearchResults: !include schemas/SearchResults-schema.xsd
+  - Comps: !include schemas/Comps-schema.xsd
+  - DeepComps: !include schemas/DeepComps-schema.xsd
+  - DeepSearchResults: !include schemas/DeepSearchResults-schema.xsd
+  - UpdatedPropertyDetails: !include schemas/UpdatedPropertyDetails-schema.xsd
+  - Demographics: !include schemas/Demographics-schema.xsd
+  - RegionChildren: !include schemas/RegionChildren-schema.xsd
+  - RegionChart: !include schemas/RegionChart-schema.xsd
+  - RateSummary: !include schemas/RateSummary-schema.json
+  - MonthlyPayments: !include schemas/MonthlyPayments-schema.json
+  - NoCostVsTraditional: !include schemas/NoCostVsTraditional-schema.json
+  - DiscountPoints: !include schemas/DiscountPoints-schema.json
+  - FixedVsAdjustableRate: !include schemas/FixedVsAdjustableRate-schema.json
+  - MortgageTerms: !include schemas/MortgageTerms-schema.json
+  - Heloc-xml: !include schemas/Heloc-xml-schema.xsd
+  - BiWeeklyPayment-xml: !include schemas/BiWeeklyPayment-xml-schema.xsd
+  - AdjustableMortgage-xml: !include schemas/AdjustableMortgage-xml-schema.xsd
+  - Refinance-xml: !include schemas/Refinance-xml-schema.xsd
+  - Affordability-xml: !include schemas/Affordability-xml-schema.xsd
+  - TaxSavings-xml: !include schemas/TaxSavings-xml-schema.xsd
+  - RateSummary-xml: !include schemas/RateSummary-xml-schema.xsd
+  - MonthlyPayments-xml: !include schemas/MonthlyPayments-xml-schema.xsd
+  - NoCostVsTraditional-xml: !include schemas/NoCostVsTraditional-xml-schema.xsd
+  - DiscountPoints-xml: !include schemas/DiscountPoints-xml-schema.xsd
+  - FixedVsAdjustableRate-xml: !include schemas/FixedVsAdjustableRate-xml-schema.xsd
+  - MortgageTerms-xml: !include schemas/MortgageTerms-xml-schema.xsd
+  - Heloc: !include schemas/Heloc-schema.json
+  - BiWeeklyPayment: !include schemas/BiWeeklyPayment-schema.json
+  - AdjustableMortgage: !include schemas/AdjustableMortgage-schema.json
+  - Affordability: !include schemas/Affordability-schema.json
+  - TaxSavings: !include schemas/TaxSavings-schema.json
+  - Refinance: !include schemas/Refinance-schema.json
+  - InterstOnlyVsTraditional: !include schemas/InterstOnlyVsTraditional-schema.json
+  - MonthlyPaymentsAdvanced-xml: !include schemas/MonthlyPaymentsAdvanced-xml-schema.xsd
+  - MonthlyPaymentsAdvanced: !include schemas/MonthlyPaymentsAdvanced-schema.json
+resourceTypes:
+  - zillowResource: !include resourceTypes/zillowResource.raml
+traits:
+  - schedule: !include traits/schedule.raml
+  - search: !include traits/search.raml
+  - requiresPropertyId: !include traits/requiresPropertyId.raml
+  - comps: !include traits/comps.raml
+  - responseBehavior: !include traits/responseBehavior.raml
+  - chart: !include traits/chart.raml
+  - providesInfo: !include traits/providesInfo.raml
+  - loan: !include traits/loan.raml
+/GetZestimate.htm: 
+  type: zillowResource
+  get: 
+    is: [ requiresPropertyId , providesInfo ]
+    description: Returns the full property address and geographic location (latitude/longitude) and a set of identifiers that uniquely represent the region (ZIP code, city, county & state) in which the property exists.
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: Zestimate
+            example: !include examples/Zestimate-example.xml
+/GetSearchResults.htm: 
+  type: zillowResource
+  get: 
+    is: [ providesInfo , search ]
+    description: The GetSearchResults API finds a property for a specified address. The content returned contains the address for the property or properties as well as the Zillow Property ID (ZPID) and current Zestimate. It also includes the date the Zestimate was computed, a valuation range and the Zestimate ranking for the property within its ZIP code.
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: SearchResults
+            example: !include examples/SearchResults-example.xml
+/GetChart.htm: 
+  type: zillowResource
+  get: 
+    is: [ requiresPropertyId , chart ]
+    description: |
+      The GetChart API generates a URL for an image file that displays historical Zestimates for a specific property. The API accepts as input the Zillow Property ID as well as a chart type: either percentage or dollar value change. Optionally, the API accepts width and height parameters that constrain the size of the image. The historical data can be for the past 1 year, 5 years or 10 years.
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: Chart
+            example: !include examples/Chart-example.xml
+/GetComps.htm: 
+  type: zillowResource
+  get: 
+    is: [ requiresPropertyId , providesInfo , comps ]
+    description: |
+      The GetComps API returns a list of comparable recent sales for a specified property. The result set returned contains the address, Zillow property identifier, and Zestimate for the comparable properties and the principal property for which the comparables are being retrieved.
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: Comps
+            example: !include examples/Comps-example.xml
+/GetDeepComps.htm: 
+  type: zillowResource
+  get: 
+    is: [ requiresPropertyId , providesInfo , comps ]
+    description: |
+      The GetDeepComps API returns a list of comparable recent sales for a specified property. The result set returned contains the address, Zillow property identifier, and Zestimate for the comparable properties and the principal property for which the comparables are being retrieved. This API call also returns rich property data for the comparables.
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: DeepComps
+            example: !include examples/DeepComps-example.xml
+/GetDeepSearchResults.htm: 
+  type: zillowResource
+  get: 
+    is: [ providesInfo , search ]
+    description: |
+      The GetDeepSearchResults API finds a property for a specified address. The result set returned contains the full address(s), zpid and Zestimate data that is provided by the GetSearchResults API. Moreover, this API call also gives rich property data like lot size, year built, bath/beds, last sale details etc.
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: DeepSearchResults
+            example: !include examples/DeepSearchResults-example.xml
+/GetUpdatedPropertyDetails.htm: 
+  type: zillowResource
+  get: 
+    is: [ requiresPropertyId ]
+    description: |
+      For a specified property, the GetUpdatedPropertyDetails API returns all of the home facts that have been edited by the home's owner or agent. The result set contains the following attributes:
+      Property address
+      Zillow property identifier
+      Posting details such as the agent name, MLS number, price, and posting type (For Sale or Make Me Move)
+      Up to five photos of the property
+      Updated home facts such as beds, baths, square footage, home description, and neighborhood and school names
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: UpdatedPropertyDetails
+            example: !include examples/UpdatedPropertyDetails-example.xml
+/GetDemographics.htm: 
+  type: zillowResource
+  get: 
+    description: |
+      For a specified region, the GetDemographics API returns a set of market, affordability, real estate, and demographic data, including:
+      Local Market Data (e.g., median list price, number of homes for sale, percent listing price reduction)
+      Affordability data (e.g., Zillow Home Value Index, 1-Yr change, property tax, etc.)
+      Homes and Real Estate data (e.g., percent owners & renters, median home size, average year built, etc.)
+      People data from US Census (e.g., median household income, median age, average commute time, average household size, etc.)
+      Who Lives Here (if available for the region)
+      What's Unique About the People (if available for the region)
+      
+      At least rid or state/city, city/neighborhood, or zip is required
+    queryParameters: 
+      zip: 
+        description: The zipcode of the region to retrieve data from.
+      regionid: 
+        description: The regionid of the region to retrieve data from.
+      neighborhood: 
+        description: The neighborhood of the region to retrieve data from.
+      state: 
+        description: The state of the region to retrieve data from.
+      city: 
+        description: The city of the region to retrieve data from.
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: Demographics
+            example: !include examples/Demographics-example.xml
+/GetRegionChildren.htm: 
+  type: zillowResource
+  get: 
+    description: |
+      For a specified region, the GetRegionChildren API returns a list of subregions with the following information:
+      Subregion Type
+      Region IDs
+      Region Names
+      URL to Corresponding Zillow Page (only for cities and neighborhoods)
+      Latitudes and Longitudes
+      
+      At least regionId or state is required
+    queryParameters: 
+      county: 
+        description: The county of the region to retrieve subregions from.
+      state: 
+        description: The state of the region to retrieve subregions from.
+      childtype: 
+        description: "The type of subregions to retrieve (available types: state, county, city, zipcode, and neighborhood)."
+      city: 
+        description: The city of the region to retrieve subregions from.
+      regionId: 
+        description: The regionId of the region to retrieve subregions from.
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: RegionChildren
+            example: !include examples/RegionChildren-example.xml
+/GetRegionChart.htm: 
+  type: zillowResource
+  get: 
+    is: [ chart ]
+    description: |
+      The GetRegionChart API generates a URL for an image file that displays the historical Zestimates for a specific geographic region. The API accepts as input the name of the region as well as a chart type: either percentage or dollar value change. Optionally, the API accepts width and height parameters that constrain the size of the image. The historical data can be for the past 1 year, 5 years or 10 years.
+    queryParameters: 
+      zip: 
+        description: The 5-digit ZIP code
+      neighborhood: 
+        description: The name of the neighborhood
+      state: 
+        description: The two-letter abbreviation for a state
+      city: 
+        description: The name of a city
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: RegionChart
+            example: !include examples/RegionChart-example.xml
+/GetRateSummary.htm: 
+  type: zillowResource
+  get: 
+    is: [ responseBehavior ]
+    description: |
+      The GetRateSummary API returns the current rates per loan type from Zillow Mortgage Marketplace. Current supported loan types are 30-year fixed, 15-year fixed, and 5/1 ARM. Rates are computed from real quotes borrowers receive from lenders just seconds before the rate data is returned. The GetRateSummary API returns rates for a specific state if the optional state parameter is used.
+    queryParameters: 
+      state: 
+        description: The state for which to return average mortgage rates. Two-letter state abbreviations should be used (AK, AL, AR, AZ, CA, CO, CT, DE, FL, GA, HI, IA, ID, IL, IN, KS, KY, LA, MA, MD, ME, MI, MN, MO, MS, MT, NC, ND, NE, NH, NJ, NM, NV, NY, OH, OK, OR, PA, RI, SC, SD, TN, TX, UT, VA, VT, WA, DC, WI, WV, WY). If omitted, national average mortgage rates are returned.
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: RateSummary-xml
+            example: !include examples/RateSummary-xml-example.xml
+          application/json: 
+            schema: RateSummary
+            example: !include examples/RateSummary-example.json
+/GetMonthlyPayments.htm: 
+  type: zillowResource
+  get: 
+    is: [ responseBehavior ]
+    description: For a specific loan amount, the GetMonthlyPayments API returns the estimated monthly payment that includes principal and interest based on todays mortgage rate. The API returns the estimated monthly payment per loan type (30-year fixed, 15-year fixed, and 5/1 ARM). If a ZIP code is entered, the estimated taxes and insurance are returned in the result set.
+    queryParameters: 
+      zip: 
+        description: The ZIP code in which the property is located. If omitted, monthly property tax and hazard insurance data will not be returned.
+      dollarsdown: 
+        description: "The dollar amount that will be placed as a down payment. This amount will be used for the down payment if the 'down' parameter is omitted. If the down payment is less than 20% of the purchase price, a monthly private mortgage insurance amount is specified for each returned loan type."
+      price: 
+        description: The price of the property for which monthly payment data will be calculated.
+        required: true
+      down: 
+        description: The percentage of the total property price that will be placed as a down payment. If omitted, a 20% down payment is assumed. If the down payment is less than 20%, a monthly private mortgage insurance amount is specified for each returned loan type.
+        default: 20%
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: MonthlyPayments-xml
+            example: !include examples/MonthlyPayments-xml-example.xml
+          application/json: 
+            schema: MonthlyPayments
+            example: !include examples/MonthlyPayments-example.json
+/mortgage: 
+  /CalculateAffordability.htm: 
+    type: zillowResource
+    get: 
+      is: [ responseBehavior , schedule ]
+      description: The CalculateAffordability API calculates the amount a user can afford based on their income or desired monthly payment. It returns an affordability amount along with detailed breakdown of the mortgage payment, amortization schedule, and monthly budget.
+      queryParameters: 
+        zip: 
+          description: The ZIP code in which the property is located. If omitted, monthly property tax and hazard insurance data will not be returned.
+        down: 
+          description: The percentage of the total property price that will be placed as a down payment. If the down payment is less than 20%, a monthly private mortgage insurance amount is specified for each returned loan type.
+          required: true
+        rate: 
+          description: The annual interest rate for the loan. If no rate is passed, we use the current 30 year fixed rate from Zillow Mortgage Marketplace.
+        term: 
+          description: The term of the loan in months. If omitted, a 360 month term is assumed.
+          default: 360
+        propertytax: 
+          description: The annual property tax amount in dollars. If omitted, the property tax will be estimated by Zillow. (Note that estimate requires zip parameter.)
+        hazard: 
+          description: The annual hazard insurance in dollars. If omitted, the hazard insurance will be estimated by Zillow. (Note that estimate requires zip parameter.)
+        pmi: 
+          description: The monthly Private Mortgage Insurance in dollars. If omitted, the PMI will be estimated by Zillow.
+        hoa: 
+          description: "The annual home owners' association dues. If omitted, it will be assumed to be $0."
+          default: $0
+        annualincome: 
+          description: The annual income of borrower in dollars. Required if no monthly payment.
+        monthlypayment: 
+          description: The monthly payment the borrower wants to spend on their mortgage payment in dollars. Required if no annual income.
+        monthlydebts: 
+          description: The sum total of all recurring monthly debts such as student loans, alimony, credit card debt, etc in dollars.
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: Affordability-xml
+              example: !include examples/Affordability-xml-example.xml
+            application/json: 
+              schema: Affordability
+              example: !include examples/Affordability-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

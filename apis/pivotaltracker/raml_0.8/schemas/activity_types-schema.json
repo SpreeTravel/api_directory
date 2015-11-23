@@ -1,0 +1,138 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : [
+    {
+      "type" : "object" ,
+      "properties" : {
+        "kind" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "guid" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "project_version" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "message" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "highlight" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "changes" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "kind" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "change_type" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "number" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "original_values" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                    {
+                      "type" : "number"
+                    } , {
+                      "type" : "string"
+                    }
+                  ]
+                } ,
+                "new_values" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                    {
+                      "type" : "number"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        } ,
+        "primary_resources" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "kind" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "number" : {
+                  "type" : "number" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        } ,
+        "project" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "kind" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "performed_by" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "kind" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "initials" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "occurred_at" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  ]
+}

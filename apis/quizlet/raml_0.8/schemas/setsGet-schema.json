@@ -1,0 +1,150 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : [
+    {
+      "type" : "object" ,
+      "properties" : {
+        "id" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "url" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "title" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "created_by" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "term_count" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "created_date" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "modified_date" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "has_images" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "subjects" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+          ]
+        } ,
+        "visibility" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "editable" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "has_access" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "description" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "has_discussion" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "lang_terms" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "lang_definitions" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "creator" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "username" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "account_type" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "profile_image" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "class_ids" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "number"
+            }
+          ]
+        } ,
+        "terms" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "id" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "term" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "definition" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "image" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "url" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "width" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "height" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

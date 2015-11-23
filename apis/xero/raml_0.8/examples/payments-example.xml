@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Payments>
+  <Payment>
+    <PaymentID>b26fd49a-cbae-470a-a8f8-bcbc119e0379</PaymentID>
+    <Date>2007-12-14T00:00:00</Date>
+    <Amount>281.25</Amount>
+    <CurrencyRate>1.000000</CurrencyRate>
+    <PaymentType>ACCRECPAYMENT</PaymentType>
+    <Status>AUTHORISED</Status>
+    <UpdatedDateUTC>2008-02-20T08:22:27.847</UpdatedDateUTC>
+    <Account>
+      <AccountID>297c2dc5-cc47-4afd-8ec8-74990b8761e9</AccountID>
+    </Account>
+    <Invoice>
+      <Contact>
+        <ContactID>3e1d3ba5-609a-4e10-bb1d-75b6d31ce922</ContactID>
+        <Name>Seymour Grimes</Name>
+      </Contact>
+      <Type>ACCREC</Type>
+      <InvoiceID>d3cb96c6-8f3a-45ec-a261-0a7b65d4b877</InvoiceID>
+      <InvoiceNumber>OIT00504</InvoiceNumber>
+    </Invoice>
+  </Payment>
+</Payments>

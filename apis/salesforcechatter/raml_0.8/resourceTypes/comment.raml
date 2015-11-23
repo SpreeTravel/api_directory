@@ -1,0 +1,20 @@
+get: 
+  description: Get information about a comment.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: commentResponse
+delete: 
+  description: Delete a comment.
+  responses: 
+    200: 
+patch: 
+  description: Edit a comment.
+  body: 
+    application/json: 
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: commentResponse

@@ -1,0 +1,96 @@
+delete?: 
+  responses: 
+    204: 
+      description: The request was successful; the resource was deleted.
+    401: 
+      description: |
+        The supplied credentials, if any, are not sufficient to delete the resource.
+    404: 
+      description: NOT FOUND.
+    405: 
+      description: "You can't DELETE the resource."
+    429: 
+      description: Your application is sending too many simultaneous requests.
+    500: 
+      description: "We couldn't delete the resource. Please try again."
+post?: 
+  responses: 
+    200: 
+      description: |
+        The request was successful, we updated the resource and the response
+        body contains the representation.
+    201: 
+      description: |
+        The request was successful, we created a new resource and the response
+        body contains the representation.
+    400: 
+      description: |
+        The data given in the POST or PUT failed validation. Inspect the response
+        body for details.
+    401: 
+      description: |
+        The supplied credentials, if any, are not sufficient to create or update
+        the resource.
+    404: 
+      description: NOT FOUND.
+    405: 
+      description: "You can't POST or PUT to the resource."
+    429: 
+      description: Your application is sending too many simultaneous requests.
+    500: 
+      description: |
+        We couldn't return the representation due to an internal server error.
+put?: 
+  responses: 
+    200: 
+      description: |
+        The request was successful, we updated the resource and the response
+        body contains the representation.
+    201: 
+      description: |
+        The request was successful, we created a new resource and the response
+        body contains the representation.
+    400: 
+      description: |
+        The data given in the POST or PUT failed validation. Inspect the response
+        body for details.
+    401: 
+      description: |
+        The supplied credentials, if any, are not sufficient to create or update
+        the resource.
+    404: 
+      description: NOT FOUND.
+    405: 
+      description: "You can't POST or PUT to the resource."
+    429: 
+      description: Your application is sending too many simultaneous requests.
+    500: 
+      description: |
+        We couldn't return the representation due to an internal server error.
+get?: 
+  responses: 
+    200: 
+      description: |
+        The request was successful and the response body contains the representation
+        requested.
+    302: 
+      description: |
+        A common redirect response; you can GET the representation at the URI
+        in the Location response header.
+    304: 
+      description: |
+        Your client's cached version of the representation is still up to date.
+    401: 
+      description: |
+        The supplied credentials, if any, are not sufficient to access the resource.
+    404: 
+      description: NOT FOUND.
+    429: 
+      description: Your application is sending too many simultaneous requests.
+    500: 
+      description: |
+        We couldn't return the representation due to an internal server error.
+    503: 
+      description: |
+        We are temporarily unable to return the representation. Please wait for
+        a bit and try again.

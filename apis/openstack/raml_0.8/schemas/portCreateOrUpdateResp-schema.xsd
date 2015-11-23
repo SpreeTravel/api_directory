@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://openstack.org/quantum/api/v2.0" xmlns:quantum="http://openstack.org/quantum/api/v2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <xsd:element name="port">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="status" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="name" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="allowed_address_pairs" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:simpleContent>
+              <xsd:extension base="xsd:string">
+                <xsd:attribute name="type" type="xsd:normalizedString" use="required"/>
+              </xsd:extension>
+            </xsd:simpleContent>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="admin_state_up" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:simpleContent>
+              <xsd:extension base="xsd:normalizedString">
+                <xsd:attribute name="type" type="xsd:normalizedString" use="required"/>
+              </xsd:extension>
+            </xsd:simpleContent>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="network_id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="tenant_id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="device_owner" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="mac_address" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="fixed_ips" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="fixed_ip" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="subnet_id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="ip_address" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="security_groups" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="security_group" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="device_id" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

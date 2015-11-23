@@ -1,0 +1,45 @@
+head: 
+  description: |
+    Access information about a member of a group.
+    
+    Membership IDs are returned from the /chatter/groups/groupId/memberships resource.
+  responses: 
+    200: 
+get: 
+  description: |
+    Access information about a member of a group.
+    
+    Membership IDs are returned from the /chatter/groups/groupId/memberships resource.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: groupMemberResponse
+patch: 
+  description: |
+    Update a group member’s role.
+    
+    Membership IDs are returned from the /chatter/groups/groupId/memberships resource.
+  queryParameters: 
+    role: 
+      description: |
+        The role of the member. One of these values:
+        GroupManager
+        StandardMember
+      enum: [ GroupManager , StandardMember ]
+  body: 
+    application/json: 
+      schema: updateGroupMemberRoleRequest
+      example: !include examples/updateGroupMemberRoleRequest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: groupMemberResponse
+delete: 
+  description: |
+    Remove a member from a group.
+    
+    Membership IDs are returned from the /chatter/groups/groupId/memberships resource.
+  responses: 
+    204: 

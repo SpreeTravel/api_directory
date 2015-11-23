@@ -1,0 +1,115 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "checkinComment": {
+      "type": "string",
+      "required": false
+    },
+    "contentSize": {
+      "type": "integer",
+      "required": false
+    },
+    "createdBy": {
+      "type": "string",
+      "required": false
+    },
+    "createdDate": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "string",
+      "required": false
+    },
+    "downloadUrl": {
+      "type": "string",
+      "required": false
+    },
+    "externalContentUrl": {
+      "type": "string",
+      "required": false
+    },
+    "externalDocumentUrl": {
+      "type": "string",
+      "required": false
+    },
+    "id": {
+      "type": "string",
+      "required": false
+    },
+    "mimeType": {
+      "type": "string",
+      "required": false
+    },
+    "modifiedBy": {
+      "type": "string",
+      "required": false
+    },
+    "modifiedDate": {
+      "type": "string",
+      "required": false
+    },
+    "motif": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "color": {
+          "type": "string",
+          "required": false
+        },
+        "largeIconUrl": {
+          "type": "string",
+          "required": false
+        },
+        "mediumIconUrl": {
+          "type": "string",
+          "required": false
+        },
+        "smallIconUrl": {
+          "type": "string",
+          "required": false
+        },
+        "svgIconUrl": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "repository": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "required": false
+        },
+        "url": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "type": {
+      "type": "string",
+      "required": false
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    },
+    "versionId": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

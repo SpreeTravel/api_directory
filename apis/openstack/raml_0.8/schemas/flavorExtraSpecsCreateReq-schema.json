@@ -1,0 +1,21 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "extra_specs" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "key1" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "key2" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

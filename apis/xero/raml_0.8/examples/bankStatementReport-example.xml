@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>fbb67acb-01ce-436c-ad94-c3f2296228b2</Id>
+  <Status>OK</Status>
+  <ProviderName>Xero API Previewer</ProviderName>
+  <DateTimeUTC>2013-08-20T03:39:39.5658282Z</DateTimeUTC>
+  <Reports>
+    <Report>
+      <ReportID>BankStatement</ReportID>
+      <ReportName>Bank Statement</ReportName>
+      <ReportType>BankStatement</ReportType>
+      <ReportTitles>
+        <ReportTitle>Bank Statement</ReportTitle>
+        <ReportTitle>Business Bank Account</ReportTitle>
+        <ReportTitle>Demo Company (AU)</ReportTitle>
+        <ReportTitle>From 1 August 2013 to 20 August 2013</ReportTitle>
+      </ReportTitles>
+      <ReportDate>20 August 2013</ReportDate>
+      <UpdatedDateUTC>2013-08-20T03:39:39.5658282Z</UpdatedDateUTC>
+      <Rows>
+        <Row>
+          <RowType>Header</RowType>
+          <Cells>
+            <Cell>
+              <Value>Date</Value>
+            </Cell>
+            <Cell>
+              <Value>Description</Value>
+            </Cell>
+            <Cell>
+              <Value>Reference</Value>
+            </Cell>
+            <Cell>
+              <Value>Reconciled</Value>
+            </Cell>
+            <Cell>
+              <Value>Source</Value>
+            </Cell>
+            <Cell>
+              <Value>Amount</Value>
+            </Cell>
+            <Cell>
+              <Value>Balance</Value>
+            </Cell>
+          </Cells>
+        </Row>
+        <Row>
+          <RowType>Section</RowType>
+          <Rows>
+            <Row>
+              <RowType>Row</RowType>
+              <Cells>
+                <Cell>
+                  <Value>2013-08-01T00:00:00</Value>
+                </Cell>
+                <Cell>
+                  <Value>Opening Balance</Value>
+                </Cell>
+                <Cell />
+                <Cell />
+                <Cell />
+                <Cell />
+                <Cell>
+                  <Value>-1792.15</Value>
+                </Cell>
+              </Cells>
+            </Row>
+            <Row>
+              <RowType>Row</RowType>
+              <Cells>
+                <Cell>
+                  <Value>2013-08-04T00:00:00</Value>
+                </Cell>
+                <Cell>
+                  <Value>Melbourne Mags</Value>
+                </Cell>
+                <Cell>
+                  <Value>Eft  </Value>
+                </Cell>
+                <Cell>
+                  <Value>Yes</Value>
+                </Cell>
+                <Cell>
+                  <Value>Import</Value>
+                </Cell>
+                <Cell>
+                  <Value>-21.90</Value>
+                </Cell>
+                <Cell>
+                  <Value>-1814.05</Value>
+                </Cell>
+              </Cells>
+            </Row>
+            <Row>
+              <RowType>Row</RowType>
+              <Cells>
+                <Cell>
+                  <Value>2013-08-04T00:00:00</Value>
+                </Cell>
+                <Cell>
+                  <Value>MCO Cleaning</Value>
+                </Cell>
+                <Cell />
+                <Cell>
+                  <Value>Yes</Value>
+                </Cell>
+                <Cell>
+                  <Value>Import</Value>
+                </Cell>
+                <Cell>
+                  <Value>-170.50</Value>
+                </Cell>
+                <Cell>
+                  <Value>-1984.55</Value>
+                </Cell>
+              </Cells>
+            </Row>
+          </Rows>
+        </Row>
+      </Rows>
+    </Report>
+  </Reports>
+</Response>

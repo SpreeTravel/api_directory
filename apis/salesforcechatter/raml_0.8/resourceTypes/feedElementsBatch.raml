@@ -1,0 +1,16 @@
+post: 
+  description: |
+    Post a batch of up to 500 feed elements.
+    The Batch Results response body contains Feed Item response bodies corresponding to each of the request bodies. The Feed Item response bodies are returned in the same order as the request bodies.
+  body: 
+    application/json: 
+      schema: batchCollectionInputRequest
+      example: !include examples/feedElementsBatchPostRequest-example.json
+  responses: 
+    200: 
+      application/json: 
+        schema: batchResultsResponse
+head: 
+  description: Head method of the feed elements resource.
+  responses: 
+    200: 

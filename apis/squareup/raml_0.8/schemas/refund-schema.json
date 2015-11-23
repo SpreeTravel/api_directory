@@ -1,0 +1,41 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "created_at" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "processed_at" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "reason" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "refunded_money" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "currency_code" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "amount" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    } ,
+    "payment_id" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "agent" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "url" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "md5hash" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "version" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

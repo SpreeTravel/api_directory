@@ -1,0 +1,20 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : [
+    {
+      "type" : "object" ,
+      "properties" : {
+        "variation_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "quantity_on_hand" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    }
+  ]
+}

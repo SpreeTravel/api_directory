@@ -1,0 +1,27 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "binaryPartName": {
+      "type": "string",
+      "required": false
+    },
+    "binaryPartNameAlias": {
+      "type": "string",
+      "required": false
+    },
+    "method": {
+      "type": "string",
+      "required": false
+    },
+    "richInput": {
+      "type": "string",
+      "required": false
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

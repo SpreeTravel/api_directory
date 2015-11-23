@@ -1,0 +1,27 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "columnCount": {
+      "type": "string",
+      "required": false
+    },
+    "columnOrder": {
+      "type": "string",
+      "required": false
+    },
+    "fields": {
+      "type": "string",
+      "required": false
+    },
+    "heading": {
+      "type": "string",
+      "required": false
+    },
+    "isCollapsible": {
+      "type": "boolean",
+      "required": false
+    }
+  }
+}

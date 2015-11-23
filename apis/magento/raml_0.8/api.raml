@@ -1,0 +1,667 @@
+#%RAML 0.8
+title: Magento
+version: 1
+baseUri: "{protocol}://{domain}/api/rest"
+protocols: [ http, https ]
+securitySchemes:
+  - oauth_1_0: !include securitySchemes/oauth_1_0.raml
+schemas:
+  - products-xml: !include schemas/products-xml-schema.xsd
+  - category: !include schemas/category-schema.json
+  - stockitems-xml: !include schemas/stockitems-xml-schema.xsd
+  - stockitems: !include schemas/stockitems-schema.json
+  - stockitemsPut-xml: !include schemas/stockitemsPut-xml-schema.xsd
+  - stockitems-update-xml: !include schemas/stockitems-update-xml-schema.xsd
+  - stockitem-xml: !include schemas/stockitem-xml-schema.xsd
+  - stockitem: !include schemas/stockitem-schema.json
+  - stockitemPut-xml: !include schemas/stockitemPut-xml-schema.xsd
+  - stockitemPut: !include schemas/stockitemPut-schema.json
+  - orders-xml: !include schemas/orders-xml-schema.xsd
+  - order-xml: !include schemas/order-xml-schema.xsd
+  - order-addresses-xml: !include schemas/order-addresses-xml-schema.xsd
+  - billing-xml: !include schemas/billing-xml-schema.xsd
+  - shipping-xml: !include schemas/shipping-xml-schema.xsd
+  - comments-xml: !include schemas/comments-xml-schema.xsd
+  - order-items-xml: !include schemas/order-items-xml-schema.xsd
+  - products: !include schemas/products-schema.json
+  - productsPost: !include schemas/productsPost-schema.json
+  - productsPost-xml: !include schemas/productsPost-xml-schema.xsd
+  - product-xml: !include schemas/product-xml-schema.xsd
+  - product: !include schemas/product-schema.json
+  - productPut: !include schemas/productPut-schema.json
+  - productPut-xml: !include schemas/productPut-xml-schema.xsd
+  - error-xml: !include schemas/error-xml-schema.xsd
+  - error: !include schemas/error-schema.json
+  - success-xml: !include schemas/success-xml-schema.xsd
+  - success: !include schemas/success-schema.json
+  - images-xml: !include schemas/images-xml-schema.xsd
+  - imagesPost-xml: !include schemas/imagesPost-xml-schema.xsd
+  - store-images-xml: !include schemas/store-images-xml-schema.xsd
+  - image-xml: !include schemas/image-xml-schema.xsd
+  - imagePut: !include schemas/imagePut-schema.xsd
+  - store-image-xml: !include schemas/store-image-xml-schema.xsd
+  - store-imagePut-xml: !include schemas/store-imagePut-xml-schema.xsd
+  - websites-xml: !include schemas/websites-xml-schema.xsd
+  - websitesPost-xml: !include schemas/websitesPost-xml-schema.xsd
+  - websitesPost-resp-xml: !include schemas/websitesPost-resp-xml-schema.xsd
+  - customers-xml: !include schemas/customers-xml-schema.xsd
+  - customersPost-xml: !include schemas/customersPost-xml-schema.xsd
+  - customer-xml: !include schemas/customer-xml-schema.xsd
+  - customerPut-xml: !include schemas/customerPut-xml-schema.xsd
+  - addresses-xml: !include schemas/addresses-xml-schema.xsd
+  - addressesPost-xml: !include schemas/addressesPost-xml-schema.xsd
+  - address-xml: !include schemas/address-xml-schema.xsd
+  - addressPut-xml: !include schemas/addressPut-xml-schema.xsd
+resourceTypes:
+  - base: !include resourceTypes/base.raml
+securedBy: [ oauth_1_0 ]
+/products: 
+  type: base
+  description: Allows you to retrieve the list of all products with detailed information.
+  get: 
+    description: |
+      Description: Allows you to retrieve the list of all products with detailed information.
+      Notes: The list of attributes that will be returned in the response is configured in the Magento Admin Panel. The list of attributes differs for each type of user.
+      
+      Authentication: Admin
+      Default Format: XML
+    queryParameters: 
+      category_id: 
+        description: Category id
+        example: category_id=5
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: products-xml
+            example: !include examples/products-xml-example.xml
+          application/json: 
+            schema: products
+            example: !include examples/products-example.json
+  post: 
+    description: |
+      Description: Allows you to create a new simple product.
+      
+      Authentication: Admin
+      Default Format: JSON
+    body: 
+      application/json: 
+        schema: productsPost
+        example: !include examples/productsPost-example.json
+      application/xml: 
+        schema: productsPost-xml
+        example: !include examples/productsPost-xml-example.xml
+  /{productId}: 
+    type: base
+    get: 
+      description: |
+        Description: Allows you to retrieve information on a required simple product.
+        Notes: The list of attributes that will be returned in the response is configured in the Magento Admin Panel. The list of attributes differs for each type of user.
+        
+        Authentication: Admin
+        Default Format: XML
+        Parameters:
+        No Parameters
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: product-xml
+              example: !include examples/product-xml-example.xml
+            application/json: 
+              schema: product
+              example: !include examples/product-example.json
+    put: 
+      description: |
+        Description: Allows you to update an existing product.
+        
+        Authentication: Admin
+        Default Format: JSON
+        Parameters:
+        Enter only those parameters which you want to update.
+      body: 
+        application/json: 
+          schema: productPut
+          example: !include examples/productPut-example.json
+        application/xml: 
+          schema: productPut-xml
+          example: !include examples/productPut-xml-example.xml
+    delete: 
+      description: |
+        Description: Allows you to delete an existing product.
+        
+        Authentication: Admin
+        Default Format: JSON
+        Parameters: no parameters
+    /categories: 
+      type: base
+      get: 
+        description: |
+          Allows you to retrieve information about categories assigned to the specified product.
+          Authentication: Admin, Customer
+          Default Format: JSON
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: category
+                example: !include examples/category-example.json
+      post: 
+        description: As a result, the category with ID equal to 2 will be assigned to the specified product.
+        body: 
+          application/json: 
+            schema: category
+            example: !include examples/category-example.json
+      /{categoryid}: 
+        type: base
+        delete: 
+          description: |
+            "Allows you to unassign a category from a specified product.
+            Authentication: Admin
+            Default Format: JSON
+            Parameters:
+            No Parameters"
+    /images: 
+      type: base
+      description: Allows you to manage images of the required product.
+      get: 
+        description: |
+          Description: Allows you to retrieve information about all images of a specified product.
+          Notes: If there are custom attributes with the Catalog Input Type for Store Owner option set to Media Image, these attributes will be also returned in the response as an image type.
+          
+          Authentication: Admin, Customer, Guest
+          Default Format: XML
+          Parameters:
+          No Parameters
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: images-xml
+                example: !include examples/images-xml-example.xml
+      post: 
+        description: |
+          Description: Allows you to add an image for the required product.
+          
+          Authentication: Admin
+          Default Format: XML
+        body: 
+          application/xml: 
+            schema: imagesPost-xml
+            example: !include examples/imagesPost-xml-example.xml
+      /store/{store_id}: 
+        type: base
+        get: 
+          description: |
+            Description: Allows you to retrieve information about product images for a specified store view.
+            Notes: Images can have different labels for different stores. For example, image label "flower" in the English store view can be set as "fleur" in the French store view.
+            If there are custom attributes with the Catalog Input Type for Store Owner option set to Media Image, these attributes will be also returned in the response as an image type.
+            
+            Authentication: Admin, Customer, Guest
+            Default Format: XML
+            Parameters:
+            No Parameters
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: store-images-xml
+                  example: !include examples/store-images-xml-example.xml
+        post: 
+          description: |
+            Description: Allows you to add an image for the required product with image settings for a specific store.
+            Notes: The image is added on the Global level; specified image parameters are set for a specific store.
+            
+            Authentication: Admin
+            Default Format: XML
+          body: 
+            application/xml: 
+              schema: imagesPost-xml
+              example: !include examples/imagesPost-xml-example.xml
+      /{image_id}: 
+        type: base
+        get: 
+          description: |
+            Description: Allows you to retrieve information about a specified product image.
+            Notes: If there are custom attributes with the Catalog Input Type for Store Owner option set to Media Image, these attributes will be also returned in the response as an image type.
+            
+            Authentication: Admin, Customer, Guest
+            Default Format: XML
+            Parameters:
+            No Parameters
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: image-xml
+                  example: !include examples/image-xml-example.xml
+        put: 
+          description: |
+            Description: Allows you to update information for the specified product image.
+            Notes: When updating information, you need to pass only those parameters that you want to be updated. Parameters that were not passed in the request, will preserve the previous values.
+            
+            Authentication: Admin
+            Default Format: XML
+          body: 
+            application/xml: 
+              schema: imagePut
+              example: !include examples/imagePut-example.xml
+        delete: 
+          description: |
+            Description: Allows you to remove the specified image from a product.
+            Notes: The image will not be deleted physically, the image parameters will be set to No Image.
+            
+            Authentication: Admin
+            Default Format: XML
+            Parameters:
+            No Parameters
+        /store/{store_id}: 
+          type: base
+          description: Allows you to manage a specified product image for a specified store.
+          get: 
+            description: |
+              Description: Allows you to retrieve information about the specified product image from a specified store.
+              Notes: If there are custom attributes with the Catalog Input Type for Store Owner option set to Media Image, these attributes will be also returned in the response as an image type.
+              
+              Authentication: Admin, Customer, Guest
+              Default Format: XML
+              Parameters:
+              No Parameters
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    schema: store-image-xml
+                    example: !include examples/store-image-xml-example.xml
+          put: 
+            description: |
+              Description: Allows you to update the specified product image information for s specified store.
+              Notes: When updating information, you need to pass only those parameters that you want to be updated. Parameters that were not passed in the request will preserve the previous values.
+              
+              Authentication: Admin
+              Default Format: XML
+            body: 
+              application/xml: 
+                schema: store-imagePut-xml
+                example: !include examples/store-imagePut-xml-example.xml
+          delete: 
+            description: |
+              Description: Allows you to remove an image from the required product in the specified store.
+              Notes: The image will not be deleted physically, the image parameters will be set to No Image for the current store.
+              
+              Authentication: Admin
+              Default Format: XML
+              Parameters:
+              No Parameters
+    /websites: 
+      type: base
+      get: 
+        description: |
+          Description: Allows you to retrieve information about websites assigned to the specified product.
+          
+          Authentication: Admin
+          Default Format: XML
+          Parameters:
+          No Parameters
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: websites-xml
+                example: !include examples/websites-xml-example.xml
+      post: 
+        description: |
+          Website Assignment
+          Description: Allows you to assign a website to a specified product.  Allows you to assign multiple websites to a product.
+          
+          Authentication: Admin
+          Default Format: XML
+        body: 
+          application/xml: 
+            schema: websitesPost-xml
+            example: !include examples/websitesPost-xml-example.xml
+        responses: 
+          201: 
+            body: 
+              application/xml: 
+                schema: websitesPost-resp-xml
+                example: !include examples/websitesPost-resp-xml-example.xml
+      /{websiteId}: 
+        type: base
+        delete: 
+          description: |
+            Description: Allows you to unassign a website from a specified product.
+            
+            Authentication: Admin
+            Default Format: XML
+            Parameters:
+            No Parameters
+    /store/{storeId}: 
+      type: base
+      put: 
+        description: |
+          Description: Allows you to update an existing product.
+          
+          Authentication: Admin
+          Default Format: JSON
+          Parameters:
+          Enter only those parameters which you want to update.
+        body: 
+          application/json: 
+            schema: productPut
+            example: !include examples/productPut-example.json
+          application/xml: 
+            schema: productPut-xml
+            example: !include examples/productPut-xml-example.xml
+/customers: 
+  type: base
+  description: Allows you to create and retrieve customers.
+  get: 
+    description: |
+      Description: Allows you to retrieve the list of existing customers.
+      Notes:: Only Admin user can retrieve the list of customers with all their attributes.
+      
+      Authentication: Admin
+      Default Format: XML
+      Parameters:
+      No Parameters
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: customers-xml
+            example: !include examples/customers-xml-example.xml
+  post: 
+    description: |
+      Description: Allows you to create a new customer.
+      Authentication: Admin
+      Default Format: XML
+    body: 
+      application/xml: 
+        schema: customersPost-xml
+        example: !include examples/customersPost-xml-example.xml
+  /{customerId}: 
+    type: base
+    get: 
+      description: |
+        Description: Allows you to retrieve information on an existing customer.
+        Notes:: The list of attributes that will be returned for customers is configured in the Magento Admin Panel. The Customer user type has access only to his/her own information. Also, Admin can add additional non-system customer attributes by selecting Customers > Attributes > Manage Customer Attributes. If these attributes are set as visible on frontend, they will be returned in the response. Also, custom attributes will be returned in the response only after the customer information is updated in the Magento Admin Panel or the specified custom attribute is updated via API (see the PUT method below). Please note that managing customer attributes is available only in Magento Enterprise Edition.
+        
+        Authentication: Admin, Customer
+        Default Format: XML
+        Parameters:
+        No Parameters
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: customer-xml
+              example: !include examples/customer-xml-example.xml
+    put: 
+      description: |
+        Description: Allows you to update an existing customer.
+        Notes: The list of attributes that will be updated for customer is configured in the Magento Admin Panel. The Customer user type has access only to his/her own information.
+        
+        Authentication: Admin, Customer
+        Default Format: XML
+        Parameters:
+        You must specify only those parameters which you want to update. Parameters that are not defined in the request body will preserve the previous values. The website_id and created_in attributes are not allowed for updating.
+      body: 
+        application/xml: 
+          schema: customerPut-xml
+          example: !include examples/customerPut-xml-example.xml
+    delete: 
+      description: |
+        Description: Allows you to delete an existing customer.
+        Notes: Admin only can delete a customer.
+        
+        Authentication: Admin
+        Default Format: XML
+        Parameters:
+        No Parameters
+    /addresses: 
+      type: base
+      description: Retrieve the list of customer addresses, create, update, and delete the customer address.
+      get: 
+        description: |
+          Description: Allows you to retrieve the list of existing customer addresses.
+          Notes: The list of attributes that will be returned for customer addresses is configured in the Magento Admin Panel. The Customer user type has access only to his/her own addresses. Also, Admin can add additional non-system customer address attributes by selecting Customers > Attributes > Manage Customer Address Attributes (available only in Magento Enterprise Edition). If these attributes are set as visible on frontend, they will be returned in the response.
+          
+          Authentication: Admin, Customer
+          Default Format: XML
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: addresses-xml
+                example: !include examples/addresses-xml-example.xml
+      post: 
+        description: |
+          Description: Allows you to create a new address for the required customer.
+          Notes: The Customer user type can create addresses only for themselves.
+          
+          Authentication: Admin, Customer
+          Default Format: XML
+        body: 
+          application/xml: 
+            schema: addressesPost-xml
+            example: !include examples/addressesPost-xml-example.xml
+      /{address_id}: 
+        type: base
+        get: 
+          description: |
+            Description: Allows you to retrieve an existing customer address.
+            Notes: The list of attributes that will be returned for customer address is configured in the Magento Admin Panel. The Customer user type has access only to his/her own addresses. Also, Admin can add additional non-system customer address attributes by selecting Customers > Attributes > Manage Customer Address Attributes (available only in Magento Enterprise Edition). If these attributes are set as visible on frontend, they will be returned in the response.
+            
+            Authentication: Admin, Customer
+            Default Format: XML
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: address-xml
+                  example: !include examples/address-xml-example.xml
+        put: 
+          description: |
+            Description: Allows you to update an existing customer address.
+            Notes: The list of attributes that will be updated for customer address is configured in the Magento Admin Panel. The Customer user type has access only to his/her own addresses.
+            Authentication: Admin, Customer
+            Default Format: XML
+          body: 
+            application/xml: 
+              schema: addressPut-xml
+              example: !include examples/addressPut-xml-example.xml
+        delete: 
+          description: |
+            Description: Allows you to delete an existing customer address.
+            Notes: The Customer user type can delete only his/her own addresses.
+            
+            Authentication: Admin, Customer
+            Default Format: XML
+            Parameters:
+            No Parameters
+/stockitems: 
+  type: base
+  description: Retrieve the list of stock items and update required stock items.
+  get: 
+    description: |
+      Allows you to retrieve the list of existing stock items.
+      Authentication: Admin
+      Default Format: XML
+      Parameters :
+      No Parameters
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: stockitems-xml
+            example: !include examples/stockitems-xml-example.xml
+          application/json: 
+            schema: stockitems
+            example: !include examples/stockitems-example.json
+  put: 
+    description: |
+      Description: Allows you to update existing stock items.
+      Authentication: Admin
+      Default Format: XML
+      Notes: The Content-Type: text/xml parameter must be added to the request header.
+    body: 
+      application/xml: 
+        schema: stockitemsPut-xml
+        example: !include examples/stockitemsPut-xml-example.xml
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: stockitems-update-xml
+            example: !include examples/stockitems-update-xml-example.xml
+  /{id}: 
+    type: base
+    get: 
+      description: |
+        Description: Allows you to retrieve the stock item information.
+        Authentication: Admin
+        Default Format: XML
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: stockitem-xml
+              example: !include examples/stockitem-xml-example.xml
+            application/json: 
+              schema: stockitem
+              example: !include examples/stockitem-example.json
+    put: 
+      description: |
+        Description: Allows you to update existing stock item data.
+        Notes: The Content-Type: text/xml parameter must be added to the request header.
+        Authentication: Admin
+        Default Format: XML
+        Parameters:
+        Enter only those parameters which you want to update.
+      body: 
+        application/xml: 
+          schema: stockitemPut-xml
+          example: !include examples/stockitemPut-xml-example.xml
+        application/json: 
+          schema: stockitemPut
+          example: !include examples/stockitemPut-example.json
+/orders: 
+  type: base
+  get: 
+    description: |
+      Description: Allows you to retrieve the list of existing orders. Each order contains the following information: general order information, information on ordered items, order comments, and order addresses (both billing and shipping).
+      The list of attributes that will be returned for the order is configured in the Magento Admin Panel.
+      
+      Authentication: Admin, Customer, Guest
+      Default Format: XML
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            schema: orders-xml
+            example: !include examples/orders-xml-example.xml
+  /{orderId}: 
+    type: base
+    description: |
+      Allows you to retrieve information on a single order.
+      The list of attributes that will be returned for the order is configured in the Magento Admin Panel.
+    get: 
+      description: |
+        Description: Allows you to retrieve the order information.
+        Authentication: Admin, Customer
+        Default Format: XML
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: order-xml
+              example: !include examples/order-xml-example.xml
+    /items: 
+      type: base
+      get: 
+        description: |
+          Description: Allows you to retrieve the list of existing order items with detailed items information.
+          Notes: The list of attributes that will be returned for order items is configured in the Magento Admin Panel.
+          
+          Authentication: Admin
+          Default Format: XML
+          Parameters:
+          No Parameters
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: order-items-xml
+                example: !include examples/order-items-xml-example.xml
+    /addresses: 
+      type: base
+      description: Allows you to retrieve information about billing and shipping addresses of the required order.
+      get: 
+        description: |
+          Description: Allows you to retrieve information on billing and shipping addresses from the required order.
+          Notes: Customers can retrieve addresses only from their orders.
+          
+          Authentication: Admin, Customer
+          Default Format: XML
+          Parameters:
+          No Parameters
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: order-addresses-xml
+                example: !include examples/order-addresses-xml-example.xml
+      /billing: 
+        type: base
+        get: 
+          description: |
+            Description: Allows you to retrieve information on the order billing address.
+            Notes: Customers can retrieve information on billing addresses only from their own orders.
+            
+            Authentication: Admin, Customer
+            Default Format: XML
+            Parameters:
+            No Parameters
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: billing-xml
+                  example: !include examples/billing-xml-example.xml
+      /shipping: 
+        type: base
+        get: 
+          description: |
+            Description: Allows you to retrieve information on the order shipping address.
+            Notes: Customers can retrieve information on shipping addresses only from their own orders.
+            
+            Authentication: Admin, Customer
+            Default Format: XML
+            Parameters:
+            No Parameters
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: shipping-xml
+                  example: !include examples/shipping-xml-example.xml
+    /comments: 
+      type: base
+      get: 
+        description: |
+          Description: Allows you to retrieve information about comments of the required order.
+          
+          Authentication: Admin
+          Default Format: XML
+          Parameters:
+          No Parameters
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: comments-xml
+                example: !include examples/comments-xml-example.xml
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

@@ -1,0 +1,12 @@
+get: 
+  description: A directory of Chatter feeds, groups, and users resources.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: chatterDirectoryResponse
+          example: !include examples/chatterResource-example.json
+head: 
+  description: A directory of Chatter feeds, groups, and users resources.
+  responses: 
+    200: 

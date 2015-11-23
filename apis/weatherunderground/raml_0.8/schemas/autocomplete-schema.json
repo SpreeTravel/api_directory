@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "RESULTS": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "name": {
+            "required": false,
+            "type": "string"
+          },
+          "type": {
+            "required": false,
+            "type": "string"
+          },
+          "c": {
+            "required": false,
+            "type": "string"
+          },
+          "zmw": {
+            "required": false,
+            "type": "string"
+          },
+          "tz": {
+            "required": false,
+            "type": "string"
+          },
+          "tzs": {
+            "required": false,
+            "type": "string"
+          },
+          "l": {
+            "required": false,
+            "type": "string"
+          },
+          "lat": {
+            "required": false,
+            "type": "string"
+          },
+          "lon": {
+            "required": false,
+            "type": "string"
+          },
+          "date": {
+            "required": false,
+            "type": "string"
+          },
+          "strmnum": {
+            "required": false,
+            "type": "string"
+          },
+          "basin": {
+            "required": false,
+            "type": "string"
+          },
+          "damage": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

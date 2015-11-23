@@ -1,0 +1,15 @@
+{
+	"type" : "object" ,
+	"required" : true ,
+	"$schema" : "http://json-schema.org/draft-03/schema" ,
+	"properties" : {
+		"escalation_delay_in_minutes" : {
+			"type" : "number" ,
+			"required" : false
+		} ,
+		"rule_object" : {
+			"type" : "object" ,
+			"required" : false
+		}
+	}
+}

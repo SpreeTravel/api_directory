@@ -1,0 +1,15 @@
+{
+    "activityLog":{
+        "activityId":12030,
+        "activityParentId":90009,
+        "calories":197,
+        "description":"5 mph (12 min/mile)",
+        "distance":3.34,
+        "duration":1800000,
+        "isFavorite":false,
+        "logId":132394,
+        "name":"Running",
+        "startTime":"12:20",
+        "steps":2970
+    }
+}

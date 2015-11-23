@@ -1,0 +1,38 @@
+{
+  "zip": "zip",
+  "lon": 1.0,
+  "venue_name": "venue_name",
+  "status": "status",
+  "link": "link",
+  "state": 100,
+  "community": {
+    "id": 100,
+    "name": "name",
+    "urlname": "urlname"
+  },
+  "address1": "address1",
+  "city": "city",
+  "country": "country",
+  "helpers": {
+    "member_state": "member_state",
+    "member_city": "member_city",
+    "name": "name",
+    "member_country": "member_country",
+    "member_id": 100
+  },
+  "id": 100,
+  "time": 100,
+  "short_description": "short_description",
+  "updated": 100,
+  "udf_{varname}": "udf_{varname}",
+  "created": 100,
+  "container": {
+    "id": 100,
+    "name": "name",
+    "urlname": "urlname"
+  },
+  "description": "description",
+  "rsvp_count": 100,
+  "meetup_url": "meetup_url",
+  "lat": 1.0
+}

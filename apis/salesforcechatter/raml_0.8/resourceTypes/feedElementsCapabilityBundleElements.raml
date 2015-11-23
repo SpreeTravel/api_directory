@@ -1,0 +1,25 @@
+get: 
+  description: Access all feed elements that are grouped together in a bundle.
+  queryParameters: 
+    elementsPerBundle: 
+      description: The maximum number of feed elements per bundle. The default and maximum value is 10.
+      type: integer
+      default: 10
+      example: 5
+    page: 
+      description: Specifies the page token to be used to view a page of information. Page tokens are returned as part of the response class, such as currentPageToken or nextPageToken. If you pass in null, the first page is returned.
+    pageSize: 
+      description: Specifies the number of feed elements per page. Valid values are from 1 through 100. If you pass in null, the default size is 25.
+      type: integer
+      default: 25
+      example: 5
+    recentCommentCount: 
+      description: The maximum number of comments to return with each feed element. The default value is 3.
+      type: integer
+      default: 3
+      example: 5
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: feedElementPageResponse

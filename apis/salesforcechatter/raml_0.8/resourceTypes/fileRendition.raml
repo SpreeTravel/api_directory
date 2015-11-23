@@ -1,0 +1,26 @@
+get: 
+  description: A rendition of the file. A rendition is a binary preview of the file. The format of the binary depends on the format specified in the request.
+  queryParameters: 
+    page: 
+      description: |
+        Specify a rendition of a specific page. The first page is 0. If you don’t specify a specific page, a rendition of the first page is returned.
+        For a PDF file rendition, the rendition is for the entire document. The only valid value is 0: you can’t get the rendition of a single page.
+      type: integer
+    type: 
+      description: |
+        Specify the type of rendition to be returned. Default value is THUMB120BY90. Valid values are:
+        FLASH
+        PDF
+        THUMB120BY90
+        THUMB240BY180
+        THUMB720BY480
+      enum: 
+        - THUMB120BY90
+        - FLASH
+        - PDF
+        - THUMB720BY480
+        - THUMB240BY180
+  responses: 
+    200: 
+      body: 
+        application/json: 

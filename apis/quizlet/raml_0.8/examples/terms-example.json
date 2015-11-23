@@ -1,0 +1,28 @@
+{
+  "terms" : [
+    {
+      "id" : 190713940 ,
+      "term" : "une grenouille" ,
+      "definition" : "a frog" ,
+      "image" : {
+        "url" : "http://farm1.staticflickr.com/74/179791578_70992b1821.jpg" ,
+        "width" : 180 ,
+        "height" : 240
+      }
+    } , {
+      "id" : 190713941 ,
+      "term" : "un crapaud" ,
+      "definition" : "a toad" ,
+      "image" : {
+        "url" : "http://farm4.staticflickr.com/3267/2874355931_da7c0bbdaa.jpg" ,
+        "width" : 240 ,
+        "height" : 213
+      }
+    } , {
+      "id" : 190713942 ,
+      "term" : "un poisson" ,
+      "definition" : "a fish (no image)" ,
+      "image" : null
+    }
+  ]
+}

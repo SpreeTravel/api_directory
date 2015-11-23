@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+        "heartLog": {
+            "properties": {
+                "heartRate": {
+                    "type": "integer"
+                },
+                "logId": {
+                    "type": "integer"
+                },
+                "time": {
+                    "type": "string"
+                },
+                "tracker": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

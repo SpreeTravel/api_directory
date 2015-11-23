@@ -1,0 +1,11 @@
+{
+  "first_name" : "Barack" ,
+  "last_name" : "Obama" ,
+  "address_line1" : "1600 Pennsylvania Avenue" ,
+  "city" : "Washington" ,
+  "state" : "DC" ,
+  "country" : "US" ,
+  "product_id" : "product_id" ,
+  "postal_code" : "20500" ,
+  "shipping_method" : "Standard"
+}

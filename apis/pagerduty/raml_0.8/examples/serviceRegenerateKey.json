@@ -1,0 +1,23 @@
+{
+	"service" : {
+		"id" : "PBIS5NX" ,
+		"name" : "sevname10" ,
+		"service_url" : "/services/PBIS5NX" ,
+		"service_key" : "7b68a2c011c20130a61638f6b11a5d17" ,
+		"auto_resolve_timeout" : 14400 ,
+		"acknowledgement_timeout" : 1800 ,
+		"created_at" : "2012-11-15T21:23:07-05:00" ,
+		"status" : "active" ,
+		"last_incident_timestamp" : null ,
+		"email_incident_creation" : null ,
+		"incident_counts" : {
+			"triggered" : 0 ,
+			"acknowledged" : 0 ,
+			"resolved" : 0 ,
+			"total" : 0
+		} ,
+		"email_filter_mode" : "all-email" ,
+		"type" : "generic_events_api" ,
+		"description" : "service sevname10"
+	}
+}

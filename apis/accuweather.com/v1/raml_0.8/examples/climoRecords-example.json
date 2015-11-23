@@ -1,0 +1,82 @@
+{
+  "Date" : "2012-12-25T00:00:00" ,
+  "EpochDate" : 1356393600 ,
+  "Normals" : {
+    "Temperatures" : {
+      "Maximum" : {
+        "Metric" : {
+          "Value" : 5.6 ,
+          "Unit" : "C" ,
+          "UnitType" : 17
+        } ,
+        "Imperial" : {
+          "Value" : 42 ,
+          "Unit" : "F" ,
+          "UnitType" : 18
+        }
+      } ,
+      "Minimum" : {
+        "Metric" : {
+          "Value" : -2.4 ,
+          "Unit" : "C" ,
+          "UnitType" : 17
+        } ,
+        "Imperial" : {
+          "Value" : 28 ,
+          "Unit" : "F" ,
+          "UnitType" : 18
+        }
+      } ,
+      "Average" : {
+        "Metric" : {
+          "Value" : 1.6 ,
+          "Unit" : "C" ,
+          "UnitType" : 17
+        } ,
+        "Imperial" : {
+          "Value" : 35 ,
+          "Unit" : "F" ,
+          "UnitType" : 18
+        }
+      }
+    } ,
+    "DegreeDays" : {
+      "Heating" : {
+        "Metric" : {
+          "Value" : 17 ,
+          "Unit" : "C" ,
+          "UnitType" : 17
+        } ,
+        "Imperial" : {
+          "Value" : 30 ,
+          "Unit" : "F" ,
+          "UnitType" : 18
+        }
+      } ,
+      "Cooling" : {
+        "Metric" : {
+          "Value" : 0 ,
+          "Unit" : "C" ,
+          "UnitType" : 17
+        } ,
+        "Imperial" : {
+          "Value" : 0 ,
+          "Unit" : "F" ,
+          "UnitType" : 18
+        }
+      }
+    } ,
+    "Precipitation" : {
+      "Metric" : {
+        "Value" : 3 ,
+        "Unit" : "mm" ,
+        "UnitType" : 3
+      } ,
+      "Imperial" : {
+        "Value" : 0.11 ,
+        "Unit" : "in" ,
+        "UnitType" : 1
+      }
+    }
+  }
+}

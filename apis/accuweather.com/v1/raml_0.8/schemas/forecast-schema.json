@@ -1,0 +1,58 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : 
+    {
+      "type" : "object" ,
+      "properties" : {
+        "DateTime" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "EpochDateTime" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "WeatherIcon" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "IconPhrase" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Temperature" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "Value" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "Unit" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "UnitType" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "PrecipitationProbability" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "MobileLink" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Link" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  
+}

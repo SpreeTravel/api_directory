@@ -1,0 +1,70 @@
+{
+    "Refund": {
+        "TotalAmount": 100,
+        "InvoiceNumber": "Inv 21540",
+        "InvoiceDescription": "Individual Invoice Description",
+        "InvoiceReference": "513456",
+        "CurrencyCode": "AUD",
+        "TransactionID": "123456789"
+    },
+    "Customer": {
+        "Reference": "A12345",
+        "Title": "Mr.",
+        "FirstName": "John",
+        "LastName": "Smith",
+        "CompanyName": "Demo Shop 123",
+        "JobDescription": "Developer",
+        "Street1": "Level 5",
+        "Street2": "369 Queen Street",
+        "City": "Auckland",
+        "State": "",
+        "PostalCode": "1010",
+        "Country": "au",
+        "Email": "",
+        "Phone": "09 889 0986",
+        "Mobile": "09 889 0986",
+        "Comments": "",
+        "Fax": "",
+        "Url": "",
+        "CardDetails": {
+            "ExpiryMonth": "12",
+            "ExpiryYear": "16"
+        }
+    },
+    "ShippingAddress": {
+        "ShippingMethod": "NextDay",
+        "FirstName": "John",
+        "LastName": "Smith",
+        "Street1": "Level 5",
+        "Street2": "369 Queen Street",
+        "City": "Auckland",
+        "State": "",
+        "Country": "nz",
+        "PostalCode": "1010",
+        "Phone": "09 889 0986"
+    },
+    "Items": [
+        {
+            "SKU": "SKU1",
+            "Description": "Description1",
+            "Quantity": "1",
+            "UnitCost": "1",
+            "Tax": "0",
+            "Total": "1"
+        }
+    ],
+    "Options": [
+        {
+            "Value": "Option1"
+        },
+        {
+            "Value": "Option2"
+        },
+        {
+            "Value": "Option3"
+        }
+    ],
+    "DeviceID": "D1234",
+    "CustomerIP": "127.0.0.1",
+    "PartnerID": "04A0FD665F7348A295C5B9EE95400301"
+}

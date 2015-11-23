@@ -1,0 +1,13 @@
+description: Return a list of known metrics and their value names for the given resource.
+queryParameters: 
+  name: 
+    description: Filter metrics by name
+  page: 
+    description: Pagination index
+    type: integer
+responses: 
+  200: 
+    body: 
+      application/json: 
+        schema: metricNames
+        example: !include ../examples/metricNames.json

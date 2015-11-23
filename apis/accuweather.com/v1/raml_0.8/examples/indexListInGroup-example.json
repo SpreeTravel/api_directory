@@ -1,0 +1,18 @@
+[
+  {
+    "Name" : "Beach & Pool Forecast" ,
+    "ID" : 10 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Beach and Pool Forecast considers numerous weather and water factors to help predict the conditions you will encounter at the beach or pool."
+  } , {
+    "Name" : "Sailing Forecast" ,
+    "ID" : 11 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Sailing Forecast combines information about optimum wind conditions with the weather and water factors that influence how safe and comfortable the day is for sailing."
+  } , {
+    "Name" : "Fishing Forecast" ,
+    "ID" : 13 ,
+    "Ascending" : true ,
+    "Description" : "The AccuWeather.com Fishing Forecast combines solunar and weather information to measure the day's peak conditions for fishing."
+  }
+]

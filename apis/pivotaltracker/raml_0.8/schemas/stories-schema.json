@@ -1,0 +1,61 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : [
+    {
+      "type" : "object" ,
+      "properties" : {
+        "kind" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "integration_id" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "external_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "estimate" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "created_at" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "external_requester" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "external_owner" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "owned_by_id" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "owner_ids" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "number"
+            }
+          ]
+        } ,
+        "story_type" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  ]
+}

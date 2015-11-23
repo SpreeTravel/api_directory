@@ -1,0 +1,9 @@
+{
+  "kind" : "prediction#training" ,
+  "id" : "string" ,
+  "selfLink" : "string" ,
+  "storageDataLocation" : "string" ,
+  "storagePMMLLocation" : "string" ,
+  "storagePMMLModelLocation" : "string" ,
+  "modelType" : "string"
+}

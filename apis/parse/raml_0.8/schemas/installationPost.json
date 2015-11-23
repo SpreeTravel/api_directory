@@ -1,0 +1,40 @@
+{
+	"type" : "object" ,
+	"$schema" : "http://json-schema.org/draft-03/schema" ,
+	"required" : true ,
+	"properties" : {
+		"deviceType" : {
+			"type" : "string" ,
+			"enum": [ "ios", "android" ],
+			"required" : true
+		} ,
+		"installationId" : {
+			"type" : "string" ,
+			"required" : false
+		} ,
+		"deviceToken" : {
+			"type" : "string" ,
+			"required" : false
+		} ,
+		"badge" : {
+			"type" : "number" ,
+			"required" : false
+		} ,
+		"timeZone" : {
+			"type" : "string" ,
+			"required" : false
+		} ,
+		"channels" : {
+			"type" : "array" ,
+			"items": { "type": "string" } ,
+			"required" : false
+		}
+	},
+	"patternProperties" : {
+		"^[a-zA-Z0-9_]+$" : {
+			"type" : "any" ,
+			"required" : false
+		}
+	} ,
+	"additionalProperties" : false
+}

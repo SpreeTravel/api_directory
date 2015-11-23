@@ -1,0 +1,16 @@
+{
+  "distance" : 0 ,
+  "adminCode1" : "07" ,
+  "countryName" : "Austria" ,
+  "countryCode" : "AT" ,
+  "codes" : [
+    {
+      "code" : "07" ,
+      "type" : "FIPS10-4"
+    } , {
+      "code" : "7" ,
+      "type" : "ISO3166-2"
+    }
+  ] ,
+  "adminName1" : "Tyrol"
+}

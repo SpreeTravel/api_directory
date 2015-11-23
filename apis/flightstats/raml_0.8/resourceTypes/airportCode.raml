@@ -1,0 +1,16 @@
+get: 
+  description: Returns the airport that currently has the given code (or null if none)
+  queryParameters: 
+    appId: 
+    appKey: 
+    extendedOptions: 
+    callback: 
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: airportCodeJSONResponse
+          example: !include ../examples/airportCodeJSONResponse-example.json
+        application/xml: 
+          schema: airportCodeXMLResponse
+          example: !include ../examples/airportCodeXMLResponse-example.xml

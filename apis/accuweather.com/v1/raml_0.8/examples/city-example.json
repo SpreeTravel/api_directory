@@ -1,0 +1,65 @@
+{
+    "Version": 1,
+    "Key": "335315",
+    "Type": "City",
+    "Rank": 55,
+    "LocalizedName": "State College",
+    "EnglishName": "State College",
+    "PrimaryPostalCode": "16801",
+    "Region": 
+    {
+        "ID": "NAM",
+        "LocalizedName": "North America",
+        "EnglishName": "North America"
+    },
+    "Country": 
+    {
+        "ID": "US",
+        "LocalizedName": "United States",
+        "EnglishName": "United States"
+    },
+    "AdministrativeArea": 
+    {
+        "ID": "PA",
+        "LocalizedName": "Pennsylvania",
+        "EnglishName": "Pennsylvania",
+        "Level": 1,
+        "LocalizedType": "State",
+        "EnglishType": "State",
+        "CountryID": "US"
+    },
+    "TimeZone": 
+    {
+        "Code": "EDT",
+        "Name": "America/New_York",
+        "GmtOffset": -4,
+        "IsDaylightSaving": true,
+        "NextOffsetChange": "2012-11-04T06:00:00Z"
+    },
+    "GeoPosition": 
+    {
+        "Latitude": 40.79,
+        "Longitude": -77.86,
+        "Elevation": 
+        {
+            "Metric": 
+            {
+                "Value": 366.4,
+                "Unit": "m"
+            },
+            "Imperial": 
+            {
+                "Value": 1202,
+                "Unit": "ft"
+            }
+        }
+    },
+    "IsAlias": false,
+    "SupplementalAdminAreas": [
+        {
+            "Level": 2,
+            "LocalizedName": "Centre",
+            "EnglishName": "Centre"
+        }
+    ]
+}

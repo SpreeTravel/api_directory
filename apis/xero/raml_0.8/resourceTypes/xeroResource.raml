@@ -1,0 +1,222 @@
+get?: 
+  responses: 
+    200: 
+      description: |
+        **OK**
+        Successful API call.
+        
+        - The Xero API will return with a HTTP 200 for successful requests
+        - If you are utlilising the summarizeErrors=false querystring parameter you'll always receive a HTTP 200 response even though some of the elements may have failed.
+    400: 
+      description: |
+        **Bad Request**
+        A validation exception has occured.
+        
+        HTTP 400 responses include an "ApiException" element in the response that contains a useful summary of the reason for the error.
+        
+        <pre><code>
+          <ApiException>
+            <ErrorNumber>10</ErrorNumber>
+            <Type>ValidationException</Type>
+            <Message>A validation exception occurred</Message>
+            <Elements>
+              <DataContractBase xsi:type="Invoice">
+                <ValidationErrors>
+                  <ValidationError>
+                    <Message>Email address must be valid.</Message>
+                  </ValidationError>
+                </ValidationErrors>
+             </DataContractBase>
+            </Elements>
+          </ApiException>
+        </code></pre>
+    401: 
+      description: |
+        **Unauthorised**
+        Invalid authorization credentials.
+        
+        A customer may disconnect your application from within Xero at anytime so at the very least you should implement functionality to handle a 401 error and allow a customer to easily reauthorize your application.
+        
+        A description of the reason for the error is returned in response using the following format.
+        oauth_problem=xxxxxxxxxxxxxxxx&oauth_problem_advice=xxxxxxxxxxxxxxxxxx
+        
+        Learn more about unauthorised errors: http://developer.xero.com/documentation/getting-started/oauth-issues/
+    403: 
+      description: |
+        **Forbidden**
+        The client SSL certificate was not valid. This indicates the Xero Entrust certificate required for partner API applications is not being supplied in the connection
+    404: 
+      description: |
+        **Not Found**
+        The resource you have specified cannot be found
+    500: 
+      description: |
+        **Internal Error**
+        An unhandled error with the Xero API. Contact the Xero API team if problems persist.
+    501: 
+      description: |
+        **Not Implemented**
+        The method you have called has not been implemented (e.g. POST Organisation)
+    503: 
+      description: |
+        **Rate Limit**
+        Exceeded The API rate limit for your organisation/application pairing has been exceeded.
+        
+        An application can use up to 1000 API calls against a particular Xero organisation in a rolling 24 hour period. The following will be returned in the body if you exceed a rate limit.
+        oauth_problem=rate%20limit%20exceeded&oauth_problem_advice=please%20wait%20before%20retrying%20the%20xero%20api
+        
+        Learn more about limits: http://developer.xero.com/documentation/getting-started/xero-api-limits/
+        
+        **Not Available**
+        API is currently unavailable – typically due to a scheduled outage – try again soon.
+        
+        From time to time we might require a short outage to carry out maintenance or upgrades. In most cases the Xero API will respond with a HTTP 503 when it is not available, and provide the following response body
+        The Xero API is currently offline for maintenance
+post?: 
+  responses: 
+    200: 
+      description: |
+        **OK**
+        Successful API call.
+        
+        - The Xero API will return with a HTTP 200 for successful requests
+        - If you are utlilising the summarizeErrors=false querystring parameter you'll always receive a HTTP 200 response even though some of the elements may have failed.
+    400: 
+      description: |
+        **Bad Request**
+        A validation exception has occured.
+        
+        HTTP 400 responses include an "ApiException" element in the response that contains a useful summary of the reason for the error.
+        
+        <pre><code>
+          <ApiException>
+            <ErrorNumber>10</ErrorNumber>
+            <Type>ValidationException</Type>
+            <Message>A validation exception occurred</Message>
+            <Elements>
+              <DataContractBase xsi:type="Invoice">
+                <ValidationErrors>
+                  <ValidationError>
+                    <Message>Email address must be valid.</Message>
+                  </ValidationError>
+                </ValidationErrors>
+             </DataContractBase>
+            </Elements>
+          </ApiException>
+        </code></pre>
+    401: 
+      description: |
+        **Unauthorised**
+        Invalid authorization credentials.
+        
+        A customer may disconnect your application from within Xero at anytime so at the very least you should implement functionality to handle a 401 error and allow a customer to easily reauthorize your application.
+        
+        A description of the reason for the error is returned in response using the following format.
+        oauth_problem=xxxxxxxxxxxxxxxx&oauth_problem_advice=xxxxxxxxxxxxxxxxxx
+        
+        Learn more about unauthorised errors: http://developer.xero.com/documentation/getting-started/oauth-issues/
+    403: 
+      description: |
+        **Forbidden**
+        The client SSL certificate was not valid. This indicates the Xero Entrust certificate required for partner API applications is not being supplied in the connection
+    404: 
+      description: |
+        **Not Found**
+        The resource you have specified cannot be found
+    500: 
+      description: |
+        **Internal Error**
+        An unhandled error with the Xero API. Contact the Xero API team if problems persist.
+    501: 
+      description: |
+        **Not Implemented**
+        The method you have called has not been implemented (e.g. POST Organisation)
+    503: 
+      description: |
+        **Rate Limit**
+        Exceeded The API rate limit for your organisation/application pairing has been exceeded.
+        
+        An application can use up to 1000 API calls against a particular Xero organisation in a rolling 24 hour period. The following will be returned in the body if you exceed a rate limit.
+        oauth_problem=rate%20limit%20exceeded&oauth_problem_advice=please%20wait%20before%20retrying%20the%20xero%20api
+        
+        Learn more about limits: http://developer.xero.com/documentation/getting-started/xero-api-limits/
+        
+        **Not Available**
+        API is currently unavailable – typically due to a scheduled outage – try again soon.
+        
+        From time to time we might require a short outage to carry out maintenance or upgrades. In most cases the Xero API will respond with a HTTP 503 when it is not available, and provide the following response body
+        The Xero API is currently offline for maintenance
+put?: 
+  responses: 
+    200: 
+      description: |
+        **OK**
+        Successful API call.
+        
+        - The Xero API will return with a HTTP 200 for successful requests
+        - If you are utlilising the summarizeErrors=false querystring parameter you'll always receive a HTTP 200 response even though some of the elements may have failed.
+    400: 
+      description: |
+        **Bad Request**
+        A validation exception has occured.
+        
+        HTTP 400 responses include an "ApiException" element in the response that contains a useful summary of the reason for the error.
+        
+        <pre><code>
+          <ApiException>
+            <ErrorNumber>10</ErrorNumber>
+            <Type>ValidationException</Type>
+            <Message>A validation exception occurred</Message>
+            <Elements>
+              <DataContractBase xsi:type="Invoice">
+                <ValidationErrors>
+                  <ValidationError>
+                    <Message>Email address must be valid.</Message>
+                  </ValidationError>
+                </ValidationErrors>
+             </DataContractBase>
+            </Elements>
+          </ApiException>
+        </code></pre>
+    401: 
+      description: |
+        **Unauthorised**
+        Invalid authorization credentials.
+        
+        A customer may disconnect your application from within Xero at anytime so at the very least you should implement functionality to handle a 401 error and allow a customer to easily reauthorize your application.
+        
+        A description of the reason for the error is returned in response using the following format.
+        oauth_problem=xxxxxxxxxxxxxxxx&oauth_problem_advice=xxxxxxxxxxxxxxxxxx
+        
+        Learn more about unauthorised errors: http://developer.xero.com/documentation/getting-started/oauth-issues/
+    403: 
+      description: |
+        **Forbidden**
+        The client SSL certificate was not valid. This indicates the Xero Entrust certificate required for partner API applications is not being supplied in the connection
+    404: 
+      description: |
+        **Not Found**
+        The resource you have specified cannot be found
+    500: 
+      description: |
+        **Internal Error**
+        An unhandled error with the Xero API. Contact the Xero API team if problems persist.
+    501: 
+      description: |
+        **Not Implemented**
+        The method you have called has not been implemented (e.g. POST Organisation)
+    503: 
+      description: |
+        **Rate Limit**
+        Exceeded The API rate limit for your organisation/application pairing has been exceeded.
+        
+        An application can use up to 1000 API calls against a particular Xero organisation in a rolling 24 hour period. The following will be returned in the body if you exceed a rate limit.
+        oauth_problem=rate%20limit%20exceeded&oauth_problem_advice=please%20wait%20before%20retrying%20the%20xero%20api
+        
+        Learn more about limits: http://developer.xero.com/documentation/getting-started/xero-api-limits/
+        
+        **Not Available**
+        API is currently unavailable – typically due to a scheduled outage – try again soon.
+        
+        From time to time we might require a short outage to carry out maintenance or upgrades. In most cases the Xero API will respond with a HTTP 503 when it is not available, and provide the following response body
+        The Xero API is currently offline for maintenance

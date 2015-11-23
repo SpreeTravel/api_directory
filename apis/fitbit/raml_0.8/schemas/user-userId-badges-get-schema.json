@@ -1,0 +1,31 @@
+{
+    "": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+        "badges": 
+            {
+                "properties": {
+                    "badgeType": {
+                        "type": "string"
+                    },
+                    "dateTime": {
+                        "type": "string"
+                    },
+                    "image50px": {
+                        "type": "string"
+                    },
+                    "image75px": {
+                        "type": "string"
+                    },
+                    "timesAchieved": {
+                        "type": "integer"
+                    },
+                    "value": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            }
+        
+    }
+}

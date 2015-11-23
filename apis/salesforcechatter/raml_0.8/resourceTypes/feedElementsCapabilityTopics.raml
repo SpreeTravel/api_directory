@@ -1,0 +1,22 @@
+get: 
+  description: Get topics associated with a feed element.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: topicsCapabilityResponse
+post: 
+  description: Post topics associated with a feed element.
+  body: 
+    application/json: 
+      schema: addFeedElementsCapabilityTopicRequest
+      example: !include examples/addFeedElementsCapabilityTopicRequest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: topicResponse
+delete: 
+  description: Delete topics associated with a feed element.
+  responses: 
+    200: 

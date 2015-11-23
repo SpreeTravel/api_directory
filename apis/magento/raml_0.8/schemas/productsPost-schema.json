@@ -1,0 +1,197 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "custom_design" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "custom_design_from" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "custom_design_to" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "description" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "gift_message_available" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "meta_description" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "meta_keyword" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "meta_title" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "msrp" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "msrp_display_actual_price_type" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "msrp_enabled" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "news_from_date" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "news_to_date" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "options_container" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "page_layout" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "price" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "attribute_set_id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "short_description" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "sku" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "special_from_date" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "special_price" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "special_to_date" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "status" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "stock_data" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "backorders" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "enable_qty_increments" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "is_in_stock" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "is_qty_decimal" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "manage_stock" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "max_sale_qty" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "min_qty" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "min_sale_qty" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "notify_stock_qty" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "qty" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "use_config_manage_stock" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "use_config_min_qty" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "use_config_min_sale_qty" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "use_config_max_sale_qty" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "use_config_backorders" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "use_config_enable_qty_inc" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "use_config_notify_stock_qty" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    } ,
+    "tax_class_id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "type_id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "use_config_gift_message_available" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "visibility" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "weight" : {
+      "type" : "number" ,
+      "required" : false
+    }
+  }
+}

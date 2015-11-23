@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "key": {
+      "required": false,
+      "type": "string"
+    },
+    "name": {
+      "required": false,
+      "type": "string"
+    },
+    "from_email": {
+      "required": false,
+      "type": "string"
+    },
+    "from_name": {
+      "required": false,
+      "type": "string"
+    },
+    "subject": {
+      "required": false,
+      "type": "string"
+    },
+    "code": {
+      "required": false,
+      "type": "string"
+    },
+    "text": {
+      "required": false,
+      "type": "string"
+    },
+    "publish": {
+      "required": false,
+      "type": "boolean"
+    },
+    "labels": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "string"
+      }
+    }
+  }
+}

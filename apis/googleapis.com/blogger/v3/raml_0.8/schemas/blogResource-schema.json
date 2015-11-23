@@ -1,0 +1,85 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "kind" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "description" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "published" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "updated" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "url" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "selfLink" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "posts" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "totalItems" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "selfLink" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "pages" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "totalItems" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "selfLink" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "locale" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "language" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "country" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "variant" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

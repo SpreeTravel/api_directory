@@ -1,0 +1,1 @@
+The GeoNames geographical database covers all countries and contains over eight million placenames that are available for download free of charge.

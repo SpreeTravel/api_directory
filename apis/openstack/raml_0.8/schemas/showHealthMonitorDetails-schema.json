@@ -1,0 +1,68 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "healthmonitor" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "admin_state_up" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "delay" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "expected_codes" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "http_method" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "max_retries" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "pools" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "id" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        } ,
+        "tenant_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "timeout" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "type" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "url_path" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

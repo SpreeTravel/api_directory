@@ -1,0 +1,406 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "cluster_templates" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "updated_at" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "plugin_name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "is_default" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "anti_affinity" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "node_groups" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "volume_local_to_instance" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "count" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "volumes_availability_zone" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "availability_zone" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "volume_mount_prefix" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "created_at" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "updated_at" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "volume_type" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "floating_ip_pool" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "image_id" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "volumes_size" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "node_configs" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "HDFS" : {
+                          "type" : "object" ,
+                          "required" : false
+                        } ,
+                        "Hadoop" : {
+                          "type" : "object" ,
+                          "required" : false
+                        } ,
+                        "YARN" : {
+                          "type" : "object" ,
+                          "required" : false
+                        } ,
+                        "MapReduce" : {
+                          "type" : "object" ,
+                          "required" : false
+                        } ,
+                        "JobFlow" : {
+                          "type" : "object" ,
+                          "required" : false
+                        } ,
+                        "Hive" : {
+                          "type" : "object" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "node_group_template_id" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "is_proxy_gateway" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "volumes_per_node" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "node_processes" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "string"
+                        }
+                      ]
+                    } ,
+                    "id" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "auto_security_group" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "security_groups" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "flavor_id" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            } ,
+            "hadoop_version" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "neutron_management_network" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "tenant_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "created_at" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "default_image_id" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "cluster_configs" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "HDFS" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "dfs.replication" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "general" : {
+                  "type" : "object" ,
+                  "required" : false
+                } ,
+                "MapReduce" : {
+                  "type" : "object" ,
+                  "required" : false
+                } ,
+                "Hadoop" : {
+                  "type" : "object" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "updated_at" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "plugin_name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "is_default" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "anti_affinity" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "node_groups" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "volume_local_to_instance" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "count" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "volumes_availability_zone" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "availability_zone" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "volume_mount_prefix" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "created_at" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "updated_at" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "volume_type" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "floating_ip_pool" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "image_id" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "volumes_size" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "node_configs" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "HDFS" : {
+                          "type" : "object" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "node_group_template_id" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "is_proxy_gateway" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "volumes_per_node" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "node_processes" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "string"
+                        }
+                      ]
+                    } ,
+                    "id" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "auto_security_group" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "security_groups" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "flavor_id" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            } ,
+            "hadoop_version" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "neutron_management_network" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "tenant_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "created_at" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "default_image_id" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "cluster_configs" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "HDFS" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "dfs.replication" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "Spark" : {
+                  "type" : "object" ,
+                  "required" : false
+                } ,
+                "general" : {
+                  "type" : "object" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

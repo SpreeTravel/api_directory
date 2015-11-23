@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="CreditNotes">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="CreditNote"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="CreditNote">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Contact"/>
+    <xs:element ref="Date"/>
+    <xs:element ref="Status"/>
+    <xs:element ref="LineAmountTypes"/>
+    <xs:element ref="SubTotal"/>
+    <xs:element ref="TotalTax"/>
+    <xs:element ref="Total"/>
+    <xs:element ref="UpdatedDateUTC"/>
+    <xs:element ref="CurrencyCode"/>
+    <xs:element ref="FullyPaidOnDate"/>
+    <xs:element ref="Type"/>
+    <xs:element ref="CreditNoteID"/>
+    <xs:element ref="CreditNoteNumber"/>
+    <xs:element ref="CurrencyRate"/>
+    <xs:element ref="RemainingCredit"/>
+    <xs:element ref="Allocations"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Contact">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="ContactID"/>
+    <xs:element ref="Name"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="ContactID" type="xs:string"/>
+  <xs:element name="Name" type="xs:string"/>
+  <xs:element name="Status" type="xs:NCName"/>
+  <xs:element name="LineAmountTypes" type="xs:NCName"/>
+  <xs:element name="SubTotal" type="xs:decimal"/>
+  <xs:element name="TotalTax" type="xs:decimal"/>
+  <xs:element name="Total" type="xs:decimal"/>
+  <xs:element name="UpdatedDateUTC" type="xs:dateTime"/>
+  <xs:element name="CurrencyCode" type="xs:NCName"/>
+  <xs:element name="FullyPaidOnDate" type="xs:dateTime"/>
+  <xs:element name="Type" type="xs:NCName"/>
+  <xs:element name="CreditNoteID" type="xs:string"/>
+  <xs:element name="CreditNoteNumber" type="xs:NCName"/>
+  <xs:element name="CurrencyRate" type="xs:decimal"/>
+  <xs:element name="RemainingCredit" type="xs:decimal"/>
+  <xs:element name="Allocations">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Allocation"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Allocation">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="AppliedAmount"/>
+    <xs:element ref="Date"/>
+    <xs:element ref="Invoice"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="AppliedAmount" type="xs:decimal"/>
+  <xs:element name="Invoice">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="InvoiceID"/>
+    <xs:element ref="InvoiceNumber"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="InvoiceID" type="xs:string"/>
+  <xs:element name="InvoiceNumber" type="xs:NCName"/>
+  <xs:element name="Date" type="xs:dateTime"/>
+</xs:schema>

@@ -1,0 +1,64 @@
+{
+    "Transactions": [
+        {
+            "AuthorisationCode": "000000",
+            "ResponseCode": "58",
+            "ResponseMessage": "D4458",
+            "InvoiceNumber": "Inv 21540",
+            "InvoiceReference": "513456",
+            "TotalAmount": 100,
+            "TransactionID": 92979635,
+            "TransactionStatus": false,
+            "TokenCustomerID": null,
+            "BeagleScore": null,
+            "Options": [],
+            "Verification": {
+                "CVN": 0,
+                "Address": 0,
+                "Email": 0,
+                "Mobile": 0,
+                "Phone": 0
+            },
+            "Customer": {
+                "TokenCustomerID": null,
+                "Reference": null,
+                "Title": null,
+                "FirstName": "John",
+                "LastName": "Smith",
+                "CompanyName": null,
+                "JobDescription": null,
+                "Street1": "Level 5",
+                "Street2": "369 Queen Street",
+                "City": "Auckland",
+                "State": "",
+                "PostalCode": "1010",
+                "Country": "au",
+                "Email": "",
+                "Phone": "09 889 0986",
+                "Mobile": null,
+                "Comments": null,
+                "Fax": null,
+                "Url": null
+            },
+            "ShippingAddress": {
+                "ShippingMethod": null,
+                "FirstName": "John",
+                "LastName": "Smith",
+                "Street1": "Level 5",
+                "Street2": "369 Queen Street",
+                "City": "Auckland",
+                "State": "",
+                "Country": "nz",
+                "PostalCode": "1010",
+                "Email": "",
+                "Phone": "09 889 0986",
+                "Fax": null
+            }
+        }
+    ],
+    "BeagleVerification": {
+        "Email": 0,
+        "Phone": 0
+    },
+    "Errors": ""
+}

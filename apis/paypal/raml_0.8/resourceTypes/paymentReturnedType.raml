@@ -1,0 +1,17 @@
+post?: 
+  body: 
+    application/json: 
+  responses: 
+    201?: 
+      body: 
+        application/json: 
+          schema: payment
+          example: !include ../examples/payment-example.json
+get?: 
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: payment
+          example: !include ../examples/payment-example.json
+type: base

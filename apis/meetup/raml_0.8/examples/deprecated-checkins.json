@@ -1,0 +1,40 @@
+{
+  "results": [
+    {
+      "checkin_id": 0,
+      "time": 0,
+      "lon": 1.0,
+      "group_id": 0,
+      "event_id": 0,
+      "member_name": "member_name 0",
+      "comment": "comment 0",
+      "lat": 1.0,
+      "checker": {
+        "member_state": "member_state 0",
+        "member_city": "member_city 0",
+        "name": "name 0",
+        "member_country": "member_country 0",
+        "member_id": 0
+      },
+      "member_id": 0
+    },
+    {
+      "checkin_id": 1,
+      "time": 1,
+      "lon": 1.0,
+      "group_id": 1,
+      "event_id": 1,
+      "member_name": "member_name 1",
+      "comment": "comment 1",
+      "lat": 1.0,
+      "checker": {
+        "member_state": "member_state 1",
+        "member_city": "member_city 1",
+        "name": "name 1",
+        "member_country": "member_country 1",
+        "member_id": 1
+      },
+      "member_id": 1
+    }
+  ]
+}

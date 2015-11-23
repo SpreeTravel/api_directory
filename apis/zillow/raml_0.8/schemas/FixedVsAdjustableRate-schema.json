@@ -1,0 +1,172 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "request" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "adjustablerate" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "comparisonyears" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "output" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "schedule" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthsbetweenadjustments" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "amount" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "callback" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "adjustment" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "fixedrate" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "fixedterminmonths" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthsbeforeadjustment" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "taxbracket" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "adjustableterminmonths" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "ratecap" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "costofmoney" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "message" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "text" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "code" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "response" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "monthlyPrincipalAndInterest" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthlyPrincipalAndInterestAdjustable" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "fixedDiscountedPayments" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "adjustableDiscountedPayments" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "fixedRemainingPrincipal" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "adjustableRemainingPrincipal" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "fixedTaxSavings" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "adjustableTaxSavings" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "fixedTotalCost" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "adjustableTotalCost" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "result" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "annualAmortizationSchedule" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "period" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "fixedPayment" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "fixedBalance" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "adjustablePayment" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "adjustableBalance" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "adjustableRate" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

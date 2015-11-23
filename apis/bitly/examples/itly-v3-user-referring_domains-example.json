@@ -1,0 +1,147 @@
+{
+  "data": {
+    "days": 7,
+    "referring_domains": [
+      {
+        "dt": 1333339200,
+        "values": [
+          {
+            "clicks": 1,
+            "domain": "direct"
+          }
+        ]
+      },
+      {
+        "dt": 1333252800,
+        "values": [
+          {
+            "clicks": 3,
+            "domain": "direct"
+          }
+        ]
+      },
+      {
+        "dt": 1333166400,
+        "values": [
+          {
+            "clicks": 7,
+            "domain": "t.co",
+            "url": "http://t.co/"
+          },
+          {
+            "clicks": 4,
+            "domain": "direct"
+          }
+        ]
+      },
+      {
+        "dt": 1333080000,
+        "values": [
+          {
+            "clicks": 36,
+            "domain": "t.co",
+            "url": "http://t.co/"
+          },
+          {
+            "clicks": 6,
+            "domain": "direct"
+          },
+          {
+            "clicks": 5,
+            "domain": "twitter.com",
+            "url": "http://twitter.com/"
+          },
+          {
+            "clicks": 1,
+            "domain": "hootsuite.com",
+            "url": "http://hootsuite.com/"
+          }
+        ]
+      },
+      {
+        "dt": 1332993600,
+        "values": [
+          {
+            "clicks": 96,
+            "domain": "t.co",
+            "url": "http://t.co/"
+          },
+          {
+            "clicks": 21,
+            "domain": "direct"
+          },
+          {
+            "clicks": 15,
+            "domain": "twitter.com",
+            "url": "http://twitter.com/"
+          },
+          {
+            "clicks": 3,
+            "domain": "hootsuite.com",
+            "url": "http://hootsuite.com/"
+          },
+          {
+            "clicks": 1,
+            "domain": "www.linkedin.com",
+            "url": "http://www.linkedin.com/"
+          }
+        ]
+      },
+      {
+        "dt": 1332907200,
+        "values": [
+          {
+            "clicks": 49,
+            "domain": "t.co",
+            "url": "http://t.co/"
+          },
+          {
+            "clicks": 33,
+            "domain": "direct"
+          },
+          {
+            "clicks": 4,
+            "domain": "twitter.com",
+            "url": "http://twitter.com/"
+          },
+          {
+            "clicks": 2,
+            "domain": "mail.verizon.com",
+            "url": "http://mail.verizon.com/"
+          },
+          {
+            "clicks": 2,
+            "domain": "hootsuite.com",
+            "url": "http://hootsuite.com/"
+          }
+        ]
+      },
+      {
+        "dt": 1332820800,
+        "values": [
+          {
+            "clicks": 16,
+            "domain": "t.co",
+            "url": "http://t.co/"
+          },
+          {
+            "clicks": 16,
+            "domain": "direct"
+          },
+          {
+            "clicks": 1,
+            "domain": "twitter.com",
+            "url": "http://twitter.com/"
+          },
+          {
+            "clicks": 1,
+            "domain": "www.google.com",
+            "url": "http://www.google.com/"
+          }
+        ]
+      }
+    ]
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

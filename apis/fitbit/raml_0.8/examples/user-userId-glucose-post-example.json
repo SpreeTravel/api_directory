@@ -1,0 +1,22 @@
+{
+    "glucose":[
+        {
+            "glucose":5,
+            "tracker":"Morning",
+            "time":"08:00"
+        },
+        {
+            "glucose":5.5,
+            "tracker":"Afternoon"
+        },
+        {
+            "glucose":6,
+            "tracker":"Evening"
+        },
+        {
+            "glucose":7,
+            "tracker":"Custom"
+        }
+    ],
+    "hba1c":4.5
+}

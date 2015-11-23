@@ -1,0 +1,70 @@
+{
+  "results": [
+    {
+      "twitter_urlname": "twitter_urlname 0",
+      "member_count": 0,
+      "link_name": "link_name 0",
+      "meetup_count": 0,
+      "theme": {
+        "pageback_color": "pageback_color 0",
+        "link_color": "link_color 0",
+        "banner_height": "banner_height 0",
+        "button_color": "button_color 0",
+        "boxback_color": "boxback_color 0",
+        "banner_link": "banner_link 0"
+      },
+      "link": "link 0",
+      "past_meetup_count": 0,
+      "countries": "countries 0",
+      "facebook_urlname": "facebook_urlname 0",
+      "id": 0,
+      "updated": 0,
+      "udf_{varname}": "udf_{varname} 0",
+      "created": 0,
+      "description": "description 0",
+      "name": "name 0",
+      "meetup_url": "meetup_url 0",
+      "urlname": "urlname 0",
+      "founder": {
+        "member_state": "member_state 0",
+        "member_city": "member_city 0",
+        "name": "name 0",
+        "member_country": "member_country 0",
+        "member_id": 0
+      }
+    },
+    {
+      "twitter_urlname": "twitter_urlname 1",
+      "member_count": 1,
+      "link_name": "link_name 1",
+      "meetup_count": 1,
+      "theme": {
+        "pageback_color": "pageback_color 1",
+        "link_color": "link_color 1",
+        "banner_height": "banner_height 1",
+        "button_color": "button_color 1",
+        "boxback_color": "boxback_color 1",
+        "banner_link": "banner_link 1"
+      },
+      "link": "link 1",
+      "past_meetup_count": 1,
+      "countries": "countries 1",
+      "facebook_urlname": "facebook_urlname 1",
+      "id": 1,
+      "updated": 1,
+      "udf_{varname}": "udf_{varname} 1",
+      "created": 1,
+      "description": "description 1",
+      "name": "name 1",
+      "meetup_url": "meetup_url 1",
+      "urlname": "urlname 1",
+      "founder": {
+        "member_state": "member_state 1",
+        "member_city": "member_city 1",
+        "name": "name 1",
+        "member_country": "member_country 1",
+        "member_id": 1
+      }
+    }
+  ]
+}

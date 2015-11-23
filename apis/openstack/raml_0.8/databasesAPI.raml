@@ -1,0 +1,1212 @@
+#%RAML 0.8
+title: OpenStack Database Service API
+version: v1.0
+baseUri: http://docs.openstack.org/database/api
+schemas:
+  - flavors: !include schemas/flavors-schema.xsd
+  - databases: !include schemas/databases-schema.xsd
+  - badRequest: !include schemas/badRequest-schema.xsd
+  - instance: !include schemas/instance-schema.xsd
+  - instances: !include schemas/instances-schema.xsd
+  - restart: !include schemas/restart-schema.xsd
+  - serviceUnavailable: !include schemas/serviceUnavailable-schema.xsd
+  - forbidden: !include schemas/forbidden-schema.xsd
+  - unprocessableEntity: !include schemas/unprocessableEntity-schema.xsd
+  - itemNotFound: !include schemas/itemNotFound-schema.xsd
+  - users: !include schemas/users-schema.xsd
+  - flavor: !include schemas/flavor-schema.xsd
+  - notImplemented: !include schemas/notImplemented-schema.xsd
+  - overLimit: !include schemas/overLimit-schema.xsd
+  - database: !include schemas/database-schema.xsd
+  - unauthorized: !include schemas/unauthorized-schema.xsd
+  - badMethod: !include schemas/badMethod-schema.xsd
+  - badMediaType: !include schemas/badMediaType-schema.xsd
+  - resize: !include schemas/resize-schema.xsd
+  - user: !include schemas/user-schema.xsd
+  - instanceFault: !include schemas/instanceFault-schema.xsd
+  - dbVersionsResponse: !include /schemas/dbVersionsResponse-schema.json
+  - dbVersionResponse: !include /schemas/dbVersionResponse-schema.json
+  - dbCreateInstanceRequest: !include /schemas/dbCreateInstanceRequest-schema.json
+  - dbCreateInstanceResponse: !include /schemas/dbCreateInstanceResponse-schema.json
+  - listDatabaseInstancesResponse: !include /schemas/listDatabaseInstancesResponse-schema.json
+  - dbInstanceDetails: !include /schemas/dbInstanceDetails-schema.json
+  - enableRootUser: !include /schemas/enableRootUser-schema.json
+  - rootEnabledStatus: !include /schemas/rootEnabledStatus-schema.json
+  - createDatabaseRequest: !include /schemas/createDatabaseRequest-schema.json
+  - listInstanceDatabasesResponse: !include /schemas/listInstanceDatabasesResponse-schema.json
+  - createUserRequest: !include /schemas/createUserRequest-schema.json
+  - databaseInstanceUsersResponse: !include /schemas/databaseInstanceUsersResponse-schema.json
+  - listFlavorsResponse: !include /schemas/listFlavorsResponse-schema.json
+  - flavorDetailsResponse: !include /schemas/flavorDetailsResponse-schema.json
+/: 
+  get: 
+    description: List versions
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: dbVersionsResponse
+            example: !include examples/dbVersionsResponse-example.json
+      400: 
+        body: 
+          application/xml: 
+            schema: badRequest
+          application/json: 
+            schema: ""
+      401: 
+        body: 
+          application/xml: 
+            schema: unauthorized
+          application/json: 
+            schema: ""
+      403: 
+        body: 
+          application/xml: 
+            schema: forbidden
+          application/json: 
+            schema: ""
+      405: 
+        body: 
+          application/xml: 
+            schema: badMethod
+          application/json: 
+            schema: ""
+      413: 
+        body: 
+          application/xml: 
+            schema: overLimit
+          application/json: 
+            schema: ""
+      422: 
+        body: 
+          application/xml: 
+            schema: unprocessableEntity
+          application/json: 
+            schema: ""
+      500: 
+        body: 
+          application/xml: 
+            schema: instanceFault
+          application/json: 
+            schema: ""
+      501: 
+        body: 
+          application/xml: 
+            schema: notImplemented
+          application/json: 
+            schema: ""
+      503: 
+        body: 
+          application/xml: 
+            schema: serviceUnavailable
+          application/json: 
+            schema: ""
+      404: 
+        body: 
+          application/xml: 
+            schema: itemNotFound
+          application/json: 
+            schema: ""
+/{version}: 
+  get: 
+    description: Show version details
+    responses: 
+      202: 
+        body: 
+          application/json: 
+            schema: db-version-response
+            example: !include examples/dbVersionResponse-example.json
+      400: 
+        body: 
+          application/xml: 
+            schema: badRequest
+          application/json: 
+            schema: ""
+      401: 
+        body: 
+          application/xml: 
+            schema: unauthorized
+          application/json: 
+            schema: ""
+      403: 
+        body: 
+          application/xml: 
+            schema: forbidden
+          application/json: 
+            schema: ""
+      405: 
+        body: 
+          application/xml: 
+            schema: badMethod
+          application/json: 
+            schema: ""
+      413: 
+        body: 
+          application/xml: 
+            schema: overLimit
+          application/json: 
+            schema: ""
+      422: 
+        body: 
+          application/xml: 
+            schema: unprocessableEntity
+          application/json: 
+            schema: ""
+      500: 
+        body: 
+          application/xml: 
+            schema: instanceFault
+          application/json: 
+            schema: ""
+      501: 
+        body: 
+          application/xml: 
+            schema: notImplemented
+          application/json: 
+            schema: ""
+      503: 
+        body: 
+          application/xml: 
+            schema: serviceUnavailable
+          application/json: 
+            schema: ""
+      404: 
+        body: 
+          application/xml: 
+            schema: itemNotFound
+          application/json: 
+            schema: ""
+  /{accountId}: 
+    /flavors: 
+      get: 
+        description: List flavors
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: listFlavorsResponse
+                example: !include examples/listFlavorsResponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          422: 
+            body: 
+              application/xml: 
+                schema: unprocessableEntity
+              application/json: 
+                schema: ""
+          500: 
+            body: 
+              application/xml: 
+                schema: instanceFault
+              application/json: 
+                schema: ""
+          501: 
+            body: 
+              application/xml: 
+                schema: notImplemented
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      /{flavorId}: 
+        get: 
+          description: Show flavor details
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: flavorDetailsResponse
+                  example: !include examples/flavorDetailsResponse-example.json
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            403: 
+              body: 
+                application/xml: 
+                  schema: forbidden
+                application/json: 
+                  schema: ""
+            405: 
+              body: 
+                application/xml: 
+                  schema: badMethod
+                application/json: 
+                  schema: ""
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimit
+                application/json: 
+                  schema: ""
+            422: 
+              body: 
+                application/xml: 
+                  schema: unprocessableEntity
+                application/json: 
+                  schema: ""
+            500: 
+              body: 
+                application/xml: 
+                  schema: instanceFault
+                application/json: 
+                  schema: ""
+            501: 
+              body: 
+                application/xml: 
+                  schema: notImplemented
+                application/json: 
+                  schema: ""
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailable
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+    /instances: 
+      post: 
+        description: Create database instance
+        body: 
+          application/json: 
+            schema: dbCreateInstanceRequest
+            example: !include examples/dbCreateInstanceRequest-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: dbCreateInstanceResponse
+                example: !include examples/dbCreateInstanceResponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          422: 
+            body: 
+              application/xml: 
+                schema: unprocessableEntity
+              application/json: 
+                schema: ""
+          500: 
+            body: 
+              application/xml: 
+                schema: instanceFault
+              application/json: 
+                schema: ""
+          501: 
+            body: 
+              application/xml: 
+                schema: notImplemented
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      get: 
+        description: List database instances
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: listDatabaseInstancesResponse
+                example: !include examples/listDatabaseInstancesResponse-example.json
+          400: 
+            body: 
+              application/xml: 
+                schema: badRequest
+              application/json: 
+                schema: ""
+          401: 
+            body: 
+              application/xml: 
+                schema: unauthorized
+              application/json: 
+                schema: ""
+          403: 
+            body: 
+              application/xml: 
+                schema: forbidden
+              application/json: 
+                schema: ""
+          405: 
+            body: 
+              application/xml: 
+                schema: badMethod
+              application/json: 
+                schema: ""
+          413: 
+            body: 
+              application/xml: 
+                schema: overLimit
+              application/json: 
+                schema: ""
+          422: 
+            body: 
+              application/xml: 
+                schema: unprocessableEntity
+              application/json: 
+                schema: ""
+          500: 
+            body: 
+              application/xml: 
+                schema: instanceFault
+              application/json: 
+                schema: ""
+          501: 
+            body: 
+              application/xml: 
+                schema: notImplemented
+              application/json: 
+                schema: ""
+          503: 
+            body: 
+              application/xml: 
+                schema: serviceUnavailable
+              application/json: 
+                schema: ""
+          404: 
+            body: 
+              application/xml: 
+                schema: itemNotFound
+              application/json: 
+                schema: ""
+      /{instanceId}: 
+        uriParameters: 
+          instanceId: 
+            displayName: instanceId
+            description: The instance ID for the specified database instance.
+            required: true
+        get: 
+          description: Show database instance details
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: dbInstanceDetails
+                  example: !include examples/dbInstanceDetails-example.json
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            403: 
+              body: 
+                application/xml: 
+                  schema: forbidden
+                application/json: 
+                  schema: ""
+            405: 
+              body: 
+                application/xml: 
+                  schema: badMethod
+                application/json: 
+                  schema: ""
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimit
+                application/json: 
+                  schema: ""
+            422: 
+              body: 
+                application/xml: 
+                  schema: unprocessableEntity
+                application/json: 
+                  schema: ""
+            500: 
+              body: 
+                application/xml: 
+                  schema: instanceFault
+                application/json: 
+                  schema: ""
+            501: 
+              body: 
+                application/xml: 
+                  schema: notImplemented
+                application/json: 
+                  schema: ""
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailable
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+        delete: 
+          description: Delete database instance
+          responses: 
+            202: 
+            400: 
+              body: 
+                application/xml: 
+                  schema: badRequest
+                application/json: 
+                  schema: ""
+            401: 
+              body: 
+                application/xml: 
+                  schema: unauthorized
+                application/json: 
+                  schema: ""
+            403: 
+              body: 
+                application/xml: 
+                  schema: forbidden
+                application/json: 
+                  schema: ""
+            405: 
+              body: 
+                application/xml: 
+                  schema: badMethod
+                application/json: 
+                  schema: ""
+            413: 
+              body: 
+                application/xml: 
+                  schema: overLimit
+                application/json: 
+                  schema: ""
+            422: 
+              body: 
+                application/xml: 
+                  schema: unprocessableEntity
+                application/json: 
+                  schema: ""
+            500: 
+              body: 
+                application/xml: 
+                  schema: instanceFault
+                application/json: 
+                  schema: ""
+            501: 
+              body: 
+                application/xml: 
+                  schema: notImplemented
+                application/json: 
+                  schema: ""
+            503: 
+              body: 
+                application/xml: 
+                  schema: serviceUnavailable
+                application/json: 
+                  schema: ""
+            404: 
+              body: 
+                application/xml: 
+                  schema: itemNotFound
+                application/json: 
+                  schema: ""
+        /action: 
+          post: 
+            description: Restart instance
+            body: 
+              application/json: 
+                schema: restart
+                example: !include examples/restart-example.json
+            responses: 
+              202: 
+              400: 
+                body: 
+                  application/xml: 
+                    schema: badRequest
+                  application/json: 
+                    schema: ""
+              401: 
+                body: 
+                  application/xml: 
+                    schema: unauthorized
+                  application/json: 
+                    schema: ""
+              403: 
+                body: 
+                  application/xml: 
+                    schema: forbidden
+                  application/json: 
+                    schema: ""
+              405: 
+                body: 
+                  application/xml: 
+                    schema: badMethod
+                  application/json: 
+                    schema: ""
+              413: 
+                body: 
+                  application/xml: 
+                    schema: overLimit
+                  application/json: 
+                    schema: ""
+              422: 
+                body: 
+                  application/xml: 
+                    schema: unprocessableEntity
+                  application/json: 
+                    schema: ""
+              500: 
+                body: 
+                  application/xml: 
+                    schema: instanceFault
+                  application/json: 
+                    schema: ""
+              501: 
+                body: 
+                  application/xml: 
+                    schema: notImplemented
+                  application/json: 
+                    schema: ""
+              503: 
+                body: 
+                  application/xml: 
+                    schema: serviceUnavailable
+                  application/json: 
+                    schema: ""
+              404: 
+                body: 
+                  application/xml: 
+                    schema: itemNotFound
+                  application/json: 
+                    schema: ""
+              415: 
+                body: 
+                  application/xml: 
+                    schema: badMediaType
+                  application/json: 
+                    schema: ""
+        /databases: 
+          post: 
+            description: Create database
+            body: 
+              application/json: 
+                schema: createDatabaseRequest
+                example: !include examples/createDatabaseRequest-example.json
+            responses: 
+              202: 
+              400: 
+                body: 
+                  application/xml: 
+                    schema: badRequest
+                  application/json: 
+                    schema: ""
+              401: 
+                body: 
+                  application/xml: 
+                    schema: unauthorized
+                  application/json: 
+                    schema: ""
+              403: 
+                body: 
+                  application/xml: 
+                    schema: forbidden
+                  application/json: 
+                    schema: ""
+              405: 
+                body: 
+                  application/xml: 
+                    schema: badMethod
+                  application/json: 
+                    schema: ""
+              413: 
+                body: 
+                  application/xml: 
+                    schema: overLimit
+                  application/json: 
+                    schema: ""
+              422: 
+                body: 
+                  application/xml: 
+                    schema: unprocessableEntity
+                  application/json: 
+                    schema: ""
+              500: 
+                body: 
+                  application/xml: 
+                    schema: instanceFault
+                  application/json: 
+                    schema: ""
+              501: 
+                body: 
+                  application/xml: 
+                    schema: notImplemented
+                  application/json: 
+                    schema: ""
+              503: 
+                body: 
+                  application/xml: 
+                    schema: serviceUnavailable
+                  application/json: 
+                    schema: ""
+              404: 
+                body: 
+                  application/xml: 
+                    schema: itemNotFound
+                  application/json: 
+                    schema: ""
+          get: 
+            description: List instance databases
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: listInstanceDatabasesResponse
+                    example: !include examples/listInstanceDatabasesResponse-example.json
+              400: 
+                body: 
+                  application/xml: 
+                    schema: badRequest
+                  application/json: 
+                    schema: ""
+              401: 
+                body: 
+                  application/xml: 
+                    schema: unauthorized
+                  application/json: 
+                    schema: ""
+              403: 
+                body: 
+                  application/xml: 
+                    schema: forbidden
+                  application/json: 
+                    schema: ""
+              405: 
+                body: 
+                  application/xml: 
+                    schema: badMethod
+                  application/json: 
+                    schema: ""
+              413: 
+                body: 
+                  application/xml: 
+                    schema: overLimit
+                  application/json: 
+                    schema: ""
+              422: 
+                body: 
+                  application/xml: 
+                    schema: unprocessableEntity
+                  application/json: 
+                    schema: ""
+              500: 
+                body: 
+                  application/xml: 
+                    schema: instanceFault
+                  application/json: 
+                    schema: ""
+              501: 
+                body: 
+                  application/xml: 
+                    schema: notImplemented
+                  application/json: 
+                    schema: ""
+              503: 
+                body: 
+                  application/xml: 
+                    schema: serviceUnavailable
+                  application/json: 
+                    schema: ""
+              404: 
+                body: 
+                  application/xml: 
+                    schema: itemNotFound
+                  application/json: 
+                    schema: ""
+          /{databaseName}: 
+            delete: 
+              description: Delete database
+              responses: 
+                202: 
+                400: 
+                  body: 
+                    application/xml: 
+                      schema: badRequest
+                    application/json: 
+                      schema: ""
+                401: 
+                  body: 
+                    application/xml: 
+                      schema: unauthorized
+                    application/json: 
+                      schema: ""
+                403: 
+                  body: 
+                    application/xml: 
+                      schema: forbidden
+                    application/json: 
+                      schema: ""
+                405: 
+                  body: 
+                    application/xml: 
+                      schema: badMethod
+                    application/json: 
+                      schema: ""
+                413: 
+                  body: 
+                    application/xml: 
+                      schema: overLimit
+                    application/json: 
+                      schema: ""
+                422: 
+                  body: 
+                    application/xml: 
+                      schema: unprocessableEntity
+                    application/json: 
+                      schema: ""
+                500: 
+                  body: 
+                    application/xml: 
+                      schema: instanceFault
+                    application/json: 
+                      schema: ""
+                501: 
+                  body: 
+                    application/xml: 
+                      schema: notImplemented
+                    application/json: 
+                      schema: ""
+                503: 
+                  body: 
+                    application/xml: 
+                      schema: serviceUnavailable
+                    application/json: 
+                      schema: ""
+                404: 
+                  body: 
+                    application/xml: 
+                      schema: itemNotFound
+                    application/json: 
+                      schema: ""
+        /root: 
+          post: 
+            description: Enable root user
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: enableRootUser
+                    example: !include examples/enableRootUser-example.json
+              400: 
+                body: 
+                  application/xml: 
+                    schema: badRequest
+                  application/json: 
+                    schema: ""
+              401: 
+                body: 
+                  application/xml: 
+                    schema: unauthorized
+                  application/json: 
+                    schema: ""
+              403: 
+                body: 
+                  application/xml: 
+                    schema: forbidden
+                  application/json: 
+                    schema: ""
+              405: 
+                body: 
+                  application/xml: 
+                    schema: badMethod
+                  application/json: 
+                    schema: ""
+              413: 
+                body: 
+                  application/xml: 
+                    schema: overLimit
+                  application/json: 
+                    schema: ""
+              422: 
+                body: 
+                  application/xml: 
+                    schema: unprocessableEntity
+                  application/json: 
+                    schema: ""
+              500: 
+                body: 
+                  application/xml: 
+                    schema: instanceFault
+                  application/json: 
+                    schema: ""
+              501: 
+                body: 
+                  application/xml: 
+                    schema: notImplemented
+                  application/json: 
+                    schema: ""
+              503: 
+                body: 
+                  application/xml: 
+                    schema: serviceUnavailable
+                  application/json: 
+                    schema: ""
+              404: 
+                body: 
+                  application/xml: 
+                    schema: itemNotFound
+                  application/json: 
+                    schema: ""
+          get: 
+            description: Show root-enabled status for database instance
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: rootEnabledStatus
+                    example: !include examples/rootEnabledStatus-example.json
+              400: 
+                body: 
+                  application/xml: 
+                    schema: badRequest
+                  application/json: 
+                    schema: ""
+              401: 
+                body: 
+                  application/xml: 
+                    schema: unauthorized
+                  application/json: 
+                    schema: ""
+              403: 
+                body: 
+                  application/xml: 
+                    schema: forbidden
+                  application/json: 
+                    schema: ""
+              405: 
+                body: 
+                  application/xml: 
+                    schema: badMethod
+                  application/json: 
+                    schema: ""
+              413: 
+                body: 
+                  application/xml: 
+                    schema: overLimit
+                  application/json: 
+                    schema: ""
+              422: 
+                body: 
+                  application/xml: 
+                    schema: unprocessableEntity
+                  application/json: 
+                    schema: ""
+              500: 
+                body: 
+                  application/xml: 
+                    schema: instanceFault
+                  application/json: 
+                    schema: ""
+              501: 
+                body: 
+                  application/xml: 
+                    schema: notImplemented
+                  application/json: 
+                    schema: ""
+              503: 
+                body: 
+                  application/xml: 
+                    schema: serviceUnavailable
+                  application/json: 
+                    schema: ""
+              404: 
+                body: 
+                  application/xml: 
+                    schema: itemNotFound
+                  application/json: 
+                    schema: ""
+        /users: 
+          post: 
+            description: Create user
+            body: 
+              application/json: 
+                schema: createUserRequest
+                example: !include examples/createUserRequest-example.json
+            responses: 
+              202: 
+              400: 
+                body: 
+                  application/xml: 
+                    schema: badRequest
+                  application/json: 
+                    schema: ""
+              401: 
+                body: 
+                  application/xml: 
+                    schema: unauthorized
+                  application/json: 
+                    schema: ""
+              403: 
+                body: 
+                  application/xml: 
+                    schema: forbidden
+                  application/json: 
+                    schema: ""
+              405: 
+                body: 
+                  application/xml: 
+                    schema: badMethod
+                  application/json: 
+                    schema: ""
+              413: 
+                body: 
+                  application/xml: 
+                    schema: overLimit
+                  application/json: 
+                    schema: ""
+              422: 
+                body: 
+                  application/xml: 
+                    schema: unprocessableEntity
+                  application/json: 
+                    schema: ""
+              500: 
+                body: 
+                  application/xml: 
+                    schema: instanceFault
+                  application/json: 
+                    schema: ""
+              501: 
+                body: 
+                  application/xml: 
+                    schema: notImplemented
+                  application/json: 
+                    schema: ""
+              503: 
+                body: 
+                  application/xml: 
+                    schema: serviceUnavailable
+                  application/json: 
+                    schema: ""
+              404: 
+                body: 
+                  application/xml: 
+                    schema: itemNotFound
+                  application/json: 
+                    schema: ""
+          get: 
+            description: List database instance users
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: databaseInstanceUsersResponse
+                    example: !include examples/databaseInstanceUsersResponse-example.json
+              400: 
+                body: 
+                  application/xml: 
+                    schema: badRequest
+                  application/json: 
+                    schema: ""
+              401: 
+                body: 
+                  application/xml: 
+                    schema: unauthorized
+                  application/json: 
+                    schema: ""
+              403: 
+                body: 
+                  application/xml: 
+                    schema: forbidden
+                  application/json: 
+                    schema: ""
+              405: 
+                body: 
+                  application/xml: 
+                    schema: badMethod
+                  application/json: 
+                    schema: ""
+              413: 
+                body: 
+                  application/xml: 
+                    schema: overLimit
+                  application/json: 
+                    schema: ""
+              422: 
+                body: 
+                  application/xml: 
+                    schema: unprocessableEntity
+                  application/json: 
+                    schema: ""
+              500: 
+                body: 
+                  application/xml: 
+                    schema: instanceFault
+                  application/json: 
+                    schema: ""
+              501: 
+                body: 
+                  application/xml: 
+                    schema: notImplemented
+                  application/json: 
+                    schema: ""
+              503: 
+                body: 
+                  application/xml: 
+                    schema: serviceUnavailable
+                  application/json: 
+                    schema: ""
+              404: 
+                body: 
+                  application/xml: 
+                    schema: itemNotFound
+                  application/json: 
+                    schema: ""
+          /{name}: 
+            delete: 
+              description: Delete user
+              responses: 
+                202: 
+                400: 
+                  body: 
+                    application/xml: 
+                      schema: badRequest
+                    application/json: 
+                      schema: ""
+                401: 
+                  body: 
+                    application/xml: 
+                      schema: unauthorized
+                    application/json: 
+                      schema: ""
+                403: 
+                  body: 
+                    application/xml: 
+                      schema: forbidden
+                    application/json: 
+                      schema: ""
+                405: 
+                  body: 
+                    application/xml: 
+                      schema: badMethod
+                    application/json: 
+                      schema: ""
+                413: 
+                  body: 
+                    application/xml: 
+                      schema: overLimit
+                    application/json: 
+                      schema: ""
+                422: 
+                  body: 
+                    application/xml: 
+                      schema: unprocessableEntity
+                    application/json: 
+                      schema: ""
+                500: 
+                  body: 
+                    application/xml: 
+                      schema: instanceFault
+                    application/json: 
+                      schema: ""
+                501: 
+                  body: 
+                    application/xml: 
+                      schema: notImplemented
+                    application/json: 
+                      schema: ""
+                503: 
+                  body: 
+                    application/xml: 
+                      schema: serviceUnavailable
+                    application/json: 
+                      schema: ""
+                404: 
+                  body: 
+                    application/xml: 
+                      schema: itemNotFound
+                    application/json: 
+                      schema: ""

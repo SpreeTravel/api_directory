@@ -1,0 +1,61 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "processActivityFor" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "fiscalYearStartMonth" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "baseCurrency" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "leadStageContactFieldId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "leadStages" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "value" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    } ,
+    "responseRules" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "campaignResponseActivityId" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

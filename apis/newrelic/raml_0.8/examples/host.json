@@ -1,0 +1,27 @@
+{
+  "application_host": {
+    "id": 1,
+    "application_name": "some string",
+    "host": "some string",
+    "language": 1,
+    "health_status": "some string",
+    "application_summaries": {
+      "response_time": 1.0,
+      "throughput": 1.0,
+      "error_rate": 1.0,
+      "apdex_score": 1.0
+    },
+    "end_user_summaries": {
+      "response_time": 1.0,
+      "throughput": 1.0,
+      "apdex_score": 1.0
+    },
+    "links": {
+      "application": 1,
+      "application_instances": [
+        1
+      ],
+      "server": 1
+    }
+  }
+}

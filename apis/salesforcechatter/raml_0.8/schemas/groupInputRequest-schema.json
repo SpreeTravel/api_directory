@@ -1,0 +1,53 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "announcement": {
+      "type": "string",
+      "required": false
+    },
+    "canHaveChatterGuests": {
+      "type": "boolean",
+      "required": false
+    },
+    "description": {
+      "type": "string",
+      "required": false
+    },
+    "information": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "text": {
+          "type": "string",
+          "required": false
+        },
+        "title": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "isArchived": {
+      "type": "boolean",
+      "required": false
+    },
+    "isAutoArchiveDisabled": {
+      "type": "boolean",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "owner": {
+      "type": "string",
+      "required": false
+    },
+    "visibility": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

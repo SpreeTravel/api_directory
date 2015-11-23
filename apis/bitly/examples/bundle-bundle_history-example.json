@@ -1,0 +1,19 @@
+{
+  "data": {
+    "bundles": [
+      {
+        "aggregate_link": "http://bit.ly/ziAHJz",
+        "bundle_link": "http://bitly.com/bundles/bitlyapioauthdemo/1",
+        "bundle_owner": "bitlyapioauthdemo",
+        "created_ts": 1332175561,
+        "description": "",
+        "last_modified_ts": 1332177579,
+        "private": false,
+        "title": "Here is a Bundle of Links!",
+        "user_link": "http://bit.ly/xhGb5J"
+      }
+    ]
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

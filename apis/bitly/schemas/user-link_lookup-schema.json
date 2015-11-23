@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "description": "An echo back of the url parameter.",
+          "type": "string"
+        },
+        "link": {
+          "description": "The corresponding bitly link (short URL).",
+          "type": "string"
+        },
+        "aggregate_link": {
+          "description": "The corresponding bitly aggregate link (global hash).",
+          "type": "string"
+        }
+      }
+    },
+    "status_code": {
+      "type": "integer",
+      "required": true
+    },
+    "status_txt": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

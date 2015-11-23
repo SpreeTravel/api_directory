@@ -1,0 +1,1 @@
+The PagerDuty event integration API is how you would add PagerDuty's advanced alerting functionality to any system that can make an HTTP API call. You can now add phone, SMS and email alerting to your monitoring tools, ticketing systems and custom software.

@@ -1,0 +1,15 @@
+description: |
+  Radar and Satellite can be requested on one combined image.
+  
+  Response formats include GIF and PNG.
+  
+  #Request URL Format
+  GET http://api.wunderground.com/api/Your_Key/features/image.format?params
+  or
+  GET http://api.wunderground.com/api/Your_Key/features/q/query.format?params
+  
+  #Examples
+  http://api.wunderground.com/api/Your_Key/radar/satellite/q/KS/Topeka.gif
+  http://api.wunderground.com/api/Your_Key/animatedradar/animatedsatellite/q/MI/Ann_Arbor.gif?num=6&delay=50&interval=30
+  http://api.wunderground.com/api/Your_Key//radar/satellite/image.gif?rad.maxlat=47.709&rad.maxlon=-69.263&rad.minlat=31.596&rad.minlon=-97.388&rad.width=640&rad.height=480&rad.rainsnow=1&rad.reproj.automerc=1&sat.maxlat=47.709&sat.maxlon=-69.263&sat.minlat=31.596&sat.minlon=-97.388&sat.width=640&sat.height=480&sat.key=sat_ir4_bottom&sat.gtt=107&sat.proj=me&sat.timelabel=0
+  http://api.wunderground.com/api/Your_Key/animatedradar/animatedsatellite/image.gif?num=5&delay=50&rad.maxlat=47.709&rad.maxlon=-69.263&rad.minlat=31.596&rad.minlon=-97.388&rad.width=640&rad.height=480&rad.rainsnow=1&rad.reproj.automerc=1&rad.num=5&sat.maxlat=47.709&sat.maxlon=-69.263&sat.minlat=31.596&sat.minlon=-97.388&sat.width=640&sat.height=480&sat.key=sat_ir4_bottom&sat.gtt=107&sat.proj=me&sat.timelabel=0&sat.num=5

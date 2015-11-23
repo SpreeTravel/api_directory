@@ -1,0 +1,109 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "ipsec_site_connections" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "status" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "psk" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "initiator" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "admin_state_up" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "tenant_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "auth_mode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "peer_cidrs" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "mtu" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "ikepolicy_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "dpd" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "action" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "interval" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "timeout" : {
+                  "type" : "number" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "route_mode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "vpnservice_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "peer_address" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "peer_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "ipsecpolicy_id" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

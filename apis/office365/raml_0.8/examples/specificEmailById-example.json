@@ -1,0 +1,46 @@
+{
+  "@odata.id": "https://outlook.office365.com/EWS/OData/Users('sadie@contoso.com')/Messages('AAMkAGI3...')",
+  "@odata.editLink": "https://outlook.office365.com/EWS/OData/Users('sadie@contoso.com')/Messages('AAMkAGI3...')",
+  "Id": "AAMkAGI3...",
+  "ChangeKey": "CQAAABYAAABH0JWDyeM4R4EU8sjWq9C6AAAEcqJs",
+  "ClassName": "IPM.Note",
+  "Subject": "Sent with REST",
+  "BodyPreview": "This message was created and sent with the Mail REST API!",
+  "Body": {
+    "ContentType": "HTML",
+    "Content": "This message was created and sent with the Mail REST API!"
+  },
+  "Importance": "Low",
+  "Categories": [],
+  "HasAttachments": false,
+  "ParentFolderId": "AQMkAGIP...",
+  "From": {
+    "Name": "Hope Gross",
+    "Address": "hope@contoso.com"
+  },
+  "Sender": {
+    "Name": " Hope Gross ",
+    "Address": "hope@contoso.com"
+  },
+  "ToRecipients": [
+    {
+      "Name": "Sadie Daniels",
+      "Address": "sadie@contoso.com"
+    }
+  ],
+  "CcRecipients": [],
+  "BccRecipients": [],
+  "ReplyTo": [],
+  "ConversationId": "AAQkAGI3...",
+  "DateTimeReceived": "2014-02-10T16:29:27Z",
+  "DateTimeSent": "2014-02-10T16:29:24Z",
+  "IsDeliveryReceiptRequested": false,
+  "IsReadReceiptRequested": false,
+  "IsDraft": false,
+  "IsRead": true,
+  "EventId": null,
+  "MeetingMessageType": "None",
+  "DateTimeCreated": "2014-02-10T16:29:27Z",
+  "LastModifiedTime": "2014-02-10T16:29:27Z",
+  "Attachments@odata.navigationLink": "https://outlook.office365.com/EWS/OData/Users('sadie@contoso.com')/Messages('AAMkAGI3...')/Attachments"
+}

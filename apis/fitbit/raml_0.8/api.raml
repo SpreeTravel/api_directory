@@ -1,0 +1,1239 @@
+#%RAML 0.8
+title: "Fitbit API"
+version: 1
+baseUri: "http://api.fitbit.com/{version}/"
+mediaType: application/json
+securitySchemes:
+  - oauth_1_0: !include securitySchemes/oauth_1_0.raml
+schemas:
+  - user-userId-get: !include schemas/user-userId-get-schema.json
+  - user-userId-post-body: !include schemas/user-userId-post-body-schema.json
+  - user-userId-post: !include schemas/user-userId-post-schema.json
+  - user-userId-friends-get: !include schemas/user-userId-friends-get-schema.json
+  - user-userId-friends-leaderboard-get: !include schemas/user-userId-friends-leaderboard-get-schema.json
+  - user-userId-friends-leaderboard: !include schemas/user-userId-friends-leaderboard-schema.json
+  - user-userId-friends-leaderboard-post: !include schemas/user-userId-friends-leaderboard-post-schema.json
+  - user-userId-friends-invitations-get: !include schemas/user-userId-friends-invitations-get-schema.json
+  - user-userId-friends-invitations: !include schemas/user-userId-friends-invitations-schema.json
+  - user-userId-friends-invitations-fromUserId: !include schemas/user-userId-friends-invitations-fromUserId-schema.json
+  - user-userId-foods: !include schemas/user-userId-foods-schema.json
+  - user-userId-foods-post: !include schemas/user-userId-foods-post-schema.json
+  - user-userId-foods-log: !include schemas/user-userId-foods-log-schema.json
+  - user-userId-foods-log-post: !include schemas/user-userId-foods-log-post-schema.json
+  - user-userId-foods-log-recent-get: !include schemas/user-userId-foods-log-recent-get-schema.json
+  - user-userId-foods-log-recent-get-schema: !include schemas/user-userId-foods-log-recent-get-schema.json
+  - user-userId-foods-log-goal-get: !include schemas/user-userId-foods-log-goal-get-schema.json
+  - user-userId-foods-log-goal: !include schemas/user-userId-foods-log-goal-schema.json
+  - user-userId-foods-log-goal-schema: !include schemas/user-userId-foods-log-goal-schema.json
+  - user-userId-foods-log-favorite-get: !include schemas/user-userId-foods-log-favorite-get-schema.json
+  - user-userId-foods-log-water: !include schemas/user-userId-foods-log-water-schema.json
+  - user-userId-foods-log-water-post: !include schemas/user-userId-foods-log-water-post-schema.json
+  - user-userId-foods-log-water-date-date-get: !include schemas/user-userId-foods-log-water-date-date-get-schema.json
+  - user-userId-foods-log-date-date-get: !include schemas/user-userId-foods-log-date-date-get-schema.json
+  - user-userId-body: !include schemas/user-userId-body-schema.json
+  - user-userId-body-post: !include schemas/user-userId-body-post-schema.json
+  - user-userId-body-weight-date-baseDate-period-get: !include schemas/user-userId-body-weight-date-baseDate-period-get-schema.json
+  - user-userId-body-log-weight: !include schemas/user-userId-body-log-weight-schema.json
+  - user-userId-body-log-weight-post: !include schemas/user-userId-body-log-weight-post-schema.json
+  - user-userId-body-log-weight-goal-get: !include schemas/user-userId-body-log-weight-goal-get-schema.json
+  - user-userId-body-log-weight-goal: !include schemas/user-userId-body-log-weight-goal-schema.json
+  - user-userId-body-log-weight-goal-post: !include schemas/user-userId-body-log-weight-goal-post-schema.json
+  - user-userId-body-log-weight-date-date-get: !include schemas/user-userId-body-log-weight-date-date-get-schema.json
+  - user-userId-body-log-weight-date-date-get-schema: !include schemas/user-userId-body-log-weight-date-date-get-schema.json
+  - user-userId-body-log-fat: !include schemas/user-userId-body-log-fat-schema.json
+  - user-userId-body-log-fat-post: !include schemas/user-userId-body-log-fat-post-schema.json
+  - user-userId-body-log-fat-goal-get: !include schemas/user-userId-body-log-fat-goal-get-schema.json
+  - user-userId-body-log-fat-goal: !include schemas/user-userId-body-log-fat-goal-schema.json
+  - user-userId-body-log-fat-goal-post: !include schemas/user-userId-body-log-fat-goal-post-schema.json
+  - user-userId-body-log-fat-date-get: !include schemas/user-userId-body-log-fat-date-get-schema.json
+  - user-userId-body-log-fat-date-get-schema: !include schemas/user-userId-body-log-fat-date-get-schema.json
+  - user-userId-body-date: !include schemas/user-userId-body-date-schema.json
+  - user-userId-heart: !include schemas/user-userId-heart-schema.json
+  - user-userId-heart-post: !include schemas/user-userId-heart-post-schema.json
+  - user-userId-heart-date-date-get: !include schemas/user-userId-heart-date-date-get-schema.json
+  - user-userId-badges-get: !include schemas/user-userId-badges-get-schema.json
+  - user-userId-sleep: !include schemas/user-userId-sleep-schema.json
+  - user-userId-sleep-post: !include schemas/user-userId-sleep-post-schema.json
+  - user-userId-sleep-date-date-get: !include schemas/user-userId-sleep-date-date-get-schema.json
+  - user-userId-devices-get: !include schemas/user-userId-devices-get-schema.json
+  - user-userId-devices-tracker-trackerId-alarms: !include schemas/user-userId-devices-tracker-trackerId-alarms-schema.json
+  - user-userId-devices-tracker-trackerId-alarms-post: !include schemas/user-userId-devices-tracker-trackerId-alarms-post-schema.json
+  - user-userId-devices-tracker-trackerId-alarms-alarmId-get: !include schemas/user-userId-devices-tracker-trackerId-alarms-alarmId-get-schema.json
+  - user-userId-devices-tracker-trackerId-alarms-alarmId: !include schemas/user-userId-devices-tracker-trackerId-alarms-alarmId-schema.json
+  - user-userId-devices-tracker-trackerId-alarms-alarmId-post: !include schemas/user-userId-devices-tracker-trackerId-alarms-alarmId-post-schema.json
+  - user-userId-bp: !include schemas/user-userId-bp-schema.json
+  - user-userId-bp-post: !include schemas/user-userId-bp-post-schema.json
+  - user-userId-bp-date-date-get: !include schemas/user-userId-bp-date-date-get-schema.json
+  - user-userId-glucose: !include schemas/user-userId-glucose-schema.json
+  - user-userId-glucose-post: !include schemas/user-userId-glucose-post-schema.json
+  - user-userId-glucose-date-date-get: !include schemas/user-userId-glucose-date-date-get-schema.json
+  - user-userId-activities: !include schemas/user-userId-activities-schema.json
+  - user-userId-activities-post: !include schemas/user-userId-activities-post-schema.json
+  - user-userId-activities-get: !include schemas/user-userId-activities-get-schema.json
+  - user-userId-activities-goals-weekly-get: !include schemas/user-userId-activities-goals-weekly-get-schema.json
+  - user-userId-activities-goals-weekly: !include schemas/user-userId-activities-goals-weekly-schema.json
+  - user-userId-activities-goals-weekly-post: !include schemas/user-userId-activities-goals-weekly-post-schema.json
+  - user-userId-activities-goals-daily-get: !include schemas/user-userId-activities-goals-daily-get-schema.json
+  - user-userId-activities-goals-daily: !include schemas/user-userId-activities-goals-daily-schema.json
+  - user-userId-activities-goals-daily-post: !include schemas/user-userId-activities-goals-daily-post-schema.json
+  - user-userId-activities-recent-get: !include schemas/user-userId-activities-recent-get-schema.json
+  - user-userId-activities-recent-get-schema: !include schemas/user-userId-activities-recent-get-schema.json
+  - user-userId-activities-steps-date-baseDate-period-get: !include schemas/user-userId-activities-steps-date-baseDate-period-get-schema.json
+  - user-userId-activities-favorite-get: !include schemas/user-userId-activities-favorite-get-schema.json
+  - user-userId-activities-favId: !include schemas/user-userId-activities-favId-schema.json
+  - user-userId-activities-date-date-get: !include schemas/user-userId-activities-date-date-get-schema.json
+  - user-userId-meals-get: !include schemas/user-userId-meals-get-schema.json
+  - user-userId-apiSubscriptions-subscribitionId-post: !include schemas/user-userId-apiSubscriptions-subscribitionId-post-schema.json
+  - user-userId-apiSubscriptions-subscribitionId-post-schema: !include schemas/user-userId-apiSubscriptions-subscribitionId-post-schema.json
+  - activities-get: !include schemas/activities-get-schema.json
+  - activities-activityId-get: !include schemas/activities-activityId-get-schema.json
+  - foods-units: !include schemas/foods-units-schema.json
+  - foods-foodId: !include schemas/foods-foodId-schema.json
+  - foods-search: !include schemas/foods-search-schema.json
+resourceTypes:
+  - base: !include resourceTypes/base.raml
+securedBy: [ oauth_1_0 ]
+/user/{userId}{mediaTypeExtension}:
+  uriParameters:
+    userId:
+      description: |
+        User's encoded id or "-" (dash) to indicate user currently authenticated
+        via the token credentials provided.
+  type: base
+  /profile{mediaTypeExtension}:
+    type: base
+    get:
+      description: |
+        Get user's profile in the format requested using units in the unit system
+        which corresponds to the Accept-Language header provided.
+      responses:
+        200:
+          body:
+            application/json:
+              schema: user-userId-get
+              example: !include examples/user-userId-get-example.json
+    post:
+      description: |
+        Update user's profile using units in the unit system that corresponds to
+        the Accept-Language header provided and get a response in the format requested.
+      body:
+        application/json:
+          schema: user-userId-post-body
+      responses:
+        200:
+          body:
+            application/json:
+              schema: user-userId-post
+              example: !include examples/user-userId-post-example.json
+  /friends{mediaTypeExtension}:
+    type: base
+    get:
+      description: |
+        Get user's friends in the format requested using units in the unit system
+        which corresponds to the Accept-Language header provided.
+      responses:
+        200:
+          body:
+            application/json:
+              schema: user-userId-friends-get
+              example: !include examples/user-userId-friends-get-example.json
+    /leaderboard{mediaTypeExtension}:
+      type: base
+      get:
+        description: |
+          Get user's friends leaderboard in the format requested using units in the
+          unit system which corresponds to the Accept-Language header provided.
+          Authorized user himself is also included in the response. Leaderboard has
+          last 7 days worth of data (includes data for the previous 6 days plus
+          current day's data in real time).
+        responses:
+          200:
+            body:
+              application/json:
+                schema: user-userId-friends-leaderboard-get
+                example: !include examples/user-userId-friends-leaderboard-get-example.json
+      post:
+        description: |
+          Update visibility of the user for friend's leaderboards and get response in
+          the format requested using units in the unit system which corresponds to the
+          Accept-Language header provided.
+        body:
+          application/json:
+            schema: user-userId-friends-leaderboard
+        responses:
+          201:
+            body:
+              application/json:
+                schema: user-userId-friends-leaderboard-post
+                example: !include examples/user-userId-friends-leaderboard-post-example.json
+    /invitations{mediaTypeExtension}:
+      type: base
+      get:
+        description: |
+          Retrieve the list of invites to become freinds for a user in the format requested.
+        responses:
+          200:
+            body:
+              application/json:
+                schema: user-userId-friends-invitations-get
+                example: !include examples/user-userId-friends-invitations-get-example.json
+      post:
+        description: |
+          Invite a user to become friends with authorized user.
+          If you provide invitedUserEmail parameter with the request, standard friendship
+          invitation email will be sent to the invited user, that he can accept later.
+          Contrary, invitedUserId parameter creates an invite silently, so it could only
+          be fetched through the Get Invites endpoint. You can accept or reject both
+          invitation types on behalf of the authorized user via Accept Invite API call.
+          Note: Please be careful and respectful when using this endpoint, and, as
+          always, adhere to the Terms of Service. Though we have organic limits on
+          allowed number of invites, your application's workflow should not allow users
+          to send bulk invites to the huge list of users, which can be considered as spam.
+        body:
+          application/json:
+            schema: user-userId-friends-invitations
+        responses:
+          201:
+            description: "User was invited."
+      /{fromUserId}{mediaTypeExtension}:
+        uriParameters:
+          fromUserId:
+            description: |
+              User's encoded id to indicate user to accept or reject invite from.
+        type: base
+        post:
+          description: |
+            Accept or reject an invite to become friends with inviting user.
+          body:
+            application/json:
+              schema: user-userId-friends-invitations-fromUserId
+          responses:
+            201:
+              description: "Invite accepted."
+  /foods{mediaTypeExtension}:
+    type: base
+    post:
+      description: |
+        Create new private food for a user and get a response in a format requested.
+        Created private food could be found in results of Search Foods call.
+        Note: Foods created via endpoint will have PRIVATE value in the <accessLevel>
+        field when accessed on behalf of the authorized user, and SHARED when viewed
+        by any other user (if authorized user granted respective Foods permission).
+      body:
+        application/json:
+          schema: user-userId-foods
+      responses:
+        201:
+          body:
+            application/json:
+              schema: user-userId-foods-post
+              example: !include examples/user-userId-foods-post-example.json
+    /log{mediaTypeExtension}:
+      type: base
+      post:
+        description: |
+          Create log entry for a food and get a response in the format requested.
+          You need to select one of the unit ids to create a food log entry. It is
+          possible to fetch unit ids allowed for specific food via previous calls to
+          endpoints that retrieve food lists of the user. Each unit id maps to a uni
+          in the list returned via the Get Food Units API call.
+        body:
+          application/json:
+            schema: user-userId-foods-log
+        responses:
+          201:
+            body:
+              application/json:
+                schema: user-userId-foods-log-post
+                example: !include examples/user-userId-foods-log-post-example.json
+      /{id}{mediaTypeExtension}:
+        uriParameters:
+          id:
+            description: |
+              User's food log entry identified by id.
+            type: integer
+        type: base
+        delete:
+          description: "Delete the user's food log entry with the given id."
+          responses:
+            204:
+              description: "Entry deleted."
+      /frequent{mediaTypeExtension}:
+        type: base
+        get:
+          description: |
+            Get a list of a user's frequent foods in the format requested. A frequen
+            food in the list provides a quick way to log the food via the Log Food
+            endpoint.
+          responses:
+            200:
+              body:
+                application/json:
+                  schema: user-userId-foods-log-recent-get
+                  example: !include examples/user-userId-foods-log-recent-get-example.json
+      /recent{mediaTypeExtension}:
+        type: base
+        get:
+          description: |
+            Get a list of a user's recent foods in the format requested. A recent food
+            provides a quick way to log the food via the Log Food endpoint.
+          responses:
+            200:
+              body:
+                application/json:
+                  schema: user-userId-foods-log-recent-get-schema
+                  example: !include examples/user-userId-foods-log-recent-get-example.json
+      /goal{mediaTypeExtension}:
+        type: base
+        get:
+          description: |
+            Get a user's current daily calorie consumption goal and/or Food Plan in the
+            format requested.
+          responses:
+            200:
+              body:
+                application/json:
+                  schema: user-userId-foods-log-goal-get
+                  example: !include examples/user-userId-foods-log-goal-get-example.json
+        post:
+          description: |
+            Update (create) a user's daily calorie consumption goal or Food Plan and ge
+            a response in the format requested. Food Plan could not be created unless
+            user already has active weight goal (Update-Weight-Goal). Depending on the
+            weight goal setup only either MAINTENANCE (in case start weight is close to
+            target weight or smaller) or one of the four other "lose" food plans could
+            be created via intensity POST parameter.
+          body:
+            application/json:
+              schema: user-userId-foods-log-goal
+          responses:
+            201:
+              body:
+                application/json:
+                  schema: user-userId-foods-log-goal-schema
+                  example: !include examples/user-userId-foods-log-goal-post-example.json
+      /favorite{mediaTypeExtension}:
+        type: base
+        get:
+          description: |
+            Get a list of a user's favorite foods in the format requested. User marks
+            a food as favorite on the Food Log tab on the website. A favorite food in
+            the list provides a quick way to log the food via the Log Food endpoint.
+          responses:
+            200:
+              body:
+                application/json:
+                  schema: user-userId-foods-log-favorite-get
+                  example: !include examples/user-userId-foods-log-favorite-get-example.json
+        /{favId}{mediaTypeExtension}:
+          uriParameters:
+            favId:
+              description: |
+                Id of a food.
+              type: integer
+          type: base
+          post:
+            description: "Add the food with the given id to user's list of favorite foods."
+            responses:
+              201:
+                description: "Food item added."
+          delete:
+            description: "Delete the food with the given id from user's list of favorite foods."
+            responses:
+              204:
+                description: "Food item removed from favorites."
+      /water{mediaTypeExtension}:
+        type: base
+        post:
+          description: |
+            Create log entry for a water using units in the unit system that corresponds
+            to the Accept-Language header provided (or custom water measurement unit) and
+            get a response in the format requested.
+          body:
+            application/json:
+              schema: user-userId-foods-log-water
+          responses:
+            201:
+              body:
+                application/json:
+                  schema: user-userId-foods-log-water-post
+                  example: !include examples/user-userId-foods-log-water-post-example.json
+        /{id}{mediaTypeExtension}:
+          uriParameters:
+            id:
+              description: |
+                User's water log entry identified by id.
+              type: integer
+          type: base
+          delete:
+            description: "Delete user's water log entry with the given id."
+            responses:
+              204:
+                description: "Entry deleted."
+        /date/{date}{mediaTypeExtension}:
+          uriParameters:
+            date:
+              description: "The date in the format YYYY-mm-dd."
+          type: base
+          get:
+            description: |
+              Get a summary and list of a user's water log entries for a given day in the
+              format requested using units in the unit system which corresponds to the
+              Accept-Language header provided. Water log entries are available only to
+              authorized user, though if you need to fetch only total amount of consumed
+              water, you can use Get Foods endpoint. Water log entries in response are
+              sorted exactly the same as they are presented on the Fitbit website.
+            responses:
+              200:
+                body:
+                  application/json:
+                    schema: user-userId-foods-log-water-date-date-get
+                    example: !include examples/user-userId-foods-log-water-date-date-get-example.json
+      /date/{date}{mediaTypeExtension}:
+        uriParameters:
+          date:
+            description: "The date in the format YYYY-mm-dd."
+        type: base
+        get:
+          description: |
+            Get a summary and list of a user's food log entries for a given day in the
+            format requested.
+          responses:
+            200:
+              body:
+                application/json:
+                  schema: user-userId-foods-log-date-date-get
+                  example: !include examples/user-userId-foods-log-date-date-get-example.json
+  /body{mediaTypeExtension}:
+    type: base
+    post:
+      description: |
+        Log body measurements using units in the unit system that corresponds to the
+        Accept-Language header provided and get a response in the format requested.
+      body:
+        application/json:
+          schema: user-userId-body
+      responses:
+        201:
+          body:
+            application/json:
+              schema: user-userId-body-post
+              example: !include examples/user-userId-body-post-example.json
+    /weight/date/{baseDate}/{period}{mediaTypeExtension}:
+      uriParameters:
+        period:
+          description: "The date range period. One of 1d, 7d, 30d, 1w, 1m."
+      type: base
+      get:
+        description: |
+          Get time series in the specified range for weight in the format requested
+          using units in the unit system which corresponds to the Accept-Language
+          header provided.
+        responses:
+          200:
+            body:
+              application/json:
+                schema: user-userId-body-weight-date-baseDate-period-get
+    /log:
+      /weight{mediaTypeExtension}:
+        type: base
+        post:
+          description: |
+            Create log entry for a body weight using units in the unit system tha
+            corresponds to the Accept-Language header provided and get a response in
+            the format requested.
+          body:
+            application/json:
+              schema: user-userId-body-log-weight
+          responses:
+            201:
+              body:
+                application/json:
+                  schema: user-userId-body-log-weight-post
+                  example: !include examples/user-userId-body-log-weight-post-example.json
+        /{id}{mediaTypeExtension}:
+          uriParameters:
+            id:
+              description: "Log id."
+          type: base
+          delete:
+            description: "Delete user's body weight log entry with the given id."
+            responses:
+              204:
+                description: Deleted
+        /goal{mediaTypeExtension}:
+          type: base
+          get:
+            description: |
+              Get a user's current weight goal using units in the unit system tha
+              corresponds to the Accept-Language header provided in the format requested.
+            responses:
+              200:
+                body:
+                  application/json:
+                    schema: user-userId-body-log-weight-goal-get
+                    example: !include examples/user-userId-body-log-weight-goal-get-example.json
+          post:
+            description: |
+              Create or update user's weight goal using units in the unit system tha
+              corresponds to the Accept-Language header provided and get a response in
+              the format requested.
+            body:
+              application/json:
+                schema: user-userId-body-log-weight-goal
+            responses:
+              201:
+                body:
+                  application/json:
+                    schema: user-userId-body-log-weight-goal-post
+                    example: !include examples/user-userId-body-log-weight-goal-post-example.json
+        /date/{date}{mediaTypeExtension}:
+          uriParameters:
+            date:
+              description: "The date in the format YYYY-mm-dd."
+          type: base
+          get:
+            description: |
+              Get a list of all user's body weight log entries for a given day in the
+              format requested using units in the unit system which corresponds to the
+              Accept-Language header provided. Body weight log entries are available only
+              to authorized user, though if you need to fetch only the most recent entry,
+              you can use Get Body Measurements endpoint. Body weight log entries in
+              response are sorted exactly the same as they are presented on the Fitbi
+              website.
+            responses:
+              200:
+                body:
+                  application/json:
+                    schema: user-userId-body-log-weight-date-date-get
+                    example: !include examples/user-userId-body-log-weight-date-date-get-example.json
+          /{baseDate}/{endDate}{mediaTypeExtension}:
+            uriParameters:
+              endDate:
+                description: |
+                  Range end date when date range is provided. Note that period should no
+                  be longer than 31 day.
+            type: base
+            get:
+              description: |
+                Get a list of all user's body weight log entries for a given day in the
+                format requested using units in the unit system which corresponds to the
+                Accept-Language header provided. Body weight log entries are available only
+                to authorized user, though if you need to fetch only the most recent entry,
+                you can use Get Body Measurements endpoint. Body weight log entries in
+                response are sorted exactly the same as they are presented on the Fitbi
+                website.
+              responses:
+                200:
+                  body:
+                    application/json:
+                      schema: user-userId-body-log-weight-date-date-get-schema
+                      example: !include examples/user-userId-body-log-weight-date-date-get-example.json
+          /{baseDate}/{period}{mediaTypeExtension}:
+            uriParameters:
+              period:
+                description: "The date range period. One of 1d, 7d, 30d, 1w, 1m."
+            type: base
+            get:
+              description: |
+                Get a list of all user's body weight log entries for a given day in the
+                format requested using units in the unit system which corresponds to the
+                Accept-Language header provided. Body weight log entries are available only
+                to authorized user, though if you need to fetch only the most recent entry,
+                you can use Get Body Measurements endpoint. Body weight log entries in
+                response are sorted exactly the same as they are presented on the Fitbi
+                website.
+              responses:
+                200:
+                  body:
+                    application/json:
+                      schema: user-userId-body-log-weight-date-date-get-schema
+                      example: !include examples/user-userId-body-log-weight-date-date-get-example.json
+      /fat{mediaTypeExtension}:
+        type: base
+        post:
+          description: |
+            Create log entry for a body fat and get a response in the format requested.
+          body:
+            application/json:
+              schema: user-userId-body-log-fat
+          responses:
+            201:
+              body:
+                application/json:
+                  schema: user-userId-body-log-fat-post
+                  example: !include examples/user-userId-body-log-fat-post-example.json
+        /goal{mediaTypeExtension}:
+          type: base
+          get:
+            description: |
+              Get a user's current fat goal in the format requested.
+            responses:
+              200:
+                body:
+                  application/json:
+                    schema: user-userId-body-log-fat-goal-get
+                    example: !include examples/user-userId-body-log-fat-goal-post-example.json
+          post:
+            description: |
+              Create or updates user's fat goal and get a response in the format requested.
+            body:
+              application/json:
+                schema: user-userId-body-log-fat-goal
+            responses:
+              201:
+                body:
+                  application/json:
+                    schema: user-userId-body-log-fat-goal-post
+                    example: !include examples/user-userId-body-log-fat-goal-post-example.json
+        /date/{date}{mediaTypeExtension}:
+          uriParameters:
+            date:
+              description: "The date in the format YYYY-mm-dd."
+          type: base
+          get:
+            description: |
+              Get a list of all user's body fat log entries for a given day in the forma
+              requested. Body fat log entries are available only to authorized user, though
+              if you need to fetch only the most recent entry, you can use Get Body
+              Measurements endpoint.
+            responses:
+              200:
+                body:
+                  application/json:
+                    schema: user-userId-body-log-fat-date-get
+                    example: !include examples/user-userId-body-log-fat-date-get-example.json
+          /{baseDate}/{endDate}{mediaTypeExtension}:
+            uriParameters:
+              endDate:
+                description: |
+                  Range end date when date range is provided. Note that period should no
+                  be longer than 31 day.
+            type: base
+            get:
+              description: |
+                Get a list of all user's body fat log entries for a given day in the forma
+                requested. Body fat log entries are available only to authorized user, though
+                if you need to fetch only the most recent entry, you can use Get Body
+                Measurements endpoint.
+              responses:
+                200:
+                  body:
+                    application/json:
+                      schema: user-userId-body-log-fat-date-get-schema
+                      example: !include examples/user-userId-body-log-fat-date-get-example.json
+          /{baseDate}/{period}{mediaTypeExtension}:
+            uriParameters:
+              period:
+                description: "The date range period. One of 1d, 7d, 30d, 1w, 1m."
+            type: base
+            get:
+              description: |
+                Get a list of all user's body fat log entries for a given day in the forma
+                requested. Body fat log entries are available only to authorized user, though
+                if you need to fetch only the most recent entry, you can use Get Body
+                Measurements endpoint.
+              responses:
+                200:
+                  body:
+                    application/json:
+                      schema: user-userId-body-log-fat-date-get-schema
+                      example: !include examples/user-userId-body-log-fat-date-get-example.json
+    /date/{date}{mediaTypeExtension}:
+      uriParameters:
+        date:
+          description: "The date in the format yyyy-MM-dd."
+      type: base
+      get:
+        description: |
+          Get a summary of a user's body measurements for a given day in the forma
+          requested using units in the unit system which corresponds to the
+          Accept-Language header provided. This endpoint retrieves only latest entries
+          for the specific date for weight, fat, bmi. If you would like to fetch all
+          entries, use API-Get-Body-Weight and API-Get-Body-Fat endpoints.
+        responses:
+          200:
+            body:
+              application/json:
+                schema: user-userId-body-date
+                example: !include examples/user-userId-body-date-date-example.json
+  /heart{mediaTypeExtension}:
+    type: base
+    post:
+      description: |
+        Create log entry for a heart rate measurement and get a response in the forma
+        requested.
+      body:
+        application/json:
+          schema: user-userId-heart
+      responses:
+        201:
+          body:
+            application/json:
+              schema: user-userId-heart-post
+              example: !include examples/user-userId-heart-post-example.json
+    /{logId}{mediaTypeExtension}:
+      uriParameters:
+        logId:
+          type: integer
+      type: base
+      delete:
+        description: "Delete user's heart rate log entry with the given id."
+        responses:
+          204:
+            description: "Heart rate log entry deleted."
+    /date/{date}{mediaTypeExtension}:
+      uriParameters:
+        date:
+          description: "The date in the format YYYY-mm-dd."
+      type: base
+      get:
+        description: |
+          Get an average values and a list of user's heart rate log entries for a given
+          day in the format requested. Heart rate data available only to the authorized
+          user. Heart rate log entries in response are sorted exactly the same as they
+          are presented on the Fitbit website. We always include all heart rate trackers
+          in the <average> section of the response body (with zero average values for
+          the days with no measurements) to allow to seamlessly fetch a list of all
+          additional user created custom trackers.
+        responses:
+          200:
+            body:
+              application/json:
+                schema: user-userId-heart-date-date-get
+                example: !include examples/user-userId-heart-date-date-get-example.json
+  /badges{mediaTypeExtension}:
+    type: base
+    get:
+      description: |
+        Get user's badges in the format requested. Response includes all badges
+        for the user as seen on the Fitbit website badge locker (both activity
+        and weight related). We return weight and distance badges based on the
+        user's unit profile preference as on the website.
+      responses:
+        200:
+          body:
+            application/json:
+              schema: user-userId-badges-get
+              example: !include examples/user-userId-badges-get-example.json
+  /sleep{mediaTypeExtension}:
+    type: base
+    post:
+      description: |
+        Create log entry for a sleep and get a response in the format requested.
+        Have in mind that it is not possible to create overlapping log entries as
+        well as entries for time periods, which have no associated data from tracker
+        device. Sleep log entry appears in the website's sleep tracker interface
+        according to its end date.
+      body:
+        application/json:
+          schema: user-userId-sleep
+      responses:
+        201:
+          body:
+            application/json:
+              schema: user-userId-sleep-post
+              example: !include examples/user-userId-sleep-post-example.json
+    /{sleepId}{mediaTypeExtension}:
+      uriParameters:
+        sleepId:
+          description: "Sleep log id."
+          type: integer
+      type: base
+      delete:
+        description: "Delete user's sleep log entry with the given id."
+        responses:
+          204:
+            description: "User log id deleted."
+    /date/{date}{mediaTypeExtension}:
+      uriParameters:
+        date:
+          description: "The date in the format YYYY-mm-dd."
+      type: base
+      get:
+        description: |
+          Get a summary and list of a user's sleep log entries as well as minute by
+          minute sleep entry data for a given day in the format requested. Endpoin
+          response includes summary for all sleep log entries for the given day
+          (including naps). If you need to fetch data only for the main sleep you can
+          fetch entry with "isMainSleep" = true or use Get-Time-Series calls. The
+          relationship between sleep log entry properties is expressed with the following
+          equation:
+          -----------
+            timeInBed = minutesToFallAsleep + (minutesAsleep + minutesAwake) + minutesAfterWakeup.
+        responses:
+          200:
+            body:
+              application/json:
+                schema: user-userId-sleep-date-date-get
+                example: !include examples/user-userId-sleep-date-date-get-example.json
+  /devices{mediaTypeExtension}:
+    type: base
+    get:
+      description: |
+        Retrieve the list of Fitbit devices for a user in the format requested.
+      responses:
+        200:
+          body:
+            application/json:
+              schema: user-userId-devices-get
+              example: !include examples/user-userId-devices-get-example.json
+    /tracker/{trackerId}/alarms{mediaTypeExtension}:
+      type: base
+      post:
+        description: |
+          Create alarm entry for a given device and get a response in the forma
+          requested.  Only available for devices that support alarms.
+        body:
+          application/json:
+            schema: user-userId-devices-tracker-trackerId-alarms
+        responses:
+          201:
+            body:
+              application/json:
+                schema: user-userId-devices-tracker-trackerId-alarms-post
+                example: !include examples/user-userId-devices-tracker-trackerId-alarms-post-example.json
+      /{alarmId}{mediaTypeExtension}:
+        uriParameters:
+          alarmId:
+            type: integer
+        type: base
+        get:
+          description: |
+            Retrieve the list of Fitbit device alarms for a specific device in the forma
+            requested. Only available for devices that support alarms.
+          responses:
+            200:
+              body:
+                application/json:
+                  schema: user-userId-devices-tracker-trackerId-alarms-alarmId-get
+                  example: !include examples/user-userId-devices-tracker-trackerId-alarms-alarmId-get-example.json
+        post:
+          description: |
+            Update alarm entry with a give id for a given device and get a response in
+            the format requested.
+          body:
+            application/json:
+              schema: user-userId-devices-tracker-trackerId-alarms-alarmId
+          responses:
+            201:
+              body:
+                application/json:
+                  schema: user-userId-devices-tracker-trackerId-alarms-alarmId-post
+                  example: !include examples/user-userId-devices-tracker-trackerId-alarms-alarmId-post-example.json
+        delete:
+          description: "Delete user's device alarm entry with the given id for a given device."
+          responses:
+            204:
+              description: "Alarm entry removed."
+  /bp{mediaTypeExtension}:
+    type: base
+    post:
+      description: |
+        Create log entry for a blood pressure measurement and get a response in the
+        format requested.
+      body:
+        application/json:
+          schema: user-userId-bp
+      responses:
+        201:
+          body:
+            application/json:
+              schema: user-userId-bp-post
+              example: !include examples/user-userId-bp-post-example.json
+    /{logId}{mediaTypeExtension}:
+      uriParameters:
+        logId:
+          type: integer
+      type: base
+      delete:
+        description: "Delete user's blood pressure log entry with the given id."
+        responses:
+          204:
+            description: "Blood rate log entry deleted."
+    /date/{date}{mediaTypeExtension}:
+      uriParameters:
+        date:
+          description: "The date in the format YYYY-mm-dd."
+      type: base
+      get:
+        description: |
+          Get an average value and a list of user's blood pressure log entries for a
+          given day in the format requested. Blood pressure data available only to
+          authorized user. Blood pressure log entries in response are sorted exactly
+          the same as they are presented on the Fitbit website.
+        responses:
+          200:
+            body:
+              application/json:
+                schema: user-userId-bp-date-date-get
+                example: !include examples/user-userId-bp-date-date-get-example.json
+  /glucose{mediaTypeExtension}:
+    type: base
+    post:
+      description: |
+        Create log entry for a blood glucose measurement and/or HbA1c using units
+        in the unit system which corresponds to the Accept-Language header provided
+        and get a response in the format requested.
+      body:
+        application/json:
+          schema: user-userId-glucose
+      responses:
+        201:
+          body:
+            application/json:
+              schema: user-userId-glucose-post
+              example: !include examples/user-userId-glucose-post-example.json
+    /date/{date}{mediaTypeExtension}:
+      uriParameters:
+        date:
+          description: "The date in the format YYYY-mm-dd."
+      type: base
+      get:
+        description: |
+          Get a list of user's blood glucose and HbA1C measurements for a given day
+          in the format requested using units in the unit system which corresponds
+          to the Accept-Language header provided. Glucose measurement log entries
+          are available only to authorized user. We always include all glucose
+          trackers in the response body (with zero glucose value for the days with no
+          measurements) to allow to seamlessly fetch a list of all additional user
+          created custom trackers.
+        responses:
+          200:
+            body:
+              application/json:
+                schema: user-userId-glucose-date-date-get
+                example: !include examples/user-userId-glucose-date-date-get-example.json
+  /activities{mediaTypeExtension}:
+    type: base
+    post:
+      description: |
+        Create log entry for an activity or user's private custom activity using units
+        in the unit system which corresponds to the Accept-Language header provided
+        (or using optional custom distanceUnit) and get a response in the forma
+        requested.
+      body:
+        application/json:
+          schema: user-userId-activities
+      responses:
+        201:
+          body:
+            application/json:
+              schema: user-userId-activities-post
+              example: !include examples/user-userId-activities-post-example.json
+    get:
+      description: |
+        Get user's activity statistics in the format requested using units in the
+        unit system which corresponds to the Accept-Language header provided.
+        Activity statistics includes Lifetime and Best achievement values from the
+        My Achievements tile on the website dashboard. Response contains both
+        statistics from the tracker device and total numbers including tracker data
+        and manual activity log entries as seen on the Fitbit website dashboard.
+      responses:
+        200:
+          body:
+            application/json:
+              schema: user-userId-activities-get
+              example: !include examples/user-userId-activities-get-example.json
+    /goals:
+      /weekly{mediaTypeExtension}:
+        type: base
+        get:
+          description: |
+            Get a user's current weekly activity goals in the format requested using
+            units in the unit system which corresponds to the Accept-Language header
+            provided.
+          responses:
+            200:
+              body:
+                application/json:
+                  schema: user-userId-activities-goals-weekly-get
+                  example: !include examples/user-userId-activities-goals-weekly-get-example.json
+        post:
+          description: |
+            Create or updates user's weekly activity goals and get a response in the
+            format requested using units in the unit system which corresponds to the
+            Accept-Language header provided.
+          body:
+            application/json:
+              schema: user-userId-activities-goals-weekly
+          responses:
+            201:
+              body:
+                application/json:
+                  schema: user-userId-activities-goals-weekly-post
+                  example: !include examples/user-userId-activities-goals-weekly-post-example.json
+      /daily{mediaTypeExtension}:
+        type: base
+        get:
+          description: |
+            Get a user's current daily activity goals in the format requested using units
+            in the unit system which corresponds to the Accept-Language header provided.
+          responses:
+            200:
+              body:
+                application/json:
+                  schema: user-userId-activities-goals-daily-get
+                  example: !include examples/user-userId-activities-goals-daily-get-example.json
+        post:
+          description: |
+            Create or updates user's daily activity goals and get a response in the
+            format requested using units in the unit system which corresponds to the
+            Accept-Language header provided.
+          body:
+            application/json:
+              schema: user-userId-activities-goals-daily
+          responses:
+            201:
+              body:
+                application/json:
+                  schema: user-userId-activities-goals-daily-post
+                  example: !include examples/user-userId-activities-goals-daily-post-example.json
+    /{id}{mediaTypeExtension}:
+      type: base
+      delete:
+        description: "Delete user's activity log entry with the given id."
+        responses:
+          204:
+            description: "Activity deleted."
+    /frequent{mediaTypeExtension}:
+      type: base
+      get:
+        description: |
+          Get a list of a user's frequent activities in the format requested using
+          units in the unit system which corresponds to the Accept-Language header
+          provided. A frequent activity record contains the distance and duration
+          values recorded the last time the activity was logged. The record retrieved
+          can therefore be used to log the activity via the Log Activity with the same
+          or adjusted values for distance and duration.
+        responses:
+          200:
+            body:
+              application/json:
+                schema: user-userId-activities-recent-get
+                example: !include examples/user-userId-activities-recent-get-example.json
+    /recent{mediaTypeExtension}:
+      type: base
+      get:
+        description: |
+          Get a list of a user's recent activities in the format requested using units
+          in the unit system which corresponds to the Accept-Language header provided.
+          A recent activity record contains the distance and duration values recorded
+          the last time the activity was logged. The record retrieved can therefore be
+          used to log the activity via the Log Activity with the same or adjusted values
+          for distance and duration.
+        responses:
+          200:
+            body:
+              application/json:
+                schema: user-userId-activities-recent-get-schema
+                example: !include examples/user-userId-activities-recent-get-example.json
+    /steps/date/{baseDate}/{period}{mediaTypeExtension}:
+      type: base
+      get:
+        description: "Get time series in the specified range for steps."
+        responses:
+          200:
+            body:
+              application/json:
+                schema: user-userId-activities-steps-date-baseDate-period-get
+                example: !include examples/user-userId-activities-steps-date-baseDate-period-get-example.json
+    /favorite{mediaTypeExtension}:
+      type: base
+      get:
+        description: |
+          Get a list of a user's favorite activities in the format requested. A user
+          marks an activity as favorite on the user's Activities Tab. The activity
+          ids in the list can be used to create a new activity log entry via the Log
+          Activity.
+        responses:
+          200:
+            body:
+              application/json:
+                schema: user-userId-activities-favorite-get
+                example: !include examples/user-userId-activities-favorite-get-example.json
+      /{favId}{mediaTypeExtension}:
+        uriParameters:
+          favId:
+            description: |
+              Id of the activity.
+            type: integer
+        type: base
+        post:
+          description: |
+            Adds the activity with the given id to user's list of favorite activities.
+          body:
+            application/json:
+              schema: user-userId-activities-favId
+          responses:
+            201:
+              description: "Activity added."
+        delete:
+          description: |
+            Delete the activity with the given id from user's list of favorite activities.
+          responses:
+            204:
+              description: "Activity deleted."
+    /date/{date}{mediaTypeExtension}:
+      uriParameters:
+        date:
+          description: "The date in the format YYYY-mm-dd."
+      type: base
+      get:
+        description: |
+          Get a summary and list of a user's activities and activity log entries for
+          a given day in the format requested using units in the unit system which
+          corresponds to the Accept-Language header provided.
+        responses:
+          200:
+            body:
+              application/json:
+                schema: user-userId-activities-date-date-get
+                example: !include examples/user-userId-activities-date-date-get-example.json
+  /meals{mediaTypeExtension}:
+    type: base
+    get:
+      description: |
+        Get a list of meals user created in his food log in the format requested. User
+        creates and manages his meals on the Food Log tab on the website. Meals in the
+        list provide a quick way to log several foods at a time via the calls to Log
+        Food endpoint.
+      responses:
+        200:
+          body:
+            application/json:
+              schema: user-userId-meals-get
+              example: !include examples/user-userId-meals-get-example.json
+  /apiSubscriptions{mediaTypeExtension}:
+    type: base
+    get:
+      description: |
+        Retrieve the list of Fitbit devices for a user in the format requested.
+      responses:
+        200:
+          body:
+            application/json:
+              schema: user-userId-apiSubscriptions-subscribitionId-post
+              example: !include examples/user-userId-apiSubscriptions-subscribitionId-post-example.json
+    /{subscribitionId}{mediaTypeExtension}:
+      uriParameters:
+        subscribitionId:
+          type: integer
+      type: base
+      post:
+        description: |
+          Add a subscription for the user to get notifications and get a response in
+          the format requested.
+        responses:
+          200:
+            description: "The given subscriber is already subscribed to this stream."
+            body:
+              application/json:
+                schema: user-userId-apiSubscriptions-subscribitionId-post-schema
+                example: !include examples/user-userId-apiSubscriptions-subscribitionId-post-example.json
+          201:
+            description: "New subscription was created in response to your request."
+            body:
+              application/json:
+                schema: user-userId-apiSubscriptions-subscribitionId-post-schema
+                example: !include examples/user-userId-apiSubscriptions-subscribitionId-post-example.json
+          409:
+            description: |
+              If the given subscriber is already subscribed to this stream using a
+              different subscription ID, OR
+              if the given subscription ID is already used to identify a subscription
+              to a different stream.
+      delete:
+        description: |
+          Delete a subscription for the user and get a response in the format requested.
+        responses:
+          204:
+            description: "The given subscription was successfully deleted"
+          404:
+            description: |
+              the given subscription ID did not exist for this application (for example,
+              if your application already unsubscribed).
+/activities{mediaTypeExtension}:
+  type: base
+  get:
+    description: |
+      Get a tree of all valid Fitbit public activities from the activities catalog
+      as well as private custom activities the user created in the format requested.
+      If activity has levels, also get a list of activity level details.
+      Typically, an application will retrieve the complete list of activities once
+      at startup to cache and show in the UI later.
+    responses:
+      200:
+        body:
+          application/json:
+            schema: activities-get
+            example: !include examples/activities-get-example.json
+  /{activityId}{mediaTypeExtension}:
+    uriParameters:
+      activityId:
+        type: integer
+    type: base
+    get:
+      description: |
+        Get the details of a specific activity in Fitbit activities database in the
+        format requested. If activity has levels, also get a list of activity level
+        details.
+      responses:
+        200:
+          body:
+            application/json:
+              schema: activities-activityId-get
+              example: !include examples/activities-activityId-get-example.json
+/foods:
+  /units{mediaTypeExtension}:
+    type: base
+    get:
+      description: |
+        Get a list of all valid Fitbit food units in the format requested.
+        Typically, an application will retrieve the complete list of units once a
+        startup. From then on, the application will receive a food-specific lis
+        of unit ids along with the Favorite, Recent or Frequent food or by making
+        a query to Search Foods endpoint. These are the ids of units that apply to
+        the favorite food. The application will refer to the complete list of units
+        retrieved previously to get and display to the user the unit name or plural
+        name for each unit id on food-specific list.
+      responses:
+        200:
+          body:
+            application/json:
+              schema: foods-units
+              example: !include examples/foods-units-example.json
+  /{foodId}{mediaTypeExtension}:
+    uriParameters:
+      foodId:
+        description: "Id of a food item."
+        type: integer
+    type: base
+    get:
+      description: |
+        Get the details of a specific food in Fitbit Food database (or private food
+        for the user) in the format requested. Note, that nutritional values currently
+        included in response only for the PRIVATE or SHARED foods.
+      responses:
+        200:
+          body:
+            application/json:
+              schema: foods-foodId
+              example: !include examples/foods-foodId-example.json
+  /search{mediaTypeExtension}:
+    type: base
+    get:
+      description: |
+        Retrieve the list of Fitbit devices for a user in the format requested.
+      queryParameters:
+        query:
+          description: "The search query, URL-encoded."
+      responses:
+        200:
+          body:
+            application/json:
+              schema: foods-search
+              example: !include examples/foods-search-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

@@ -1,0 +1,29 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "message" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "result" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "admin" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "licensedSheetCreator" : {
+          "type" : "boolean" ,
+          "required" : false
+        }
+      }
+    } ,
+    "resultCode" : {
+      "type" : "number" ,
+      "required" : false
+    }
+  }
+}

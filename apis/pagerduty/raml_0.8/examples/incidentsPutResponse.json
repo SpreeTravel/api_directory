@@ -1,0 +1,30 @@
+{
+	"incidents" : [ {
+		"id" : "P31FZLG_1" ,
+		"status" : "resolved" ,
+		"incident_number" : 2 ,
+		"url" : "http://acme.pageduty.com/incidents/P31FZLG" ,
+		"error" : {
+			"message" : "Incident Already Resolved" ,
+			"code" : 1001
+		}
+	} , {
+		"id" : "P31FZLG_2" ,
+		"status" : "resolved" ,
+		"incident_number" : 2 ,
+		"url" : "http://acme.pageduty.com/incidents/P31FZLG" ,
+		"error" : {
+			"message" : "Incident Already Resolved" ,
+			"code" : 1001
+		}
+	} , {
+		"id" : "badid" ,
+		"status" : "resolved" ,
+		"incident_number" : null ,
+		"url" : null ,
+		"error" : {
+			"message" : "Invalid Id Provided" ,
+			"code" : 1004
+		}
+	} ]
+}

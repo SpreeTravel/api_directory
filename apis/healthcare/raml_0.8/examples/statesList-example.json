@@ -1,0 +1,37 @@
+{
+  "states" : [
+    {
+      "lang" : "en" ,
+      "tags" : [
+        "state"
+      ] ,
+      "stateurl" : "none" ,
+      "url" : "/wyoming" ,
+      "title" : "Wyoming" ,
+      "content" : "<h3>Consumer Assistance in Wyoming</h3>\r\n\r\n<p>Contact your state department of insurance to <a href=\"http : //insurance.state.wy.us/\">get consumer help with a health insurance problem or question</a>.</p>\r\n\r\n<h3>Medicaid in Wyoming</h3>\r\n\r\n<p>Wyoming has not chosen to expand its Medicaid program at this time. Read <a href=\"https : //www.healthcare.gov/what-if-my-state-is-not-expanding-medicaid/\">\"What if my state isn't expanding Medicaid?\"</a> to learn more. You can find out whether you qualify for Medicaid under Wyoming's current rules 2 ways: <a href=\"http : //www.health.wyo.gov/default.aspx\">Contact your state Medicaid agency right now</a> or <a href=\"https : //www.healthcare.gov/marketplace/individual/\">fill out an application for coverage in the Health Insurance Marketplace</a>.</p>\r\n\r\n<h3>Shop Health Insurance Marketplace in Wyoming</h3>\r\n\r\n<p>If your small business is located in Wyoming, you'll use an agent, broker, or insurance company to enroll your employees in health coverage. Enroll by the 15th for coverage that starts as soon as the 1st of the month.</p>\r\n\r\n<h3>Health Insurance Marketplace in Wyoming</h3>\r\n\r\n<p>If you live in Wyoming, you'll use HealthCare.gov to apply and enroll in health coverage. Enroll by the 15th for coverage that starts as soon as the 1st of the month. Need more info first? <a href=\"/get-covered-a-1-page-guide-to-the-health-insurance-marketplace/\">Here's what you need to know</a>. Ready to begin? Select a button to apply.</p>\r\n\r\n<h3>CHIP in Wyoming</h3>\r\n\r\n<p>Kid Care CHIP covers uninsured children in families with moderate incomes that are too high to qualify for Medicaid. You can find out whether your children qualify for Kid Care CHIP right now. <a href=\"https : //www.healthcare.gov/marketplace/individual/\">Fill out a Marketplace application</a> and find out whether your children qualify. <a href=\"http : //www.health.wyo.gov/default.aspx\">Learn more about Kid Care CHIP in Wyoming</a>.</p>\r\n" ,
+      "date" : "0001-02-01 00:00:00 -0456" ,
+      "sort" : 0 ,
+      "id" : "/wyoming" ,
+      "categories" : [
+      ] ,
+      "excerpt" : "<h3>Consumer Assistance in Wyoming</h3>\r\n" ,
+      "path" : "_posts/states/0001-02-01-wyoming.md"
+    } , {
+      "lang" : "en" ,
+      "tags" : [
+        "state"
+      ] ,
+      "stateurl" : "none" ,
+      "url" : "/wisconsin" ,
+      "title" : "Wisconsin" ,
+      "content" : "<h3>Consumer Assistance in Wisconsin</h3>\r\n\r\n<p>Contact your state department of insurance to <a href=\"http : //oci.wi.gov/consinfo.htm\">get consumer help with a health insurance problem or question</a>.</p>\r\n\r\n<h3>Medicaid in Wisconsin</h3>\r\n\r\n<p>Wisconsin has not chosen to expand its Medicaid program at this time. Read <a href=\"https : //www.healthcare.gov/what-if-my-state-is-not-expanding-medicaid/\">\"What if my state isn't expanding Medicaid?\"</a> to learn more. You can find out whether you qualify for Medicaid under Wisconsin's current rules 2 ways: <a href=\"http : //www.dhs.wisconsin.gov/forwardhealth/imagency/baylake.htm\">Contact your state Medicaid agency right now</a> or <a href=\"https : //www.healthcare.gov/marketplace/individual/\">fill out an application for coverage in the Health Insurance Marketplace</a>.</p>\r\n\r\n<h3>Shop Health Insurance Marketplace in Wisconsin</h3>\r\n\r\n<p>If your small business is located in Wisconsin, you'll use an agent, broker, or insurance company to enroll your employees in health coverage. Enroll by the 15th for coverage that starts as soon as the 1st of the month.</p>\r\n\r\n<h3>Health Insurance Marketplace in Wisconsin</h3>\r\n\r\n<p>If you live in Wisconsin, you'll use HealthCare.gov to apply and enroll in health coverage. Enroll by the 15th for coverage that starts as soon as the 1st of the month. Need more info first? <a href=\"/get-covered-a-1-page-guide-to-the-health-insurance-marketplace/\">Here's what you need to know</a>. Ready to begin? Select a button to apply.</p>\r\n\r\n<h3>CHIP in Wisconsin</h3>\r\n\r\n<p>BadgerCare Plus covers uninsured children in families with moderate incomes that are too high to qualify for Medicaid. You can find out whether your children qualify for BadgerCare Plus right now. <a href=\"https : //www.healthcare.gov/marketplace/individual/\">Fill out a Marketplace application</a> and find out whether your children qualify. <a href=\"http : //www.dhs.wisconsin.gov/forwardhealth/imagency/baylake.htm\">Learn more about BadgerCare Plus in Wisconsin</a>.</p>\r\n" ,
+      "date" : "0001-02-01 00:00:00 -0456" ,
+      "sort" : 0 ,
+      "id" : "/wisconsin" ,
+      "categories" : [
+      ] ,
+      "excerpt" : "<h3>Consumer Assistance in Wisconsin</h3>\r\n" ,
+      "path" : "_posts/states/0001-02-01-wisconsin.md"
+    }
+  ]
+}

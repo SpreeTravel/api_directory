@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="ExpenseClaims">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="ExpenseClaim"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="ExpenseClaim">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="User"/>
+    <xs:element ref="Receipts"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="User">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="UserID"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="UserID" type="xs:string"/>
+  <xs:element name="Receipts">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element maxOccurs="unbounded" ref="Receipt"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Receipt">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="ReceiptID"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="ReceiptID" type="xs:string"/>
+</xs:schema>

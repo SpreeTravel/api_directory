@@ -1,0 +1,35 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "@odata.id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "@odata.editLink" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "ParentFolderId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "DisplayName" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Contacts@odata.navigationLink" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "ChildFolders@odata.navigationLink" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

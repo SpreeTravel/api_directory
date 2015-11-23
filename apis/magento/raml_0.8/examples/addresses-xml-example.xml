@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<magento_api>
+  <data_item>
+    <entity_id>2</entity_id>
+    <firstname>John</firstname>
+    <lastname>Doe</lastname>
+    <city>PA</city>
+    <region>Palau</region>
+    <postcode>19103</postcode>
+    <country_id>US</country_id>
+    <telephone>610-634-1181</telephone>
+    <prefix>Dr.</prefix>
+    <middlename></middlename>
+    <suffix>Jr.</suffix>
+    <company></company>
+    <fax></fax>
+    <vat_id>123456789</vat_id>
+    <street>
+      <data_item>2356 Jody Road Philadelphia</data_item>
+      <data_item>844 Jefferson Street; 4510 Willis Avenue</data_item>
+    </street>
+    <is_default_billing>1</is_default_billing>
+    <is_default_shipping>1</is_default_shipping>
+  </data_item>
+</magento_api>

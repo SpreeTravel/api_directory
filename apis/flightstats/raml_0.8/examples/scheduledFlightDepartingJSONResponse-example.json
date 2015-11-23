@@ -1,0 +1,5579 @@
+{
+  "request" : {
+    "departureAirport" : {
+      "requestedCode" : "LAX" ,
+      "fsCode" : "LAX"
+    } ,
+    "arrivalAirport" : {
+      "requestedCode" : "ORD" ,
+      "fsCode" : "ORD"
+    } ,
+    "codeType" : {
+    } ,
+    "departing" : true ,
+    "date" : {
+      "year" : "2015" ,
+      "month" : "5" ,
+      "day" : "2" ,
+      "interpreted" : "2015-05-02"
+    } ,
+    "url" : "https://api.flightstats.com/flex/schedules/rest/v1/json/from/LAX/to/ORD/departing/2015/5/2"
+  } ,
+  "scheduledFlights" : [
+    {
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "2278" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T05:00:00.000" ,
+      "arrivalTime" : "2015-05-02T11:06:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "MH" ,
+          "flightNumber" : "9346" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1922804
+        } , {
+          "carrierFsCode" : "IB" ,
+          "flightNumber" : "4308" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "O"
+          ] ,
+          "referenceCode" : 10749317
+        } , {
+          "carrierFsCode" : "US" ,
+          "flightNumber" : "2278" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 10749318
+        } , {
+          "carrierFsCode" : "EY" ,
+          "flightNumber" : "3035" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 10749319
+        } , {
+          "carrierFsCode" : "AS" ,
+          "flightNumber" : "1470" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 10749320
+        }
+      ] ,
+      "referenceCode" : "1342-1920868--"
+    } , {
+      "carrierFsCode" : "IB" ,
+      "flightNumber" : "4308" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T05:00:00.000" ,
+      "arrivalTime" : "2015-05-02T11:06:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "O"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "2278" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920868--10749317"
+    } , {
+      "carrierFsCode" : "AS" ,
+      "flightNumber" : "1470" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T05:00:00.000" ,
+      "arrivalTime" : "2015-05-02T11:06:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "2278" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920868--10749320"
+    } , {
+      "carrierFsCode" : "NK" ,
+      "flightNumber" : "736" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "3" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T16:30:00.000" ,
+      "arrivalTime" : "2015-05-02T22:29:00.000" ,
+      "flightEquipmentIataCode" : "32S" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1918598--"
+    } , {
+      "carrierFsCode" : "NK" ,
+      "flightNumber" : "730" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "3" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T08:22:00.000" ,
+      "arrivalTime" : "2015-05-02T14:23:00.000" ,
+      "flightEquipmentIataCode" : "32S" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1922809--"
+    } , {
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "2223" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T17:45:00.000" ,
+      "arrivalTime" : "2015-05-02T23:47:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "QF" ,
+          "flightNumber" : "3161" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10753213
+        } , {
+          "carrierFsCode" : "FJ" ,
+          "flightNumber" : "5012" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10753214
+        } , {
+          "carrierFsCode" : "MH" ,
+          "flightNumber" : "9462" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10753216
+        } , {
+          "carrierFsCode" : "JL" ,
+          "flightNumber" : "7522" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10753217
+        } , {
+          "carrierFsCode" : "US" ,
+          "flightNumber" : "2223" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "A"
+          ] ,
+          "referenceCode" : 10753218
+        } , {
+          "carrierFsCode" : "AS" ,
+          "flightNumber" : "1098" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "A"
+          ] ,
+          "referenceCode" : 10753219
+        } , {
+          "carrierFsCode" : "BA" ,
+          "flightNumber" : "4372" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10753220
+        }
+      ] ,
+      "referenceCode" : "1342-1922201--"
+    } , {
+      "carrierFsCode" : "QF" ,
+      "flightNumber" : "3161" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T17:45:00.000" ,
+      "arrivalTime" : "2015-05-02T23:47:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "2223" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1922201--10753213"
+    } , {
+      "carrierFsCode" : "MH" ,
+      "flightNumber" : "9462" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T17:45:00.000" ,
+      "arrivalTime" : "2015-05-02T23:47:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "2223" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1922201--10753216"
+    } , {
+      "carrierFsCode" : "JL" ,
+      "flightNumber" : "7522" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T17:45:00.000" ,
+      "arrivalTime" : "2015-05-02T23:47:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "2223" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1922201--10753217"
+    } , {
+      "carrierFsCode" : "US" ,
+      "flightNumber" : "2223" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T17:45:00.000" ,
+      "arrivalTime" : "2015-05-02T23:47:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "A"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "2223" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1922201--10753218"
+    } , {
+      "carrierFsCode" : "AS" ,
+      "flightNumber" : "1098" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T17:45:00.000" ,
+      "arrivalTime" : "2015-05-02T23:47:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "A"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "2223" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1922201--10753219"
+    } , {
+      "carrierFsCode" : "BA" ,
+      "flightNumber" : "4372" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T17:45:00.000" ,
+      "arrivalTime" : "2015-05-02T23:47:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "2223" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1922201--10753220"
+    } , {
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "1113" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T01:30:00.000" ,
+      "arrivalTime" : "2015-05-02T07:38:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "MH" ,
+          "flightNumber" : "9348" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1921822
+        } , {
+          "carrierFsCode" : "US" ,
+          "flightNumber" : "1113" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 1923015
+        } , {
+          "carrierFsCode" : "EY" ,
+          "flightNumber" : "3105" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 1923224
+        } , {
+          "carrierFsCode" : "AS" ,
+          "flightNumber" : "1359" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 10749298
+        }
+      ] ,
+      "referenceCode" : "1342-1920750--"
+    } , {
+      "carrierFsCode" : "AS" ,
+      "flightNumber" : "1359" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T01:30:00.000" ,
+      "arrivalTime" : "2015-05-02T07:38:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1113" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920750--10749298"
+    } , {
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "1254" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T09:36:00.000" ,
+      "arrivalTime" : "2015-05-02T15:48:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "US" ,
+          "flightNumber" : "1254" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 10750607
+        } , {
+          "carrierFsCode" : "IB" ,
+          "flightNumber" : "7177" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "O"
+          ] ,
+          "referenceCode" : 10750608
+        } , {
+          "carrierFsCode" : "MH" ,
+          "flightNumber" : "9425" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10750609
+        } , {
+          "carrierFsCode" : "GF" ,
+          "flightNumber" : "4187" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10750610
+        } , {
+          "carrierFsCode" : "AS" ,
+          "flightNumber" : "1304" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 10750611
+        } , {
+          "carrierFsCode" : "QF" ,
+          "flightNumber" : "3011" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10750612
+        } , {
+          "carrierFsCode" : "BA" ,
+          "flightNumber" : "4353" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10750613
+        }
+      ] ,
+      "referenceCode" : "1342-1923097--"
+    } , {
+      "carrierFsCode" : "US" ,
+      "flightNumber" : "1254" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T09:36:00.000" ,
+      "arrivalTime" : "2015-05-02T15:48:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1254" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1923097--10750607"
+    } , {
+      "carrierFsCode" : "IB" ,
+      "flightNumber" : "7177" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T09:36:00.000" ,
+      "arrivalTime" : "2015-05-02T15:48:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "O"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1254" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1923097--10750608"
+    } , {
+      "carrierFsCode" : "MH" ,
+      "flightNumber" : "9425" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T09:36:00.000" ,
+      "arrivalTime" : "2015-05-02T15:48:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1254" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1923097--10750609"
+    } , {
+      "carrierFsCode" : "GF" ,
+      "flightNumber" : "4187" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T09:36:00.000" ,
+      "arrivalTime" : "2015-05-02T15:48:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1254" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1923097--10750610"
+    } , {
+      "carrierFsCode" : "AS" ,
+      "flightNumber" : "1304" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T09:36:00.000" ,
+      "arrivalTime" : "2015-05-02T15:48:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1254" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1923097--10750611"
+    } , {
+      "carrierFsCode" : "QF" ,
+      "flightNumber" : "3011" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T09:36:00.000" ,
+      "arrivalTime" : "2015-05-02T15:48:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1254" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1923097--10750612"
+    } , {
+      "carrierFsCode" : "BA" ,
+      "flightNumber" : "4353" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T09:36:00.000" ,
+      "arrivalTime" : "2015-05-02T15:48:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1254" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1923097--10750613"
+    } , {
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "219" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T23:59:00.000" ,
+      "arrivalTime" : "2015-05-03T06:00:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "MH" ,
+          "flightNumber" : "9449" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10754659
+        } , {
+          "carrierFsCode" : "IB" ,
+          "flightNumber" : "7185" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "O"
+          ] ,
+          "referenceCode" : 10754660
+        } , {
+          "carrierFsCode" : "US" ,
+          "flightNumber" : "219" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 10754661
+        } , {
+          "carrierFsCode" : "GF" ,
+          "flightNumber" : "4382" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10754662
+        } , {
+          "carrierFsCode" : "AS" ,
+          "flightNumber" : "1002" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 10754663
+        } , {
+          "carrierFsCode" : "TN" ,
+          "flightNumber" : "1144" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10754664
+        } , {
+          "carrierFsCode" : "BA" ,
+          "flightNumber" : "4363" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10754665
+        } , {
+          "carrierFsCode" : "EY" ,
+          "flightNumber" : "3046" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 10754666
+        }
+      ] ,
+      "referenceCode" : "1342-1920659--"
+    } , {
+      "carrierFsCode" : "MH" ,
+      "flightNumber" : "9449" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T23:59:00.000" ,
+      "arrivalTime" : "2015-05-03T06:00:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "219" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920659--10754659"
+    } , {
+      "carrierFsCode" : "US" ,
+      "flightNumber" : "219" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T23:59:00.000" ,
+      "arrivalTime" : "2015-05-03T06:00:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "219" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920659--10754661"
+    } , {
+      "carrierFsCode" : "GF" ,
+      "flightNumber" : "4382" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T23:59:00.000" ,
+      "arrivalTime" : "2015-05-03T06:00:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "219" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920659--10754662"
+    } , {
+      "carrierFsCode" : "AS" ,
+      "flightNumber" : "1002" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T23:59:00.000" ,
+      "arrivalTime" : "2015-05-03T06:00:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "219" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920659--10754663"
+    } , {
+      "carrierFsCode" : "TN" ,
+      "flightNumber" : "1144" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T23:59:00.000" ,
+      "arrivalTime" : "2015-05-03T06:00:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "219" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920659--10754664"
+    } , {
+      "carrierFsCode" : "BA" ,
+      "flightNumber" : "4363" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T23:59:00.000" ,
+      "arrivalTime" : "2015-05-03T06:00:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "219" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920659--10754665"
+    } , {
+      "carrierFsCode" : "EY" ,
+      "flightNumber" : "3046" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T23:59:00.000" ,
+      "arrivalTime" : "2015-05-03T06:00:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "G"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "219" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920659--10754666"
+    } , {
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "1044" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T11:10:00.000" ,
+      "arrivalTime" : "2015-05-02T17:21:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "MH" ,
+          "flightNumber" : "9454" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "O"
+          ] ,
+          "referenceCode" : 10751411
+        } , {
+          "carrierFsCode" : "US" ,
+          "flightNumber" : "1044" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 10751412
+        } , {
+          "carrierFsCode" : "AS" ,
+          "flightNumber" : "1278" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 10751413
+        } , {
+          "carrierFsCode" : "RJ" ,
+          "flightNumber" : "7183" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 10751414
+        } , {
+          "carrierFsCode" : "QF" ,
+          "flightNumber" : "3013" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10751415
+        } , {
+          "carrierFsCode" : "BA" ,
+          "flightNumber" : "4365" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10751416
+        }
+      ] ,
+      "referenceCode" : "1342-1920778--"
+    } , {
+      "carrierFsCode" : "MH" ,
+      "flightNumber" : "9454" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T11:10:00.000" ,
+      "arrivalTime" : "2015-05-02T17:21:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "O"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1044" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920778--10751411"
+    } , {
+      "carrierFsCode" : "US" ,
+      "flightNumber" : "1044" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T11:10:00.000" ,
+      "arrivalTime" : "2015-05-02T17:21:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1044" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920778--10751412"
+    } , {
+      "carrierFsCode" : "AS" ,
+      "flightNumber" : "1278" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T11:10:00.000" ,
+      "arrivalTime" : "2015-05-02T17:21:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1044" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920778--10751413"
+    } , {
+      "carrierFsCode" : "RJ" ,
+      "flightNumber" : "7183" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T11:10:00.000" ,
+      "arrivalTime" : "2015-05-02T17:21:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "G"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1044" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920778--10751414"
+    } , {
+      "carrierFsCode" : "QF" ,
+      "flightNumber" : "3013" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T11:10:00.000" ,
+      "arrivalTime" : "2015-05-02T17:21:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1044" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920778--10751415"
+    } , {
+      "carrierFsCode" : "BA" ,
+      "flightNumber" : "4365" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T11:10:00.000" ,
+      "arrivalTime" : "2015-05-02T17:21:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1044" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920778--10751416"
+    } , {
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "1047" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T12:45:00.000" ,
+      "arrivalTime" : "2015-05-02T18:54:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "MH" ,
+          "flightNumber" : "9378" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10751906
+        } , {
+          "carrierFsCode" : "QF" ,
+          "flightNumber" : "3159" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10751907
+        } , {
+          "carrierFsCode" : "US" ,
+          "flightNumber" : "1047" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 10751908
+        } , {
+          "carrierFsCode" : "QR" ,
+          "flightNumber" : "5111" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Y"
+          ] ,
+          "referenceCode" : 10751909
+        } , {
+          "carrierFsCode" : "RJ" ,
+          "flightNumber" : "7358" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 10751910
+        } , {
+          "carrierFsCode" : "AS" ,
+          "flightNumber" : "1229" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 10751911
+        } , {
+          "carrierFsCode" : "BA" ,
+          "flightNumber" : "4371" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10751912
+        } , {
+          "carrierFsCode" : "TN" ,
+          "flightNumber" : "1142" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10751913
+        }
+      ] ,
+      "referenceCode" : "1342-1923085--"
+    } , {
+      "carrierFsCode" : "MH" ,
+      "flightNumber" : "9378" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T12:45:00.000" ,
+      "arrivalTime" : "2015-05-02T18:54:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1047" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1923085--10751906"
+    } , {
+      "carrierFsCode" : "QF" ,
+      "flightNumber" : "3159" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T12:45:00.000" ,
+      "arrivalTime" : "2015-05-02T18:54:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1047" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1923085--10751907"
+    } , {
+      "carrierFsCode" : "US" ,
+      "flightNumber" : "1047" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T12:45:00.000" ,
+      "arrivalTime" : "2015-05-02T18:54:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1047" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1923085--10751908"
+    } , {
+      "carrierFsCode" : "QR" ,
+      "flightNumber" : "5111" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T12:45:00.000" ,
+      "arrivalTime" : "2015-05-02T18:54:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Y"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1047" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1923085--10751909"
+    } , {
+      "carrierFsCode" : "RJ" ,
+      "flightNumber" : "7358" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T12:45:00.000" ,
+      "arrivalTime" : "2015-05-02T18:54:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "G"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1047" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1923085--10751910"
+    } , {
+      "carrierFsCode" : "AS" ,
+      "flightNumber" : "1229" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T12:45:00.000" ,
+      "arrivalTime" : "2015-05-02T18:54:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1047" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1923085--10751911"
+    } , {
+      "carrierFsCode" : "BA" ,
+      "flightNumber" : "4371" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T12:45:00.000" ,
+      "arrivalTime" : "2015-05-02T18:54:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1047" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1923085--10751912"
+    } , {
+      "carrierFsCode" : "TN" ,
+      "flightNumber" : "1142" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T12:45:00.000" ,
+      "arrivalTime" : "2015-05-02T18:54:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1047" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1923085--10751913"
+    } , {
+      "carrierFsCode" : "IB" ,
+      "flightNumber" : "7185" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T23:59:00.000" ,
+      "arrivalTime" : "2015-05-03T06:00:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "O"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "219" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920659--10754660"
+    } , {
+      "carrierFsCode" : "UA" ,
+      "flightNumber" : "543" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T12:49:00.000" ,
+      "arrivalTime" : "2015-05-02T19:03:00.000" ,
+      "flightEquipmentIataCode" : "757" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "NZ" ,
+          "flightNumber" : "9180" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1919098
+        } , {
+          "carrierFsCode" : "AC" ,
+          "flightNumber" : "5065" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 1920919
+        } , {
+          "carrierFsCode" : "CA" ,
+          "flightNumber" : "7277" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1922511
+        } , {
+          "carrierFsCode" : "OZ" ,
+          "flightNumber" : "6274" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1922817
+        } , {
+          "carrierFsCode" : "SK" ,
+          "flightNumber" : "3920" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 10752179
+        } , {
+          "carrierFsCode" : "LO" ,
+          "flightNumber" : "4374" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 10752180
+        } , {
+          "carrierFsCode" : "LH" ,
+          "flightNumber" : "9318" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 10752181
+        }
+      ] ,
+      "referenceCode" : "1342-1919507--"
+    } , {
+      "carrierFsCode" : "NZ" ,
+      "flightNumber" : "9180" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T12:49:00.000" ,
+      "arrivalTime" : "2015-05-02T19:03:00.000" ,
+      "flightEquipmentIataCode" : "757" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "543" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1919507--1919098"
+    } , {
+      "carrierFsCode" : "AC" ,
+      "flightNumber" : "5065" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T12:49:00.000" ,
+      "arrivalTime" : "2015-05-02T19:03:00.000" ,
+      "flightEquipmentIataCode" : "757" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "G"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "543" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1919507--1920919"
+    } , {
+      "carrierFsCode" : "CA" ,
+      "flightNumber" : "7277" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T12:49:00.000" ,
+      "arrivalTime" : "2015-05-02T19:03:00.000" ,
+      "flightEquipmentIataCode" : "757" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "543" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1919507--1922511"
+    } , {
+      "carrierFsCode" : "OZ" ,
+      "flightNumber" : "6274" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T12:49:00.000" ,
+      "arrivalTime" : "2015-05-02T19:03:00.000" ,
+      "flightEquipmentIataCode" : "757" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "543" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1919507--1922817"
+    } , {
+      "carrierFsCode" : "SK" ,
+      "flightNumber" : "3920" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T12:49:00.000" ,
+      "arrivalTime" : "2015-05-02T19:03:00.000" ,
+      "flightEquipmentIataCode" : "757" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "G"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "543" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1919507--10752179"
+    } , {
+      "carrierFsCode" : "LO" ,
+      "flightNumber" : "4374" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T12:49:00.000" ,
+      "arrivalTime" : "2015-05-02T19:03:00.000" ,
+      "flightEquipmentIataCode" : "757" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "G"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "543" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1919507--10752180"
+    } , {
+      "carrierFsCode" : "LH" ,
+      "flightNumber" : "9318" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T12:49:00.000" ,
+      "arrivalTime" : "2015-05-02T19:03:00.000" ,
+      "flightEquipmentIataCode" : "757" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "G"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "543" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1919507--10752181"
+    } , {
+      "carrierFsCode" : "VX" ,
+      "flightNumber" : "236" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "3" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T17:15:00.000" ,
+      "arrivalTime" : "2015-05-02T23:20:00.000" ,
+      "flightEquipmentIataCode" : "32S" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "VA" ,
+          "flightNumber" : "5216" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1920645
+        } , {
+          "carrierFsCode" : "CI" ,
+          "flightNumber" : "9604" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "O"
+          ] ,
+          "referenceCode" : 1921251
+        } , {
+          "carrierFsCode" : "MU" ,
+          "flightNumber" : "3896" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Y"
+          ] ,
+          "referenceCode" : 1921851
+        } , {
+          "carrierFsCode" : "SQ" ,
+          "flightNumber" : "1315" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1922859
+        }
+      ] ,
+      "referenceCode" : "1342-1920625--"
+    } , {
+      "carrierFsCode" : "VA" ,
+      "flightNumber" : "5216" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "3" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T17:15:00.000" ,
+      "arrivalTime" : "2015-05-02T23:20:00.000" ,
+      "flightEquipmentIataCode" : "32S" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "VX" ,
+        "flightNumber" : "236" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920625--1920645"
+    } , {
+      "carrierFsCode" : "CI" ,
+      "flightNumber" : "9604" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "3" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T17:15:00.000" ,
+      "arrivalTime" : "2015-05-02T23:20:00.000" ,
+      "flightEquipmentIataCode" : "32S" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "O"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "VX" ,
+        "flightNumber" : "236" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920625--1921251"
+    } , {
+      "carrierFsCode" : "MU" ,
+      "flightNumber" : "3896" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "3" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T17:15:00.000" ,
+      "arrivalTime" : "2015-05-02T23:20:00.000" ,
+      "flightEquipmentIataCode" : "32S" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Y"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "VX" ,
+        "flightNumber" : "236" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920625--1921851"
+    } , {
+      "carrierFsCode" : "VX" ,
+      "flightNumber" : "232" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "3" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T10:30:00.000" ,
+      "arrivalTime" : "2015-05-02T16:30:00.000" ,
+      "flightEquipmentIataCode" : "32S" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "HA" ,
+          "flightNumber" : "2542" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "X"
+          ] ,
+          "referenceCode" : 1921673
+        } , {
+          "carrierFsCode" : "MU" ,
+          "flightNumber" : "3894" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Y"
+          ] ,
+          "referenceCode" : 1921861
+        } , {
+          "carrierFsCode" : "VA" ,
+          "flightNumber" : "5214" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1923031
+        }
+      ] ,
+      "referenceCode" : "1342-1922158--"
+    } , {
+      "carrierFsCode" : "HA" ,
+      "flightNumber" : "2542" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "3" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T10:30:00.000" ,
+      "arrivalTime" : "2015-05-02T16:30:00.000" ,
+      "flightEquipmentIataCode" : "32S" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "X"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "VX" ,
+        "flightNumber" : "232" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1922158--1921673"
+    } , {
+      "carrierFsCode" : "MU" ,
+      "flightNumber" : "3894" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "3" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T10:30:00.000" ,
+      "arrivalTime" : "2015-05-02T16:30:00.000" ,
+      "flightEquipmentIataCode" : "32S" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Y"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "VX" ,
+        "flightNumber" : "232" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1922158--1921861"
+    } , {
+      "carrierFsCode" : "VA" ,
+      "flightNumber" : "5214" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "3" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T10:30:00.000" ,
+      "arrivalTime" : "2015-05-02T16:30:00.000" ,
+      "flightEquipmentIataCode" : "32S" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "VX" ,
+        "flightNumber" : "232" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1922158--1923031"
+    } , {
+      "carrierFsCode" : "MH" ,
+      "flightNumber" : "9348" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T01:30:00.000" ,
+      "arrivalTime" : "2015-05-02T07:38:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1113" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920750--1921822"
+    } , {
+      "carrierFsCode" : "US" ,
+      "flightNumber" : "1113" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T01:30:00.000" ,
+      "arrivalTime" : "2015-05-02T07:38:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1113" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920750--1923015"
+    } , {
+      "carrierFsCode" : "EY" ,
+      "flightNumber" : "3105" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T01:30:00.000" ,
+      "arrivalTime" : "2015-05-02T07:38:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "G"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1113" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920750--1923224"
+    } , {
+      "carrierFsCode" : "MH" ,
+      "flightNumber" : "9346" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T05:00:00.000" ,
+      "arrivalTime" : "2015-05-02T11:06:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "2278" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920868--1922804"
+    } , {
+      "carrierFsCode" : "US" ,
+      "flightNumber" : "2278" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T05:00:00.000" ,
+      "arrivalTime" : "2015-05-02T11:06:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "2278" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920868--10749318"
+    } , {
+      "carrierFsCode" : "EY" ,
+      "flightNumber" : "3035" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T05:00:00.000" ,
+      "arrivalTime" : "2015-05-02T11:06:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "G"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "2278" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920868--10749319"
+    } , {
+      "carrierFsCode" : "FJ" ,
+      "flightNumber" : "5012" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T17:45:00.000" ,
+      "arrivalTime" : "2015-05-02T23:47:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "2223" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1922201--10753214"
+    } , {
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "1155" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T14:40:00.000" ,
+      "arrivalTime" : "2015-05-02T20:52:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "QF" ,
+          "flightNumber" : "3009" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10752781
+        } , {
+          "carrierFsCode" : "MH" ,
+          "flightNumber" : "9664" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "O"
+          ] ,
+          "referenceCode" : 10752782
+        } , {
+          "carrierFsCode" : "US" ,
+          "flightNumber" : "1155" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 10752783
+        } , {
+          "carrierFsCode" : "TN" ,
+          "flightNumber" : "1146" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10752784
+        } , {
+          "carrierFsCode" : "AS" ,
+          "flightNumber" : "1423" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 10752785
+        }
+      ] ,
+      "referenceCode" : "1342-1920731--"
+    } , {
+      "carrierFsCode" : "QF" ,
+      "flightNumber" : "3009" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T14:40:00.000" ,
+      "arrivalTime" : "2015-05-02T20:52:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1155" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920731--10752781"
+    } , {
+      "carrierFsCode" : "MH" ,
+      "flightNumber" : "9664" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T14:40:00.000" ,
+      "arrivalTime" : "2015-05-02T20:52:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "O"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1155" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920731--10752782"
+    } , {
+      "carrierFsCode" : "US" ,
+      "flightNumber" : "1155" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T14:40:00.000" ,
+      "arrivalTime" : "2015-05-02T20:52:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1155" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920731--10752783"
+    } , {
+      "carrierFsCode" : "TN" ,
+      "flightNumber" : "1146" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T14:40:00.000" ,
+      "arrivalTime" : "2015-05-02T20:52:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1155" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920731--10752784"
+    } , {
+      "carrierFsCode" : "AS" ,
+      "flightNumber" : "1423" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T14:40:00.000" ,
+      "arrivalTime" : "2015-05-02T20:52:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "1155" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920731--10752785"
+    } , {
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "126" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T06:55:00.000" ,
+      "arrivalTime" : "2015-05-02T13:03:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "AB" ,
+          "flightNumber" : "4641" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "O"
+          ] ,
+          "referenceCode" : 1923099
+        } , {
+          "carrierFsCode" : "BA" ,
+          "flightNumber" : "4356" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10749865
+        } , {
+          "carrierFsCode" : "IB" ,
+          "flightNumber" : "7024" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "O"
+          ] ,
+          "referenceCode" : 10749867
+        } , {
+          "carrierFsCode" : "MH" ,
+          "flightNumber" : "9528" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10749869
+        } , {
+          "carrierFsCode" : "AS" ,
+          "flightNumber" : "1016" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 10749871
+        } , {
+          "carrierFsCode" : "US" ,
+          "flightNumber" : "126" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 10749873
+        } , {
+          "carrierFsCode" : "GF" ,
+          "flightNumber" : "4174" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10749875
+        }
+      ] ,
+      "referenceCode" : "1342-1920704--"
+    } , {
+      "carrierFsCode" : "AB" ,
+      "flightNumber" : "4641" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T06:55:00.000" ,
+      "arrivalTime" : "2015-05-02T13:03:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "O"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "126" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920704--1923099"
+    } , {
+      "carrierFsCode" : "F9" ,
+      "flightNumber" : "1270" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "3" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T01:35:00.000" ,
+      "arrivalTime" : "2015-05-02T07:20:00.000" ,
+      "flightEquipmentIataCode" : "32S" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1921602--"
+    } , {
+      "carrierFsCode" : "UA" ,
+      "flightNumber" : "686" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T06:00:00.000" ,
+      "arrivalTime" : "2015-05-02T12:09:00.000" ,
+      "flightEquipmentIataCode" : "32S" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "NZ" ,
+          "flightNumber" : "9152" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1918842
+        } , {
+          "carrierFsCode" : "CA" ,
+          "flightNumber" : "7278" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1921417
+        } , {
+          "carrierFsCode" : "AC" ,
+          "flightNumber" : "5162" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 1922344
+        } , {
+          "carrierFsCode" : "EI" ,
+          "flightNumber" : "6163" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10749453
+        }
+      ] ,
+      "referenceCode" : "1342-1919386--"
+    } , {
+      "carrierFsCode" : "NZ" ,
+      "flightNumber" : "9152" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T06:00:00.000" ,
+      "arrivalTime" : "2015-05-02T12:09:00.000" ,
+      "flightEquipmentIataCode" : "32S" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "686" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1919386--1918842"
+    } , {
+      "carrierFsCode" : "CA" ,
+      "flightNumber" : "7278" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T06:00:00.000" ,
+      "arrivalTime" : "2015-05-02T12:09:00.000" ,
+      "flightEquipmentIataCode" : "32S" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "686" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1919386--1921417"
+    } , {
+      "carrierFsCode" : "AC" ,
+      "flightNumber" : "5162" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T06:00:00.000" ,
+      "arrivalTime" : "2015-05-02T12:09:00.000" ,
+      "flightEquipmentIataCode" : "32S" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "G"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "686" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1919386--1922344"
+    } , {
+      "carrierFsCode" : "EI" ,
+      "flightNumber" : "6163" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T06:00:00.000" ,
+      "arrivalTime" : "2015-05-02T12:09:00.000" ,
+      "flightEquipmentIataCode" : "32S" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "686" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1919386--10749453"
+    } , {
+      "carrierFsCode" : "UA" ,
+      "flightNumber" : "1093" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T08:26:00.000" ,
+      "arrivalTime" : "2015-05-02T14:35:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "EI" ,
+          "flightNumber" : "6162" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1921505
+        } , {
+          "carrierFsCode" : "LH" ,
+          "flightNumber" : "9240" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 10750346
+        } , {
+          "carrierFsCode" : "NZ" ,
+          "flightNumber" : "9188" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10750347
+        } , {
+          "carrierFsCode" : "SK" ,
+          "flightNumber" : "8766" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 10750348
+        } , {
+          "carrierFsCode" : "OS" ,
+          "flightNumber" : "7706" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 10750349
+        } , {
+          "carrierFsCode" : "AC" ,
+          "flightNumber" : "5472" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 10750350
+        }
+      ] ,
+      "referenceCode" : "1342-1919607--"
+    } , {
+      "carrierFsCode" : "EI" ,
+      "flightNumber" : "6162" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T08:26:00.000" ,
+      "arrivalTime" : "2015-05-02T14:35:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1093" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1919607--1921505"
+    } , {
+      "carrierFsCode" : "LH" ,
+      "flightNumber" : "9240" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T08:26:00.000" ,
+      "arrivalTime" : "2015-05-02T14:35:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "G"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1093" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1919607--10750346"
+    } , {
+      "carrierFsCode" : "NZ" ,
+      "flightNumber" : "9188" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T08:26:00.000" ,
+      "arrivalTime" : "2015-05-02T14:35:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1093" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1919607--10750347"
+    } , {
+      "carrierFsCode" : "SK" ,
+      "flightNumber" : "8766" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T08:26:00.000" ,
+      "arrivalTime" : "2015-05-02T14:35:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "G"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1093" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1919607--10750348"
+    } , {
+      "carrierFsCode" : "OS" ,
+      "flightNumber" : "7706" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T08:26:00.000" ,
+      "arrivalTime" : "2015-05-02T14:35:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "G"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1093" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1919607--10750349"
+    } , {
+      "carrierFsCode" : "AC" ,
+      "flightNumber" : "5472" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T08:26:00.000" ,
+      "arrivalTime" : "2015-05-02T14:35:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "G"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1093" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1919607--10750350"
+    } , {
+      "carrierFsCode" : "UA" ,
+      "flightNumber" : "1585" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T10:15:00.000" ,
+      "arrivalTime" : "2015-05-02T16:24:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "NZ" ,
+          "flightNumber" : "9184" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1918986
+        } , {
+          "carrierFsCode" : "SN" ,
+          "flightNumber" : "8816" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "O"
+          ] ,
+          "referenceCode" : 1919229
+        } , {
+          "carrierFsCode" : "LH" ,
+          "flightNumber" : "7542" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 1921706
+        } , {
+          "carrierFsCode" : "LO" ,
+          "flightNumber" : "4372" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 1921749
+        } , {
+          "carrierFsCode" : "AC" ,
+          "flightNumber" : "5030" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 1922321
+        }
+      ] ,
+      "referenceCode" : "1342-1920201--"
+    } , {
+      "carrierFsCode" : "NZ" ,
+      "flightNumber" : "9184" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T10:15:00.000" ,
+      "arrivalTime" : "2015-05-02T16:24:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1585" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920201--1918986"
+    } , {
+      "carrierFsCode" : "SN" ,
+      "flightNumber" : "8816" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T10:15:00.000" ,
+      "arrivalTime" : "2015-05-02T16:24:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "O"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1585" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920201--1919229"
+    } , {
+      "carrierFsCode" : "LH" ,
+      "flightNumber" : "7542" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T10:15:00.000" ,
+      "arrivalTime" : "2015-05-02T16:24:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "G"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1585" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920201--1921706"
+    } , {
+      "carrierFsCode" : "LO" ,
+      "flightNumber" : "4372" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T10:15:00.000" ,
+      "arrivalTime" : "2015-05-02T16:24:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "G"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1585" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920201--1921749"
+    } , {
+      "carrierFsCode" : "AC" ,
+      "flightNumber" : "5030" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T10:15:00.000" ,
+      "arrivalTime" : "2015-05-02T16:24:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "G"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1585" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920201--1922321"
+    } , {
+      "carrierFsCode" : "UA" ,
+      "flightNumber" : "1205" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T22:57:00.000" ,
+      "arrivalTime" : "2015-05-03T04:59:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "SK" ,
+          "flightNumber" : "3922" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 1919290
+        } , {
+          "carrierFsCode" : "EI" ,
+          "flightNumber" : "6161" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1921473
+        } , {
+          "carrierFsCode" : "AC" ,
+          "flightNumber" : "5116" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 1922377
+        } , {
+          "carrierFsCode" : "CA" ,
+          "flightNumber" : "7275" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1922449
+        } , {
+          "carrierFsCode" : "BR" ,
+          "flightNumber" : "3022" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1923159
+        } , {
+          "carrierFsCode" : "NZ" ,
+          "flightNumber" : "9138" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10753799
+        }
+      ] ,
+      "referenceCode" : "1342-1920284--"
+    } , {
+      "carrierFsCode" : "SK" ,
+      "flightNumber" : "3922" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T22:57:00.000" ,
+      "arrivalTime" : "2015-05-03T04:59:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "G"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1205" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920284--1919290"
+    } , {
+      "carrierFsCode" : "EI" ,
+      "flightNumber" : "6161" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T22:57:00.000" ,
+      "arrivalTime" : "2015-05-03T04:59:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1205" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920284--1921473"
+    } , {
+      "carrierFsCode" : "AC" ,
+      "flightNumber" : "5116" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T22:57:00.000" ,
+      "arrivalTime" : "2015-05-03T04:59:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "G"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1205" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920284--1922377"
+    } , {
+      "carrierFsCode" : "CA" ,
+      "flightNumber" : "7275" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T22:57:00.000" ,
+      "arrivalTime" : "2015-05-03T04:59:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1205" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920284--1922449"
+    } , {
+      "carrierFsCode" : "BR" ,
+      "flightNumber" : "3022" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T22:57:00.000" ,
+      "arrivalTime" : "2015-05-03T04:59:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1205" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920284--1923159"
+    } , {
+      "carrierFsCode" : "NZ" ,
+      "flightNumber" : "9138" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T22:57:00.000" ,
+      "arrivalTime" : "2015-05-03T04:59:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1205" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920284--10753799"
+    } , {
+      "carrierFsCode" : "UA" ,
+      "flightNumber" : "1685" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T23:40:00.000" ,
+      "arrivalTime" : "2015-05-03T05:40:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "OZ" ,
+          "flightNumber" : "6270" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1918650
+        } , {
+          "carrierFsCode" : "NZ" ,
+          "flightNumber" : "9176" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1919167
+        } , {
+          "carrierFsCode" : "AC" ,
+          "flightNumber" : "5066" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 1920940
+        } , {
+          "carrierFsCode" : "BR" ,
+          "flightNumber" : "3020" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1921289
+        } , {
+          "carrierFsCode" : "EI" ,
+          "flightNumber" : "6164" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1922674
+        } , {
+          "carrierFsCode" : "CA" ,
+          "flightNumber" : "7274" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1923211
+        }
+      ] ,
+      "referenceCode" : "1342-1920149--"
+    } , {
+      "carrierFsCode" : "OZ" ,
+      "flightNumber" : "6270" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T23:40:00.000" ,
+      "arrivalTime" : "2015-05-03T05:40:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1685" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920149--1918650"
+    } , {
+      "carrierFsCode" : "NZ" ,
+      "flightNumber" : "9176" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T23:40:00.000" ,
+      "arrivalTime" : "2015-05-03T05:40:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1685" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920149--1919167"
+    } , {
+      "carrierFsCode" : "AC" ,
+      "flightNumber" : "5066" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T23:40:00.000" ,
+      "arrivalTime" : "2015-05-03T05:40:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "G"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1685" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920149--1920940"
+    } , {
+      "carrierFsCode" : "BR" ,
+      "flightNumber" : "3020" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T23:40:00.000" ,
+      "arrivalTime" : "2015-05-03T05:40:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1685" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920149--1921289"
+    } , {
+      "carrierFsCode" : "EI" ,
+      "flightNumber" : "6164" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T23:40:00.000" ,
+      "arrivalTime" : "2015-05-03T05:40:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1685" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920149--1922674"
+    } , {
+      "carrierFsCode" : "CA" ,
+      "flightNumber" : "7274" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "7" ,
+      "arrivalTerminal" : "1" ,
+      "departureTime" : "2015-05-02T23:40:00.000" ,
+      "arrivalTime" : "2015-05-03T05:40:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "1685" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920149--1923211"
+    } , {
+      "carrierFsCode" : "BA" ,
+      "flightNumber" : "4356" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T06:55:00.000" ,
+      "arrivalTime" : "2015-05-02T13:03:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "126" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920704--10749865"
+    } , {
+      "carrierFsCode" : "IB" ,
+      "flightNumber" : "7024" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T06:55:00.000" ,
+      "arrivalTime" : "2015-05-02T13:03:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "O"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "126" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920704--10749867"
+    } , {
+      "carrierFsCode" : "MH" ,
+      "flightNumber" : "9528" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T06:55:00.000" ,
+      "arrivalTime" : "2015-05-02T13:03:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "126" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920704--10749869"
+    } , {
+      "carrierFsCode" : "AS" ,
+      "flightNumber" : "1016" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T06:55:00.000" ,
+      "arrivalTime" : "2015-05-02T13:03:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "126" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920704--10749871"
+    } , {
+      "carrierFsCode" : "US" ,
+      "flightNumber" : "126" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T06:55:00.000" ,
+      "arrivalTime" : "2015-05-02T13:03:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "126" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920704--10749873"
+    } , {
+      "carrierFsCode" : "GF" ,
+      "flightNumber" : "4174" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T06:55:00.000" ,
+      "arrivalTime" : "2015-05-02T13:03:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "126" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920704--10749875"
+    } , {
+      "carrierFsCode" : "SQ" ,
+      "flightNumber" : "1315" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "3" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T17:15:00.000" ,
+      "arrivalTime" : "2015-05-02T23:20:00.000" ,
+      "flightEquipmentIataCode" : "32S" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "VX" ,
+        "flightNumber" : "236" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "J" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920625--1922859"
+    }
+  ] ,
+  "appendix" : {
+    "airlines" : [
+      {
+        "fs" : "JL" ,
+        "iata" : "JL" ,
+        "icao" : "JAL" ,
+        "name" : "JAL" ,
+        "active" : true
+      } , {
+        "fs" : "VX" ,
+        "iata" : "VX" ,
+        "icao" : "VRD" ,
+        "name" : "Virgin America" ,
+        "active" : true
+      } , {
+        "fs" : "LO" ,
+        "iata" : "LO" ,
+        "icao" : "LOT" ,
+        "name" : "LOT - Polish Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "FJ" ,
+        "iata" : "FJ" ,
+        "icao" : "FJI" ,
+        "name" : "Fiji Airways" ,
+        "phoneNumber" : "1-800-227-4446" ,
+        "active" : true
+      } , {
+        "fs" : "NZ" ,
+        "iata" : "NZ" ,
+        "icao" : "ANZ" ,
+        "name" : "Air New Zealand" ,
+        "phoneNumber" : "1-800-262-1234" ,
+        "active" : true
+      } , {
+        "fs" : "UA" ,
+        "iata" : "UA" ,
+        "icao" : "UAL" ,
+        "name" : "United Airlines" ,
+        "phoneNumber" : "1-800-864-8331" ,
+        "active" : true
+      } , {
+        "fs" : "BR" ,
+        "iata" : "BR" ,
+        "icao" : "EVA" ,
+        "name" : "EVA Air" ,
+        "active" : true
+      } , {
+        "fs" : "QF" ,
+        "iata" : "QF" ,
+        "icao" : "QFA" ,
+        "name" : "Qantas" ,
+        "active" : true
+      } , {
+        "fs" : "SK" ,
+        "iata" : "SK" ,
+        "icao" : "SAS" ,
+        "name" : "SAS" ,
+        "active" : true
+      } , {
+        "fs" : "IB" ,
+        "iata" : "IB" ,
+        "icao" : "IBE" ,
+        "name" : "Iberia" ,
+        "active" : true
+      } , {
+        "fs" : "MH" ,
+        "iata" : "MH" ,
+        "icao" : "MAS" ,
+        "name" : "Malaysia Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "SN" ,
+        "iata" : "SN" ,
+        "icao" : "BEL" ,
+        "name" : "Brussels Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "US" ,
+        "iata" : "US" ,
+        "icao" : "AWE" ,
+        "name" : "US Airways" ,
+        "phoneNumber" : "1-800-943-5436" ,
+        "active" : true
+      } , {
+        "fs" : "CA" ,
+        "iata" : "CA" ,
+        "icao" : "CCA" ,
+        "name" : "Air China" ,
+        "phoneNumber" : "1-800-986-1985" ,
+        "active" : true
+      } , {
+        "fs" : "SQ" ,
+        "iata" : "SQ" ,
+        "icao" : "SIA" ,
+        "name" : "Singapore Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "GF" ,
+        "iata" : "GF" ,
+        "icao" : "GFA" ,
+        "name" : "Gulf Air" ,
+        "active" : true
+      } , {
+        "fs" : "AA" ,
+        "iata" : "AA" ,
+        "icao" : "AAL" ,
+        "name" : "American Airlines" ,
+        "phoneNumber" : "1-800-433-7300" ,
+        "active" : true
+      } , {
+        "fs" : "QR" ,
+        "iata" : "QR" ,
+        "icao" : "QTR" ,
+        "name" : "Qatar Airways" ,
+        "active" : true
+      } , {
+        "fs" : "AB" ,
+        "iata" : "AB" ,
+        "icao" : "BER" ,
+        "name" : "Air Berlin" ,
+        "active" : true
+      } , {
+        "fs" : "AC" ,
+        "iata" : "AC" ,
+        "icao" : "ACA" ,
+        "name" : "Air Canada" ,
+        "phoneNumber" : "1-800-247-2262" ,
+        "active" : true
+      } , {
+        "fs" : "EI" ,
+        "iata" : "EI" ,
+        "icao" : "EIN" ,
+        "name" : "Aer Lingus" ,
+        "phoneNumber" : "1-800-IRISHAIR" ,
+        "active" : true
+      } , {
+        "fs" : "OS" ,
+        "iata" : "OS" ,
+        "icao" : "AUA" ,
+        "name" : "Austrian" ,
+        "active" : true
+      } , {
+        "fs" : "CI" ,
+        "iata" : "CI" ,
+        "icao" : "CAL" ,
+        "name" : "China Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "MU" ,
+        "iata" : "MU" ,
+        "icao" : "CES" ,
+        "name" : "China Eastern Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "OZ" ,
+        "iata" : "OZ" ,
+        "icao" : "AAR" ,
+        "name" : "Asiana Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "VA" ,
+        "iata" : "VA" ,
+        "icao" : "VOZ" ,
+        "name" : "Virgin Australia" ,
+        "active" : true
+      } , {
+        "fs" : "AS" ,
+        "iata" : "AS" ,
+        "icao" : "ASA" ,
+        "name" : "Alaska Airlines" ,
+        "phoneNumber" : "1-800-252-7522" ,
+        "active" : true
+      } , {
+        "fs" : "F9" ,
+        "iata" : "F9" ,
+        "icao" : "FFT" ,
+        "name" : "Frontier Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "EY" ,
+        "iata" : "EY" ,
+        "icao" : "ETD" ,
+        "name" : "Etihad Airways" ,
+        "active" : true
+      } , {
+        "fs" : "RJ" ,
+        "iata" : "RJ" ,
+        "icao" : "RJA" ,
+        "name" : "Royal Jordanian" ,
+        "active" : true
+      } , {
+        "fs" : "HA" ,
+        "iata" : "HA" ,
+        "icao" : "HAL" ,
+        "name" : "Hawaiian Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "TN" ,
+        "iata" : "TN" ,
+        "icao" : "THT" ,
+        "name" : "Air Tahiti Nui" ,
+        "active" : true
+      } , {
+        "fs" : "LH" ,
+        "iata" : "LH" ,
+        "icao" : "DLH" ,
+        "name" : "Lufthansa" ,
+        "active" : true
+      } , {
+        "fs" : "NK" ,
+        "iata" : "NK" ,
+        "icao" : "NKS" ,
+        "name" : "Spirit Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "BA" ,
+        "iata" : "BA" ,
+        "icao" : "BAW" ,
+        "name" : "British Airways" ,
+        "phoneNumber" : "1-800-AIRWAYS" ,
+        "active" : true
+      }
+    ] ,
+    "airports" : [
+      {
+        "fs" : "ORD" ,
+        "iata" : "ORD" ,
+        "icao" : "KORD" ,
+        "faa" : "ORD" ,
+        "name" : "O'Hare International Airport" ,
+        "street1" : "10000 West O'Hare" ,
+        "city" : "Chicago" ,
+        "cityCode" : "CHI" ,
+        "stateCode" : "IL" ,
+        "postalCode" : "60666" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Chicago" ,
+        "weatherZone" : "ILZ014" ,
+        "localTime" : "2015-04-28T04:12:30.586" ,
+        "utcOffsetHours" : -5 ,
+        "latitude" : 41.976912 ,
+        "longitude" : -87.904876 ,
+        "elevationFeet" : 668 ,
+        "classification" : 1 ,
+        "active" : true
+      } , {
+        "fs" : "LAX" ,
+        "iata" : "LAX" ,
+        "icao" : "KLAX" ,
+        "faa" : "LAX" ,
+        "name" : "Los Angeles International Airport" ,
+        "street1" : "One World Way" ,
+        "street2" : "" ,
+        "city" : "Los Angeles" ,
+        "cityCode" : "LAX" ,
+        "stateCode" : "CA" ,
+        "postalCode" : "90045-5803" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Los_Angeles" ,
+        "weatherZone" : "CAZ041" ,
+        "localTime" : "2015-04-28T02:12:30.586" ,
+        "utcOffsetHours" : -7 ,
+        "latitude" : 33.943399 ,
+        "longitude" : -118.408279 ,
+        "elevationFeet" : 126 ,
+        "classification" : 1 ,
+        "active" : true
+      }
+    ] ,
+    "equipments" : [
+      {
+        "iata" : "32S" ,
+        "name" : "Airbus Industrie A318/319/320/321" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : false ,
+        "regional" : false
+      } , {
+        "iata" : "757" ,
+        "name" : "Boeing 757 Passenger" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : false ,
+        "regional" : false
+      } , {
+        "iata" : "737" ,
+        "name" : "Boeing 737 Passenger" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : false ,
+        "regional" : false
+      }
+    ]
+  }
+}

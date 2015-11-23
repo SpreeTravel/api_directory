@@ -1,0 +1,22 @@
+{
+  "id" : "string" ,
+  "colorId" : "string" ,
+  "backgroundColor" : "string" ,
+  "foregroundColor" : "string" ,
+  "hidden" : "boolean" ,
+  "selected" : "boolean" ,
+  "defaultReminders" : [
+    {
+      "method" : "string" ,
+      "minutes" : "integer"
+    }
+  ] ,
+  "notificationSettings" : {
+    "notifications" : [
+      {
+        "type" : "string" ,
+        "method" : "string"
+      }
+    ]
+  }
+}

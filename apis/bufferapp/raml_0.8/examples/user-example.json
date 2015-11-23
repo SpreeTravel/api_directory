@@ -1,0 +1,11 @@
+{
+  "_id" : "4f0c0a06512f7ef214000000" ,
+  "activity_at" : 1343654640 ,
+  "created_at" : 1326189062 ,
+  "id" : "4f0c0a06512f7ef214000000" ,
+  "plan" : "free" ,
+  "referral_link" : "http://bufferapp.com/r/abcde" ,
+  "referral_token" : "abcde" ,
+  "secret_email" : "buffer-abc123def456@to.bufferapp.com" ,
+  "timezone" : "Asia/Tel_Aviv"
+}

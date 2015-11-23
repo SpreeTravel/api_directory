@@ -1,0 +1,38 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "floating_ip_info" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "address" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "instance_uuid" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "interface" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "pool" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "project_id" : {
+              "type" : "object" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

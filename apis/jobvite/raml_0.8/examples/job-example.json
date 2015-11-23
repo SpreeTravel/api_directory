@@ -1,0 +1,26 @@
+{
+  "companyName" : "Jobvite" ,
+  "siteUrl" : "http://url.to/job/list/page/" ,
+  "recruiterEmail" : "" ,
+  "closeMissingReqs" : true ,
+  "requisitions" : [
+    {
+      "applyLink" : "" ,
+      "briefDescription" : "" ,
+      "description" : "" ,
+      "category" : "" ,
+      "jobId" : "" ,
+      "jobLink" : "" ,
+      "locationName" : "" ,
+      "locationCity" : "" ,
+      "locationState" : "" ,
+      "locationCountry" : "" ,
+      "recruiterEmail" : "" ,
+      "title" : "" ,
+      "customFields" : {
+        "CustomField1" : "custom field 1 value" ,
+        "customfields2" : "custom field 2 value"
+      }
+    }
+  ]
+}

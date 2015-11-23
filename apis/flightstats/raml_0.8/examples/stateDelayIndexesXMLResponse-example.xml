@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+	<delayIndexes>
+		<delayIndex>
+			<airport>
+				<fs>MLI</fs>
+				<iata>MLI</iata>
+				<icao>KMLI</icao>
+				<faa>MLI</faa>
+				<name>Quad City International Airport</name>
+				<street1>2200 69th Ave.</street1>
+				<city>Moline</city>
+				<cityCode>MLI</cityCode>
+				<stateCode>IL</stateCode>
+				<postalCode>61265</postalCode>
+				<countryCode>US</countryCode>
+				<countryName>United States</countryName>
+				<regionName>North America</regionName>
+				<timeZoneRegionName>America/Chicago</timeZoneRegionName>
+				<weatherZone>ILZ015</weatherZone>
+				<localTime>2015-04-28T00:55:26.208</localTime>
+				<utcOffsetHours>-5.0</utcOffsetHours>
+				<latitude>41.453897</latitude>
+				<longitude>-90.506111</longitude>
+				<elevationFeet>590</elevationFeet>
+				<classification>3</classification>
+				<active>true</active>
+				<weatherUrl>https://api.flightstats.com/flex/weather/rest/v1/json/all/MLI?codeType=fs</weatherUrl>
+			</airport>
+			<rawScore>0.0</rawScore>
+			<normalizedScore>0.0</normalizedScore>
+			<dateStart>2015-04-28T04:30:00.000Z</dateStart>
+			<dateEnd>2015-04-28T07:30:00.000Z</dateEnd>
+			<flights>0</flights>
+			<observations>0</observations>
+			<canceled>0</canceled>
+			<onTime>0</onTime>
+			<delayed15>0</delayed15>
+			<delayed30>0</delayed30>
+			<delayed45>0</delayed45>
+			<delta>0.0</delta>
+		</delayIndex>
+		<delayIndex>
+			<airport>
+				<fs>RFD</fs>
+				<iata>RFD</iata>
+				<icao>KRFD</icao>
+				<faa>RFD</faa>
+				<name>Chicago Rockford International Airport</name>
+				<street1>2 Airport Cir</street1>
+				<city>Rockford</city>
+				<cityCode>RFD</cityCode>
+				<stateCode>IL</stateCode>
+				<postalCode>61109</postalCode>
+				<countryCode>US</countryCode>
+				<countryName>United States</countryName>
+				<regionName>North America</regionName>
+				<timeZoneRegionName>America/Chicago</timeZoneRegionName>
+				<weatherZone>ILZ003</weatherZone>
+				<localTime>2015-04-28T00:55:26.208</localTime>
+				<utcOffsetHours>-5.0</utcOffsetHours>
+				<latitude>42.201748</latitude>
+				<longitude>-89.095372</longitude>
+				<elevationFeet>732</elevationFeet>
+				<classification>4</classification>
+				<active>true</active>
+				<weatherUrl>https://api.flightstats.com/flex/weather/rest/v1/json/all/RFD?codeType=fs</weatherUrl>
+			</airport>
+			<rawScore>0.0</rawScore>
+			<normalizedScore>0.0</normalizedScore>
+			<dateStart>2015-04-28T04:30:00.000Z</dateStart>
+			<dateEnd>2015-04-28T07:30:00.000Z</dateEnd>
+			<flights>1</flights>
+			<observations>1</observations>
+			<canceled>0</canceled>
+			<onTime>1</onTime>
+			<delayed15>0</delayed15>
+			<delayed30>0</delayed30>
+			<delayed45>0</delayed45>
+			<delta>0.0</delta>
+		</delayIndex>
+			</delayIndexes>
+	<request>
+		<url>https://api.flightstats.com/flex/delayindex/rest/v1/xml/state/IL</url>
+		<classification/>
+		<score/>
+		<state>
+			<requested>IL</requested>
+			<interpreted>IL</interpreted>
+		</state>
+	</request>
+</response>

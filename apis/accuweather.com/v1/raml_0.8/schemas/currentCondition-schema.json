@@ -1,0 +1,82 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : 
+    {
+      "type" : "object" ,
+      "properties" : {
+        "LocalObservationDateTime" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "EpochTime" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "WeatherText" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "WeatherIcon" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "IsDayTime" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "Temperature" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "Metric" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "Value" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "Unit" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "UnitType" : {
+                  "type" : "number" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "Imperial" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "Value" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "Unit" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "UnitType" : {
+                  "type" : "number" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        } ,
+        "MobileLink" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Link" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  
+}

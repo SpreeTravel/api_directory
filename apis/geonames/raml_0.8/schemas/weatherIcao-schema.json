@@ -1,0 +1,81 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "weatherObservation" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "weatherCondition" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "clouds" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "observation" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "windDirection" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "ICAO" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "elevation" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "countryCode" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "cloudsCode" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "lng" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "temperature" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "dewPoint" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "windSpeed" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "humidity" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "stationName" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "datetime" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "lat" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "hectoPascAltimeter" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

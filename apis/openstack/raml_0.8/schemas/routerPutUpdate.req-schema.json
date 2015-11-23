@@ -1,0 +1,23 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "router" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "external_gateway_info" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "network_id" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      }
+    }
+  }
+}

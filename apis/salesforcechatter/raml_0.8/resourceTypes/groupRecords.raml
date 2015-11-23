@@ -1,0 +1,35 @@
+post: 
+  description: Associate a record with a group.
+  queryParameters: 
+    recordId: 
+      description: ID of the record.
+  body: 
+    application/json: 
+      schema: createGroupRecordRequest
+      example: !include examples/createGroupRecordRequest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: groupRecordResponse
+head: 
+  description: Get the list of records associated with a group.
+  responses: 
+    200: 
+get: 
+  description: Get the list of records associated with a group.
+  queryParameters: 
+    page: 
+      description: An integer specifying a page of items. The default value is 0, which returns the first page.
+      type: integer
+      default: 0
+    pageSize: 
+      description: "Specifies the number of items per page. Valid values are from 1 through 100. If you don't specify a size, the default is 25."
+      type: integer
+      default: 25
+      example: 5
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: groupRecordPageResponse

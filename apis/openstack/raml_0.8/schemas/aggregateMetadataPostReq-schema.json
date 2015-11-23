@@ -1,0 +1,23 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "set_metadata" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "metadata" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "key" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      }
+    }
+  }
+}

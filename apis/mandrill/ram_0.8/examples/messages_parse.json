@@ -1,0 +1,4 @@
+{
+  "key": "example key",
+  "raw_message": "From: sender@example.comTo: recipient.email@example.comSubject: Some SubjectSome content."
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+	<request>
+		<url>https://api.flightstats.com/flex/alerts/rest/v1/xml/list/264823741</url>
+		<lessThan>
+			<requested>264823741</requested>
+			<interpreted>264823741</interpreted>
+		</lessThan>
+		<extendedOptions/>
+	</request>
+	<ruleIds>
+		<ruleId>264822260</ruleId>
+		<ruleId>264822106</ruleId>
+		<ruleId>264821956</ruleId>
+		<ruleId>264821767</ruleId>
+		<ruleId>264821650</ruleId>
+		<ruleId>264818824</ruleId>
+		<ruleId>264818722</ruleId>
+		<ruleId>264817058</ruleId>
+		<ruleId>264816281</ruleId>
+		<ruleId>264815641</ruleId>
+		<ruleId>264628110</ruleId>
+		<ruleId>264628098</ruleId>
+		<ruleId>264628088</ruleId>
+		<ruleId>264619441</ruleId>
+		<ruleId>264619440</ruleId>
+		<ruleId>264619438</ruleId>
+		<ruleId>264610067</ruleId>
+		<ruleId>264609736</ruleId>
+		<ruleId>264608974</ruleId>
+		<ruleId>264608444</ruleId>
+		<ruleId>264607845</ruleId>
+		<ruleId>264607800</ruleId>
+		<ruleId>264607773</ruleId>
+	</ruleIds>
+</response>

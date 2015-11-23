@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<magento_api>
+  <item_id>1</item_id>
+  <product_id>1</product_id>
+  <stock_id>1</stock_id>
+  <qty>200.0000</qty>
+  <min_qty>0.0000</min_qty>
+  <use_config_min_qty>1</use_config_min_qty>
+  <is_qty_decimal>1</is_qty_decimal>
+  <backorders>0</backorders>
+  <use_config_backorders>1</use_config_backorders>
+  <min_sale_qty>1.0000</min_sale_qty>
+  <use_config_min_sale_qty>1</use_config_min_sale_qty>
+  <max_sale_qty>0.0000</max_sale_qty>
+  <use_config_max_sale_qty>1</use_config_max_sale_qty>
+  <is_in_stock>1</is_in_stock>
+  <low_stock_date></low_stock_date>
+  <notify_stock_qty>10.0000</notify_stock_qty>
+  <use_config_notify_stock_qty>0</use_config_notify_stock_qty>
+  <manage_stock>0</manage_stock>
+  <use_config_manage_stock>1</use_config_manage_stock>
+  <stock_status_changed_auto>0</stock_status_changed_auto>
+  <use_config_qty_increments>1</use_config_qty_increments>
+  <qty_increments>0.0000</qty_increments>
+  <use_config_enable_qty_inc>1</use_config_enable_qty_inc>
+  <enable_qty_increments>0</enable_qty_increments>
+  <is_decimal_divided>1</is_decimal_divided>
+</magento_api>

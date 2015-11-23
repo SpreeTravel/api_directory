@@ -1,0 +1,537 @@
+#%RAML 0.8
+title: Twitch
+version: v2
+baseUri: https://api.twitch.tv/kraken
+mediaType: application/json
+securitySchemes:
+  - oauth_2_0: !include securitySchemes/oauth_2_0.raml
+schemas:
+  - blocks: !include schemas/blocks-schema.json
+  - object: !include schemas/object-schema.json
+  - channel: !include schemas/channel-schema.json
+  - users: !include schemas/users-schema.json
+  - underChannel: !include schemas/underChannel-schema.json
+  - underChannel2: !include schemas/underChannel2-schema.xsd
+  - chat: !include schemas/chat-schema.json
+  - emoticonsDeprecated: !include schemas/emoticonsDeprecated-schema.json
+  - follows: !include schemas/follows-schema.json
+  - followOtherwise: !include schemas/followOtherwise-schema.json
+  - userFollows: !include schemas/userFollows-schema.json
+  - streams: !include schemas/streams-schema.json
+  - user: !include schemas/user-schema.json
+  - basic: !include schemas/basic-schema.json
+  - games: !include schemas/games-schema.json
+  - ingests: !include schemas/ingests-schema.json
+  - stream: !include schemas/stream-schema.json
+  - streamof: !include schemas/streamof-schema.json
+  - allStreams: !include schemas/allStreams-schema.json
+  - featureds: !include schemas/featureds-schema.json
+  - summary: !include schemas/summary-schema.json
+  - subscriptions: !include schemas/subscriptions-schema.json
+  - subscriptionUser: !include schemas/subscriptionUser-schema.json
+  - subscribesChannel: !include schemas/subscribesChannel-schema.json
+  - teams: !include schemas/teams-schema.json
+  - team: !include schemas/team-schema.json
+  - video: !include schemas/video-schema.json
+  - videos: !include schemas/videos-schema.json
+  - channalVideos: !include schemas/channalVideos-schema.json
+  - emoticons: !include schemas/emoticons-schema.json
+resourceTypes:
+  - secured: !include resourceTypes/secured.raml
+  - base: !include resourceTypes/base.raml
+traits:
+  - pageable: !include traits/pageable.raml
+/: 
+  type: base
+  get: 
+    description: Basic information about the API and authentication status. If you are authenticated, the response includes the status of your token and links to other related resources.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: basic
+            example: !include examples/basic-example.json
+/channels/{channelId}: 
+  type: base
+  put: 
+    description: "Update channel's status or game."
+    body: 
+      application/json: 
+        schema: underChannel
+        example: !include examples/underChannel-example.json
+      application/x-www-form-urlencoded: 
+        schema: underChannel2
+        example: !include examples/underChannel2-example.x-www-form-urlencoded
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: channel
+            example: !include examples/channel-example.json
+  get: 
+    description: Returns a channel object.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: channel
+            example: !include examples/channel-example.json
+  /editors: 
+    type: base
+    get: 
+      description: "Returns a list of user objects who are editors of :channel."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: users
+              example: !include examples/users-example.json
+  /videos: 
+    type: base
+    get: 
+      is: [ pageable ]
+      description: "Returns an list of videos ordered by time of creation, starting with the most recent from :channel."
+      queryParameters: 
+        broadcasts: 
+          description: Returns only broadcasts when true. Otherwise only highlights are returned. Default is false.
+          type: boolean
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: channalVideos
+              example: !include examples/channalVideos-example.json
+  /follows: 
+    type: base
+    get: 
+      is: [ pageable ]
+      description: "Get channel's list of following users"
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: follows
+              example: !include examples/follows-example.json
+  /stream_key: 
+    type: { secured: { scope: channel_stream } }
+    delete: 
+      description: "Resets channel's stream key."
+      responses: 
+        204: 
+  /commercial: 
+    type: base
+    post: 
+      description: Start a commercial on channel
+      body: 
+        application/x-www-form-urlencoded: 
+          formParameters: 
+            length: 
+              description: |
+                Length of commercial break in seconds. Default value is 30.
+                Valid values are 30, 60, or 90. You may only trigger a commercial longer than 30 seconds once every 8 minutes.
+              enum: 
+                - 30
+                - 90
+                - 60
+              default: 30
+      responses: 
+        204: 
+          description: No Content if successful
+        422: 
+          description: Unprocessable Entity if commercial length not allowed.
+  /subscriptions: 
+    type: base
+    get: 
+      is: [ pageable ]
+      description: "Returns a list of subscription objects sorted by subscription relationship creation date which contain users subscribed to :channel."
+      queryParameters: 
+        direction: 
+          description: Creation date sorting direction. Default is asc. Valid values are asc and desc.
+          enum: [ desc , asc ]
+          default: asc
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: subscriptions
+              example: !include examples/subscriptions-example.json
+      securedBy: 
+        - oauth_2_0: 
+            scopes: [channel_subscriptions]
+    /{userId}: 
+      type: base
+      get: 
+        description: "Returns a subscription object which includes the user if that user is subscribed. Requires authentication for :channel."
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: subscriptionUser
+                example: !include examples/subscriptionUser-example.json
+          404: 
+            description: Not Found if user is not subscribed.
+        securedBy: 
+          - oauth_2_0: 
+              scopes: [channel_check_subscriptions]
+/channel: 
+  type: base
+  get: 
+    description: Returns a channel object of authenticated user. Channel object includes stream key.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: channel
+            example: !include examples/channel-example.json
+/chat: 
+  type: base
+  /{channelId}: 
+    type: base
+    get: 
+      description: Returns a links object to all other chat endpoints.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: chat
+              example: !include examples/chat-example.json
+    /emoticons: 
+      type: base
+      get: 
+        description: |
+          ** DEPRECATED **
+          Returns a list of emoticon objects that can be used in the :channel's chat.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: emoticonsDeprecated
+                example: !include examples/emoticonsDeprecated-example.json
+  /emoticons: 
+    type: base
+    get: 
+      description: Returns a list of all emoticon objects for Twitch.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: emoticons
+              example: !include examples/emoticons-example.json
+/streams: 
+  type: base
+  get: 
+    is: [ pageable ]
+    description: Returns a list of stream objects that are queried by a number of parameters sorted by number of viewers descending.
+    queryParameters: 
+      game: 
+        description: Streams categorized under game.
+        example: game=Diablo+III
+      channel: 
+        description: Streams from a comma separated list of channels.
+        example: channel=zisss,voyboy
+      embeddable: 
+        description: If set to true, only returns streams that can be embedded
+        type: boolean
+      hls: 
+        description: If set to true, only returns streams using HLS
+        type: boolean
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: allStreams
+            example: !include examples/allStreams-example.json
+  /followed: 
+    type: { secured: { scope: user_read } }
+    get: 
+      description: Returns a list of stream objects that the authenticated user is following.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: streams
+              example: !include examples/streams-example.json
+  /{channelId}: 
+    type: base
+    get: 
+      description: Returns a stream object if live.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: streamof
+              example: !include examples/streamof-example.json
+  /featured: 
+    type: base
+    get: 
+      is: [ pageable ]
+      description: Returns a list of featured (promoted) stream objects.
+      queryParameters: 
+        hls: 
+          description: If set to true, only returns streams using HLS
+          type: boolean
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: featureds
+              example: !include examples/featureds-example.json
+  /summary: 
+    type: base
+    get: 
+      is: [ pageable ]
+      description: Returns a summary of current streams.
+      queryParameters: 
+        hls: 
+          description: If set to true, only returns streams using HLS
+          type: boolean
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: summary
+              example: !include examples/summary-example.json
+/users/{userId}: 
+  type: base
+  get: 
+    description: Returns a user object.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: user
+            example: !include examples/user-example.json
+  /blocks: 
+    type: { secured: { scope: user_blocks_read } }
+    get: 
+      is: [ pageable ]
+      description: "Returns a list of blocks objects on :login's block list. List sorted by recency, newest first."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: blocks
+              example: !include examples/blocks-example.json
+    /{targetId}: 
+      type: { secured: { scope: user_blocks_edit } }
+      put: 
+        description: "Adds :target to :user's block list. :user is the authenticated user and :target is user to be blocked. Returns a blocks object."
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: object
+                example: !include examples/object-example.json
+      delete: 
+        description: "Removes :target from :user's block list. :user is the authenticated user and :target is user to be unblocked."
+        responses: 
+          204: 
+            description: No Content if successful.
+          404: 
+            description: "Not Found if :target not on :user's block list."
+          422: 
+            description: Unprocessable Entity if delete failed.
+  /follows/channels: 
+    type: base
+    get: 
+      is: [ pageable ]
+      description: Returns a list of follows objects.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: follows
+              example: !include examples/follows-example.json
+        404: 
+          description: "Not Found if :user does not exist."
+    /{targetId}: 
+      type: base
+      get: 
+        description: Returns a follow object otherwise.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: followOtherwise
+                example: !include examples/followOtherwise-example.json
+          404: 
+            description: Not Found if user is not following channel.
+      put: 
+        description: "Adds :user to :target's followers. :user is the authenticated user's name and :target is the name of the channel to be followed."
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: userFollows
+                example: !include examples/userFollows-example.json
+          422: 
+            description: Unprocessable Entity if update fails.
+        securedBy: 
+          - oauth_2_0: 
+              scopes: [user_follows_edit]
+      delete: 
+        description: "Removes :user from :target's followers. :user is the authenticated user's name and :target is the name of the channel to be unfollowed."
+        responses: 
+          204: 
+            description: No Content if successful.
+          422: 
+            description: Unprocessable Entity if delete fails.
+        securedBy: 
+          - oauth_2_0: 
+              scopes: [user_follows_edit]
+  /subscriptions/{channelId}: 
+    type: base
+    get: 
+      description: "Returns a channel object that user subscribes to. Requires authentication for :user."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: subscribesChannel
+              example: !include examples/subscribesChannel-example.json
+        404: 
+          description: Not Found if user is not subscribed.
+        422: 
+          description: Unprocessable Entity if channel has no subscription program.
+      securedBy: 
+        - oauth_2_0: 
+            scopes: [user_subscriptions]
+/user: 
+  type: base
+  get: 
+    description: Returns a user object.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: user
+            example: !include examples/user-example.json
+/games/top: 
+  type: base
+  get: 
+    is: [ pageable ]
+    description: Returns a list of games objects sorted by number of current viewers on Twitch, most popular first.
+    queryParameters: 
+      hls: 
+        description: If set to true, only returns game objects with streams using HLS
+        type: boolean
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: games
+            example: !include examples/games-example.json
+      503: 
+        description: Service Unvailable if error retrieving games status.
+/ingests: 
+  type: base
+  get: 
+    description: Returns a list of ingest objects.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: ingests
+            example: !include examples/ingests-example.json
+      503: 
+        description: Service Unavailable if error retrieving ingest status.
+/search: 
+  type: base
+  /streams: 
+    type: base
+    get: 
+      is: [ pageable ]
+      description: Returns a list of stream objects matching the search query.
+      queryParameters: 
+        query: 
+          description: query or q. A url-encoded search query.
+          required: true
+          example: starcraft
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: stream
+              example: !include examples/streams-example.json
+        503: 
+          description: Service Unavailable if unable to retrieve search results.
+  /games: 
+    type: base
+    get: 
+      description: Returns a list of game objects matching the search query.
+      queryParameters: 
+        query: 
+          description: query or q. A url-encoded search query.
+          required: true
+          example: q=starcraft
+        type: 
+          description: "suggest: Suggests a list of games similar to query, e.g. 'star' query might suggest 'StarCraft II: Wings of Liberty'."
+          required: true
+          example: type=suggest
+        live: 
+          description: If true, only returns games that are live on at least one channel.
+          type: boolean
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: games
+              example: !include examples/games-example.json
+/teams: 
+  type: base
+  get: 
+    description: Returns a list of active teams.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: teams
+            example: !include examples/teams-example.json
+  /{teamsId}: 
+    type: base
+    get: 
+      description: "Returns a team object for :team."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: team
+              example: !include examples/team-example.json
+/videos: 
+  type: base
+  /{videoId}: 
+    type: base
+    get: 
+      description: Returns a video object.
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: video
+              example: !include examples/video-example.json
+  /top: 
+    type: base
+    get: 
+      is: [ pageable ]
+      description: Returns a list of videos created in a given time period sorted by number of views, most popular first.
+      queryParameters: 
+        game: 
+          description: Returns only videos from game.
+          example: game=League+of+Legends
+        period: 
+          description: Returns only videos created in time period. Valid values are week, month, or all. Default is week.
+          enum: 
+            - month
+            - all
+            - week
+          default: week
+          example: period=month
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: videos
+              example: !include examples/videos-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

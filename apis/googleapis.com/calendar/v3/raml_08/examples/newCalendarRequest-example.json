@@ -1,0 +1,8 @@
+{
+  "kind" : "calendar#calendar" ,
+  "etag" : "etag" ,
+  "summary" : "string" ,
+  "description" : "string" ,
+  "location" : "string" ,
+  "timeZone" : "string"
+}

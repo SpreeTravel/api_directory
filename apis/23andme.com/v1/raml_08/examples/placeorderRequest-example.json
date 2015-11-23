@@ -1,0 +1,17 @@
+{
+  "first_name" : "Barack" ,
+  "last_name" : "Obama" ,
+  "address_line1" : "1600 Pennsylvania Avenue" ,
+  "city" : "Washington" ,
+  "state" : "DC" ,
+  "country" : "US" ,
+  "email" : "test@example.com" ,
+  "phone" : "12123644576" ,
+  "shipping_method" : "Standard" ,
+  "product_id" : "product_id" ,
+  "postal_code" : "20500" ,
+  "personalizations" : [
+    "Barack" ,
+    "Michelle"
+  ]
+}

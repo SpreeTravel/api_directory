@@ -1,0 +1,19 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TwilioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ValidationRequest">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="AccountSid"/>
+              <xs:element type="xs:long" name="PhoneNumber"/>
+              <xs:element type="xs:string" name="FriendlyName"/>
+              <xs:element type="xs:int" name="ValidationCode"/>
+              <xs:element type="xs:string" name="CallSid"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

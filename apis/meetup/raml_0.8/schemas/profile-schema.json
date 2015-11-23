@@ -1,0 +1,191 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "additional": {
+      "required": false,
+      "type": "string"
+    },
+    "answers": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "answer": {
+          "required": false,
+          "type": "string"
+        },
+        "question": {
+          "required": false,
+          "type": "string"
+        },
+        "question_id": {
+          "required": false,
+          "type": "integer"
+        }
+      }
+    },
+    "attendance_count": {
+      "required": false,
+      "type": "integer"
+    },
+    "bio": {
+      "required": false,
+      "type": "string"
+    },
+    "comment": {
+      "required": false,
+      "type": "string"
+    },
+    "created": {
+      "required": false,
+      "type": "integer"
+    },
+    "updated": {
+      "required": false,
+      "type": "integer"
+    },
+    "group": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "group_lat": {
+          "required": false,
+          "type": "string"
+        },
+        "group_lon": {
+          "required": false,
+          "type": "string"
+        },
+        "id": {
+          "required": false,
+          "type": "integer"
+        },
+        "join_mode": {
+          "required": false,
+          "type": "string"
+        },
+        "name": {
+          "required": false,
+          "type": "string"
+        },
+        "urlname": {
+          "required": false,
+          "type": "string"
+        },
+        "who": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    },
+    "member_city": {
+      "required": false,
+      "type": "string"
+    },
+    "member_country": {
+      "required": false,
+      "type": "string"
+    },
+    "member_id": {
+      "required": false,
+      "type": "integer"
+    },
+    "member_state": {
+      "required": false,
+      "type": "string"
+    },
+    "membership_dues": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "period_status": {
+          "required": false,
+          "type": "string"
+        },
+        "total_amount": {
+          "required": false,
+          "type": "string"
+        },
+        "transaction_time": {
+          "required": false,
+          "type": "integer"
+        }
+      }
+    },
+    "name": {
+      "required": false,
+      "type": "string"
+    },
+    "other_services": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "[service-name]": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "identifier": {
+              "required": false,
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "photo": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "highres_link": {
+          "required": false,
+          "type": "string"
+        },
+        "photo_id": {
+          "required": false,
+          "type": "integer"
+        },
+        "photo_link": {
+          "required": false,
+          "type": "string"
+        },
+        "thumb_link": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    },
+    "photo_url": {
+      "required": false,
+      "type": "string"
+    },
+    "profile_url": {
+      "required": false,
+      "type": "string"
+    },
+    "role": {
+      "required": false,
+      "type": "string"
+    },
+    "site_url": {
+      "required": false,
+      "type": "string"
+    },
+    "site_name": {
+      "required": false,
+      "type": "string"
+    },
+    "status": {
+      "required": false,
+      "type": "string"
+    },
+    "title": {
+      "required": false,
+      "type": "integer"
+    },
+    "visited": {
+      "required": false,
+      "type": "integer"
+    }
+  }
+}

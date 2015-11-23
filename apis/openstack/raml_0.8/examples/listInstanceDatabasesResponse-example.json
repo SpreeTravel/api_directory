@@ -1,0 +1,15 @@
+{
+  "databases" : [
+    {
+      "name" : "anotherexampledb"
+    } , {
+      "name" : "exampledb"
+    } , {
+      "name" : "nextround"
+    } , {
+      "name" : "sampledb"
+    } , {
+      "name" : "testingdb"
+    }
+  ]
+}

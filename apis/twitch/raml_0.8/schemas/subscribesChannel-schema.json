@@ -1,0 +1,137 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "_links" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "self" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "channel" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "logo" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "_links" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "subscriptions" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "commercial" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "editors" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "videos" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "stream_key" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "follows" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "teams" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "self" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "chat" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "features" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "updated_at" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "background" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "status" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "game" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "profile_banner" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "banner" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "display_name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "_id" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "url" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "video_banner" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "delay" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "mature" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "created_at" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "_id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "created_at" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+    "foods": [
+        {
+            "accessLevel":"PUBLIC",
+            "calories":570,
+            "defaultServingSize":100,
+            "defaultUnit":{"id":147,"name":"gram","plural":"grams"},
+            "foodId":18828,
+            "locale":"en_US",
+            "name":"Chocolate, Milk",
+            "units":[226,180,147,389]
+        },
+        {
+            "accessLevel":"PRIVATE",
+            "calories":564,
+            "defaultServingSize":100,
+            "defaultUnit":{"id":147,"name":"gram","plural":"grams"},
+            "foodId":14823,
+            "name":"Chocolate, Bitter",
+            "units":[226,180,147,389]
+        },
+        {
+            "accessLevel":"PUBLIC",
+            "brand":"Bounty",
+            "calories":488,
+            "defaultServingSize":100,
+            "defaultUnit":{"id":147,"name":"gram","plural":"grams"},
+            "foodId":23500,
+            "locale":"en_US",
+            "name":"Chocolate, Bounty",
+            "units":[226,180,147,389]
+        }
+    ]
+}

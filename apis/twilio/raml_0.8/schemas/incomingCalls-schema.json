@@ -1,0 +1,160 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "page" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "num_pages" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "page_size" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "total" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "start" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "end" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "uri" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "first_page_uri" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "previous_page_uri" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "next_page_uri" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "last_page_uri" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "incoming_phone_numbers" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "sid" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "account_sid" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "friendly_name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "phone_number" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "voice_url" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "voice_method" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "voice_fallback_url" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "voice_fallback_method" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "voice_caller_id_lookup" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "voice_application_sid" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "date_created" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "date_updated" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "sms_url" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "sms_method" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "sms_fallback_url" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "sms_fallback_method" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "sms_application_sid" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "capabilities" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "voice" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                } ,
+                "sms" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "status_callback" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "status_callback_method" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "api_version" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "uri" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

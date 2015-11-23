@@ -1,0 +1,15 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "quantity_delta" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "adjustment_type" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

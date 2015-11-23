@@ -1,0 +1,168 @@
+{
+  "type": "object",
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "_links": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "channel": {
+          "type": "string",
+          "required": false
+        },
+        "self": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "stream": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "_links": {
+          "type": "object",
+          "required": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "required": false
+            }
+          }
+        },
+        "broadcaster": {
+          "type": "string",
+          "required": false
+        },
+        "preview": {
+          "type": "string",
+          "required": false
+        },
+        "_id": {
+          "type": "number",
+          "required": false
+        },
+        "viewers": {
+          "type": "number",
+          "required": false
+        },
+        "channel": {
+          "type": "object",
+          "required": false,
+          "properties": {
+            "display_name": {
+              "type": "string",
+              "required": false
+            },
+            "_links": {
+              "type": "object",
+              "required": false,
+              "properties": {
+                "stream_key": {
+                  "type": "string",
+                  "required": false
+                },
+                "editors": {
+                  "type": "string",
+                  "required": false
+                },
+                "subscriptions": {
+                  "type": "string",
+                  "required": false
+                },
+                "commercial": {
+                  "type": "string",
+                  "required": false
+                },
+                "videos": {
+                  "type": "string",
+                  "required": false
+                },
+                "follows": {
+                  "type": "string",
+                  "required": false
+                },
+                "self": {
+                  "type": "string",
+                  "required": false
+                },
+                "chat": {
+                  "type": "string",
+                  "required": false
+                },
+                "features": {
+                  "type": "string",
+                  "required": false
+                }
+              }
+            },
+            "teams": {
+              "type": "array",
+              "required": false,
+              "items": {
+                "type": "array"
+              }
+            },
+            "status": {
+              "type": "string",
+              "required": false
+            },
+            "created_at": {
+              "type": "string",
+              "required": false
+            },
+            "logo": {
+              "type": "string",
+              "required": false
+            },
+            "updated_at": {
+              "type": "string",
+              "required": false
+            },
+            "mature": {
+              "type": "object",
+              "required": false
+            },
+            "video_banner": {
+              "type": "object",
+              "required": false
+            },
+            "_id": {
+              "type": "number",
+              "required": false
+            },
+            "background": {
+              "type": "string",
+              "required": false
+            },
+            "banner": {
+              "type": "string",
+              "required": false
+            },
+            "name": {
+              "type": "string",
+              "required": false
+            },
+            "url": {
+              "type": "string",
+              "required": false
+            },
+            "game": {
+              "type": "string",
+              "required": false
+            }
+          }
+        },
+        "name": {
+          "type": "string",
+          "required": false
+        },
+        "game": {
+          "type": "string",
+          "required": false
+        }
+      }
+    }
+  }
+}

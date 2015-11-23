@@ -1,0 +1,24 @@
+[
+  {
+    "Code" : "Friday" ,
+    "LocalizedText" : ""
+  } , {
+    "Code" : "Monday" ,
+    "LocalizedText" : ""
+  } , {
+    "Code" : "Saturday" ,
+    "LocalizedText" : ""
+  } , {
+    "Code" : "Sunday" ,
+    "LocalizedText" : ""
+  } , {
+    "Code" : "Thursday" ,
+    "LocalizedText" : ""
+  } , {
+    "Code" : "Tuesday" ,
+    "LocalizedText" : ""
+  } , {
+    "Code" : "Wednesday" ,
+    "LocalizedText" : ""
+  }
+]

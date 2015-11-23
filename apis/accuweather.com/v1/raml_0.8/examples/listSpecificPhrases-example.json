@@ -1,0 +1,27 @@
+[
+  {
+    "EnglishText" : "Sunny" ,
+    "LanguageCode" : "en-us" ,
+    "LanguageId" : 1 ,
+    "PhraseCode" : "Sunny" ,
+    "Text" : "Sunny"
+  } , {
+    "EnglishText" : "Sunny" ,
+    "LanguageCode" : "es" ,
+    "LanguageId" : 2 ,
+    "PhraseCode" : "Sunny" ,
+    "Text" : "Soleado"
+  } , {
+    "EnglishText" : "Sunny" ,
+    "LanguageCode" : "fr" ,
+    "LanguageId" : 3 ,
+    "PhraseCode" : "Sunny" ,
+    "Text" : "Ensoleillé"
+  } , {
+    "EnglishText" : "Sunny" ,
+    "LanguageCode" : "da" ,
+    "LanguageId" : 4 ,
+    "PhraseCode" : "Sunny" ,
+    "Text" : "Solskin"
+  }
+]

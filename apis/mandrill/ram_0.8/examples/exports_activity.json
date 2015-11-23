@@ -1,0 +1,18 @@
+{
+  "key": "example key",
+  "notify_email": "notify_email@example.com",
+  "date_from": "2013-01-01 12:53:01",
+  "date_to": "2013-01-06 13:42:18",
+  "tags": [
+    "example-tag"
+  ],
+  "senders": [
+    "test@example.com"
+  ],
+  "states": [
+    "sent"
+  ],
+  "api_keys": [
+    "ONzNrsmbtNXoIKyfPmjnig"
+  ]
+}

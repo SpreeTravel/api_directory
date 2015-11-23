@@ -1,0 +1,35 @@
+{
+  "id" : "C:34GEWHCJGPR40" ,
+  "status" : "SENT" ,
+  "bank_account_id" : "543654645" ,
+  "initiated_at" : "2013-01-02T08:00:00.000Z" ,
+  "total_money" : {
+    "amount" : 5981 ,
+    "currency_code" : "USD"
+  } ,
+  "entries" : [
+    {
+      "payment_id" : "Jq74mCczmFXk1tC10GB" ,
+      "type" : "CHARGE" ,
+      "amount_money" : {
+        "amount" : 5981 ,
+        "currency_code" : "USD"
+      } ,
+      "fee_money" : {
+        "amount" : -169 ,
+        "currency_code" : "USD"
+      }
+    } , {
+      "payment_id" : "Jq74mCczmFXk1tC10GB" ,
+      "type" : "CHARGE" ,
+      "amount_money" : {
+        "amount" : 5981 ,
+        "currency_code" : "USD"
+      } ,
+      "fee_money" : {
+        "amount" : -169 ,
+        "currency_code" : "USD"
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+post?: 
+  responses: 
+    201: 
+      body: 
+        application/xml: 
+          schema: <<type>>-xml
+        application/json: 
+          schema: <<type>>
+type: mediaTypeExt
+get: 
+  responses: 
+    200: 
+      body: 
+        application/xml: 
+          schema: <<type|!pluralize>>-xml
+        application/json: 
+          schema: <<type|!pluralize>>

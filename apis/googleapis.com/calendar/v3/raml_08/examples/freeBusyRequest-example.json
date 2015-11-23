@@ -1,0 +1,12 @@
+{
+  "timeMin" : "datetime" ,
+  "timeMax" : "datetime" ,
+  "timeZone" : "string" ,
+  "groupExpansionMax" : "integer" ,
+  "calendarExpansionMax" : "integer" ,
+  "items" : [
+    {
+      "id" : "string"
+    }
+  ]
+}

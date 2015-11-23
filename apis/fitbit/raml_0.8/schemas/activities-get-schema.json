@@ -1,0 +1,155 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "activities": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "activityId": {
+            "required": false,
+            "type": "string"
+          },
+          "activityParentId": {
+            "required": false,
+            "type": "string"
+          },
+          "calories": {
+            "required": false,
+            "type": "string"
+          },
+          "description": {
+            "required": false,
+            "type": "string"
+          },
+          "distance": {
+            "required": false,
+            "type": "string"
+          },
+          "duration": {
+            "required": false,
+            "type": "string"
+          },
+          "hasStartTime": {
+            "required": false,
+            "type": "string"
+          },
+          "isFavorite": {
+            "required": false,
+            "type": "string"
+          },
+          "logId": {
+            "required": false,
+            "type": "string"
+          },
+          "name": {
+            "required": false,
+            "type": "string"
+          },
+          "startTime": {
+            "required": false,
+            "type": "string"
+          },
+          "steps": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      }
+    },
+    "goals": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "caloriesOut": {
+          "required": false,
+          "type": "string"
+        },
+        "distance": {
+          "required": false,
+          "type": "string"
+        },
+        "floors": {
+          "required": false,
+          "type": "array"
+        },
+        "steps": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    },
+    "summary": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "activityCalories": {
+          "required": false,
+          "type": "string"
+        },
+        "caloriesBMR": {
+          "required": false,
+          "type": "string"
+        },
+        "caloriesOut": {
+          "required": false,
+          "type": "string"
+        },
+        "distances": {
+          "required": false,
+          "type": "array",
+          "items": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "activity": {
+                "required": false,
+                "type": "string"
+              },
+              "distance": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          }
+        },
+        "elevation": {
+          "required": false,
+          "type": "string"
+        },
+        "fairlyActiveMinutes": {
+          "required": false,
+          "type": "string"
+        },
+        "floors": {
+          "required": false,
+          "type": "string"
+        },
+        "lightlyActiveMinutes": {
+          "required": false,
+          "type": "string"
+        },
+        "marginalCalories": {
+          "required": false,
+          "type": "string"
+        },
+        "sedentaryMinutes": {
+          "required": false,
+          "type": "string"
+        },
+        "steps": {
+          "required": false,
+          "type": "string"
+        },
+        "veryActiveMinutes": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    }
+  }
+}

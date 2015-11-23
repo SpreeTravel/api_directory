@@ -1,0 +1,35 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "canChat": {
+      "type": "boolean",
+      "required": false
+    },
+    "canDirectMessage": {
+      "type": "boolean",
+      "required": false
+    },
+    "canEdit": {
+      "type": "boolean",
+      "required": false
+    },
+    "canFollow": {
+      "type": "boolean",
+      "required": false
+    },
+    "canViewFeed": {
+      "type": "boolean",
+      "required": false
+    },
+    "canViewFullProfile": {
+      "type": "boolean",
+      "required": false
+    },
+    "isModerator": {
+      "type": "boolean",
+      "required": false
+    }
+  }
+}

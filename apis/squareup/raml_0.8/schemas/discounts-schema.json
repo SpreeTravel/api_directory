@@ -1,0 +1,32 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : [
+    {
+      "type" : "object" ,
+      "properties" : {
+        "pin_required" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "discount_type" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "rate" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  ]
+}

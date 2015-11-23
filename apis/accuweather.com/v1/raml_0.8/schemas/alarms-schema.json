@@ -1,0 +1,165 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : 
+    {
+      "type" : "object" ,
+      "properties" : {
+        "Date" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Alarms" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : 
+            {
+              "type" : "object" ,
+              "properties" : {
+                "AlarmType" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "Value" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "Metric" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "Value" : {
+                          "type" : "number" ,
+                          "required" : false
+                        } ,
+                        "Unit" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "UnitType" : {
+                          "type" : "number" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "Imperial" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "Value" : {
+                          "type" : "number" ,
+                          "required" : false
+                        } ,
+                        "Unit" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "UnitType" : {
+                          "type" : "number" ,
+                          "required" : false
+                        }
+                      }
+                    }
+                  }
+                } ,
+                "Day" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "Metric" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "Value" : {
+                          "type" : "number" ,
+                          "required" : false
+                        } ,
+                        "Unit" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "UnitType" : {
+                          "type" : "number" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "Imperial" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "Value" : {
+                          "type" : "number" ,
+                          "required" : false
+                        } ,
+                        "Unit" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "UnitType" : {
+                          "type" : "number" ,
+                          "required" : false
+                        }
+                      }
+                    }
+                  }
+                } ,
+                "Night" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "Metric" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "Value" : {
+                          "type" : "number" ,
+                          "required" : false
+                        } ,
+                        "Unit" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "UnitType" : {
+                          "type" : "number" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "Imperial" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "Value" : {
+                          "type" : "number" ,
+                          "required" : false
+                        } ,
+                        "Unit" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "UnitType" : {
+                          "type" : "number" ,
+                          "required" : false
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          
+        } ,
+        "MobileLink" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Link" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  
+}

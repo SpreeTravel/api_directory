@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "results": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "required": false,
+            "type": "integer"
+          },
+          "group_name": {
+            "required": false,
+            "type": "string"
+          },
+          "id": {
+            "required": false,
+            "type": "integer"
+          },
+          "item_type": {
+            "required": false,
+            "type": "string"
+          },
+          "link": {
+            "required": false,
+            "type": "string"
+          },
+          "member_id": {
+            "required": false,
+            "type": "integer"
+          },
+          "member_name": {
+            "required": false,
+            "type": "string"
+          },
+          "photo_url": {
+            "required": false,
+            "type": "string"
+          },
+          "published": {
+            "required": false,
+            "type": "string"
+          },
+          "title": {
+            "required": false,
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}

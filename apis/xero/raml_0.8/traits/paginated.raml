@@ -1,0 +1,10 @@
+usage: Limit the number of records to be returned in a response
+description: |
+  To utilise paging, append a page number parameter to the URL. If there are 100 records in the response you will need to check if there is any more data by fetching the next page and continuing this process until no more results are returned.
+  By using paging all the elements in each individual contact are returned in the response which avoids the need to retrieve each individual contact to get all the details (GET Contacts without paging only returns a subset of elements)
+queryParameters: 
+  pageNumber: 
+    description: |
+      A value of 1 returns de first 100 records. A value of n returns records from n\*100 to n\*100+99.
+    type: integer
+    example: 1

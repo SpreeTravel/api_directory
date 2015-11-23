@@ -1,0 +1,23 @@
+{
+  "member": {
+    "member_state": "member_state",
+    "member_city": "member_city",
+    "name": "name",
+    "member_country": "member_country",
+    "member_id": 100
+  },
+  "id": 100,
+  "udf_{varname}": "udf_{varname}",
+  "status": "status",
+  "created": 100,
+  "container": {
+    "id": 100,
+    "name": "name",
+    "urlname": "urlname"
+  },
+  "community": {
+    "id": 100,
+    "name": "name",
+    "urlname": "urlname"
+  }
+}

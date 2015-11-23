@@ -1,0 +1,583 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "stack" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "capabilities" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+          ]
+        } ,
+        "creation_time" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "description" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "disable_rollback" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "links" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "href" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "rel" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        } ,
+        "notification_topics" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+          ]
+        } ,
+        "parameters" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "OS::project_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "OS::stack_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "OS::stack_name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "admin_user" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flavor" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "image" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "key_name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "server_name" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "parent" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "resources" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "attributes" : {
+                  "type" : "object" ,
+                  "required" : false
+                } ,
+                "description" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "metadata" : {
+                  "type" : "object" ,
+                  "required" : false
+                } ,
+                "physical_resource_id" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "properties" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "description" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "rules" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "object" ,
+                          "properties" : {
+                            "direction" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "ethertype" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "port_range_max" : {
+                              "type" : "object" ,
+                              "required" : false
+                            } ,
+                            "port_range_min" : {
+                              "type" : "object" ,
+                              "required" : false
+                            } ,
+                            "protocol" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "remote_group_id" : {
+                              "type" : "object" ,
+                              "required" : false
+                            } ,
+                            "remote_ip_prefix" : {
+                              "type" : "object" ,
+                              "required" : false
+                            } ,
+                            "remote_mode" : {
+                              "type" : "string" ,
+                              "required" : false
+                            }
+                          }
+                        } , {
+                          "type" : "object" ,
+                          "properties" : {
+                            "direction" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "ethertype" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "port_range_max" : {
+                              "type" : "number" ,
+                              "required" : false
+                            } ,
+                            "port_range_min" : {
+                              "type" : "number" ,
+                              "required" : false
+                            } ,
+                            "protocol" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "remote_group_id" : {
+                              "type" : "object" ,
+                              "required" : false
+                            } ,
+                            "remote_ip_prefix" : {
+                              "type" : "object" ,
+                              "required" : false
+                            } ,
+                            "remote_mode" : {
+                              "type" : "string" ,
+                              "required" : false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                } ,
+                "required_by" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                    {
+                      "type" : "string"
+                    }
+                  ]
+                } ,
+                "resource_action" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "resource_identity" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "path" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "stack_id" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "stack_name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "tenant" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "resource_name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "resource_status" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "resource_status_reason" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "resource_type" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "stack_identity" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "path" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "stack_id" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "stack_name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "tenant" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "stack_name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "updated_time" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } , {
+              "type" : "object" ,
+              "properties" : {
+                "attributes" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "accessIPv4" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "accessIPv6" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "addresses" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "console_urls" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "first_address" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "instance_name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "networks" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "show" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "description" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "metadata" : {
+                  "type" : "object" ,
+                  "required" : false
+                } ,
+                "physical_resource_id" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "properties" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "admin_pass" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "admin_user" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "availability_zone" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "block_device_mapping" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "config_drive" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "diskConfig" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "flavor" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "flavor_update_policy" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "image" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "image_update_policy" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "key_name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "metadata" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "ha_stack" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "networks" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "object" ,
+                          "properties" : {
+                            "fixed_ip" : {
+                              "type" : "object" ,
+                              "required" : false
+                            } ,
+                            "network" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "port" : {
+                              "type" : "object" ,
+                              "required" : false
+                            } ,
+                            "uuid" : {
+                              "type" : "object" ,
+                              "required" : false
+                            }
+                          }
+                        }
+                      ]
+                    } ,
+                    "personality" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "reservation_id" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "scheduler_hints" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "security_groups" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "string"
+                        }
+                      ]
+                    } ,
+                    "software_config_transport" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "user_data" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "user_data_format" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "required_by" : {
+                  "type" : "array" ,
+                  "required" : false ,
+                  "items" : [
+                  ]
+                } ,
+                "resource_action" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "resource_identity" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "path" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "stack_id" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "stack_name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "tenant" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "resource_name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "resource_status" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "resource_status_reason" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "resource_type" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "stack_identity" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "path" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "stack_id" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "stack_name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "tenant" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "stack_name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "updated_time" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        } ,
+        "stack_name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "stack_owner" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "template_description" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "timeout_mins" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "updated_time" : {
+          "type" : "object" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

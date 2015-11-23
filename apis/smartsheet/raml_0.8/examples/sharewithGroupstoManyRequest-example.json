@@ -1,0 +1,15 @@
+{
+  "shares" : [
+    {
+      "type" : "USER" ,
+      "userId" : 1539725208119172
+    } , {
+      "type" : "GROUP" ,
+      "groupId" : 2331373580117892
+    }
+  ] ,
+  "subject" : "My new Smartsheet" ,
+  "message" : "I have shared a Smartsheet with you. Please review it for the latest updates" ,
+  "accessLevel" : "ADMIN" ,
+  "ccMe" : false
+}

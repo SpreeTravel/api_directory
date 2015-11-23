@@ -1,0 +1,10 @@
+{
+  "data": {
+    "share_metrics": 17,
+    "tz_offset": -4,
+    "unit": "day",
+    "units": -1
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

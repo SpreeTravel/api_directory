@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+		"body-log-weight": 
+			{
+				"properties": {
+					"dateTime": {
+						"type": "string"
+					},
+					"value": {
+						"type": "integer"
+					}
+				},
+				"type": "object"
+			}
+		
+	}
+}

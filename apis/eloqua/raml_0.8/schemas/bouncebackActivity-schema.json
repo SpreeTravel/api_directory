@@ -1,0 +1,47 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "smtpErrorCode" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "smtpStatusCode" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "smtpMessage" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "emailId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "emailName" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "emailFromAddress" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "emailToAddress" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "category" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "performedAt" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

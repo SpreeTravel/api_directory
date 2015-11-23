@@ -1,0 +1,109 @@
+{
+  "data": {
+    "current_lag": 4,
+    "phrases": [
+      {
+        "N": 644933,
+        "ghashes": [
+          {
+            "ghash": "1534dqE",
+            "visitors": 214
+          },
+          {
+            "ghash": "123Tzxi",
+            "visitors": 77
+          },
+          {
+            "ghash": "YwtqHA",
+            "visitors": 53
+          },
+          {
+            "ghash": "171mi59",
+            "visitors": 52
+          },
+          {
+            "ghash": "10VIMDX",
+            "visitors": 45
+          }
+        ],
+        "mean": 0.17000000000000001,
+        "phrase": "north korea",
+        "rate": 0.29999999999999999,
+        "std": 0.041785272667362532,
+        "urls": [
+          {
+            "aggregate_url": "http://bit.ly/1534dqE",
+            "visitors": 214
+          },
+          {
+            "aggregate_url": "http://bit.ly/123Tzxi",
+            "visitors": 77
+          },
+          {
+            "aggregate_url": "http://bit.ly/YwtqHA",
+            "visitors": 53
+          },
+          {
+            "aggregate_url": "http://bit.ly/171mi59",
+            "visitors": 52
+          },
+          {
+            "aggregate_url": "http://bit.ly/10VIMDX",
+            "visitors": 45
+          }
+        ]
+      },
+      {
+        "N": 4026,
+        "ghashes": [
+          {
+            "ghash": "123InRj",
+            "visitors": 266
+          },
+          {
+            "ghash": "12VnuGK",
+            "visitors": 180
+          },
+          {
+            "ghash": "10QUZsc",
+            "visitors": 38
+          },
+          {
+            "ghash": "171cUOS",
+            "visitors": 10
+          },
+          {
+            "ghash": "17vqEEC",
+            "visitors": 8
+          }
+        ],
+        "mean": 0.01,
+        "phrase": "jackie robinson",
+        "rate": 0.16,
+        "std": 0.0042133518459201253,
+        "urls": [
+          {
+            "aggregate_url": "http://bit.ly/123InRj",
+            "visitors": 266
+          },
+          {
+            "aggregate_url": "http://bit.ly/12VnuGK",
+            "visitors": 180
+          },
+          {
+            "aggregate_url": "http://bit.ly/10QUZsc",
+            "visitors": 38
+          },
+          {
+            "aggregate_url": "http://bit.ly/171cUOS",
+            "visitors": 10
+          }
+        ]
+      }
+    ],
+    "selectivity": 3,
+    "time": 1365800585
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

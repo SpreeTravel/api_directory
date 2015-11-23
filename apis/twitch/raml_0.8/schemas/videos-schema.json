@@ -1,0 +1,96 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "_links" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "next" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "self" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "videos" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : 
+        {
+          "type" : "object" ,
+          "properties" : {
+            "recorded_at" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "preview" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "url" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "title" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "channel" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "display_name" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "length" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "game" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "views" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "_links" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "channel" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "self" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        }
+      
+    }
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "apiVersion" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "swaggerVersion" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "basePath" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "resourcePath" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "apis" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "path" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "operations" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "httpMethod" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "summary" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "notes" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "responseClass" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "nickname" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "errorResponses" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "object" ,
+                          "properties" : {
+                            "code" : {
+                              "type" : "number" ,
+                              "required" : false
+                            } ,
+                            "reason" : {
+                              "type" : "string" ,
+                              "required" : false
+                            }
+                          }
+                        }
+                      ]
+                    } ,
+                    "parameters" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "object" ,
+                          "properties" : {
+                            "name" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "description" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "paramType" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "required" : {
+                              "type" : "boolean" ,
+                              "required" : false
+                            } ,
+                            "allowMultiple" : {
+                              "type" : "boolean" ,
+                              "required" : false
+                            } ,
+                            "dataType" : {
+                              "type" : "string" ,
+                              "required" : false
+                            }
+                          }
+                        } , {
+                          "type" : "object" ,
+                          "properties" : {
+                            "name" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "description" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "paramType" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "defaultValue" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "required" : {
+                              "type" : "boolean" ,
+                              "required" : false
+                            } ,
+                            "allowMultiple" : {
+                              "type" : "boolean" ,
+                              "required" : false
+                            } ,
+                            "dataType" : {
+                              "type" : "string" ,
+                              "required" : false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    } ,
+    "models" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "Response" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "properties" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "request" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "type" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "error" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "type" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "delayIndexes" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "items" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "$ref" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "type" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2280 @@
+#%RAML 0.8
+title: Twilio API
+version: 2010-04-01
+baseUri: https://api.twilio.com/{version}
+securitySchemes:
+  - basic: !include securitySchemes/basic.raml
+schemas:
+  - accounts: !include schemas/accounts-schema.json
+  - account: !include schemas/account-schema.json
+  - notifications: !include schemas/notifications-schema.json
+  - notification: !include schemas/notification-schema.json
+  - appResources: !include schemas/appResources-schema.json
+  - appResource: !include schemas/appResource-schema.json
+  - application: !include schemas/application-schema.json
+  - application-xml: !include schemas/application-xml-schema.xsd
+  - applications: !include schemas/applications-schema.json
+  - applications-xml: !include schemas/applications-xml-schema.xsd
+  - incomingCalls: !include schemas/incomingCalls-schema.json
+  - incomingCall: !include schemas/incomingCall-schema.json
+  - call: !include schemas/call-schema.json
+  - callInstance: !include schemas/callInstance-schema.json
+  - callInstance-xml: !include schemas/callInstance-xml-schema.xsd
+  - recordings: !include schemas/recordings-schema.json
+  - transcription: !include schemas/transcription-schema.json
+  - conferences: !include schemas/conferences-schema.json
+  - conference: !include schemas/conference-schema.json
+  - conference-xml: !include schemas/conference-xml-schema.xsd
+  - participants-xml: !include schemas/participants-xml-schema.xsd
+  - participants: !include schemas/participants-schema.json
+  - participant: !include schemas/participant-schema.json
+  - authApps: !include schemas/authApps-schema.json
+  - authApp: !include schemas/authApp-schema.json
+  - usageTriggers: !include schemas/usageTriggers-schema.json
+  - usageTrigger: !include schemas/usageTrigger-schema.json
+  - usageRecords: !include schemas/usageRecords-schema.json
+  - phoneNumbers: !include schemas/phoneNumbers-schema.json
+  - connectApps: !include schemas/connectApps-schema.json
+  - connectApp: !include schemas/connectApp-schema.json
+  - queues: !include schemas/queues-schema.json
+  - queue: !include schemas/queue-schema.json
+  - members: !include schemas/members-schema.json
+  - member: !include schemas/member-schema.json
+  - outCallerId: !include schemas/outCallerId-schema.json
+  - outCallerId-xml: !include schemas/outCallerId-xml-schema.xsd
+  - outCallerIds: !include schemas/outCallerIds-schema.json
+  - outCaller: !include schemas/outCaller-schema.json
+  - outgoingCallerId: !include schemas/outgoingCallerId-schema.json
+  - credentials: !include schemas/credentials-schema.json
+  - userLists: !include schemas/userLists-schema.json
+  - domain: !include schemas/domain-schema.json
+  - ipAccessControlList: !include schemas/ipAccessControlList-schema.json
+  - ipAccessControlList-xml: !include schemas/ipAccessControlList-xml-schema.xsd
+  - ipAccessControlListMappings: !include schemas/ipAccessControlListMappings-schema.json
+  - mobilePhoneNumbers: !include schemas/mobilePhoneNumbers-schema.json
+  - calls: !include schemas/calls-schema.json
+  - media: !include schemas/media-schema.json
+  - message: !include schemas/message-schema.json
+  - messages: !include schemas/messages-schema.json
+  - ipAccessControlListMapping: !include schemas/ipAccessControlListMapping-schema.json
+  - domains: !include schemas/domains-schema.json
+  - phoneTollFreeNumbers: !include schemas/phoneTollFreeNumbers-schema.json
+  - phoneMobileNumbers: !include schemas/phoneMobileNumbers-schema.json
+  - phoneLocalNumbers: !include schemas/phoneLocalNumbers-schema.json
+  - shortCode: !include schemas/shortCode-schema.json
+  - shortCodes: !include schemas/shortCodes-schema.json
+  - transcriptions: !include schemas/transcriptions-schema.json
+  - credentialListMappings: !include schemas/credentialListMappings-schema.json
+  - credentialListMapping: !include schemas/credentialListMapping-schema.json
+  - ipAddresses: !include schemas/ipAddresses-schema.json
+  - ipAddress: !include schemas/ipAddress-schema.json
+  - ipAddress-xml: !include schemas/ipAddress-xml-schema.xsd
+  - credentialLists: !include schemas/credentialLists-schema.json
+  - credentialList: !include schemas/credentialList-schema.json
+  - credential: !include schemas/credential-schema.json
+  - mediaList: !include schemas/mediaList-schema.json
+  - appResource-xml: !include schemas/appResource-xml-schema.xsd
+  - appResources-xml: !include schemas/appResources-xml-schema.xsd
+  - authApp-xml: !include schemas/authApp-xml-schema.xsd
+  - authApps-xml: !include schemas/authApps-xml-schema.xsd
+  - phoneLocalNumbers-xml: !include schemas/phoneLocalNumbers-xml-schema.xsd
+  - phoneMobileNumbers-xml: !include schemas/phoneMobileNumbers-xml-schema.xsd
+  - phoneTollFreeNumbers-xml: !include schemas/phoneTollFreeNumbers-xml-schema.xsd
+  - recordings-xml: !include schemas/recordings-xml-schema.xsd
+  - notifications-xml: !include schemas/notifications-xml-schema.xsd
+  - call-xml: !include schemas/call-xml-schema.xsd
+  - calls-xml: !include schemas/calls-xml-schema.xsd
+  - participant-xml: !include schemas/participant-xml-schema.xsd
+  - conferences-xml: !include schemas/conferences-xml-schema.xsd
+  - connectApp-xml: !include schemas/connectApp-xml-schema.xsd
+  - connectApps-xml: !include schemas/connectApps-xml-schema.xsd
+  - incomingCall-xml: !include schemas/incomingCall-xml-schema.xsd
+  - media-xml: !include schemas/media-xml-schema.xsd
+  - mediaList-xml: !include schemas/mediaList-xml-schema.xsd
+  - message-xml: !include schemas/message-xml-schema.xsd
+  - messages-xml: !include schemas/messages-xml-schema.xsd
+  - notification-xml: !include schemas/notification-xml-schema.xsd
+  - outgoingCallerId-xml: !include schemas/outgoingCallerId-xml-schema.xsd
+  - outCallerIds-xml: !include schemas/outCallerIds-xml-schema.xsd
+  - outCaller-xml: !include schemas/outCaller-xml-schema.xsd
+  - member-xml: !include schemas/member-xml-schema.xsd
+  - members-xml: !include schemas/members-xml-schema.xsd
+  - queue-xml: !include schemas/queue-xml-schema.xsd
+  - queues-xml: !include schemas/queues-xml-schema.xsd
+  - transcriptions-xml: !include schemas/transcriptions-xml-schema.xsd
+  - recording-xml: !include schemas/recording-xml-schema.xsd
+  - credential-xml: !include schemas/credential-xml-schema.xsd
+  - credentials-xml: !include schemas/credentials-xml-schema.xsd
+  - credentialList-xml: !include schemas/credentialList-xml-schema.xsd
+  - credentialLists-xml: !include schemas/credentialLists-xml-schema.xsd
+  - credentialListMappings-xml: !include schemas/credentialListMappings-xml-schema.xsd
+  - credentialListMapping-xml: !include schemas/credentialListMapping-xml-schema.xsd
+  - ipAccessControlListMapping-xml: !include schemas/ipAccessControlListMapping-xml-schema.xsd
+  - domain-xml: !include schemas/domain-xml-schema.xsd
+  - domains-xml: !include schemas/domains-xml-schema.xsd
+  - ipAddresses-xml: !include schemas/ipAddresses-xml-schema.xsd
+  - shortCode-xml: !include schemas/shortCode-xml-schema.xsd
+  - shortCodes-xml: !include schemas/shortCodes-xml-schema.xsd
+  - transcription-xml: !include schemas/transcription-xml-schema.xsd
+  - usageRecords-xml: !include schemas/usageRecords-xml-schema.xsd
+  - usageTrigger-xml: !include schemas/usageTrigger-xml-schema.xsd
+  - usageTriggers-xml: !include schemas/usageTriggers-xml-schema.xsd
+  - account-xml: !include schemas/account-xml-schema.xsd
+  - accounts-xml: !include schemas/accounts-xml-schema.xsd
+  - incomingCalls-xml: !include schemas/incomingCalls-xml-schema.xsd
+  - ipAccessControlListMappings-xml: !include schemas/ipAccessControlListMappings-xml-schema.xsd
+  - availablePhoneNumbers: !include schemas/availablePhoneNumbers-schema.json
+  - availablePhoneNumbers-xml: !include schemas/availablePhoneNumbers-xml-schema.xsd
+resourceTypes:
+  - collectionMember: !include resourceTypes/collectionMember.raml
+  - mediaTypeExt: !include resourceTypes/mediaTypeExt.raml
+  - base: !include resourceTypes/base.raml
+  - collection: !include resourceTypes/collection.raml
+traits:
+  - customizable: !include traits/customizable.raml
+  - filterableByDate: !include traits/filterableByDate.raml
+  - credential: !include traits/credential.raml
+securedBy: [ basic ]
+/Accounts{mediaTypeExtension}: 
+  type: { collection: { type: account } }
+  get: 
+    description: |
+      Retrieve a list of the Account resources belonging to the account used to make the
+      API request. This list will include that Account as well.
+    body: 
+      application/x-www-form-urlencoded: 
+        formParameters: 
+          FriendlyName: 
+            description: |
+              Only return the Account resources with friendly names that exactly match this name.
+          Status: 
+            description: |
+              Only return Account resources with the given status. Can be closed, suspended or active.
+            enum: 
+              - closed
+              - suspended
+              - active
+    responses: 
+      200: 
+        body: 
+          application/xml: 
+            example: !include examples/accounts-xml-example.xml
+          application/json: 
+            example: !include examples/accounts-example.json
+  post: 
+    description: |
+      Create a new Account instance resource as a subaccount of the one used to make the request. See
+      Creating Subaccounts for more information.
+    body: 
+      application/x-www-form-urlencoded: 
+        formParameters: 
+          FriendlyName: 
+            description: |
+              A human readable description of the new subaccount, up to 64 characters. Defaults
+              to "SubAccount Created at {YYYY-MM-DD HH:MM meridian}".
+    responses: 
+      201: 
+        body: 
+          application/xml: 
+            example: !include examples/account-xml-example.xml
+          application/json: 
+            example: !include examples/account-example.json
+/Accounts: 
+  /{AccountSid}{mediaTypeExtension}: 
+    type: { collectionMember: { type: account } }
+    uriParameters: 
+      AccountSid: 
+        description: A 34 character string that uniquely identifies this account.
+        minLength: 34
+        maxLength: 34
+    get: 
+      description: Returns a representation of an account.
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              example: !include examples/account-xml-example.xml
+            application/json: 
+              example: !include examples/account-example.json
+    post: 
+      description: Allows you to modify the properties of an account.
+      body: 
+        application/x-www-form-urlencoded: 
+          formParameters: 
+            FriendlyName: 
+              description: Update the human-readable description of this account.
+            Status: 
+              description: |
+                Alter the status of this account: use closed to irreversibly close this account,
+                suspended to temporarily suspend it, or active to reactivate it.
+              enum: 
+                - closed
+                - suspended
+                - active
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              example: !include examples/account-xml-example.xml
+            application/json: 
+              example: !include examples/account-example.json
+    put: 
+      description: Allows you to modify the properties of an account.
+      body: 
+        application/x-www-form-urlencoded: 
+          formParameters: 
+            FriendlyName: 
+              description: Update the human-readable description of this account.
+            Status: 
+              description: |
+                Alter the status of this account: use closed to irreversibly close this account,
+                suspended to temporarily suspend it, or active to reactivate it.
+              enum: 
+                - closed
+                - suspended
+                - active
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              example: !include examples/account-xml-example.xml
+            application/json: 
+              example: !include examples/account-example.json
+  /{AccountSid}: 
+    /SMS: 
+      /ShortCodes{mediaTypeExtension}: 
+        type: { collection: { type: shortCode } }
+        get: 
+          description: |
+            Returns a list of ShortCode resource representations, each representing a
+            short code within your account. The list includes paging information.
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                ShortCode: 
+                  description: |
+                    Only show the ShortCode resources that match this pattern. You can
+                    specify partial numbers and use "*" as a wildcard for any digit.
+                FriendlyName: 
+                  description: |
+                    Only show the ShortCode resources with friendly names that exactly match
+                    this name.
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/shortCodes-xml-example.xml
+                application/json: 
+                  example: !include examples/shortCodes-example.json
+      /ShortCodes/{ShortCodeSid}{mediaTypeExtension}: 
+        type: { collectionMember: { type: shortCode } }
+        get: 
+          description: Get a single message.
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/shortCode-xml-example.xml
+                application/json: 
+                  example: !include examples/shortCode-example.json
+        post: 
+          description: |
+            Tries to update the shortcode's properties, and returns the updated
+            resource representation if successful.
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                FriendlyName: 
+                  description: |
+                    A human readable description of the short code, with maximum
+                    length 64 characters.
+                  maxLength: 64
+                ApiVersion: 
+                  description: |
+                    SMSs to this short code will start a new TwiML session with this
+                    API version. Either 2010-04-01 or 2008-08-01.
+                  enum: [ 2010-04-01 , 2008-08-01 ]
+                SmsUrl: 
+                  description: |
+                    The URL that Twilio should request when somebody sends an SMS to
+                    the short code.
+                SmsMethod: 
+                  description: |
+                    The HTTP method that should be used to request the SmsUrl. Either
+                    GET or POST.
+                  enum: [ GET , POST ]
+                SmsFallbackUrl: 
+                  description: |
+                    A URL that Twilio will request if an error occurs requesting or
+                    executing the TwiML at the SmsUrl.
+                SmsFallbackMethod: 
+                  description: |
+                    The HTTP method that should be used to request the SmsUrl. Either
+                    GET or POST.
+                  enum: [ GET , POST ]
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/shortCode-xml-example.xml
+                application/json: 
+                  example: !include examples/shortCode-example.json
+    /Notifications{mediaTypeExtension}: 
+      type: { collection: { type: notification } }
+      get: 
+        description: |
+          Returns a list of notifications generated for an account. The list includes
+          paging information.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              Log: 
+                description: |
+                  Only show notifications for this log, using the integer log values
+                  shown above.
+              MessageDate: 
+                description: |
+                  Only show notifications for this date. Should be formatted as YYYY-MM-DD.
+                  You can also specify inequality, such as MessageDate<=YYYY-MM-DD for
+                  messages logged at or before midnight on a date, and MessageDate>=YYYY-MM-DD
+                  for messages logged at or after midnight on a date.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                example: !include examples/notifications-xml-example.xml
+              application/json: 
+                example: !include examples/notifications-example.json
+    /Notifications/{NotificationSid}{mediaTypeExtension}: 
+      type: { collectionMember: { type: notification } }
+      get: 
+        description: Get a notification entry.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                example: !include examples/notification-xml-example.xml
+              application/json: 
+                example: !include examples/notification-example.json
+      delete: 
+        description: |
+          Deletes the notification identified by {NotificationSid} from an account's log.
+        responses: 
+          204: 
+            description: Notification removed.
+    /Applications{mediaTypeExtension}: 
+      type: { collection: { type: application } }
+      get: 
+        description: |
+          Returns a list of Application resource representations, each representing
+          an application within your account. The list includes paging information.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              FriendlyName: 
+                description: |
+                  Only return the Application resources with friendly names that exactly
+                  match this name.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                example: !include examples/applications-xml-example.xml
+              application/json: 
+                example: !include examples/applications-example.json
+      post: 
+        is: [ customizable ]
+        description: Creates a new application within your account.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              FriendlyName: 
+                description: |
+                  A human readable description of the application, with maximum
+                  length 64 characters.
+                required: true
+                maxLength: 64
+        responses: 
+          201: 
+            body: 
+              application/xml: 
+                example: !include examples/application-xml-example.xml
+              application/json: 
+                example: !include examples/application-example.json
+    /Applications/{ApplicationSid}{mediaTypeExtension}: 
+      type: { collectionMember: { type: application } }
+      get: 
+        description: Get application instance resource.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                example: !include examples/application-xml-example.xml
+              application/json: 
+                example: !include examples/application-example.json
+      post: 
+        is: [ customizable ]
+        description: |
+          Tries to update the application's properties, and returns the updated
+          resource representation if successful. The returned response is identical
+          to that returned above when making a GET request.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              FriendlyName: 
+                description: |
+                  A human readable description of the application, with maximum
+                  length 64 characters.
+                maxLength: 64
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                example: !include examples/application-xml-example.xml
+              application/json: 
+                example: !include examples/application-example.json
+      delete: 
+        description: Delete this application.
+        responses: 
+          204: 
+            description: Application deleted.
+    /IncomingPhoneNumbers{mediaTypeExtension}: 
+      type: { collection: { type: incomingCall } }
+      get: 
+        description: |
+          Returns a list of IncomingPhoneNumber resource representations, each
+          representing a phone number given to your account. The list includes paging
+          information.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              PhoneNumber: 
+                description: |
+                  Only show the incoming phone number resources that match this pattern.
+                  You can specify partial numbers and use "*" as a wildcard for any digit.
+              FriendlyName: 
+                description: |
+                  Only show the incoming phone number resources with friendly names tha
+                  exactly match this name.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                example: !include examples/incomingCalls-xml-example.xml
+              application/json: 
+                example: !include examples/incomingCalls-example.json
+      post: 
+        is: [ customizable ]
+        description: |
+          Purchases a new phone number for your account. If a phone number is found
+          for your request, Twilio will add it to your account and bill you for the
+          first month's cost of the phone number.
+          To find an available phone number to POST, use the subresources of the
+          AvailablePhoneNumbers list resource.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              PhoneNumber: 
+                description: |
+                  The phone number you want to purchase. The number should be formatted
+                  starting with a '+' followed by the country code and the number in
+                  E.164 format e.g., '+15105555555'. You must include either this or
+                  an AreaCode parameter to have your POST succeed.
+                required: true
+              AreaCode: 
+                description: |
+                  The desired area code for your new incoming phone number. Any three
+                  digit, US or Canada area code is valid. Twilio will provision a random
+                  phone number within this area code for you. You must include either
+                  this or a PhoneNumber parameter to have your POST succeed. (US and
+                  Canada only)
+                required: true
+              FriendlyName: 
+                description: |
+                  A human readable description of the new incoming phone number. Maximum
+                  64 characters. Defaults to a formatted version of the number.
+                maxLength: 64
+              VoiceApplicationSid: 
+                description: |
+                  The 34 character sid of the application Twilio should use to handle phone calls to the new number.
+                  If a VoiceApplicationSid is present, Twilio will ignore all of the voice urls above and use those set on the application.
+        responses: 
+          400: 
+            description: If Twilio cannot find a phone number to match your request, you will receive an HTTP 400 with Twilio error code 21452.
+          201: 
+            body: 
+              application/xml: 
+                example: !include examples/incomingCall-xml-example.xml
+              application/json: 
+                example: !include examples/incomingCall-example.json
+    /IncomingPhoneNumbers: 
+      /{IncomingPhoneNumberSid}{mediaTypeExtension}: 
+        type: { collectionMember: { type: incomingCall } }
+        get: 
+          description: "Get info about incoming call's phone number."
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/incomingCall-xml-example.xml
+                application/json: 
+                  example: !include examples/incomingCall-example.json
+        post: 
+          is: [ customizable ]
+          description: |
+            Tries to update the incoming phone number's properties, and returns the
+            updated resource representation if successful. The returned response is
+            identical to that returned above when making a GET request.
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                FriendlyName: 
+                  description: |
+                    A human readable description of the new incoming phone number
+                    resource, with maximum length 64 characters.
+                VoiceApplicationSid: 
+                  description: |
+                    The 34 character sid of the application Twilio should use to handle phone calls to the new number.
+                    If a VoiceApplicationSid is present, Twilio will ignore all of the voice urls above and use those set on the application.
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/incomingCall-xml-example.xml
+                application/json: 
+                  example: !include examples/incomingCall-example.json
+        delete: 
+          description: |
+            Release this phone number from your account. Twilio will no longer answer
+            calls to this number, and you will stop being billed the monthly phone
+            number fee. The phone number will eventually be recycled and potentially
+            given to another customer, so use with care. If you make a mistake, contac
+            us. We may be able to give you the number back.
+          responses: 
+            204: 
+              description: Phone number removed.
+        put: 
+          is: [ customizable ]
+          description: |
+            Tries to update the incoming phone number's properties, and returns the
+            updated resource representation if successful. The returned response is
+            identical to that returned above when making a GET request.
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                FriendlyName: 
+                  description: |
+                    A human readable description of the new incoming phone number
+                    resource, with maximum length 64 characters.
+                VoiceApplicationSid: 
+                  description: |
+                    The 34 character sid of the application Twilio should use to handle phone calls to the new number.
+                    If a VoiceApplicationSid is present, Twilio will ignore all of the voice urls above and use those set on the application.
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/incomingCall-xml-example.xml
+                application/json: 
+                  example: !include examples/incomingCall-example.json
+      /Local{mediaTypeExtension}: 
+        get: 
+          description: Returns a list of local <IncomingPhoneNumber> elements, each representing a local (not toll-free) phone number given to your account, under an <IncomingPhoneNumbers> list element that includes paging information. Works exactly the same as the IncomingPhoneNumber resource, but filters out toll-free numbers.
+          responses: 
+            200: 
+        post: 
+          is: [ customizable ]
+          description: "Adds a new phone number to your account. If a phone number is found for your request, Twilio will add it to your account and bill you for the first month's cost of the phone number. "
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                PhoneNumber: 
+                  required: true
+                  example: +15107522575
+          responses: 
+            400: 
+              description: "If Twilio can't find a phone number to match your request, you will receive an HTTP 400 with Twilio error code 21452."
+            201: 
+      /TollFree{mediaTypeExtension}: 
+        get: 
+          description: "Returns a list of local <IncomingPhoneNumber> elements, each representing a toll-free phone number given to your account, under an <IncomingPhoneNumbers> list element that includes paging information. Works exactly the same as the IncomingPhoneNumber resource, but filters out all numbers that aren't toll-free."
+          responses: 
+            200: 
+        post: 
+          is: [ customizable ]
+          description: "Adds a new phone number to your account. If a phone number is found for your request, Twilio will add it to your account and bill you for the first month's cost of the phone number. "
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                PhoneNumber: 
+                  required: true
+                  example: +15107522575
+          responses: 
+            400: 
+              description: "If Twilio can't find a phone number to match your request, you will receive an HTTP 400 with Twilio error code 21452."
+            201: 
+      /Mobile{mediaTypeExtension}: 
+        get: 
+          description: Returns a list of local <IncomingPhoneNumber> elements, each representing a mobile phone number given to your account, under an <IncomingPhoneNumbers> list element that includes paging information. Works exactly the same as the IncomingPhoneNumber resource, but filters out local and toll free numbers.
+          responses: 
+            200: 
+        post: 
+          is: [ customizable ]
+          description: "Adds a new phone number to your account. If a phone number is found for your request, Twilio will add it to your account and bill you for the first month's cost of the phone number."
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                PhoneNumber: 
+                  required: true
+                  example: +15107522575
+          responses: 
+            400: 
+              description: "If Twilio can't find a phone number to match your request, you will receive an HTTP 400 with Twilio error code 21452."
+            201: 
+    /Calls{mediaTypeExtension}: 
+      type: { collection: { type: call } }
+      post: 
+        description: To make a call, make an HTTP POST request. Initiate a new phone call.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              From: 
+                description: |
+                  The phone number or client identifier to use as the caller id. If
+                  using a phone number, it must be a Twilio number or a Verified
+                  outgoing caller id for your account.
+                  Phone numbers should be formatted with a '+' and country code e.g.,
+                  +16175551212 (E.164 format). Twilio will also accept unformatted US
+                  numbers e.g., (415) 555-1212 or 415-555-1212.
+                required: true
+              To: 
+                description: |
+                  SIP addresses must be formatted as name@example.com. For example,
+                  to dial Alice's SIP address at Example Company, the To parameter
+                  should be alice@example.com.
+                  Client identifiers must begin with the client: URI scheme. For example,
+                  to call a client named 'jenny', the To parameter should be client:jenny.
+                required: true
+              Url: 
+                description: |
+                  The fully qualified URL that should be consulted when the call connects.
+                  Just like when you set a URL on a phone number for handling inbound calls.
+              ApplicationSid: 
+                description: |
+                  The 34 character sid of the application Twilio should use to handle
+                  this phone call. If this parameter is present, Twilio will ignore all
+                  of the voice URLs passed and use the URLs set on the application.
+                minLength: 34
+                maxLength: 34
+              Method: 
+                description: |
+                  The HTTP method Twilio should use when making its request to the above
+                  Url parameter's value. Defaults to POST. If an ApplicationSid parameter
+                  is present, this parameter is ignored.
+                enum: [ GET , POST ]
+                default: POST
+              FallbackUrl: 
+                description: |
+                  A URL that Twilio will request if an error occurs requesting or
+                  executing the TwiML at Url. If an ApplicationSid parameter is present,
+                  this parameter is ignored.
+              FallbackMethod: 
+                description: |
+                  The HTTP method that Twilio should use to request the FallbackUrl.
+                  Must be either GET or POST. Defaults to POST. If an ApplicationSid
+                  parameter is present, this parameter is ignored.
+                enum: [ GET , POST ]
+                default: POST
+              StatusCallback: 
+                description: |
+                  A URL that Twilio will request when the call ends to notify your
+                  app. If an ApplicationSid parameter is present, this parameter is
+                  ignored.
+              StatusCallbackMethod: 
+                description: |
+                  The HTTP method Twilio should use when requesting the above URL.
+                  Defaults to POST. If an ApplicationSid parameter is present, this
+                  parameter is ignored.
+                enum: [ GET , POST ]
+                default: POST
+              SendDigits: 
+                description: |
+                  A string of keys to dial after connecting to the number. Valid digits
+                  in the string include: any digit (0-9), '#', "*" and 'w' (to inser
+                  a half second pause). For example, if you connected to a company
+                  phone number, and wanted to pause for one second, dial extension
+                  1234 and then the pound key, use SendDigits=ww1234#. Remember to
+                  URL-encode this string, since the '#' character has special meaning
+                  in a URL.
+              IfMachine: 
+                description: |
+                  Tell Twilio to try and determine if a machine (like voicemail) or
+                  a human has answered the call. Possible values are Continue and Hangup.
+                enum: [ Continue , Hangup ]
+              Timeout: 
+                description: |
+                  The integer number of seconds that Twilio should allow the phone to
+                  ring before assuming there is no answer. Default is 60 seconds, the
+                  maximum is 999 seconds. Note, you could set this to a low value, such
+                  as 15, to hangup before reaching an answering machine or voicemail.
+                type: integer
+              Record: 
+                description: |
+                  Set this parameter to 'true' to record the entirety of a phone call.
+                  The RecordingUrl will be sent to the StatusCallback URL.
+                type: boolean
+                default: false
+              SipAuthUsername: 
+              SipAuthPassword: 
+        responses: 
+          201: 
+            body: 
+              application/xml: 
+                example: !include examples/call-xml-example.xml
+              application/json: 
+                example: !include examples/call-example.json
+      get: 
+        description: Returns a list of phone calls made to and from the account identified by {AccountSid}.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              To: 
+                description: Only show calls to this phone number or Client identifier.
+              From: 
+                description: Only show calls from this phone number or Client identifier.
+              Status: 
+                description: Only show calls currently in this status. May be queued, ringing, in-progress, canceled, completed, failed, busy, or no-answer.
+              StartTime: 
+                description: Only show calls that started on this date, given as YYYY-MM-DD. Also supports inequalities, such as StartTime<=YYYY-MM-DD for calls that started at or before midnight on a date, and StartTime>=YYYY-MM-DD for calls that started at or after midnight on a date.
+              ParentCallSid: 
+                description: Only show calls spawned by the call with this Sid.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                example: !include examples/calls-xml-example.xml
+              application/json: 
+                example: !include examples/calls-example.json
+    /Calls: 
+      /{CallSid}{mediaTypeExtension}: 
+        type: { collectionMember: { type: callInstance } }
+        get: 
+          description: Returns the single Call resource identified by {CallSid}.
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/callInstance-xml-example.xml
+                application/json: 
+                  example: !include examples/callInstance-example.json
+        post: 
+          description: Modify a phone call.
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                Url: 
+                  description: |
+                    A valid URL that returns TwiML. Twilio will immediately redirect the
+                    call to the new TwiML.
+                  required: true
+                Method: 
+                  description: |
+                    The HTTP method Twilio should use when requesting the above URL.
+                    Defaults to POST.
+                  required: true
+                  enum: [ GET , POST ]
+                  default: POST
+                Status: 
+                  description: |
+                    Either canceled or completed. Specifying canceled will attempt to
+                    hangup calls that are queued or ringing but not affect calls already
+                    in progress. Specifying completed will attempt to hang up a call
+                    even if it's already in progress.
+                  required: true
+                  enum: [ canceled , completed ]
+                FallbackUrl: 
+                  description: |
+                    A URL that Twilio will request if an error occurs requesting or
+                    executing the TwiML at Url.
+                FallbackMethod: 
+                  description: |
+                    The HTTP method that Twilio should use to request the FallbackUrl.
+                    Must be either GET or POST. Defaults to POST.
+                  enum: [ GET , POST ]
+                  default: POST
+                StatusCallback: 
+                  description: |
+                    A URL that Twilio will request when the call ends to notify your app.
+                StatusCallbackMethod: 
+                  description: |
+                    The HTTP method Twilio should use when requesting the above URL.
+                  enum: [ GET , POST ]
+                  default: POST
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/callInstance-xml-example.xml
+                application/json: 
+                  example: !include examples/callInstance-example.json
+      /{CallSid}: 
+        /Recordings{mediaTypeExtension}: 
+          type: { collection: { type: recording } }
+          get: 
+            is: [ filterableByDate: { type: recording } ]
+            description: |
+              Returns a list of Recording resource representations, each representing a
+              recording generated during the course of a phone call.
+            body: 
+              application/x-www-form-urlencoded: 
+                formParameters: 
+                  CallSid: 
+                    description: Show only recordings made during the call given by this sid.
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    example: !include examples/recordings-xml-example.xml
+                  application/json: 
+                    example: !include examples/recordings-example.json
+        /Notifications{mediaTypeExtension}: 
+          type: { collection: { type: notification } }
+          get: 
+            description: |
+              Returns a list of notifications generated for an account. The list includes
+              paging information.
+            body: 
+              application/x-www-form-urlencoded: 
+                formParameters: 
+                  Log: 
+                    description: |
+                      Only show notifications for this log, using the integer log values
+                      shown above.
+                  MessageDate: 
+                    description: |
+                      Only show notifications for this date. Should be formatted as YYYY-MM-DD.
+                      You can also specify inequality, such as MessageDate<=YYYY-MM-DD for
+                      messages logged at or before midnight on a date, and MessageDate>=YYYY-MM-DD
+                      for messages logged at or after midnight on a date.
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    example: !include examples/notifications-xml-example.xml
+                  application/json: 
+                    example: !include examples/notifications-example.json
+    /Conferences{mediaTypeExtension}: 
+      type: { collection: { type: conference } }
+      get: 
+        is: [ filterableByDate: { type: conference } ]
+        description: |
+          Returns a list of conferences within an account. The list includes paging
+          information.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              Status: 
+                description: |
+                  Only show conferences currently in with this status. May be init,
+                  in-progress, or completed.
+                enum: 
+                  - ini
+                  - in-progress
+                  - completed
+              FriendlyName: 
+                description: |
+                  List conferences whose FriendlyName exactly matches this string.
+              DateUpdated: 
+                description: |
+                  Only show items that were last updated on this date, given as
+                  YYYY-MM-DD. You can also specify inequality, such as
+                  DateUpdated<=YYYY-MM-DD for items that were last updated at or
+                  before midnight on a date, and DateUpdated>=YYYY-MM-DD for items
+                  that were updated at or after midnight on a date.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                example: !include examples/conferences-xml-example.xml
+              application/json: 
+                example: !include examples/conferences-example.json
+    /Conferences: 
+      /{ConferenceSid}{mediaTypeExtension}: 
+        type: { collectionMember: { type: conference } }
+        get: 
+          description: |
+            Returns a representation of the conference identified by {ConferenceSid}.
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/conference-xml-example.xml
+                application/json: 
+                  example: !include examples/conference-example.json
+      /{ConferenceSid}: 
+        /Participants{mediaTypeExtension}: 
+          type: { collection: { type: participant } }
+          get: 
+            description: |
+              Returns the list of participants in the conference identified by
+              {ConferenceSid}.
+            body: 
+              application/x-www-form-urlencoded: 
+                formParameters: 
+                  Muted: 
+                    description: Only show participants that are muted or unmuted.
+                    type: boolean
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    example: !include examples/participants-xml-example.xml
+                  application/json: 
+                    example: !include examples/participants-example.json
+        /Participants/{CallSid}{mediaTypeExtension}: 
+          type: { collectionMember: { type: participant } }
+          get: 
+            description: Returns a representation of this participant.
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    example: !include examples/participant-xml-example.xml
+                  application/json: 
+                    example: !include examples/participant-example.json
+          post: 
+            description: Updates the status of a participant.
+            body: 
+              application/x-www-form-urlencoded: 
+                formParameters: 
+                  Muted: 
+                    description: |
+                      Specifying true will mute the participant, while false will un-mute.
+                      Anything other than true or false is interpreted as false.
+                    type: boolean
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    example: !include examples/participant-xml-example.xml
+                  application/json: 
+                    example: !include examples/participant-example.json
+          delete: 
+            description: Kick this participant from the conference.
+            responses: 
+              204: 
+                description: Participant was successfully booted from the conference.
+    /AuthorizedConnectApps{mediaTypeExtension}: 
+      type: { collection: { type: authApp } }
+      get: 
+        description: |
+          Returns a list of Connect App resource representations, each representing a
+          Connect App you've authorized to access your account. The list includes
+          paging information.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                example: !include examples/authApps-xml-example.xml
+              application/json: 
+                example: !include examples/authApps-example.json
+    /AuthorizedConnectApps/{ConnectAppSid}{mediaTypeExtension}: 
+      type: { collectionMember: { type: authApp } }
+      get: 
+        description: Get the properties of the authorized application.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                example: !include examples/authApp-xml-example.xml
+              application/json: 
+                example: !include examples/authApp-example.json
+    /Recordings{mediaTypeExtension}: 
+      type: { collection: { type: recording } }
+      get: 
+        is: [ filterableByDate: { type: recording } ]
+        description: |
+          Returns a list of Recording resource representations, each representing a
+          recording generated during the course of a phone call.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              CallSid: 
+                description: Show only recordings made during the call given by this sid.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                example: !include examples/recordings-xml-example.xml
+              application/json: 
+                example: !include examples/recordings-example.json
+    /Usage: 
+      /Triggers{mediaTypeExtension}: 
+        type: { collection: { type: usageTrigger } }
+        get: 
+          description: |
+            Returns a list of UsageTrigger resource representations. The list includes
+            paging information.
+            By default, all UsageTriggers are returned. You can filter the list by
+            specifying one or more query parameters. Note that the query parameters are
+            case-sensitive
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                Recurring: 
+                  description: |
+                    Only show UsageTriggers that count over this interval. One of daily,
+                    monthly, or yearly. To retrieve non-recurring triggers, leave this empty
+                    or use alltime.
+                UsageCategory: 
+                  description: |
+                    Only show UsageTriggers that watch this usage category. Must be one of
+                    the supported usage categories.
+                TriggerBy: 
+                  description: |
+                    Only show UsageTriggers that trigger by this field in the UsageRecord.
+                    Must be one of: count, usage, or price as described in the UsageRecords
+                    documentation.
+                  enum: 
+                    - coun
+                    - usage
+                    - price
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/usageTriggers-xml-example.xml
+                application/json: 
+                  example: !include examples/usageTriggers-example.json
+        post: 
+          description: |
+            Creates a new UsageTrigger. Each account can create up to 1,000 UsageTriggers.
+            Currently, UsageTriggers that are no longer active are not deleted automatically.
+            Use DELETE to delete triggers you no longer need.
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                UsageCategory: 
+                  description: |
+                    The trigger will watch this usage category. One of the supported usage
+                    categories.
+                  required: true
+                TriggerValue: 
+                  description: |
+                    The trigger will fire when usage reaches this value. For convenience,
+                    you can use an offset like +30, which tells Twilio to create the
+                    UsageTrigger with its TriggerValue 30 units higher than the curren
+                    usage. (just be sure to urlencode the + as %2B).
+                  required: true
+                CallbackUrl: 
+                  description: |
+                    Twilio will make a request to this url when the trigger fires.
+                  required: true
+                FriendlyName: 
+                  description: |
+                    A human readable description of the new trigger. Maximum 64 characters.
+                TriggerBy: 
+                  description: |
+                    The field in the UsageRecord that will fire the trigger. One of count,
+                    usage, or price as described in the UsageRecords documentation. The
+                    default is usage.
+                  enum: 
+                    - coun
+                    - usage
+                    - price
+                  default: usage
+                Recurring: 
+                  description: |
+                    To make a recurring trigger that counts over its recurring interval,
+                    set this to one of: daily, monthly, or yearly. Omit this to create a
+                    non-recurring trigger.
+                CallbackMethod: 
+                  description: |
+                    Twilio will use this HTTP method when making a request to the CallbackUrl.
+                    GET or POST. The default is POST.
+                  enum: [ GET , POST ]
+          responses: 
+            201: 
+              body: 
+                application/xml: 
+                  example: !include examples/usageTrigger-xml-example.xml
+                application/json: 
+                  example: !include examples/usageTrigger-example.json
+      /Triggers/{UsageTriggerSid}{mediaTypeExtension}: 
+        type: { collectionMember: { type: usageTrigger } }
+        get: 
+          description: Returns a repesentation of the UsageTrigger.
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/usageTrigger-xml-example.xml
+                application/json: 
+                  example: !include examples/usageTrigger-example.json
+        post: 
+          description: |
+            Tries to update the UsageTrigger's properties, and returns the updated
+            resource representation if successful.
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                FriendlyName: 
+                  description: A human-readable name for the trigger.
+                CallbackUrl: 
+                  description: |
+                    Twilio will make a request to this url when the trigger fires.
+                CallbackMethod: 
+                  description: |
+                    The HTTP method Twilio will use when making a request to the
+                    CallbackUrl. GET or POST.
+                  enum: [ GET , POST ]
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/usageTrigger-xml-example.xml
+                application/json: 
+                  example: !include examples/usageTrigger-example.json
+        delete: 
+          description: Delete this UsageTrigger.
+          responses: 
+            204: 
+              description: UsageTrigger was deleted.
+      /Records{mediaTypeExtension}: 
+        type: { collection: { type: usageRecord } }
+        get: 
+          description: |
+            Returns UsageRecords for all usage categories. The list includes paging
+            information.
+            By default, the UsageRecords resource will return one UsageRecord for
+            each Category, representing all usage accrued all-time for the account.
+            You can filter the usage Category or change the date-range over which usage
+            is counted using optional GET query parameters.
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                Category: 
+                  description: |
+                    Only include usage of this usage category.
+                    
+                    The full list of supported usage categories are:
+                    |Category|Description|
+                    |---|---|
+                    |calls|All voice calls, inbound & outbound. Count is the number of calls and Usage is the number of minutes.|
+                    |calls-inbound|All inbound voice calls, to both toll-free and local numbers.|
+                    |calls-inbound-local|All inbound voice calls to local numbers.|
+                    |calls-inbound-tollfree|All inbound voice calls to toll-free numbers.|
+                    |calls-outbound|All outbound voice calls.|
+                    |calls-client|All TwilioClient voice calls.|
+                    |calls-sip|ll SIP calls.|
+                    |sms|All SMS messages, both inbound and outbound. Count and Usage are both the number of messages sent.|
+                    |sms-inbound|All inbound SMS messages, to both short-codes and long-codes.|
+                    |sms-inbound-shortcode|All inbound SMS messages to short-codes.|
+                    |sms-inbound-longcode|All inbound SMS messages to long-codes.|
+                    |sms-outbound|All outbound SMS messages, from both short-codes and long-codes.|
+                    |sms-outbound-shortcode|All outbound SMS messages from short-codes.|
+                    |sms-outbound-longcode|All outbound SMS messages from long-codes.|
+                    |phonenumbers|All phone numbers owned by the account, toll-free and local.|
+                    |phonenumbers-tollfree|All toll-free phone numbers owned by the account.|
+                    |phonenumbers-local|All local phone numbers owned by the account.|
+                    |shortcodes|All ShortCodes owned by the account, of all types.|
+                    |shortcodes-vanity|All vanity ShortCodes owned by the account.|
+                    |shortcodes-random|All randomly-assigned ShortCodes owned by the account.|
+                    |shortcodes-customerowned|All ShortCodes owned by the account that are leased from another provider.|
+                    |calleridlookups|CallerID (CallerName) lookups.|
+                    |recordings|Recordings of voice calls. Count is the number of recordings and Usage is the number of recorded minutes. Note that Twilio doesn't charge for making recordings (only storing them long term) so Price will always be 0.|
+                    |transcriptions|Transcriptions of voice calls. Count is the number of transcriptions and Usage is the number of transcribed minutes.|
+                    |recordingstorage|Amount of storage used by call recordings stored for the account. Count is the number of stored recordings, Usage is the number of stored recorded minutes, and Price is the price of storing the recordings.|
+                    |totalprice|Total price of all usage. Usage will be the same as Price, and Count will be empty. Note that because some Twilio costs may not be included in any usage category, the sum of the Price in all UsageRecords may or may not be equal to the Price of TotalPrice.|
+                  enum: 
+                    - calls
+                    - calls-inbound
+                    - calls-inbound-local
+                    - calls-inbound-tollfree
+                    - calls-outbound
+                    - calls-client
+                    - calls-sip
+                    - sms
+                    - sms-inbound
+                    - sms-inbound-shortcode
+                    - sms-inbound-longcode
+                    - sms-outbound
+                    - sms-outbound-shortcode
+                    - sms-outbound-longcode
+                    - phonenumbers
+                    - phonenumbers-tollfree
+                    - phonenumbers-local
+                    - shortcodes
+                    - shortcodes-vanity
+                    - shortcodes-random
+                    - shortcodes-customerowned
+                    - calleridlookups
+                    - recordings
+                    - transcriptions
+                    - recordingstorage
+                    - totalprice
+                StartDate: 
+                  description: |
+                    Only include usage that has occurred on or after this date. Format is
+                    YYYY-MM-DD. All dates are in GMT. As a convenience, you can also specify
+                    offsets to today. For example, StartDate=-30days will make StartDate
+                    be 30 days before today.
+                EndDate: 
+                  description: |
+                    Only include usage that has occurred on or before this date. Format is
+                    YYYY-MM-DD. All dates are in GMT. As a convenience, you can also specify
+                    offsets to today. For example, EndDate=+30days will make EndDate be 30
+                    days from today.
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/usageRecords-xml-example.xml
+                application/json: 
+                  example: !include examples/usageRecords-example.json
+      /Records/{Subresource}{mediaTypeExtension}: 
+        type: { collection: { type: usageRecord } }
+        uriParameters: 
+          Subresource: 
+            description: |
+              |Subresource|Description|
+              |---|---|
+              |Daily|Return multiple UsageRecords for each usage category, each representing usage over a daily time-interval.|
+              |Monthly|Return multiple UsageRecords for each usage category, each representing usage over a monthly time-interval.|
+              |Yearly|Return multple UsageRecords for each usage category, each representing usage over a yearly time-interval.|
+              |AllTime|  Return a single UsageRecord for each usage category, each representing usage over the date-range specified. This is the same as the root /Usage/Records.|
+              |Today|Return a single UsageRecord per usage category, for today's usage only.|
+              ||Yesterday|Return a single UsageRecord per usage category, for yesterday's usage only.|
+              |ThisMonth|Return a single UsageRecord per usage category, for this month's usage only.|
+              |LastMonth|Return a single UsageRecord per usage category, for last month's usage only.|
+            enum: 
+              - Daily
+              - Monthly
+              - Yearly
+              - AllTime
+              - Today
+              - Yesterday
+              - ThisMonth
+              - LastMonth
+        get: 
+          description: |
+            Returns UsageRecords for all usage categories for a specified period.
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/usageRecords-xml-example.xml
+                application/json: 
+                  example: !include examples/usageRecords-example.json
+    /ConnectApps{mediaTypeExtension}: 
+      type: { collection: { type: connectApp } }
+      get: 
+        description: |
+          Returns a list of Connect App resource representations, each representing
+          a Connect App in your account. The list includes paging information.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                example: !include examples/connectApps-xml-example.xml
+              application/json: 
+                example: !include examples/connectApps-example.json
+    /ConnectApps/{ConnectAppSid}{mediaTypeExtension}: 
+      type: { collectionMember: { type: connectApp } }
+      get: 
+        description: Get the properties of a Connect App.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                example: !include examples/connectApp-xml-example.xml
+              application/json: 
+                example: !include examples/connectApp-example.json
+      post: 
+        description: |
+          Tries to update the Connect App's properties, and returns the updated
+          resource representation if successful. The returned response is identical
+          to that returned above when making a GET request.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              FriendlyName: 
+                description: Update the human-readable description of this account.
+                maxLength: 64
+              AuthorizeRedirectUrl: 
+                description: |
+                  The URL the user's browser will redirect to after Twilio
+                  authenticates the user and obtains authorization for this Connec
+                  App.
+              DeauthorizeCallbackUrl: 
+                description: |
+                  The URL to which Twilio will send a request when a user de-authorizes
+                  this Connect App.
+              DeauthorizeCallbackMethod: 
+                description: |
+                  The HTTP method to be used when making a request to the
+                  DeauthorizeCallbackUrl. Either GET or POST.
+                enum: [ GET , POST ]
+              Permissions: 
+                description: |
+                  A comma-separated list of permssions you will request from users
+                  of this ConnectApp. Valid permssions are get-all or post-all.
+                enum: [ get-all , post-all ]
+              Description: 
+                description: |
+                  A more detailed human readable description of the Connect App.
+              CompanyName: 
+                description: The company name for this Connect App.
+              HomepageUrl: 
+                description: |
+                  The public URL where users can obtain more information abou
+                  this Connect App.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                example: !include examples/connectApp-xml-example.xml
+              application/json: 
+                example: !include examples/connectApp-example.json
+    /Transcriptions{mediaTypeExtension}: 
+      type: { collection: { type: transcription } }
+      get: 
+        description: |
+          Returns a set of Transcription resource representations that includes paging
+          information.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                example: !include examples/transcriptions-xml-example.xml
+              application/json: 
+                example: !include examples/transcriptions-example.json
+    /Transcriptions/{TranscriptionSid}{mediaTypeExtension}: 
+      type: { collectionMember: { type: transcription } }
+      uriParameters: 
+        mediaTypeExtension: 
+          displayName: mediaTypeExtension
+          enum: 
+            - .txt
+            - .xml
+            - .json
+          default: .xml
+      get: 
+        description: |
+          Returns a single Transcription resource representation identified by the
+          given {TranscriptionSid}. By default Twilio will respond with the XML metadata for the Transcription. If you append ".txt" to the end of the Transcription resource's URI Twilio will just return you the transcription tex.
+        responses: 
+          200: 
+            body: 
+              application/text: 
+              application/xml: 
+                example: !include examples/transcription-xml-example.xml
+              application/json: 
+                example: !include examples/transcription-example.json
+      delete: 
+        description: Deletes a transcription from your account.
+        responses: 
+          204: 
+            description: Deletion successful.
+    /Queues{mediaTypeExtension}: 
+      type: { collection: { type: queue } }
+      get: 
+        description: |
+          Returns a list of queues within an account. The list includes paging
+          information.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                example: !include examples/queues-xml-example.xml
+              application/json: 
+                example: !include examples/queues-example.json
+      post: 
+        description: |
+          Create a new Queue resource.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              friendly_name: 
+              max_size: 
+                type: integer
+                maximum: 1000
+                default: 100
+        responses: 
+          201: 
+            body: 
+              application/xml: 
+                example: !include examples/queue-xml-example.xml
+              application/json: 
+                example: !include examples/queue-example.json
+    /Queues: 
+      /{QueueSid}{mediaTypeExtension}: 
+        type: { collectionMember: { type: queue } }
+        get: 
+          description: |
+            Get resource's individual Queue instance.
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/queue-xml-example.xml
+                application/json: 
+                  example: !include examples/queue-example.json
+        post: 
+          description: |
+            This POST request allows you to change the FriendlyName or MaxSize.
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                friendly_name: 
+                max_size: 
+                  type: integer
+                  maximum: 1000
+                  default: 100
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/queue-xml-example.xml
+                application/json: 
+                  example: !include examples/queue-example.json
+        delete: 
+          description: |
+            The DELETE method allows you to remove a Queue. Only empty queues are
+            deletable.
+          responses: 
+            204: 
+              description: Queue removed.
+      /{QueueSid}: 
+        /Members{mediaTypeExtension}: 
+          type: { collection: { type: member } }
+          get: 
+            description: Returns the list of members in the queue identified by {QueueSid}.
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    example: !include examples/members-xml-example.xml
+                  application/json: 
+                    example: !include examples/members-example.json
+        /Members: 
+          /Front{mediaTypeExtension}: 
+            type: { collectionMember: { type: member } }
+            get: 
+              description: Get a front member.
+              responses: 
+                200: 
+                  body: 
+                    application/xml: 
+                      example: !include examples/member-xml-example.xml
+                    application/json: 
+                      example: !include examples/member-example.json
+            post: 
+              description: |
+                Posting a URL and Method to a Queue instance will dequeue a member from a
+                queue and have the member's call begin executing the TwiML document at that URL
+                When dequeuing the 'Front' of the queue, the next call in the queue will be redirected.
+              body: 
+                application/x-www-form-urlencoded: 
+                  formParameters: 
+                    Url: 
+                      required: true
+              responses: 
+                400: 
+                  description: Member was already dequed.
+                200: 
+                  body: 
+                    application/xml: 
+                      example: !include examples/member-xml-example.xml
+                    application/json: 
+                      example: !include examples/member-example.json
+          /{CallSid}{mediaTypeExtension}: 
+            type: { collectionMember: { type: member } }
+            get: 
+              description: Get a specific member.
+              responses: 
+                200: 
+                  body: 
+                    application/xml: 
+                      example: !include examples/member-xml-example.xml
+                    application/json: 
+                      example: !include examples/member-example.json
+            post: 
+              description: |
+                Posting a URL and Method to a Queue instance will dequeue a member from a
+                queue and have the member's call begin executing the TwiML document at that URL
+                When redirecting a member of a queue addressed by CallSid, only the first request
+                will succeed and return a 200 response code. A second request will fail and
+                return an appropriate 400 response code.
+              body: 
+                application/x-www-form-urlencoded: 
+                  formParameters: 
+                    Url: 
+                      required: true
+              responses: 
+                400: 
+                  description: Member was already dequed.
+                200: 
+                  body: 
+                    application/xml: 
+                      example: !include examples/member-xml-example.xml
+                    application/json: 
+                      example: !include examples/member-example.json
+    /OutgoingCallerIds{mediaTypeExtension}: 
+      type: { collection: { type: outCallerId } }
+      get: 
+        description: |
+          Returns a list of OutgoingCallerId resource representations, each representing
+          a Caller ID number valid for an account. The list includes paging information.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              PhoneNumber: 
+                description: |
+                  Only show the caller id resource that exactly matches this phone number.
+              FriendlyName: 
+                description: |
+                  Only show the caller id resource that exactly matches this name.
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                example: !include examples/outCallerIds-xml-example.xml
+              application/json: 
+                example: !include examples/outCallerIds-example.json
+      post: 
+        description: Adds a new CallerID to your account.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              PhoneNumber: 
+                description: |
+                  The phone number to verify. Should be formatted with a '+' and country
+                  code e.g., +16175551212 (E.164 format). Twilio will also accep
+                  unformatted US numbers e.g., (415) 555-1212, 415-555-1212.
+                required: true
+              FriendlyName: 
+                description: |
+                  A human readable description for the new caller ID with maximum
+                  length 64 characters. Defaults to a nicely formatted version of the
+                  number.
+              CallDelay: 
+                description: |
+                  The number of seconds, between 0 and 60, to delay before initiating
+                  the verification call. Defaults to 0.
+                type: integer
+                default: 0
+              Extension: 
+                description: Digits to dial after connecting the verification call.
+              StatusCallback: 
+                description: |
+                  A URL that Twilio will request when the verification call ends to
+                  notify your app if the verification process was successful or not.
+              StatusCallbackMethod: 
+                description: |
+                  The HTTP method Twilio should use when requesting the above URL.
+                  Defaults to POST.
+                enum: [ GET , POST ]
+                default: POST
+        responses: 
+          201: 
+            body: 
+              application/xml: 
+                example: !include examples/outCallerId-xml-example.xml
+              application/json: 
+                example: !include examples/outCallerId-example.json
+    /OutgoingCallerIds/{OutgoingCallerIdSid}{mediaTypeExtension}: 
+      type: mediaTypeExt
+      get: 
+        description: "Get the set of an account's verified phone numbers."
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: outgoingCallerId
+                example: !include examples/outgoingCallerId-example.json
+              application/xml: 
+                schema: outgoingCallerId-xml
+                example: !include examples/outgoingCallerId-xml-example.xml
+      post: 
+        description: Updates the caller id, and returns the updated resource if successful.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              FriendlyName: 
+                description: |
+                  A human readable description of a Caller ID, with maximum length
+                  of 64 characters. Defaults to a nicely formatted version of the
+                  phone number.
+                required: true
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: outgoingCallerId
+                example: !include examples/outgoingCallerId-example.json
+              application/xml: 
+                schema: outgoingCallerId-xml
+                example: !include examples/outgoingCallerId-xml-example.xml
+      put: 
+        description: Updates the caller id, and returns the updated resource if successful.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              FriendlyName: 
+                description: |
+                  A human readable description of a Caller ID, with maximum length
+                  of 64 characters. Defaults to a nicely formatted version of the
+                  phone number.
+                required: true
+      delete: 
+        description: |
+          Deletes the caller ID from the account. Returns an HTTP 204 response if
+          successful, with no body.
+        responses: 
+          204: 
+            description: Deletion successful.
+    /AvailablePhoneNumbers{mediaTypeExtension}: 
+      type: { collection: { type: availablePhoneNumber } }
+      get: 
+        description: "Returns a list of all AvailablePhoneNumber subresources for your account by ISO Country. For full information about our phone number support, see our Phone Number CSV (http://www.twilio.com/resources/rates/international-phone-number-rates.csv)."
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                example: !include examples/availablePhoneNumbers-xml-example.xml
+              application/json: 
+                example: !include examples/availablePhoneNumbers-example.json
+    /AvailablePhoneNumbers/{IsoCountryCode}: 
+      uriParameters: 
+        IsoCountryCode: 
+          description: ISO 3166-1 alpha-2.
+          minLength: 2
+          maxLength: 2
+      /Local{mediaTypeExtension}: 
+        type: { collection: { type: phoneLocalNumber } }
+        get: 
+          description: |
+            Returns a list of local AvailablePhoneNumber resource representations
+            that match the specified filters, each representing a phone number tha
+            is currently available for provisioning within your account.
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                AreaCode: 
+                  description: |
+                    Find phone numbers in the specified area code. (US and Canada only).
+                Contains: 
+                  description: |
+                    A pattern to match phone numbers on. Valid characters are "*" and
+                    [0-9a-zA-Z]. The "*" character will match any single digit.
+                SmsEnabled: 
+                  description: This indicates whether the phone numbers can receive text messages.
+                  type: boolean
+                MmsEnabled: 
+                  description: This indicates whether the phone numbers can receive MMS messages.
+                  type: boolean
+                VoiceEnabled: 
+                  description: This indicates whether the phone numbers can receive calls.
+                  type: boolean
+                InRegion: 
+                  description: |
+                    Limit results to a particular region (i.e. State/Province). Given a
+                    phone number, search within the same Region as that number. (US and
+                    Canada only)
+                InPostalCode: 
+                  description: |
+                    Limit results to a particular postal code. Given a phone number, search
+                    within the same postal code as that number. (US and Canada only).
+                NearLatLong: 
+                  description: |
+                    Given a latitude/longitude pair lat,long find geographically close
+                    numbers within Distance miles. (US and Canada only).
+                NearNumber: 
+                  description: |
+                    Given a phone number, find a geographically close number within Distance
+                    miles. (US and Canada only).
+                InLata: 
+                  description: |
+                    Limit results to a specific Local access and transport area (LATA).
+                    Given a phone number, search within the same LATA as that number.
+                    (US and Canada only).
+                InRateCenter: 
+                  description: |
+                    Limit results to a specific rate center, or given a phone number search
+                    within the same rate center as that number. Requires InLata to be se
+                    as well. (US and Canada only).
+                Distance: 
+                  description: |
+                    Specifies the search radius for a Near- query in miles. If not specified
+                    this defaults to 25 miles. Maximum searchable distance is 500 miles.
+                    (US and Canada only).
+                  type: integer
+                  maximum: 500
+                  default: 25
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/phoneLocalNumbers-xml-example.xml
+                application/json: 
+                  example: !include examples/phoneLocalNumbers-example.json
+      /Mobile{mediaTypeExtension}: 
+        type: { collection: { type: phoneMobileNumber } }
+        get: 
+          description: Returns a list of mobile AvailablePhoneNumber resource representations that match the specified filters, each representing a phone number that is currently available for provisioning within your account.
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                Contains: 
+                  description: |
+                    A pattern to match phone numbers on. Valid characters are "*" and
+                    [0-9a-zA-Z]. The "*" character will match any single digit.
+                SmsEnabled: 
+                  description: This indicates whether the phone numbers can receive text messages.
+                  type: boolean
+                MmsEnabled: 
+                  description: This indicates whether the phone numbers can receive MMS messages.
+                  type: boolean
+                VoiceEnabled: 
+                  description: This indicates whether the phone numbers can receive calls.
+                  type: boolean
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/phoneMobileNumbers-xml-example.xml
+                application/json: 
+                  example: !include examples/phoneMobileNumbers-example.json
+      /TollFree{mediaTypeExtension}: 
+        type: { collection: { type: phoneTollFreeNumber } }
+        get: 
+          description: |
+            Returns a list of toll-free AvailablePhoneNumber elements that match the
+            specified filters, each representing a phone number that is currently
+            available for provisioning within your account. To provision an available
+            phone number, POST the number to the IncomingPhoneNumbers resource.
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                AreaCode: 
+                  description: Find phone numbers in the specified area code.
+                Contains: 
+                  description: |
+                    A pattern to match phone numbers on. Valid characters are "*" and
+                    [0-9a-zA-Z]. The "*" character will match any single digit.
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/phoneTollFreeNumbers-xml-example.xml
+                application/json: 
+                  example: !include examples/phoneTollFreeNumbers-example.json
+    /Messages{mediaTypeExtension}: 
+      type: { collection: { type: message } }
+      post: 
+        description: To send a new outgoing message, make an HTTP POST to your Messages list resource URI
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              From: 
+                description: A Twilio phone number enabled for the type of message you wish to send. Only phone numbers or short codes purchased from Twilio work here; you cannot (for example) spoof messages from your own cell phone number.
+                required: true
+              To: 
+                description: "The destination phone number. Format with a '+' and country code e.g., +16175551212 (E.164 format). For 'To' numbers without a '+', Twilio will use the same country code as the 'From' number. Twilio will also attempt to handle locally formatted numbers for that country code (e.g. (415) 555-1212 for US, 07400123456 for GB). If you are sending to a different country than the 'From' number, you must include a '+' and the country code to ensure proper delivery."
+                required: true
+              Body: 
+                description: The text of the message you want to send, limited to 1600 characters.
+              MediaUrl: 
+                description: "The URL of the media you wish to send out with the message. gif , png and jpeg content is currently supported and will be formatted correctly on the recipient's device. Other types are also accepted by the API. If you wish to send more than one image in the message body, please provide multiple MediaUrl values in the POST request."
+              StatusCallback: 
+                description: A URL that Twilio will POST to when your message is processed. Twilio will POST the MessageSid along with the other standard request parameters as well as MessageStatus equal to the value queued, sending, sent, or failed
+              ApplicationSid: 
+                description: "Twilio will POST MessageSid as well as MessageStatus=sent or MessageStatus=failed to the URL in the MessageStatusCallback property of this Application. If the StatusCallback parameter above is also passed, the Application's MessageStatusCallback parameter will take precedence."
+        responses: 
+          201: 
+            body: 
+              application/xml: 
+                example: !include examples/message-xml-example.xml
+              application/json: 
+                example: !include examples/message-example.json
+      get: 
+        description: Returns a list of messages associated with your account. The list includes paging information.
+        body: 
+          application/x-www-form-urlencoded: 
+            formParameters: 
+              To: 
+                description: Only show messages to this phone number.
+              From: 
+                description: Only show messages from this phone number.
+              DateSent: 
+                description: |
+                  Only show messages sent on this date (in GMT format), given as YYYY-MM-DD.
+                  You can also specify inequality, such as DateSent<=YYYY-MM-DD for messages
+                  that were sent on or before midnight on a date, and DateSent>=YYYY-MM-DD
+                  for messages sent on or after midnight on a date.
+                example: DateSent=2009-07-06
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                example: !include examples/messages-xml-example.xml
+              application/json: 
+                example: !include examples/messages-example.json
+    /Messages: 
+      /{MessageSid}: 
+        /Media/{MediaSid}{mediaTypeExtension}: 
+          type: { collectionMember: { type: media } }
+          get: 
+            description: Without an extension, the media is returned using the mime-type provided when the media was generated.
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    example: !include examples/media-xml-example.xml
+                  application/json: 
+                    example: !include examples/media-example.json
+        /Media{mediaTypeExtension}: 
+          type: mediaTypeExt
+          get: 
+            is: [ filterableByDate: { type: media } ]
+            description: Returns a list of media associated with your message.
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    schema: mediaList-xml
+                    example: !include examples/mediaList-xml-example.xml
+                  application/json: 
+                    schema: mediaList
+                    example: !include examples/mediaList-example.json
+      /{MessageSid}{mediaTypeExtension}: 
+        type: { collectionMember: { type: message } }
+        get: 
+          description: |
+            Returns a single message specified by the provided {MessageSid}.
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/message-xml-example.xml
+                application/json: 
+                  example: !include examples/message-example.json
+    /Recordings: 
+      /{RecordingSid}/Transcriptions{mediaTypeExtension}: 
+        type: { collection: { type: transcription } }
+        get: 
+          description: |
+            Returns a set of Transcription resource representations that includes paging
+            information.
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/transcriptions-xml-example.xml
+                application/json: 
+                  example: !include examples/transcriptions-example.json
+      /{RecordingSid}{mediaTypeExtension}: 
+        type: base
+        uriParameters: 
+          mediaTypeExtension: 
+            description: ""
+            enum: 
+              - .xml
+              - .wav
+              - .mp3
+            default: .wav
+        get: 
+          description: |
+            Returns one of several representations:
+            Without an extension, or with a ".wav", a binary WAV audio file is returned
+            with mime-type "audio/x-wav".
+            Appending ".mp3" to the URI returns a binary MP3 audio file with mime-type
+            type "audio/mpeg".
+            Appending ".xml" to the URI returns a XML representation.
+          responses: 
+            200: 
+              description: A binary WAV audio file is returned.
+              body: 
+                audio/x-wav: 
+                application/xml: 
+                  schema: recording-xml
+                  example: !include examples/recording-xml-example.xml
+                audio/mpeg: 
+        delete: 
+          description: Deletes a recording  from your account.
+          responses: 
+            204: 
+              description: Deletion successful.
+    /SIP: 
+      /Domains{mediaTypeExtension}: 
+        type: { collection: { type: domain } }
+        get: 
+          description: Returns a paged list of the domains for an account.
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/domains-xml-example.xml
+                application/json: 
+                  example: !include examples/domains-example.json
+        post: 
+          description: |
+            Creates a new Domain and returns its instance resource. You must pick a unique domain name that ends in ".sip.twilio.com".
+            After creating a Domain, you must map it to an authentication method before the domain is ready to receive traffic.
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                DomainName: 
+                  description: |
+                    The unique address you reserve on Twilio to which you route your SIP traffic. Domain names can contain letters, digits, and "-".
+                  required: true
+                FriendlyName: 
+                  description: A human readable descriptive text, up to 64 characters long.
+                VoiceUrl: 
+                  description: The URL Twilio will request when this domain receives a call.
+                VoiceMethod: 
+                  description: The HTTP method Twilio will use when requesting the above Url. Either GET or POST.
+                VoiceFallbackUrl: 
+                  description: The URL that Twilio will request if an error occurs retrieving or executing the TwiML requested by VoiceUrl.
+                VoiceFallbackMethod: 
+                  description: The HTTP method Twilio will use when requesting the VoiceFallbackUrl. Either GET or POST.
+                VoiceStatusCallback: 
+                  description: The URL that Twilio will request to pass status parameters (such as call ended) to your application.
+                VoiceStatusCallbackMethod: 
+                  description: The HTTP method Twilio will use to make requests to the StatusCallback URL. Either GET or POST.
+          responses: 
+            201: 
+              body: 
+                application/xml: 
+                  example: !include examples/domain-xml-example.xml
+                application/json: 
+                  example: !include examples/domain-example.json
+      /IpAccessControlLists{mediaTypeExtension}: 
+        get: 
+          description: Return a paged list of all IpAccessControlLists under this account.
+          responses: 
+            200: 
+        post: 
+          description: |
+            Create a new IpAccessControlList resource.
+            
+            When created, the list will contain no IP addresses. You will need to add IP addresses to the list for it to be active. To add IP addresses, you will need to POST to the IpAddresses List subresource.
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                FriendlyName: 
+                  description: A human readable descriptive text that describes the IpAccessControlList, up to 64 characters long.
+                  required: true
+          responses: 
+            201: 
+              body: 
+                application/xml: 
+                  schema: ipAccessControlList-xml
+                  example: !include examples/ipAccessControlList-xml-example.xml
+                application/json: 
+                  schema: ipAccessControlList
+                  example: !include examples/ipAccessControlList-example.json
+      /IpAccessControlLists: 
+        /{IpAccessControlListSid}{mediaTypeExtension}: 
+          type: { collectionMember: { type: ipAccessControlList } }
+          get: 
+            description: Return a specific IpAccessControlList resource.
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    example: !include examples/ipAccessControlList-xml-example.xml
+                  application/json: 
+                    example: !include examples/ipAccessControlList-example.json
+          post: 
+            description: Rename an IpAccessControlList.
+            body: 
+              application/x-www-form-urlencoded: 
+                formParameters: 
+                  FriendlyName: 
+                    description: A human readable descriptive text that describes the IpAccessControlList, up to 64 characters long.
+                    required: true
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: ipAccessControlListMapping
+                    example: !include examples/ipAccessControlListMapping-example.json
+                  application/xml: 
+                    schema: ipAccessControlListMapping-xml
+                    example: !include examples/ipAccessControlListMapping-xml-example.xml
+          delete: 
+            description: Delete an IpAccessControlList from your account. It can only be deleted if no domains are mapped to it. If you attempt to delete one that is mapped to a domain, you will receive an error.
+            responses: 
+              204: 
+        /{IpAccessControlListSid}: 
+          /IpAddresses{mediaTypeExtension}: 
+            type: { collection: { type: ipAddress } }
+            get: 
+              description: List the IP Addresses contained in this list.
+              responses: 
+                200: 
+                  body: 
+                    application/xml: 
+                      example: !include examples/ipAddresses-xml-example.xml
+                    application/json: 
+                      example: !include examples/ipAddresses-example.json
+            post: 
+              description: Add an IP Address to the list with a description.
+              body: 
+                application/x-www-form-urlencoded: 
+                  formParameters: 
+                    FriendlyName: 
+                      description: A human readable descriptive text for the an IP address, up to 64 characters long.
+                      required: true
+                    IpAddress: 
+                      description: |
+                        An IP address in dotted decimal notation from which you want to accept traffic.
+                        Any SIP requests from this IP address will be allowed by Twilio. IPv4 only supported today.
+                      required: true
+              responses: 
+                201: 
+                  body: 
+                    application/xml: 
+                      example: !include examples/ipAddress-xml-example.xml
+                    application/json: 
+                      example: !include examples/ipAddress-example.json
+          /IpAddresses/{IpAddressSid}{mediaTypeExtension}: 
+            type: { collectionMember: { type: ipAddress } }
+            delete: 
+              description: Deletes an IP address entry from the list.
+            get: 
+              description: Return a single IP Address resource.
+              responses: 
+                200: 
+                  body: 
+                    application/xml: 
+                      example: !include examples/ipAddress-xml-example.xml
+                    application/json: 
+                      example: !include examples/ipAddress-example.json
+            post: 
+              description: Change the description or IP address of a given IpAddress instance resource
+              body: 
+                application/x-www-form-urlencoded: 
+                  formParameters: 
+                    FriendlyName: 
+                      description: A human readable descriptive text for the an IP address, up to 64 characters long.
+                      required: true
+                    IpAddress: 
+                      description: |
+                        An IP address in dotted decimal notation from which you want to accept traffic.
+                        Any SIP requests from this IP address will be allowed by Twilio. IPv4 only supported today.
+                      required: true
+              responses: 
+                200: 
+                  body: 
+                    application/xml: 
+                      example: !include examples/ipAddress-xml-example.xml
+                    application/json: 
+                      example: !include examples/ipAddress-example.json
+      /CredentialLists{mediaTypeExtension}: 
+        type: { collection: { type: credentialList } }
+        get: 
+          description: Gets a list of Credential Lists for an account
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  example: !include examples/credentialLists-xml-example.xml
+                application/json: 
+                  example: !include examples/credentialLists-example.json
+        post: 
+          description: Create a new Credential List.
+          body: 
+            application/x-www-form-urlencoded: 
+              formParameters: 
+                FriendlyName: 
+                  description: A human readable descriptive text for a CredentialList, up to 64 characters long.
+                  required: true
+          responses: 
+            201: 
+              body: 
+                application/xml: 
+                  example: !include examples/credentialList-xml-example.xml
+                application/json: 
+                  example: !include examples/credentialList-example.json
+      /Domains: 
+        /{SipDomainSid}: 
+          /IpAccessControlListMappings/{ALSid}{mediaTypeExtension}: 
+            type: { collectionMember: { type: ipAccessControlList } }
+            delete: 
+              description: Remove a mapping from this domain.
+            get: 
+              description: Return a specific IpAccessControlListMapping instance by Sid.
+              responses: 
+                200: 
+                  body: 
+                    application/xml: 
+                      example: !include examples/ipAccessControlList-xml-example.xml
+                    application/json: 
+                      example: !include examples/ipAccessControlList-example.json
+          /IpAccessControlListMappings{mediaTypeExtension}: 
+            post: 
+              description: Map an IpAccessControlList to this domain.
+              body: 
+                application/x-www-form-urlencoded: 
+                  formParameters: 
+                    IpAccessControlListSid: 
+                      description: |
+                        The Sid of the IpAccessControlList that you want to associated with this domain.
+                        Once associated, Twilio will start authenticating access to the domain against this list.
+                      required: true
+              responses: 
+                201: 
+                  body: 
+                    application/xml: 
+                      example: !include examples/ipAccessControlList-xml-example.xml
+                    application/json: 
+                      example: !include examples/ipAccessControlList-example.json
+            get: 
+              description: Return the IpAccessControlListMappings that are associated to this domain.
+              responses: 
+                200: 
+          /CredentialListMappings/{CLSid}{mediaTypeExtension}: 
+            type: { collectionMember: { type: credentialListMapping } }
+            delete: 
+              description: Remove a CredentialListMapping from a domain
+          /CredentialListMappings{mediaTypeExtension}: 
+            type: { collection: { type: credentialListMapping } }
+            get: 
+              description: Get the user lists mapped to this domain.
+              responses: 
+                200: 
+                  body: 
+                    application/xml: 
+                      example: !include examples/credentialListMappings-xml-example.xml
+                    application/json: 
+                      example: !include examples/credentialListMappings-example.json
+            post: 
+              description: Map a CredentialList to the domain.
+              body: 
+                application/x-www-form-urlencoded: 
+                  formParameters: 
+                    CredentialListSid: 
+                      description: |
+                        The Sid of the CredentialList that you want to associated with this domain.
+                        Once associated, Twilio will start authenticating access to the domain against this list.
+                      required: true
+              responses: 
+                201: 
+                  body: 
+                    application/xml: 
+                      example: !include examples/credentialListMapping-xml-example.xml
+                    application/json: 
+                      example: !include examples/credentialListMapping-example.json
+        /{SipDomainSid}{mediaTypeExtension}: 
+          type: { collectionMember: { type: domain } }
+          get: 
+            description: Return a specific instance by Sid.
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    example: !include examples/domain-xml-example.xml
+                  application/json: 
+                    example: !include examples/domain-example.json
+          post: 
+            description: Update the attributes of a domain.
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    example: !include examples/domain-xml-example.xml
+                  application/json: 
+                    example: !include examples/domain-example.json
+          delete: 
+            description: Delete a domain. If you have created subdomains of a domain, you will not be able to delete the domain until you first delete all subdomains of it.
+      /CredentialLists: 
+        /{CLSid}: 
+          /Credentials{mediaTypeExtension}: 
+            type: { collection: { type: credential } }
+            get: 
+              description: Get the list of Credentials in a CredentialList. The passwords for the Credentials are intentionally not returned so as to protect them.
+              responses: 
+                200: 
+                  body: 
+                    application/xml: 
+                      example: !include examples/credentials-xml-example.xml
+                    application/json: 
+                      example: !include examples/credentials-example.json
+            post: 
+              is: [ credential ]
+              description: |
+                Add a Credential to the CredentialList.
+                
+                When creating a Credential, you will POST both a username and password, but only receive the username back in the response. The password is intentionally not returned so as to protect it.
+              responses: 
+                201: 
+                  body: 
+                    application/xml: 
+                      example: !include examples/credential-xml-example.xml
+                    application/json: 
+                      example: !include examples/credential-example.json
+          /Credentials/{CredentialSid}{mediaTypeExtension}: 
+            type: { collectionMember: { type: credential } }
+            get: 
+              description: Get a specific Credential in a list. Though a password is stored for each username in your list, the password is not returned to protect your password. If you cannot remember your password, you will need to POST to this resource to update it.
+              responses: 
+                200: 
+                  body: 
+                    application/xml: 
+                      example: !include examples/credential-xml-example.xml
+                    application/json: 
+                      example: !include examples/credential-example.json
+            post: 
+              is: [ credential ]
+              description: |
+                Change the password of a Credential record.
+                
+                If the change is successful, Twilio will respond with the Credential record but will not include the password in the response.
+              responses: 
+                200: 
+                  body: 
+                    application/xml: 
+                      example: !include examples/credential-xml-example.xml
+                    application/json: 
+                      example: !include examples/credential-example.json
+            delete: 
+              description: Remove a Credential from a CredentialList.
+              responses: 
+                204: 
+        /{CLSid}{mediaTypeExtension}: 
+          type: { collectionMember: { type: credentialList } }
+          get: 
+            description: Get a credential list instance resource
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    example: !include examples/credentialList-xml-example.xml
+                  application/json: 
+                    example: !include examples/credentialList-example.json
+          post: 
+            description: Change the FriendlyName of the list
+            body: 
+              application/x-www-form-urlencoded: 
+                formParameters: 
+                  FriendlyName: 
+                    description: A human readable descriptive text for a CredentialList, up to 64 characters long.
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    example: !include examples/credentialList-xml-example.xml
+                  application/json: 
+                    example: !include examples/credentialList-example.json
+          delete: 
+            description: Delete a CredentialList from your account. It can only be deleted if no domains are mapped to it. If you attempt to delete one that is mapped to a domain, you will receive an error.
+            responses: 
+              204: 
+documentation: 
+  - title: Request Formats
+    content: !include docs/request formats.md
+  - title: Headline
+    content: !include docs/headline.md

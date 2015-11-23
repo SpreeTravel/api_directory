@@ -1,0 +1,19 @@
+{
+  "data": {
+    "aggregate_link": "http://bit.ly/900913",
+    "entries": [
+      {
+        "link": "http://bit.ly/a5YvlH",
+        "ts": 1265002617,
+        "user": "mang0"
+      },
+      {
+        "link": "http://bit.ly/97CuIj",
+        "ts": 1265018066,
+        "user": "ogakiyaku"
+      }
+    ]
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

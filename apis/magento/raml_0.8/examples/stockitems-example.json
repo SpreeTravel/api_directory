@@ -1,0 +1,43 @@
+[
+  {
+    "item_id" : "1" ,
+    "qty" : "100.0000" ,
+    "backorders" : "0" ,
+    "min_sale_qty" : "1.0000" ,
+    "max_sale_qty" : "0.0000" ,
+    "low_stock_date" : null ,
+    "manage_stock" : "0" ,
+    "stock_status_changed_auto" : "0" ,
+    "enable_qty_increments" : "0"
+  } , {
+    "item_id" : "2" ,
+    "qty" : "100.0000" ,
+    "backorders" : "0" ,
+    "min_sale_qty" : "1.0000" ,
+    "max_sale_qty" : "0.0000" ,
+    "low_stock_date" : null ,
+    "manage_stock" : "0" ,
+    "stock_status_changed_auto" : "0" ,
+    "enable_qty_increments" : "0"
+  } , {
+    "item_id" : "3" ,
+    "qty" : "1.0000" ,
+    "backorders" : "0" ,
+    "min_sale_qty" : "1.0000" ,
+    "max_sale_qty" : "0.0000" ,
+    "low_stock_date" : null ,
+    "manage_stock" : "0" ,
+    "stock_status_changed_auto" : "0" ,
+    "enable_qty_increments" : "0"
+  } , {
+    "item_id" : "4" ,
+    "qty" : "0.0000" ,
+    "backorders" : "0" ,
+    "min_sale_qty" : "1.0000" ,
+    "max_sale_qty" : "0.0000" ,
+    "low_stock_date" : null ,
+    "manage_stock" : "0" ,
+    "stock_status_changed_auto" : "1" ,
+    "enable_qty_increments" : "0"
+  }
+]

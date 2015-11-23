@@ -1,0 +1,72 @@
+post: 
+  description: Create a group.
+  queryParameters: 
+    canHaveChatterGuests: 
+      description: true if this group allows Chatter customers, false otherwise. After this property is set to true, it cannot be set to false.
+      type: boolean
+      example: true
+    description: 
+      description: The “Description” section of the group
+    informationText: 
+      description: The text in the “Information” section of the group
+    informationTitle: 
+      description: The title of the “Information” section of the group
+    name: 
+      description: The name of the group
+      required: true
+    visibility: 
+      description: |
+        Specifies the group visibility type. One of the following:
+        PrivateAccess—Only members of the group can see posts to this group.
+        PublicAccess—All users within the community can see posts to this group.
+        Unlisted—Reserved for future use.
+      required: true
+      enum: 
+        - Unlisted
+        - PrivateAccess
+        - PublicAccess
+  body: 
+    application/json: 
+      schema: createGroupInTheOrganizationRequest
+      example: !include examples/createGroupInTheOrganizationRequest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: groupDetailResponse
+head: 
+  description: A list of all the groups in the organization. Get information about groups.
+  responses: 
+    200: 
+get: 
+  description: A list of all the groups in the organization. Get information about groups.
+  queryParameters: 
+    archiveStatus: 
+      description: |
+        Returns the list of groups filtered by the archive status you specify:
+        All—All groups, including groups that are archived and groups that are not archived.
+        Archived—Only groups that are archived.
+        NotArchived—Only groups that are not archived.
+        The default value is NotArchived.
+      enum: 
+        - Archived
+        - All
+        - NotArchived
+      default: NotArchived
+      example: All
+    page: 
+      description: An integer specifying a page of items. The default value is 0, which returns the first page.
+      type: integer
+      default: 0
+    pageSize: 
+      description: Specifies the number of items per page. Valid values are between 1 and 250. The default value is 25.
+      type: integer
+      default: 25
+      example: 5
+    q: 
+      description: Specifies the string to search. The search string must contain at least two characters, not including any wildcards. For more information about wildcards
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: groupPageResponse

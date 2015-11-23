@@ -1,0 +1,27 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "start_invoice_date" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "end_invoice_date" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "page" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "page_size" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "total_count_required" : {
+      "type" : "boolean" ,
+      "required" : false
+    }
+  }
+}

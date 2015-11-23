@@ -1,0 +1,57 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": "string",
+      "required": false
+    },
+    "developerName": {
+      "type": "string",
+      "required": false
+    },
+    "height": {
+      "type": "string",
+      "required": false
+    },
+    "icon": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "height": {
+          "type": "integer",
+          "required": false
+        },
+        "width": {
+          "type": "integer",
+          "required": false
+        },
+        "url": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "namespacePrefix": {
+      "type": "string",
+      "required": false
+    },
+    "parameters": {
+      "type": "string",
+      "required": false
+    },
+    "thumbnailUrl": {
+      "type": "string",
+      "required": false
+    },
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "type": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

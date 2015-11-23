@@ -1,0 +1,49 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "currentPageToken": {
+      "type": "string",
+      "required": false
+    },
+    "currentPageUrl": {
+      "type": "string",
+      "required": false
+    },
+    "items": {
+      "type": "array",
+      "required": false,
+      "items": [{
+        "type": "object",
+        "required": false,
+        "properties": {
+          "hasBestAnswer": {
+            "type": "boolean",
+            "required": false
+          },
+          "id": {
+            "type": "string",
+            "required": false
+          },
+          "title": {
+            "type": "string",
+            "required": false
+          },
+          "type": {
+            "type": "string",
+            "required": false
+          },
+          "voteCount": {
+            "type": "string",
+            "required": false
+          }
+        }
+      }]
+    },
+    "nextPageUrl": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

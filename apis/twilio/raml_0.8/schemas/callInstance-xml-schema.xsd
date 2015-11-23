@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="TwilioResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Call" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Sid" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="DateCreated" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="DateUpdated" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="ParentCallSid" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="AccountSid" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="To" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="From" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="PhoneNumberSid" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="Status" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="StartTime" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="EndTime" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="Duration" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="Price" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="Direction" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="AnsweredBy" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="ApiVersion" minOccurs="0" maxOccurs="1" type="xsd:date"/>
+              <xsd:element name="ForwardedFrom" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="CallerName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="Uri" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="SubresourceUris" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Notifications" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="Recordings" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

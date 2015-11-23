@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<magento_api>
+  <id>7</id>
+  <label>second dress</label>
+  <position>2</position>
+  <exclude>1</exclude>
+  <url>http://magento/media/catalog/product/1/2/12.jpg</url>
+  <types>
+    <data_item>small_image</data_item>
+  </types>
+</magento_api>

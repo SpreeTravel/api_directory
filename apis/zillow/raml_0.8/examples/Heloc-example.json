@@ -1,0 +1,35 @@
+cb({
+  "request" : {
+    "callback" : "cb" ,
+    "value" : "10000000" ,
+    "balance" : "20000" ,
+    "ltv" : "6.5" ,
+    "output" : "json"
+  } ,
+  "message" : {
+    "text" : "Request successfully processed" ,
+    "code" : "0"
+  } ,
+  "response" : {
+    "loanAmount" : "630000" ,
+    "loanAmountPairs" : [
+      {
+        "ltv" : "-3.5" ,
+        "loanAmount" : "0"
+      } , {
+        "ltv" : "1.5" ,
+        "loanAmount" : "130000"
+      } , {
+        "ltv" : "6.5" ,
+        "loanAmount" : "630000"
+      } , {
+        "ltv" : "11.5" ,
+        "loanAmount" : "1130000"
+      } , {
+        "ltv" : "16.5" ,
+        "loanAmount" : "1630000"
+      }
+    ] ,
+    "result" : "If you can qualify for a loan at 6.5% loan-to-value, you may be able to borrow $630,000 in a home equity line of credit."
+  }
+});

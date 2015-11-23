@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<magento_api>
+  <attribute_set_id>4</attribute_set_id>
+  <type_id>simple</type_id>
+  <sku>wedding dress</sku>
+  <name>Dress_test</name>
+  <meta_title>dress</meta_title>
+  <price>2000.0000</price>
+  <weight>0.5000</weight>
+  <status>1</status>
+  <visibility>4</visibility>
+  <enable_googlecheckout>1</enable_googlecheckout>
+  <tax_class_id>7</tax_class_id>
+  <description>dress</description>
+  <meta_keyword>dress, wedding</meta_keyword>
+</magento_api>

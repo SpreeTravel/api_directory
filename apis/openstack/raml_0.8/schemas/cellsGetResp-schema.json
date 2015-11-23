@@ -1,0 +1,33 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "cell" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "rpc_host" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "rpc_port" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "type" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "username" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

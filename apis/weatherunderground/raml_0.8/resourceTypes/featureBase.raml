@@ -1,0 +1,32 @@
+description: Any API feature requires query and format URI parameters. You can use settings optionally.
+uriParameters: 
+  settings: 
+    description: |
+      One or more of the following settings, given as key:value pairs separated by a colon. Example: lang:FR/pws:0
+      |name|value|description|
+      |-|
+      |lang|lang code|Default: EN. Returns the API response in the specified language. http://www.wunderground.com/weather/api/d/docs?d=language-support|
+      |pws|0 or 1|Default: 1 (true). Use personal weather stations for conditions.|
+      |bestfct|0 or 1|Default: 1 (true). Use Weather Undergrond Best Forecast for forecast.|
+    example: "lang:FR/pws:0"
+  query: 
+    description: |
+      The location for which you want weather information. Examples:
+      |example|description|
+      |-|
+      |CA/San_Francisco|US state/city|
+      |60290|US zipcode|
+      |Australia/Sydney|country/city|
+      |37.8,-122.4|latitude,longitude|
+      |KJFK|airport code|
+      |pws:KCASANFR70|PWS id|
+      |autoip|AutoIP address location|
+      |autoip.json?geo_ip=38.102.136.138|specific IP address location|
+    example: CA/San_Francisco
+  format: 
+    description: |
+      json, or xml
+      Output format.
+      
+      For JSONP, you may add ?callback=your_js_callback_function to the request URL
+    example: json

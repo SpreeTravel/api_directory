@@ -1,0 +1,125 @@
+[
+  {
+    "kind" : "iteration" ,
+    "number" : 2 ,
+    "project_id" : 99 ,
+    "team_strength" : 1 ,
+    "stories" : [
+      {
+        "kind" : "story" ,
+        "id" : 562 ,
+        "project_id" : 99 ,
+        "name" : "Complete construction of the Expeditionary Battle Planetoid" ,
+        "description" : "Palpatine was impressed with the PoC, make this one bigger" ,
+        "story_type" : "feature" ,
+        "current_state" : "accepted" ,
+        "estimate" : 3 ,
+        "accepted_at" : "2014-07-22T12:00:05Z" ,
+        "requested_by_id" : 102 ,
+        "owned_by_id" : 102 ,
+        "owner_ids" : [
+          102 ,
+          101
+        ] ,
+        "labels" : [
+          {
+            "kind" : "label" ,
+            "id" : 2008 ,
+            "project_id" : 99 ,
+            "name" : "plans" ,
+            "created_at" : "2014-07-22T12:01:00Z" ,
+            "updated_at" : "2014-07-22T12:01:00Z"
+          }
+        ] ,
+        "created_at" : "2014-07-22T12:01:00Z" ,
+        "updated_at" : "2014-07-22T12:01:00Z" ,
+        "integration_id" : 30 ,
+        "external_id" : "abc123" ,
+        "url" : "http://localhost/story/show/562"
+      }
+    ] ,
+    "start" : "2014-07-22T12:01:00Z" ,
+    "finish" : "2014-07-22T12:00:10Z"
+  } , {
+    "kind" : "iteration" ,
+    "number" : 3 ,
+    "project_id" : 99 ,
+    "team_strength" : 1 ,
+    "stories" : [
+    ] ,
+    "start" : "2014-07-22T12:00:10Z" ,
+    "finish" : "2014-07-22T12:00:15Z"
+  } , {
+    "kind" : "iteration" ,
+    "number" : 4 ,
+    "project_id" : 99 ,
+    "team_strength" : 1 ,
+    "stories" : [
+    ] ,
+    "start" : "2014-07-22T12:00:15Z" ,
+    "finish" : "2014-07-22T12:00:20Z"
+  } , {
+    "kind" : "iteration" ,
+    "number" : 5 ,
+    "project_id" : 99 ,
+    "team_strength" : 1 ,
+    "stories" : [
+    ] ,
+    "start" : "2014-07-22T12:00:20Z" ,
+    "finish" : "2014-07-22T12:00:25Z"
+  } , {
+    "kind" : "iteration" ,
+    "number" : 6 ,
+    "project_id" : 99 ,
+    "team_strength" : 1 ,
+    "stories" : [
+    ] ,
+    "start" : "2014-07-22T12:00:25Z" ,
+    "finish" : "2014-07-22T12:00:30Z"
+  } , {
+    "kind" : "iteration" ,
+    "number" : 7 ,
+    "project_id" : 99 ,
+    "team_strength" : 1 ,
+    "stories" : [
+    ] ,
+    "start" : "2014-07-22T12:00:30Z" ,
+    "finish" : "2014-07-22T12:00:35Z"
+  } , {
+    "kind" : "iteration" ,
+    "number" : 8 ,
+    "project_id" : 99 ,
+    "team_strength" : 1 ,
+    "stories" : [
+    ] ,
+    "start" : "2014-07-22T12:00:35Z" ,
+    "finish" : "2014-07-22T12:00:40Z"
+  } , {
+    "kind" : "iteration" ,
+    "number" : 9 ,
+    "project_id" : 99 ,
+    "team_strength" : 1 ,
+    "stories" : [
+    ] ,
+    "start" : "2014-07-22T12:00:40Z" ,
+    "finish" : "2014-07-22T12:00:45Z"
+  } , {
+    "kind" : "iteration" ,
+    "number" : 10 ,
+    "project_id" : 99 ,
+    "team_strength" : 1 ,
+    "stories" : [
+    ] ,
+    "start" : "2014-07-22T12:00:45Z" ,
+    "finish" : "2014-07-22T12:00:50Z"
+  } , {
+    "kind" : "iteration" ,
+    "number" : 11 ,
+    "project_id" : 99 ,
+    "team_strength" : 1 ,
+    "stories" : [
+    ] ,
+    "start" : "2014-07-22T12:00:50Z" ,
+    "finish" : "2014-07-22T12:00:55Z"
+  }
+]

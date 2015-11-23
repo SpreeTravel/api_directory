@@ -1,0 +1,22 @@
+head: 
+  description: |
+    List of the top five trending topics for the organization.
+    The more frequently people add a specific topic to their posts and comments and comment on or like posts with the same topic over a short period of time, the more likely it is to become a trending topic. For example, if your coworkers are attending the upcoming Dreamforce conference and have started discussing it in Chatter, you may see a trending topic for Dreamforce. A trending topic is not solely based on popularity and usually relates to a one-time or infrequent event that has a spike in activity, such as a conference or a project deadline.
+  responses: 
+    200: 
+get: 
+  description: |
+    List of the top five trending topics for the organization.
+    The more frequently people add a specific topic to their posts and comments and comment on or like posts with the same topic over a short period of time, the more likely it is to become a trending topic. For example, if your coworkers are attending the upcoming Dreamforce conference and have started discussing it in Chatter, you may see a trending topic for Dreamforce. A trending topic is not solely based on popularity and usually relates to a one-time or infrequent event that has a spike in activity, such as a conference or a project deadline.
+  queryParameters: 
+    maxResults: 
+      description: Maximum number of trending topics that get returned. The default is 5. Value must be greater than 0 and less than 100.
+      type: integer
+      default: 5
+      example: 5
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: topicCollectionResponse
+          example: !include examples/topicCollectionResponse-example.json

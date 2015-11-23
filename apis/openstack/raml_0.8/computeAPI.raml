@@ -1,0 +1,1203 @@
+#%RAML 0.8
+title: OpenStack Compute API
+version: v2.1
+baseUri: https://servers.api.openstack.com
+schemas:
+  - adminActionsBackupServer: !include schemas/adminActionsBackupServer-schema.json
+  - adminActionsInjectNetworkInfo: !include schemas/adminActionsInjectNetworkInfo-schema.json
+  - adminActionsLiveMigrate: !include schemas/adminActionsLiveMigrate-schema.json
+  - adminActionsLockServer: !include schemas/adminActionsLockServer-schema.json
+  - adminActionsMigrate: !include schemas/adminActionsMigrate-schema.json
+  - adminActionsPause: !include schemas/adminActionsPause-schema.json
+  - adminActionsResetNetwork: !include schemas/adminActionsResetNetwork-schema.json
+  - adminActionsResetServerState: !include schemas/adminActionsResetServerState-schema.json
+  - adminActionsResume: !include schemas/adminActionsResume-schema.json
+  - adminActionsSuspend: !include schemas/adminActionsSuspend-schema.json
+  - adminActionsUnlockServer: !include schemas/adminActionsUnlockServer-schema.json
+  - adminActionsUnpause: !include schemas/adminActionsUnpause-schema.json
+  - agentPostReq: !include schemas/agentPostReq-schema.json
+  - agentPostResp: !include schemas/agentPostResp-schema.json
+  - agentsGetResp: !include schemas/agentsGetResp-schema.json
+  - agentUpdatePutReq: !include schemas/agentUpdatePutReq-schema.json
+  - agentUpdatePutResp: !include schemas/agentUpdatePutResp-schema.json
+  - aggregateAddHostPostReq: !include schemas/aggregateAddHostPostReq-schema.json
+  - aggregateMetadataPostReq: !include schemas/aggregateMetadataPostReq-schema.json
+  - aggregatePostReq: !include schemas/aggregatePostReq-schema.json
+  - aggregatePostResp: !include schemas/aggregatePostResp-schema.json
+  - aggregateRemoveHostPostReq: !include schemas/aggregateRemoveHostPostReq-schema.json
+  - aggregatesAddHostPostResp: !include schemas/aggregatesAddHostPostResp-schema.json
+  - aggregatesGetResp: !include schemas/aggregatesGetResp-schema.json
+  - aggregatesListGetResp: !include schemas/aggregatesListGetResp-schema.json
+  - aggregatesMetadataPostResp: !include schemas/aggregatesMetadataPostResp-schema.json
+  - aggregatesRemoveHostPostResp: !include schemas/aggregatesRemoveHostPostResp-schema.json
+  - aggregateUpdatePostReq: !include schemas/aggregateUpdatePostReq-schema.json
+  - aggregateUpdatePostResp: !include schemas/aggregateUpdatePostResp-schema.json
+  - cellsCapacitiesResp: !include schemas/cellsCapacitiesResp-schema.json
+  - cellsGetResp: !include schemas/cellsGetResp-schema.json
+  - cellsListEmptyResp: !include schemas/cellsListEmptyResp-schema.json
+  - cellsListResp: !include schemas/cellsListResp-schema.json
+  - certificateCreateResp: !include schemas/certificateCreateResp-schema.json
+  - certificateGetRootResp: !include schemas/certificateGetRootResp-schema.json
+  - computeVersionsResponse: !include schemas/computeVersionsResponse-schema.json
+  - extensionsv21GetResp: !include schemas/extensionsv21GetResp-schema.json
+  - extensionv21: !include schemas/extensionv21-schema.json
+  - flavorAccessAddTenantReq: !include schemas/flavorAccessAddTenantReq-schema.json
+  - flavorAccessAddTenantResp: !include schemas/flavorAccessAddTenantResp-schema.json
+  - flavorAccessCreateReq: !include schemas/flavorAccessCreateReq-schema.json
+  - flavorAccessCreateResp: !include schemas/flavorAccessCreateResp-schema.json
+  - flavorAccessDetailResp: !include schemas/flavorAccessDetailResp-schema.json
+  - flavorAccessListResp: !include schemas/flavorAccessListResp-schema.json
+  - flavorAccessRemoveTenantReq: !include schemas/flavorAccessRemoveTenantReq-schema.json
+  - flavorAccessRemoveTenantResp: !include schemas/flavorAccessRemoveTenantResp-schema.json
+  - flavorAccessShowResp: !include schemas/flavorAccessShowResp-schema.json
+  - flavorCreatePostReq: !include schemas/flavorCreatePostReq-schema.json
+  - flavorCreatePostResp: !include schemas/flavorCreatePostResp-schema.json
+  - flavorExtraSpecsCreateReq: !include schemas/flavorExtraSpecsCreateReq-schema.json
+  - flavorExtraSpecsCreateResp: !include schemas/flavorExtraSpecsCreateResp-schema.json
+  - flavorExtraSpecsGetResp: !include schemas/flavorExtraSpecsGetResp-schema.json
+  - flavorExtraSpecsListResp: !include schemas/flavorExtraSpecsListResp-schema.json
+  - flavorExtraSpecsUpdateReq: !include schemas/flavorExtraSpecsUpdateReq-schema.json
+  - flavorExtraSpecsUpdateResp: !include schemas/flavorExtraSpecsUpdateResp-schema.json
+  - flavorGetResp: !include schemas/flavorGetResp-schema.json
+  - flavorRxtxGetResp: !include schemas/flavorRxtxGetResp-schema.json
+  - flavorRxtxListResp: !include schemas/flavorRxtxListResp-schema.json
+  - flavorRxtxPostReq: !include schemas/flavorRxtxPostReq-schema.json
+  - flavorRxtxPostResp: !include schemas/flavorRxtxPostResp-schema.json
+  - flavorsDetailResp: !include schemas/flavorsDetailResp-schema.json
+  - flavorsListResp: !include schemas/flavorsListResp-schema.json
+  - forceDeletePostReq: !include schemas/forceDeletePostReq-schema.json
+  - getSpiceConsolePostReq: !include schemas/getSpiceConsolePostReq-schema.json
+  - getSpiceConsolePostResp: !include schemas/getSpiceConsolePostResp-schema.json
+  - getVncConsolePostReq: !include schemas/getVncConsolePostReq-schema.json
+  - getVncConsolePostResp: !include schemas/getVncConsolePostResp-schema.json
+  - hostGetReboot: !include schemas/hostGetReboot-schema.json
+  - hostGetResp: !include schemas/hostGetResp-schema.json
+  - hostGetShutdown: !include schemas/hostGetShutdown-schema.json
+  - hostGetStartup: !include schemas/hostGetStartup-schema.json
+  - hostPutMaintenanceReq: !include schemas/hostPutMaintenanceReq-schema.json
+  - hostPutMaintenanceResp: !include schemas/hostPutMaintenanceResp-schema.json
+  - hostsListResp: !include schemas/hostsListResp-schema.json
+  - hypervisorsListResp: !include schemas/hypervisorsListResp-schema.json
+  - hypervisorsSearchResp: !include schemas/hypervisorsSearchResp-schema.json
+  - hypervisorsServersResp: !include schemas/hypervisorsServersResp-schema.json
+  - hypervisorsShowResp: !include schemas/hypervisorsShowResp-schema.json
+  - hypervisorsStatisticsResp: !include schemas/hypervisorsStatisticsResp-schema.json
+  - hypervisorsUptimeResp: !include schemas/hypervisorsUptimeResp-schema.json
+  - imageGetResp: !include schemas/imageGetResp-schema.json
+  - imageGetRespXML: !include schemas/imageGetResp-schema.xsd
+  - imageListResp: !include schemas/imageListResp-schema.json
+  - imageListRespXML: !include schemas/imageListResp-schema.xsd
+  - instanceActionGetResp: !include schemas/instanceActionGetResp-schema.json
+  - instanceActionsListResp: !include schemas/instanceActionsListResp-schema.json
+  - instUsageAuditLogIndexGetResp: !include schemas/instUsageAuditLogIndexGetResp-schema.json
+  - instUsageAuditLogIndexWithBeforeGetResp: !include schemas/instUsageAuditLogIndexWithBeforeGetResp-schema.json
+  - limitGetResp: !include schemas/limitGetResp-schema.json
+  - listServersDetailGet: !include schemas/listServersDetailGet-schema.json
+  - listServersDetailGetXML: !include schemas/listServersDetailGet-schema.xsd
+  - migrationsGet: !include schemas/migrationsGet-schema.json
+  - multinicAddFixedIpReq: !include schemas/multinicAddFixedIpReq-schema.json
+  - multinicRemoveFixedIpReq: !include schemas/multinicRemoveFixedIpReq-schema.json
+  - quotaClassesShowGetResp: !include schemas/quotaClassesShowGetResp-schema.json
+  - quotaClassesUpdatePostReq: !include schemas/quotaClassesUpdatePostReq-schema.json
+  - quotaClassesUpdatePostResp: !include schemas/quotaClassesUpdatePostResp-schema.json
+  - quotasShowDefaultsGetResp: !include schemas/quotasShowDefaultsGetResp-schema.json
+  - quotasShowGetResp: !include schemas/quotasShowGetResp-schema.json
+  - quotasUpdateForcePostReq: !include schemas/quotasUpdateForcePostReq-schema.json
+  - quotasUpdateForcePostResp: !include schemas/quotasUpdateForcePostResp-schema.json
+  - quotasUpdatePostReq: !include schemas/quotasUpdatePostReq-schema.json
+  - quotasUpdatePostResp: !include schemas/quotasUpdatePostResp-schema.json
+  - restorePostReq: !include schemas/restorePostReq-schema.json
+  - serverActionRebuildReq: !include schemas/serverActionRebuildReq-schema.json
+  - serverActionRebuildReqXML: !include schemas/serverActionRebuildReq-schema.xsd
+  - serverActionRebuildResp: !include schemas/serverActionRebuildResp-schema.json
+  - serverActionRebuildRespXML: !include schemas/serverActionRebuildResp-schema.xsd
+  - serverConfigDriveGetResp: !include schemas/serverConfigDriveGetResp-schema.json
+  - serverEvacuateReq: !include schemas/serverEvacuateReq-schema.json
+  - serverEvacuateResp: !include schemas/serverEvacuateResp-schema.json
+  - serverGetResp: !include schemas/serverGetResp-schema.json
+  - serverGetRespXML: !include schemas/serverGetResp-schema.xsd
+  - serverPostReq: !include schemas/serverPostReq-schema.json
+  - serverPostReqXML: !include schemas/serverPostReq-schema.xsd
+  - serverPostResp: !include schemas/serverPostResp-schema.json
+  - serverPostRespXML: !include schemas/serverPostResp-schema.xsd
+  - serverResizePostReq: !include schemas/serverResizePostReq-schema.json
+  - serverResizePostReqXML: !include schemas/serverResizePostReq-schema.xsd
+  - serversConfigDriveDetailsResp: !include schemas/serversConfigDriveDetailsResp-schema.json
+  - serversDetailResp: !include schemas/serversDetailResp-schema.json
+  - serverUpdatePutReq: !include schemas/serverUpdatePutReq-schema.json
+  - serverUpdatePutReqXML: !include schemas/serverUpdatePutReq-schema.xsd
+  - serverUpdatePutResp: !include schemas/serverUpdatePutResp-schema.json
+  - serverUpdatePutRespXML: !include schemas/serverUpdatePutResp-schema.xsd
+  - simpleTenantUsageGet: !include schemas/simpleTenantUsageGet-schema.json
+  - simpleTenantUsageGetSpecific: !include schemas/simpleTenantUsageGetSpecific-schema.json
+  - userQuotasShowGetResp: !include schemas/userQuotasShowGetResp-schema.json
+  - userQuotasUpdatePostReq: !include schemas/userQuotasUpdatePostReq-schema.json
+  - userQuotasUpdatePostResp: !include schemas/userQuotasUpdatePostResp-schema.json
+  - computeVersionResponse: !include /schemas/computeVersionResponse-schema.json
+  - serverActitonReq: !include /schemas/serverActitonReq-schema.json
+  - listIPsRes: !include /schemas/listIPsRes-schema.json
+  - showIPDetailsRes: !include /schemas/showIPDetailsRes-schema.json
+  - clearServerPassword: !include /schemas/clearServerPassword-schema.json
+  - cellsCapacitiesRespXML: !include /schemas/cellsCapacitiesRespXML-schema.xsd
+  - listDNSDomainsResXML: !include /schemas/listDNSDomainsResXML-schema.xsd
+  - listDNSDomainsRes: !include /schemas/listDNSDomainsRes-schema.json
+  - createOrUpdateDNSDomainReq: !include /schemas/createOrUpdateDNSDomainReq-schema.json
+  - createOrUpdateDNSDomainReqXML: !include /schemas/createOrUpdateDNSDomainReqXML-schema.xsd
+  - createOrUpdateDNSDomainResXML: !include /schemas/createOrUpdateDNSDomainResXML-schema.xsd
+  - createOrUpdateDNSDomainRes: !include /schemas/createOrUpdateDNSDomainRes-schema.json
+  - createOrUpdateDNSEntryReq: !include /schemas/createOrUpdateDNSEntryReq-schema.json
+  - createOrUpdateDNSEntryReqXML: !include /schemas/createOrUpdateDNSEntryReqXML-schema.xsd
+  - createOrUpdateDNSEntryResXML: !include /schemas/createOrUpdateDNSEntryResXML-schema.xsd
+  - createOrUpdateDNSEntryRes: !include /schemas/createOrUpdateDNSEntryRes-schema.json
+  - findUniqueDNSEntry: !include /schemas/findUniqueDNSEntry-schema.xsd
+  - listDNSEntriesResXML: !include /schemas/listDNSEntriesResXML-schema.xsd
+  - listFloatingIPPoolsXML: !include /schemas/listFloatingIPPoolsXML-schema.xsd
+  - listFloatingIPPools: !include /schemas/listFloatingIPPools-schema.json
+  - listFloatingIPsResXML: !include /schemas/listFloatingIPsResXML-schema.xsd
+  - listFloatingIPsRes: !include /schemas/listFloatingIPsRes-schema.json
+  - allocateFloatingIPReq: !include /schemas/allocateFloatingIPReq-schema.json
+  - allocateFloatingIPReqXML: !include /schemas/allocateFloatingIPReqXML-schema.xsd
+  - allocateFloatingIPResXML: !include /schemas/allocateFloatingIPResXML-schema.xsd
+  - allocateFloatingIPRes: !include /schemas/allocateFloatingIPRes-schema.json
+  - listFloatingIPsBulkResXML: !include /schemas/listFloatingIPsBulkResXML-schema.xsd
+  - listFloatingIPsBulkRes: !include /schemas/listFloatingIPsBulkRes-schema.json
+  - createFloatingBulkIPsReq: !include /schemas/createFloatingBulkIPsReq-schema.json
+  - createFloatingBulkIPsReqXML: !include /schemas/createFloatingBulkIPsReqXML-schema.xsd
+  - createFloatingBulkIPsResXML: !include /schemas/createFloatingBulkIPsResXML-schema.xsd
+  - createFloatingBulkIPsRes: !include /schemas/createFloatingBulkIPsRes-schema.json
+  - bulkDeleteFloatingIPsReq: !include /schemas/bulkDeleteFloatingIPsReq-schema.json
+  - bulkDeleteFloatingIPsReqXML: !include /schemas/bulkDeleteFloatingIPsReqXML-schema.xsd
+  - bulkDeleteFloatingIPsResXML: !include /schemas/bulkDeleteFloatingIPsResXML-schema.xsd
+  - bulkDeleteFloatingIPsRes: !include /schemas/bulkDeleteFloatingIPsRes-schema.json
+  - listFloatingIPsByHostResXML: !include /schemas/listFloatingIPsByHostResXML-schema.xsd
+  - listFloatingIPsByHostRes: !include /schemas/listFloatingIPsByHostRes-schema.json
+  - listKeypairsRes: !include /schemas/listKeypairsRes-schema.json
+  - createOrImportKeypairReq: !include /schemas/createOrImportKeypairReq-schema.json
+  - createOrImportKeypairRes: !include /schemas/createOrImportKeypairRes-schema.json
+  - showKeypairInformationRes: !include /schemas/showKeypairInformationRes-schema.json
+  - shelveServerReq: !include /schemas/shelveServerReq-schema.json
+  - getServerPasswordXML: !include /schemas/getServerPasswordXML-schema.xsd
+  - getServerPassword: !include /schemas/getServerPassword-schema.json
+  - listVirtualInterfacesXML: !include /schemas/listVirtualInterfacesXML-schema.xsd
+  - listVirtualInterfaces: !include /schemas/listVirtualInterfaces-schema.json
+/clear_me: 
+  get: 
+    description: List API versions
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: computeVersionsResponse
+            example: !include examples/computeVersionsResponse-example.json
+        headers: 
+          "X-OpenStack-Request-ID ": 
+            description: Returns a unique request identifier that helps provide tracking for the request. Provider must configure middleware to provide the request ID.
+/{version}: 
+  get: 
+    description: Show API version details
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: computeVersionResponse
+            example: !include examples/computeVersionResponse-example.json
+  /extensions: 
+    get: 
+      description: List extensions
+      responses: 
+        "200 203": 
+          body: 
+            application/json: 
+              schema: extensionsv2.1GetResp
+              example: !include examples/extensionsv2.1GetResp-example.json
+    /{alias}: 
+      get: 
+        description: Get extension
+        responses: 
+          "200 203": 
+            body: 
+              application/json: 
+                schema: extensionv2.1
+                example: !include examples/extensionv2.1-example.json
+  /flavors: 
+    post: 
+      description: Create flavor
+      body: 
+        application/json: 
+          schema: flavorRxtxPostReq
+          example: !include examples/flavorRxtxPostReq-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: flavorRxtxPostResp
+              example: !include examples/flavorRxtxPostResp-example.json
+    get: 
+      description: List flavors
+      body: 
+        application/json: 
+          schema: flavorsListResp
+          example: !include examples/flavorsListResp-example.json
+      responses: 
+        200: 
+          headers: 
+            X-OpenStack-Request-ID: 
+    /1: 
+      get: 
+        description: Add access attribute to flavor show
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: flavorAccessShowResp
+                example: !include examples/flavorAccessShowResp-example.json
+            headers: 
+              "X-OpenStack-Request-ID ": 
+                description: Returns a unique request identifier that helps provide tracking for the request. Provider must configure middleware to provide the request ID.
+    /10: 
+      /action: 
+        post: 
+          description: Remove flavor access
+          body: 
+            application/json: 
+              schema: flavorAccessRemoveTenantReq
+              example: !include examples/flavorAccessRemoveTenantReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: flavorAccessRemoveTenantResp
+                  example: !include examples/flavorAccessRemoveTenantResp-example.json
+      /flavor-access: 
+        get: 
+          description: Return access list
+          body: 
+            application/json: 
+              schema: flavorAccessAddTenantReq
+              example: !include examples/flavorAccessAddTenantReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: flavorAccessListResp
+                  example: !include examples/flavorAccessListResp-example.json
+    /detail: 
+      get: 
+        description: List detailed flavors
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: flavorsDetailResp
+                example: !include examples/flavorsDetailResp-example.json
+            headers: 
+              X-OpenStack-Request-ID: 
+    /{flavor_id}: 
+      delete: 
+        description: Delete flavor
+        body: 
+          application/json: 
+            schema: flavorCreatePostReq
+            example: !include examples/flavorCreatePostReq-example.json
+        responses: 
+          204: 
+      get: 
+        description: Show flavor details
+        body: 
+          application/json: 
+            schema: flavorGetResp
+            example: !include examples/flavorGetResp-example.json
+        responses: 
+          200: 
+            headers: 
+              X-OpenStack-Request-ID: 
+      /flavor-extra-specs: 
+        post: 
+          description: Create or update flavor extra specs
+          body: 
+            application/json: 
+              schema: flavorExtraSpecsCreateReq
+              example: !include examples/flavorExtraSpecsCreateReq-example.json
+          responses: 
+            201: 
+              body: 
+                application/json: 
+                  schema: flavorExtraSpecsCreateResp
+                  example: !include examples/flavorExtraSpecsCreateResp-example.json
+        get: 
+          description: Show flavor extra specs
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: flavorExtraSpecsListResp
+                  example: !include examples/flavorExtraSpecsListResp-example.json
+              headers: 
+                "X-OpenStack-Request-ID ": 
+                  description: Returns a unique request identifier that helps provide tracking for the request. Provider must configure middleware to provide the request ID.
+        /{flavor_extra_spec_key}: 
+          get: 
+            description: Show flavor extra specs
+            body: 
+              application/json: 
+                schema: flavorExtraSpecsCreateReq
+                example: !include examples/flavorExtraSpecsCreateReq-example.json
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: flavorExtraSpecsGetResp
+                    example: !include examples/flavorExtraSpecsGetResp-example.json
+                headers: 
+                  "X-OpenStack-Request-ID ": 
+                    description: Returns a unique request identifier that helps provide tracking for the request. Provider must configure middleware to provide the request ID.
+          put: 
+            description: Update flavor extra spec
+            body: 
+              application/json: 
+                schema: flavorExtraSpecsUpdateReq
+                example: !include examples/flavorExtraSpecsUpdateReq-example.json
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: flavorExtraSpecsUpdateResp
+                    example: !include examples/flavorExtraSpecsUpdateResp-example.json
+  /limits: 
+    get: 
+      description: Show limits
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: limitGetResp
+              example: !include examples/limitGetResp-example.json
+          headers: 
+            X-OpenStack-Request-ID: 
+  /os-agents: 
+    post: 
+      description: Create agent build
+      body: 
+        application/json: 
+          schema: agentPostReq
+          example: !include examples/agentPostReq-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: agentPostResp
+              example: !include examples/agentPostResp-example.json
+    get: 
+      description: List agent builds
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: agentsGetResp
+              example: !include examples/agentsGetResp-example.json
+          headers: 
+            X-OpenStack-Request-ID: 
+              description: Returns a unique request identifier that helps provide tracking for the request. Provider must configure middleware to provide the request ID.
+    delete: 
+      description: Delete agent build
+      responses: 
+        202: 
+    /{id}: 
+      put: 
+        description: Update agent build
+        body: 
+          application/json: 
+            schema: agentUpdatePutReq
+            example: !include examples/agentUpdatePutReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: agentUpdatePutResp
+                example: !include examples/agentUpdatePutResp-example.json
+  /os-aggregates: 
+    post: 
+      description: Create aggregate
+      body: 
+        application/json: 
+          schema: aggregatePostReq
+          example: !include examples/aggregatePostReq-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: aggregatePostResp
+              example: !include examples/aggregatePostResp-example.json
+    get: 
+      description: List aggregates
+      body: 
+        application/json: 
+          schema: aggregatePostReq
+          example: !include examples/aggregatePostReq-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: aggregatesListGetResp
+              example: !include examples/aggregatesListGetResp-example.json
+          headers: 
+            "X-OpenStack-Request-ID ": 
+              description: Returns a unique request identifier that helps provide tracking for the request. Provider must configure middleware to provide the request ID.
+    /{aggregate_id}: 
+      get: 
+        description: Update aggregate
+        body: 
+          application/json: 
+            schema: aggregateUpdatePostReq
+            example: !include examples/aggregateUpdatePostReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: aggregateUpdatePostResp
+                example: !include examples/aggregateUpdatePostResp-example.json
+            headers: 
+              X-OpenStack-Request-ID: 
+                description: Returns a unique request identifier that helps provide tracking for the request. Provider must configure middleware to provide the request ID.
+      /action: 
+        post: 
+          description: Remove host
+          body: 
+            application/json: 
+              schema: aggregateRemoveHostPostReq
+              example: !include examples/aggregateRemoveHostPostReq-example.json
+          responses: 
+            202: 
+              body: 
+                application/json: 
+                  schema: aggregatesRemoveHostPostResp
+                  example: !include examples/aggregatesRemoveHostPostResp-example.json
+  /os-cells: 
+    get: 
+      description: Lists cells with details
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: cellsListEmptyResp
+              example: !include examples/cellsListEmptyResp-example.json
+          headers: 
+            "X-OpenStack-Request-ID ": 
+              description: Returns a unique request identifier that helps provide tracking for the request. Provider must configure middleware to provide the request ID.
+        501: 
+          body: 
+            application/xml: 
+              schema: notImplemented
+            application/json: 
+              schema: ""
+    /cell3: 
+      get: 
+        description: Shows cell data
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: cellsGetResp
+                example: !include examples/cellsGetResp-example.json
+            headers: 
+              X-OpenStack-Request-ID: 
+                description: Returns a unique request identifier that helps provide tracking for the request. Provider must configure middleware to provide the request ID.
+          501: 
+            body: 
+              application/xml: 
+                schema: notImplemented
+              application/json: 
+                schema: ""
+    /nova: 
+      /capacities: 
+        get: 
+          description: Shows cell capacities
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: cellsCapacitiesResp
+                  example: !include examples/cellsCapacitiesResp-example.json
+                application/xml: 
+                  schema: cellsCapacitiesRespXML
+                  example: !include examples/cellsCapacitiesRespXML-example.xml
+            501: 
+              body: 
+                application/xml: 
+                  schema: notImplemented
+                application/json: 
+                  schema: ""
+  /os-certificates: 
+    post: 
+      description: Create certificate
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: certificateCreateResp
+              example: !include examples/certificateCreateResp-example.json
+    /root: 
+      get: 
+        description: Show certificate details
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: certificateGetRootResp
+                example: !include examples/certificateGetRootResp-example.json
+            headers: 
+              X-OpenStack-Request-ID: 
+                description: Returns a unique request identifier that helps provide tracking for the request. Provider must configure middleware to provide the request ID.
+  /os-hosts: 
+    get: 
+      description: List hosts
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: hostsListResp
+              example: !include examples/hostsListResp-example.json
+          headers: 
+            "X-OpenStack-Request-ID ": 
+              description: Returns a unique request identifier that helps provide tracking for the request. Provider must configure middleware to provide the request ID.
+    /{host_name}: 
+      put: 
+        description: Enables host
+        body: 
+          application/json: 
+            schema: hostPutMaintenanceReq
+            example: !include examples/hostPutMaintenanceReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: hostPutMaintenanceResp
+                example: !include examples/hostPutMaintenanceResp-example.json
+      get: 
+        description: Show host details
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: hostGetResp
+                example: !include examples/hostGetResp-example.json
+            headers: 
+              "X-OpenStack-Request-ID ": 
+                description: Returns a unique request identifier that helps provide tracking for the request. Provider must configure middleware to provide the request ID.
+      /reboot: 
+        get: 
+          description: Reboot host
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: hostGetReboot
+                  example: !include examples/hostGetReboot-example.json
+              headers: 
+                "X-OpenStack-Request-ID ": 
+                  description: Returns a unique request identifier that helps provide tracking for the request. Provider must configure middleware to provide the request ID.
+      /shutdown: 
+        get: 
+          description: Shut down host
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: hostGetShutdown
+                  example: !include examples/hostGetShutdown-example.json
+              headers: 
+                "X-OpenStack-Request-ID ": 
+                  description: Returns a unique request identifier that helps provide tracking for the request. Provider must configure middleware to provide the request ID.
+      /startup: 
+        get: 
+          description: Start host
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: hostGetStartup
+                  example: !include examples/hostGetStartup-example.json
+              headers: 
+                "X-OpenStack-Request-ID ": 
+                  description: Returns a unique request identifier that helps provide tracking for the request. Provider must configure middleware to provide the request ID.
+  /os-hypervisors: 
+    get: 
+      description: List hypervisors
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: hypervisorsListResp
+              example: !include examples/hypervisorsListResp-example.json
+    /search: 
+      get: 
+        description: Search hypervisors
+        queryParameters: 
+          query: 
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: hypervisorsSearchResp
+                example: !include examples/hypervisorsSearchResp-example.json
+    /statistics: 
+      get: 
+        description: Show hypervisor statistics
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: hypervisorsStatisticsResp
+                example: !include examples/hypervisorsStatisticsResp-example.json
+    /{hypervisor_id}: 
+      get: 
+        description: Show hypervisor details
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: hypervisorsShowResp
+                example: !include examples/hypervisorsShowResp-example.json
+      /servers: 
+        get: 
+          description: List servers for a hypervisor
+          body: 
+            application/json: 
+              schema: hypervisorsServersResp
+              example: !include examples/hypervisorsServersResp-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: hypervisorsListResp
+                  example: !include examples/hypervisorsListResp-example.json
+      /uptime: 
+        get: 
+          description: Show hypervisor uptime
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: hypervisorsUptimeResp
+                  example: !include examples/hypervisorsUptimeResp-example.json
+  /os-instance-usage-audit-log: 
+    get: 
+      description: List usage audits
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: instUsageAuditLogIndexGetResp
+              example: !include examples/instUsageAuditLogIndexGetResp-example.json
+    /{datetime}: 
+      get: 
+        description: List instance usage
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: instUsageAuditLogIndexWithBeforeGetResp
+                example: !include examples/instUsageAuditLogIndexWithBeforeGetResp-example.json
+  /os-migrations: 
+    get: 
+      description: List migrations
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: migrationsGet
+              example: !include examples/migrationsGet-example.json
+          headers: 
+            "X-OpenStack-Request-ID ": 
+              description: Returns a unique request identifier that helps provide tracking for the request. Provider must configure middleware to provide the request ID.
+  /os-quota-class-sets: 
+    /{class_id}: 
+      get: 
+        description: Show quota
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: quotaClassesShowGetResp
+                example: !include examples/quotaClassesShowGetResp-example.json
+      put: 
+        description: Update quota
+        body: 
+          application/json: 
+            schema: quotaClassesUpdatePostReq
+            example: !include examples/quotaClassesUpdatePostReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: quotaClassesUpdatePostResp
+                example: !include examples/quotaClassesUpdatePostResp-example.json
+  /os-quota-sets: 
+    /{tenant_id}: 
+      delete: 
+        description: Delete quota for tenant
+        responses: 
+          204: 
+      get: 
+        description: Show quotas
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: quotasShowGetResp
+                example: !include examples/quotasShowGetResp-example.json
+      put: 
+        description: Update quota for user or tenant.
+        body: 
+          application/json: 
+            schema: quotasUpdatePostReq
+            example: !include examples/quotasUpdatePostReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: quotasUpdatePostResp
+                example: !include examples/quotasUpdatePostResp-example.json
+      /defaults: 
+        get: 
+          description: Show default quotas
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: quotasShowDefaultsGetResp
+                  example: !include examples/quotasShowDefaultsGetResp-example.json
+  /os-simple-tenant-usage: 
+    get: 
+      description: List tenant usage for all tenants
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: simpleTenantUsageGet
+              example: !include examples/simpleTenantUsageGet-example.json
+    /{tenant_id}: 
+      get: 
+        description: Show usage details for tenant
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: simpleTenantUsageGetSpecific
+                example: !include examples/simpleTenantUsageGetSpecific-example.json
+  /servers: 
+    get: 
+      description: Shows server details
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: serverGetResp
+              example: !include examples/serverGetResp-example.json
+          headers: 
+            X-OpenStack-Request-ID: 
+              description: Returns a unique request identifier that helps provide tracking for the request. Provider must configure middleware to provide the request ID.
+    post: 
+      description: Remove IP from instance
+      body: 
+        application/json: 
+          schema: multinicRemoveFixedIpReq
+          example: !include examples/multinicRemoveFixedIpReq-example.json
+      responses: 
+        202: 
+    /action: 
+      post: 
+        description: Add IP to instance
+        body: 
+          application/json: 
+            schema: multinicAddFixedIpReq
+            example: !include examples/multinicAddFixedIpReq-example.json
+        responses: 
+          202: 
+    /detail: 
+      get: 
+        description: List server details for user
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: serversDetailResp
+                example: !include examples/serversDetailResp-example.json
+            headers: 
+              X-OpenStack-Request-ID: 
+                description: Returns a unique request identifier that helps provide tracking for the request. Provider must configure middleware to provide the request ID.
+    /details: 
+      get: 
+        description: Lists server details for user
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: serversDetailResp
+                example: !include examples/serversDetailResp-example.json
+            headers: 
+              "X-OpenStack-Request-ID ": 
+                description: Returns a unique request identifier that helps provide tracking for the request. Provider must configure middleware to provide the request ID.
+    /{server_id}: 
+      get: 
+        description: Show server details
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: serverGetResp
+                example: !include examples/serverGetResp-example.json
+            headers: 
+              X-OpenStack-Request-ID: 
+                description: Returns a unique request identifier that helps provide tracking for the request. Provider must configure middleware to provide the request ID.
+      post: 
+        description: Shelve server
+        body: 
+          application/json: 
+            schema: shelveServerReq
+            example: !include examples/shelveServerReq-example.json
+          application/xml: 
+            schema: shelveServerReq
+            example: !include examples/shelveServerReq-example.xml
+        responses: 
+          202: 
+      /action: 
+        post: 
+          description: Administrators only. Performs actions on a server. Specify the action in the request body.
+          body: 
+            application/json: 
+              schema: serverEvacuateReq
+              example: !include examples/serverEvacuateReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: serverEvacuateResp
+                  example: !include examples/serverEvacuateResp-example.json
+        /{server_id}: 
+          /action: 
+            post: 
+              description: Unpause server
+              body: 
+                application/json: 
+                  schema: adminActionsUnpause
+                  example: !include examples/adminActionsUnpause-example.json
+              responses: 
+                202: 
+      /actions: 
+        post: 
+          description: Get console output
+          body: 
+            application/json: 
+              schema: getVncConsolePostReq
+              example: !include examples/getVncConsolePostReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: getVncConsolePostResp
+                  example: !include examples/getVncConsolePostResp-example.json
+      /os-instance-actions: 
+        get: 
+          description: List actions for an instance
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: instanceActionsListResp
+                  example: !include examples/instanceActionsListResp-example.json
+        /{request_id}: 
+          get: 
+            description: Shows instance action
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: instanceActionGetResp
+                    example: !include examples/instanceActionGetResp-example.json
+      /os-server-password: 
+        get: 
+          description: Get server password
+          responses: 
+            200: 
+              body: 
+                application/xml: 
+                  schema: getServerPasswordXML
+                  example: !include examples/getServerPasswordXML-example.xml
+                application/json: 
+                  schema: getServerPassword
+                  example: !include examples/getServerPassword-example.json
+      /os-virtual-interfaces: 
+        get: 
+          description: List virtual interfaces
+          responses: 
+            202: 
+              body: 
+                application/xml: 
+                  schema: listVirtualInterfacesXML
+                  example: !include examples/listVirtualInterfacesXML-example.xml
+                application/json: 
+                  schema: listVirtualInterfaces
+                  example: !include examples/listVirtualInterfaces-example.json
+  /{server_id}​: 
+    /action: 
+      post: 
+        description: Performs actions on a server. Specify the action in the request body.
+        body: 
+          application/json: 
+            schema: serverActitonReq
+            example: !include examples/serverActitonReq-example.json
+        responses: 
+          201: 
+    /os-admin-password: 
+      delete: 
+        description: Clear server password
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: clearServerPassword
+                example: !include examples/clearServerPassword-example.json
+  /ips: 
+    get: 
+      description: List IPs
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: listIPsRes
+              example: !include examples/listIPsRes-example.json
+    /​{id}​: 
+      get: 
+        description: Show IP details
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: showIPDetailsRes
+                example: !include examples/showIPDetailsRes-example.json
+  /os-floating-ip-dns: 
+    get: 
+      description: List DNS domains
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: listDNSDomainsResXML
+              example: !include examples/listDNSDomainsResXML-example.xml
+            application/json: 
+              schema: listDNSDomainsRes
+              example: !include examples/listDNSDomainsRes-example.json
+    /​{domain}​: 
+      put: 
+        description: Create or update DNS domain
+        body: 
+          application/json: 
+            schema: createOrUpdateDNSDomainReq
+            example: !include examples/createOrUpdateDNSDomainReq-example.json
+          application/xml: 
+            schema: createOrUpdateDNSDomainReqXML
+            example: !include examples/createOrUpdateDNSDomainReqXML-example.xml
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: createOrUpdateDNSDomainResXML
+                example: !include examples/createOrUpdateDNSDomainResXML-example.xml
+              application/json: 
+                schema: createOrUpdateDNSDomainRes
+                example: !include examples/createOrUpdateDNSDomainRes-example.json
+      delete: 
+        description: Delete DNS domain
+        responses: 
+          200: 
+      /entries: 
+        /​{name}​: 
+          get: 
+            description: Find unique DNS entry
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    schema: findUniqueDNSEntryXML
+                    example: !include examples/findUniqueDNSEntry-example.xml
+                  application/json: 
+                    schema: findUniqueDNSEntry
+                    example: !include examples/findUniqueDNSEntry-example.json
+          put: 
+            description: Create or update DNS entry
+            body: 
+              application/json: 
+                schema: createOrUpdateDNSEntryReq
+                example: !include examples/createOrUpdateDNSEntryReq-example.json
+              application/xml: 
+                schema: createOrUpdateDNSEntryReqXML
+                example: !include examples/createOrUpdateDNSEntryReqXML-example.xml
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    schema: createOrUpdateDNSEntryResXML
+                    example: !include examples/createOrUpdateDNSEntryResXML-example.xml
+                  application/json: 
+                    schema: createOrUpdateDNSEntryRes
+                    example: !include examples/createOrUpdateDNSEntryRes-example.json
+          delete: 
+            description: Delete DNS entry
+            responses: 
+              200: 
+        /{ip}: 
+          description: ""
+          get: 
+            description: List DNS entries
+            responses: 
+              200: 
+                body: 
+                  application/xml: 
+                    schema: listDNSEntriesResXML
+                    example: !include examples/listDNSEntriesResXML-example.xml
+                  application/json: 
+                    schema: listDNSEntriesRes
+                    example: !include examples/listDNSEntriesResXML-example.json
+  /os-floating-ip-pools: 
+    get: 
+      description: List floating IP pools
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: listFloatingIPPoolsXML
+              example: !include examples/listFloatingIPPoolsXML-example.xml
+            application/json: 
+              schema: listFloatingIPPools
+              example: !include examples/listFloatingIPPools-example.json
+  /os-floating-ips: 
+    get: 
+      description: List floating IPs
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: listFloatingIPsResXML
+              example: !include examples/listFloatingIPsResXML-example.xml
+            application/json: 
+              schema: listFloatingIPsRes
+              example: !include examples/listFloatingIPsRes-example.json
+    post: 
+      description: Allocate floating IP
+      body: 
+        application/json: 
+          schema: allocateFloatingIPReq
+          example: !include examples/allocateFloatingIPReq-example.json
+        application/xml: 
+          schema: allocateFloatingIPReqXML
+          example: !include examples/allocateFloatingIPReqXML-example.xml
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: allocateFloatingIPResXML
+              example: !include examples/allocateFloatingIPResXML-example.xml
+            application/json: 
+              schema: allocateFloatingIPRes
+              example: !include examples/allocateFloatingIPRes-example.json
+    /{id}​: 
+      delete: 
+        description: Deallocate floating IP
+        responses: 
+          202: 
+  /os-floating-ips-bulk: 
+    get: 
+      description: List floating IPs
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: listFloatingIPsBulkResXML
+              example: !include examples/listFloatingIPsBulkResXML-example.xml
+            application/json: 
+              schema: listFloatingIPsBulkRes
+              example: !include examples/listFloatingIPsBulkRes-example.json
+    post: 
+      description: Create floating IPs
+      body: 
+        application/json: 
+          schema: createFloatingBulkIPsReq
+          example: !include examples/createFloatingBulkIPsReq-example.json
+        application/xml: 
+          schema: createFloatingBulkIPsReqXML
+          example: !include examples/createFloatingBulkIPsReqXML-example.xml
+      responses: 
+        200: 
+          body: 
+            application/xml: 
+              schema: createFloatingBulkIPsResXML
+              example: !include examples/createFloatingBulkIPsResXML-example.xml
+            application/json: 
+              schema: createFloatingBulkIPsRes
+              example: !include examples/createFloatingBulkIPsRes-example.json
+    /delete: 
+      post: 
+        description: Bulk-delete floating IPs
+        body: 
+          application/json: 
+            schema: bulkDeleteFloatingIPsReq
+            example: !include examples/bulkDeleteFloatingIPsReq-example.json
+          application/xml: 
+            schema: bulkDeleteFloatingIPsReqXML
+            example: !include examples/bulkDeleteFloatingIPsReqXML-example.xml
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: bulkDeleteFloatingIPsResXML
+                example: !include examples/bulkDeleteFloatingIPsResXML-example.xml
+              application/json: 
+                schema: bulkDeleteFloatingIPsRes
+                example: !include examples/bulkDeleteFloatingIPsRes-example.json
+    /​{host_name}​: 
+      get: 
+        description: List floating IPs by host
+        responses: 
+          200: 
+            body: 
+              application/xml: 
+                schema: listFloatingIPsByHostResXML
+                example: !include examples/listFloatingIPsByHostResXML-example.xml
+              application/json: 
+                schema: listFloatingIPsByHostRes
+                example: !include examples/listFloatingIPsByHostRes-example.json
+  /keypairs: 
+    get: 
+      description: List keypairs
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: listKeypairsRes
+              example: !include examples/listKeypairsRes-example.json
+    post: 
+      description: Create or import keypair
+      body: 
+        application/json: 
+          schema: createOrImportKeypairReq
+          example: !include examples/createOrImportKeypairReq-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: createOrImportKeypairRes
+              example: !include examples/createOrImportKeypairRes-example.json
+    /​{keypair_name}​: 
+      get: 
+        description: Show keypair information
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: showKeypairInformationRes
+                example: !include examples/showKeypairInformationRes-example.json
+      delete: 
+        description: Delete keypair
+        responses: 
+          204: 

@@ -1,0 +1,10 @@
+{
+  "data": {
+    "locations": [
+      "us-ny-new york",
+      "us-ny-brooklyn"
+    ]
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

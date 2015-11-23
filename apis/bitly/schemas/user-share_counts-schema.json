@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "tz_offset": {
+          "description": "The offset for the specified timezone, in hours.",
+          "type": "integer"
+        },
+        "unit": {
+          "description": "An echo of the specified unit value.",
+          "type": "string"
+        },
+        "units": {
+          "description": "An echo of the specified units value.",
+          "type": "integer"
+        },
+        "share_counts": {
+          "items": {
+            "description": "The number of shares from this user's account. If rollup=false, returns timeseries data per unit.",
+            "properties": {
+              "dt": {
+                "description": "Timestamp corresponding to the specified unit.",
+                "type": "string"
+              },
+              "shares": {
+                "description": "The number of shares in that timeframe.",
+                "type": "integer"
+              }
+            }
+          },
+          "type": "array"
+        }
+      }
+    },
+    "status_code": {
+      "type": "integer",
+      "required": true
+    },
+    "status_txt": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

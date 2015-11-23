@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://openstack.org/quantum/api/v2.0" xmlns:quantum="http://openstack.org/quantum/api/v2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <xsd:element name="extensions">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="extension" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="updated" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="links" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:extension base="xsd:string">
+                      <xsd:attribute name="type" type="xsd:normalizedString" use="required"/>
+                    </xsd:extension>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="namespace" minOccurs="0" maxOccurs="1" type="xsd:anyURI"/>
+              <xsd:element name="alias" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="description" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

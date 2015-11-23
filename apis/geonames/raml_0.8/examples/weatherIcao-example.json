@@ -1,0 +1,21 @@
+{
+  "weatherObservation" : {
+    "weatherCondition" : "n/a" ,
+    "clouds" : "nil significant cloud" ,
+    "observation" : "LSZH 140850Z 28003KT 210V330 3000 BR NSC 07/05 Q1027 NOSIG" ,
+    "windDirection" : 280 ,
+    "ICAO" : "LSZH" ,
+    "elevation" : 432 ,
+    "countryCode" : "CH" ,
+    "cloudsCode" : "NSC" ,
+    "lng" : 8.533333333333333 ,
+    "temperature" : "7" ,
+    "dewPoint" : "5" ,
+    "windSpeed" : "03" ,
+    "humidity" : 87 ,
+    "stationName" : "Zurich-Kloten" ,
+    "datetime" : "2014-03-14 08:50:00" ,
+    "lat" : 47.483333333333334 ,
+    "hectoPascAltimeter" : 1027
+  }
+}

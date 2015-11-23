@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Receipts>
+  <Receipt>
+    <ReceiptID>b7072163-84e5-4501-a7bd-2849927980c0</ReceiptID>
+    <ReceiptNumber>1</ReceiptNumber>
+    <User>
+      <UserID>c81045b2-5740-4aea-bf8a-3956941af387</UserID>
+      <FirstName>John</FirstName>
+      <LastName>Smith</LastName>
+    </User>
+    <Contact>
+      <ContactID>7f71b205-4ad9-4779-8479-60f46e91fa5c</ContactID>
+      <Name>City Coffeeworks</Name>
+    </Contact>
+    <Date>2010-07-15T00:00:00</Date>
+    <UpdatedDateUTC>2011-10-02T19:08:18.767</UpdatedDateUTC>
+    <LineAmountTypes>Inclusive</LineAmountTypes>
+    <SubTotal>3.30</SubTotal>
+    <TotalTax>0.50</TotalTax>
+    <Total>3.80</Total>
+    <HasAttachments>false</HasAttachments>
+  </Receipt>
+  <Receipt>
+    <ReceiptID>78f5131c-e5a2-4070-89f7-c77a18bb46df</ReceiptID>
+    <ReceiptNumber>2</ReceiptNumber>
+  </Receipt>
+</Receipts>

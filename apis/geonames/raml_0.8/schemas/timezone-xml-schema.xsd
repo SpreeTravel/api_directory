@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="geonames">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="timezone" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="countryCode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="countryName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="lat" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="lng" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="timezoneId" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="dstOffset" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="gmtOffset" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="rawOffset" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="time" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="sunrise" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="sunset" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+            </xsd:sequence>
+            <xsd:attribute name="tzversion" type="xsd:normalizedString" use="required"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

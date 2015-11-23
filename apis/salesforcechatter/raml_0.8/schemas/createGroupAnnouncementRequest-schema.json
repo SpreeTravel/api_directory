@@ -1,0 +1,36 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "body" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "messageSegments" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "text" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "type" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        }
+      }
+    } ,
+    "expirationDate" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": 100,
+  "body": "body",
+  "last_post": {
+    "member": {
+      "name": "name"
+    },
+    "created": 100
+  },
+  "updated": 100,
+  "reply_count": 100,
+  "created": 100,
+  "subject": "subject",
+  "started_by": {
+    "name": "name"
+  },
+  "board": {
+    "id": 100
+  }
+}

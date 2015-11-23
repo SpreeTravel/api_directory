@@ -1,0 +1,22 @@
+{
+  "zip": "zip",
+  "lon": 1.0,
+  "meetup_count": 100,
+  "past_meetup_count": 100,
+  "state": 100,
+  "city": "city",
+  "country": "country",
+  "id": 100,
+  "updated": 100,
+  "udf_{varname}": "udf_{varname}",
+  "created": 100,
+  "container": {
+    "id": 100,
+    "name": "name",
+    "urlname": "urlname"
+  },
+  "name": "name",
+  "meetup_url": "meetup_url",
+  "urlname": "urlname",
+  "lat": 1.0
+}

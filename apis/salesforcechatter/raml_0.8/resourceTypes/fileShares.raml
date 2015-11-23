@@ -1,0 +1,72 @@
+post: 
+  description: Share the specified file with users.
+  queryParameters: 
+    id1: 
+      description: List of up to 9 user IDs to share this file with. This list must match the list of sharing types.
+      required: true
+    id2: 
+      description: List of up to 9 user IDs to share this file with. This list must match the list of sharing types.
+    id3: 
+      description: List of up to 9 user IDs to share this file with. This list must match the list of sharing types.
+    id4: 
+      description: List of up to 9 user IDs to share this file with. This list must match the list of sharing types.
+    id5: 
+      description: List of up to 9 user IDs to share this file with. This list must match the list of sharing types.
+    id6: 
+      description: List of up to 9 user IDs to share this file with. This list must match the list of sharing types.
+    id7: 
+      description: List of up to 9 user IDs to share this file with. This list must match the list of sharing types.
+    id8: 
+      description: List of up to 9 user IDs to share this file with. This list must match the list of sharing types.
+    id9: 
+      description: List of up to 9 user IDs to share this file with. This list must match the list of sharing types.
+    message: 
+      description: Private message body that’s sent to the recipients. If Salesforce Communities is enabled, an email is sent instead of a private message.
+    sharingType1: 
+      description: List of sharing types, either C for collaborator or V for viewer. This list must match the list of user IDs.
+      required: true
+    sharingType2: 
+      description: List of sharing types, either C for collaborator or V for viewer. This list must match the list of user IDs.
+    sharingType3: 
+      description: List of sharing types, either C for collaborator or V for viewer. This list must match the list of user IDs.
+    sharingType4: 
+      description: List of sharing types, either C for collaborator or V for viewer. This list must match the list of user IDs.
+    sharingType5: 
+      description: List of sharing types, either C for collaborator or V for viewer. This list must match the list of user IDs.
+    sharingType6: 
+      description: List of sharing types, either C for collaborator or V for viewer. This list must match the list of user IDs.
+    sharingType7: 
+      description: List of sharing types, either C for collaborator or V for viewer. This list must match the list of user IDs.
+    sharingType8: 
+      description: List of sharing types, either C for collaborator or V for viewer. This list must match the list of user IDs.
+    sharingType9: 
+      description: List of sharing types, either C for collaborator or V for viewer. This list must match the list of user IDs.
+  body: 
+    application/json: 
+      schema: fileShareRequest
+      example: !include examples/fileShareRequest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+head: 
+  description: Returns information about the objects with which the specified file has been shared. Objects can be users, groups, or records.
+  responses: 
+    200: 
+get: 
+  description: Returns information about the objects with which the specified file has been shared. Objects can be users, groups, or records.
+  queryParameters: 
+    page: 
+      description: An integer greater than 0 specifying a page of topics. The default value is zero.
+      type: integer
+      default: 0
+      example: 5
+    pageSize: 
+      description: Specifies the number of items per page. Valid values are between 1 and 100. The default value is 25.
+      type: integer
+      default: 25
+      example: 5
+  responses: 
+    200: 
+      body: 
+        application/json: 

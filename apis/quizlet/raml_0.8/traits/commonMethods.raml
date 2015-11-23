@@ -1,0 +1,45 @@
+queryParameters: 
+  whitespace: 
+    description: "Add this parameter (whitespace=1) to indent the results for easier human reading of the raw results. This can make testing/debugging easier, and has no effect on the results. Without this parameter, Quizlet will minimize whitespace and network traffic."
+    type: boolean
+    default: 0
+    example: whitespace=1
+  callback: 
+    description: "A javascript function name for use inside a web application, using the JSON-P method. callback=foo will wrap the response in the foo function: foo({...data...})"
+    example: callback=foo
+responses: 
+  400: 
+    description: |
+      Bad Request - There is something wrong with the data you provided (e.g. You didn't send a "title" when creating a new set).
+    body: 
+      application/json: 
+        schema: error
+        example: !include ../examples/error-example.json
+  401: 
+    description: |
+      Unauthorized - The access token you provided does not have permission to do what you asked (e.g. Viewing a private set using a public access token)
+    body: 
+      application/json: 
+        schema: error401-500
+        example: !include ../examples/error401-500-example.json
+  404: 
+    description: |
+      Not Found - The resource you specified doesn't exist (e.g. the set id you provided doesn't exist or has been deleted).
+    body: 
+      application/json: 
+        schema: error401-500
+        example: !include ../examples/error401-500-example.json
+  405: 
+    description: |
+      Method Not Allowed - The resource exists, but what you requested is not allowed (e.g. we don't allow deleting users via the API).
+    body: 
+      application/json: 
+        schema: error401-500
+        example: !include ../examples/error401-500-example.json
+  500: 
+    description: |
+      Server Error - An unknown internal error occurred. We're automatically notified of these.
+    body: 
+      application/json: 
+        schema: error401-500
+        example: !include ../examples/error401-500-example.json

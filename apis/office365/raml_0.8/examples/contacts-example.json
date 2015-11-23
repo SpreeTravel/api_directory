@@ -1,0 +1,9 @@
+{
+  "@odata.id": "https://outlook.office365.com/EWS/OData/Users('sadie@contoso.com')/ContactFolders('AAMkADA5...')",
+  "@odata.editLink": "https://outlook.office365.com/EWS/OData/Users('sadie@contoso.com')/ContactFolders('AAMkADA5...')",
+  "Id": "AAMkADA5...",
+  "ParentFolderId": "AAMkADA5...",
+  "DisplayName": "Contacts",
+  "Contacts@odata.navigationLink": "https://outlook.office365.com/EWS/OData/Users('sadie@contoso.com')/ContactFolders('AAMkADA5...')/Contacts",
+  "ChildFolders@odata.navigationLink": "https://outlook.office365.com/EWS/OData/Users('sadie@contoso.com')/ContactFolders('AAMkADA5...')/ChildFolders"
+}

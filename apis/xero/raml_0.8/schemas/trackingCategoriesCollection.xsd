@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="TrackingCategories">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="TrackingCategory"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="TrackingCategory">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Name"/>
+    <xs:element ref="Status"/>
+    <xs:element ref="TrackingCategoryID"/>
+    <xs:element ref="Options"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Status" type="xs:NCName"/>
+  <xs:element name="TrackingCategoryID" type="xs:string"/>
+  <xs:element name="Options">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element maxOccurs="unbounded" ref="Option"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Option">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="TrackingOptionID"/>
+    <xs:element ref="Name"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="TrackingOptionID" type="xs:string"/>
+  <xs:element name="Name" type="xs:string"/>
+</xs:schema>

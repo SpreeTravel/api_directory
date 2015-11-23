@@ -1,0 +1,60 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "description" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "visibility" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "category_id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "variations" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "pricing_type" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "price_money" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "currency_code" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "amount" : {
+                  "type" : "number" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "sku" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

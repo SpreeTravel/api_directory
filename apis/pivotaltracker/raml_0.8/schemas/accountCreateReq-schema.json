@@ -1,0 +1,23 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "email" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "initials" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "person_id" : {
+      "type" : "number" ,
+      "required" : false
+    }
+  }
+}

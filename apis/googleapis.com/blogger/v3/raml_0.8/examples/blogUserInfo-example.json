@@ -1,0 +1,11 @@
+{
+  "kind": "blogger#blogUserInfo",
+  "blog": blogs Resource,
+  "blog_user_info": {
+    "kind": "blogger#blogPerUserInfo",
+    "userId": string,
+    "blogId": string,
+    "photosAlbumKey": string,
+    "hasAdminAccess": boolean
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "key": "example key",
+  "id": 42,
+  "url": "http://example/webhook-url",
+  "description": "My Example Webhook",
+  "events": [
+    "send",
+    "open",
+    "click"
+  ]
+}

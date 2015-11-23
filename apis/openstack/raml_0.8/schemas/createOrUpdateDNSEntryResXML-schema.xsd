@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="dns_entry">
+    <xsd:complexType>
+      <xsd:sequence/>
+      <xsd:attribute name="ip" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="domain" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="type" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="id" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="name" type="xsd:normalizedString" use="required"/>
+    </xsd:complexType>
+    <xsd:attribute name="ip" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="domain" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="type" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="id" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="name" type="xsd:normalizedString" use="required"/>
+  </xsd:element>
+</xsd:schema>

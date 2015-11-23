@@ -1,0 +1,118 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "activities": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "activityId": {
+            "type": "integer"
+          },
+          "activityParentId": {
+            "type": "integer"
+          },
+          "calories": {
+            "type": "integer"
+          },
+          "description": {
+            "type": "string"
+          },
+          "distance": {
+            "type": "integer"
+          },
+          "duration": {
+            "type": "integer"
+          },
+          "hasStartTime": {
+            "type": "integer"
+          },
+          "isFavorite": {
+            "type": "integer"
+          },
+          "logId": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "startTime": {
+            "type": "string"
+          },
+          "steps": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "goals": {
+      "type": "object",
+      "properties": {
+        "caloriesOut": {
+          "type": "integer"
+        },
+        "distance": {
+          "type": "number"
+        },
+        "floors": {
+          "type": "integer"
+        },
+        "steps": {
+          "type": "integer"
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "activityCalories": {
+          "type": "integer"
+        },
+        "caloriesBMR": {
+          "type": "integer"
+        },
+        "caloriesOut": {
+          "type": "integer"
+        },
+        "distances": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "activity": {
+                "type": "string"
+              },
+              "distance": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "elevation": {
+          "type": "number"
+        },
+        "fairlyActiveMinutes": {
+          "type": "integer"
+        },
+        "floors": {
+          "type": "integer"
+        },
+        "lightlyActiveMinutes": {
+          "type": "integer"
+        },
+        "marginalCalories": {
+          "type": "integer"
+        },
+        "sedentaryMinutes": {
+          "type": "integer"
+        },
+        "steps": {
+          "type": "integer"
+        },
+        "veryActiveMinutes": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

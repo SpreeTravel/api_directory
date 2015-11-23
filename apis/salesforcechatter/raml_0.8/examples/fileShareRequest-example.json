@@ -1,0 +1,12 @@
+{
+  "message" : "I shared a document with you." ,
+  "shares" : [
+    {
+      "id" : "005D0000001Az4l" ,
+      "sharingType" : "V"
+    } , {
+      "id" : "005D0000001B2ny" ,
+      "sharingType" : "C"
+    }
+  ]
+}

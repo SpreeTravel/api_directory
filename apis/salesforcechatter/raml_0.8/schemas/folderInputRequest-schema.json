@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "isInMyFileSync": {
+      "type": "boolean",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "parentFolderId": {
+      "type": "string",
+      "required": false
+    },
+    "path": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

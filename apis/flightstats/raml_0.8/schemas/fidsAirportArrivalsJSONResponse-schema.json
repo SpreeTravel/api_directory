@@ -1,0 +1,46 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "fidsData" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "flightNumber" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "airlineLogoUrlPng" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "isCodeshare" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "remarks" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "city" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "gate" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "currentTime" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

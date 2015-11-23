@@ -1,0 +1,99 @@
+{
+  "type": "object",
+  "": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "first_page_uri": {
+      "type": "string"
+    },
+    "end": {
+      "type": "integer"
+    },
+    "previous_page_uri": {
+      "type": "string"
+    },
+    "usage_triggers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sid": {
+            "type": "string"
+          },
+          "date_created": {
+            "type": "string"
+          },
+          "date_updated": {
+            "type": "string"
+          },
+          "account_sid": {
+            "type": "string"
+          },
+          "friendly_name": {
+            "type": "string"
+          },
+          "recurring": {
+            "type": "string"
+          },
+          "usage_category": {
+            "type": "string"
+          },
+          "trigger_by": {
+            "enum": [
+              "count",
+              "usage",
+              "price"
+            ]
+          },
+          "trigger_value": {
+            "type": "string"
+          },
+          "current_value": {
+            "type": "string"
+          },
+          "usage_record_uri": {
+            "type": "string"
+          },
+          "callback_url": {
+            "type": "string"
+          },
+          "callback_method": {
+            "enum": [
+              "GET",
+              "POST"
+            ]
+          },
+          "date_fired": {
+            "type": "string"
+          },
+          "uri": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "uri": {
+      "type": "string"
+    },
+    "page_size": {
+      "type": "integer"
+    },
+    "start": {
+      "type": "integer"
+    },
+    "next_page_uri": {
+      "type": "string"
+    },
+    "num_pages": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    },
+    "last_page_uri": {
+      "type": "string"
+    },
+    "page": {
+      "type": "integer"
+    }
+  }
+}

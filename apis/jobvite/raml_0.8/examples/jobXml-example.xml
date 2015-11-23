@@ -1,0 +1,25 @@
+<jobs>
+	<companyName>Jobvite</companyName>
+	<siteUrl/>
+	<recruiterEmail>abc@jobvite.com</recruiterEmail>
+	<closeMissingReqs>true</closeMissingReqs>
+	<job>
+		<requiredFields>
+			<applyLink/>
+			<briefDescription/>
+			<description/>
+			<category/>
+			<jobId/>
+			<jobLink/>
+			<locationName/>
+			<locationCity/>
+			<locationState/>
+			<locationCountry/>
+			<recruiterEmail/>
+			<title/>
+		</requiredFields>
+		<customFields>
+			<customField1>custom field 1 value</customField1>
+		</customFields>
+	</job>
+</jobs>

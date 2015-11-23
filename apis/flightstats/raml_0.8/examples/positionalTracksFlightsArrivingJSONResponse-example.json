@@ -1,0 +1,1397 @@
+{
+  "request" : {
+    "airline" : {
+      "requestedCode" : "AA" ,
+      "fsCode" : "AA"
+    } ,
+    "flight" : {
+      "requested" : "1113" ,
+      "interpreted" : "1113"
+    } ,
+    "date" : {
+      "year" : "2015" ,
+      "month" : "4" ,
+      "day" : "29" ,
+      "interpreted" : "2015-04-29"
+    } ,
+    "hourOfDay" : {
+      "interpreted" : 0
+    } ,
+    "numHours" : {
+      "interpreted" : 24
+    } ,
+    "utc" : {
+      "interpreted" : false
+    } ,
+    "airport" : {
+    } ,
+    "includeFlightPlan" : {
+      "interpreted" : false
+    } ,
+    "maxPositions" : {
+    } ,
+    "maxPositionAgeMinutes" : {
+    } ,
+    "codeType" : {
+    } ,
+    "extendedOptions" : {
+    } ,
+    "url" : "https://api.flightstats.com/flex/flightstatus/rest/v2/json/flight/tracks/AA/1113/arr/2015/4/29"
+  } ,
+  "appendix" : {
+    "airlines" : [
+      {
+        "fs" : "AA" ,
+        "iata" : "AA" ,
+        "icao" : "AAL" ,
+        "name" : "American Airlines" ,
+        "phoneNumber" : "1-800-433-7300" ,
+        "active" : true
+      }
+    ] ,
+    "airports" : [
+      {
+        "fs" : "ORD" ,
+        "iata" : "ORD" ,
+        "icao" : "KORD" ,
+        "faa" : "ORD" ,
+        "name" : "O'Hare International Airport" ,
+        "street1" : "10000 West O'Hare" ,
+        "city" : "Chicago" ,
+        "cityCode" : "CHI" ,
+        "stateCode" : "IL" ,
+        "postalCode" : "60666" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Chicago" ,
+        "weatherZone" : "ILZ014" ,
+        "localTime" : "2015-04-29T06:45:08.113" ,
+        "utcOffsetHours" : -5 ,
+        "latitude" : 41.976912 ,
+        "longitude" : -87.904876 ,
+        "elevationFeet" : 668 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/ORD?codeType=fs" ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/ORD?codeType=fs"
+      } , {
+        "fs" : "LAX" ,
+        "iata" : "LAX" ,
+        "icao" : "KLAX" ,
+        "faa" : "LAX" ,
+        "name" : "Los Angeles International Airport" ,
+        "street1" : "One World Way" ,
+        "street2" : "" ,
+        "city" : "Los Angeles" ,
+        "cityCode" : "LAX" ,
+        "stateCode" : "CA" ,
+        "postalCode" : "90045-5803" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Los_Angeles" ,
+        "weatherZone" : "CAZ041" ,
+        "localTime" : "2015-04-29T04:45:08.113" ,
+        "utcOffsetHours" : -7 ,
+        "latitude" : 33.943399 ,
+        "longitude" : -118.408279 ,
+        "elevationFeet" : 126 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/LAX?codeType=fs" ,
+        "weatherUrl" : "https://api.flightstats.com/flex/weather/rest/v1/json/all/LAX?codeType=fs"
+      }
+    ]
+  } ,
+  "flightTracks" : [
+    {
+      "flightId" : 534404114 ,
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "1113" ,
+      "tailNumber" : "N959NN" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "departureDate" : {
+        "dateLocal" : "2015-04-29T01:30:00.000" ,
+        "dateUtc" : "2015-04-29T08:30:00.000Z"
+      } ,
+      "equipment" : "738" ,
+      "delayMinutes" : 18 ,
+      "bearing" : 91.77708440872406 ,
+      "heading" : 86.99958858046776 ,
+      "positions" : [
+        {
+          "lon" : -96.9752 ,
+          "lat" : 42.5454 ,
+          "speedMph" : 490 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:39:24.000Z"
+        } , {
+          "lon" : -97.1318 ,
+          "lat" : 42.5394 ,
+          "speedMph" : 503 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:38:24.000Z"
+        } , {
+          "lon" : -97.2885 ,
+          "lat" : 42.5335 ,
+          "speedMph" : 492 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:37:24.000Z"
+        } , {
+          "lon" : -97.4502 ,
+          "lat" : 42.5272 ,
+          "speedMph" : 450 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:36:24.000Z"
+        } , {
+          "lon" : -97.5926 ,
+          "lat" : 42.5215 ,
+          "speedMph" : 447 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:35:24.000Z"
+        } , {
+          "lon" : -97.7449 ,
+          "lat" : 42.515 ,
+          "speedMph" : 421 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:34:24.000Z"
+        } , {
+          "lon" : -97.8806 ,
+          "lat" : 42.509 ,
+          "speedMph" : 455 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:33:24.000Z"
+        } , {
+          "lon" : -98.029 ,
+          "lat" : 42.5026 ,
+          "speedMph" : 460 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:32:24.000Z"
+        } , {
+          "lon" : -98.1793 ,
+          "lat" : 42.4957 ,
+          "speedMph" : 465 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:31:24.000Z"
+        } , {
+          "lon" : -98.3302 ,
+          "lat" : 42.4888 ,
+          "speedMph" : 464 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:30:24.000Z"
+        } , {
+          "lon" : -98.4817 ,
+          "lat" : 42.4813 ,
+          "speedMph" : 457 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:29:24.000Z"
+        } , {
+          "lon" : -98.6319 ,
+          "lat" : 42.472 ,
+          "speedMph" : 449 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:28:24.000Z"
+        } , {
+          "lon" : -98.7791 ,
+          "lat" : 42.4616 ,
+          "speedMph" : 468 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:27:24.000Z"
+        } , {
+          "lon" : -98.9326 ,
+          "lat" : 42.4461 ,
+          "speedMph" : 484 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:26:24.000Z"
+        } , {
+          "lon" : -99.085 ,
+          "lat" : 42.4305 ,
+          "speedMph" : 491 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:25:24.000Z"
+        } , {
+          "lon" : -99.2431 ,
+          "lat" : 42.4142 ,
+          "speedMph" : 474 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:24:23.000Z"
+        } , {
+          "lon" : -99.3937 ,
+          "lat" : 42.3985 ,
+          "speedMph" : 453 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:23:23.000Z"
+        } , {
+          "lon" : -99.544 ,
+          "lat" : 42.3828 ,
+          "speedMph" : 429 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:22:23.000Z"
+        } , {
+          "lon" : -99.6848 ,
+          "lat" : 42.3678 ,
+          "speedMph" : 455 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:21:23.000Z"
+        } , {
+          "lon" : -99.8322 ,
+          "lat" : 42.3519 ,
+          "speedMph" : 471 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:20:23.000Z"
+        } , {
+          "lon" : -99.9802 ,
+          "lat" : 42.3357 ,
+          "speedMph" : 474 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:19:23.000Z"
+        } , {
+          "lon" : -100.1277 ,
+          "lat" : 42.3193 ,
+          "speedMph" : 470 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:18:23.000Z"
+        } , {
+          "lon" : -100.2832 ,
+          "lat" : 42.3018 ,
+          "speedMph" : 439 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:17:23.000Z"
+        } , {
+          "lon" : -100.4279 ,
+          "lat" : 42.2853 ,
+          "speedMph" : 457 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:16:22.000Z"
+        } , {
+          "lon" : -100.5702 ,
+          "lat" : 42.2692 ,
+          "speedMph" : 486 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:15:22.000Z"
+        } , {
+          "lon" : -100.7235 ,
+          "lat" : 42.2512 ,
+          "speedMph" : 482 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:14:22.000Z"
+        } , {
+          "lon" : -100.8765 ,
+          "lat" : 42.2334 ,
+          "speedMph" : 459 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:13:22.000Z"
+        } , {
+          "lon" : -101.0264 ,
+          "lat" : 42.2154 ,
+          "speedMph" : 468 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:12:22.000Z"
+        } , {
+          "lon" : -101.1821 ,
+          "lat" : 42.1969 ,
+          "speedMph" : 456 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:11:22.000Z"
+        } , {
+          "lon" : -101.3232 ,
+          "lat" : 42.1797 ,
+          "speedMph" : 491 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:10:22.000Z"
+        } , {
+          "lon" : -101.4865 ,
+          "lat" : 42.1596 ,
+          "speedMph" : 482 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:09:18.000Z"
+        } , {
+          "lon" : -101.6457 ,
+          "lat" : 42.1397 ,
+          "speedMph" : 449 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:08:18.000Z"
+        } , {
+          "lon" : -101.7851 ,
+          "lat" : 42.1222 ,
+          "speedMph" : 468 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:07:18.000Z"
+        } , {
+          "lon" : -101.9357 ,
+          "lat" : 42.103 ,
+          "speedMph" : 463 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:06:18.000Z"
+        } , {
+          "lon" : -102.0845 ,
+          "lat" : 42.0839 ,
+          "speedMph" : 463 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:05:18.000Z"
+        } , {
+          "lon" : -102.2334 ,
+          "lat" : 42.0648 ,
+          "speedMph" : 466 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:04:18.000Z"
+        } , {
+          "lon" : -102.3829 ,
+          "lat" : 42.045 ,
+          "speedMph" : 470 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:03:18.000Z"
+        } , {
+          "lon" : -102.5335 ,
+          "lat" : 42.0249 ,
+          "speedMph" : 471 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:02:18.000Z"
+        } , {
+          "lon" : -102.6839 ,
+          "lat" : 42.0048 ,
+          "speedMph" : 474 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:01:18.000Z"
+        } , {
+          "lon" : -102.8354 ,
+          "lat" : 41.9841 ,
+          "speedMph" : 471 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T11:00:18.000Z"
+        } , {
+          "lon" : -102.9872 ,
+          "lat" : 41.9645 ,
+          "speedMph" : 479 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:59:18.000Z"
+        } , {
+          "lon" : -103.1392 ,
+          "lat" : 41.9447 ,
+          "speedMph" : 489 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:58:18.000Z"
+        } , {
+          "lon" : -103.2909 ,
+          "lat" : 41.923 ,
+          "speedMph" : 483 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:57:18.000Z"
+        } , {
+          "lon" : -103.4414 ,
+          "lat" : 41.895 ,
+          "speedMph" : 467 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:56:18.000Z"
+        } , {
+          "lon" : -103.5813 ,
+          "lat" : 41.8538 ,
+          "speedMph" : 453 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:55:18.000Z"
+        } , {
+          "lon" : -103.7194 ,
+          "lat" : 41.8035 ,
+          "speedMph" : 450 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:54:18.000Z"
+        } , {
+          "lon" : -103.8494 ,
+          "lat" : 41.7536 ,
+          "speedMph" : 472 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:53:18.000Z"
+        } , {
+          "lon" : -103.9827 ,
+          "lat" : 41.7019 ,
+          "speedMph" : 478 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:52:18.000Z"
+        } , {
+          "lon" : -104.1173 ,
+          "lat" : 41.6496 ,
+          "speedMph" : 466 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:51:18.000Z"
+        } , {
+          "lon" : -104.2538 ,
+          "lat" : 41.5963 ,
+          "speedMph" : 449 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:50:18.000Z"
+        } , {
+          "lon" : -104.3878 ,
+          "lat" : 41.5439 ,
+          "speedMph" : 448 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:49:18.000Z"
+        } , {
+          "lon" : -104.5139 ,
+          "lat" : 41.4941 ,
+          "speedMph" : 488 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:48:18.000Z"
+        } , {
+          "lon" : -104.6497 ,
+          "lat" : 41.4402 ,
+          "speedMph" : 488 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:47:18.000Z"
+        } , {
+          "lon" : -104.7859 ,
+          "lat" : 41.3861 ,
+          "speedMph" : 480 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:46:18.000Z"
+        } , {
+          "lon" : -104.9266 ,
+          "lat" : 41.3298 ,
+          "speedMph" : 444 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:45:18.000Z"
+        } , {
+          "lon" : -105.0513 ,
+          "lat" : 41.2799 ,
+          "speedMph" : 459 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:44:18.000Z"
+        } , {
+          "lon" : -105.1767 ,
+          "lat" : 41.2293 ,
+          "speedMph" : 382 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:43:18.000Z"
+        } , {
+          "lon" : -105.3123 ,
+          "lat" : 41.1746 ,
+          "speedMph" : 434 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:42:18.000Z"
+        } , {
+          "lon" : -105.4423 ,
+          "lat" : 41.1217 ,
+          "speedMph" : 498 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:41:18.000Z"
+        } , {
+          "lon" : -105.5869 ,
+          "lat" : 41.0626 ,
+          "speedMph" : 604 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:40:18.000Z"
+        } , {
+          "lon" : -105.7348 ,
+          "lat" : 41.0018 ,
+          "speedMph" : 604 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:39:18.000Z"
+        } , {
+          "lon" : -105.8977 ,
+          "lat" : 40.9345 ,
+          "speedMph" : 604 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:38:18.000Z"
+        } , {
+          "lon" : -106.1501 ,
+          "lat" : 40.8298 ,
+          "speedMph" : 210 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:37:18.000Z"
+        } , {
+          "lon" : -106.1976 ,
+          "lat" : 40.8097 ,
+          "speedMph" : 364 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:36:18.000Z"
+        } , {
+          "lon" : -106.2468 ,
+          "lat" : 40.7892 ,
+          "speedMph" : 501 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:35:18.000Z"
+        } , {
+          "lon" : -106.4001 ,
+          "lat" : 40.725 ,
+          "speedMph" : 404 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:34:18.000Z"
+        } , {
+          "lon" : -106.5185 ,
+          "lat" : 40.6752 ,
+          "speedMph" : 451 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:33:18.000Z"
+        } , {
+          "lon" : -106.6446 ,
+          "lat" : 40.622 ,
+          "speedMph" : 488 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:32:18.000Z"
+        } , {
+          "lon" : -106.7874 ,
+          "lat" : 40.5611 ,
+          "speedMph" : 485 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:31:18.000Z"
+        } , {
+          "lon" : -106.9145 ,
+          "lat" : 40.5072 ,
+          "speedMph" : 462 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:30:18.000Z"
+        } , {
+          "lon" : -107.045 ,
+          "lat" : 40.451 ,
+          "speedMph" : 410 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:29:18.000Z"
+        } , {
+          "lon" : -107.191 ,
+          "lat" : 40.3882 ,
+          "speedMph" : 440 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:28:18.000Z"
+        } , {
+          "lon" : -107.3156 ,
+          "lat" : 40.3344 ,
+          "speedMph" : 531 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:27:18.000Z"
+        } , {
+          "lon" : -107.4525 ,
+          "lat" : 40.2754 ,
+          "speedMph" : 493 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:26:18.000Z"
+        } , {
+          "lon" : -107.591 ,
+          "lat" : 40.2146 ,
+          "speedMph" : 474 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:25:18.000Z"
+        } , {
+          "lon" : -107.7323 ,
+          "lat" : 40.1529 ,
+          "speedMph" : 439 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:24:18.000Z"
+        } , {
+          "lon" : -107.877 ,
+          "lat" : 40.0879 ,
+          "speedMph" : 380 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:23:18.000Z"
+        } , {
+          "lon" : -107.9622 ,
+          "lat" : 40.0463 ,
+          "speedMph" : 530 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:22:18.000Z"
+        } , {
+          "lon" : -108.1036 ,
+          "lat" : 39.9766 ,
+          "speedMph" : 473 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:21:18.000Z"
+        } , {
+          "lon" : -108.2372 ,
+          "lat" : 39.9083 ,
+          "speedMph" : 415 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:20:18.000Z"
+        } , {
+          "lon" : -108.3544 ,
+          "lat" : 39.8483 ,
+          "speedMph" : 430 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:19:18.000Z"
+        } , {
+          "lon" : -108.4668 ,
+          "lat" : 39.7907 ,
+          "speedMph" : 475 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:18:18.000Z"
+        } , {
+          "lon" : -108.5893 ,
+          "lat" : 39.7276 ,
+          "speedMph" : 500 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:17:18.000Z"
+        } , {
+          "lon" : -108.7197 ,
+          "lat" : 39.6598 ,
+          "speedMph" : 492 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:16:18.000Z"
+        } , {
+          "lon" : -108.8491 ,
+          "lat" : 39.5924 ,
+          "speedMph" : 507 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:15:18.000Z"
+        } , {
+          "lon" : -108.9791 ,
+          "lat" : 39.5244 ,
+          "speedMph" : 514 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:14:18.000Z"
+        } , {
+          "lon" : -109.1108 ,
+          "lat" : 39.455 ,
+          "speedMph" : 508 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:13:18.000Z"
+        } , {
+          "lon" : -109.241 ,
+          "lat" : 39.3862 ,
+          "speedMph" : 508 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:12:18.000Z"
+        } , {
+          "lon" : -109.3728 ,
+          "lat" : 39.3166 ,
+          "speedMph" : 508 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:11:18.000Z"
+        } , {
+          "lon" : -109.503 ,
+          "lat" : 39.2477 ,
+          "speedMph" : 497 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:10:18.000Z"
+        } , {
+          "lon" : -109.6285 ,
+          "lat" : 39.1806 ,
+          "speedMph" : 502 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:09:18.000Z"
+        } , {
+          "lon" : -109.7571 ,
+          "lat" : 39.1115 ,
+          "speedMph" : 488 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:08:18.000Z"
+        } , {
+          "lon" : -109.8861 ,
+          "lat" : 39.0423 ,
+          "speedMph" : 467 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:07:18.000Z"
+        } , {
+          "lon" : -110.0031 ,
+          "lat" : 38.9792 ,
+          "speedMph" : 493 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:06:18.000Z"
+        } , {
+          "lon" : -110.1291 ,
+          "lat" : 38.9109 ,
+          "speedMph" : 490 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:05:18.000Z"
+        } , {
+          "lon" : -110.2555 ,
+          "lat" : 38.8419 ,
+          "speedMph" : 487 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:04:18.000Z"
+        } , {
+          "lon" : -110.379 ,
+          "lat" : 38.7746 ,
+          "speedMph" : 487 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:03:18.000Z"
+        } , {
+          "lon" : -110.5037 ,
+          "lat" : 38.7062 ,
+          "speedMph" : 503 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:02:18.000Z"
+        } , {
+          "lon" : -110.6307 ,
+          "lat" : 38.6361 ,
+          "speedMph" : 507 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:01:18.000Z"
+        } , {
+          "lon" : -110.7572 ,
+          "lat" : 38.5661 ,
+          "speedMph" : 513 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T10:00:18.000Z"
+        } , {
+          "lon" : -110.8859 ,
+          "lat" : 38.495 ,
+          "speedMph" : 510 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:59:18.000Z"
+        } , {
+          "lon" : -111.0139 ,
+          "lat" : 38.4238 ,
+          "speedMph" : 510 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:58:18.000Z"
+        } , {
+          "lon" : -111.1444 ,
+          "lat" : 38.3508 ,
+          "speedMph" : 495 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:57:18.000Z"
+        } , {
+          "lon" : -111.267 ,
+          "lat" : 38.2818 ,
+          "speedMph" : 517 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:56:18.000Z"
+        } , {
+          "lon" : -111.3954 ,
+          "lat" : 38.2093 ,
+          "speedMph" : 511 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:55:18.000Z"
+        } , {
+          "lon" : -111.5226 ,
+          "lat" : 38.1374 ,
+          "speedMph" : 506 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:54:18.000Z"
+        } , {
+          "lon" : -111.6494 ,
+          "lat" : 38.0655 ,
+          "speedMph" : 498 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:53:18.000Z"
+        } , {
+          "lon" : -111.7751 ,
+          "lat" : 37.9945 ,
+          "speedMph" : 500 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:52:18.000Z"
+        } , {
+          "lon" : -111.8982 ,
+          "lat" : 37.9225 ,
+          "speedMph" : 506 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:51:18.000Z"
+        } , {
+          "lon" : -112.0219 ,
+          "lat" : 37.8503 ,
+          "speedMph" : 514 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:50:18.000Z"
+        } , {
+          "lon" : -112.1495 ,
+          "lat" : 37.7779 ,
+          "speedMph" : 511 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:49:18.000Z"
+        } , {
+          "lon" : -112.2784 ,
+          "lat" : 37.7082 ,
+          "speedMph" : 514 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:48:18.000Z"
+        } , {
+          "lon" : -112.4095 ,
+          "lat" : 37.6408 ,
+          "speedMph" : 512 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:47:18.000Z"
+        } , {
+          "lon" : -112.5446 ,
+          "lat" : 37.5787 ,
+          "speedMph" : 496 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:46:18.000Z"
+        } , {
+          "lon" : -112.6787 ,
+          "lat" : 37.5171 ,
+          "speedMph" : 547 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:45:18.000Z"
+        } , {
+          "lon" : -112.8137 ,
+          "lat" : 37.4548 ,
+          "speedMph" : 558 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:44:18.000Z"
+        } , {
+          "lon" : -112.9549 ,
+          "lat" : 37.389 ,
+          "speedMph" : 532 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:43:18.000Z"
+        } , {
+          "lon" : -113.0991 ,
+          "lat" : 37.3215 ,
+          "speedMph" : 482 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:42:18.000Z"
+        } , {
+          "lon" : -113.2329 ,
+          "lat" : 37.2589 ,
+          "speedMph" : 465 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:41:18.000Z"
+        } , {
+          "lon" : -113.3501 ,
+          "lat" : 37.2039 ,
+          "speedMph" : 503 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:40:18.000Z"
+        } , {
+          "lon" : -113.4791 ,
+          "lat" : 37.1429 ,
+          "speedMph" : 512 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:39:18.000Z"
+        } , {
+          "lon" : -113.6123 ,
+          "lat" : 37.0799 ,
+          "speedMph" : 504 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:38:18.000Z"
+        } , {
+          "lon" : -113.748 ,
+          "lat" : 37.0158 ,
+          "speedMph" : 492 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:37:18.000Z"
+        } , {
+          "lon" : -113.874 ,
+          "lat" : 36.9566 ,
+          "speedMph" : 517 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:36:18.000Z"
+        } , {
+          "lon" : -114.0061 ,
+          "lat" : 36.8935 ,
+          "speedMph" : 503 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:35:18.000Z"
+        } , {
+          "lon" : -114.1386 ,
+          "lat" : 36.8296 ,
+          "speedMph" : 520 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:34:18.000Z"
+        } , {
+          "lon" : -114.2645 ,
+          "lat" : 36.7586 ,
+          "speedMph" : 527 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:33:18.000Z"
+        } , {
+          "lon" : -114.3864 ,
+          "lat" : 36.679 ,
+          "speedMph" : 522 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:32:18.000Z"
+        } , {
+          "lon" : -114.4987 ,
+          "lat" : 36.5938 ,
+          "speedMph" : 509 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:31:18.000Z"
+        } , {
+          "lon" : -114.6122 ,
+          "lat" : 36.5072 ,
+          "speedMph" : 526 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:30:18.000Z"
+        } , {
+          "lon" : -114.7274 ,
+          "lat" : 36.4187 ,
+          "speedMph" : 510 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:29:18.000Z"
+        } , {
+          "lon" : -114.8346 ,
+          "lat" : 36.3354 ,
+          "speedMph" : 529 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:28:18.000Z"
+        } , {
+          "lon" : -114.9479 ,
+          "lat" : 36.2467 ,
+          "speedMph" : 505 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:27:18.000Z"
+        } , {
+          "lon" : -115.0588 ,
+          "lat" : 36.1597 ,
+          "speedMph" : 485 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:26:18.000Z"
+        } , {
+          "lon" : -115.1615 ,
+          "lat" : 36.0792 ,
+          "speedMph" : 484 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:25:18.000Z"
+        } , {
+          "lon" : -115.2716 ,
+          "lat" : 35.9937 ,
+          "speedMph" : 540 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:24:18.000Z"
+        } , {
+          "lon" : -115.386 ,
+          "lat" : 35.9049 ,
+          "speedMph" : 553 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:23:18.000Z"
+        } , {
+          "lon" : -115.4996 ,
+          "lat" : 35.8163 ,
+          "speedMph" : 563 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:22:18.000Z"
+        } , {
+          "lon" : -115.6156 ,
+          "lat" : 35.7255 ,
+          "speedMph" : 541 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:21:18.000Z"
+        } , {
+          "lon" : -115.7322 ,
+          "lat" : 35.6345 ,
+          "speedMph" : 489 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:20:18.000Z"
+        } , {
+          "lon" : -115.8492 ,
+          "lat" : 35.5427 ,
+          "speedMph" : 440 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:19:18.000Z"
+        } , {
+          "lon" : -115.9383 ,
+          "lat" : 35.4723 ,
+          "speedMph" : 521 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:18:18.000Z"
+        } , {
+          "lon" : -116.0489 ,
+          "lat" : 35.3851 ,
+          "speedMph" : 522 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:17:18.000Z"
+        } , {
+          "lon" : -116.1592 ,
+          "lat" : 35.2974 ,
+          "speedMph" : 520 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:16:18.000Z"
+        } , {
+          "lon" : -116.269 ,
+          "lat" : 35.2091 ,
+          "speedMph" : 519 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:15:18.000Z"
+        } , {
+          "lon" : -116.379 ,
+          "lat" : 35.1214 ,
+          "speedMph" : 515 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:14:18.000Z"
+        } , {
+          "lon" : -116.4882 ,
+          "lat" : 35.0346 ,
+          "speedMph" : 528 ,
+          "altitudeFt" : 37000 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:13:18.000Z"
+        } , {
+          "lon" : -116.5995 ,
+          "lat" : 34.9486 ,
+          "speedMph" : 501 ,
+          "altitudeFt" : 36998 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:12:18.000Z"
+        } , {
+          "lon" : -116.7158 ,
+          "lat" : 34.8639 ,
+          "speedMph" : 551 ,
+          "altitudeFt" : 37089 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:11:18.000Z"
+        } , {
+          "lon" : -116.8362 ,
+          "lat" : 34.7772 ,
+          "speedMph" : 587 ,
+          "altitudeFt" : 37172 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:10:18.000Z"
+        } , {
+          "lon" : -116.9582 ,
+          "lat" : 34.6891 ,
+          "speedMph" : 570 ,
+          "altitudeFt" : 37143 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:09:18.000Z"
+        } , {
+          "lon" : -117.0768 ,
+          "lat" : 34.6032 ,
+          "speedMph" : 531 ,
+          "altitudeFt" : 36874 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:08:18.000Z"
+        } , {
+          "lon" : -117.2049 ,
+          "lat" : 34.51 ,
+          "speedMph" : 471 ,
+          "altitudeFt" : 36242 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:07:18.000Z"
+        } , {
+          "lon" : -117.3056 ,
+          "lat" : 34.4355 ,
+          "speedMph" : 502 ,
+          "altitudeFt" : 34889 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:06:18.000Z"
+        } , {
+          "lon" : -117.4184 ,
+          "lat" : 34.3568 ,
+          "speedMph" : 569 ,
+          "altitudeFt" : 33192 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:05:18.000Z"
+        } , {
+          "lon" : -117.5403 ,
+          "lat" : 34.2677 ,
+          "speedMph" : 575 ,
+          "altitudeFt" : 31400 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:04:18.000Z"
+        } , {
+          "lon" : -117.6595 ,
+          "lat" : 34.1773 ,
+          "speedMph" : 567 ,
+          "altitudeFt" : 29492 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:03:18.000Z"
+        } , {
+          "lon" : -117.7784 ,
+          "lat" : 34.082 ,
+          "speedMph" : 519 ,
+          "altitudeFt" : 28175 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:02:18.000Z"
+        } , {
+          "lon" : -117.8698 ,
+          "lat" : 33.9911 ,
+          "speedMph" : 560 ,
+          "altitudeFt" : 26608 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:01:18.000Z"
+        } , {
+          "lon" : -117.9556 ,
+          "lat" : 33.8857 ,
+          "speedMph" : 539 ,
+          "altitudeFt" : 24798 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T09:00:18.000Z"
+        } , {
+          "lon" : -118.0349 ,
+          "lat" : 33.7889 ,
+          "speedMph" : 521 ,
+          "altitudeFt" : 25143 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:59:18.000Z"
+        } , {
+          "lon" : -118.0992 ,
+          "lat" : 33.707 ,
+          "speedMph" : 577 ,
+          "altitudeFt" : 20456 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:58:18.000Z"
+        } , {
+          "lon" : -118.2307 ,
+          "lat" : 33.6604 ,
+          "speedMph" : 493 ,
+          "altitudeFt" : 17330 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:57:18.000Z"
+        } , {
+          "lon" : -118.344 ,
+          "lat" : 33.6508 ,
+          "speedMph" : 447 ,
+          "altitudeFt" : 14697 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:56:18.000Z"
+        } , {
+          "lon" : -118.4531 ,
+          "lat" : 33.6774 ,
+          "speedMph" : 380 ,
+          "altitudeFt" : 11976 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:55:18.000Z"
+        } , {
+          "lon" : -118.5023 ,
+          "lat" : 33.7459 ,
+          "speedMph" : 349 ,
+          "altitudeFt" : 9598 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:54:18.000Z"
+        } , {
+          "lon" : -118.5039 ,
+          "lat" : 33.8163 ,
+          "speedMph" : 328 ,
+          "altitudeFt" : 6801 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:53:18.000Z"
+        } , {
+          "lon" : -118.4792 ,
+          "lat" : 33.8818 ,
+          "speedMph" : 268 ,
+          "altitudeFt" : 3601 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:52:18.000Z"
+        } , {
+          "lon" : -118.4366 ,
+          "lat" : 33.9242 ,
+          "speedMph" : 185 ,
+          "altitudeFt" : 1853 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:51:18.000Z"
+        } , {
+          "lon" : -118.3984 ,
+          "lat" : 33.9379 ,
+          "speedMph" : 96 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:50:18.000Z"
+        } , {
+          "lon" : -118.4 ,
+          "lat" : 33.9333 ,
+          "speedMph" : 168 ,
+          "altitudeFt" : 125 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:50:00.000Z"
+        } , {
+          "lon" : -118.4 ,
+          "lat" : 33.9333 ,
+          "speedMph" : 168 ,
+          "altitudeFt" : 125 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:50:00.000Z"
+        } , {
+          "lon" : -118.381 ,
+          "lat" : 33.9404 ,
+          "speedMph" : 14 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:49:18.000Z"
+        } , {
+          "lon" : -118.385 ,
+          "lat" : 33.9401 ,
+          "speedMph" : 14 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:48:18.000Z"
+        } , {
+          "lon" : -118.4 ,
+          "lat" : 33.9333 ,
+          "speedMph" : 168 ,
+          "altitudeFt" : 125 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:48:00.000Z"
+        } , {
+          "lon" : -118.4 ,
+          "lat" : 33.9333 ,
+          "speedMph" : 168 ,
+          "altitudeFt" : 125 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:48:00.000Z"
+        } , {
+          "lon" : -118.4 ,
+          "lat" : 33.9333 ,
+          "speedMph" : 168 ,
+          "altitudeFt" : 125 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:48:00.000Z"
+        } , {
+          "lon" : -118.4 ,
+          "lat" : 33.9333 ,
+          "speedMph" : 168 ,
+          "altitudeFt" : 125 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:48:00.000Z"
+        } , {
+          "lon" : -117.9672 ,
+          "lat" : 33.8662 ,
+          "speedMph" : 318 ,
+          "altitudeFt" : 12723 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:45:18.000Z"
+        } , {
+          "lon" : -118.0207 ,
+          "lat" : 33.8057 ,
+          "speedMph" : 305 ,
+          "altitudeFt" : 11611 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:44:18.000Z"
+        } , {
+          "lon" : -118.406 ,
+          "lat" : 33.94 ,
+          "speedMph" : 0 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:42:02.000Z"
+        } , {
+          "lon" : -118.406 ,
+          "lat" : 33.94 ,
+          "speedMph" : 0 ,
+          "source" : "derived" ,
+          "date" : "2015-04-29T08:42:02.000Z"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+body: 
+  application/x-www-form-urlencoded: 
+    formParameters: 
+      ApiVersion: 
+        description: |
+          Requests to this application's URLs will start a new TwiML
+          session with this API version. Either 2010-04-01 or 2008-08-01.
+      SmsFallbackMethod: 
+        description: |
+          The HTTP method that should be used to request the SmsFallbackUrl.
+          Either GET or POST.
+      SmsFallbackUrl: 
+        description: |
+          A URL that Twilio will request if an error occurs requesting or
+          executing the TwiML defined by SmsUrl.
+      SmsMethod: 
+        description: |
+          The HTTP method that should be used to request the SmsUrl.
+          Either GET or POST.
+      SmsStatusCallback: 
+        description: |
+          Twilio will make a POST request to this URL to pass status parameters
+          (such as sent or failed) to your application if you specify this
+          application's Sid as the ApplicationSid on an outgoing SMS request.
+      SmsUrl: 
+        description: |
+          The URL that Twilio should request when somebody sends an SMS to
+          a phone number assigned to this application.
+      StatusCallback: 
+        description: |
+          The URL that Twilio will request to pass status parameters (such
+          as call ended) to your application.
+      StatusCallbackMethod: 
+        description: |
+          The HTTP method Twilio will use to make requests to the
+          StatusCallback URL. Either GET or POST.
+      VoiceCallerIdLookup: 
+        description: |
+          Do a lookup of a caller's name from the CNAM database and post i
+          to your app. Either true or false.
+        type: boolean
+      VoiceFallbackMethod: 
+        description: |
+          The HTTP method that should be used to request the VoiceFallbackUrl.
+          Either GET or POST.
+      VoiceFallbackUrl: 
+        description: |
+          A URL that Twilio will request if an error occurs requesting
+          or executing the TwiML defined by VoiceUrl.
+      VoiceMethod: 
+        description: |
+          The HTTP method that should be used to request the VoiceUrl.
+          Either GET or POST.
+      VoiceUrl: 
+        description: |
+          The URL that Twilio should request when somebody dials a phone
+          number assigned to this application.

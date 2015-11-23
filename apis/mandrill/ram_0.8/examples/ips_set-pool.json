@@ -1,0 +1,6 @@
+{
+  "key": "example key",
+  "ip": "127.0.0.1",
+  "pool": "Main Pool",
+  "create_pool": true
+}

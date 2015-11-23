@@ -1,0 +1,26 @@
+get: 
+  description: " Get information or update the expiration date of an existing announcement. An announcement displays in a designated location in the Salesforce UI until 11:59 p.m. on its expiration date, unless it’s deleted or replaced by another announcement."
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: announcementResponse
+delete: 
+  description: " Get information or update the expiration date of an existing announcement. An announcement displays in a designated location in the Salesforce UI until 11:59 p.m. on its expiration date, unless it’s deleted or replaced by another announcement."
+  responses: 
+    204: 
+head: 
+  description: " Get information or update the expiration date of an existing announcement. An announcement displays in a designated location in the Salesforce UI until 11:59 p.m. on its expiration date, unless it’s deleted or replaced by another announcement."
+  responses: 
+    200: 
+patch: 
+  description: " Get information or update the expiration date of an existing announcement. An announcement displays in a designated location in the Salesforce UI until 11:59 p.m. on its expiration date, unless it’s deleted or replaced by another announcement."
+  body: 
+    application/json: 
+      schema: announcementsResourcePatchRequest
+      example: !include examples/announcementsResourcePatchRequest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: announcementResponse

@@ -1,0 +1,56 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="request">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:int" name="amount"/>
+        <xs:element type="xs:float" name="rate"/>
+        <xs:element type="xs:string" name="schedule"/>
+        <xs:element type="xs:short" name="terminmonths"/>
+        <xs:element type="xs:byte" name="monthsbeforeadjustment"/>
+        <xs:element type="xs:byte" name="monthsbetweenadjustments"/>
+        <xs:element type="xs:float" name="adjustment"/>
+        <xs:element type="xs:float" name="ratecap"/>
+        <xs:element type="xs:string" name="output"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="message">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="text"/>
+        <xs:element type="xs:byte" name="code"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:int" name="monthlyprincipalandinterest"/>
+        <xs:element type="xs:int" name="monthlyprincipalandinterestadjusted"/>
+        <xs:element type="xs:int" name="maximumpayment"/>
+        <xs:element type="xs:int" name="totalpayments"/>
+        <xs:element type="xs:int" name="totalinterestpayments"/>
+        <xs:element name="amortizationschedule">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="payment" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:short" name="period"/>
+                    <xs:element type="xs:int" name="beginningbalance"/>
+                    <xs:element type="xs:int" name="payment"/>
+                    <xs:element type="xs:int" name="principal"/>
+                    <xs:element type="xs:int" name="interest"/>
+                    <xs:element type="xs:int" name="endingbalance"/>
+                    <xs:element type="xs:float" name="rate"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="frequency"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

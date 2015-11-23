@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "aggregate_link": {
+          "description": "The aggregate (global) bitly link for the provided bitly link.",
+          "type": "string"
+        },
+        "entries": {
+          "description": "A mapping of link, user, and ts (when the link was created).",
+          "type": "string"
+        }
+      }
+    },
+    "status_code": {
+      "type": "integer",
+      "required": true
+    },
+    "status_txt": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

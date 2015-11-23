@@ -1,0 +1,6 @@
+{
+	"notification_rule" : {
+		"contact_method_id" : "PNGKILZ" ,
+		"start_delay_in_minutes" : 5
+	}
+}

@@ -1,0 +1,33 @@
+body: 
+  application/x-www-form-urlencoded: 
+    formParameters: 
+      date_range: 
+        description: |
+          When set to 'all', the 'since' and 'until' parameters and defaults are ignored.
+          Use this to get all incidents since the account was created.
+        enum: [ all ]
+      status: 
+        description: |
+          Returns only the incidents currently in the passed status(es).
+          Valid status options are 'triggered', 'acknowledged', and 'resolved'.
+          More status codes may be introduced in the future.
+          Separate multiple statuses with a comma.
+        enum: 
+          - triggered
+          - acknowledged
+          - resolved
+      incident_key: 
+        description: |
+          Only counts the incidents with the passed de-duplication key.
+          See the PagerDuty Integration API docs for further details.
+      service: 
+        description: |
+          Returns only the incidents associated with the passed service(s).
+          This expects one or more service IDs. Separate multiple ids with a comma.
+      assigned_to_user: 
+        description: |
+          Returns only the incidents currently assigned to the passed user(s).
+          This expects one or more user IDs. Please see below for more info on how to find your users' IDs.
+          When using the 'assigned_to_user' filter, you will only receive incidents with statuses of
+          'triggered or 'acknowledged'. This is because 'resolved' incidents are not assigned to any user.
+          Separate multiple ids with a comma.

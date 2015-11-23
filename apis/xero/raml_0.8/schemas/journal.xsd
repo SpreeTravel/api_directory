@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="Journal">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="JournalID" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="JournalDate" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="JournalNumber" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="CreatedDateUTC" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="Reference" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="JournalLines" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="JournalLine" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="JournalLineID" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="AccountID" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="AccountCode" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="AccountType" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="AccountName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="NetAmount" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                    <xsd:element name="GrossAmount" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                    <xsd:element name="TaxAmount" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                    <xsd:element name="TaxType" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="TaxName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="TrackingCategories" minOccurs="0" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="TrackingCategory" minOccurs="0" maxOccurs="1">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="Name" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                                <xsd:element name="Option" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                                <xsd:element name="TrackingCategoryID" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

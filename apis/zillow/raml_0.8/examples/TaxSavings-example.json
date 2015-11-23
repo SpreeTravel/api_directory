@@ -1,0 +1,233 @@
+cb({
+  "request" : {
+    "amount" : "1000000" ,
+    "callback" : "cb" ,
+    "output" : "json" ,
+    "terminmonths" : "360" ,
+    "taxbracket" : "3.5" ,
+    "schedule" : "yearly" ,
+    "rate" : "6.504"
+  } ,
+  "message" : {
+    "text" : "Request successfully processed" ,
+    "code" : "0"
+  } ,
+  "response" : {
+    "monthlyPrincipalAndInterest" : "6323" ,
+    "taxSavings" : "44674" ,
+    "result" : "Based on your marginal tax rate of 3.50%, you would end up saving $44,674 on your taxes over the life of the loan." ,
+    "annualAmortizationSchedule" : [
+      {
+        "period" : "1" ,
+        "beginningBalance" : "1000000" ,
+        "payment" : "75880" ,
+        "interest" : "64711" ,
+        "endingBalance" : "988831" ,
+        "taxSavings" : "2265"
+      } , {
+        "period" : "2" ,
+        "beginningBalance" : "988831" ,
+        "payment" : "75880" ,
+        "interest" : "63963" ,
+        "endingBalance" : "976914" ,
+        "taxSavings" : "2239"
+      } , {
+        "period" : "3" ,
+        "beginningBalance" : "976914" ,
+        "payment" : "75880" ,
+        "interest" : "63164" ,
+        "endingBalance" : "964198" ,
+        "taxSavings" : "2211"
+      } , {
+        "period" : "4" ,
+        "beginningBalance" : "964198" ,
+        "payment" : "75880" ,
+        "interest" : "62312" ,
+        "endingBalance" : "950630" ,
+        "taxSavings" : "2181"
+      } , {
+        "period" : "5" ,
+        "beginningBalance" : "950630" ,
+        "payment" : "75880" ,
+        "interest" : "61403" ,
+        "endingBalance" : "936153" ,
+        "taxSavings" : "2149"
+      } , {
+        "period" : "6" ,
+        "beginningBalance" : "936153" ,
+        "payment" : "75880" ,
+        "interest" : "60432" ,
+        "endingBalance" : "920705" ,
+        "taxSavings" : "2115"
+      } , {
+        "period" : "7" ,
+        "beginningBalance" : "920705" ,
+        "payment" : "75880" ,
+        "interest" : "59397" ,
+        "endingBalance" : "904222" ,
+        "taxSavings" : "2079"
+      } , {
+        "period" : "8" ,
+        "beginningBalance" : "904222" ,
+        "payment" : "75880" ,
+        "interest" : "58293" ,
+        "endingBalance" : "886635" ,
+        "taxSavings" : "2040"
+      } , {
+        "period" : "9" ,
+        "beginningBalance" : "886635" ,
+        "payment" : "75880" ,
+        "interest" : "57114" ,
+        "endingBalance" : "867869" ,
+        "taxSavings" : "1999"
+      } , {
+        "period" : "10" ,
+        "beginningBalance" : "867869" ,
+        "payment" : "75880" ,
+        "interest" : "55856" ,
+        "endingBalance" : "847845" ,
+        "taxSavings" : "1955"
+      } , {
+        "period" : "11" ,
+        "beginningBalance" : "847845" ,
+        "payment" : "75880" ,
+        "interest" : "54515" ,
+        "endingBalance" : "826480" ,
+        "taxSavings" : "1908"
+      } , {
+        "period" : "12" ,
+        "beginningBalance" : "826480" ,
+        "payment" : "75880" ,
+        "interest" : "53083" ,
+        "endingBalance" : "803683" ,
+        "taxSavings" : "1858"
+      } , {
+        "period" : "13" ,
+        "beginningBalance" : "803683" ,
+        "payment" : "75880" ,
+        "interest" : "51555" ,
+        "endingBalance" : "779358" ,
+        "taxSavings" : "1804"
+      } , {
+        "period" : "14" ,
+        "beginningBalance" : "779358" ,
+        "payment" : "75880" ,
+        "interest" : "49925" ,
+        "endingBalance" : "753403" ,
+        "taxSavings" : "1747"
+      } , {
+        "period" : "15" ,
+        "beginningBalance" : "753403" ,
+        "payment" : "75880" ,
+        "interest" : "48185" ,
+        "endingBalance" : "725708" ,
+        "taxSavings" : "1686"
+      } , {
+        "period" : "16" ,
+        "beginningBalance" : "725708" ,
+        "payment" : "75880" ,
+        "interest" : "46330" ,
+        "endingBalance" : "696158" ,
+        "taxSavings" : "1622"
+      } , {
+        "period" : "17" ,
+        "beginningBalance" : "696158" ,
+        "payment" : "75880" ,
+        "interest" : "44349" ,
+        "endingBalance" : "664627" ,
+        "taxSavings" : "1552"
+      } , {
+        "period" : "18" ,
+        "beginningBalance" : "664627" ,
+        "payment" : "75880" ,
+        "interest" : "42236" ,
+        "endingBalance" : "630983" ,
+        "taxSavings" : "1478"
+      } , {
+        "period" : "19" ,
+        "beginningBalance" : "630983" ,
+        "payment" : "75880" ,
+        "interest" : "39982" ,
+        "endingBalance" : "595085" ,
+        "taxSavings" : "1399"
+      } , {
+        "period" : "20" ,
+        "beginningBalance" : "595085" ,
+        "payment" : "75880" ,
+        "interest" : "37576" ,
+        "endingBalance" : "556781" ,
+        "taxSavings" : "1315"
+      } , {
+        "period" : "21" ,
+        "beginningBalance" : "556781" ,
+        "payment" : "75880" ,
+        "interest" : "35009" ,
+        "endingBalance" : "515910" ,
+        "taxSavings" : "1225"
+      } , {
+        "period" : "22" ,
+        "beginningBalance" : "515910" ,
+        "payment" : "75880" ,
+        "interest" : "32270" ,
+        "endingBalance" : "472300" ,
+        "taxSavings" : "1129"
+      } , {
+        "period" : "23" ,
+        "beginningBalance" : "472300" ,
+        "payment" : "75880" ,
+        "interest" : "29348" ,
+        "endingBalance" : "425768" ,
+        "taxSavings" : "1027"
+      } , {
+        "period" : "24" ,
+        "beginningBalance" : "425768" ,
+        "payment" : "75880" ,
+        "interest" : "26229" ,
+        "endingBalance" : "376117" ,
+        "taxSavings" : "918"
+      } , {
+        "period" : "25" ,
+        "beginningBalance" : "376117" ,
+        "payment" : "75880" ,
+        "interest" : "22902" ,
+        "endingBalance" : "323139" ,
+        "taxSavings" : "802"
+      } , {
+        "period" : "26" ,
+        "beginningBalance" : "323139" ,
+        "payment" : "75880" ,
+        "interest" : "19352" ,
+        "endingBalance" : "266611" ,
+        "taxSavings" : "677"
+      } , {
+        "period" : "27" ,
+        "beginningBalance" : "266611" ,
+        "payment" : "75880" ,
+        "interest" : "15563" ,
+        "endingBalance" : "206294" ,
+        "taxSavings" : "545"
+      } , {
+        "period" : "28" ,
+        "beginningBalance" : "206294" ,
+        "payment" : "75880" ,
+        "interest" : "11521" ,
+        "endingBalance" : "141935" ,
+        "taxSavings" : "403"
+      } , {
+        "period" : "29" ,
+        "beginningBalance" : "141935" ,
+        "payment" : "75880" ,
+        "interest" : "7208" ,
+        "endingBalance" : "73263" ,
+        "taxSavings" : "252"
+      } , {
+        "period" : "30" ,
+        "beginningBalance" : "73263" ,
+        "payment" : "75880" ,
+        "interest" : "2606" ,
+        "endingBalance" : "-11" ,
+        "taxSavings" : "91"
+      }
+    ]
+  }
+});

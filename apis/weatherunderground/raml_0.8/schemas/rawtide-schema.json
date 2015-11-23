@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "response": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "version": {
+          "required": false,
+          "type": "string"
+        },
+        "termsofService": {
+          "required": false,
+          "type": "string"
+        },
+        "features": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "rawtide": {
+              "required": false,
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "rawtide": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "tideInfo": {
+          "required": false,
+          "type": "array",
+          "items": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "tideSite": {
+                "required": false,
+                "type": "string"
+              },
+              "lat": {
+                "required": false,
+                "type": "string"
+              },
+              "lon": {
+                "required": false,
+                "type": "string"
+              },
+              "units": {
+                "required": false,
+                "type": "string"
+              },
+              "type": {
+                "required": false,
+                "type": "string"
+              },
+              "tzname": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          }
+        },
+        "rawTideObs": {
+          "required": false,
+          "type": "array",
+          "items": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "epoch": {
+                "required": false,
+                "type": "integer"
+              },
+              "height": {
+                "required": false,
+                "type": "number"
+              }
+            }
+          }
+        },
+        "rawTideStats": {
+          "required": false,
+          "type": "array",
+          "items": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "maxheight": {
+                "required": false,
+                "type": "number"
+              },
+              "minheight": {
+                "required": false,
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "software_deployment" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "status" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "server_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "config_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "output_values" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "input_values" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "action" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "status_reason" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

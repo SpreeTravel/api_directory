@@ -1,0 +1,464 @@
+#%RAML 0.8
+title: OpenStack Orchestration API
+version: v1
+baseUri: https://heat.example.com/
+schemas:
+  - buildInfo: !include schemas/buildInfo-schema.json
+  - configCreateReq: !include schemas/configCreateReq-schema.json
+  - configCreateResp: !include schemas/configCreateResp-schema.json
+  - configShow: !include schemas/configShow-schema.json
+  - deploymentCreateReq: !include schemas/deploymentCreateReq-schema.json
+  - deploymentCreateResp: !include schemas/deploymentCreateResp-schema.json
+  - deploymentList: !include schemas/deploymentList-schema.json
+  - deploymentMetadata: !include schemas/deploymentMetadata-schema.json
+  - deploymentShow: !include schemas/deploymentShow-schema.json
+  - deploymentUpdateReq: !include schemas/deploymentUpdateReq-schema.json
+  - deploymentUpdateResp: !include schemas/deploymentUpdateResp-schema.json
+  - eventListResp: !include schemas/eventListResp-schema.json
+  - heatVersionsResponse: !include schemas/heatVersionsResponse-schema.json
+  - resourceMetadataResp: !include schemas/resourceMetadataResp-schema.json
+  - resourceSchema: !include schemas/resourceSchema-schema.json
+  - serviceList: !include schemas/serviceList-schema.json
+  - stack_action_cancelUpdate: !include schemas/stack_action_cancelUpdate-schema.json
+  - stackAbandon: !include schemas/stackAbandon-schema.json
+  - stackActionCheck: !include schemas/stackActionCheck-schema.json
+  - stackActionResume: !include schemas/stackActionResume-schema.json
+  - stackActionSuspend: !include schemas/stackActionSuspend-schema.json
+  - stackAdopt: !include schemas/stackAdopt-schema.json
+  - stackAdoptResp: !include schemas/stackAdoptResp-schema.json
+  - stackCreate: !include schemas/stackCreate-schema.json
+  - stackCreateResp: !include schemas/stackCreateResp-schema.json
+  - stackFindResp: !include schemas/stackFindResp-schema.json
+  - stackListResp: !include schemas/stackListResp-schema.json
+  - stackListSnapshot: !include schemas/stackListSnapshot-schema.json
+  - stackPreview: !include schemas/stackPreview-schema.json
+  - stackShowResp: !include schemas/stackShowResp-schema.json
+  - stackShowSnapshot: !include schemas/stackShowSnapshot-schema.json
+  - stackSnapshot: !include schemas/stackSnapshot-schema.json
+  - stackSnapshotReq: !include schemas/stackSnapshotReq-schema.json
+  - stackUpdate: !include schemas/stackUpdate-schema.json
+  - templateValidateReq: !include schemas/templateValidateReq-schema.json
+  - templateValidateResp: !include schemas/templateValidateResp-schema.json
+  - sanapshotStackReq: !include /schemas/sanapshotStackReq-schema.json
+  - snapshotStackRes: !include /schemas/snapshotStackRes-schema.json
+  - listSnapshots: !include /schemas/listSnapshots-schema.json
+/: 
+  get: 
+    description: List versions
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: heatVersionsResponse
+            example: !include examples/heatVersionsResponse-example.json
+/{version}: 
+  /{tenant_id}: 
+    /build_info: 
+      get: 
+        description: Show build information
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: buildInfo
+                example: !include examples/buildInfo-example.json
+    /resource_types: 
+      get: 
+        description: List resource types
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: ""
+      /{type_name}: 
+        get: 
+          description: Show resource schema
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: resourceSchema
+                  example: !include examples/resourceSchema-example.json
+        /template: 
+          get: 
+            description: Show resource template
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: ""
+    /services: 
+      get: 
+        description: Show orchestration engine status
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: serviceList
+                example: !include examples/serviceList-example.json
+          503: 
+            description: When you get a 503 status code, run the heat-manage service list command or contact your cloud provider to find out why the heat engines are down.
+            body: 
+              application/text: 
+                schema: ""
+          403: 
+            body: 
+              application/text: 
+                schema: ""
+    /software_configs: 
+      post: 
+        description: Create configuration
+        body: 
+          application/json: 
+            schema: configCreateReq
+            example: !include examples/configCreateReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: configCreateResp
+                example: !include examples/configCreateResp-example.json
+      /{config_id}: 
+        get: 
+          description: Show configuration details
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: configShow
+                  example: !include examples/configShow-example.json
+        delete: 
+          description: Delete config
+          responses: 
+            204: 
+    /software_deployments: 
+      get: 
+        description: List deployments
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: deploymentList
+                example: !include examples/deploymentList-example.json
+      post: 
+        description: Create deployment
+        body: 
+          application/json: 
+            schema: deploymentCreateReq
+            example: !include examples/deploymentCreateReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: deploymentCreateResp
+                example: !include examples/deploymentCreateResp-example.json
+      /metadata: 
+        /{server_id}: 
+          get: 
+            description: Show server configuration metadata
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: deploymentMetadata
+                    example: !include examples/deploymentMetadata-example.json
+      /{deployment_id}: 
+        get: 
+          description: Show deployment details
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: deploymentShow
+                  example: !include examples/deploymentShow-example.json
+        put: 
+          description: Update deployment
+          body: 
+            application/json: 
+              schema: deploymentUpdateReq
+              example: !include examples/deploymentUpdateReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: deploymentUpdateResp
+                  example: !include examples/deploymentUpdateResp-example.json
+        delete: 
+          description: Delete deployment
+          responses: 
+            204: 
+    /stacks: 
+      post: 
+        description: Create stack
+        body: 
+          application/json: 
+            schema: stackAdopt
+            example: !include examples/stackAdopt-example.json
+        responses: 
+          201: 
+            body: 
+              application/json: 
+                schema: stackAdoptResp
+                example: !include examples/stackAdoptResp-example.json
+      get: 
+        description: List stack data
+        queryParameters: 
+          "status ": 
+            description: Filters the stack list by a specified status. You can use this filter multiple times to filter by multiple statuses.
+          "name ": 
+            description: Filters the stack list by a specified name.
+          "limit ": 
+            description: Requests a specified page size of returned items from the query. Returns a number of items up to the specified limit value. Use the limit parameter to make an initial limited request and use the ID of the last-seen item from the response as the marker parameter value in a subsequent limited request.
+            type: integer
+          "marker ": 
+            description: Specifies the ID of the last-seen item. Use the limit parameter to make an initial limited request and use the ID of the last-seen item from the response as the marker parameter value in a subsequent limited request.
+          "show_deleted ": 
+            description: Specifies whether to include deleted stacks in the list. To include deleted stacks in the list, set to True. Default is False, which excludes deleted stacks from the list.
+            default: false
+            example: true
+          "sort_keys ": 
+            description: Sorts the stack list by name, status, created_at, or updated_at key.
+          "sort_dir ": 
+            description: The sort direction of the list. A valid value is asc (ascending) or desc (descending).
+            example: asc
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: stackListResp
+                example: !include examples/stackListResp-example.json
+      /preview: 
+        post: 
+          description: Preview stack
+          body: 
+            application/json: 
+              schema: stackCreate
+              example: !include examples/stackCreate-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: stackPreview
+                  example: !include examples/stackPreview-example.json
+      /{stack_name}: 
+        get: 
+          description: Find stack
+          responses: 
+            302: 
+              body: 
+                application/json: 
+                  schema: stackFindResp
+                  example: !include examples/stackFindResp-example.json
+        /events: 
+          get: 
+            description: Find stack events
+            responses: 
+              302: 
+        /resources: 
+          get: 
+            description: Find stack resources
+            responses: 
+              302: 
+        /{stack_id}: 
+          get: 
+            description: Show stack details
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: stackShowResp
+                    example: !include examples/stackShowResp-example.json
+          put: 
+            description: Update stack
+            body: 
+              application/json: 
+                schema: stackUpdate
+                example: !include examples/stackUpdate-example.json
+            responses: 
+              202: 
+          delete: 
+            description: Delete stack
+            responses: 
+              204: 
+          /abandon: 
+            delete: 
+              description: Abandon stack
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      schema: stackAbandon
+                      example: !include examples/stackAbandon-example.json
+          /actions: 
+            post: 
+              description: Check stack resources
+              body: 
+                application/json: 
+                  schema: stackActionCheck
+                  example: !include examples/stackActionCheck-example.json
+              responses: 
+                201: 
+                  body: 
+                    application/json: 
+                      schema: ""
+          /events: 
+            get: 
+              description: List stack events
+              queryParameters: 
+                resource_action: 
+                  description: "Filters the event list by a specified resource action. You can use this filter multiple times to filter by multiple resource actions: CREATE, DELETE, UPDATE, ROLLBACK, SUSPEND, RESUME, or ADOPT."
+                  example: CREATE
+                "resource_status ": 
+                  description: "Filters the event list by a specified resource status. You can use this filter multiple times to filter by multiple resource statuses: IN_PROGRESS, COMPLETE, or FAILED."
+                  example: FAILED
+                "resource_name ": 
+                  description: Filters the event list by a specified resource name. You can use this filter multiple times to filter by multiple resource names.
+                "resource_type ": 
+                  description: "Filters the event list by a specified resource type. You can use this filter multiple times to filter by multiple resource types: OS::Nova::Server, OS::Cinder::Volume, OS::Neutron::Port, and so on."
+                  example: "OS::Neutron::Port"
+                "limit (Optional)": 
+                  description: Requests a specified page size of returned items from the query. Returns a number of items up to the specified limit value. Use the limit parameter to make an initial limited request and use the ID of the last-seen item from the response as the marker parameter value in a subsequent limited request.
+                  type: integer
+                "marker ": 
+                  description: Specifies the ID of the last-seen item. Use the limit parameter to make an initial limited request and use the ID of the last-seen item from the response as the marker parameter value in a subsequent limited request.
+                "sort_keys ": 
+                  description: Sorts the list by the resource_type or created_at key.
+                "sort_dir ": 
+                  description: The sort direction of the list. A valid value is asc (ascending) or desc (descending).
+                  example: asc
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      schema: eventListResp
+                      example: !include examples/eventListResp-example.json
+          /resources: 
+            get: 
+              description: List resources
+              queryParameters: 
+                nested_depth: 
+                  description: Includes resources from nested stacks up to nested_depth levels of recursion.
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      schema: ""
+            /{resource_name}: 
+              get: 
+                description: Show resource data
+                responses: 
+                  200: 
+                    body: 
+                      application/json: 
+                        schema: ""
+              /events: 
+                get: 
+                  description: List resource events
+                  queryParameters: 
+                    "resource_action ": 
+                      description: "Filters the event list by a specified resource action. You can use this filter multiple times to filter by multiple resource actions: CREATE, DELETE, UPDATE, ROLLBACK, SUSPEND, RESUME, or ADOPT."
+                      example: CREATE
+                    "resource_status ": 
+                      description: "Filters the event list by a specified resource status. You can use this filter multiple times to filter by multiple resource statuses: IN_PROGRESS, COMPLETE, or FAILED."
+                      example: FAILED
+                    "resource_name ": 
+                      description: Filters the event list by a specified resource name. You can use this filter multiple times to filter by multiple resource names.
+                    "resource_type ": 
+                      description: "Filters the event list by a specified resource type. You can use this filter multiple times to filter by multiple resource types: OS::Nova::Server, OS::Cinder::Volume, OS::Neutron::Port, and so on."
+                      example: "OS::Neutron::Port"
+                    limit: 
+                      description: Requests a specified page size of returned items from the query. Returns a number of items up to the specified limit value. Use the limit parameter to make an initial limited request and use the ID of the last-seen item from the response as the marker parameter value in a subsequent limited request.
+                      type: integer
+                    "marker ": 
+                      description: Specifies the ID of the last-seen item. Use the limit parameter to make an initial limited request and use the ID of the last-seen item from the response as the marker parameter value in a subsequent limited request.
+                    "sort_keys ": 
+                      description: Sorts the list by the resource_type or created_at key.
+                    "sort_dir ": 
+                      description: The sort direction of the list. A valid value is asc (ascending) or desc (descending).
+                  responses: 
+                    200: 
+                      body: 
+                        application/json: 
+                          schema: eventListResp
+                          example: !include examples/eventListResp-example.json
+                /{event_id}: 
+                  get: 
+                    description: Show event details
+                    responses: 
+                      200: 
+                        body: 
+                          application/json: 
+                            schema: ""
+              /metadata: 
+                get: 
+                  description: Show resource metadata
+                  responses: 
+                    200: 
+                      body: 
+                        application/json: 
+                          schema: resourceMetadataResp
+                          example: !include examples/resourceMetadataResp-example.json
+              /signal: 
+                post: 
+                  description: Send a signal to a resource
+                  responses: 
+                    200: 
+          /snapshots: 
+            post: 
+              description: Snapshot stack
+              body: 
+                application/json: 
+                  schema: sanapshotStackReq
+                  example: !include examples/sanapshotStackReq-example.json
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      schema: snapshotStackRes
+                      example: !include examples/snapshotStackRes-example.json
+            get: 
+              description: List snapshots
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      schema: listSnapshots
+                      example: !include examples/listSnapshots-example.json
+            /{snapshot_id}: 
+              get: 
+                description: Show snapshot
+                responses: 
+                  200: 
+                    body: 
+                      application/json: 
+                        schema: stackShowSnapshot
+                        example: !include examples/stackShowSnapshot-example.json
+              post: 
+                description: Restore snapshot
+                responses: 
+                  202: 
+              delete: 
+                description: Delete snapshot
+                responses: 
+                  204: 
+          /template: 
+            get: 
+              description: Get stack template
+              responses: 
+                200: 
+                  body: 
+                    application/json: 
+                      schema: ""
+    /validate: 
+      post: 
+        description: Validate template
+        body: 
+          application/json: 
+            schema: templateValidateReq
+            example: !include examples/templateValidateReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: templateValidateResp
+                example: !include examples/templateValidateResp-example.json

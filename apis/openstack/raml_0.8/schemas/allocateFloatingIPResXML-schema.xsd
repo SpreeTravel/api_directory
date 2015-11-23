@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="floating_ip">
+    <xsd:complexType>
+      <xsd:sequence/>
+      <xsd:attribute name="instance_id" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="ip" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="fixed_ip" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="id" type="xsd:int" use="required"/>
+      <xsd:attribute name="pool" type="xsd:normalizedString" use="required"/>
+    </xsd:complexType>
+    <xsd:attribute name="instance_id" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="ip" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="fixed_ip" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="id" type="xsd:int" use="required"/>
+    <xsd:attribute name="pool" type="xsd:normalizedString" use="required"/>
+  </xsd:element>
+</xsd:schema>

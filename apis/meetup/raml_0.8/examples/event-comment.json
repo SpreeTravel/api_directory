@@ -1,0 +1,29 @@
+{
+  "event_diff_id": 100,
+  "comment_url": "comment_url",
+  "group_id": 100,
+  "event_id": 100,
+  "self": {
+    "actions": "actions"
+  },
+  "in_reply_to": 100,
+  "member_id": 100,
+  "member_photo": {
+    "photo_link": "photo_link",
+    "hires_link": "hires_link",
+    "thumb_link": "thumb_link",
+    "photo_id": 100
+  },
+  "notifications": "notifications",
+  "replies": "replies",
+  "event": {
+    "id": 100,
+    "time": 100,
+    "event_url": "event_url",
+    "name": "name"
+  },
+  "like_count": 100,
+  "comment": "comment",
+  "member_name": "member_name",
+  "event_comment_id": 100
+}

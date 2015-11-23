@@ -1,0 +1,81 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "auth_type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "voice_status_callback_method" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "subresource_uris" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "ip_access_control_list_mappings" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "credential_list_mappings" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "date_updated" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "voice_status_callback_url" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "uri" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "friendly_name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "domain_name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "account_sid" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "voice_url" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "voice_method" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "sid" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "date_created" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "voice_fallback_method" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "api_version" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "voice_fallback_url" : {
+      "type" : "object" ,
+      "required" : false
+    }
+  }
+}

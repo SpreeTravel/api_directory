@@ -1,0 +1,87 @@
+{
+	"request": {
+		"country": {
+			"requested": "US",
+			"interpreted": "US"
+		},
+		"url": "https://api.flightstats.com/flex/delayindex/rest/v1/json/country/US",
+		"classification": {
+			
+		},
+		"score": {
+			
+		}
+	},
+	"delayIndexes": [{
+		"airport": {
+			"fs": "RST",
+			"iata": "RST",
+			"icao": "KRST",
+			"faa": "RST",
+			"name": "Rochester International Airport",
+			"street1": "7600 Helgerson Drive Southwest",
+			"city": "Rochester",
+			"cityCode": "RST",
+			"stateCode": "MN",
+			"postalCode": "55902",
+			"countryCode": "US",
+			"countryName": "United States",
+			"regionName": "North America",
+			"timeZoneRegionName": "America/Chicago",
+			"weatherZone": "MNZ087",
+			"localTime": "2015-04-28T00:24:14.105",
+			"utcOffsetHours": -5.0,
+			"latitude": 43.910793,
+			"longitude": -92.489768,
+			"elevationFeet": 1317,
+			"classification": 3,
+			"active": true,
+			"weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/RST?codeType=fs"
+		},
+		"rawScore": 0.0,
+		"normalizedScore": 0.0,
+		"dateStart": "2015-04-28T04:00:00.000Z",
+		"dateEnd": "2015-04-28T07:00:00.000Z",
+		"flights": 0,
+		"observations": 0,
+		"canceled": 0,
+		"onTime": 0,
+		"delayed15": 0,
+		"delayed30": 0,
+		"delayed45": 0,
+		"delta": 0.0
+	},
+	{
+		"airport": {
+			"fs": "VBM",
+			"iata": "VBM",
+			"name": "Blue Mountain Airport",
+			"city": "Blue Mountain",
+			"stateCode": "AK",
+			"countryCode": "US",
+			"countryName": "United States",
+			"regionName": "North America",
+			"timeZoneRegionName": "America/Anchorage",
+			"localTime": "2015-04-27T21:24:14.105",
+			"utcOffsetHours": -8.0,
+			"latitude": 57.8575,
+			"longitude": -157.08667,
+			"elevationFeet": 177,
+			"classification": 4,
+			"active": true,
+			"weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/VBM?codeType=fs"
+		},
+		"rawScore": 0.0,
+		"normalizedScore": 0.0,
+		"dateStart": "2015-04-28T04:00:00.000Z",
+		"dateEnd": "2015-04-28T07:00:00.000Z",
+		"flights": 0,
+		"observations": 0,
+		"canceled": 0,
+		"onTime": 0,
+		"delayed15": 0,
+		"delayed30": 0,
+		"delayed45": 0,
+		"delta": 0.0
+	}]
+}

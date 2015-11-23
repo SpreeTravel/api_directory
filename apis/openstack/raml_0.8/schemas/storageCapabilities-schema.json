@@ -1,0 +1,167 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "alarm_storage" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "storage:production_ready" : {
+          "type" : "boolean" ,
+          "required" : false
+        }
+      }
+    } ,
+    "api" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "alarms:history:query:complex" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "alarms:history:query:simple" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "alarms:query:complex" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "alarms:query:simple" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "events:query:simple" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "meters:pagination" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "meters:query:complex" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "meters:query:metadata" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "meters:query:simple" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "resources:pagination" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "resources:query:complex" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "resources:query:metadata" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "resources:query:simple" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "samples:pagination" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "samples:query:complex" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "samples:query:metadata" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "samples:query:simple" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "statistics:aggregation:selectable:avg" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "statistics:aggregation:selectable:cardinality" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "statistics:aggregation:selectable:count" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "statistics:aggregation:selectable:max" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "statistics:aggregation:selectable:min" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "statistics:aggregation:selectable:quartile" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "statistics:aggregation:selectable:stddev" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "statistics:aggregation:selectable:sum" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "statistics:aggregation:standard" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "statistics:groupby" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "statistics:pagination" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "statistics:query:complex" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "statistics:query:metadata" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "statistics:query:simple" : {
+          "type" : "boolean" ,
+          "required" : false
+        }
+      }
+    } ,
+    "event_storage" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "storage:production_ready" : {
+          "type" : "boolean" ,
+          "required" : false
+        }
+      }
+    } ,
+    "storage" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "storage:production_ready" : {
+          "type" : "boolean" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

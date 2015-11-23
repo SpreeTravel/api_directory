@@ -1,0 +1,16 @@
+[
+  {
+    "DateTime" : "2013-01-18T15:00:00-05:00" ,
+    "EpochDateTime" : 1358539200 ,
+    "WeatherIcon" : 1 ,
+    "IconPhrase" : "Sunny" ,
+    "Temperature" : {
+      "Value" : 27 ,
+      "Unit" : "F" ,
+      "UnitType" : 18
+    } ,
+    "PrecipitationProbability" : 0 ,
+    "MobileLink" : "http://m.accuweather.com/en/us/state-college-pa/16801/hourly-weather-forecast/335315?lang=en-us?hbhhour=15" ,
+    "Link" : "http://www.accuweather.com/en/us/state-college-pa/16801/hourly-weather-forecast/335315?lang=en-us?hbhhour=15"
+  }
+]

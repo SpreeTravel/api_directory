@@ -1,0 +1,11 @@
+{
+  "data": {
+    "ghash": null,
+    "lag": 4,
+    "phrase": "obama",
+    "rate": 1.123823,
+    "time": 1342623038
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

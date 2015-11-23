@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+		"goals": {
+			"properties": {
+				"calories": {
+					"type": "integer"
+				}
+			},
+			"type": "object"
+		},
+		"foodPlan": {
+			"properties": {
+				"intensity": {
+					"enum": [
+						"MAINTENANCE",
+						"EASIER",
+						"MEDIUM",
+						"KINDAHARD",
+						"HARDER"
+					]
+				},
+				"personalized": {
+					"type": "boolean"
+				}
+			},
+			"type": "object"
+		}
+	}
+}

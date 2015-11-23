@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+		"startDate": {
+			"description": "Weight goal start date; in the format yyyy-MM-dd.",
+			"type": "string",
+            "required": true
+		},
+		"startWeight": {
+			"description": "Weight goal start weight; in the format X.XX, in the unit system that corresponds to the Accept-Language header provided.",
+			"type": "string",
+      		"required": true
+		},
+		"weight": {
+			"description": "Weight goal target weight; in the format X.XX, in the unit system that corresponds to the Accept-Language header provided; required if user doesn't have a weight goal.",
+			"type": "string"
+		}
+	}
+}

@@ -1,0 +1,32 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "title" : {
+      "type" : "string" ,
+      "required" : true
+    } ,
+    "index" : {
+      "type" : "number" ,
+      "required" : true
+    } ,
+    "sheetId" : {
+      "type" : "string" ,
+      "required" : true
+    } ,
+    "type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "options" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "string"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,431 @@
+cb({
+  "request" : {
+    "currentAmount" : "1000000" ,
+    "currentTermInMonths" : "80" ,
+    "newRate" : "5.454" ,
+    "newAmount" : "800000" ,
+    "newTermInMonths" : "80" ,
+    "output" : "json" ,
+    "fees" : "20000" ,
+    "schedule" : "monthly" ,
+    "cashout" : "10000" ,
+    "callback" : "cb" ,
+    "currentRate" : "6.504" ,
+    "rollFees" : "false" ,
+    "originationYear" : "2009"
+  } ,
+  "message" : {
+    "text" : "Request successfully processed" ,
+    "code" : "0"
+  } ,
+  "response" : {
+    "totalMonthlySavings" : "3339" ,
+    "currentMonthlyPayment" : "15439" ,
+    "newMonthlyPayment" : "12100" ,
+    "breakEven" : "6" ,
+    "lifetimeSavings" : "-81609" ,
+    "monthlySavingsSchedule" : [
+      {
+        "period" : "1" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "-16661" ,
+        "endingBalance" : "801582"
+      } , {
+        "period" : "2" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "-13322" ,
+        "endingBalance" : "793125"
+      } , {
+        "period" : "3" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "-9983" ,
+        "endingBalance" : "784630"
+      } , {
+        "period" : "4" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "-6644" ,
+        "endingBalance" : "776096"
+      } , {
+        "period" : "5" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "-3305" ,
+        "endingBalance" : "767524"
+      } , {
+        "period" : "6" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "34" ,
+        "endingBalance" : "758913"
+      } , {
+        "period" : "7" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "3373" ,
+        "endingBalance" : "750262"
+      } , {
+        "period" : "8" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "6712" ,
+        "endingBalance" : "741572"
+      } , {
+        "period" : "9" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "10051" ,
+        "endingBalance" : "732843"
+      } , {
+        "period" : "10" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "13390" ,
+        "endingBalance" : "724074"
+      } , {
+        "period" : "11" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "16729" ,
+        "endingBalance" : "715265"
+      } , {
+        "period" : "12" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "20068" ,
+        "endingBalance" : "706416"
+      } , {
+        "period" : "13" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "23407" ,
+        "endingBalance" : "697527"
+      } , {
+        "period" : "14" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "26746" ,
+        "endingBalance" : "688598"
+      } , {
+        "period" : "15" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "30085" ,
+        "endingBalance" : "679628"
+      } , {
+        "period" : "16" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "33424" ,
+        "endingBalance" : "670617"
+      } , {
+        "period" : "17" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "36763" ,
+        "endingBalance" : "661565"
+      } , {
+        "period" : "18" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "40102" ,
+        "endingBalance" : "652472"
+      } , {
+        "period" : "19" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "43441" ,
+        "endingBalance" : "643338"
+      } , {
+        "period" : "20" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "46780" ,
+        "endingBalance" : "634162"
+      } , {
+        "period" : "21" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "50119" ,
+        "endingBalance" : "624944"
+      } , {
+        "period" : "22" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "53458" ,
+        "endingBalance" : "615685"
+      } , {
+        "period" : "23" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "56797" ,
+        "endingBalance" : "606383"
+      } , {
+        "period" : "24" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "60136" ,
+        "endingBalance" : "597040"
+      } , {
+        "period" : "25" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "63475" ,
+        "endingBalance" : "587654"
+      } , {
+        "period" : "26" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "66814" ,
+        "endingBalance" : "578225"
+      } , {
+        "period" : "27" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "70153" ,
+        "endingBalance" : "568753"
+      } , {
+        "period" : "28" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "73492" ,
+        "endingBalance" : "559238"
+      } , {
+        "period" : "29" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "76831" ,
+        "endingBalance" : "549680"
+      } , {
+        "period" : "30" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "80170" ,
+        "endingBalance" : "540079"
+      } , {
+        "period" : "31" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "83509" ,
+        "endingBalance" : "530433"
+      } , {
+        "period" : "32" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "86848" ,
+        "endingBalance" : "520745"
+      } , {
+        "period" : "33" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "90187" ,
+        "endingBalance" : "511012"
+      } , {
+        "period" : "34" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "93526" ,
+        "endingBalance" : "501234"
+      } , {
+        "period" : "35" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "96865" ,
+        "endingBalance" : "491413"
+      } , {
+        "period" : "36" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "100204" ,
+        "endingBalance" : "481546"
+      } , {
+        "period" : "37" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "103543" ,
+        "endingBalance" : "471635"
+      } , {
+        "period" : "38" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "106882" ,
+        "endingBalance" : "461679"
+      } , {
+        "period" : "39" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "110221" ,
+        "endingBalance" : "451678"
+      } , {
+        "period" : "40" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "113560" ,
+        "endingBalance" : "441631"
+      } , {
+        "period" : "41" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "116899" ,
+        "endingBalance" : "431538"
+      } , {
+        "period" : "42" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "120238" ,
+        "endingBalance" : "421400"
+      } , {
+        "period" : "43" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "123577" ,
+        "endingBalance" : "411215"
+      } , {
+        "period" : "44" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "126916" ,
+        "endingBalance" : "400984"
+      } , {
+        "period" : "45" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "130255" ,
+        "endingBalance" : "390707"
+      } , {
+        "period" : "46" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "133594" ,
+        "endingBalance" : "380383"
+      } , {
+        "period" : "47" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "136933" ,
+        "endingBalance" : "370012"
+      } , {
+        "period" : "48" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "140272" ,
+        "endingBalance" : "359594"
+      } , {
+        "period" : "49" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "143611" ,
+        "endingBalance" : "349129"
+      } , {
+        "period" : "50" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "146950" ,
+        "endingBalance" : "338616"
+      } , {
+        "period" : "51" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "150289" ,
+        "endingBalance" : "328055"
+      } , {
+        "period" : "52" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "153628" ,
+        "endingBalance" : "317446"
+      } , {
+        "period" : "53" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "156967" ,
+        "endingBalance" : "306789"
+      } , {
+        "period" : "54" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "160306" ,
+        "endingBalance" : "296084"
+      } , {
+        "period" : "55" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "163645" ,
+        "endingBalance" : "285330"
+      } , {
+        "period" : "56" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "166984" ,
+        "endingBalance" : "274527"
+      } , {
+        "period" : "57" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "170323" ,
+        "endingBalance" : "263675"
+      } , {
+        "period" : "58" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "173662" ,
+        "endingBalance" : "252773"
+      } , {
+        "period" : "59" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "177001" ,
+        "endingBalance" : "241823"
+      } , {
+        "period" : "60" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "180340" ,
+        "endingBalance" : "230822"
+      } , {
+        "period" : "61" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "183679" ,
+        "endingBalance" : "219771"
+      } , {
+        "period" : "62" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "187018" ,
+        "endingBalance" : "208670"
+      } , {
+        "period" : "63" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "190357" ,
+        "endingBalance" : "197519"
+      } , {
+        "period" : "64" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "193696" ,
+        "endingBalance" : "186317"
+      } , {
+        "period" : "65" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "197035" ,
+        "endingBalance" : "175064"
+      } , {
+        "period" : "66" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "200374" ,
+        "endingBalance" : "163760"
+      } , {
+        "period" : "67" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "203713" ,
+        "endingBalance" : "152404"
+      } , {
+        "period" : "68" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "207052" ,
+        "endingBalance" : "140997"
+      } , {
+        "period" : "69" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "210391" ,
+        "endingBalance" : "129538"
+      } , {
+        "period" : "70" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "213730" ,
+        "endingBalance" : "118027"
+      } , {
+        "period" : "71" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "217069" ,
+        "endingBalance" : "106464"
+      } , {
+        "period" : "72" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "220408" ,
+        "endingBalance" : "94848"
+      } , {
+        "period" : "73" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "223747" ,
+        "endingBalance" : "83179"
+      } , {
+        "period" : "74" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "227086" ,
+        "endingBalance" : "71458"
+      } , {
+        "period" : "75" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "230425" ,
+        "endingBalance" : "59683"
+      } , {
+        "period" : "76" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "233764" ,
+        "endingBalance" : "47854"
+      } , {
+        "period" : "77" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "237103" ,
+        "endingBalance" : "35972"
+      } , {
+        "period" : "78" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "240442" ,
+        "endingBalance" : "24036"
+      } , {
+        "period" : "79" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "243781" ,
+        "endingBalance" : "12045"
+      } , {
+        "period" : "80" ,
+        "monthlySavings" : "3339" ,
+        "cumulativeSavings" : "247120" ,
+        "endingBalance" : "0"
+      }
+    ]
+  }
+});

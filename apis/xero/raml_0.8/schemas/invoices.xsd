@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Invoices">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element maxOccurs="unbounded" ref="Invoice"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Invoice">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element minOccurs="0" ref="Reference"/>
+    <xs:element ref="Type"/>
+    <xs:element ref="Contact"/>
+    <xs:element ref="Date"/>
+    <xs:element ref="DueDate"/>
+    <xs:element ref="Status"/>
+    <xs:element ref="LineAmountTypes"/>
+    <xs:element ref="SubTotal"/>
+    <xs:element ref="TotalTax"/>
+    <xs:element ref="Total"/>
+    <xs:element ref="UpdatedDateUTC"/>
+    <xs:element ref="CurrencyCode"/>
+    <xs:element ref="InvoiceID"/>
+    <xs:element ref="InvoiceNumber"/>
+    <xs:element ref="AmountDue"/>
+    <xs:element ref="AmountPaid"/>
+    <xs:element ref="AmountCredited"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Reference" type="xs:NCName"/>
+  <xs:element name="Type" type="xs:NCName"/>
+  <xs:element name="Contact">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="ContactID"/>
+    <xs:element ref="Name"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="ContactID" type="xs:string"/>
+  <xs:element name="Name" type="xs:string"/>
+  <xs:element name="Date" type="xs:dateTime"/>
+  <xs:element name="DueDate" type="xs:dateTime"/>
+  <xs:element name="Status" type="xs:NCName"/>
+  <xs:element name="LineAmountTypes" type="xs:NCName"/>
+  <xs:element name="SubTotal" type="xs:decimal"/>
+  <xs:element name="TotalTax" type="xs:decimal"/>
+  <xs:element name="Total" type="xs:decimal"/>
+  <xs:element name="UpdatedDateUTC" type="xs:dateTime"/>
+  <xs:element name="CurrencyCode" type="xs:NCName"/>
+  <xs:element name="InvoiceID" type="xs:string"/>
+  <xs:element name="InvoiceNumber" type="xs:NCName"/>
+  <xs:element name="AmountDue" type="xs:decimal"/>
+  <xs:element name="AmountPaid" type="xs:decimal"/>
+  <xs:element name="AmountCredited" type="xs:decimal"/>
+</xs:schema>

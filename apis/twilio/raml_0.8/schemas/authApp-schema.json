@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "connect_app_sid": {
+      "type": "string"
+    },
+    "account_sid": {
+      "type": "string"
+    },
+    "permissions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "connect_app_friendly_name": {
+      "type": "string"
+    },
+    "connect_app_description": {
+      "type": "string"
+    },
+    "connect_app_company_name": {
+      "type": "string"
+    },
+    "connect_app_homepage_url": {
+      "type": "string"
+    }
+  }
+}

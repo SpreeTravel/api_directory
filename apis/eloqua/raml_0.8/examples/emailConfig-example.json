@@ -1,0 +1,23 @@
+{
+  "subscriptionLandingPageId" : "undefined" ,
+  "unsubscriptionLandingPageId" : "2" ,
+  "replyToName" : "undefined" ,
+  "replyToAddress" : "undefined" ,
+  "fromAddress" : "undefined" ,
+  "bouncebackAddresses" : [
+    null ,
+    null
+  ] ,
+  "name" : "undefined" ,
+  "description" : "Eloqua" ,
+  "permissions" : "undefined" ,
+  "folderId" : "undefined" ,
+  "sourceTemplateId" : "undefined" ,
+  "createdBy" : "undefined" ,
+  "createdAt" : "undefined" ,
+  "updatedBy" : "undefined" ,
+  "updatedAt" : "undefined" ,
+  "accessedAt" : "undefined" ,
+  "scheduledFor" : "undefined" ,
+  "depth" : "minimal"
+}

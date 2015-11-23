@@ -1,0 +1,55 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "kind" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "updated" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "calendar" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "(key)" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "background" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "foreground" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      }
+    } ,
+    "event" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "(key)" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "background" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "foreground" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      }
+    }
+  }
+}

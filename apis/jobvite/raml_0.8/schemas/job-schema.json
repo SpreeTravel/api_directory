@@ -1,0 +1,96 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "companyName" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "siteUrl" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "recruiterEmail" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "closeMissingReqs" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "requisitions" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "applyLink" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "briefDescription" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "category" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "jobId" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "jobLink" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "locationName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "locationCity" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "locationState" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "locationCountry" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "recruiterEmail" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "title" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "customFields" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "CustomField1" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "customfields2" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

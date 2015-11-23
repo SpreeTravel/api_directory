@@ -1,0 +1,145 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "request" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "taxBracket" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "amount" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "costOfMoney" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "rate" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "comparisonYears" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "rate2" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "rate3" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "callback" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "terminmonths3" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "terminmonths2" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "output" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "terminmonths" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "message" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "text" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "code" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "response" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "monthlyPrincipalAndInterest" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthlyPrincipalAndInterest2" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthlyPrincipalAndInterest3" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "discountedCost" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "discountedCost2" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "discountedCost3" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "remainingPrincipal" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "remainingPrincipal2" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "remainingPrincipal3" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "taxSavings" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "taxSavings2" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "taxSavings3" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "totalCost" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "totalCost2" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "totalCost3" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "result" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

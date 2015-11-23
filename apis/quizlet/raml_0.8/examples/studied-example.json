@@ -1,0 +1,20 @@
+[
+  {
+    "mode" : "speller" ,
+    "last_studied_date" : 1308719871 ,
+    "finished_date" : 0 ,
+    "score" : 1674 ,
+    "set" : {
+      "id" : 415 ,
+      "url" : "http://quizlet.com/415/us-state-capitals-flash-cards/" ,
+      "title" : "U.S. State Capitals" ,
+      "created_by" : "jalenack" ,
+      "term_count" : 50 ,
+      "created_date" : 1144296408 ,
+      "modified_date" : 1308066716 ,
+      "has_images" : false ,
+      "subjects" : [
+      ]
+    }
+  }
+]

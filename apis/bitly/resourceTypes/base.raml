@@ -1,0 +1,15 @@
+get: 
+  responses: 
+    200: 
+      description: Successful request.
+    403: 
+      description: Rate limit exceeded.
+    404: 
+      description: |
+        Not Found. The server has not found anything matching the Request-URI.
+    429: 
+      description: Your application is sending too many simultaneous requests.
+    500: 
+      description: Any other error.
+    503: 
+      description: Unknown error.

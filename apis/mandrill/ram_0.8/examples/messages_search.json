@@ -1,0 +1,17 @@
+{
+  "key": "example key",
+  "query": "email:gmail.com",
+  "date_from": "2013-01-01",
+  "date_to": "2013-01-02",
+  "tags": [
+    "password-reset",
+    "welcome"
+  ],
+  "senders": [
+    "sender@example.com"
+  ],
+  "api_keys": [
+    "PmmzuovUZMPJsa73o3jjCw"
+  ],
+  "limit": 100
+}

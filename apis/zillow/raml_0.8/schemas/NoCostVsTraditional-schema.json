@@ -1,0 +1,125 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "request" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "closingcosts" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "amount" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "callback" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "comparisonyears" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "output" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "terminmonths" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "taxbracket" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "rollfees" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "nocostrate" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "costofmoney" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "rate" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "message" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "text" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "code" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "response" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "monthlyPrincipalAndInterest" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthlyPrincipalAndInterestNoCost" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "discountedPayments" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "noCostDiscountedPayments" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "remainingPrincipal" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "noCostRemainingPrincipal" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "taxSavings" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "noCostTaxSavings" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "paidAtClose" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "totalCost" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "noCostTotalCost" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "result" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

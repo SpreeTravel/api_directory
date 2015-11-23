@@ -1,0 +1,23 @@
+body: 
+  application/x-www-form-urlencoded: 
+    formParameters: 
+      time_zone: 
+        description: "Time zone in which dates in the result will be rendered. Defaults to 'UTC'"
+      since: 
+        description: The start of the date range over which you want to search.
+      until: 
+        description: The end of the date range over which you want to search.
+      is_overview: 
+        description: |
+          If 'true', will only return log entries of type 'trigger', 'acknowledge', or 'resolve'.
+          Defaults to 'false'.
+        type: boolean
+      include[]: 
+        description: |
+          Array of additional details to include. This API accepts 'channel', 'incident', and 'service'.
+          If 'channel' is not included, a summary will be returned (See channel format information for more information.)
+        enum: 
+          - channel
+          - incident
+          - service
+        example: include[]=channel&include[]=incident

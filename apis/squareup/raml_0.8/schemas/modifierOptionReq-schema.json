@@ -1,0 +1,25 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "price_money" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "currency_code" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "amount" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

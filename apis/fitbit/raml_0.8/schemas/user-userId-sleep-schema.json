@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+    	"startTime": {
+    		"description": "Start time; hours and minutes in the format HH:mm",
+    		"type": "string"
+    	},
+    	"duration": {
+    		"description": "Duration; in milliseconds.",
+    		"type": "integer"
+    	},
+    	"date": {
+    		"description": "Log entry date; in the format yyyy-MM-dd.",
+    		"type": "integer"
+    	}
+	}
+}

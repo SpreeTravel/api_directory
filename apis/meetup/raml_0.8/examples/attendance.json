@@ -1,0 +1,32 @@
+{
+  "results": [
+    {
+      "member": {
+        "id": 0,
+        "name": "name 0",
+        "photo": {
+          "thumb": 0
+        }
+      },
+      "status": "status 0",
+      "rsvp": {
+        "response": "response 0",
+        "guests": "guests 0"
+      }
+    },
+    {
+      "member": {
+        "id": 1,
+        "name": "name 1",
+        "photo": {
+          "thumb": 1
+        }
+      },
+      "status": "status 1",
+      "rsvp": {
+        "response": "response 1",
+        "guests": "guests 1"
+      }
+    }
+  ]
+}

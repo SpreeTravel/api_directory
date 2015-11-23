@@ -1,0 +1,37 @@
+[
+  {
+    "ts": 1365190000,
+    "_id": "abc123abc123abc123abc123",
+    "sender": "sender@example.com",
+    "template": "example-template",
+    "subject": "example subject",
+    "email": "recipient.email@example.com",
+    "tags": [
+      "password-reset"
+    ],
+    "opens": 42,
+    "opens_detail": [
+      {
+        "ts": 1365190001,
+        "ip": "55.55.55.55",
+        "location": "Georgia, US",
+        "ua": "Linux/Ubuntu/Chrome/Chrome 28.0.1500.53"
+      }
+    ],
+    "clicks": 42,
+    "clicks_detail": [
+      {
+        "ts": 1365190001,
+        "url": "http://www.example.com",
+        "ip": "55.55.55.55",
+        "location": "Georgia, US",
+        "ua": "Linux/Ubuntu/Chrome/Chrome 28.0.1500.53"
+      }
+    ],
+    "state": "sent",
+    "metadata": {
+      "user_id": "123",
+      "website": "www.example.com"
+    }
+  }
+]

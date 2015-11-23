@@ -1,0 +1,31 @@
+
+{
+	"type" : "object" ,
+	"$schema" : "http://json-schema.org/draft-03/schema" ,
+	"required" : false ,
+	"properties" : {
+		"requests" : {
+			"type" : "array" ,
+			"required" : false ,
+			"items" : {
+				"type" : "object" ,
+				"required" : false ,
+				"properties" : {
+					"body" : {
+						"type" : "object" ,
+						"required" : false 
+						},
+						"method" : {
+							"type" : "string" ,
+							"required" : true,
+							"enum" : ["POST", "GET", "PUT", "DELETE"]
+						} ,
+						"path" : {
+							"type" : "string" ,
+							"required" : true
+						}
+					}
+				}
+			}
+		}
+	}

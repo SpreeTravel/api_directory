@@ -1,0 +1,177 @@
+[
+  {
+    "Version" : 1 ,
+    "Key" : "335315" ,
+    "Type" : "City" ,
+    "Rank" : 55 ,
+    "LocalizedName" : "State College" ,
+    "EnglishName" : "State College" ,
+    "PrimaryPostalCode" : "16801" ,
+    "Region" : {
+      "ID" : "NAM" ,
+      "LocalizedName" : "North America" ,
+      "EnglishName" : "North America"
+    } ,
+    "Country" : {
+      "ID" : "US" ,
+      "LocalizedName" : "United States" ,
+      "EnglishName" : "United States"
+    } ,
+    "AdministrativeArea" : {
+      "ID" : "PA" ,
+      "LocalizedName" : "Pennsylvania" ,
+      "EnglishName" : "Pennsylvania" ,
+      "Level" : 1 ,
+      "LocalizedType" : "State" ,
+      "EnglishType" : "State" ,
+      "CountryID" : "US"
+    } ,
+    "TimeZone" : {
+      "Code" : "EDT" ,
+      "Name" : "America/New_York" ,
+      "GmtOffset" : -4 ,
+      "IsDaylightSaving" : true ,
+      "NextOffsetChange" : null
+    } ,
+    "GeoPosition" : {
+      "Latitude" : 40.79 ,
+      "Longitude" : -77.86 ,
+      "Elevation" : {
+        "Metric" : {
+          "Value" : "366" ,
+          "Unit" : "m" ,
+          "UnitType" : 5
+        } ,
+        "Imperial" : {
+          "Value" : "1202" ,
+          "Unit" : "ft" ,
+          "UnitType" : 0
+        }
+      }
+    } ,
+    "IsAlias" : false ,
+    "SupplementalAdminAreas" : [
+      {
+        "Level" : 2 ,
+        "LocalizedName" : "Centre" ,
+        "EnglishName" : "Centre"
+      }
+    ]
+  } , {
+    "Version" : 1 ,
+    "Key" : "3-349655_1_AL" ,
+    "Type" : "City" ,
+    "Rank" : 105 ,
+    "LocalizedName" : "State College" ,
+    "EnglishName" : "University Park" ,
+    "PrimaryPostalCode" : "88003" ,
+    "Region" : {
+      "ID" : "NAM" ,
+      "LocalizedName" : "North America" ,
+      "EnglishName" : "North America"
+    } ,
+    "Country" : {
+      "ID" : "US" ,
+      "LocalizedName" : "United States" ,
+      "EnglishName" : "United States"
+    } ,
+    "AdministrativeArea" : {
+      "ID" : "NM" ,
+      "LocalizedName" : "New Mexico" ,
+      "EnglishName" : "New Mexico" ,
+      "Level" : 1 ,
+      "LocalizedType" : "State" ,
+      "EnglishType" : "State" ,
+      "CountryID" : "US"
+    } ,
+    "TimeZone" : {
+      "Code" : "MDT" ,
+      "Name" : "America/Denver" ,
+      "GmtOffset" : -6 ,
+      "IsDaylightSaving" : true ,
+      "NextOffsetChange" : null
+    } ,
+    "GeoPosition" : {
+      "Latitude" : 32.28 ,
+      "Longitude" : -106.75 ,
+      "Elevation" : {
+        "Metric" : {
+          "Value" : "1195" ,
+          "Unit" : "m" ,
+          "UnitType" : 5
+        } ,
+        "Imperial" : {
+          "Value" : "3919" ,
+          "Unit" : "ft" ,
+          "UnitType" : 0
+        }
+      }
+    } ,
+    "IsAlias" : true ,
+    "SupplementalAdminAreas" : [
+      {
+        "Level" : 2 ,
+        "LocalizedName" : "Dona Ana" ,
+        "EnglishName" : "Dona Ana"
+      }
+    ]
+  } , {
+    "Version" : 1 ,
+    "Key" : "2153708" ,
+    "Type" : "City" ,
+    "Rank" : 500 ,
+    "LocalizedName" : "State College" ,
+    "EnglishName" : "State College" ,
+    "PrimaryPostalCode" : "31030" ,
+    "Region" : {
+      "ID" : "NAM" ,
+      "LocalizedName" : "North America" ,
+      "EnglishName" : "North America"
+    } ,
+    "Country" : {
+      "ID" : "US" ,
+      "LocalizedName" : "United States" ,
+      "EnglishName" : "United States"
+    } ,
+    "AdministrativeArea" : {
+      "ID" : "GA" ,
+      "LocalizedName" : "Georgia" ,
+      "EnglishName" : "Georgia" ,
+      "Level" : 1 ,
+      "LocalizedType" : "State" ,
+      "EnglishType" : "State" ,
+      "CountryID" : "US"
+    } ,
+    "TimeZone" : {
+      "Code" : "EDT" ,
+      "Name" : "America/New_York" ,
+      "GmtOffset" : -4 ,
+      "IsDaylightSaving" : true ,
+      "NextOffsetChange" : null
+    } ,
+    "GeoPosition" : {
+      "Latitude" : 32.54 ,
+      "Longitude" : -83.89 ,
+      "Elevation" : {
+        "Metric" : {
+          "Value" : "160" ,
+          "Unit" : "m" ,
+          "UnitType" : 5
+        } ,
+        "Imperial" : {
+          "Value" : "524" ,
+          "Unit" : "ft" ,
+          "UnitType" : 0
+        }
+      }
+    } ,
+    "IsAlias" : false ,
+    "SupplementalAdminAreas" : [
+      {
+        "Level" : 2 ,
+        "LocalizedName" : "Peach" ,
+        "EnglishName" : "Peach"
+      }
+    ]
+  }
+]

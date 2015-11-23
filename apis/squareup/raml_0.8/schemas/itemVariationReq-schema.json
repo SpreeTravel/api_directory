@@ -1,0 +1,41 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "price_money" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "currency_code" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "amount" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    } ,
+    "track_inventory" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "inventory_alert_type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "inventory_alert_threshold" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "user_data" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

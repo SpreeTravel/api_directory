@@ -1,0 +1,20 @@
+{
+  "resultCode" : 0 ,
+  "result" : [
+    {
+      "id" : "AQAISF82FOeE" ,
+      "type" : "GROUP" ,
+      "groupId" : 2331373580117892 ,
+      "name" : "Group 1" ,
+      "accessLevel" : "ADMIN"
+    } , {
+      "id" : "AAAFeF82FOeE" ,
+      "type" : "USER" ,
+      "userId" : 1539725208119172 ,
+      "email" : "jane.doe@smartsheet.com" ,
+      "name" : "Jane Doe" ,
+      "accessLevel" : "ADMIN"
+    }
+  ] ,
+  "message" : "SUCCESS"
+}

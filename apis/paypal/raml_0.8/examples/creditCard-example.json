@@ -1,0 +1,23 @@
+{
+  "id" : "CARD-1MD19612EW4364010KGFNJQI" ,
+  "valid_until" : "2016-05-07T00:00:00Z" ,
+  "state" : "ok" ,
+  "payer_id" : "user12345" ,
+  "type" : "visa" ,
+  "number" : "xxxxxxxxxxxx0331" ,
+  "expire_month" : "11" ,
+  "expire_year" : "2018" ,
+  "first_name" : "Betsy" ,
+  "last_name" : "Buyer" ,
+  "links" : [
+    {
+      "href" : "https://api.sandbox.paypal.com/v1/vault/credit-card/CARD-1MD19612EW4364010KGFNJQI" ,
+      "rel" : "self" ,
+      "method" : "GET"
+    } , {
+      "href" : "https://api.sandbox.paypal.com/v1/vault/credit-card/CARD-1MD19612EW4364010KGFNJQI" ,
+      "rel" : "delete" ,
+      "method" : "DELETE"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+description: |
+  #Standard Request URL Format
+  Most API features can be accessed using the following format. Note that several features can be combined into a single request. Refer to the examples below and on each feature documentation page.
+  
+  WunderMap layer requests return image files not textual data.
+  
+  GET http://api.wunderground.com/api/Your_Key/features/settings/q/query.format
+  
+  #Examples:
+  GET http://api.wunderground.com/api/Your_Key/features/settings/q/query.format
+  http://api.wunderground.com/api/Your_Key/forecast/geolookup/conditions/q/CA/San_Francisco.json
+  http://api.wunderground.com/api/Your_Key/geolookup/conditions/forecast/q/Australia/Sydney.json
+  http://api.wunderground.com/api/Your_Key/geolookup/forecast/q/Allentown.json
+  http://api.wunderground.com/api/Your_Key/forecast/q/zmw:31003.1.99999.json
+  (See description of the response.)
+responses: 
+  200: 
+    description: |
+      The response will be a JSON-encoded object.
+      |name|description|
+      |-|
+      |current_observation|Type: object. JSON type: object. The official API documentation provides no description. |
+      |current_observation.UV|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.dewpoint_c|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |current_observation.dewpoint_f|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |current_observation.dewpoint_string|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.display_location|Type: object. JSON type: object. The official API documentation provides no description. |
+      |current_observation.display_location.city|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.display_location.country|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.display_location.country_iso3166|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.display_location.elevation|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.display_location.full|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.display_location.latitude|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.display_location.longitude|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.display_location.state|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.display_location.state_name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.display_location.zip|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.estimated|Type: object. JSON type: object. The official API documentation provides no description. |
+      |current_observation.feelslike_c|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.feelslike_f|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.feelslike_string|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.forecast_url|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.heat_index_c|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.heat_index_f|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.heat_index_string|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.history_url|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.icon|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.icon_url|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.image|Type: object. JSON type: object. The official API documentation provides no description. |
+      |current_observation.image.link|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.image.title|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.image.url|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.local_epoch|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.local_time_rfc822|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.local_tz_long|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.local_tz_offset|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.local_tz_short|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.ob_url|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_epoch|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_location|Type: object. JSON type: object. The official API documentation provides no description. |
+      |current_observation.observation_location.city|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_location.country|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_location.country_iso3166|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_location.elevation|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_location.full|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_location.latitude|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_location.longitude|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_location.state|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_time|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_time_rfc822|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.precip_1hr_in|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.precip_1hr_metric|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.precip_1hr_string|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.precip_today_in|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.precip_today_metric|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.precip_today_string|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.pressure_in|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.pressure_mb|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.pressure_trend|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.relative_humidity|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.solarradiation|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.station_id|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.temp_c|Type: unknown. JSON type: number. The official API documentation provides no description. |
+      |current_observation.temp_f|Type: unknown. JSON type: number. The official API documentation provides no description. |
+      |current_observation.temperature_string|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.visibility_km|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.visibility_mi|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.weather|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.wind_degrees|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |current_observation.wind_dir|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.wind_gust_kph|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.wind_gust_mph|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.wind_kph|Type: unknown. JSON type: number. The official API documentation provides no description. |
+      |current_observation.wind_mph|Type: unknown. JSON type: number. The official API documentation provides no description. |
+      |current_observation.wind_string|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.windchill_c|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.windchill_f|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.windchill_string|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday|Type: array. JSON type: array. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.avehumidity|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.avewind|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.avewind.degrees|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.avewind.dir|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.avewind.kph|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.avewind.mph|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.conditions|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.ampm|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.day|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.epoch|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.hour|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.isdst|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.min|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.month|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.monthname|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.pretty|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.sec|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.tz_long|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.tz_short|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.weekday|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.weekday_short|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.yday|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.year|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.high|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.high.celsius|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.high.fahrenheit|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.icon|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.icon_url|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.low|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.low.celsius|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.low.fahrenheit|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.maxhumidity|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.maxwind|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.maxwind.degrees|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.maxwind.dir|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.maxwind.kph|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.maxwind.mph|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.minhumidity|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.period|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.pop|Type: unknown. JSON type: integer. Probability of Precipitation. |
+      |forecast.simpleforecast.forecastday.item.qpf_allday|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.qpf_allday.in|Type: Optional. JSON type: number. One or more of the following settings, given as key:value pairs separated by a colon. Example: lang:FR/pws:0 lang lang code Default: EN. Returns the API response in the specified language. pws 0 or 1 Default: 1 (true). Use personal weather stations for conditions. bestfct 0 or 1 Default: 1 (true). Use Weather Undergrond Best Forecast for forecast.. |
+      |forecast.simpleforecast.forecastday.item.qpf_allday.mm|Type: unknown. JSON type: number. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.qpf_day|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.qpf_day.in|Type: Optional. JSON type: number. One or more of the following settings, given as key:value pairs separated by a colon. Example: lang:FR/pws:0 lang lang code Default: EN. Returns the API response in the specified language. pws 0 or 1 Default: 1 (true). Use personal weather stations for conditions. bestfct 0 or 1 Default: 1 (true). Use Weather Undergrond Best Forecast for forecast.. |
+      |forecast.simpleforecast.forecastday.item.qpf_day.mm|Type: unknown. JSON type: number. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.qpf_night|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.qpf_night.in|Type: Optional. JSON type: number. One or more of the following settings, given as key:value pairs separated by a colon. Example: lang:FR/pws:0 lang lang code Default: EN. Returns the API response in the specified language. pws 0 or 1 Default: 1 (true). Use personal weather stations for conditions. bestfct 0 or 1 Default: 1 (true). Use Weather Undergrond Best Forecast for forecast.. |
+      |forecast.simpleforecast.forecastday.item.qpf_night.mm|Type: unknown. JSON type: number. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.skyicon|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.snow_allday|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.snow_allday.cm|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.snow_allday.in|Type: Optional. JSON type: integer. One or more of the following settings, given as key:value pairs separated by a colon. Example: lang:FR/pws:0 lang lang code Default: EN. Returns the API response in the specified language. pws 0 or 1 Default: 1 (true). Use personal weather stations for conditions. bestfct 0 or 1 Default: 1 (true). Use Weather Undergrond Best Forecast for forecast.. |
+      |forecast.simpleforecast.forecastday.item.snow_day|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.snow_day.cm|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.snow_day.in|Type: Optional. JSON type: integer. One or more of the following settings, given as key:value pairs separated by a colon. Example: lang:FR/pws:0 lang lang code Default: EN. Returns the API response in the specified language. pws 0 or 1 Default: 1 (true). Use personal weather stations for conditions. bestfct 0 or 1 Default: 1 (true). Use Weather Undergrond Best Forecast for forecast.. |
+      |forecast.simpleforecast.forecastday.item.snow_night|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.snow_night.cm|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.snow_night.in|Type: Optional. JSON type: integer. One or more of the following settings, given as key:value pairs separated by a colon. Example: lang:FR/pws:0 lang lang code Default: EN. Returns the API response in the specified language. pws 0 or 1 Default: 1 (true). Use personal weather stations for conditions. bestfct 0 or 1 Default: 1 (true). Use Weather Undergrond Best Forecast for forecast.. |
+      |forecast.txt_forecast|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.txt_forecast.date|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.txt_forecast.forecastday|Type: array. JSON type: array. The official API documentation provides no description. |
+      |forecast.txt_forecast.forecastday.item|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.txt_forecast.forecastday.item.fcttext|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.txt_forecast.forecastday.item.fcttext_metric|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.txt_forecast.forecastday.item.icon|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.txt_forecast.forecastday.item.icon_url|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.txt_forecast.forecastday.item.period|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.txt_forecast.forecastday.item.pop|Type: unknown. JSON type: string. Probability of Precipitation. |
+      |forecast.txt_forecast.forecastday.item.title|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location|Type: object. JSON type: object. The official API documentation provides no description. |
+      |location.city|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.country|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.country_iso3166|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.country_name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.l|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.lat|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.lon|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.magic|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations|Type: object. JSON type: object. The official API documentation provides no description. |
+      |location.nearby_weather_stations.airport|Type: object. JSON type: object. The official API documentation provides no description. |
+      |location.nearby_weather_stations.airport.station|Type: array. JSON type: array. The official API documentation provides no description. |
+      |location.nearby_weather_stations.airport.station.item|Type: object. JSON type: object. The official API documentation provides no description. |
+      |location.nearby_weather_stations.airport.station.item.city|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations.airport.station.item.country|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations.airport.station.item.icao|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations.airport.station.item.lat|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations.airport.station.item.lon|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations.airport.station.item.state|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations.pws|Type: object. JSON type: object. The official API documentation provides no description. |
+      |location.nearby_weather_stations.pws.station|Type: array. JSON type: array. The official API documentation provides no description. |
+      |location.nearby_weather_stations.pws.station.item|Type: object. JSON type: object. The official API documentation provides no description. |
+      |location.nearby_weather_stations.pws.station.item.city|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations.pws.station.item.country|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations.pws.station.item.distance_km|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |location.nearby_weather_stations.pws.station.item.distance_mi|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |location.nearby_weather_stations.pws.station.item.id|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations.pws.station.item.neighborhood|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.nearby_weather_stations.pws.station.item.state|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.requesturl|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.state|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.type|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.tz_long|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.tz_short|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.wmo|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.wuiurl|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |location.zip|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |response|Type: object. JSON type: object. The official API documentation provides no description. |
+      |response.features|Type: object. JSON type: object. One or more of the following data features. Note that these can be combined into a single request: geolookup/conditions/forecast alerts Returns the short name description, expiration time and a long text description of a severe alert  if one has been issued for the searched upon location. almanac Historical average temperature for today astronomy Returns the moon phase, sunrise and sunset times. conditions Returns the current temperature, weather condition, humidity, wind, 'feels like' temperature, barometric pressure, and visibility. currenthurricane Returns the current position, forecast, and track of all current hurricanes. forecast Returns a summary of the weather for the next 3 days. This includes high and low temperatures, a string text forecast and the conditions. forecast10day Returns a summary of the weather for the next 10 days. This includes high and low temperatures, a string text forecast and the conditions. geolookup Returns the the city name, zip code / postal code, latitude-longitude coordinates and nearby personal weather stations. history history_YYYYMMDD returns a summary of the observed weather for the specified date. hourly Returns an hourly forecast for the next 36 hours immediately following the API request. hourly10day Returns an hourly forecast for the next 10 days planner planner_MMDDMMDD returns a weather summary based on historical information between the specified dates (30 days max). rawtide Raw Tidal information for graphs tide Tidal information webcams Returns locations of nearby Personal Weather Stations and URL's for images from their web cams. yesterday Returns a summary of the observed weather history for yesterday.. |
+      |response.features.conditions|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |response.features.forecast|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |response.features.geolookup|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |response.termsofService|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |response.version|Type: unknown. JSON type: string. The official API documentation provides no description. |
+    body: 
+      application/json: 
+        schema: datafeaturesSchema
+        example: !include ../examples/datafeatures.json
+      application/xml: 

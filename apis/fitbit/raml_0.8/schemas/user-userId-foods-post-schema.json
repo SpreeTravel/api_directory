@@ -1,0 +1,50 @@
+{
+    "": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+        "food": {
+            "accessLevel": {
+                "enum": [
+                    "PRIVATE",
+                    "PUBLIC",
+                    "SHARED"
+                ]
+            },
+            "brand": {
+                "type": "string"
+            },
+            "calories": {
+                "type": "integer"
+            },
+            "defaultServingSize": {
+                "type": "integer"
+            },
+            "defaultUnit": {
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "plural": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "foodId": {
+                "type": "integer"
+            },
+            "name": {
+                "type": "string"
+            },
+            "units": [
+                {
+                    "type": "integer"
+                }
+            ],
+            "type": "array"
+        }
+    }
+}

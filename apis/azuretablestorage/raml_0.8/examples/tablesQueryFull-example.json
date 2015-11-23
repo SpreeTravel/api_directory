@@ -1,0 +1,11 @@
+{
+  "odata.metadata" : "https://myaccount.table.core.windows.net/$metadata#Tables" ,
+  "value" : [
+    {
+      "odata.type" : "myaccount.Tables" ,
+      "odata.id" : "https://myaccount.table.core.windows.net/Tables('mytable')" ,
+      "odata.editLink" : "Tables('mytable')" ,
+      "TableName" : "mytable"
+    }
+  ]
+}

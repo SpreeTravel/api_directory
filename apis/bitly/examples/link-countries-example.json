@@ -1,0 +1,31 @@
+{
+  "data": {
+    "countries": [
+      {
+        "clicks": 517,
+        "country": "US"
+      },
+      {
+        "clicks": 165,
+        "country": "None"
+      },
+      {
+        "clicks": 141,
+        "country": "JP"
+      },
+      {
+        "clicks": 84,
+        "country": "DE"
+      },
+      {
+        "clicks": 84,
+        "country": "GB"
+      }
+    ],
+    "tz_offset": -5,
+    "unit": "day",
+    "units": -1
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

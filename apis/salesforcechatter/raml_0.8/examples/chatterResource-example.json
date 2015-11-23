@@ -1,0 +1,5 @@
+{
+  "feeds" : "/services/data/v34.0/chatter/feeds" ,
+  "groups" : "/services/data/v34.0/chatter/groups" ,
+  "users" : "/services/data/v34.0/chatter/users"
+}

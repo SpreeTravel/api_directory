@@ -1,0 +1,11 @@
+post: 
+  description: Create an action link group definition. To associate an action link with a feed element, first create an action link group definition. Then post a feed element with an associated actions capability.
+  body: 
+    application/json: 
+      schema: actionLinkDefinitionResponse
+      example: !include examples/actionLinkGroupDefinitionRequest-example.json
+  responses: 
+    201: 
+      body: 
+        application/json: 
+          schema: actionLinkGroupDefinitionResponse

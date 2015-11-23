@@ -1,0 +1,10 @@
+[
+  {
+    "status_code" : 200 ,
+    "body" : {
+      "id" : "36ac7016-3a4e-4934-81f1-9057ac613f2y" ,
+      "name" : "Beverages"
+    } ,
+    "request_id" : "MyRequestID"
+  }
+]

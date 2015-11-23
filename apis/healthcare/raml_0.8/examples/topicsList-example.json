@@ -1,0 +1,85 @@
+{
+  "topics" : [
+    {
+      "published" : true ,
+      "title" : "Save Money on Coverage" ,
+      "lang" : "en" ,
+      "layout" : "topic" ,
+      "tags" : [
+        "topic"
+      ] ,
+      "order" : 5 ,
+      "meta-title" : "Getting Lower Costs on Health Insurance Coverage" ,
+      "meta-description" : "You can be getting lower costs on coverage through the Health Insurance Marketplace. See how you may qualify  today. Learn how the new law affects you" ,
+      "url" : "/getting-lower-costs-on-coverage" ,
+      "content" : "\r\n " ,
+      "date" : "0001-06-13 00:00:00 -0456" ,
+      "sort" : 0 ,
+      "id" : "/getting-lower-costs-on-coverage" ,
+      "categories" : [
+      ] ,
+      "excerpt" : "\r\n" ,
+      "path" : "_posts/topics/0001-06-13-getting-lower-costs-on-coverage.md"
+    } , {
+      "title" : "Young Adults" ,
+      "layout" : "topic" ,
+      "lang" : "en" ,
+      "order" : 6 ,
+      "tags" : [
+        "topic"
+      ] ,
+      "published" : true ,
+      "meta-title" : "Health Insurance for Young Adults, Health Insurance Marketplace" ,
+      "meta-description" : "Young adults have health coverage options at the Health Insurance Marketplace. Visit Healthcare.gov to learn how the new healthcare law affects you today" ,
+      "articleorder" : [
+        "can-i-keep-my-child-on-my-insurance-until-age-26" ,
+        "can-i-buy-a-catastrophic-plan" ,
+        "if-i-m-a-college-student-what-do-i-need-to-know-about-the-marketplace" ,
+        "why-should-i-have-health-coverage" ,
+        "what-if-someone-doesnt-have-health-coverage-in-2014" ,
+        "what-are-my-birth-control-benefits" ,
+        "what-if-im-pregnant-or-plan-to-get-pregnant"
+      ] ,
+      "url" : "/young-adults" ,
+      "content" : "\r\n" ,
+      "date" : "0001-01-01 00:00:00 -0456" ,
+      "sort" : 0 ,
+      "id" : "/young-adults" ,
+      "categories" : [
+      ] ,
+      "excerpt" : "\r\n" ,
+      "path" : "_posts/topics/0001-01-01-young-adults.md"
+    } , {
+      "title" : "Using the Marketplace" ,
+      "layout" : "topic" ,
+      "lang" : "en" ,
+      "order" : 3 ,
+      "tags" : [
+        "topic"
+      ] ,
+      "published" : true ,
+      "meta-title" : "Using the Health Insurance Marketplace" ,
+      "meta-description" : "Learn how to apply for health insurance coverage at Healthcare.gov. Know your rights and how the new healthcare law affects you" ,
+      "articleorder" : [
+        "how-do-i-apply-for-marketplace-coverage" ,
+        "how-to-have-the-best-experience-with-healthcare-gov" ,
+        "what-income-and-household-information-do-i-provide-when-i-apply-for-marketplace-coverage" ,
+        "how-do-i-choose-marketplace-insurance" ,
+        "how-can-i-get-coverage-outside-of-open-enrollment" ,
+        "can-i-appeal-a-marketplace-decision" ,
+        "browser-compatibility" ,
+        "enroll-after-applying" ,
+        "how-can-i-get-ready-to-enroll-in-the-marketplace"
+      ] ,
+      "url" : "/using-the-marketplace" ,
+      "content" : "\r\n" ,
+      "date" : "0001-01-01 00:00:00 -0456" ,
+      "sort" : 0 ,
+      "id" : "/using-the-marketplace" ,
+      "categories" : [
+      ] ,
+      "excerpt" : "\r\n" ,
+      "path" : "_posts/topics/0001-01-01-using-the-marketplace.md"
+    }
+  ]
+}

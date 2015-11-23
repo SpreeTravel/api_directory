@@ -1,0 +1,12 @@
+[{
+   "path": "/2/member/self",
+   "status": 200,
+   "ref": "me",
+   "body": {
+     "id": 1234,
+     "name": "Noah"
+   },
+   "headers": {
+     "key": "value"
+   }
+}]

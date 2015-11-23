@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="subnets">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="subnet" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="name" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="enable_dhcp" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="network_id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="tenant_id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="dns_nameservers" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="allocation_pools" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="allocation_pool" minOccurs="0" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="start" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                          <xsd:element name="end" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="host_routes" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="ip_version" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="gateway_ip" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="cidr" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,43 @@
+responses: 
+  400: 
+    description: Your application is not authorized to make this request.
+    body: 
+      application/json: 
+        schema: error
+        example: !include ../examples/error-example.json
+  403: 
+    description: "The requesting application does not have permission to access the resource, typically because the OAuth token's permission scope is insufficient."
+    body: 
+      application/json: 
+        schema: error
+        example: !include ../examples/error-example.json
+  422: 
+    description: The request is well formed but has semantic errors. For example, this error occurs when you attempt to create an item variation with the same SKU as an existing variation.
+    body: 
+      application/json: 
+        schema: error
+        example: !include ../examples/error-example.json
+  404: 
+    description: "The resource specified in the request wasn't found."
+    body: 
+      application/json: 
+        schema: error
+        example: !include ../examples/error-example.json
+  429: 
+    description: The Connect API has received too many requests associated with the same access token or application in too short a time span. Try your request again later.
+    body: 
+      application/json: 
+        schema: error
+        example: !include ../examples/error-example.json
+  500: 
+    description: Square encountered an unexpected error processing the request.
+    body: 
+      application/json: 
+        schema: error
+        example: !include ../examples/error-example.json
+  503: 
+    description: The Connect API service is currently unavailable.
+    body: 
+      application/json: 
+        schema: error
+        example: !include ../examples/error-example.json

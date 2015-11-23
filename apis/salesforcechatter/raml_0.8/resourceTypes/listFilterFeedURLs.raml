@@ -1,0 +1,11 @@
+head: 
+  description: A collection of feed directory objects that contain information about filter feeds available to the context user. Each object contains a URL for the filter feed, a URL for feed items or feed elements in the filter feed, and a label describing the object used to filter the feed. Each URL contains the first three characters of the filter object, which is called a key prefix and specifies the object type. Use this resource to return a list of the possible key prefix filter feeds that the context user can apply to their news feed. See Filter Feed Items and Filter Feed Elements.
+  responses: 
+    200: 
+get: 
+  description: A collection of feed directory objects that contain information about filter feeds available to the context user. Each object contains a URL for the filter feed, a URL for feed items or feed elements in the filter feed, and a label describing the object used to filter the feed. Each URL contains the first three characters of the filter object, which is called a key prefix and specifies the object type. Use this resource to return a list of the possible key prefix filter feeds that the context user can apply to their news feed. See Filter Feed Items and Filter Feed Elements.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: feedDirectoryResponse

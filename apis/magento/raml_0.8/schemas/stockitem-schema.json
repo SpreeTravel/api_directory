@@ -1,0 +1,107 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "item_id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "product_id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "stock_id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "qty" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "min_qty" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "use_config_min_qty" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "is_qty_decimal" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "backorders" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "use_config_backorders" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "min_sale_qty" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "use_config_min_sale_qty" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "max_sale_qty" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "use_config_max_sale_qty" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "is_in_stock" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "low_stock_date" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "notify_stock_qty" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "use_config_notify_stock_qty" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "manage_stock" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "use_config_manage_stock" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "stock_status_changed_auto" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "use_config_qty_increments" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "qty_increments" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "use_config_enable_qty_inc" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "enable_qty_increments" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "is_decimal_divided" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

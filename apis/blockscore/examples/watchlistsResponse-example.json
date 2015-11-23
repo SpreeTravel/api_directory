@@ -1,0 +1,88 @@
+{
+  "livemode" : true ,
+  "searched_lists" : [
+    "US_SDN"
+  ] ,
+  "count" : 1 ,
+  "matches" : [
+    {
+      "id" : "ent_554056e4b4cf7103000009d5" ,
+      "watchlist_name" : "US_SDN" ,
+      "entry_type" : "individual" ,
+      "matching_info" : [
+        "name"
+      ] ,
+      "confidence" : 1 ,
+      "url" : null ,
+      "notes" : null ,
+      "title" : null ,
+      "name_full" : "John Bredenkamp" ,
+      "alternate_names" : "John A. Bredenkamp; John Arnold Bredenkamp" ,
+      "date_of_birth" : "1940-8-11" ,
+      "passport" : "367537C; Z153612; Z01024064; ND1285143" ,
+      "ssn" : null ,
+      "address_street1" : "62 Chester Square" ,
+      "address_street2" : null ,
+      "address_city" : "London" ,
+      "address_state" : null ,
+      "address_postal_code" : null ,
+      "address_country_code" : "GB" ,
+      "address_raw" : "62 Chester Square, London, GB" ,
+      "names" : [
+        {
+          "name_primary" : true ,
+          "name_full" : "John Bredenkamp" ,
+          "name_strength" : "medium"
+        } , {
+          "name_primary" : false ,
+          "name_full" : "John A. Bredenkamp" ,
+          "name_strength" : "medium"
+        } , {
+          "name_primary" : false ,
+          "name_full" : "John Arnold Bredenkamp" ,
+          "name_strength" : "medium"
+        }
+      ] ,
+      "births" : [
+        {
+          "birth_day" : 11 ,
+          "birth_month" : 8 ,
+          "birth_year" : 1940 ,
+          "birth_day_end" : null ,
+          "birth_month_end" : null ,
+          "birth_year_end" : null
+        }
+      ] ,
+      "documents" : [
+        {
+          "document_type" : "passport" ,
+          "document_value" : "367537C" ,
+          "document_country_code" : "SR"
+        } , {
+          "document_type" : "passport" ,
+          "document_value" : "Z153612" ,
+          "document_country_code" : "NL"
+        }
+      ] ,
+      "addresses" : [
+        {
+          "address_street1" : "62 Chester Square" ,
+          "address_street2" : null ,
+          "address_city" : "London" ,
+          "address_state" : null ,
+          "address_postal_code" : null ,
+          "address_country_code" : "GB" ,
+          "address_full" : "62 Chester Square, London, GB"
+        } , {
+          "address_street1" : "Dennerlei 30" ,
+          "address_street2" : null ,
+          "address_city" : "Schoten" ,
+          "address_state" : null ,
+          "address_postal_code" : null ,
+          "address_country_code" : "BE" ,
+          "address_full" : "Dennerlei 30, Schoten, BE"
+        }
+      ]
+    }
+  ]
+}

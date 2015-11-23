@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://docs.openstack.org/api/openstack-block-storage/2.0/content" xmlns:os-vol-image-meta="http://docs.openstack.org/openstack-block-storage/2.0/content/Volume_Image_Metadata.html" xmlns:os-vol-tenant-attr="http://docs.openstack.org/openstack-block-storage/2.0/content/Volume_Tenant_Attribute.html" xmlns:os-vol-host-attr="http://docs.openstack.org/openstack-block-storage/2.0/content/Volume_Host_Attribute.html" xmlns:atom="http://www.w3.org/2005/Atom">
+  <xsd:element name="volumes">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="volume" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="attachments" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="metadata" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="meta" minOccurs="0" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:extension base="xsd:normalizedString">
+                            <xsd:attribute name="key" type="xsd:normalizedString" use="required"/>
+                          </xsd:extension>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="status" type="xsd:normalizedString" use="required"/>
+            <xsd:attribute name="name" type="xsd:normalizedString" use="required"/>
+            <xsd:attribute name="availability_zone" type="xsd:normalizedString" use="required"/>
+            <xsd:attribute name="created_at" type="xsd:string" use="required"/>
+            <xsd:attribute name="description" type="xsd:string" use="required"/>
+            <xsd:attribute name="volume_type" type="xsd:normalizedString" use="required"/>
+            <xsd:attribute name="source_volid" type="xsd:normalizedString" use="required"/>
+            <xsd:attribute name="snapshot_id" type="xsd:normalizedString" use="required"/>
+            <xsd:attribute name="id" type="xsd:normalizedString" use="required"/>
+            <xsd:attribute name="size" type="xsd:int" use="required"/>
+            <xsd:attribute name="tenant_id" type="xsd:normalizedString" use="required"/>
+            <xsd:attribute name="host" type="xsd:normalizedString" use="required"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

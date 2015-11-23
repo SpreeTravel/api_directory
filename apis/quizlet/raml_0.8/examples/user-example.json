@@ -1,0 +1,73 @@
+{
+  "username" : "catchdave" ,
+  "account_type" : "plus" ,
+  "sign_up_date" : 1300591868 ,
+  "profile_image" : "https://fbquizlet-quizletllc.netdna-ssl.com/hprofile-ak-snc4/572892_1030920097_1174590349_n.jpg" ,
+  "statistics" : {
+    "study_session_count" : 6 ,
+    "message_count" : 1 ,
+    "total_answer_count" : 15 ,
+    "public_sets_created" : 19 ,
+    "public_terms_entered" : 59 ,
+    "total_sets_created" : 19 ,
+    "total_terms_entered" : 59
+  } ,
+  "sets" : [
+    {
+      "id" : 6009523 ,
+      "url" : "http://quizlet.com/6009523/french-animals-30-flash-cards/" ,
+      "title" : "french animals 3.0" ,
+      "created_by" : "catchdave" ,
+      "term_count" : 13 ,
+      "created_date" : 1310497102 ,
+      "modified_date" : 1310497363 ,
+      "has_images" : true ,
+      "subjects" : [
+      ]
+    }
+  ] ,
+  "favorite_sets" : [
+    {
+      "id" : 6009523 ,
+      "url" : "http://quizlet.com/6009523/french-animals-30-flash-cards/" ,
+      "title" : "french animals 3.0" ,
+      "created_by" : "catchdave" ,
+      "term_count" : 13 ,
+      "created_date" : 1310497102 ,
+      "modified_date" : 1310497363 ,
+      "has_images" : true ,
+      "subjects" : [
+      ]
+    }
+  ] ,
+  "studied" : [
+    {
+      "mode" : "speller" ,
+      "last_studied_date" : 1308719871 ,
+      "finished_date" : 0 ,
+      "score" : 1674 ,
+      "set" : {
+        "id" : 415 ,
+        "url" : "http://quizlet.com/415/us-state-capitals-flash-cards/" ,
+        "title" : "U.S. State Capitals" ,
+        "created_by" : "jalenack" ,
+        "term_count" : 50 ,
+        "created_date" : 1144296408 ,
+        "modified_date" : 1308066716 ,
+        "has_images" : false ,
+        "subjects" : [
+        ]
+      }
+    }
+  ] ,
+  "classes" : [
+    {
+      "id" : 103561 ,
+      "name" : "¡Old School learns español!" ,
+      "set_count" : 1 ,
+      "user_count" : 8 ,
+      "created_date" : 1310425248 ,
+      "is_public" : true
+    }
+  ]
+}

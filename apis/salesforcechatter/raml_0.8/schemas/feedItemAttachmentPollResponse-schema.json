@@ -1,0 +1,49 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "choices": {
+      "type": "array",
+      "required": false,
+      "items": [{
+        "type": "object",
+        "required": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "required": false
+          },
+          "position": {
+            "type": "integer",
+            "required": false
+          },
+          "text": {
+            "type": "string",
+            "required": false
+          },
+          "voteCount": {
+            "type": "integer",
+            "required": false
+          },
+          "voteCountRatio": {
+            "type": "number",
+            "required": false
+          }
+        }
+      }]
+    },
+    "myChoiceId": {
+      "type": "string",
+      "required": false
+    },
+    "totalVoteCount": {
+      "type": "integer",
+      "required": false
+    },
+    "type": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

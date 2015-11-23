@@ -1,0 +1,223 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "answers": {
+      "required": false,
+      "type": "string"
+    },
+    "comments": {
+      "required": false,
+      "type": "string"
+    },
+    "created": {
+      "required": false,
+      "type": "integer"
+    },
+    "event": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "event_url": {
+          "required": false,
+          "type": "string"
+        },
+        "id": {
+          "required": false,
+          "type": "integer"
+        },
+        "name": {
+          "required": false,
+          "type": "string"
+        },
+        "time": {
+          "required": false,
+          "type": "integer"
+        }
+      }
+    },
+    "group": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "group_lat": {
+          "required": false,
+          "type": "string"
+        },
+        "group_lon": {
+          "required": false,
+          "type": "string"
+        },
+        "id": {
+          "required": false,
+          "type": "integer"
+        },
+        "join_mode": {
+          "required": false,
+          "type": "string"
+        },
+        "name": {
+          "required": false,
+          "type": "string"
+        },
+        "urlname": {
+          "required": false,
+          "type": "string"
+        },
+        "who": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    },
+    "guests": {
+      "required": false,
+      "type": "string"
+    },
+    "host": {
+      "required": false,
+      "type": "string"
+    },
+    "member": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "bio": {
+          "required": false,
+          "type": "string"
+        },
+        "member_city": {
+          "required": false,
+          "type": "string"
+        },
+        "member_country": {
+          "required": false,
+          "type": "string"
+        },
+        "member_id": {
+          "required": false,
+          "type": "integer"
+        },
+        "member_state": {
+          "required": false,
+          "type": "string"
+        },
+        "name": {
+          "required": false,
+          "type": "string"
+        },
+        "other_services": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "[service-name]": {
+              "required": false,
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "member_photo": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "highres_link": {
+          "required": false,
+          "type": "string"
+        },
+        "photo_id": {
+          "required": false,
+          "type": "integer"
+        },
+        "photo_link": {
+          "required": false,
+          "type": "string"
+        },
+        "thumb_link": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    },
+    "mtime": {
+      "required": false,
+      "type": "integer"
+    },
+    "pay_status": {
+      "required": false,
+      "type": "string"
+    },
+    "response": {
+      "required": false,
+      "type": "string"
+    },
+    "rsvp_id": {
+      "required": false,
+      "type": "integer"
+    },
+    "venue": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "address_1": {
+          "required": false,
+          "type": "string"
+        },
+        "address_2": {
+          "required": false,
+          "type": "string"
+        },
+        "address_3": {
+          "required": false,
+          "type": "string"
+        },
+        "city": {
+          "required": false,
+          "type": "string"
+        },
+        "state": {
+          "required": false,
+          "type": "integer"
+        },
+        "country": {
+          "required": false,
+          "type": "string"
+        },
+        "id": {
+          "required": false,
+          "type": "integer"
+        },
+        "lat": {
+          "required": false,
+          "type": "number"
+        },
+        "lon": {
+          "required": false,
+          "type": "number"
+        },
+        "name": {
+          "required": false,
+          "type": "string"
+        },
+        "phone": {
+          "required": false,
+          "type": "integer"
+        },
+        "repinned": {
+          "required": false,
+          "type": "string"
+        },
+        "zip": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    },
+    "watching": {
+      "required": false,
+      "type": "string"
+    }
+  }
+}

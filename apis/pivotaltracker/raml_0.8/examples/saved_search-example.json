@@ -1,0 +1,7 @@
+{
+  "id" : 300 ,
+  "kind" : "saved_search" ,
+  "name" : "my saved search" ,
+  "project_id" : 99 ,
+  "query" : "label:rebel bases"
+}

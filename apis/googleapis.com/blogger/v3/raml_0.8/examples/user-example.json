@@ -1,0 +1,17 @@
+{
+  "kind" : "blogger#user" ,
+  "id" : "string" ,
+  "created" : "datetime" ,
+  "url" : "string" ,
+  "selfLink" : "string" ,
+  "blogs" : {
+    "selfLink" : "string"
+  } ,
+  "displayName" : "string" ,
+  "about" : "string" ,
+  "locale" : {
+    "language" : "string" ,
+    "country" : "string" ,
+    "variant" : "string"
+  }
+}

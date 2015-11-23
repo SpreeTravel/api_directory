@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "canBrowse": {
+      "type": "boolean",
+      "required": false
+    },
+    "canSearch": {
+      "type": "boolean",
+      "required": false
+    }
+  }
+}

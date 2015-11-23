@@ -1,0 +1,229 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "quota_set" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "cores" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "in_use" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "limit" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "reserved" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "fixed_ips" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "in_use" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "limit" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "reserved" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "floating_ips" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "in_use" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "limit" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "reserved" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "injected_files" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "in_use" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "limit" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "reserved" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "instances" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "in_use" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "limit" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "reserved" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "key_pairs" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "in_use" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "limit" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "reserved" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "metadata_items" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "in_use" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "limit" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "reserved" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "ram" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "in_use" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "limit" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "reserved" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "security_groups" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "in_use" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "limit" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "reserved" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "injected_file_content_bytes" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "in_use" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "limit" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "reserved" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "injected_file_path_bytes" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "in_use" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "limit" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "reserved" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "security_group_rules" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "in_use" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "limit" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "reserved" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        }
+      }
+    }
+  }
+}

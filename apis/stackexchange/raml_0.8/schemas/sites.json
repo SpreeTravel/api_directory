@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "array",
+  "items": {
+    "required": false,
+    "type": "object",
+    "properties": {
+      "aliases": {
+        "required": false,
+        "type": "array"
+      },
+      "api_site_parameter": {
+        "required": false,
+        "type": "string"
+      },
+      "audience": {
+        "required": false,
+        "type": "string"
+      },
+      "closed_beta_date": {
+        "required": false,
+        "type": "integer"
+      },
+      "favicon_url": {
+        "required": false,
+        "type": "string"
+      },
+      "high_resolution_icon_url": {
+        "required": false,
+        "type": "string"
+      },
+      "icon_url": {
+        "required": false,
+        "type": "string"
+      },
+      "launch_date": {
+        "required": false,
+        "type": "integer"
+      },
+      "logo_url": {
+        "required": false,
+        "type": "string"
+      },
+      "markdown_extensions": {
+        "required": false,
+        "type": "array"
+      },
+      "name": {
+        "required": false,
+        "type": "string"
+      },
+      "open_beta_date": {
+        "required": false,
+        "type": "integer"
+      },
+      "related_sites": {
+        "required": false,
+        "type": "array"
+      },
+      "site_state": {
+        "required": false,
+        "type": "string"
+      },
+      "site_type": {
+        "required": false,
+        "type": "string"
+      },
+      "site_url": {
+        "required": false,
+        "type": "string"
+      },
+      "styling": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "link_color": {
+            "required": false,
+            "type": "string"
+          },
+          "tag_background_color": {
+            "required": false,
+            "type": "string"
+          },
+          "tag_foreground_color": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      },
+      "twitter_account": {
+        "required": false,
+        "type": "string"
+      }
+    }
+  }
+}

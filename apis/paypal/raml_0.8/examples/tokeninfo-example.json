@@ -1,0 +1,6 @@
+{
+  "token_type" : "Bearer" ,
+  "expires_in" : "900" ,
+  "refresh_token" : "{refreshToken}" ,
+  "access_token" : "{accessToken}"
+}

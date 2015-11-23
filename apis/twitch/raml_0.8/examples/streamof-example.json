@@ -1,0 +1,7 @@
+{
+  "stream" : null ,
+  "_links" : {
+    "self" : "https://api.twitch.tv/kraken/streams/test_channel" ,
+    "channel" : "https://api.twitch.tv/kraken/channels/test_channel"
+  }
+}

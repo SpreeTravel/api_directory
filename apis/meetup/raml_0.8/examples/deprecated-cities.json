@@ -1,0 +1,22 @@
+{
+  "results": [
+    {
+      "zip": "zip 0",
+      "lon": 1.0,
+      "state": 0,
+      "members": "members 0",
+      "lat": 1.0,
+      "country": "country 0",
+      "city": "city 0"
+    },
+    {
+      "zip": "zip 1",
+      "lon": 1.0,
+      "state": 1,
+      "members": "members 1",
+      "lat": 1.0,
+      "country": "country 1",
+      "city": "city 1"
+    }
+  ]
+}

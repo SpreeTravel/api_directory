@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="geonames">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="country" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="countryCode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="countryName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="numPostalCodes" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="minPostalCode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="maxPostalCode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

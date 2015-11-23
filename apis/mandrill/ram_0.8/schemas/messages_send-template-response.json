@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "array",
+  "items": {
+    "required": false,
+    "type": "object",
+    "properties": {
+      "_id": {
+        "required": false,
+        "type": "string"
+      },
+      "email": {
+        "required": false,
+        "type": "string"
+      },
+      "reject_reason": {
+        "required": false,
+        "type": "string"
+      },
+      "status": {
+        "required": false,
+        "type": "string"
+      }
+    }
+  }
+}

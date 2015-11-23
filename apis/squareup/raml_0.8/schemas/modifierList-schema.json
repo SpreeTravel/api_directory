@@ -1,0 +1,64 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "selection_type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "modifier_options" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "price_money" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "currency_code" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "amount" : {
+                  "type" : "number" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "on_by_default" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "ordinal" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "modifier_list_id" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

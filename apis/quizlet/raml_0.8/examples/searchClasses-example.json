@@ -1,0 +1,17 @@
+{
+  "total_results" : 13 ,
+  "total_pages" : 1 ,
+  "page" : 1 ,
+  "classes" : [
+    {
+      "id" : 555 ,
+      "name" : "Laboratory Sciences" ,
+      "set_count" : 0 ,
+      "user_count" : 2 ,
+      "created_date" : 1295632729 ,
+      "is_public" : false ,
+      "has_access" : true ,
+      "description" : "Mr Phillip's Physics Lab class for year 8"
+    }
+  ]
+}

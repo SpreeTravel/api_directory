@@ -1,0 +1,85 @@
+{
+    "": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+        "first_page_uri": {
+            "type": "string"
+        },
+        "num_pages": {
+            "type": "integer"
+        },
+        "previous_page_uri": {
+            "type": "string"
+        },
+        "uri": {
+            "type": "string"
+        },
+        "page_size": {
+            "type": "integer"
+        },
+        "start": {
+            "type": "integer"
+        },
+        "usage_records": 
+            {
+                "properties": {
+                    "category": {
+                        "type": "string"
+                    },
+                    "count": {
+                        "type": "string"
+                    },
+                    "price_unit": {
+                        "type": "string"
+                    },
+                    "subresource_uris": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "end_date": {
+                        "type": "string"
+                    },
+                    "usage_unit": {
+                        "type": "string"
+                    },
+                    "price": {
+                        "type": "string"
+                    },
+                    "uri": {
+                        "type": "string"
+                    },
+                    "account_sid": {
+                        "type": "string"
+                    },
+                    "usage": {
+                        "type": "string"
+                    },
+                    "start_date": {
+                        "type": "string"
+                    },
+                    "count_unit": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            }
+        ,
+        "next_page_uri": {
+            "type": "string"
+        },
+        "end": {
+            "type": "integer"
+        },
+        "total": {
+            "type": "integer"
+        },
+        "last_page_uri": {
+            "type": "string"
+        },
+        "page": {
+            "type": "integer"
+        }
+    }
+}

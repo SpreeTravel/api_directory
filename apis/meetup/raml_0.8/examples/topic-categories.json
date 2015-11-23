@@ -1,0 +1,46 @@
+{
+  "results": [
+    {
+      "topic": {
+        "id": 0,
+        "urlkey": "urlkey 0",
+        "name": "name 0"
+      },
+      "best_topics": {
+        "id": 0,
+        "urlkey": "urlkey 0",
+        "name": "name 0"
+      },
+      "name": "name 0",
+      "shortname": "shortname 0",
+      "photo": {
+        "photo_link": "photo_link 0",
+        "highres_link": "highres_link 0",
+        "thumb_link": "thumb_link 0",
+        "photo_id": 0
+      },
+      "category_ids": "category_ids 0"
+    },
+    {
+      "topic": {
+        "id": 1,
+        "urlkey": "urlkey 1",
+        "name": "name 1"
+      },
+      "best_topics": {
+        "id": 1,
+        "urlkey": "urlkey 1",
+        "name": "name 1"
+      },
+      "name": "name 1",
+      "shortname": "shortname 1",
+      "photo": {
+        "photo_link": "photo_link 1",
+        "highres_link": "highres_link 1",
+        "thumb_link": "thumb_link 1",
+        "photo_id": 1
+      },
+      "category_ids": "category_ids 1"
+    }
+  ]
+}

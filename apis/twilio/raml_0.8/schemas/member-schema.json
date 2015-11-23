@@ -1,0 +1,21 @@
+{
+    "": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+        "call_sid": {
+            "type": "string"
+        },
+        "date_enqueued": {
+            "type": "string"
+        },
+        "wait_time": {
+            "type": "integer"
+        },
+        "position": {
+            "type": "integer"
+        },
+        "uri": {
+            "type": "string"
+        }
+    }
+}

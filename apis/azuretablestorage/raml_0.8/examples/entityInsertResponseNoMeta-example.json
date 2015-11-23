@@ -1,0 +1,12 @@
+{
+  "PartitionKey" : "mypartitionkey" ,
+  "RowKey" : "myrowkey" ,
+  "Timestamp" : "2013-08-22T01:12:06.2608595Z" ,
+  "Address" : "Mountain View" ,
+  "Age" : 23 ,
+  "AmountDue" : 200.23 ,
+  "CustomerCode" : "c9da6455-213d-42c9-9a79-3e9149a57833" ,
+  "CustomerSince" : "2008-07-10T00:00:00" ,
+  "IsActive" : true ,
+  "NumberOfOrders" : "255"
+}

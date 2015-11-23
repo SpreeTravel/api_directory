@@ -1,0 +1,21 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "rebuild" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "imageRef" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "OS-DCF:diskConfig" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id" : "P-8DY604244K970170GOALWR3I" ,
+  "state" : "CREATED" ,
+  "name" : "Fast Speed Plan" ,
+  "description" : "Template creation." ,
+  "type" : "FIXED" ,
+  "payee" : {
+    "merchant_id" : "1515831003405719294"
+  } ,
+  "payment_definitions" : [
+    {
+      "id" : "PD-8DY604244K970170GOALWR5Y" ,
+      "name" : "Payment Definition-1" ,
+      "type" : "REGULAR" ,
+      "frequency" : "Month" ,
+      "frequency_interval" : "2" ,
+      "amount" : {
+        "currency" : "USD" ,
+        "value" : "100"
+      } ,
+      "cycles" : "12" ,
+      "charge_models" : [
+        {
+          "id" : "CHM-8DY604244K970170GOALWR5Y" ,
+          "type" : "SHIPPING" ,
+          "amount" : {
+            "currency" : "USD" ,
+            "value" : "10"
+          }
+        } , {
+          "id" : "CHM-0NJ10521L3680291SOALWR5Y" ,
+          "type" : "TAX" ,
+          "amount" : {
+            "currency" : "USD" ,
+            "value" : "12"
+          }
+        }
+      ]
+    }
+  ] ,
+  "merchant_preferences" : {
+    "setup_fee" : {
+      "currency" : "USD" ,
+      "value" : "1"
+    } ,
+    "auto_bill_amount" : "YES" ,
+    "initial_fail_amount_action" : "CONTINUE" ,
+    "max_fail_attempts" : "0" ,
+    "return_url" : "http://www.paypal.com" ,
+    "cancel_url" : "http://www.yahoo.com"
+  } ,
+  "create_time" : "2014-06-06T07:32:00.877Z" ,
+  "update_time" : "2014-06-06T07:32:00.877Z" ,
+  "links" : [
+    {
+      "href" : "https://api.sandbox.paypal.com/v1/payments/billing-plans/P-8DY604244K970170GOALWR3I" ,
+      "rel" : "self" ,
+      "method" : "GET"
+    }
+  ]
+}

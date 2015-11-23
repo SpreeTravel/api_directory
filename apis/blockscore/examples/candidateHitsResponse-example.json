@@ -1,0 +1,25 @@
+{
+  "object" : "list" ,
+  "data" : [
+    {
+      "object" : "candidate" ,
+      "id" : "544aba053163310002630500" ,
+      "created_at" : 1414183429 ,
+      "updated_at" : 1414183429 ,
+      "livemode" : true ,
+      "note" : "55555555" ,
+      "ssn" : "0002" ,
+      "passport" : null ,
+      "date_of_birth" : "1940-08-11" ,
+      "name_first" : "John" ,
+      "name_middle" : null ,
+      "name_last" : "Bredenkamp" ,
+      "address_street1" : null ,
+      "address_street2" : null ,
+      "address_city" : "Harare" ,
+      "address_subdivision" : null ,
+      "address_postal_code" : null ,
+      "address_country_code" : "AR"
+    }
+  ]
+}

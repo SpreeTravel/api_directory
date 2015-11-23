@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="TwilioResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="AvailablePhoneNumbers" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="AvailablePhoneNumber" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="FriendlyName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="PhoneNumber" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="Lata" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="RateCenter" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="Latitude" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                    <xsd:element name="Longitude" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+                    <xsd:element name="Region" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="PostalCode" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="IsoCountry" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="Capabilities" minOccurs="0" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="Voice" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+                          <xsd:element name="SMS" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+                          <xsd:element name="MMS" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="uri" type="xsd:normalizedString" use="required"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,1 @@
+The Quizlet API lets developers interested in building study tools to interact with Quizlet's vast content database of over 2190 million flashcards. The Quizlet API lets you create, search, and modify flashcard sets and classes, and much more in your own application.

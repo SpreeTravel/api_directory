@@ -1,0 +1,193 @@
+description: |
+  Returns a weather summary based on historical information between the specified dates (30 days max).
+  
+  Specify the date range in the request URL in the following format:
+  
+  http://api.wunderground.com/api/Your_Key/planner_MMDDMMDD/q/CA/San_Francisco.json
+  
+  #Examples:
+  http://api.wunderground.com/api/Your_Key/planner_MMDDMMDD/q/CA/San_Francisco.json
+  http://api.wunderground.com/api/Your_Key/planner_07010731/q/CA/San_Francisco.json
+  (See description of the response.)
+responses: 
+  200: 
+    description: |
+      The response will be a JSON-encoded object.
+      |name|description|
+      |-|
+      |response|Type: object. JSON type: object. The official API documentation provides no description. |
+      |response.features|Type: object. JSON type: object. The official API documentation provides no description. |
+      |response.features.planner|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |response.termsofService|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |response.version|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.airport_code|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of|Type: object. JSON type: object. (see chance_of below). |
+      |trip.chance_of.chanceofcloudyday|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.chance_of.chanceofcloudyday.description|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofcloudyday.name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofcloudyday.percentage|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceoffogday|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.chance_of.chanceoffogday.description|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceoffogday.name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceoffogday.percentage|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofhailday|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.chance_of.chanceofhailday.description|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofhailday.name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofhailday.percentage|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofhumidday|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.chance_of.chanceofhumidday.description|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofhumidday.name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofhumidday.percentage|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofpartlycloudyday|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.chance_of.chanceofpartlycloudyday.description|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofpartlycloudyday.name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofpartlycloudyday.percentage|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofprecip|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.chance_of.chanceofprecip.description|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofprecip.name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofprecip.percentage|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofrainday|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.chance_of.chanceofrainday.description|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofrainday.name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofrainday.percentage|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofsnowday|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.chance_of.chanceofsnowday.description|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofsnowday.name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofsnowday.percentage|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofsnowonground|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.chance_of.chanceofsnowonground.description|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofsnowonground.name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofsnowonground.percentage|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofsultryday|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.chance_of.chanceofsultryday.description|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofsultryday.name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofsultryday.percentage|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofsunnycloudyday|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.chance_of.chanceofsunnycloudyday.description|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofsunnycloudyday.name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofsunnycloudyday.percentage|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofthunderday|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.chance_of.chanceofthunderday.description|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofthunderday.name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofthunderday.percentage|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceoftornadoday|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.chance_of.chanceoftornadoday.description|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceoftornadoday.name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceoftornadoday.percentage|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofwindyday|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.chance_of.chanceofwindyday.description|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofwindyday.name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.chanceofwindyday.percentage|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.tempbelowfreezing|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.chance_of.tempbelowfreezing.description|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.tempbelowfreezing.name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.tempbelowfreezing.percentage|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.tempoverfreezing|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.chance_of.tempoverfreezing.description|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.tempoverfreezing.name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.tempoverfreezing.percentage|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.tempoverninety|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.chance_of.tempoverninety.description|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.tempoverninety.name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.tempoverninety.percentage|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.tempoversixty|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.chance_of.tempoversixty.description|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.tempoversixty.name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.chance_of.tempoversixty.percentage|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.cloud_cover|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.cloud_cover.cond|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.dewpoint_high|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.dewpoint_high.avg|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.dewpoint_high.avg.C|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.dewpoint_high.avg.F|Type: unknown. JSON type: string. (see period_of_record date below). |
+      |trip.dewpoint_high.max|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.dewpoint_high.max.C|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.dewpoint_high.max.F|Type: unknown. JSON type: string. (see period_of_record date below). |
+      |trip.dewpoint_high.min|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.dewpoint_high.min.C|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.dewpoint_high.min.F|Type: unknown. JSON type: string. (see period_of_record date below). |
+      |trip.dewpoint_low|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.dewpoint_low.avg|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.dewpoint_low.avg.C|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.dewpoint_low.avg.F|Type: unknown. JSON type: string. (see period_of_record date below). |
+      |trip.dewpoint_low.max|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.dewpoint_low.max.C|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.dewpoint_low.max.F|Type: unknown. JSON type: string. (see period_of_record date below). |
+      |trip.dewpoint_low.min|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.dewpoint_low.min.C|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.dewpoint_low.min.F|Type: unknown. JSON type: string. (see period_of_record date below). |
+      |trip.error|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record|Type: object. JSON type: object. (see period_of_record date below). |
+      |trip.period_of_record.date_end|Type: object. JSON type: object. (see period_of_record date below). |
+      |trip.period_of_record.date_end.date|Type: object. JSON type: object. (see period_of_record date below). |
+      |trip.period_of_record.date_end.date.ampm|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record.date_end.date.day|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |trip.period_of_record.date_end.date.epoch|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record.date_end.date.hour|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |trip.period_of_record.date_end.date.isdst|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record.date_end.date.min|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record.date_end.date.month|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |trip.period_of_record.date_end.date.monthname|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record.date_end.date.pretty|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record.date_end.date.sec|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |trip.period_of_record.date_end.date.tz_long|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record.date_end.date.tz_short|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record.date_end.date.weekday|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record.date_end.date.weekday_short|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record.date_end.date.yday|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |trip.period_of_record.date_end.date.year|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |trip.period_of_record.date_start|Type: object. JSON type: object. (see period_of_record date below). |
+      |trip.period_of_record.date_start.date|Type: object. JSON type: object. (see period_of_record date below). |
+      |trip.period_of_record.date_start.date.ampm|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record.date_start.date.day|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |trip.period_of_record.date_start.date.epoch|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record.date_start.date.hour|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |trip.period_of_record.date_start.date.isdst|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record.date_start.date.min|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record.date_start.date.month|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |trip.period_of_record.date_start.date.monthname|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record.date_start.date.pretty|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record.date_start.date.sec|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |trip.period_of_record.date_start.date.tz_long|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record.date_start.date.tz_short|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record.date_start.date.weekday|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record.date_start.date.weekday_short|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.period_of_record.date_start.date.yday|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |trip.period_of_record.date_start.date.year|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |trip.precip|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.precip.avg|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.precip.avg.cm|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.precip.avg.in|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.precip.max|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.precip.max.cm|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.precip.max.in|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.precip.min|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.precip.min.cm|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.precip.min.in|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.temp_high|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.temp_high.avg|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.temp_high.avg.C|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.temp_high.avg.F|Type: unknown. JSON type: string. (see period_of_record date below). |
+      |trip.temp_high.max|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.temp_high.max.C|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.temp_high.max.F|Type: unknown. JSON type: string. (see period_of_record date below). |
+      |trip.temp_high.min|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.temp_high.min.C|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.temp_high.min.F|Type: unknown. JSON type: string. (see period_of_record date below). |
+      |trip.temp_low|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.temp_low.avg|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.temp_low.avg.C|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.temp_low.avg.F|Type: unknown. JSON type: string. (see period_of_record date below). |
+      |trip.temp_low.max|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.temp_low.max.C|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.temp_low.max.F|Type: unknown. JSON type: string. (see period_of_record date below). |
+      |trip.temp_low.min|Type: object. JSON type: object. The official API documentation provides no description. |
+      |trip.temp_low.min.C|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |trip.temp_low.min.F|Type: unknown. JSON type: string. (see period_of_record date below). |
+      |trip.title|Type: unknown. JSON type: string. The official API documentation provides no description. |
+    body: 
+      application/json: 
+        schema: plannerSchema
+        example: !include ../examples/planner.json
+      application/xml: 

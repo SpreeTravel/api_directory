@@ -1,0 +1,45 @@
+post: 
+  description: |
+    Create a scheduled recommendation.
+    Only community managers (users with the “Create and Set Up Communities” or “Manage Communities” permission) and users with the “Modify All Data” permission can create recommendation definitions and scheduled recommendations. These recommendations appear directly in the feed in communities in the Salesforce1 mobile browser app. They also appear, by default, on the right side of the home page in communities using the Summer ’15 or later version of the Napili template.
+  queryParameters: 
+    enabled: 
+      description: Indicates whether scheduling is enabled. If true, the recommendation is enabled and appears in communities. If false, recommendations in feeds in the Salesforce1 mobile browser app aren’t removed, but no new recommendations appear. In communities using the Summer ’15 or later version of the Napili template, disabled recommendations no longer appear.
+      type: boolean
+      example: true
+    rank: 
+      description: |
+        Relative rank of the scheduled recommendation indicated by ascending whole numbers starting with 1.
+        Setting the rank is comparable to an insertion into an ordered list. The scheduled recommendation is inserted into the position specified by the rank. The rank of all the scheduled recommendations after it is pushed down. See Ranking scheduled recommendations example.
+        
+        If the specified rank is larger than the size of the list, the scheduled recommendation is put at the end of the list. The rank of the scheduled recommendation is the size of the list, instead of the one specified.
+        
+        If a rank is not specified, the scheduled recommendation is put at the end of the list.
+      type: integer
+    recommendation​DefinitionId: 
+      description: ID of the recommendation definition that this scheduled recommendation schedules.
+      required: true
+  body: 
+    application/json: 
+      schema: createScheduledRecommendationsRequest
+      example: !include examples/createScheduledRecommendationsRequest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: scheduledRecommendationResponse
+get: 
+  description: |
+    Get a list of scheduled recommendations or create a scheduled recommendation.
+    Only community managers (users with the “Create and Set Up Communities” or “Manage Communities” permission) and users with the “Modify All Data” permission can access recommendation definitions and scheduled recommendations. These recommendations appear directly in the feed in communities in the Salesforce1 mobile browser app. They also appear, by default, on the right side of the home page in communities using the Summer ’15 or later version of the Napili template.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: scheduledRecommendationCollectionResponse
+delete: 
+  description: |
+    Delete a scheduled recommendation.
+    Only community managers (users with the “Create and Set Up Communities” or “Manage Communities” permission) and users with the “Modify All Data” permission can access, create, and delete recommendation definitions and scheduled recommendations. These recommendations appear directly in the feed in communities in the Salesforce1 mobile browser app. They also appear, by default, on the right side of the home page in communities using the Summer ’15 or later version of the Napili template.
+  responses: 
+    204: 

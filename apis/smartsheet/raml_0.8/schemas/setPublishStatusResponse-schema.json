@@ -1,0 +1,41 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "message" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "result" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "icalEnabled" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "readOnlyFullEnabled" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "readOnlyLiteEnabled" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "readOnlyLiteUrl" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "readWriteEnabled" : {
+          "type" : "boolean" ,
+          "required" : false
+        }
+      }
+    } ,
+    "resultCode" : {
+      "type" : "number" ,
+      "required" : false
+    }
+  }
+}

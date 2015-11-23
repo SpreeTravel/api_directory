@@ -1,0 +1,41 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "member" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "address" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "admin_state_up" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "protocol_port" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "subnet_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "tenant_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "weight" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

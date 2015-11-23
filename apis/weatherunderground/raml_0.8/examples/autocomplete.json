@@ -1,0 +1,184 @@
+{
+  "RESULTS": [
+    {
+      "name": "San Francisco, California",
+      "type": "city",
+      "c": "US",
+      "zmw": "94101.1.99999",
+      "tz": "America/Los_Angeles",
+      "tzs": "PDT",
+      "l": "/q/zmw:94101.1.99999"
+    },
+    {
+      "name": "San Fernando del Valle de Catamarca, Argentina",
+      "type": "city",
+      "c": "AR",
+      "zmw": "00000.5.87222",
+      "tz": "America/Argentina/La_Rioja",
+      "tzs": "ART",
+      "l": "/q/zmw:00000.5.87222"
+    },
+    {
+      "name": "San Felipe de Puerto Plata, Dominican Republic",
+      "type": "city",
+      "c": "DO",
+      "zmw": "00000.11.78458",
+      "tz": "America/Santo_Domingo",
+      "tzs": "AST",
+      "l": "/q/zmw:00000.11.78458"
+    },
+    {
+      "name": "San Fernando, Spain",
+      "type": "city",
+      "c": "ES",
+      "zmw": "00000.11.08449",
+      "tz": "Africa/Ceuta",
+      "tzs": "CEST",
+      "l": "/q/zmw:00000.11.08449"
+    },
+    {
+      "name": "San Fernando Apure, Venezuela",
+      "type": "city",
+      "c": "VE",
+      "zmw": "00000.8.80450",
+      "tz": "America/Caracas",
+      "tzs": "VET",
+      "l": "/q/zmw:00000.8.80450"
+    },
+    {
+      "name": "San Felipe, Venezuela",
+      "type": "city",
+      "c": "VE",
+      "zmw": "00000.8.80479",
+      "tz": "America/Caracas",
+      "tzs": "VET",
+      "l": "/q/zmw:00000.8.80479"
+    },
+    {
+      "name": "San Felipe, Chile",
+      "type": "city",
+      "c": "CL",
+      "zmw": "00000.16.85574",
+      "tz": "America/Santiago",
+      "tzs": "CLT",
+      "l": "/q/zmw:00000.16.85574"
+    },
+    {
+      "name": "San Francisco, Argentina",
+      "type": "city",
+      "c": "AR",
+      "zmw": "00000.6.87371",
+      "tz": "America/Cordoba",
+      "tzs": "ART",
+      "l": "/q/zmw:00000.6.87371"
+    },
+    {
+      "name": "San Francisco, Costa Rica",
+      "type": "city",
+      "c": "CR",
+      "zmw": "00000.52.WMRPV",
+      "tz": "America/Costa_Rica",
+      "tzs": "CST",
+      "l": "/q/zmw:00000.52.WMRPV"
+    },
+    {
+      "name": "San Francisco El Alto, Guatemala",
+      "type": "city",
+      "c": "GT",
+      "zmw": "00000.28.WMGQZ",
+      "tz": "America/Guatemala",
+      "tzs": "CST",
+      "l": "/q/zmw:00000.28.WMGQZ"
+    },
+    {
+      "name": "San Fernando de Henares, Spain",
+      "type": "city",
+      "c": "ES",
+      "zmw": "00000.42.08221",
+      "tz": "Europe/Madrid",
+      "tzs": "CEST",
+      "l": "/q/zmw:00000.42.08221"
+    },
+    {
+      "name": "San Felipe, Costa Rica",
+      "type": "city",
+      "c": "CR",
+      "zmw": "00000.51.WMRPV",
+      "tz": "America/Costa_Rica",
+      "tzs": "CST",
+      "l": "/q/zmw:00000.51.WMRPV"
+    },
+    {
+      "name": "San Fernando, California",
+      "type": "city",
+      "c": "US",
+      "zmw": "91340.1.99999",
+      "tz": "America/Los_Angeles",
+      "tzs": "PDT",
+      "l": "/q/zmw:91340.1.99999"
+    },
+    {
+      "name": "San Francisco Acuautla, Mexico",
+      "type": "city",
+      "c": "MX",
+      "zmw": "00000.33.76679",
+      "tz": "America/Mexico_City",
+      "tzs": "CDT",
+      "l": "/q/zmw:00000.33.76679"
+    },
+    {
+      "name": "San Fernando de Monte Cristi, Dominican Republic",
+      "type": "city",
+      "c": "DO",
+      "zmw": "00000.23.78451",
+      "tz": "America/Santo_Domingo",
+      "tzs": "AST",
+      "l": "/q/zmw:00000.23.78451"
+    },
+    {
+      "name": "San Felice a Cancello, Italy",
+      "type": "city",
+      "c": "IT",
+      "zmw": "00000.97.16289",
+      "tz": "Europe/Rome",
+      "tzs": "CEST",
+      "l": "/q/zmw:00000.97.16289"
+    },
+    {
+      "name": "San Francisco, El Salvador",
+      "type": "city",
+      "c": "SV",
+      "zmw": "00000.22.78670",
+      "tz": "America/El_Salvador",
+      "tzs": "CST",
+      "l": "/q/zmw:00000.22.78670"
+    },
+    {
+      "name": "San Ferdinando di Puglia, Italy",
+      "type": "city",
+      "c": "IT",
+      "zmw": "00000.20.16261",
+      "tz": "Europe/Rome",
+      "tzs": "CEST",
+      "l": "/q/zmw:00000.20.16261"
+    },
+    {
+      "name": "San Francisco Tlalcilalcalpan, Mexico",
+      "type": "city",
+      "c": "MX",
+      "zmw": "00000.32.76675",
+      "tz": "America/Mexico_City",
+      "tzs": "CDT",
+      "l": "/q/zmw:00000.32.76675"
+    },
+    {
+      "name": "San Felice sul Panaro, Italy",
+      "type": "city",
+      "c": "IT",
+      "zmw": "00000.53.16140",
+      "tz": "Europe/Rome",
+      "tzs": "CEST",
+      "l": "/q/zmw:00000.53.16140"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "total_count" : 1 ,
+  "invoices" : [
+    {
+      "id" : "INV2-KXVU-7Z64-DT6W-MG2X" ,
+      "number" : "0001" ,
+      "status" : "SENT" ,
+      "merchant_info" : {
+        "email" : "dennis@sample.com"
+      } ,
+      "billing_info" : [
+        {
+          "email" : "sally-patient@example.com"
+        }
+      ] ,
+      "shipping_info" : {
+        "email" : "sally-patient@example.com"
+      } ,
+      "invoice_date" : "2012-05-09 PST" ,
+      "payment_term" : {
+        "due_date" : "2012-05-24 PST"
+      } ,
+      "total_amount" : {
+        "currency" : "USD" ,
+        "value" : "250"
+      } ,
+      "metadata" : {
+        "created_date" : "2012-05-09 04:48:57 PST"
+      }
+    }
+  ]
+}

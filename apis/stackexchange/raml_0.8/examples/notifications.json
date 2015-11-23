@@ -1,0 +1,36 @@
+[
+  {
+    "body": "some string",
+    "creation_date": 1,
+    "is_unread": true,
+    "notification_type": "some string",
+    "post_id": 1,
+    "site": {
+      "aliases": [
+      ],
+      "api_site_parameter": "some string",
+      "audience": "some string",
+      "closed_beta_date": 1,
+      "favicon_url": "some string",
+      "high_resolution_icon_url": "some string",
+      "icon_url": "some string",
+      "launch_date": 1,
+      "logo_url": "some string",
+      "markdown_extensions": [
+      ],
+      "name": "some string",
+      "open_beta_date": 1,
+      "related_sites": [
+      ],
+      "site_state": "some string",
+      "site_type": "some string",
+      "site_url": "some string",
+      "styling": {
+        "link_color": "some string",
+        "tag_background_color": "some string",
+        "tag_foreground_color": "some string"
+      },
+      "twitter_account": "some string"
+    }
+  }
+]

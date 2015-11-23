@@ -1,0 +1,39 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "href" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "key" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "applications" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "href" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "directories" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "href" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

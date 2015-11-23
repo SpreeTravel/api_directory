@@ -1,0 +1,18 @@
+description: |
+  Public applications use the standard 3 legged OAuth process where a user can authorise your application to have access to their Xero organisation. Public applications can either be web based or desktop/mobile installed. Access tokens expire after 30 minutes.
+type: OAuth 1.0
+describedBy: 
+  headers: 
+    Authorization: 
+      description: |
+        Used to send a valid OAuth access token. Do not use together with
+        the "access_token" query string parameter.
+  queryParameters: 
+    access_token: 
+      description: |
+        Used to send a valid OAuth 2 access token. Do not use together with
+        the "Authorization" header
+settings: 
+  requestTokenUri: https://api.xero.com/oauth/RequestToken
+  authorizationUri: https://api.xero.com/oauth/Authorize
+  tokenCredentialsUri: https://api.xero.com/oauth/AccessToken

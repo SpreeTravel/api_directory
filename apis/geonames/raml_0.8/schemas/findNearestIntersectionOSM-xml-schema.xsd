@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="geonames">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="intersection" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="street1" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="highway1" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="street1Bearing" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="street2" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="highway2" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="street2Bearing" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="lat" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="lng" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="distance" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

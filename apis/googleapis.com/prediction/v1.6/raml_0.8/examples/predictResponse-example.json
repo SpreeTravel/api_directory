@@ -1,0 +1,13 @@
+{
+  "kind" : "prediction#output" ,
+  "id" : "string" ,
+  "selfLink" : "string" ,
+  "outputLabel" : "string" ,
+  "outputMulti" : [
+    {
+      "label" : "string" ,
+      "score" : "string"
+    }
+  ] ,
+  "outputValue" : "double"
+}

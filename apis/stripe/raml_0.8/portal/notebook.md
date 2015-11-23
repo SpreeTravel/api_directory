@@ -1,0 +1,7 @@
+The API notebooks are all executable! Hit "enter" in any code cell to execute it (and all cells before it that have not executed yet), or scroll to the bottom of the notebook and click "Play notebook". For more information, see [http://apinotebook.com](http://apinotebook.com).
+
+#Considerations
+
+- In order to run these notebooks you will need a stripe account and a Stripe application. To obtain these you should go to [https://manage.stripe.com/account/applications/settings](https://manage.stripe.com/account/applications/settings). You will be proposed to login or create an account and then moved to the applications management page. It is important to point [https://api-notebook.anypoint.mulesoft.com/authenticate/oauth.html](https://api-notebook.anypoint.mulesoft.com/authenticate/oauth.html) as a redirect URI for your application. At the very beginning notebook will ask you to enter client_id of your application.
+- Notebook will also ask you to enter  Stripe API Secret Key, which can be found at [https://manage.stripe.com/account/apikeys](https://manage.stripe.com/account/apikeys).
+- Note that each time you authenticate your application, Stripe asks to fill required fields in your account, if they are not already filled. But in the developer mode you are allowed to skip this procedure by clicking the Skip this account form link in the top right corner of the page. In order to enter the developer mode you should use your development client_id and test Secret Key.

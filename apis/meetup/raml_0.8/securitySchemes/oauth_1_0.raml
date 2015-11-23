@@ -1,0 +1,61 @@
+description: |
+  OAuth 1.0 continues to be supported for all API requests, but OAuth 2.0 is now preferred.
+  
+  #OAuth 1.0a Signed Requests
+  The Meetup API supports authentication of third-party applications using the OAuth protocol. This allows your application to access a user's data and RSVP to events on behalf of the user (after they have explicitly granted permission). If you would like to set up an OAuth consumer to use for your application, you can create one here. The procedure to making requests with OAuth is as follows:
+  
+  Fetch a request token, by using the request token URL: https://api.meetup.com/oauth/request/ signed with your consumer credentials. You must include an oauth_callback parameter. Set it to URL that the user will be redirected to after authorizing the application, or oob for out-of-band authentication. The response will include a key and secret for a request token.
+  Redirect the user to the authorization url:
+  http://www.meetup.com/authorize/?oauth_token=request_token_key.
+  After authorizing, the user is redirected to your callback url with the oauth_token and an oauth_verifier parameter that your application will need acquire an access token. For out-of-band authorization, the verifier is displayed as a "pin" for the user to enter into your application.
+  Fetch an access token using the access token URL: https://api.meetup.com/oauth/access/. If the user has chosen to allow the application and a correct oauth_verifier parameter is supplied, the request will return an access token key and secret which can be used for subsequent requests.
+  Make API calls as normal - but with the necessary OAuth parameters or headers added to the request. Meetup users can see a list of applications they've authorized in their account settings page, and choose to remove an application. After a user chooses to remove an application, the access token will expire and any requests made with the token will fail. The user will need to re-authorize the application in order to allow access to continue with a new token.
+  Signatures are used to ensure the identity of the consumer application. Currently, the Meetup implementation of OAuth supports plaintext and HMAC_SHA1 as signature methods. For the URL portion of the signature base string, use the following values:
+  
+  Request Tokens: https://api.meetup.com/oauth/request/
+  Access Tokens: https://api.meetup.com/oauth/access/
+  Protected Resources (API calls): http://api.meetup.com/
+  For complete details on how to form signatures for OAuth requests, refer to the OAuth specification details.
+  
+  #OAuth Authentication
+  Endpoint: http://www.meetup.com/authenticate/?oauth_token=request_token_key
+  
+  In addition to the standard OAuth 1.0a authorization flow, we support an authentication endpoint for sites that wish to use Meetup to sign in users. Under certain conditions this endpoint will immediately redirect back to the callback URL:
+  
+  The user is already logged in to Meetup, and
+  The user has already authorized your application and that authorization has not been revoked, and
+  The provided request token is valid
+  When these conditions are not satisfied the authentication endpoint behaves the same as the authorization endpoint, sending the user to the sign in or authorization page as appropriate.
+  
+  #API Request Signing
+  OAuth requests must also satisfy the following requirements:
+  
+  Include a timestamp (oauth_timestamp) which must match to within a 5 minute window of the server time, expressed in the number of seconds since January 1, 1970 00:00:00 GMT.
+  Include a nonce (oauth_nonce) which is a unique, randomly generated number that is specific to this request.
+  Include the consumer key (oauth_consumer_key) which is used to identify the application making the request.
+  Include the signature method (oauth_signature_method) and signature (oauth_signature) which are cryptographically generated digests of the resource URL, the parameters, the consumer secret, and the nonce + timestamp values.
+  If any of these components are missing or invalid, the OAuth request will be rejected with an error. The tedious part of assembling these parameters is easily addressed by using one of the open source OAuth clients or the Meetup Python client, which has bundled support for OAuth requests.
+  
+  You should store access tokens (key and secret) so that they can be re-used without forcing the user to authorize a new token every time. Initialize MeetupOAuth with an access_key and access_secret if you want an API client specific to a given user, which eliminates the need to specify a sess with each API call. The app.py script included with the python-api-client implements a basic command-line driven OAuth flow with token persistence and client-user binding.
+type: OAuth 1.0
+describedBy: 
+  queryParameters: 
+    oauth_timestamp: 
+      description: |
+        Include a timestamp (oauth_timestamp) which must match to within a 5 minute window of the server time, expressed in the number of seconds since January 1, 1970 00:00:00 GMT.
+    oauth_nonce: 
+      description: |
+        Include a nonce (oauth_nonce) which is a unique, randomly generated number that is specific to this request.
+    oauth_consumer_key: 
+      description: |
+        Include the consumer key (oauth_consumer_key) which is used to identify the application making the request.
+    oauth_signature_method: 
+      description: |
+        Include the signature method (oauth_signature_method) and signature (oauth_signature) which are cryptographically generated digests of the resource URL, the parameters, the consumer secret, and the nonce + timestamp values.
+    oauth_signature: 
+      description: |
+        Include the signature method (oauth_signature_method) and signature (oauth_signature) which are cryptographically generated digests of the resource URL, the parameters, the consumer secret, and the nonce + timestamp values.
+settings: 
+  requestTokenUri: https://api.meetup.com/oauth/request/
+  authorizationUri: http://www.meetup.com/authorize/
+  tokenCredentialsUri: https://api.meetup.com/oauth/access/

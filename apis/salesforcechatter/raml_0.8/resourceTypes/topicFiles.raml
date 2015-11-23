@@ -1,0 +1,12 @@
+get: 
+  description: Returns information about the five files most recently posted to the specified topic.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: fileSummaryPageResponse
+          example: !include examples/fileSummaryPageResponse-example.json
+head: 
+  description: Returns information about the five files most recently posted to the specified topic.
+  responses: 
+    200: 

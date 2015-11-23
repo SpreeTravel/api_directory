@@ -1,0 +1,15 @@
+{
+  "href" : "https://api.stormpath.com/v1/directories/bckhcGMXQDujIXpbCDRb2Q" ,
+  "name" : "Captains" ,
+  "description" : "Captains from a variety of stories" ,
+  "status" : "enabled" ,
+  "accounts" : {
+    "href" : "https://api.stormpath.com/v1/directories/bckhcGMXQDujIXpbCDRb2Q/accounts"
+  } ,
+  "groups" : {
+    "href" : "https://api.stormpath.com/v1/directories/bckhcGMXQDujIXpbCDRb2Q/groups"
+  } ,
+  "tenant" : {
+    "href" : "https://api.stormpath.com/v1/tenants/Gh9238fksJlsieJkPkQuW"
+  }
+}

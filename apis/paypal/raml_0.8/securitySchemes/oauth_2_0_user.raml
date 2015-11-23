@@ -1,0 +1,19 @@
+description: |
+  With each API call, you�ll need to set request headers, including an OAuth 2.0 access token. Get an access token by using the OAuth 2.0 client_credentials token grant type with your clientId:secret as your Basic Auth credentials. For more information, see Make your first call. You can use your Sandbox access token to try any of the code in this reference.
+type: "OAuth 2.0"
+describedBy: 
+  headers: 
+    Authorization: 
+      description: |
+       Used to send a valid OAuth 2 access token. The token must be preceeded by the word "Bearer".
+      example: Bearer _token_
+  queryParameters: 
+    access_token: 
+      description: |
+        Used to send a valid OAuth 2 access token. Do not use together with
+        the "Authorization" header
+settings: 
+  authorizationUri: https://www.sandbox.paypal.com/webapps/auth/protocol/openidconnect/v1/authorize
+  accessTokenUri: https://api.sandbox.paypal.com/v1/identity/openidconnect/tokenservice
+  authorizationGrants: [ code ]
+  scopes: ["https://uri.paypal.com/services/invoicing openid https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card/.* https://api.paypal.com/v1/vault/credit-card"]

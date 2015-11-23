@@ -1,0 +1,20 @@
+[
+  {
+    "id" : 7960873114331012 ,
+    "index" : 0 ,
+    "symbol" : "STAR" ,
+    "title" : "Favorite" ,
+    "type" : "CHECKBOX"
+  } , {
+    "id" : 642523719853956 ,
+    "index" : 1 ,
+    "primary" : true ,
+    "title" : "Primary Column" ,
+    "type" : "TEXT_NUMBER"
+  } , {
+    "id" : 5146123347224452 ,
+    "index" : 2 ,
+    "title" : "Status" ,
+    "type" : "PICKLIST"
+  }
+]

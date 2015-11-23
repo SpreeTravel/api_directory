@@ -1,0 +1,40 @@
+post: 
+  description: Add a member to a group. To add a member, the context user must be the group owner or moderator.
+  queryParameters: 
+    role: 
+      description: |
+        The role of the member. One of these values:
+        GroupManager
+        StandardMember
+      enum: [ GroupManager , StandardMember ]
+    userId: 
+      description: ID of the user to add to the group.
+  body: 
+    application/json: 
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: groupMemberResponse
+          example: !include examples/groupMemberResponse-example.json
+head: 
+  description: Members of a specified group. Get the members.
+  responses: 
+    200: 
+get: 
+  description: Members of a specified group. Get the members.
+  queryParameters: 
+    page: 
+      description: An integer specifying a page of items. The default value is 0, which returns the first page.
+      type: integer
+      default: 0
+    pageSize: 
+      description: Specifies the number of items per page. Valid values are between 1 and 1000. If you don’t specify a size, the default is 25.
+      type: integer
+      default: 25
+      example: 5
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: groupMemberPageResponse

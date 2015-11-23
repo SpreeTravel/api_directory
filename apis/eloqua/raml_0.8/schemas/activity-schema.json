@@ -1,0 +1,35 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "contact" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "activityType" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "activityDate" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "asset" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "assetType" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "details" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

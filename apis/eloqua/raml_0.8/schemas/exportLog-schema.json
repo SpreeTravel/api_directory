@@ -1,0 +1,23 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "startAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "endAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "executionStatus" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "message" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

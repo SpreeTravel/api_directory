@@ -1,0 +1,368 @@
+{
+	"services" : [ {
+		"id" : "PYKZNA9" ,
+		"name" : "a" ,
+		"service_url" : "/services/PYKZNA9" ,
+		"service_key" : "a@acme.pagerduty.com" ,
+		"auto_resolve_timeout" : 14400 ,
+		"acknowledgement_timeout" : 1800 ,
+		"created_at" : "2012-11-14T17:22:56-05:00" ,
+		"status" : "active" ,
+		"last_incident_timestamp" : null ,
+		"email_incident_creation" : "on_new_email_subject" ,
+		"incident_counts" : {
+			"triggered" : 0 ,
+			"acknowledged" : 0 ,
+			"resolved" : 0 ,
+			"total" : 0
+		} ,
+		"email_filter_mode" : "all-email" ,
+		"type" : "generic_email" ,
+		"description" : "service a"
+	} , {
+		"id" : "PO2C8W6" ,
+		"name" : "aa" ,
+		"service_url" : "/services/PO2C8W6" ,
+		"service_key" : "aa@acme.pagerduty.com" ,
+		"auto_resolve_timeout" : 14400 ,
+		"acknowledgement_timeout" : 1800 ,
+		"created_at" : "2012-11-15T18:43:56-05:00" ,
+		"status" : "active" ,
+		"last_incident_timestamp" : null ,
+		"email_incident_creation" : "on_new_email_subject" ,
+		"incident_counts" : {
+			"triggered" : 0 ,
+			"acknowledged" : 0 ,
+			"resolved" : 0 ,
+			"total" : 0
+		} ,
+		"email_filter_mode" : "all-email" ,
+		"type" : "generic_email" ,
+		"description" : "service as"
+	} , {
+		"id" : "PSQVSNY" ,
+		"name" : "adsfadsfads" ,
+		"service_url" : "/services/PSQVSNY" ,
+		"service_key" : "adsfadsfads@acme.pagerduty.com" ,
+		"auto_resolve_timeout" : 14400 ,
+		"acknowledgement_timeout" : 1800 ,
+		"created_at" : "2012-11-12T22:33:51-05:00" ,
+		"status" : "active" ,
+		"last_incident_timestamp" : null ,
+		"email_incident_creation" : "on_new_email_subject" ,
+		"incident_counts" : {
+			"triggered" : 0 ,
+			"acknowledged" : 0 ,
+			"resolved" : 0 ,
+			"total" : 0
+		} ,
+		"email_filter_mode" : "all-email" ,
+		"type" : "generic_email" ,
+		"description" : "service adsfadsfads"
+	} , {
+		"id" : "PVOO9KJ" ,
+		"name" : "aff" ,
+		"service_url" : "/services/PVOO9KJ" ,
+		"service_key" : "aff@acme.pagerduty.com" ,
+		"auto_resolve_timeout" : 14400 ,
+		"acknowledgement_timeout" : 1800 ,
+		"created_at" : "2012-11-14T18:12:31-05:00" ,
+		"status" : "active" ,
+		"last_incident_timestamp" : null ,
+		"email_incident_creation" : "on_new_email_subject" ,
+		"incident_counts" : {
+			"triggered" : 0 ,
+			"acknowledged" : 0 ,
+			"resolved" : 0 ,
+			"total" : 0
+		} ,
+		"email_filter_mode" : "all-email" ,
+		"type" : "generic_email" ,
+		"description" : "service aff"
+	} , {
+		"id" : "PEYSGVF" ,
+		"name" : "cloud" ,
+		"service_url" : "/services/PEYSGVF" ,
+		"service_key" : "2b4310400d360130777138f6b11a5d17" ,
+		"auto_resolve_timeout" : 14400 ,
+		"acknowledgement_timeout" : 1800 ,
+		"created_at" : "2012-11-02T00:22:31-04:00" ,
+		"status" : "critical" ,
+		"last_incident_timestamp" : "2012-11-08T19:22:07-05:00" ,
+		"email_incident_creation" : null ,
+		"incident_counts" : {
+			"triggered" : 1 ,
+			"acknowledged" : 0 ,
+			"resolved" : 0 ,
+			"total" : 1
+		} ,
+		"email_filter_mode" : "all-email" ,
+		"type" : "cloudkick" ,
+		"description" : "service cloud"
+	} , {
+		"id" : "PF9KMXH" ,
+		"name" : "defa" ,
+		"service_url" : "/services/PF9KMXH" ,
+		"service_key" : "amazing2@acme.pagerduty.com" ,
+		"auto_resolve_timeout" : null ,
+		"acknowledgement_timeout" : null ,
+		"created_at" : "2012-08-15T20:15:52-04:00" ,
+		"status" : "active" ,
+		"last_incident_timestamp" : "2012-09-12T17:57:06-04:00" ,
+		"email_incident_creation" : "on_new_email_subject" ,
+		"incident_counts" : {
+			"triggered" : 0 ,
+			"acknowledged" : 0 ,
+			"resolved" : 4 ,
+			"total" : 4
+		} ,
+		"email_filter_mode" : "or-rules-email" ,
+		"type" : "generic_email" ,
+		"description" : "service defa"
+	} , {
+		"id" : "P573W8X" ,
+		"name" : "djaljdlds" ,
+		"service_url" : "/services/P573W8X" ,
+		"service_key" : "djaljdlds@acme.pagerduty.com" ,
+		"auto_resolve_timeout" : 14400 ,
+		"acknowledgement_timeout" : 1800 ,
+		"created_at" : "2012-11-09T18:48:14-05:00" ,
+		"status" : "active" ,
+		"last_incident_timestamp" : null ,
+		"email_incident_creation" : "on_new_email_subject" ,
+		"incident_counts" : {
+			"triggered" : 0 ,
+			"acknowledged" : 0 ,
+			"resolved" : 0 ,
+			"total" : 0
+		} ,
+		"email_filter_mode" : "or-rules-email" ,
+		"type" : "generic_email" ,
+		"description" : "service djaljdlds"
+	} , {
+		"id" : "PQ47DCP" ,
+		"name" : "dservicer" ,
+		"service_url" : "/services/PQ47DCP" ,
+		"service_key" : "450c73c00f350130777538f6b11a5d17" ,
+		"auto_resolve_timeout" : 14400 ,
+		"acknowledgement_timeout" : 1800 ,
+		"created_at" : "2012-11-02T00:34:55-04:00" ,
+		"status" : "active" ,
+		"last_incident_timestamp" : null ,
+		"email_incident_creation" : null ,
+		"incident_counts" : {
+			"triggered" : 0 ,
+			"acknowledged" : 0 ,
+			"resolved" : 0 ,
+			"total" : 0
+		} ,
+		"email_filter_mode" : "all-email" ,
+		"type" : "server_density" ,
+		"description" : "service dservicer"
+	} , {
+		"id" : "PHW8B63" ,
+		"name" : "f" ,
+		"service_url" : "/services/PHW8B63" ,
+		"service_key" : "f@acme.pagerduty.com" ,
+		"auto_resolve_timeout" : 14400 ,
+		"acknowledgement_timeout" : 1800 ,
+		"created_at" : "2012-11-05T17:34:34-05:00" ,
+		"status" : "disabled" ,
+		"last_incident_timestamp" : null ,
+		"email_incident_creation" : "on_new_email_subject" ,
+		"incident_counts" : {
+			"triggered" : 0 ,
+			"acknowledged" : 0 ,
+			"resolved" : 0 ,
+			"total" : 0
+		} ,
+		"email_filter_mode" : "or-rules-email" ,
+		"type" : "generic_email" ,
+		"description" : "service f"
+	} , {
+		"id" : "PAM4FGS" ,
+		"name" : "keynoted" ,
+		"service_url" : "/services/PAM4FGS" ,
+		"service_key" : "keynoted@acme.pagerduty.com" ,
+		"auto_resolve_timeout" : 14400 ,
+		"acknowledgement_timeout" : 1800 ,
+		"created_at" : "2012-11-02T00:26:52-04:00" ,
+		"status" : "active" ,
+		"last_incident_timestamp" : null ,
+		"email_incident_creation" : "on_new_email_subject" ,
+		"incident_counts" : {
+			"triggered" : 0 ,
+			"acknowledged" : 0 ,
+			"resolved" : 0 ,
+			"total" : 0
+		} ,
+		"email_filter_mode" : "all-email" ,
+		"type" : "keynote" ,
+		"severity_filter" : "critical_or_warning" ,
+		"description" : "service keynoted"
+	} , {
+		"id" : "P9UJCMM" ,
+		"name" : "le monitor" ,
+		"service_url" : "/services/P9UJCMM" ,
+		"service_key" : "le-monitor@acme.pagerduty.com" ,
+		"auto_resolve_timeout" : 14400 ,
+		"acknowledgement_timeout" : 1800 ,
+		"created_at" : "2012-11-02T00:35:18-04:00" ,
+		"status" : "active" ,
+		"last_incident_timestamp" : null ,
+		"email_incident_creation" : "on_new_email_subject" ,
+		"incident_counts" : {
+			"triggered" : 0 ,
+			"acknowledged" : 0 ,
+			"resolved" : 0 ,
+			"total" : 0
+		} ,
+		"email_filter_mode" : "or-rules-email" ,
+		"type" : "sql_monitor" ,
+		"severity_filter" : "on_medium_high" ,
+		"description" : "service le monitor"
+	} , {
+		"id" : "PBAZLIU" ,
+		"name" : "MyApi" ,
+		"service_url" : "/services/PBAZLIU" ,
+		"service_key" : "28198a20cae6012f5c6c38f6b11a5d17" ,
+		"auto_resolve_timeout" : 14400 ,
+		"acknowledgement_timeout" : 1800 ,
+		"created_at" : "2012-08-17T18:09:37-04:00" ,
+		"status" : "active" ,
+		"last_incident_timestamp" : "2011-04-21T04:26:37-04:00" ,
+		"email_incident_creation" : null ,
+		"incident_counts" : {
+			"triggered" : 0 ,
+			"acknowledged" : 0 ,
+			"resolved" : 4 ,
+			"total" : 4
+		} ,
+		"email_filter_mode" : "all-email" ,
+		"type" : "generic_events_api" ,
+		"description" : "service MyApi"
+	} , {
+		"id" : "PXPGF42" ,
+		"name" : "nagiosed" ,
+		"service_url" : "/services/PXPGF42" ,
+		"service_key" : "4f7a977006d401305df938f6b11a5d17" ,
+		"auto_resolve_timeout" : 14400 ,
+		"acknowledgement_timeout" : 1800 ,
+		"created_at" : "2012-11-02T00:33:01-04:00" ,
+		"status" : "active" ,
+		"last_incident_timestamp" : null ,
+		"email_incident_creation" : null ,
+		"incident_counts" : {
+			"triggered" : 0 ,
+			"acknowledged" : 0 ,
+			"resolved" : 0 ,
+			"total" : 0
+		} ,
+		"email_filter_mode" : "all-email" ,
+		"type" : "nagios" ,
+		"description" : "service nagiosed"
+	} , {
+		"id" : "PDJKATD" ,
+		"name" : "nagnag" ,
+		"service_url" : "/services/PDJKATD" ,
+		"service_key" : "b2977ea00f5e01307d2338f6b11a5d17" ,
+		"auto_resolve_timeout" : 14400 ,
+		"acknowledgement_timeout" : 1800 ,
+		"created_at" : "2012-11-05T18:34:53-05:00" ,
+		"status" : "active" ,
+		"last_incident_timestamp" : null ,
+		"email_incident_creation" : null ,
+		"incident_counts" : {
+			"triggered" : 0 ,
+			"acknowledged" : 0 ,
+			"resolved" : 0 ,
+			"total" : 0
+		} ,
+		"email_filter_mode" : "all-email" ,
+		"type" : "nagios" ,
+		"description" : "service nagnag"
+	} , {
+		"id" : "P29NBY9" ,
+		"name" : "serverd" ,
+		"service_url" : "/services/P29NBY9" ,
+		"service_key" : "0b2f05b00f6201307d2538f6b11a5d17" ,
+		"auto_resolve_timeout" : 14400 ,
+		"acknowledgement_timeout" : 1800 ,
+		"created_at" : "2012-11-02T20:56:39-04:00" ,
+		"status" : "active" ,
+		"last_incident_timestamp" : null ,
+		"email_incident_creation" : null ,
+		"incident_counts" : {
+			"triggered" : 0 ,
+			"acknowledged" : 0 ,
+			"resolved" : 0 ,
+			"total" : 0
+		} ,
+		"email_filter_mode" : "all-email" ,
+		"type" : "server_density" ,
+		"description" : "service served"
+	} , {
+		"id" : "PT20YPA" ,
+		"name" : "sevname" ,
+		"service_url" : "/services/PT20YPA" ,
+		"service_key" : "sevname@acme.pagerduty.com" ,
+		"auto_resolve_timeout" : 14400 ,
+		"acknowledgement_timeout" : 1800 ,
+		"created_at" : "2012-11-09T01:03:10-05:00" ,
+		"status" : "active" ,
+		"last_incident_timestamp" : null ,
+		"email_incident_creation" : "on_new_email_subject" ,
+		"incident_counts" : {
+			"triggered" : 0 ,
+			"acknowledged" : 0 ,
+			"resolved" : 0 ,
+			"total" : 0
+		} ,
+		"email_filter_mode" : "all-email" ,
+		"type" : "generic_email" ,
+		"description" : "service sevname"
+	} , {
+		"id" : "P7TR7GG" ,
+		"name" : "sevname1011" ,
+		"service_url" : "/services/P7TR7GG" ,
+		"service_key" : "726602c011bf0130a60d38f6b11a5d17" ,
+		"auto_resolve_timeout" : 14400 ,
+		"acknowledgement_timeout" : 1800 ,
+		"created_at" : "2012-11-15T21:01:24-05:00" ,
+		"status" : "active" ,
+		"last_incident_timestamp" : null ,
+		"email_incident_creation" : null ,
+		"incident_counts" : {
+			"triggered" : 0 ,
+			"acknowledged" : 0 ,
+			"resolved" : 0 ,
+			"total" : 0
+		} ,
+		"email_filter_mode" : "all-email" ,
+		"type" : "generic_events_api" ,
+		"description" : "service sevname1011"
+	} , {
+		"id" : "PQFCJER" ,
+		"name" : "Thingy" ,
+		"service_url" : "/services/PQFCJER" ,
+		"service_key" : "thingy@acme.pagerduty.com" ,
+		"auto_resolve_timeout" : 14400 ,
+		"acknowledgement_timeout" : 1800 ,
+		"created_at" : "2011-01-08T00:22:24-05:00" ,
+		"status" : "active" ,
+		"last_incident_timestamp" : null ,
+		"email_incident_creation" : "on_new_email_subject" ,
+		"incident_counts" : {
+			"triggered" : 0 ,
+			"acknowledged" : 0 ,
+			"resolved" : 0 ,
+			"total" : 0
+		} ,
+		"email_filter_mode" : "all-email" ,
+		"type" : "generic_email" ,
+		"description" : "service Thingy"
+	} ] ,
+	"limit" : 25 ,
+	"offset" : 0 ,
+	"total" : 18
+}

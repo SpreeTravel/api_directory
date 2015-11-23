@@ -1,0 +1,15 @@
+{
+  "id": 100,
+  "zip": "zip",
+  "phone": 100,
+  "lon": 1.0,
+  "address_3": "address_3",
+  "visibility": "visibility",
+  "name": "name",
+  "state": 100,
+  "address_1": "address_1",
+  "address_2": "address_2",
+  "lat": 1.0,
+  "country": "country",
+  "city": "city"
+}

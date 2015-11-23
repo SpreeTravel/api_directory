@@ -1,0 +1,7 @@
+{
+	"escalation_delay_in_minutes" : 44 ,
+	"rule_object" : {
+		"type" : "schedule" ,
+		"id" : "PY1OL64"
+	}
+}

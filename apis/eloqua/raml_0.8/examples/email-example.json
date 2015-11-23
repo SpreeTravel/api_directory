@@ -1,0 +1,1133 @@
+{
+  "subject" : "undefined" ,
+  "senderName" : "undefined" ,
+  "senderEmail" : "undefined" ,
+  "replyToName" : "undefined" ,
+  "replyToEmail" : "undefined" ,
+  "bounceBackEmail" : "undefined" ,
+  "htmlContent" : {
+  } ,
+  "plainText" : "undefined" ,
+  "isPlainTextEditable" : "undefined" ,
+  "sendPlainTextOnly" : "undefined" ,
+  "isTracked" : "undefined" ,
+  "layout" : "undefined" ,
+  "style" : "undefined" ,
+  "forms" : [
+    {
+      "htmlName" : "undefined" ,
+      "processingType" : "undefined" ,
+      "emailAddressFormFieldId" : "undefined" ,
+      "submitFailedLandingPageId" : "4" ,
+      "size" : {
+      } ,
+      "html" : "undefined" ,
+      "style" : "undefined" ,
+      "elements" : [
+        {
+          "instructions" : "" ,
+          "style" : "undefined" ,
+          "name" : "string string" ,
+          "description" : "string string" ,
+          "permissions" : "InstancePermissions InstancePermissions" ,
+          "folderId" : "string string" ,
+          "sourceTemplateId" : "string string" ,
+          "createdBy" : "string string" ,
+          "createdAt" : "dateTime dateTime" ,
+          "updatedBy" : "string string" ,
+          "updatedAt" : "dateTime dateTime" ,
+          "accessedAt" : "dateTime dateTime" ,
+          "scheduledFor" : "dateTime dateTime" ,
+          "depth" : "RequestDepth RequestDepth"
+        }
+      ] ,
+      "processingSteps" : [
+        {
+          "execute" : "undefined" ,
+          "conditionalType" : "undefined" ,
+          "conditionalFieldId" : "12" ,
+          "conditionalComparator" : "undefined" ,
+          "isConditionallyNegated" : "true" ,
+          "name" : "string string" ,
+          "description" : "string string" ,
+          "permissions" : "InstancePermissions InstancePermissions" ,
+          "folderId" : "string string" ,
+          "sourceTemplateId" : "string string" ,
+          "createdBy" : "string string" ,
+          "createdAt" : "dateTime dateTime" ,
+          "updatedBy" : "string string" ,
+          "updatedAt" : "dateTime dateTime" ,
+          "accessedAt" : "dateTime dateTime" ,
+          "scheduledFor" : "dateTime dateTime" ,
+          "depth" : "RequestDepth RequestDepth"
+        }
+      ] ,
+      "name" : "string string" ,
+      "description" : "string string" ,
+      "permissions" : "InstancePermissions InstancePermissions" ,
+      "folderId" : "string string" ,
+      "sourceTemplateId" : "string string" ,
+      "createdBy" : "string string" ,
+      "createdAt" : "dateTime dateTime" ,
+      "updatedBy" : "string string" ,
+      "updatedAt" : "dateTime dateTime" ,
+      "accessedAt" : "dateTime dateTime" ,
+      "scheduledFor" : "dateTime dateTime" ,
+      "depth" : "RequestDepth RequestDepth"
+    }
+  ] ,
+  "images" : [
+    {
+      "fullImageUrl" : "/EloquaImages/clients/ORSE/{ffaa51ba-220e-43da-994f-197338be7d35}_sample.jpg" ,
+      "size" : {
+      } ,
+      "thumbnailUrl" : "/EloquaImages/clients/ORSE/imagethumbnails/{ffaa51ba-220e-43da-994f-197338be7d35}_sample.jpg" ,
+      "name" : "string string" ,
+      "description" : "string string" ,
+      "permissions" : "InstancePermissions InstancePermissions" ,
+      "folderId" : "string string" ,
+      "sourceTemplateId" : "string string" ,
+      "createdBy" : "string string" ,
+      "createdAt" : "dateTime dateTime" ,
+      "updatedBy" : "string string" ,
+      "updatedAt" : "dateTime dateTime" ,
+      "accessedAt" : "dateTime dateTime" ,
+      "scheduledFor" : "dateTime dateTime" ,
+      "depth" : "RequestDepth RequestDepth"
+    }
+  ] ,
+  "hyperlinks" : [
+    {
+      "href" : "undefined" ,
+      "hyperlinkType" : "undefined" ,
+      "referencedEntityId" : "undefined" ,
+      "name" : "string string" ,
+      "description" : "string string" ,
+      "permissions" : "InstancePermissions InstancePermissions" ,
+      "folderId" : "string string" ,
+      "sourceTemplateId" : "string string" ,
+      "createdBy" : "string string" ,
+      "createdAt" : "dateTime dateTime" ,
+      "updatedBy" : "string string" ,
+      "updatedAt" : "dateTime dateTime" ,
+      "accessedAt" : "dateTime dateTime" ,
+      "scheduledFor" : "dateTime dateTime" ,
+      "depth" : "RequestDepth RequestDepth"
+    }
+  ] ,
+  "contentSections" : [
+    {
+      "contentHtml" : "undefined" ,
+      "contentText" : "undefined" ,
+      "scope" : "global" ,
+      "forms" : [
+        {
+          "htmlName" : "undefined" ,
+          "processingType" : "undefined" ,
+          "emailAddressFormFieldId" : "undefined" ,
+          "submitFailedLandingPageId" : "4" ,
+          "size" : {
+          } ,
+          "html" : "undefined" ,
+          "style" : "undefined" ,
+          "elements" : [
+            {
+              "instructions" : "" ,
+              "style" : "undefined" ,
+              "name" : "string string" ,
+              "description" : "string string" ,
+              "permissions" : "InstancePermissions InstancePermissions" ,
+              "folderId" : "string string" ,
+              "sourceTemplateId" : "string string" ,
+              "createdBy" : "string string" ,
+              "createdAt" : "dateTime dateTime" ,
+              "updatedBy" : "string string" ,
+              "updatedAt" : "dateTime dateTime" ,
+              "accessedAt" : "dateTime dateTime" ,
+              "scheduledFor" : "dateTime dateTime" ,
+              "depth" : "RequestDepth RequestDepth"
+            }
+          ] ,
+          "processingSteps" : [
+            {
+              "execute" : "undefined" ,
+              "conditionalType" : "undefined" ,
+              "conditionalFieldId" : "12" ,
+              "conditionalComparator" : "undefined" ,
+              "isConditionallyNegated" : "true" ,
+              "name" : "string string" ,
+              "description" : "string string" ,
+              "permissions" : "InstancePermissions InstancePermissions" ,
+              "folderId" : "string string" ,
+              "sourceTemplateId" : "string string" ,
+              "createdBy" : "string string" ,
+              "createdAt" : "dateTime dateTime" ,
+              "updatedBy" : "string string" ,
+              "updatedAt" : "dateTime dateTime" ,
+              "accessedAt" : "dateTime dateTime" ,
+              "scheduledFor" : "dateTime dateTime" ,
+              "depth" : "RequestDepth RequestDepth"
+            }
+          ] ,
+          "name" : "string string" ,
+          "description" : "string string" ,
+          "permissions" : "InstancePermissions InstancePermissions" ,
+          "folderId" : "string string" ,
+          "sourceTemplateId" : "string string" ,
+          "createdBy" : "string string" ,
+          "createdAt" : "dateTime dateTime" ,
+          "updatedBy" : "string string" ,
+          "updatedAt" : "dateTime dateTime" ,
+          "accessedAt" : "dateTime dateTime" ,
+          "scheduledFor" : "dateTime dateTime" ,
+          "depth" : "RequestDepth RequestDepth"
+        }
+      ] ,
+      "images" : [
+        {
+          "fullImageUrl" : "/EloquaImages/clients/ORSE/{ffaa51ba-220e-43da-994f-197338be7d35}_sample.jpg" ,
+          "size" : {
+          } ,
+          "thumbnailUrl" : "/EloquaImages/clients/ORSE/imagethumbnails/{ffaa51ba-220e-43da-994f-197338be7d35}_sample.jpg" ,
+          "name" : "string string" ,
+          "description" : "string string" ,
+          "permissions" : "InstancePermissions InstancePermissions" ,
+          "folderId" : "string string" ,
+          "sourceTemplateId" : "string string" ,
+          "createdBy" : "string string" ,
+          "createdAt" : "dateTime dateTime" ,
+          "updatedBy" : "string string" ,
+          "updatedAt" : "dateTime dateTime" ,
+          "accessedAt" : "dateTime dateTime" ,
+          "scheduledFor" : "dateTime dateTime" ,
+          "depth" : "RequestDepth RequestDepth"
+        }
+      ] ,
+      "hyperlinks" : [
+        {
+          "href" : "undefined" ,
+          "hyperlinkType" : "undefined" ,
+          "referencedEntityId" : "undefined" ,
+          "name" : "string string" ,
+          "description" : "string string" ,
+          "permissions" : "InstancePermissions InstancePermissions" ,
+          "folderId" : "string string" ,
+          "sourceTemplateId" : "string string" ,
+          "createdBy" : "string string" ,
+          "createdAt" : "dateTime dateTime" ,
+          "updatedBy" : "string string" ,
+          "updatedAt" : "dateTime dateTime" ,
+          "accessedAt" : "dateTime dateTime" ,
+          "scheduledFor" : "dateTime dateTime" ,
+          "depth" : "RequestDepth RequestDepth"
+        }
+      ] ,
+      "size" : {
+      } ,
+      "name" : "string string" ,
+      "description" : "string string" ,
+      "permissions" : "InstancePermissions InstancePermissions" ,
+      "folderId" : "string string" ,
+      "sourceTemplateId" : "string string" ,
+      "createdBy" : "string string" ,
+      "createdAt" : "dateTime dateTime" ,
+      "updatedBy" : "string string" ,
+      "updatedAt" : "dateTime dateTime" ,
+      "accessedAt" : "dateTime dateTime" ,
+      "scheduledFor" : "dateTime dateTime" ,
+      "depth" : "RequestDepth RequestDepth"
+    }
+  ] ,
+  "dynamicContents" : [
+    {
+      "defaultContentSection" : {
+        "contentHtml" : "undefined" ,
+        "contentText" : "undefined" ,
+        "scope" : "global" ,
+        "forms" : [
+          {
+            "htmlName" : "undefined" ,
+            "processingType" : "undefined" ,
+            "emailAddressFormFieldId" : "undefined" ,
+            "submitFailedLandingPageId" : "4" ,
+            "size" : {
+            } ,
+            "html" : "undefined" ,
+            "style" : "undefined" ,
+            "elements" : [
+              {
+                "instructions" : "" ,
+                "style" : "undefined" ,
+                "name" : "string string" ,
+                "description" : "string string" ,
+                "permissions" : "InstancePermissions InstancePermissions" ,
+                "folderId" : "string string" ,
+                "sourceTemplateId" : "string string" ,
+                "createdBy" : "string string" ,
+                "createdAt" : "dateTime dateTime" ,
+                "updatedBy" : "string string" ,
+                "updatedAt" : "dateTime dateTime" ,
+                "accessedAt" : "dateTime dateTime" ,
+                "scheduledFor" : "dateTime dateTime" ,
+                "depth" : "RequestDepth RequestDepth"
+              }
+            ] ,
+            "processingSteps" : [
+              {
+                "execute" : "undefined" ,
+                "conditionalType" : "undefined" ,
+                "conditionalFieldId" : "12" ,
+                "conditionalComparator" : "undefined" ,
+                "isConditionallyNegated" : "true" ,
+                "name" : "string string" ,
+                "description" : "string string" ,
+                "permissions" : "InstancePermissions InstancePermissions" ,
+                "folderId" : "string string" ,
+                "sourceTemplateId" : "string string" ,
+                "createdBy" : "string string" ,
+                "createdAt" : "dateTime dateTime" ,
+                "updatedBy" : "string string" ,
+                "updatedAt" : "dateTime dateTime" ,
+                "accessedAt" : "dateTime dateTime" ,
+                "scheduledFor" : "dateTime dateTime" ,
+                "depth" : "RequestDepth RequestDepth"
+              }
+            ] ,
+            "name" : "string string" ,
+            "description" : "string string" ,
+            "permissions" : "InstancePermissions InstancePermissions" ,
+            "folderId" : "string string" ,
+            "sourceTemplateId" : "string string" ,
+            "createdBy" : "string string" ,
+            "createdAt" : "dateTime dateTime" ,
+            "updatedBy" : "string string" ,
+            "updatedAt" : "dateTime dateTime" ,
+            "accessedAt" : "dateTime dateTime" ,
+            "scheduledFor" : "dateTime dateTime" ,
+            "depth" : "RequestDepth RequestDepth"
+          }
+        ] ,
+        "images" : [
+          {
+            "fullImageUrl" : "/EloquaImages/clients/ORSE/{ffaa51ba-220e-43da-994f-197338be7d35}_sample.jpg" ,
+            "size" : {
+            } ,
+            "thumbnailUrl" : "/EloquaImages/clients/ORSE/imagethumbnails/{ffaa51ba-220e-43da-994f-197338be7d35}_sample.jpg" ,
+            "name" : "string string" ,
+            "description" : "string string" ,
+            "permissions" : "InstancePermissions InstancePermissions" ,
+            "folderId" : "string string" ,
+            "sourceTemplateId" : "string string" ,
+            "createdBy" : "string string" ,
+            "createdAt" : "dateTime dateTime" ,
+            "updatedBy" : "string string" ,
+            "updatedAt" : "dateTime dateTime" ,
+            "accessedAt" : "dateTime dateTime" ,
+            "scheduledFor" : "dateTime dateTime" ,
+            "depth" : "RequestDepth RequestDepth"
+          }
+        ] ,
+        "hyperlinks" : [
+          {
+            "href" : "undefined" ,
+            "hyperlinkType" : "undefined" ,
+            "referencedEntityId" : "undefined" ,
+            "name" : "string string" ,
+            "description" : "string string" ,
+            "permissions" : "InstancePermissions InstancePermissions" ,
+            "folderId" : "string string" ,
+            "sourceTemplateId" : "string string" ,
+            "createdBy" : "string string" ,
+            "createdAt" : "dateTime dateTime" ,
+            "updatedBy" : "string string" ,
+            "updatedAt" : "dateTime dateTime" ,
+            "accessedAt" : "dateTime dateTime" ,
+            "scheduledFor" : "dateTime dateTime" ,
+            "depth" : "RequestDepth RequestDepth"
+          }
+        ] ,
+        "size" : {
+        } ,
+        "name" : "string string" ,
+        "description" : "string string" ,
+        "permissions" : "InstancePermissions InstancePermissions" ,
+        "folderId" : "string string" ,
+        "sourceTemplateId" : "string string" ,
+        "createdBy" : "string string" ,
+        "createdAt" : "dateTime dateTime" ,
+        "updatedBy" : "string string" ,
+        "updatedAt" : "dateTime dateTime" ,
+        "accessedAt" : "dateTime dateTime" ,
+        "scheduledFor" : "dateTime dateTime" ,
+        "depth" : "RequestDepth RequestDepth"
+      } ,
+      "rules" : [
+        {
+          "id" : "undefined" ,
+          "depth" : "minimal" ,
+          "contentSection" : {
+            "contentHtml" : "undefined" ,
+            "contentText" : "undefined" ,
+            "scope" : "global" ,
+            "forms" : [
+              {
+                "htmlName" : "undefined" ,
+                "processingType" : "undefined" ,
+                "emailAddressFormFieldId" : "undefined" ,
+                "submitFailedLandingPageId" : "4" ,
+                "size" : {
+                } ,
+                "html" : "undefined" ,
+                "style" : "undefined" ,
+                "elements" : [
+                  {
+                    "instructions" : "" ,
+                    "style" : "undefined" ,
+                    "name" : "string string" ,
+                    "description" : "string string" ,
+                    "permissions" : "InstancePermissions InstancePermissions" ,
+                    "folderId" : "string string" ,
+                    "sourceTemplateId" : "string string" ,
+                    "createdBy" : "string string" ,
+                    "createdAt" : "dateTime dateTime" ,
+                    "updatedBy" : "string string" ,
+                    "updatedAt" : "dateTime dateTime" ,
+                    "accessedAt" : "dateTime dateTime" ,
+                    "scheduledFor" : "dateTime dateTime" ,
+                    "depth" : "RequestDepth RequestDepth"
+                  }
+                ] ,
+                "processingSteps" : [
+                  {
+                    "execute" : "undefined" ,
+                    "conditionalType" : "undefined" ,
+                    "conditionalFieldId" : "12" ,
+                    "conditionalComparator" : "undefined" ,
+                    "isConditionallyNegated" : "true" ,
+                    "name" : "string string" ,
+                    "description" : "string string" ,
+                    "permissions" : "InstancePermissions InstancePermissions" ,
+                    "folderId" : "string string" ,
+                    "sourceTemplateId" : "string string" ,
+                    "createdBy" : "string string" ,
+                    "createdAt" : "dateTime dateTime" ,
+                    "updatedBy" : "string string" ,
+                    "updatedAt" : "dateTime dateTime" ,
+                    "accessedAt" : "dateTime dateTime" ,
+                    "scheduledFor" : "dateTime dateTime" ,
+                    "depth" : "RequestDepth RequestDepth"
+                  }
+                ] ,
+                "name" : "string string" ,
+                "description" : "string string" ,
+                "permissions" : "InstancePermissions InstancePermissions" ,
+                "folderId" : "string string" ,
+                "sourceTemplateId" : "string string" ,
+                "createdBy" : "string string" ,
+                "createdAt" : "dateTime dateTime" ,
+                "updatedBy" : "string string" ,
+                "updatedAt" : "dateTime dateTime" ,
+                "accessedAt" : "dateTime dateTime" ,
+                "scheduledFor" : "dateTime dateTime" ,
+                "depth" : "RequestDepth RequestDepth"
+              }
+            ] ,
+            "images" : [
+              {
+                "fullImageUrl" : "/EloquaImages/clients/ORSE/{ffaa51ba-220e-43da-994f-197338be7d35}_sample.jpg" ,
+                "size" : {
+                } ,
+                "thumbnailUrl" : "/EloquaImages/clients/ORSE/imagethumbnails/{ffaa51ba-220e-43da-994f-197338be7d35}_sample.jpg" ,
+                "name" : "string string" ,
+                "description" : "string string" ,
+                "permissions" : "InstancePermissions InstancePermissions" ,
+                "folderId" : "string string" ,
+                "sourceTemplateId" : "string string" ,
+                "createdBy" : "string string" ,
+                "createdAt" : "dateTime dateTime" ,
+                "updatedBy" : "string string" ,
+                "updatedAt" : "dateTime dateTime" ,
+                "accessedAt" : "dateTime dateTime" ,
+                "scheduledFor" : "dateTime dateTime" ,
+                "depth" : "RequestDepth RequestDepth"
+              }
+            ] ,
+            "hyperlinks" : [
+              {
+                "href" : "undefined" ,
+                "hyperlinkType" : "undefined" ,
+                "referencedEntityId" : "undefined" ,
+                "name" : "string string" ,
+                "description" : "string string" ,
+                "permissions" : "InstancePermissions InstancePermissions" ,
+                "folderId" : "string string" ,
+                "sourceTemplateId" : "string string" ,
+                "createdBy" : "string string" ,
+                "createdAt" : "dateTime dateTime" ,
+                "updatedBy" : "string string" ,
+                "updatedAt" : "dateTime dateTime" ,
+                "accessedAt" : "dateTime dateTime" ,
+                "scheduledFor" : "dateTime dateTime" ,
+                "depth" : "RequestDepth RequestDepth"
+              }
+            ] ,
+            "size" : {
+            } ,
+            "name" : "string string" ,
+            "description" : "string string" ,
+            "permissions" : "InstancePermissions InstancePermissions" ,
+            "folderId" : "string string" ,
+            "sourceTemplateId" : "string string" ,
+            "createdBy" : "string string" ,
+            "createdAt" : "dateTime dateTime" ,
+            "updatedBy" : "string string" ,
+            "updatedAt" : "dateTime dateTime" ,
+            "accessedAt" : "dateTime dateTime" ,
+            "scheduledFor" : "dateTime dateTime" ,
+            "depth" : "RequestDepth RequestDepth"
+          } ,
+          "criteria" : [
+            {
+              "name" : "string string" ,
+              "description" : "string string" ,
+              "permissions" : "InstancePermissions InstancePermissions" ,
+              "folderId" : "string string" ,
+              "sourceTemplateId" : "string string" ,
+              "createdBy" : "string string" ,
+              "createdAt" : "dateTime dateTime" ,
+              "updatedBy" : "string string" ,
+              "updatedAt" : "dateTime dateTime" ,
+              "accessedAt" : "dateTime dateTime" ,
+              "scheduledFor" : "dateTime dateTime" ,
+              "depth" : "RequestDepth RequestDepth"
+            }
+          ] ,
+          "statement" : "undefined"
+        }
+      ] ,
+      "name" : "string string" ,
+      "description" : "string string" ,
+      "permissions" : "InstancePermissions InstancePermissions" ,
+      "folderId" : "string string" ,
+      "sourceTemplateId" : "string string" ,
+      "createdBy" : "string string" ,
+      "createdAt" : "dateTime dateTime" ,
+      "updatedBy" : "string string" ,
+      "updatedAt" : "dateTime dateTime" ,
+      "accessedAt" : "dateTime dateTime" ,
+      "scheduledFor" : "dateTime dateTime" ,
+      "depth" : "RequestDepth RequestDepth"
+    }
+  ] ,
+  "landingPages" : [
+    {
+      "deployedAt" : "undefined" ,
+      "micrositeId" : "3" ,
+      "refreshedAt" : "1292536642" ,
+      "htmlContent" : {
+      } ,
+      "layout" : "undefined" ,
+      "style" : "undefined" ,
+      "forms" : [
+        {
+          "htmlName" : "undefined" ,
+          "processingType" : "undefined" ,
+          "emailAddressFormFieldId" : "undefined" ,
+          "submitFailedLandingPageId" : "4" ,
+          "size" : {
+          } ,
+          "html" : "undefined" ,
+          "style" : "undefined" ,
+          "elements" : [
+            {
+              "instructions" : "" ,
+              "style" : "undefined" ,
+              "name" : "string string" ,
+              "description" : "string string" ,
+              "permissions" : "InstancePermissions InstancePermissions" ,
+              "folderId" : "string string" ,
+              "sourceTemplateId" : "string string" ,
+              "createdBy" : "string string" ,
+              "createdAt" : "dateTime dateTime" ,
+              "updatedBy" : "string string" ,
+              "updatedAt" : "dateTime dateTime" ,
+              "accessedAt" : "dateTime dateTime" ,
+              "scheduledFor" : "dateTime dateTime" ,
+              "depth" : "RequestDepth RequestDepth"
+            }
+          ] ,
+          "processingSteps" : [
+            {
+              "execute" : "undefined" ,
+              "conditionalType" : "undefined" ,
+              "conditionalFieldId" : "12" ,
+              "conditionalComparator" : "undefined" ,
+              "isConditionallyNegated" : "true" ,
+              "name" : "string string" ,
+              "description" : "string string" ,
+              "permissions" : "InstancePermissions InstancePermissions" ,
+              "folderId" : "string string" ,
+              "sourceTemplateId" : "string string" ,
+              "createdBy" : "string string" ,
+              "createdAt" : "dateTime dateTime" ,
+              "updatedBy" : "string string" ,
+              "updatedAt" : "dateTime dateTime" ,
+              "accessedAt" : "dateTime dateTime" ,
+              "scheduledFor" : "dateTime dateTime" ,
+              "depth" : "RequestDepth RequestDepth"
+            }
+          ] ,
+          "name" : "string string" ,
+          "description" : "string string" ,
+          "permissions" : "InstancePermissions InstancePermissions" ,
+          "folderId" : "string string" ,
+          "sourceTemplateId" : "string string" ,
+          "createdBy" : "string string" ,
+          "createdAt" : "dateTime dateTime" ,
+          "updatedBy" : "string string" ,
+          "updatedAt" : "dateTime dateTime" ,
+          "accessedAt" : "dateTime dateTime" ,
+          "scheduledFor" : "dateTime dateTime" ,
+          "depth" : "RequestDepth RequestDepth"
+        }
+      ] ,
+      "images" : [
+        {
+          "fullImageUrl" : "/EloquaImages/clients/ORSE/{ffaa51ba-220e-43da-994f-197338be7d35}_sample.jpg" ,
+          "size" : {
+          } ,
+          "thumbnailUrl" : "/EloquaImages/clients/ORSE/imagethumbnails/{ffaa51ba-220e-43da-994f-197338be7d35}_sample.jpg" ,
+          "name" : "string string" ,
+          "description" : "string string" ,
+          "permissions" : "InstancePermissions InstancePermissions" ,
+          "folderId" : "string string" ,
+          "sourceTemplateId" : "string string" ,
+          "createdBy" : "string string" ,
+          "createdAt" : "dateTime dateTime" ,
+          "updatedBy" : "string string" ,
+          "updatedAt" : "dateTime dateTime" ,
+          "accessedAt" : "dateTime dateTime" ,
+          "scheduledFor" : "dateTime dateTime" ,
+          "depth" : "RequestDepth RequestDepth"
+        }
+      ] ,
+      "hyperlinks" : [
+        {
+          "href" : "undefined" ,
+          "hyperlinkType" : "undefined" ,
+          "referencedEntityId" : "undefined" ,
+          "name" : "string string" ,
+          "description" : "string string" ,
+          "permissions" : "InstancePermissions InstancePermissions" ,
+          "folderId" : "string string" ,
+          "sourceTemplateId" : "string string" ,
+          "createdBy" : "string string" ,
+          "createdAt" : "dateTime dateTime" ,
+          "updatedBy" : "string string" ,
+          "updatedAt" : "dateTime dateTime" ,
+          "accessedAt" : "dateTime dateTime" ,
+          "scheduledFor" : "dateTime dateTime" ,
+          "depth" : "RequestDepth RequestDepth"
+        }
+      ] ,
+      "contentSections" : [
+        {
+          "contentHtml" : "undefined" ,
+          "contentText" : "undefined" ,
+          "scope" : "global" ,
+          "forms" : [
+            {
+              "htmlName" : "undefined" ,
+              "processingType" : "undefined" ,
+              "emailAddressFormFieldId" : "undefined" ,
+              "submitFailedLandingPageId" : "4" ,
+              "size" : {
+              } ,
+              "html" : "undefined" ,
+              "style" : "undefined" ,
+              "elements" : [
+                {
+                  "instructions" : "" ,
+                  "style" : "undefined" ,
+                  "name" : "string string" ,
+                  "description" : "string string" ,
+                  "permissions" : "InstancePermissions InstancePermissions" ,
+                  "folderId" : "string string" ,
+                  "sourceTemplateId" : "string string" ,
+                  "createdBy" : "string string" ,
+                  "createdAt" : "dateTime dateTime" ,
+                  "updatedBy" : "string string" ,
+                  "updatedAt" : "dateTime dateTime" ,
+                  "accessedAt" : "dateTime dateTime" ,
+                  "scheduledFor" : "dateTime dateTime" ,
+                  "depth" : "RequestDepth RequestDepth"
+                }
+              ] ,
+              "processingSteps" : [
+                {
+                  "execute" : "undefined" ,
+                  "conditionalType" : "undefined" ,
+                  "conditionalFieldId" : "12" ,
+                  "conditionalComparator" : "undefined" ,
+                  "isConditionallyNegated" : "true" ,
+                  "name" : "string string" ,
+                  "description" : "string string" ,
+                  "permissions" : "InstancePermissions InstancePermissions" ,
+                  "folderId" : "string string" ,
+                  "sourceTemplateId" : "string string" ,
+                  "createdBy" : "string string" ,
+                  "createdAt" : "dateTime dateTime" ,
+                  "updatedBy" : "string string" ,
+                  "updatedAt" : "dateTime dateTime" ,
+                  "accessedAt" : "dateTime dateTime" ,
+                  "scheduledFor" : "dateTime dateTime" ,
+                  "depth" : "RequestDepth RequestDepth"
+                }
+              ] ,
+              "name" : "string string" ,
+              "description" : "string string" ,
+              "permissions" : "InstancePermissions InstancePermissions" ,
+              "folderId" : "string string" ,
+              "sourceTemplateId" : "string string" ,
+              "createdBy" : "string string" ,
+              "createdAt" : "dateTime dateTime" ,
+              "updatedBy" : "string string" ,
+              "updatedAt" : "dateTime dateTime" ,
+              "accessedAt" : "dateTime dateTime" ,
+              "scheduledFor" : "dateTime dateTime" ,
+              "depth" : "RequestDepth RequestDepth"
+            }
+          ] ,
+          "images" : [
+            {
+              "fullImageUrl" : "/EloquaImages/clients/ORSE/{ffaa51ba-220e-43da-994f-197338be7d35}_sample.jpg" ,
+              "size" : {
+              } ,
+              "thumbnailUrl" : "/EloquaImages/clients/ORSE/imagethumbnails/{ffaa51ba-220e-43da-994f-197338be7d35}_sample.jpg" ,
+              "name" : "string string" ,
+              "description" : "string string" ,
+              "permissions" : "InstancePermissions InstancePermissions" ,
+              "folderId" : "string string" ,
+              "sourceTemplateId" : "string string" ,
+              "createdBy" : "string string" ,
+              "createdAt" : "dateTime dateTime" ,
+              "updatedBy" : "string string" ,
+              "updatedAt" : "dateTime dateTime" ,
+              "accessedAt" : "dateTime dateTime" ,
+              "scheduledFor" : "dateTime dateTime" ,
+              "depth" : "RequestDepth RequestDepth"
+            }
+          ] ,
+          "hyperlinks" : [
+            {
+              "href" : "undefined" ,
+              "hyperlinkType" : "undefined" ,
+              "referencedEntityId" : "undefined" ,
+              "name" : "string string" ,
+              "description" : "string string" ,
+              "permissions" : "InstancePermissions InstancePermissions" ,
+              "folderId" : "string string" ,
+              "sourceTemplateId" : "string string" ,
+              "createdBy" : "string string" ,
+              "createdAt" : "dateTime dateTime" ,
+              "updatedBy" : "string string" ,
+              "updatedAt" : "dateTime dateTime" ,
+              "accessedAt" : "dateTime dateTime" ,
+              "scheduledFor" : "dateTime dateTime" ,
+              "depth" : "RequestDepth RequestDepth"
+            }
+          ] ,
+          "size" : {
+          } ,
+          "name" : "string string" ,
+          "description" : "string string" ,
+          "permissions" : "InstancePermissions InstancePermissions" ,
+          "folderId" : "string string" ,
+          "sourceTemplateId" : "string string" ,
+          "createdBy" : "string string" ,
+          "createdAt" : "dateTime dateTime" ,
+          "updatedBy" : "string string" ,
+          "updatedAt" : "dateTime dateTime" ,
+          "accessedAt" : "dateTime dateTime" ,
+          "scheduledFor" : "dateTime dateTime" ,
+          "depth" : "RequestDepth RequestDepth"
+        }
+      ] ,
+      "dynamicContents" : [
+        {
+          "defaultContentSection" : {
+            "contentHtml" : "undefined" ,
+            "contentText" : "undefined" ,
+            "scope" : "global" ,
+            "forms" : [
+              {
+                "htmlName" : "undefined" ,
+                "processingType" : "undefined" ,
+                "emailAddressFormFieldId" : "undefined" ,
+                "submitFailedLandingPageId" : "4" ,
+                "size" : {
+                } ,
+                "html" : "undefined" ,
+                "style" : "undefined" ,
+                "elements" : [
+                  {
+                    "instructions" : "" ,
+                    "style" : "undefined" ,
+                    "name" : "string string" ,
+                    "description" : "string string" ,
+                    "permissions" : "InstancePermissions InstancePermissions" ,
+                    "folderId" : "string string" ,
+                    "sourceTemplateId" : "string string" ,
+                    "createdBy" : "string string" ,
+                    "createdAt" : "dateTime dateTime" ,
+                    "updatedBy" : "string string" ,
+                    "updatedAt" : "dateTime dateTime" ,
+                    "accessedAt" : "dateTime dateTime" ,
+                    "scheduledFor" : "dateTime dateTime" ,
+                    "depth" : "RequestDepth RequestDepth"
+                  }
+                ] ,
+                "processingSteps" : [
+                  {
+                    "execute" : "undefined" ,
+                    "conditionalType" : "undefined" ,
+                    "conditionalFieldId" : "12" ,
+                    "conditionalComparator" : "undefined" ,
+                    "isConditionallyNegated" : "true" ,
+                    "name" : "string string" ,
+                    "description" : "string string" ,
+                    "permissions" : "InstancePermissions InstancePermissions" ,
+                    "folderId" : "string string" ,
+                    "sourceTemplateId" : "string string" ,
+                    "createdBy" : "string string" ,
+                    "createdAt" : "dateTime dateTime" ,
+                    "updatedBy" : "string string" ,
+                    "updatedAt" : "dateTime dateTime" ,
+                    "accessedAt" : "dateTime dateTime" ,
+                    "scheduledFor" : "dateTime dateTime" ,
+                    "depth" : "RequestDepth RequestDepth"
+                  }
+                ] ,
+                "name" : "string string" ,
+                "description" : "string string" ,
+                "permissions" : "InstancePermissions InstancePermissions" ,
+                "folderId" : "string string" ,
+                "sourceTemplateId" : "string string" ,
+                "createdBy" : "string string" ,
+                "createdAt" : "dateTime dateTime" ,
+                "updatedBy" : "string string" ,
+                "updatedAt" : "dateTime dateTime" ,
+                "accessedAt" : "dateTime dateTime" ,
+                "scheduledFor" : "dateTime dateTime" ,
+                "depth" : "RequestDepth RequestDepth"
+              }
+            ] ,
+            "images" : [
+              {
+                "fullImageUrl" : "/EloquaImages/clients/ORSE/{ffaa51ba-220e-43da-994f-197338be7d35}_sample.jpg" ,
+                "size" : {
+                } ,
+                "thumbnailUrl" : "/EloquaImages/clients/ORSE/imagethumbnails/{ffaa51ba-220e-43da-994f-197338be7d35}_sample.jpg" ,
+                "name" : "string string" ,
+                "description" : "string string" ,
+                "permissions" : "InstancePermissions InstancePermissions" ,
+                "folderId" : "string string" ,
+                "sourceTemplateId" : "string string" ,
+                "createdBy" : "string string" ,
+                "createdAt" : "dateTime dateTime" ,
+                "updatedBy" : "string string" ,
+                "updatedAt" : "dateTime dateTime" ,
+                "accessedAt" : "dateTime dateTime" ,
+                "scheduledFor" : "dateTime dateTime" ,
+                "depth" : "RequestDepth RequestDepth"
+              }
+            ] ,
+            "hyperlinks" : [
+              {
+                "href" : "undefined" ,
+                "hyperlinkType" : "undefined" ,
+                "referencedEntityId" : "undefined" ,
+                "name" : "string string" ,
+                "description" : "string string" ,
+                "permissions" : "InstancePermissions InstancePermissions" ,
+                "folderId" : "string string" ,
+                "sourceTemplateId" : "string string" ,
+                "createdBy" : "string string" ,
+                "createdAt" : "dateTime dateTime" ,
+                "updatedBy" : "string string" ,
+                "updatedAt" : "dateTime dateTime" ,
+                "accessedAt" : "dateTime dateTime" ,
+                "scheduledFor" : "dateTime dateTime" ,
+                "depth" : "RequestDepth RequestDepth"
+              }
+            ] ,
+            "size" : {
+            } ,
+            "name" : "string string" ,
+            "description" : "string string" ,
+            "permissions" : "InstancePermissions InstancePermissions" ,
+            "folderId" : "string string" ,
+            "sourceTemplateId" : "string string" ,
+            "createdBy" : "string string" ,
+            "createdAt" : "dateTime dateTime" ,
+            "updatedBy" : "string string" ,
+            "updatedAt" : "dateTime dateTime" ,
+            "accessedAt" : "dateTime dateTime" ,
+            "scheduledFor" : "dateTime dateTime" ,
+            "depth" : "RequestDepth RequestDepth"
+          } ,
+          "rules" : [
+            {
+              "id" : "undefined" ,
+              "depth" : "minimal" ,
+              "contentSection" : {
+                "contentHtml" : "undefined" ,
+                "contentText" : "undefined" ,
+                "scope" : "global" ,
+                "forms" : [
+                  {
+                    "htmlName" : "undefined" ,
+                    "processingType" : "undefined" ,
+                    "emailAddressFormFieldId" : "undefined" ,
+                    "submitFailedLandingPageId" : "4" ,
+                    "size" : {
+                    } ,
+                    "html" : "undefined" ,
+                    "style" : "undefined" ,
+                    "elements" : [
+                      {
+                        "instructions" : "" ,
+                        "style" : "undefined" ,
+                        "name" : "string string" ,
+                        "description" : "string string" ,
+                        "permissions" : "InstancePermissions InstancePermissions" ,
+                        "folderId" : "string string" ,
+                        "sourceTemplateId" : "string string" ,
+                        "createdBy" : "string string" ,
+                        "createdAt" : "dateTime dateTime" ,
+                        "updatedBy" : "string string" ,
+                        "updatedAt" : "dateTime dateTime" ,
+                        "accessedAt" : "dateTime dateTime" ,
+                        "scheduledFor" : "dateTime dateTime" ,
+                        "depth" : "RequestDepth RequestDepth"
+                      }
+                    ] ,
+                    "processingSteps" : [
+                      {
+                        "execute" : "undefined" ,
+                        "conditionalType" : "undefined" ,
+                        "conditionalFieldId" : "12" ,
+                        "conditionalComparator" : "undefined" ,
+                        "isConditionallyNegated" : "true" ,
+                        "name" : "string string" ,
+                        "description" : "string string" ,
+                        "permissions" : "InstancePermissions InstancePermissions" ,
+                        "folderId" : "string string" ,
+                        "sourceTemplateId" : "string string" ,
+                        "createdBy" : "string string" ,
+                        "createdAt" : "dateTime dateTime" ,
+                        "updatedBy" : "string string" ,
+                        "updatedAt" : "dateTime dateTime" ,
+                        "accessedAt" : "dateTime dateTime" ,
+                        "scheduledFor" : "dateTime dateTime" ,
+                        "depth" : "RequestDepth RequestDepth"
+                      }
+                    ] ,
+                    "name" : "string string" ,
+                    "description" : "string string" ,
+                    "permissions" : "InstancePermissions InstancePermissions" ,
+                    "folderId" : "string string" ,
+                    "sourceTemplateId" : "string string" ,
+                    "createdBy" : "string string" ,
+                    "createdAt" : "dateTime dateTime" ,
+                    "updatedBy" : "string string" ,
+                    "updatedAt" : "dateTime dateTime" ,
+                    "accessedAt" : "dateTime dateTime" ,
+                    "scheduledFor" : "dateTime dateTime" ,
+                    "depth" : "RequestDepth RequestDepth"
+                  }
+                ] ,
+                "images" : [
+                  {
+                    "fullImageUrl" : "/EloquaImages/clients/ORSE/{ffaa51ba-220e-43da-994f-197338be7d35}_sample.jpg" ,
+                    "size" : {
+                    } ,
+                    "thumbnailUrl" : "/EloquaImages/clients/ORSE/imagethumbnails/{ffaa51ba-220e-43da-994f-197338be7d35}_sample.jpg" ,
+                    "name" : "string string" ,
+                    "description" : "string string" ,
+                    "permissions" : "InstancePermissions InstancePermissions" ,
+                    "folderId" : "string string" ,
+                    "sourceTemplateId" : "string string" ,
+                    "createdBy" : "string string" ,
+                    "createdAt" : "dateTime dateTime" ,
+                    "updatedBy" : "string string" ,
+                    "updatedAt" : "dateTime dateTime" ,
+                    "accessedAt" : "dateTime dateTime" ,
+                    "scheduledFor" : "dateTime dateTime" ,
+                    "depth" : "RequestDepth RequestDepth"
+                  }
+                ] ,
+                "hyperlinks" : [
+                  {
+                    "href" : "undefined" ,
+                    "hyperlinkType" : "undefined" ,
+                    "referencedEntityId" : "undefined" ,
+                    "name" : "string string" ,
+                    "description" : "string string" ,
+                    "permissions" : "InstancePermissions InstancePermissions" ,
+                    "folderId" : "string string" ,
+                    "sourceTemplateId" : "string string" ,
+                    "createdBy" : "string string" ,
+                    "createdAt" : "dateTime dateTime" ,
+                    "updatedBy" : "string string" ,
+                    "updatedAt" : "dateTime dateTime" ,
+                    "accessedAt" : "dateTime dateTime" ,
+                    "scheduledFor" : "dateTime dateTime" ,
+                    "depth" : "RequestDepth RequestDepth"
+                  }
+                ] ,
+                "size" : {
+                } ,
+                "name" : "string string" ,
+                "description" : "string string" ,
+                "permissions" : "InstancePermissions InstancePermissions" ,
+                "folderId" : "string string" ,
+                "sourceTemplateId" : "string string" ,
+                "createdBy" : "string string" ,
+                "createdAt" : "dateTime dateTime" ,
+                "updatedBy" : "string string" ,
+                "updatedAt" : "dateTime dateTime" ,
+                "accessedAt" : "dateTime dateTime" ,
+                "scheduledFor" : "dateTime dateTime" ,
+                "depth" : "RequestDepth RequestDepth"
+              } ,
+              "criteria" : [
+                {
+                  "name" : "string string" ,
+                  "description" : "string string" ,
+                  "permissions" : "InstancePermissions InstancePermissions" ,
+                  "folderId" : "string string" ,
+                  "sourceTemplateId" : "string string" ,
+                  "createdBy" : "string string" ,
+                  "createdAt" : "dateTime dateTime" ,
+                  "updatedBy" : "string string" ,
+                  "updatedAt" : "dateTime dateTime" ,
+                  "accessedAt" : "dateTime dateTime" ,
+                  "scheduledFor" : "dateTime dateTime" ,
+                  "depth" : "RequestDepth RequestDepth"
+                }
+              ] ,
+              "statement" : "undefined"
+            }
+          ] ,
+          "name" : "string string" ,
+          "description" : "string string" ,
+          "permissions" : "InstancePermissions InstancePermissions" ,
+          "folderId" : "string string" ,
+          "sourceTemplateId" : "string string" ,
+          "createdBy" : "string string" ,
+          "createdAt" : "dateTime dateTime" ,
+          "updatedBy" : "string string" ,
+          "updatedAt" : "dateTime dateTime" ,
+          "accessedAt" : "dateTime dateTime" ,
+          "scheduledFor" : "dateTime dateTime" ,
+          "depth" : "RequestDepth RequestDepth"
+        }
+      ] ,
+      "files" : [
+        {
+          "fileName" : "undefined" ,
+          "link" : "mktgchallenge.eloqua.com" ,
+          "trackedLink" : "undefined" ,
+          "name" : "string string" ,
+          "description" : "string string" ,
+          "permissions" : "InstancePermissions InstancePermissions" ,
+          "folderId" : "string string" ,
+          "sourceTemplateId" : "string string" ,
+          "createdBy" : "string string" ,
+          "createdAt" : "dateTime dateTime" ,
+          "updatedBy" : "string string" ,
+          "updatedAt" : "dateTime dateTime" ,
+          "accessedAt" : "dateTime dateTime" ,
+          "scheduledFor" : "dateTime dateTime" ,
+          "depth" : "RequestDepth RequestDepth"
+        }
+      ] ,
+      "autoRedirectUrl" : "undefined" ,
+      "autoRedirectWaitFor" : "undefined" ,
+      "autoCloseWaitFor" : "undefined" ,
+      "relativePath" : "undefined" ,
+      "name" : "undefined" ,
+      "description" : "Eloqua" ,
+      "permissions" : "undefined" ,
+      "folderId" : "undefined" ,
+      "sourceTemplateId" : "undefined" ,
+      "createdBy" : "undefined" ,
+      "createdAt" : "undefined" ,
+      "updatedBy" : "undefined" ,
+      "updatedAt" : "undefined" ,
+      "accessedAt" : "undefined" ,
+      "scheduledFor" : "undefined" ,
+      "depth" : "minimal"
+    }
+  ] ,
+  "files" : [
+    {
+      "fileName" : "undefined" ,
+      "link" : "mktgchallenge.eloqua.com" ,
+      "trackedLink" : "undefined" ,
+      "name" : "string string" ,
+      "description" : "string string" ,
+      "permissions" : "InstancePermissions InstancePermissions" ,
+      "folderId" : "string string" ,
+      "sourceTemplateId" : "string string" ,
+      "createdBy" : "string string" ,
+      "createdAt" : "dateTime dateTime" ,
+      "updatedBy" : "string string" ,
+      "updatedAt" : "dateTime dateTime" ,
+      "accessedAt" : "dateTime dateTime" ,
+      "scheduledFor" : "dateTime dateTime" ,
+      "depth" : "RequestDepth RequestDepth"
+    }
+  ] ,
+  "emailHeaderId" : "undefined" ,
+  "emailFooterId" : "undefined" ,
+  "emailGroupId" : "undefined" ,
+  "encodingId" : "undefined" ,
+  "fieldMerges" : [
+    {
+      "syntax" : "undefined" ,
+      "defaultValue" : "undefined" ,
+      "contactFieldId" : "undefined" ,
+      "accountFieldId" : "undefined" ,
+      "eventId" : "undefined" ,
+      "eventFieldId" : "undefined" ,
+      "eventSessionFieldId" : "undefined" ,
+      "mergeType" : "undefined" ,
+      "name" : "undefined" ,
+      "description" : "Eloqua" ,
+      "permissions" : "undefined" ,
+      "folderId" : "undefined" ,
+      "sourceTemplateId" : "undefined" ,
+      "createdBy" : "undefined" ,
+      "createdAt" : "undefined" ,
+      "updatedBy" : "undefined" ,
+      "updatedAt" : "undefined" ,
+      "accessedAt" : "undefined" ,
+      "scheduledFor" : "undefined" ,
+      "depth" : "minimal"
+    }
+  ] ,
+  "name" : "undefined" ,
+  "description" : "Eloqua" ,
+  "permissions" : "undefined" ,
+  "folderId" : "undefined" ,
+  "sourceTemplateId" : "undefined" ,
+  "createdBy" : "undefined" ,
+  "createdAt" : "undefined" ,
+  "updatedBy" : "undefined" ,
+  "updatedAt" : "undefined" ,
+  "accessedAt" : "undefined" ,
+  "scheduledFor" : "undefined" ,
+  "depth" : "minimal"
+}

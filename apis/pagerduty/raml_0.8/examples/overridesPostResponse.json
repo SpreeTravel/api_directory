@@ -1,0 +1,13 @@
+{
+	"override" : {
+		"end" : "2012-07-02T00:00:00-04:00" ,
+		"user" : {
+			"name" : "Aurelio Rice" ,
+			"email" : "aurelio.rice@acme.com" ,
+			"color" : "turquoise" ,
+			"id" : "PHLG109"
+		} ,
+		"id" : "PQ47DCP" ,
+		"start" : "2012-07-01T00:00:00-04:00"
+	}
+}

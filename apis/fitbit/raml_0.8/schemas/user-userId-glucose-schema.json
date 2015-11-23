@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+    	"hba1c": {
+    		"description": "HbA1c measurement; in the format X.X, either hba1c or tracker should be provided (or both).",
+    		"type": "number"
+    	},
+    	"tracker": {
+    		"description": "Glucose tracker name; predefined or custom tracker name (matches tracker name on the website, e.g. 'Afternoon')",
+    		"type": "string"
+    	},
+    	"glucose": {
+    		"description": "Glucose measurement; in the format X.X, required with tracker parameter, otherwise optional.",
+    		"type": "number"
+    	},
+    	"date": {
+    		"description": "Measurement date; in the format yyyy-MM-dd.",
+    		"type": "string"
+    	},
+    	"time": {
+    		"description": "Time of the measurement; hours and minutes in the format HH:mm.",
+    		"type": "string"
+    	}
+	}
+}

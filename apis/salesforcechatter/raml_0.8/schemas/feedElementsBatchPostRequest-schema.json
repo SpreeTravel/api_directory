@@ -1,0 +1,57 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "inputs" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "richInput" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "subjectId" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "body" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "messageSegments" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "object" ,
+                          "properties" : {
+                            "type" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "text" : {
+                              "type" : "string" ,
+                              "required" : false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                } ,
+                "feedElementType" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

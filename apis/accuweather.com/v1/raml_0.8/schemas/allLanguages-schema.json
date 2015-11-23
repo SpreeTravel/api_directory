@@ -1,0 +1,44 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : [
+    {
+      "type" : "object" ,
+      "properties" : {
+        "DisplayName" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "ID" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "ISO" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "LanguageType" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "LocalizedName" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "MicroSoftCode" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "MicroSoftName" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Name" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+<geonames>
+<observation>
+<observation>
+K05U 081620Z AUTO 00000KT 10SM CLR 12/M01 A3035 RMK AO1
+</observation>
+<observationTime>2014-04-08 16:20:00</observationTime>
+<stationName>EUREKA</stationName>
+<ICAO>K05U</ICAO>
+<countryCode/>
+<elevation>0</elevation>
+<lat>39.6</lat>
+<lng>-116.0</lng>
+<temperature>12</temperature>
+<dewPoint>-1</dewPoint>
+<humidity>40</humidity>
+<clouds>n/a</clouds>
+<weatherCondition>n/a</weatherCondition>
+<windDirection>0.0</windDirection>
+<windSpeed>00</windSpeed>
+</observation>
+<observation>
+<observation>
+KGOO 081620Z AUTO 15003KT 10SM CLR 19/03 A3020 RMK AO1
+</observation>
+<observationTime>2014-04-08 16:20:00</observationTime>
+<stationName>Nevada County Air Park</stationName>
+<ICAO>KGOO</ICAO>
+<countryCode/>
+<elevation>0</elevation>
+<lat>39.21666666666667</lat>
+<lng>-121.0</lng>
+<temperature>19</temperature>
+<dewPoint>3</dewPoint>
+<humidity>34</humidity>
+<clouds>n/a</clouds>
+<weatherCondition>n/a</weatherCondition>
+<windDirection>150.0</windDirection>
+<windSpeed>03</windSpeed>
+</observation>
+<observation>
+<observation>
+VGHS 081620Z 18008KT 3500 HZ SCT015 BKN100 29/24 Q1005 NOSIG
+</observation>
+<observationTime>2014-04-08 16:20:00</observationTime>
+<stationName>DHAKA</stationName>
+<ICAO>VGHS</ICAO>
+<countryCode/>
+<elevation>0</elevation>
+<lat>23.85</lat>
+<lng>90.4</lng>
+<temperature>29</temperature>
+<dewPoint>24</dewPoint>
+<humidity>74</humidity>
+<clouds code="SCT">scattered clouds</clouds>
+<weatherCondition>n/a</weatherCondition>
+<hectoPascAltimeter>1005.0</hectoPascAltimeter>
+<windDirection>180.0</windDirection>
+<windSpeed>08</windSpeed>
+</observation>
+<observation>
+<observation>
+KHWV 081618Z AUTO 20008KT 3/4SM BR OVC001 11/10 A2945 RMK AO2 T01060100 TSNO
+</observation>
+<observationTime>2014-04-08 16:18:00</observationTime>
+<stationName>SHIRLEY</stationName>
+<ICAO>KHWV</ICAO>
+<countryCode/>
+<elevation>0</elevation>
+<lat>40.81666666666667</lat>
+<lng>-72.86666666666666</lng>
+<temperature>10.6</temperature>
+<dewPoint>10</dewPoint>
+<humidity>96</humidity>
+<clouds code="OVC">overcast</clouds>
+<weatherCondition code="BR">mist</weatherCondition>
+<windDirection>200.0</windDirection>
+<windSpeed>08</windSpeed>
+</observation>
+<observation>
+<observation>
+K4I3 081616Z AUTO 26010KT 10SM CLR 11/04 A2969 RMK AO2
+</observation>
+<observationTime>2014-04-08 16:16:00</observationTime>
+<stationName>MT VERNON/KNOX</stationName>
+<ICAO>K4I3</ICAO>
+<countryCode/>
+<elevation>0</elevation>
+<lat>40.333333333333336</lat>
+<lng>-82.53333333333333</lng>
+<temperature>11</temperature>
+<dewPoint>4</dewPoint>
+<humidity>62</humidity>
+<clouds>n/a</clouds>
+<weatherCondition>n/a</weatherCondition>
+<windDirection>260.0</windDirection>
+<windSpeed>10</windSpeed>
+</observation>
+<observation>
+<observation>
+KBDU 081616Z AUTO 27009G16KT 10SM CLR 16/M05 A3020 RMK AO2
+</observation>
+<observationTime>2014-04-08 16:16:00</observationTime>
+<stationName>BOULDER MUNI</stationName>
+<ICAO>KBDU</ICAO>
+<countryCode/>
+<elevation>0</elevation>
+<lat>40.03333333333333</lat>
+<lng>-105.23333333333333</lng>
+<temperature>16</temperature>
+<dewPoint>-5</dewPoint>
+<humidity>23</humidity>
+<clouds>n/a</clouds>
+<weatherCondition>n/a</weatherCondition>
+<windDirection>270.0</windDirection>
+<windSpeed>09</windSpeed>
+</observation>
+<observation>
+<observation>
+KDLZ 081616Z AUTO 24010G14KT 10SM CLR 11/02 A2971 RMK AO2
+</observation>
+<observationTime>2014-04-08 16:16:00</observationTime>
+<stationName>Delaware Municipal Airport</stationName>
+<ICAO>KDLZ</ICAO>
+<countryCode/>
+<elevation>0</elevation>
+<lat>40.28333333333333</lat>
+<lng>-83.11666666666666</lng>
+<temperature>11</temperature>
+<dewPoint>2</dewPoint>
+<humidity>53</humidity>
+<clouds>n/a</clouds>
+<weatherCondition>n/a</weatherCondition>
+<windDirection>240.0</windDirection>
+<windSpeed>10</windSpeed>
+</observation>
+<observation>
+<observation>
+KEIK 081616Z AUTO 31004KT 10SM CLR 16/M05 A3020 RMK AO2 T01581048
+</observation>
+<observationTime>2014-04-08 16:16:00</observationTime>
+<stationName>ERIE MUNI</stationName>
+<ICAO>KEIK</ICAO>
+<countryCode/>
+<elevation>0</elevation>
+<lat>40.016666666666666</lat>
+<lng>-105.05</lng>
+<temperature>15.8</temperature>
+<dewPoint>-4.8</dewPoint>
+<humidity>23</humidity>
+<clouds>n/a</clouds>
+<weatherCondition>n/a</weatherCondition>
+<windDirection>310.0</windDirection>
+<windSpeed>04</windSpeed>
+</observation>
+<observation>
+<observation>
+K0A9 081615Z AUTO 31003G12KT 10SM OVC032 08/02 A2977 RMK
+</observation>
+<observationTime>2014-04-08 16:15:00</observationTime>
+<stationName>ELIZABETHTON</stationName>
+<ICAO>K0A9</ICAO>
+<countryCode/>
+<elevation>0</elevation>
+<lat>36.36666666666667</lat>
+<lng>-82.16666666666667</lng>
+<temperature>8</temperature>
+<dewPoint>2</dewPoint>
+<humidity>65</humidity>
+<clouds code="OVC">overcast</clouds>
+<weatherCondition>n/a</weatherCondition>
+<windDirection>310.0</windDirection>
+<windSpeed>03</windSpeed>
+</observation>
+<observation>
+<observation>
+K0CO 081615Z AUTO 33028G33KT OVC002 M07/M13 A3040 RMK AO2 PWINO
+</observation>
+<observationTime>2014-04-08 16:15:00</observationTime>
+<stationName>BERTHOUD PASS</stationName>
+<ICAO>K0CO</ICAO>
+<countryCode/>
+<elevation>0</elevation>
+<lat>39.8</lat>
+<lng>-105.76666666666667</lng>
+<temperature>-7</temperature>
+<dewPoint>-13</dewPoint>
+<humidity>62</humidity>
+<clouds code="OVC">overcast</clouds>
+<weatherCondition>n/a</weatherCondition>
+<windDirection>330.0</windDirection>
+<windSpeed>28</windSpeed>
+</observation>
+</geonames>

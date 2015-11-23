@@ -1,0 +1,25 @@
+description: |
+  Body example for authorisation request:
+  
+  client_id=...&
+  redirect_uri=...&
+  response_type=code
+  
+  Bidy example for token request:
+  
+  POST Data
+  client_id=...&
+  client_secret=...&
+  redirect_uri=...&
+  code=...&
+  grant_type=authorization_code
+  
+  All requests to the Buffer API must be made using HTTPS, with the access token provided in the HTTP Authorization header, request body or query string.
+type: OAuth 2.0
+describedBy: 
+  queryParameters: 
+    access_token: 
+settings: 
+  authorizationUri: https://bufferapp.com/oauth2/authorize
+  accessTokenUri: https://api.bufferapp.com/1/oauth2/token.json
+  authorizationGrants: [ code ]

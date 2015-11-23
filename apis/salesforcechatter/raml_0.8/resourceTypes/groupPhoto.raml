@@ -1,0 +1,53 @@
+post: 
+  description: |
+    Post the photo. To use an image from the Files page as a group photo (existing content), pass the file ID in the fileId property of the request body or in the fileId request parameter. Images uploaded on the Group page don’t have a file ID and can’t be used as the fileId.
+    
+    To upload a binary file as a group photo, you must send it in a multipart/form-data message. For information about how to create the multipart/form-data message, see Uploading Binary Files.
+  queryParameters: 
+    cropSize: 
+      description: The length, in pixels, of any edge of the crop square.   Required to crop an uploaded file or an existing file.
+      type: integer
+      required: true
+    cropX: 
+      description: The position X, in pixels, from the left edge of the image to the start of the crop square. Top left is position (0,0).   Required to crop an uploaded file or an existing file.
+      type: integer
+      required: true
+    cropY: 
+      description: The position Y, in pixels, from the top edge of the image to the start of the crop square. Top left is position (0,0).  Required to crop an uploaded file or an existing file.
+      type: integer
+      required: true
+    fileId: 
+      description: |
+        18 character ID of an existing file. The key prefix must be 069 and the file size must be less than 2 MB.
+        Note
+        Files uploaded on the Group page and on the User Profile page don’t have a file ID and can’t be posted or cropped. Files uploaded on the Files page have a file ID and can be posted and cropped.
+        
+        Required to choose an existing file.
+      required: true
+    versionNumber: 
+      description: Version number of the existing content. If not provided, the latest version is used.
+      type: integer
+  body: 
+    application/json: 
+      schema: createGroupPhotoRequest
+      example: !include examples/createGroupPhotoRequest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: photoResponse
+head: 
+  description: Get the group photo.
+  responses: 
+    200: 
+get: 
+  description: Get the group photo
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: photoResponse
+delete: 
+  description: Delete the group photo.
+  responses: 
+    204: 

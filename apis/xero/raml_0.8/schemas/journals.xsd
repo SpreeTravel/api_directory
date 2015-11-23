@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Journals">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Journal"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Journal">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="JournalID"/>
+    <xs:element ref="JournalDate"/>
+    <xs:element ref="JournalNumber"/>
+    <xs:element ref="CreatedDateUTC"/>
+    <xs:element ref="Reference"/>
+    <xs:element ref="JournalLines"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="JournalID" type="xs:string"/>
+  <xs:element name="JournalDate" type="xs:dateTime"/>
+  <xs:element name="JournalNumber" type="xs:integer"/>
+  <xs:element name="CreatedDateUTC" type="xs:dateTime"/>
+  <xs:element name="Reference" type="xs:NCName"/>
+  <xs:element name="JournalLines">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element maxOccurs="unbounded" ref="JournalLine"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="JournalLine">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="JournalLineID"/>
+    <xs:element ref="AccountID"/>
+    <xs:element ref="AccountCode"/>
+    <xs:element ref="AccountType"/>
+    <xs:element ref="AccountName"/>
+    <xs:element ref="NetAmount"/>
+    <xs:element ref="GrossAmount"/>
+    <xs:element ref="TaxAmount"/>
+    <xs:sequence minOccurs="0">
+      <xs:element ref="TaxType"/>
+      <xs:element ref="TaxName"/>
+    </xs:sequence>
+    <xs:element ref="TrackingCategories"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="JournalLineID" type="xs:string"/>
+  <xs:element name="AccountID" type="xs:string"/>
+  <xs:element name="AccountCode" type="xs:integer"/>
+  <xs:element name="AccountType" type="xs:NCName"/>
+  <xs:element name="AccountName" type="xs:string"/>
+  <xs:element name="NetAmount" type="xs:decimal"/>
+  <xs:element name="GrossAmount" type="xs:decimal"/>
+  <xs:element name="TaxAmount" type="xs:decimal"/>
+  <xs:element name="TaxType" type="xs:NCName"/>
+  <xs:element name="TaxName" type="xs:string"/>
+  <xs:element name="TrackingCategories">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="TrackingCategory"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="TrackingCategory">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Name"/>
+    <xs:element ref="Option"/>
+    <xs:element ref="TrackingCategoryID"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Name" type="xs:NCName"/>
+  <xs:element name="Option" type="xs:NCName"/>
+  <xs:element name="TrackingCategoryID" type="xs:string"/>
+</xs:schema>

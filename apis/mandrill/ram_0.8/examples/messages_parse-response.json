@@ -1,0 +1,31 @@
+{
+  "subject": "Some Subject",
+  "from_email": "sender@example.com",
+  "from_name": "Sender Name",
+  "to": [
+    {
+      "email": "recipient.email@example.com",
+      "name": "Recipient Name"
+    }
+  ],
+  "headers": {
+    "Reply-To": "replies@example.com"
+  },
+  "text": "Some text content",
+  "html": "<p>Some HTML content</p>",
+  "attachments": [
+    {
+      "name": "example.txt",
+      "type": "text/plain",
+      "binary": false,
+      "content": "example non-binary content"
+    }
+  ],
+  "images": [
+    {
+      "name": "IMAGEID",
+      "type": "image/png",
+      "content": "ZXhhbXBsZSBmaWxl"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "http_code" : 400 ,
+  "error" : "validation_errors" ,
+  "error_title" : "Set Creation Error" ,
+  "error_description" : "The following validation errors occurred: You must have a title Both the terms and definitions are mandatory" ,
+  "validation_errors" : [
+    "You must have a title" ,
+    "Both the terms and definitions are mandatory" ,
+    "You must specify the terms language" ,
+    "You must specify the definitions language"
+  ]
+}

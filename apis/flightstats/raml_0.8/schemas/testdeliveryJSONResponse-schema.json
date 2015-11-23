@@ -1,0 +1,556 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "alert" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "event" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "dataSource" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "dateTimeRecorded" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "rule" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "carrierFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightNumber" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departure" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrival" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "ruleEvents" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "type" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            } ,
+            "nameValues" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "delivery" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "format" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "destination" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        } ,
+        "flightStatus" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "flightId" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "carrierFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "flightNumber" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "arrivalAirportFsCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "departureDate" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "dateLocal" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "dateUtc" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "arrivalDate" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "dateLocal" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "dateUtc" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "status" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "operationalTimes" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "publishedDeparture" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "dateLocal" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "dateUtc" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "publishedArrival" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "dateLocal" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "dateUtc" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "estimatedGateDeparture" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "dateLocal" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "dateUtc" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "actualGateDeparture" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "dateLocal" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "dateUtc" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "estimatedGateArrival" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "dateLocal" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "dateUtc" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "actualGateArrival" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "dateLocal" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "dateUtc" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              }
+            } ,
+            "flightDurations" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "blockMinutes" : {
+                  "type" : "number" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "flightStatusUpdates" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "updatedAt" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "dateUtc" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "source" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "updatedTextFields" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "object" ,
+                          "properties" : {
+                            "field" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "originalText" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "newText" : {
+                              "type" : "string" ,
+                              "required" : false
+                            }
+                          }
+                        }
+                      ]
+                    } ,
+                    "updatedDateFields" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    } ,
+    "appendix" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "airlines" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "fs" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "iata" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "icao" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "phoneNumber" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "active" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        } ,
+        "airports" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "fs" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "iata" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "icao" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "faa" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "street1" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "city" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "cityCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "stateCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "postalCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "regionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "timeZoneRegionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "weatherZone" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "localTime" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "utcOffsetHours" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "latitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "longitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "elevationFeet" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "classification" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "active" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                }
+              }
+            } , {
+              "type" : "object" ,
+              "properties" : {
+                "fs" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "iata" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "icao" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "faa" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "street1" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "street2" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "city" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "cityCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "stateCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "postalCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryCode" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "countryName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "regionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "timeZoneRegionName" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "weatherZone" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "localTime" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "utcOffsetHours" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "latitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "longitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "elevationFeet" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "classification" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "active" : {
+                  "type" : "boolean" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

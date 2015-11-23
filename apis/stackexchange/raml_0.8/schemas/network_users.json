@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "array",
+  "items": {
+    "required": false,
+    "type": "object",
+    "properties": {
+      "account_id": {
+        "required": false,
+        "type": "integer"
+      },
+      "answer_count": {
+        "required": false,
+        "type": "integer"
+      },
+      "badge_counts": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "bronze": {
+            "required": false,
+            "type": "integer"
+          },
+          "gold": {
+            "required": false,
+            "type": "integer"
+          },
+          "silver": {
+            "required": false,
+            "type": "integer"
+          }
+        }
+      },
+      "creation_date": {
+        "required": false,
+        "type": "integer"
+      },
+      "last_access_date": {
+        "required": false,
+        "type": "integer"
+      },
+      "question_count": {
+        "required": false,
+        "type": "integer"
+      },
+      "reputation": {
+        "required": false,
+        "type": "integer"
+      },
+      "site_name": {
+        "required": false,
+        "type": "string"
+      },
+      "site_url": {
+        "required": false,
+        "type": "string"
+      },
+      "top_answers": {
+        "required": false,
+        "type": "array"
+      },
+      "top_questions": {
+        "required": false,
+        "type": "array"
+      },
+      "user_id": {
+        "required": false,
+        "type": "integer"
+      },
+      "user_type": {
+        "required": false,
+        "type": "string"
+      }
+    }
+  }
+}

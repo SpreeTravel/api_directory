@@ -1,0 +1,160 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : [
+    {
+      "type" : "object" ,
+      "properties" : {
+        "object" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "created_at" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "updated_at" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "livemode" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "note" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "ssn" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "passport" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "date_of_birth" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "name_first" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name_middle" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "name_last" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "address_street1" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "address_street2" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "address_city" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "address_subdivision" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "address_postal_code" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "address_country_code" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } , {
+      "type" : "object" ,
+      "properties" : {
+        "object" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "created_at" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "updated_at" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "livemode" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "note" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "ssn" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "passport" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "date_of_birth" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "name_first" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name_middle" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "name_last" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "address_street1" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "address_street2" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "address_city" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "address_subdivision" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "address_postal_code" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "address_country_code" : {
+          "type" : "object" ,
+          "required" : false
+        }
+      }
+    }
+  ]
+}

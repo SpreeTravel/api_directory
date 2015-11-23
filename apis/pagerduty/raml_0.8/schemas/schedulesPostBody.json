@@ -1,0 +1,23 @@
+{
+	"type" : "object" ,
+	"required" : true ,
+	"$schema" : "http://json-schema.org/draft-03/schema" ,
+	"properties" : {
+		"since" : {
+			"type" : "string" ,
+			"required" : false
+		} ,
+		"overflow" : {
+			"type" : "number" ,
+			"required" : false
+		} ,
+		"until" : {
+			"type" : "string" ,
+			"required" : false
+		} ,
+		"schedule" : {
+			"type" : "object" ,
+			"required" : false
+		}
+	}
+}

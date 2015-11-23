@@ -1,0 +1,31 @@
+{
+  "id" : "6BA17599X0950293U" ,
+  "create_time" : "2013-05-06T22:32:24Z" ,
+  "update_time" : "2013-05-06T22:32:25Z" ,
+  "amount" : {
+    "total" : "4.54" ,
+    "currency" : "USD"
+  } ,
+  "is_final_capture" : true ,
+  "state" : "completed" ,
+  "parent_payment" : "PAY-44664305570317015KGEC5DI" ,
+  "links" : [
+    {
+      "href" : "https://api.sandbox.paypal.com/v1/payments/capture/6BA17599X0950293U" ,
+      "rel" : "self" ,
+      "method" : "GET"
+    } , {
+      "href" : "https://api.sandbox.paypal.com/v1/payments/capture/6BA17599X0950293U/refund" ,
+      "rel" : "refund" ,
+      "method" : "POST"
+    } , {
+      "href" : "https://api.sandbox.paypal.com/v1/payments/authorization/5RA45624N3531924N" ,
+      "rel" : "authorization" ,
+      "method" : "GET"
+    } , {
+      "href" : "https://api.sandbox.paypal.com/v1/payments/payment/PAY-44664305570317015KGEC5DI" ,
+      "rel" : "parent_payment" ,
+      "method" : "GET"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "page" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "num_pages" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "page_size" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "total" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "start" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "end" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "uri" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "first_page_uri" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "previous_page_uri" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "next_page_uri" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "last_page_uri" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "calls" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : 
+        {
+          "type" : "object" ,
+          "properties" : {
+            "sid" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "date_created" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "date_updated" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "parent_call_sid" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "account_sid" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "to" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "to_formatted" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "from" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "from_formatted" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "phone_number_sid" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "status" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "start_time" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "end_time" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "duration" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "price" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "direction" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "answered_by" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "api_version" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "forwarded_from" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "caller_name" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "uri" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "subresource_uris" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "notifications" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "recordings" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        }
+      
+    }
+  }
+}

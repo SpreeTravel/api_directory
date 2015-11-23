@@ -1,0 +1,252 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "filename" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "isAppendingDateToFilename" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "filenameDateFormat" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "format" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "dataType" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "destinationConnection" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "hostname" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "username" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "password" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "port" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "description" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "permissions" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "folderId" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "sourceTemplateId" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "createdBy" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "createdAt" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "updatedBy" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "updatedAt" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "accessedAt" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "scheduledFor" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "depth" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "downloadUrl" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "exportInfo" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "notification" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "fileFormat" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "columnDelimiter" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "encoding" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "extension" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "rowDelimiter" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "textQualifier" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "fileLifetime" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "isFileCompressed" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "isDelta" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "destinationPath" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "executedAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "executionStatus" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "schedule" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "displayTimeZoneId" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "details" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "dailyStartTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "dailyEndTime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "days" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object"
+                }
+              ]
+            }
+          }
+        } ,
+        "executionInterval" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "description" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "permissions" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "folderId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "sourceTemplateId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "createdBy" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "createdAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "updatedBy" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "updatedAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "accessedAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "scheduledFor" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "depth" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

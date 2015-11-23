@@ -1,0 +1,180 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "@odata.id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "@odata.editLink" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "ChangeKey" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "ClassName" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Subject" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "BodyPreview" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Body" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "ContentType" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Content" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "Importance" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Categories" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+      ]
+    } ,
+    "HasAttachments" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "ParentFolderId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "From" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "Name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Address" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "Sender" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "Name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Address" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "ToRecipients" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "Name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "Address" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    } ,
+    "CcRecipients" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+      ]
+    } ,
+    "BccRecipients" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+      ]
+    } ,
+    "ReplyTo" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+      ]
+    } ,
+    "ConversationId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "DateTimeReceived" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "DateTimeSent" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "IsDeliveryReceiptRequested" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "IsReadReceiptRequested" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "IsDraft" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "IsRead" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "EventId" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "MeetingMessageType" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "DateTimeCreated" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "LastModifiedTime" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Attachments@odata.navigationLink" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

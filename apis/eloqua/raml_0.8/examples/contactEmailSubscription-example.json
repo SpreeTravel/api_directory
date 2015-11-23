@@ -1,0 +1,34 @@
+{
+  "contactId" : "undefined" ,
+  "emailGroup" : {
+    "emailHeaderId" : "undefined" ,
+    "emailFooterId" : "undefined" ,
+    "subscriptionLandingPageId" : "undefined" ,
+    "unsubscriptionLandingPageId" : "2" ,
+    "isVisibleInPublicSubscriptionList" : "undefined" ,
+    "isVisibleInOutlookPlugin" : "false" ,
+    "emailIds" : [
+      null ,
+      null
+    ] ,
+    "displayName" : "Sample Campaign" ,
+    "subscriptionListId" : "undefined" ,
+    "unSubscriptionListId" : "undefined" ,
+    "subscriptionListDataLookupId" : "undefined" ,
+    "unSubscriptionListDataLookupId" : "undefined" ,
+    "name" : "string string" ,
+    "description" : "string string" ,
+    "permissions" : "InstancePermissions InstancePermissions" ,
+    "folderId" : "string string" ,
+    "sourceTemplateId" : "string string" ,
+    "createdBy" : "string string" ,
+    "createdAt" : "dateTime dateTime" ,
+    "updatedBy" : "string string" ,
+    "updatedAt" : "dateTime dateTime" ,
+    "accessedAt" : "dateTime dateTime" ,
+    "scheduledFor" : "dateTime dateTime" ,
+    "depth" : "RequestDepth RequestDepth"
+  } ,
+  "isSubscribed" : "undefined" ,
+  "updatedAt" : "undefined"
+}

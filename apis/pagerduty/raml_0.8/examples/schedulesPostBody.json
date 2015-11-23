@@ -1,0 +1,61 @@
+{
+	"since" : "2012-08-05T00:00:00" ,
+	"overflow" : 1 ,
+	"until" : "2012-08-19T00:00:00" ,
+	"schedule" : {
+		"schedule_layers" : [ {
+			"start" : "2012-08-05T00:00:00" ,
+			"users" : [ {
+				"user" : {
+					"id" : "P2BI1SS"
+				} ,
+				"member_order" : 1
+			} , {
+				"user" : {
+					"id" : "PX3ILJ6"
+				} ,
+				"member_order" : 2
+			} ] ,
+			"restriction_type" : null ,
+			"rotation_virtual_start" : "2012-08-05T00:00:00" ,
+			"priority" : 0 ,
+			"rotation_turn_length_seconds" : 604800 ,
+			"end" : null ,
+			"restrictions" : [ ] ,
+			"id" : null ,
+			"name" : "Schedule Layer 1"
+		} , {
+			"start" : "2012-08-05T00:00:00" ,
+			"users" : [ {
+				"user" : {
+					"id" : "PAD6MYW"
+				} ,
+				"member_order" : 1
+			} , {
+				"user" : {
+					"id" : "PU6348I"
+				} ,
+				"member_order" : 2
+			} , {
+				"user" : {
+					"id" : "P6O624F"
+				} ,
+				"member_order" : 3
+			} ] ,
+			"restriction_type" : "Daily" ,
+			"rotation_virtual_start" : "2012-08-05T00:00:00" ,
+			"rotation_turn_length_seconds" : 86400 ,
+			"priority" : 1 ,
+			"restrictions" : [ {
+				"duration_seconds" : 43200 ,
+				"start_time_of_day" : "00:00:00"
+			} ] ,
+			"end" : null ,
+			"id" : null ,
+			"name" : "Schedule Layer 2"
+		} ] ,
+		"time_zone" : "Eastern Time (US & Canada)" ,
+		"id" : null ,
+		"name" : "Primary On-Call Schedule"
+	}
+}

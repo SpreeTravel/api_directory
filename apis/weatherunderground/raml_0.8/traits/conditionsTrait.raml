@@ -1,0 +1,99 @@
+description: |
+  Returns the current temperature, weather condition, humidity, wind, 'feels like' temperature, barometric pressure, and visibility.
+  
+  #Examples:
+  http://api.wunderground.com/api/Your_Key/conditions/q/CA/San_Francisco.json
+  (See description of the response.)
+responses: 
+  200: 
+    description: |
+      The response will be a JSON-encoded object.
+      |name|description|
+      |-|
+      |current_observation|Type: object. JSON type: object. The official API documentation provides no description. |
+      |current_observation.UV|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.dewpoint_c|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |current_observation.dewpoint_f|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |current_observation.dewpoint_string|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.display_location|Type: object. JSON type: object. The official API documentation provides no description. |
+      |current_observation.display_location.city|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.display_location.country|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.display_location.country_iso3166|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.display_location.elevation|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.display_location.full|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.display_location.latitude|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.display_location.longitude|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.display_location.state|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.display_location.state_name|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.display_location.zip|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.estimated|Type: object. JSON type: object. The official API documentation provides no description. |
+      |current_observation.feelslike_c|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.feelslike_f|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.feelslike_string|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.forecast_url|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.heat_index_c|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.heat_index_f|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.heat_index_string|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.history_url|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.icon|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.icon_url|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.image|Type: object. JSON type: object. The official API documentation provides no description. |
+      |current_observation.image.link|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.image.title|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.image.url|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.local_epoch|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.local_time_rfc822|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.local_tz_long|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.local_tz_offset|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.local_tz_short|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.ob_url|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_epoch|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_location|Type: object. JSON type: object. The official API documentation provides no description. |
+      |current_observation.observation_location.city|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_location.country|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_location.country_iso3166|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_location.elevation|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_location.full|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_location.latitude|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_location.longitude|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_location.state|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_time|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.observation_time_rfc822|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.precip_1hr_in|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.precip_1hr_metric|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.precip_1hr_string|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.precip_today_in|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.precip_today_metric|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.precip_today_string|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.pressure_in|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.pressure_mb|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.pressure_trend|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.relative_humidity|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.solarradiation|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.station_id|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.temp_c|Type: unknown. JSON type: number. The official API documentation provides no description. |
+      |current_observation.temp_f|Type: unknown. JSON type: number. The official API documentation provides no description. |
+      |current_observation.temperature_string|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.visibility_km|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.visibility_mi|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.weather|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.wind_degrees|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |current_observation.wind_dir|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.wind_gust_kph|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.wind_gust_mph|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.wind_kph|Type: unknown. JSON type: number. The official API documentation provides no description. |
+      |current_observation.wind_mph|Type: unknown. JSON type: number. The official API documentation provides no description. |
+      |current_observation.wind_string|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.windchill_c|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.windchill_f|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |current_observation.windchill_string|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |response|Type: object. JSON type: object. The official API documentation provides no description. |
+      |response.features|Type: object. JSON type: object. The official API documentation provides no description. |
+      |response.features.conditions|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |response.termsofService|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |response.version|Type: unknown. JSON type: string. The official API documentation provides no description. |
+    body: 
+      application/json: 
+        schema: conditionsSchema
+        example: !include ../examples/conditions.json
+      application/xml: 

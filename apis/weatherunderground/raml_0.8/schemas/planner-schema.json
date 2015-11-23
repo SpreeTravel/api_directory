@@ -1,0 +1,787 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "response": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "version": {
+          "required": false,
+          "type": "string"
+        },
+        "termsofService": {
+          "required": false,
+          "type": "string"
+        },
+        "features": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "planner": {
+              "required": false,
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "trip": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "title": {
+          "required": false,
+          "type": "string"
+        },
+        "airport_code": {
+          "required": false,
+          "type": "string"
+        },
+        "error": {
+          "required": false,
+          "type": "string"
+        },
+        "period_of_record": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "date_start": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "date": {
+                  "required": false,
+                  "type": "object",
+                  "properties": {
+                    "epoch": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "pretty": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "day": {
+                      "required": false,
+                      "type": "integer"
+                    },
+                    "month": {
+                      "required": false,
+                      "type": "integer"
+                    },
+                    "year": {
+                      "required": false,
+                      "type": "integer"
+                    },
+                    "yday": {
+                      "required": false,
+                      "type": "integer"
+                    },
+                    "hour": {
+                      "required": false,
+                      "type": "integer"
+                    },
+                    "min": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "sec": {
+                      "required": false,
+                      "type": "integer"
+                    },
+                    "isdst": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "monthname": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "weekday_short": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "weekday": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "ampm": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "tz_short": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "tz_long": {
+                      "required": false,
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "date_end": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "date": {
+                  "required": false,
+                  "type": "object",
+                  "properties": {
+                    "epoch": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "pretty": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "day": {
+                      "required": false,
+                      "type": "integer"
+                    },
+                    "month": {
+                      "required": false,
+                      "type": "integer"
+                    },
+                    "year": {
+                      "required": false,
+                      "type": "integer"
+                    },
+                    "yday": {
+                      "required": false,
+                      "type": "integer"
+                    },
+                    "hour": {
+                      "required": false,
+                      "type": "integer"
+                    },
+                    "min": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "sec": {
+                      "required": false,
+                      "type": "integer"
+                    },
+                    "isdst": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "monthname": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "weekday_short": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "weekday": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "ampm": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "tz_short": {
+                      "required": false,
+                      "type": "string"
+                    },
+                    "tz_long": {
+                      "required": false,
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "temp_high": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "min": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "F": {
+                  "required": false,
+                  "type": "string"
+                },
+                "C": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "avg": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "F": {
+                  "required": false,
+                  "type": "string"
+                },
+                "C": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "max": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "F": {
+                  "required": false,
+                  "type": "string"
+                },
+                "C": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "temp_low": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "min": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "F": {
+                  "required": false,
+                  "type": "string"
+                },
+                "C": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "avg": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "F": {
+                  "required": false,
+                  "type": "string"
+                },
+                "C": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "max": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "F": {
+                  "required": false,
+                  "type": "string"
+                },
+                "C": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "precip": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "min": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "in": {
+                  "required": false,
+                  "type": "string"
+                },
+                "cm": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "avg": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "in": {
+                  "required": false,
+                  "type": "string"
+                },
+                "cm": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "max": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "in": {
+                  "required": false,
+                  "type": "string"
+                },
+                "cm": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "dewpoint_high": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "min": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "F": {
+                  "required": false,
+                  "type": "string"
+                },
+                "C": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "avg": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "F": {
+                  "required": false,
+                  "type": "string"
+                },
+                "C": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "max": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "F": {
+                  "required": false,
+                  "type": "string"
+                },
+                "C": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "dewpoint_low": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "min": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "F": {
+                  "required": false,
+                  "type": "string"
+                },
+                "C": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "avg": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "F": {
+                  "required": false,
+                  "type": "string"
+                },
+                "C": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "max": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "F": {
+                  "required": false,
+                  "type": "string"
+                },
+                "C": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "cloud_cover": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "cond": {
+              "required": false,
+              "type": "string"
+            }
+          }
+        },
+        "chance_of": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "tempoversixty": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "name": {
+                  "required": false,
+                  "type": "string"
+                },
+                "description": {
+                  "required": false,
+                  "type": "string"
+                },
+                "percentage": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "chanceofwindyday": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "name": {
+                  "required": false,
+                  "type": "string"
+                },
+                "description": {
+                  "required": false,
+                  "type": "string"
+                },
+                "percentage": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "chanceofpartlycloudyday": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "name": {
+                  "required": false,
+                  "type": "string"
+                },
+                "description": {
+                  "required": false,
+                  "type": "string"
+                },
+                "percentage": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "chanceofsunnycloudyday": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "name": {
+                  "required": false,
+                  "type": "string"
+                },
+                "description": {
+                  "required": false,
+                  "type": "string"
+                },
+                "percentage": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "chanceofcloudyday": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "name": {
+                  "required": false,
+                  "type": "string"
+                },
+                "description": {
+                  "required": false,
+                  "type": "string"
+                },
+                "percentage": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "chanceoffogday": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "name": {
+                  "required": false,
+                  "type": "string"
+                },
+                "description": {
+                  "required": false,
+                  "type": "string"
+                },
+                "percentage": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "chanceofhumidday": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "name": {
+                  "required": false,
+                  "type": "string"
+                },
+                "description": {
+                  "required": false,
+                  "type": "string"
+                },
+                "percentage": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "chanceofprecip": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "name": {
+                  "required": false,
+                  "type": "string"
+                },
+                "description": {
+                  "required": false,
+                  "type": "string"
+                },
+                "percentage": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "chanceofrainday": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "name": {
+                  "required": false,
+                  "type": "string"
+                },
+                "description": {
+                  "required": false,
+                  "type": "string"
+                },
+                "percentage": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "tempoverninety": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "name": {
+                  "required": false,
+                  "type": "string"
+                },
+                "description": {
+                  "required": false,
+                  "type": "string"
+                },
+                "percentage": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "chanceofthunderday": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "name": {
+                  "required": false,
+                  "type": "string"
+                },
+                "description": {
+                  "required": false,
+                  "type": "string"
+                },
+                "percentage": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "chanceofsnowonground": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "name": {
+                  "required": false,
+                  "type": "string"
+                },
+                "description": {
+                  "required": false,
+                  "type": "string"
+                },
+                "percentage": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "chanceoftornadoday": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "name": {
+                  "required": false,
+                  "type": "string"
+                },
+                "description": {
+                  "required": false,
+                  "type": "string"
+                },
+                "percentage": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "chanceofsultryday": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "name": {
+                  "required": false,
+                  "type": "string"
+                },
+                "description": {
+                  "required": false,
+                  "type": "string"
+                },
+                "percentage": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "tempbelowfreezing": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "name": {
+                  "required": false,
+                  "type": "string"
+                },
+                "description": {
+                  "required": false,
+                  "type": "string"
+                },
+                "percentage": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "tempoverfreezing": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "name": {
+                  "required": false,
+                  "type": "string"
+                },
+                "description": {
+                  "required": false,
+                  "type": "string"
+                },
+                "percentage": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "chanceofhailday": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "name": {
+                  "required": false,
+                  "type": "string"
+                },
+                "description": {
+                  "required": false,
+                  "type": "string"
+                },
+                "percentage": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            },
+            "chanceofsnowday": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "name": {
+                  "required": false,
+                  "type": "string"
+                },
+                "description": {
+                  "required": false,
+                  "type": "string"
+                },
+                "percentage": {
+                  "required": false,
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

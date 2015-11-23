@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Results xmlns="http://api.jobvite.com/action/api/v1" action="getCandidates" version="1.0">
+	<Candidates xmlns="http://api.jobvite.com/action/api/v1" first="1" count="2" total="2" >
+		<ns:Candidate xmlns:ns="http://ns.hr-xml.org/2007-04-15">
+			<ns:CandidateRecordInfo>
+				<ns:Id idOwner="Jobvite">
+					<ns:IdValue name="applicationId">2123</ns:IdValue>
+				</ns:Id>
+				<ns:Status>New</ns:Status>
+			</ns:CandidateRecordInfo>
+			<ns:RelatedPositionPostings>
+				<ns:PositionPosting>
+					<ns:Id idOwner="Jobvite">
+						<ns:IdValue name="requisitionId">20081023</ns:IdValue>
+					</ns:Id>
+					<ns:Title>Accountant</ns:Title>
+				</ns:PositionPosting>
+			</ns:RelatedPositionPostings>
+			<ns:CandidateSupplier>
+				<ns:SupplierId idOwner="Jobvite">
+					<ns:IdValue name="sourcedBy">50</ns:IdValue>
+				</ns:SupplierId>
+				<ns:EntityName>Alex Recruiter</ns:EntityName>
+				<ns:SourceType>
+					<ns:NonStandardValue>Agency</ns:NonStandardValue>
+				</ns:SourceType>
+			</ns:CandidateSupplier>
+			<ns:CandidateProfile>
+				<ns:PersonalData>
+					<ns:PersonId idOwner="Jobvite">
+						<ns:IdValue name="candidateId">S123</ns:IdValue>
+					</ns:PersonId>
+					<ns:PersonName>
+						<ns:GivenName>John</ns:GivenName>
+						<ns:FamilyName>Doe</ns:FamilyName>
+					</ns:PersonName>
+					<ns:ContactMethod>
+						<ns:Use>personal</ns:Use>
+						<ns:Location>home</ns:Location>
+						<ns:Telephone>
+							<ns:FormattedNumber>650-555-1212</ns:FormattedNumber>
+						</ns:Telephone>
+						<ns:Mobile>
+							<ns:FormattedNumber>650-555-1212</ns:FormattedNumber>
+						</ns:Mobile>
+						<ns:Fax>
+							<ns:FormattedNumber>415-555-1212</ns:FormattedNumber>
+						</ns:Fax>
+						<ns:InternetEmailAddress>johndoe@candidate1.com</ns:InternetEmailAddress>
+						<ns:PostalAddress>
+							<ns:CountryCode>US</ns:CountryCode>
+							<ns:PostalCode>94118</ns:PostalCode>
+							<ns:Region>CA</ns:Region>
+							<ns:Municipality>San Francisco</ns:Municipality>
+							<ns:DeliveryAddress>
+								<ns:AddressLine>123 Main St.</ns:AddressLine>
+								<ns:AddressLine>2nd Floor</ns:AddressLine>
+							</ns:DeliveryAddress>
+						</ns:PostalAddress>
+					</ns:ContactMethod>
+				</ns:PersonalData>
+			</ns:CandidateProfile>
+			<ns:Resume>
+				<ns:NonXMLResume>
+					<ns:TextResume>
+John Doe
+johndoe@candidate1.com
+415-555-1212
+This is a really extensive resume for a great candidate. Please hire me!
+					</ns:TextResume>
+				</ns:NonXMLResume>
+			</ns:Resume>
+			<ns:UserArea>
+				<CustomFields xmlns="http://api.jobvite.com/action/api/v1">
+					<Field type="Candidate" name="Candidate Field 1">Some value</Field>
+					<Field type="Candidate" name="Candidate Field 2">Some other value</Field>
+				</CustomFields>
+			</ns:UserArea>
+		</ns:Candidate>
+		<ns:Candidate xmlns:ns="http://ns.hr-xml.org/2007-04-15">
+			<ns:CandidateRecordInfo>
+				<ns:Id idOwner="Jobvite">
+					<ns:IdValue name="applicationId">2123</ns:IdValue>
+				</ns:Id>
+				<ns:Status>New</ns:Status>
+			</ns:CandidateRecordInfo>
+			<ns:RelatedPositionPostings>
+				<ns:PositionPosting>
+					<ns:Id idOwner="Jobvite">
+						<ns:IdValue name="requisitionId">20081023</ns:IdValue>
+					</ns:Id>
+					<ns:Title>Accountant</ns:Title>
+				</ns:PositionPosting>
+			</ns:RelatedPositionPostings>
+			<ns:CandidateSupplier>
+				<ns:SupplierId idOwner="Jobvite">
+					<ns:IdValue name="sourcedBy">511</ns:IdValue>
+				</ns:SupplierId>
+				<ns:EntityName>Alex Recruiter</ns:EntityName>
+				<ns:SourceType>
+					<ns:NonStandardValue>Employee</ns:NonStandardValue>
+				</ns:SourceType>
+			</ns:CandidateSupplier>
+			<ns:CandidateProfile>
+				<ns:PersonalData>
+					<ns:PersonId idOwner="Jobvite">
+						<ns:IdValue name="candidateId">S234</ns:IdValue>
+					</ns:PersonId>
+					<ns:PersonName>
+						<ns:GivenName>Jane</ns:GivenName>
+						<ns:FamilyName>Doe</ns:FamilyName>
+					</ns:PersonName>
+					<ns:ContactMethod>
+						<ns:Use>personal</ns:Use>
+						<ns:Location>home</ns:Location>
+						<ns:Telephone>
+							<ns:FormattedNumber>650-555-1212</ns:FormattedNumber>
+						</ns:Telephone>
+						<ns:Mobile>
+							<ns:FormattedNumber>650-555-1212</ns:FormattedNumber>
+						</ns:Mobile>
+						<ns:Fax>
+							<ns:FormattedNumber>415-555-1212</ns:FormattedNumber>
+						</ns:Fax>
+						<ns:InternetEmailAddress>jane@candidate1.com</ns:InternetEmailAddress>
+						<ns:PostalAddress>
+							<ns:CountryCode>US</ns:CountryCode>
+							<ns:PostalCode>94118</ns:PostalCode>
+							<ns:Region>CA</ns:Region>
+							<ns:Municipality>San Francisco</ns:Municipality>
+							<ns:DeliveryAddress>
+								<ns:AddressLine>123 Main St.</ns:AddressLine>
+								<ns:AddressLine>2nd Floor</ns:AddressLine>
+							</ns:DeliveryAddress>
+						</ns:PostalAddress>
+					</ns:ContactMethod>
+				</ns:PersonalData>
+			</ns:CandidateProfile>
+			<ns:Resume>
+				<ns:NonXMLResume>
+					<ns:TextResume>
+Jane Doe
+jane@candidate1.com
+408-555-1212
+I am a great candidate!
+					</ns:TextResume>
+				</ns:NonXMLResume>
+			</ns:Resume>
+			<ns:UserArea>
+				<CustomFields xmlns="http://api.jobvite.com/action/api/v1">
+					<Field type="Candidate" name="Candidate Field 3">Some value</Field>
+				</CustomFields>
+			</ns:UserArea>
+		</ns:Candidate>
+	</Candidates>
+</Results>

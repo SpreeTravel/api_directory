@@ -1,0 +1,20 @@
+{
+	"escalation_policy" : {
+		"id" : "PF106PL" ,
+		"name" : "Escalation Policy 2" ,
+		"escalation_rules" : [ {
+			"id" : "PQZKDEQ" ,
+			"escalation_delay_in_minutes" : 22 ,
+			"rule_object" : {
+				"id" : "PAD6MYW" ,
+				"name" : "Aliya Bradtke" ,
+				"type" : "user" ,
+				"email" : "bradtke.aliya@leannon.uk" ,
+				"time_zone" : "Eastern Time (US & Canada)" ,
+				"color" : "cayenne"
+			}
+		} ] ,
+		"services" : [ ] ,
+		"num_loops" : 2
+	}
+}

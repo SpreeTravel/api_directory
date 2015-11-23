@@ -1,0 +1,33 @@
+{
+  "twitter_urlname": "twitter_urlname",
+  "member_count": 100,
+  "link_name": "link_name",
+  "meetup_count": 100,
+  "theme": {
+    "pageback_color": "pageback_color",
+    "link_color": "link_color",
+    "banner_height": "banner_height",
+    "button_color": "button_color",
+    "boxback_color": "boxback_color",
+    "banner_link": "banner_link"
+  },
+  "link": "link",
+  "past_meetup_count": 100,
+  "countries": "countries",
+  "facebook_urlname": "facebook_urlname",
+  "id": 100,
+  "updated": 100,
+  "udf_{varname}": "udf_{varname}",
+  "created": 100,
+  "description": "description",
+  "name": "name",
+  "meetup_url": "meetup_url",
+  "urlname": "urlname",
+  "founder": {
+    "member_state": "member_state",
+    "member_city": "member_city",
+    "name": "name",
+    "member_country": "member_country",
+    "member_id": 100
+  }
+}

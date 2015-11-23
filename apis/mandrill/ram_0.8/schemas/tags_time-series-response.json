@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "array",
+  "items": {
+    "required": false,
+    "type": "object",
+    "properties": {
+      "clicks": {
+        "required": false,
+        "type": "integer"
+      },
+      "complaints": {
+        "required": false,
+        "type": "integer"
+      },
+      "hard_bounces": {
+        "required": false,
+        "type": "integer"
+      },
+      "opens": {
+        "required": false,
+        "type": "integer"
+      },
+      "rejects": {
+        "required": false,
+        "type": "integer"
+      },
+      "sent": {
+        "required": false,
+        "type": "integer"
+      },
+      "soft_bounces": {
+        "required": false,
+        "type": "integer"
+      },
+      "time": {
+        "required": false,
+        "type": "string"
+      },
+      "unique_clicks": {
+        "required": false,
+        "type": "integer"
+      },
+      "unique_opens": {
+        "required": false,
+        "type": "integer"
+      },
+      "unsubs": {
+        "required": false,
+        "type": "integer"
+      }
+    }
+  }
+}

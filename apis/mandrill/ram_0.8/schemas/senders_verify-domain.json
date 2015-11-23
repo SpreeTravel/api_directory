@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "key": {
+      "required": false,
+      "type": "string"
+    },
+    "domain": {
+      "required": false,
+      "type": "string"
+    },
+    "mailbox": {
+      "required": false,
+      "type": "string"
+    }
+  }
+}

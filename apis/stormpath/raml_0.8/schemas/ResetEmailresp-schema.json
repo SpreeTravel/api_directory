@@ -1,0 +1,25 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "href" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "email" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "account" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "href" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

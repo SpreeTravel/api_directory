@@ -1,0 +1,14 @@
+{
+  "thresholds" : [
+    {
+      "name" : "Top Influencer" ,
+      "threshold" : "0.8"
+    } , {
+      "name" : "Active Influencer" ,
+      "threshold" : "0.25"
+    } , {
+      "name" : "Observer" ,
+      "threshold" : "0.0"
+    }
+  ]
+}

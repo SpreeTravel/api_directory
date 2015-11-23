@@ -1,0 +1,46 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "earthquakes" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "eqid" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "magnitude" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "lng" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "src" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "datetime" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "depth" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "lat" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

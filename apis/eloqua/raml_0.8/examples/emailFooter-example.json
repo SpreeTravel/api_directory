@@ -1,0 +1,59 @@
+{
+  "body" : "undefined" ,
+  "text" : "undefined" ,
+  "fieldMerges" : [
+    {
+      "syntax" : "undefined" ,
+      "defaultValue" : "undefined" ,
+      "contactFieldId" : "undefined" ,
+      "accountFieldId" : "undefined" ,
+      "eventId" : "undefined" ,
+      "eventFieldId" : "undefined" ,
+      "eventSessionFieldId" : "undefined" ,
+      "mergeType" : "undefined" ,
+      "name" : "string string" ,
+      "description" : "string string" ,
+      "permissions" : "InstancePermissions InstancePermissions" ,
+      "folderId" : "string string" ,
+      "sourceTemplateId" : "string string" ,
+      "createdBy" : "string string" ,
+      "createdAt" : "dateTime dateTime" ,
+      "updatedBy" : "string string" ,
+      "updatedAt" : "dateTime dateTime" ,
+      "accessedAt" : "dateTime dateTime" ,
+      "scheduledFor" : "dateTime dateTime" ,
+      "depth" : "RequestDepth RequestDepth"
+    }
+  ] ,
+  "hyperlinks" : [
+    {
+      "href" : "undefined" ,
+      "hyperlinkType" : "undefined" ,
+      "referencedEntityId" : "undefined" ,
+      "name" : "string string" ,
+      "description" : "string string" ,
+      "permissions" : "InstancePermissions InstancePermissions" ,
+      "folderId" : "string string" ,
+      "sourceTemplateId" : "string string" ,
+      "createdBy" : "string string" ,
+      "createdAt" : "dateTime dateTime" ,
+      "updatedBy" : "string string" ,
+      "updatedAt" : "dateTime dateTime" ,
+      "accessedAt" : "dateTime dateTime" ,
+      "scheduledFor" : "dateTime dateTime" ,
+      "depth" : "RequestDepth RequestDepth"
+    }
+  ] ,
+  "name" : "undefined" ,
+  "description" : "Eloqua" ,
+  "permissions" : "undefined" ,
+  "folderId" : "undefined" ,
+  "sourceTemplateId" : "undefined" ,
+  "createdBy" : "undefined" ,
+  "createdAt" : "undefined" ,
+  "updatedBy" : "undefined" ,
+  "updatedAt" : "undefined" ,
+  "accessedAt" : "undefined" ,
+  "scheduledFor" : "undefined" ,
+  "depth" : "minimal"
+}

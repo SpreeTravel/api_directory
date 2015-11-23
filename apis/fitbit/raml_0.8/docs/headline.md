@@ -1,0 +1,1 @@
+Fitbit offers a free website that can be used with or without the Fitbit Tracker. Users have the ability to log their food, activities, weight, blood pressure, heart rate, and glucose levels to track over time. Users also have the ability to set daily and weekly goals for themselves for steps, calories burned and consumed, and distance walked.

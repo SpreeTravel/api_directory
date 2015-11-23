@@ -1,0 +1,331 @@
+{
+  "apiVersion" : "0.0.0" ,
+  "swaggerVersion" : "1.0" ,
+  "basePath" : "https://api.flightstats.com/flex/delayindex/rest" ,
+  "resourcePath" : "/v1/json/" ,
+  "apis" : [
+    {
+      "path" : "/v1/json/country/{country}" ,
+      "description" : "DelayIndex API returning results in JSON format" ,
+      "operations" : [
+        {
+          "httpMethod" : "GET" ,
+          "summary" : "Delay Indexes by Country code" ,
+          "notes" : "Returns DelayIndexes for airports in the given Country" ,
+          "responseClass" : "response" ,
+          "nickname" : "forCountry" ,
+          "errorResponses" : [
+            {
+              "code" : 400 ,
+              "reason" : "Client request error. Consult error response for specifics."
+            } , {
+              "code" : 403 ,
+              "reason" : "Authorization failure. Invalid 'appId', 'appKey', or rate limit violation."
+            } , {
+              "code" : 404 ,
+              "reason" : "Resource not found. Request did not match a URL for the service."
+            } , {
+              "code" : 500 ,
+              "reason" : "Service error. Consult error response for specifics."
+            }
+          ] ,
+          "parameters" : [
+            {
+              "name" : "appId" ,
+              "description" : "Application ID" ,
+              "paramType" : "query" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "appKey" ,
+              "description" : "Application key" ,
+              "paramType" : "query" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "country" ,
+              "description" : "Country code (2 character)" ,
+              "paramType" : "path" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "classification" ,
+              "description" : "Airport classification filter, used to restrict results to larger airports [1-5, 1=largest]" ,
+              "paramType" : "query" ,
+              "defaultValue" : "5" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "score" ,
+              "description" : "Delay index normalized score filter, used to restrict results to airports experiencing delays [0-5, 5=maximum delay]" ,
+              "paramType" : "query" ,
+              "defaultValue" : "3" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "extendedOptions" ,
+              "description" : "Extended options for modifying standard API behavior to fit special use cases.  Options: 'useInlinedReferences', 'useHttpErrors'." ,
+              "paramType" : "query" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            }
+          ]
+        }
+      ]
+    } , {
+      "path" : "/v1/json/region/{region}" ,
+      "description" : "DelayIndex API returning results in JSON format" ,
+      "operations" : [
+        {
+          "httpMethod" : "GET" ,
+          "summary" : "Delay Indexes by Region" ,
+          "notes" : "Returns DelayIndexes for airports in the given Region" ,
+          "responseClass" : "response" ,
+          "nickname" : "forRegion" ,
+          "errorResponses" : [
+            {
+              "code" : 400 ,
+              "reason" : "Client request error. Consult error response for specifics."
+            } , {
+              "code" : 403 ,
+              "reason" : "Authorization failure. Invalid 'appId', 'appKey', or rate limit violation."
+            } , {
+              "code" : 404 ,
+              "reason" : "Resource not found. Request did not match a URL for the service."
+            } , {
+              "code" : 500 ,
+              "reason" : "Service error. Consult error response for specifics."
+            }
+          ] ,
+          "parameters" : [
+            {
+              "name" : "appId" ,
+              "description" : "Application ID" ,
+              "paramType" : "query" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "appKey" ,
+              "description" : "Application key" ,
+              "paramType" : "query" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "region" ,
+              "description" : "Region [Africa, Antarctica, Asia, Caribbean, Central-America, Europe, Middle-East, North-America, Oceania, South-America]" ,
+              "paramType" : "path" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "classification" ,
+              "description" : "Airport classification filter, used to restrict results to larger airports [1-5, 1=largest]" ,
+              "paramType" : "query" ,
+              "defaultValue" : "5" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "score" ,
+              "description" : "Delay index normalized score filter, used to restrict results to airports experiencing delays [0-5, 5=maximum delay]" ,
+              "paramType" : "query" ,
+              "defaultValue" : "3" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "extendedOptions" ,
+              "description" : "Extended options for modifying standard API behavior to fit special use cases.  Options: 'useInlinedReferences', 'useHttpErrors'." ,
+              "paramType" : "query" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            }
+          ]
+        }
+      ]
+    } , {
+      "path" : "/v1/json/state/{state}" ,
+      "description" : "DelayIndex API returning results in JSON format" ,
+      "operations" : [
+        {
+          "httpMethod" : "GET" ,
+          "summary" : "Delay Indexes by State code (US and Canada only)" ,
+          "notes" : "Returns DelayIndexes for airports in the given State" ,
+          "responseClass" : "response" ,
+          "nickname" : "forState" ,
+          "errorResponses" : [
+            {
+              "code" : 400 ,
+              "reason" : "Client request error. Consult error response for specifics."
+            } , {
+              "code" : 403 ,
+              "reason" : "Authorization failure. Invalid 'appId', 'appKey', or rate limit violation."
+            } , {
+              "code" : 404 ,
+              "reason" : "Resource not found. Request did not match a URL for the service."
+            } , {
+              "code" : 500 ,
+              "reason" : "Service error. Consult error response for specifics."
+            }
+          ] ,
+          "parameters" : [
+            {
+              "name" : "appId" ,
+              "description" : "Application ID" ,
+              "paramType" : "query" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "appKey" ,
+              "description" : "Application key" ,
+              "paramType" : "query" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "state" ,
+              "description" : "State code (2 character)" ,
+              "paramType" : "path" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "classification" ,
+              "description" : "Airport classification filter, used to restrict results to larger airports [1-5, 1=largest]" ,
+              "paramType" : "query" ,
+              "defaultValue" : "5" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "score" ,
+              "description" : "Delay index normalized score filter, used to restrict results to airports experiencing delays [0-5, 5=maximum delay]" ,
+              "paramType" : "query" ,
+              "defaultValue" : "3" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "extendedOptions" ,
+              "description" : "Extended options for modifying standard API behavior to fit special use cases.  Options: 'useInlinedReferences', 'useHttpErrors'." ,
+              "paramType" : "query" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            }
+          ]
+        }
+      ]
+    } , {
+      "path" : "/v1/json/airports/{airports}" ,
+      "description" : "DelayIndex API returning results in JSON format" ,
+      "operations" : [
+        {
+          "httpMethod" : "GET" ,
+          "summary" : "Delay Indexes by Airport" ,
+          "notes" : "Returns the current DelayIndex(es) for the given Airport(s)" ,
+          "responseClass" : "response" ,
+          "nickname" : "forAirport" ,
+          "errorResponses" : [
+            {
+              "code" : 400 ,
+              "reason" : "Client request error. Consult error response for specifics."
+            } , {
+              "code" : 403 ,
+              "reason" : "Authorization failure. Invalid 'appId', 'appKey', or rate limit violation."
+            } , {
+              "code" : 404 ,
+              "reason" : "Resource not found. Request did not match a URL for the service."
+            } , {
+              "code" : 500 ,
+              "reason" : "Service error. Consult error response for specifics."
+            }
+          ] ,
+          "parameters" : [
+            {
+              "name" : "appId" ,
+              "description" : "Application ID" ,
+              "paramType" : "query" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "appKey" ,
+              "description" : "Application key" ,
+              "paramType" : "query" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "airports" ,
+              "description" : "One or more airport code(s) separated by punctuation characters" ,
+              "paramType" : "path" ,
+              "required" : true ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "codeType" ,
+              "description" : "Type of the given airport code: 'IATA', 'ICAO', or 'FS'. If not specified, all domains will be searched in the order stated." ,
+              "paramType" : "query" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "classification" ,
+              "description" : "Airport classification filter, used to restrict results to larger airports [1-5, 1=largest]" ,
+              "paramType" : "query" ,
+              "defaultValue" : "5" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "score" ,
+              "description" : "Delay index normalized score filter, used to restrict results to airports experiencing delays [0-5, 5=maximum delay]" ,
+              "paramType" : "query" ,
+              "defaultValue" : "3" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            } , {
+              "name" : "extendedOptions" ,
+              "description" : "Extended options for modifying standard API behavior to fit special use cases.  Options: 'useInlinedReferences', 'useHttpErrors'." ,
+              "paramType" : "query" ,
+              "required" : false ,
+              "allowMultiple" : false ,
+              "dataType" : "string"
+            }
+          ]
+        }
+      ]
+    }
+  ] ,
+  "models" : {
+    "Response" : {
+      "id" : "response" ,
+      "properties" : {
+        "request" : {
+          "type" : "request"
+        } ,
+        "error" : {
+          "type" : "APIResponseError"
+        } ,
+        "delayIndexes" : {
+          "items" : {
+            "$ref" : "delayIndex"
+          } ,
+          "type" : "array"
+        }
+      }
+    }
+  }
+}

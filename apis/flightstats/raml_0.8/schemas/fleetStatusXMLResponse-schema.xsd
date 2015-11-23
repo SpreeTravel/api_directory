@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="flightStatus">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="flightId" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="carrier" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="fs" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="iata" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="icao" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="phoneNumber" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="active" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="flightNumber" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="departureAirport" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="fs" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="iata" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="icao" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="faa" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="street1" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="street2" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="city" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="cityCode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="stateCode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="postalCode" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="countryCode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="countryName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="regionName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="timeZoneRegionName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="weatherZone" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="localTime" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="utcOffsetHours" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="latitude" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="longitude" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="elevationFeet" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="classification" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="active" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+              <xsd:element name="delayIndexUrl" minOccurs="0" maxOccurs="1" type="xsd:anyURI"/>
+              <xsd:element name="weatherUrl" minOccurs="0" maxOccurs="1" type="xsd:anyURI"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="arrivalAirport" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="fs" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="iata" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="icao" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="city" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="cityCode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="stateCode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="countryCode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="countryName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="regionName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="timeZoneRegionName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="localTime" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="utcOffsetHours" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="latitude" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="longitude" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="elevationFeet" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="classification" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="active" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+              <xsd:element name="delayIndexUrl" minOccurs="0" maxOccurs="1" type="xsd:anyURI"/>
+              <xsd:element name="weatherUrl" minOccurs="0" maxOccurs="1" type="xsd:anyURI"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="departureDate" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="dateLocal" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="dateUtc" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="arrivalDate" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="dateLocal" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="dateUtc" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="status" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="schedule" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="flightType" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="serviceClasses" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="restrictions" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="operationalTimes" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="publishedDeparture" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="dateLocal" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="dateUtc" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="publishedArrival" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="dateLocal" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="dateUtc" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="scheduledGateDeparture" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="dateLocal" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="dateUtc" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="actualGateDeparture" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="dateLocal" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="dateUtc" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="flightPlanPlannedDeparture" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="dateLocal" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="dateUtc" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="estimatedRunwayDeparture" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="dateLocal" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="dateUtc" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="actualRunwayDeparture" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="dateLocal" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="dateUtc" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="scheduledGateArrival" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="dateLocal" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="dateUtc" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="estimatedGateArrival" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="dateLocal" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="dateUtc" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="actualGateArrival" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="dateLocal" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="dateUtc" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="flightPlanPlannedArrival" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="dateLocal" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="dateUtc" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="estimatedRunwayArrival" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="dateLocal" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="dateUtc" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="actualRunwayArrival" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="dateLocal" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="dateUtc" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="codeshares" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="codeshare" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="carrier" minOccurs="0" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="fs" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                          <xsd:element name="iata" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                          <xsd:element name="icao" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                          <xsd:element name="name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                          <xsd:element name="active" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="flightNumber" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="relationship" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="flightDurations" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="scheduledBlockMinutes" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="blockMinutes" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="scheduledAirMinutes" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="airMinutes" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="scheduledTaxiOutMinutes" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="taxiOutMinutes" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="scheduledTaxiInMinutes" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="taxiInMinutes" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="airportResources" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="departureTerminal" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="departureGate" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="arrivalTerminal" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="arrivalGate" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="flightEquipment" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="scheduledEquipment" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="iata" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+                    <xsd:element name="name" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="turboProp" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+                    <xsd:element name="jet" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+                    <xsd:element name="widebody" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+                    <xsd:element name="regional" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="tailNumber" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="irregularOperations" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="irregularOperation" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="type" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="dateUtc" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+                    <xsd:element name="message" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

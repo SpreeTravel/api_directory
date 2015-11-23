@@ -1,0 +1,161 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "snapshot" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "status" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "status_reason" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "data" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "status" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "stack_user_project_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "environment" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "parameters" : {
+                  "type" : "object" ,
+                  "required" : false
+                } ,
+                "resource_registry" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "resources" : {
+                      "type" : "object" ,
+                      "required" : false
+                    }
+                  }
+                }
+              }
+            } ,
+            "template" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "heat_template_version" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "resources" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "volume" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "type" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "properties" : {
+                          "type" : "object" ,
+                          "required" : false ,
+                          "properties" : {
+                            "size" : {
+                              "type" : "number" ,
+                              "required" : false
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            } ,
+            "action" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "project_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "resources" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "volume" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "status" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "name" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "resource_data" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "backup_id" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    } ,
+                    "resource_id" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "action" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "type" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "metadata" : {
+                      "type" : "object" ,
+                      "required" : false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

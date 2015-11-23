@@ -1,0 +1,15 @@
+{
+  "message" : "SUCCESS" ,
+  "result" : [
+    {
+      "accessLevel" : "ADMIN" ,
+      "email" : "john.doe@smartsheet.com" ,
+      "id" : 5709073300645764
+    } , {
+      "accessLevel" : "ADMIN" ,
+      "email" : "jane.doe@smartsheet.com" ,
+      "id" : 3457273486960516
+    }
+  ] ,
+  "resultCode" : 0
+}

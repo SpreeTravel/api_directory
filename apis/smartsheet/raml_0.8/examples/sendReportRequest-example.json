@@ -1,0 +1,13 @@
+{
+  "to" : [
+    "john.doe@smartsheet.com" ,
+    "jane.doe@smartsheet.com"
+  ] ,
+  "subject" : "Check these rows out!" ,
+  "message" : "Here are the rows I mentioned in our meeting" ,
+  "ccMe" : false ,
+  "format" : "PDF" ,
+  "formatDetails" : {
+    "paperSize" : "A4"
+  }
+}

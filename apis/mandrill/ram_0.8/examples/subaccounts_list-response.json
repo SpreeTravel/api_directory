@@ -1,0 +1,14 @@
+[
+  {
+    "id": "cust-123",
+    "name": "ABC Widgets, Inc.",
+    "custom_quota": 42,
+    "status": "active",
+    "reputation": 42,
+    "created_at": "2013-01-01 15:30:27",
+    "first_sent_at": "2013-01-01 15:30:29",
+    "sent_weekly": 42,
+    "sent_monthly": 42,
+    "sent_total": 42
+  }
+]

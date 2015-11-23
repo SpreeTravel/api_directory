@@ -1,0 +1,22 @@
+{
+  "isGloballyExcludedByAddress" : "undefined" ,
+  "isGloballyExcludedByDomain" : "undefined" ,
+  "isEmailGroupUnsubscribed" : "false" ,
+  "isMasterExcluded" : "undefined" ,
+  "isSiteUnsubscribed" : "undefined" ,
+  "isEmailResend" : "undefined" ,
+  "hasBouncedBack" : "undefined" ,
+  "emailAddress" : "fred.sakr@eloqua.com" ,
+  "name" : "undefined" ,
+  "description" : "Eloqua" ,
+  "permissions" : "undefined" ,
+  "folderId" : "undefined" ,
+  "sourceTemplateId" : "undefined" ,
+  "createdBy" : "undefined" ,
+  "createdAt" : "undefined" ,
+  "updatedBy" : "undefined" ,
+  "updatedAt" : "undefined" ,
+  "accessedAt" : "undefined" ,
+  "scheduledFor" : "undefined" ,
+  "depth" : "minimal"
+}

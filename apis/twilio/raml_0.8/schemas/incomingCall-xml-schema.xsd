@@ -1,0 +1,44 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TwilioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IncomingPhoneNumber">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Sid"/>
+              <xs:element type="xs:string" name="AccountSid"/>
+              <xs:element type="xs:string" name="FriendlyName"/>
+              <xs:element type="xs:long" name="PhoneNumber"/>
+              <xs:element type="xs:anyURI" name="VoiceUrl"/>
+              <xs:element type="xs:string" name="VoiceMethod"/>
+              <xs:element type="xs:string" name="VoiceFallbackUrl"/>
+              <xs:element type="xs:string" name="VoiceFallbackMethod"/>
+              <xs:element type="xs:string" name="StatusCallback"/>
+              <xs:element type="xs:string" name="StatusCallbackMethod"/>
+              <xs:element type="xs:string" name="VoiceCallerIdLookup"/>
+              <xs:element type="xs:string" name="VoiceApplicationSid"/>
+              <xs:element type="xs:string" name="DateCreated"/>
+              <xs:element type="xs:string" name="DateUpdated"/>
+              <xs:element type="xs:string" name="SmsUrl"/>
+              <xs:element type="xs:string" name="SmsMethod"/>
+              <xs:element type="xs:string" name="SmsFallbackUrl"/>
+              <xs:element type="xs:string" name="SmsFallbackMethod"/>
+              <xs:element type="xs:string" name="SmsApplicationSid"/>
+              <xs:element name="Capabilities">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Voice"/>
+                    <xs:element type="xs:string" name="SMS"/>
+                    <xs:element type="xs:string" name="MMS"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:date" name="ApiVersion"/>
+              <xs:element type="xs:string" name="Uri"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

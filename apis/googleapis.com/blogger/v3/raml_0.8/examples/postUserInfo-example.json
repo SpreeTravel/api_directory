@@ -1,0 +1,11 @@
+{
+  "kind" : "blogger#postUserInfo" ,
+  "post" : "posts Resource" ,
+  "post_user_info" : {
+    "kind" : "blogger#postPerUserInfo" ,
+    "userId" : "string" ,
+    "blogId" : "string" ,
+    "postId" : "string" ,
+    "hasEditAccess" : "boolean"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : 
+    {
+      "type" : "object" ,
+      "properties" : {
+        "Code" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "LocalizedText" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  
+}

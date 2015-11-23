@@ -1,0 +1,19 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "astergdem" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "lng" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "lat" : {
+      "type" : "number" ,
+      "required" : false
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "first_name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "last_name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "address_line1" : {
+      "type" : "string" ,
+      "required" : true
+    } ,
+    "city" : {
+      "type" : "string" ,
+      "required" : true
+    } ,
+    "state" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "country" : {
+      "type" : "string" ,
+      "required" : true
+    } ,
+    "product_id" : {
+      "type" : "string" ,
+      "required" : true
+    } ,
+    "postal_code" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "shipping_method" : {
+      "type" : "string" ,
+      "required" : true
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "url_size_40_40" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "url_size_60_60" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "url_size_200_200" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

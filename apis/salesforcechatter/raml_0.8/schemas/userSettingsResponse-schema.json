@@ -1,0 +1,113 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "approvalPosts": {
+      "type": "boolean",
+      "required": false
+    },
+    "canFollow": {
+      "type": "boolean",
+      "required": false
+    },
+    "canModifyAllData": {
+      "type": "boolean",
+      "required": false
+    },
+    "canOwnGroups": {
+      "type": "boolean",
+      "required": false
+    },
+    "canViewAllData": {
+      "type": "boolean",
+      "required": false
+    },
+    "canViewAllGroups": {
+      "type": "boolean",
+      "required": false
+    },
+    "canViewAllUsers": {
+      "type": "boolean",
+      "required": false
+    },
+    "canViewCommunitySwitcher": {
+      "type": "boolean",
+      "required": false
+    },
+    "canViewFullUserProfile": {
+      "type": "boolean",
+      "required": false
+    },
+    "canViewPublicFiles": {
+      "type": "boolean",
+      "required": false
+    },
+    "currencySymbol": {
+      "type": "string",
+      "required": false
+    },
+    "externalUser": {
+      "type": "boolean",
+      "required": false
+    },
+    "fileSyncLimit": {
+      "type": "integer",
+      "required": false
+    },
+    "fileSyncStorageLimit": {
+      "type": "integer",
+      "required": false
+    },
+    "folderSyncLimit": {
+      "type": "integer",
+      "required": false
+    },
+    "hasAccessToInternalOrg": {
+      "type": "boolean",
+      "required": false
+    },
+    "hasChatter": {
+      "type": "boolean",
+      "required": false
+    },
+    "hasFileSync": {
+      "type": "boolean",
+      "required": false
+    },
+    "hasFileSyncManagedClientAutoUpdate": {
+      "type": "boolean",
+      "required": false
+    },
+    "hasRestDataApiAccess": {
+      "type": "boolean",
+      "required": false
+    },
+    "timeZone": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "gmtOffset": {
+          "type": "number",
+          "required": false
+        },
+        "name": {
+          "type": "string",
+          "required": false
+        }
+      }
+    },
+    "userDefaultCurrencyIsoCode": {
+      "type": "string",
+      "required": false
+    },
+    "userId": {
+      "type": "string",
+      "required": false
+    },
+    "userLocale": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

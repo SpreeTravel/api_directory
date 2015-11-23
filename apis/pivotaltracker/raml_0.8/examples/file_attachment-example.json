@@ -1,0 +1,14 @@
+{
+  "big_url" : "#" ,
+  "content_type" : "image/jpeg" ,
+  "created_at" : "2014-07-22T12:00:00Z" ,
+  "download_url" : "/file_attachments/300/download" ,
+  "filename" : "new-imperial-logo-6.jpg" ,
+  "id" : 300 ,
+  "kind" : "file_attachment" ,
+  "size" : 7683 ,
+  "thumbnail_url" : "#" ,
+  "thumbnailable" : true ,
+  "uploaded" : false ,
+  "uploader_id" : 101
+}

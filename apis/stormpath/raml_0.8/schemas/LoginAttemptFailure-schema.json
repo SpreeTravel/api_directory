@@ -1,0 +1,27 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "status" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "code" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "message" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "developerMessage" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "moreInfo" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

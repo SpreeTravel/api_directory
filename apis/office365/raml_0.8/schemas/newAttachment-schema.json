@@ -1,0 +1,80 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "@odata.type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Item" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "@odata.type" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Subject" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Body" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "ContentType" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "Content" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "Importance" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "From" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "Name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "Address" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "ToRecipients" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "Name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "Address" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

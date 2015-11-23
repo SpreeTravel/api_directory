@@ -1,0 +1,53 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "security_group_rule" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "direction" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "ethertype" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "port_range_max" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "port_range_min" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "protocol" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "remote_group_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "remote_ip_prefix" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "security_group_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "tenant_id" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

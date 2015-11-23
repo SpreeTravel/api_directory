@@ -1,0 +1,18 @@
+[
+  {
+    "op" : "replace" ,
+    "path" : "/" ,
+    "value" : {
+      "description" : "New Description" ,
+      "name" : "New Name" ,
+      "shipping_address" : {
+        "line1" : "StayBridge Suites" ,
+        "line2" : "Crok Street" ,
+        "city" : "San Jose" ,
+        "state" : "CA" ,
+        "postal_code" : "95112" ,
+        "country_code" : "US"
+      }
+    }
+  }
+]

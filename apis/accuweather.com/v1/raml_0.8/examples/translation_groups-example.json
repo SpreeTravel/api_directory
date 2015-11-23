@@ -1,0 +1,30 @@
+[
+  {
+    "Name" : "USWarningTypes" ,
+    "ID" : 1
+  } , {
+    "Name" : "CanadaWarningTypes" ,
+    "ID" : 2
+  } , {
+    "Name" : "LastActions" ,
+    "ID" : 3
+  } , {
+    "Name" : "DayOfWeek" ,
+    "ID" : 4
+  } , {
+    "Name" : "Icons" ,
+    "ID" : 5
+  } , {
+    "Name" : "WindDirection" ,
+    "ID" : 6
+  } , {
+    "Name" : "PressureTendency" ,
+    "ID" : 7
+  } , {
+    "Name" : "AirQualityTypes" ,
+    "ID" : 8
+  } , {
+    "Name" : "UCCWeatherText" ,
+    "ID" : 9
+  }
+]

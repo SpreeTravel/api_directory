@@ -1,0 +1,19 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "username" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "givenName" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "surname" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

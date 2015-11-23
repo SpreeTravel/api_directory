@@ -1,0 +1,71 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "kind" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "etag" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "summary" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "description" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "updated" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "timeZone" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "accessRole" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "defaultReminders" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "method" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "minutes" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    } ,
+    "nextPageToken" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "nextSyncToken" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "items" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "string"
+        }
+      ]
+    }
+  }
+}

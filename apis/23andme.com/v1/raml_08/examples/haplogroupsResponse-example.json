@@ -1,0 +1,20 @@
+{
+  "maternal_terminal_snps" : [
+    {
+      "rsid" : "i3001424" ,
+      "rcrs_position" : "15874"
+    } , {
+      "rsid" : "i5050411" ,
+      "rcrs_position" : "15874"
+    }
+  ] ,
+  "paternal_terminal_snps" : [
+    {
+      "rsid" : "i3000015" ,
+      "snp" : "M125"
+    }
+  ] ,
+  "maternal" : "D4e2" ,
+  "paternal" : "D2a1" ,
+  "id" : "c4480ba411939067"
+}

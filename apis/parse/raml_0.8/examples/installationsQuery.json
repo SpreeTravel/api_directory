@@ -1,0 +1,19 @@
+{
+	"results" : [ {
+		"deviceType" : "ios" ,
+		"deviceToken" :
+		"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef" ,
+		"channels" : [ "" ] ,
+		"createdAt" : "2012-04-28T17:41:09.106Z" ,
+		"updatedAt" : "2012-04-28T17:41:09.106Z" ,
+		"objectId" : "mrmBZvsErB"
+	} , {
+		"deviceType" : "ios" ,
+		"deviceToken" :
+		"fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210" ,
+		"channels" : [ "" ] ,
+		"createdAt" : "2012-04-30T01:52:57.975Z" ,
+		"updatedAt" : "2012-04-30T01:52:57.975Z" ,
+		"objectId" : "sGlvypFQcO"
+	} ]
+}

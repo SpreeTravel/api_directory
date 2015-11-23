@@ -1,0 +1,80 @@
+"/people/person/spouse_s": {
+  "valuetype" : "compound" ,
+  "values" : [
+    {
+      "text" : "1992-10-03 - Michelle Obama - Marriage - alexander - Marriage" ,
+      "lang" : "en" ,
+      "id" : "/m/02nqglv" ,
+      "creator" : "/user/spencermountain" ,
+      "timestamp" : "2010-02-11T23:02:42.001Z" ,
+      "property" : {
+        "/people/marriage/from" : {
+          "valuetype" : "datetime" ,
+          "values" : [
+            {
+              "text" : "1992-10-03" ,
+              "lang" : "" ,
+              "value" : "1992-10-03" ,
+              "creator" : "/user/aquebral" ,
+              "timestamp" : "2012-04-05T03:17:42.000Z"
+            }
+          ] ,
+          "count" : 1
+        } ,
+        "/people/marriage/spouse" : {
+          "valuetype" : "object" ,
+          "values" : [
+            {
+              "text" : "Michelle Obama" ,
+              "lang" : "en" ,
+              "id" : "/m/025s5v9" ,
+              "creator" : "/user/alexander" ,
+              "timestamp" : "2007-07-11T18:34:23.000Z"
+            }
+          ] ,
+          "count" : 2
+        } ,
+        "/people/marriage/type_of_union" : {
+          "valuetype" : "object" ,
+          "values" : [
+            {
+              "text" : "Marriage" ,
+              "lang" : "en" ,
+              "id" : "/m/04ztj" ,
+              "creator" : "/user/faye" ,
+              "timestamp" : "2008-10-03T07:10:49.000Z"
+            }
+          ] ,
+          "count" : 1
+        } ,
+        "/type/object/attribution" : {
+          "valuetype" : "object" ,
+          "values" : [
+            {
+              "text" : "alexander" ,
+              "lang" : "en" ,
+              "id" : "/m/022q403" ,
+              "creator" : "/user/alexander" ,
+              "timestamp" : "2007-07-11T18:34:23.000Z"
+            }
+          ] ,
+          "count" : 1
+        } ,
+        "/type/object/type" : {
+          "valuetype" : "object" ,
+          "values" : [
+            {
+              "text" : "Marriage" ,
+              "lang" : "en" ,
+              "id" : "/people/marriage" ,
+              "creator" : "/user/alexander" ,
+              "timestamp" : "2007-07-11T18:34:23.000Z"
+            }
+          ] ,
+          "count" : 1
+        }
+      }
+    }
+  ] ,
+  "count" : 1
+}

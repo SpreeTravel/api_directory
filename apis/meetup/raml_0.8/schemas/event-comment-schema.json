@@ -1,0 +1,109 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "comment": {
+      "required": false,
+      "type": "string"
+    },
+    "comment_url": {
+      "required": false,
+      "type": "string"
+    },
+    "event": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "event_url": {
+          "required": false,
+          "type": "string"
+        },
+        "id": {
+          "required": false,
+          "type": "integer"
+        },
+        "name": {
+          "required": false,
+          "type": "string"
+        },
+        "time": {
+          "required": false,
+          "type": "integer"
+        }
+      }
+    },
+    "event_comment_id": {
+      "required": false,
+      "type": "integer"
+    },
+    "event_diff_id": {
+      "required": false,
+      "type": "integer"
+    },
+    "event_id": {
+      "required": false,
+      "type": "integer"
+    },
+    "group_id": {
+      "required": false,
+      "type": "integer"
+    },
+    "in_reply_to": {
+      "required": false,
+      "type": "integer"
+    },
+    "like_count": {
+      "required": false,
+      "type": "integer"
+    },
+    "member_id": {
+      "required": false,
+      "type": "integer"
+    },
+    "member_name": {
+      "required": false,
+      "type": "string"
+    },
+    "member_photo": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "hires_link": {
+          "required": false,
+          "type": "string"
+        },
+        "photo_id": {
+          "required": false,
+          "type": "integer"
+        },
+        "photo_link": {
+          "required": false,
+          "type": "string"
+        },
+        "thumb_link": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    },
+    "notifications": {
+      "required": false,
+      "type": "string"
+    },
+    "replies": {
+      "required": false,
+      "type": "string"
+    },
+    "self": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "actions": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    }
+  }
+}

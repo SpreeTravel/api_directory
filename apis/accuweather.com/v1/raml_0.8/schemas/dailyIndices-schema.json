@@ -1,0 +1,51 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" :
+    {
+      "type" : "object" ,
+      "properties" : {
+        "Name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "ID" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "Ascending" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "LocalDateTime" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "EpochDateTime" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "Value" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "Category" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "CategoryValue" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "MobileLink" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Link" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+}

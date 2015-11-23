@@ -1,0 +1,38 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "message" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "result" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "accessLevel" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "email" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "id" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    } ,
+    "resultCode" : {
+      "type" : "number" ,
+      "required" : false
+    }
+  }
+}

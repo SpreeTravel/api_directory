@@ -1,0 +1,119 @@
+[
+  {
+    "Version" : 1 ,
+    "Key" : "133695" ,
+    "Type" : "City" ,
+    "Rank" : 53 ,
+    "LocalizedName" : "Montrouge" ,
+    "EnglishName" : "Montrouge" ,
+    "PrimaryPostalCode" : "" ,
+    "Region" : {
+      "ID" : "EUR" ,
+      "LocalizedName" : "Europe" ,
+      "EnglishName" : "Europe"
+    } ,
+    "Country" : {
+      "ID" : "FR" ,
+      "LocalizedName" : "France" ,
+      "EnglishName" : "France"
+    } ,
+    "AdministrativeArea" : {
+      "ID" : "92" ,
+      "LocalizedName" : "Seine Heights" ,
+      "EnglishName" : "Seine Heights" ,
+      "Level" : 1 ,
+      "LocalizedType" : "Department" ,
+      "EnglishType" : "Department" ,
+      "CountryID" : "FR"
+    } ,
+    "TimeZone" : {
+      "Code" : "CET" ,
+      "Name" : "Europe/Paris" ,
+      "GmtOffset" : 1 ,
+      "IsDaylightSaving" : false ,
+      "NextOffsetChange" : "2014-03-30T01:00:00Z"
+    } ,
+    "GeoPosition" : {
+      "Latitude" : 48.82 ,
+      "Longitude" : 2.32 ,
+      "Elevation" : {
+        "Metric" : {
+          "Value" : 76 ,
+          "Unit" : "m" ,
+          "UnitType" : 5
+        } ,
+        "Imperial" : {
+          "Value" : 249 ,
+          "Unit" : "ft" ,
+          "UnitType" : 0
+        }
+      }
+    } ,
+    "IsAlias" : false ,
+    "SupplementalAdminAreas" : [
+      {
+        "Level" : 2 ,
+        "LocalizedName" : "Antony" ,
+        "EnglishName" : "Antony"
+      }
+    ]
+  } , {
+    "Version" : 1 ,
+    "Key" : "133599" ,
+    "Type" : "City" ,
+    "Rank" : 53 ,
+    "LocalizedName" : "Bagnolet" ,
+    "EnglishName" : "Bagnolet" ,
+    "PrimaryPostalCode" : "" ,
+    "Region" : {
+      "ID" : "EUR" ,
+      "LocalizedName" : "Europe" ,
+      "EnglishName" : "Europe"
+    } ,
+    "Country" : {
+      "ID" : "FR" ,
+      "LocalizedName" : "France" ,
+      "EnglishName" : "France"
+    } ,
+    "AdministrativeArea" : {
+      "ID" : "93" ,
+      "LocalizedName" : "Seine-Saint-Denis" ,
+      "EnglishName" : "Seine-Saint-Denis" ,
+      "Level" : 1 ,
+      "LocalizedType" : "Department" ,
+      "EnglishType" : "Department" ,
+      "CountryID" : "FR"
+    } ,
+    "TimeZone" : {
+      "Code" : "CET" ,
+      "Name" : "Europe/Paris" ,
+      "GmtOffset" : 1 ,
+      "IsDaylightSaving" : false ,
+      "NextOffsetChange" : "2014-03-30T01:00:00Z"
+    } ,
+    "GeoPosition" : {
+      "Latitude" : 48.87 ,
+      "Longitude" : 2.42 ,
+      "Elevation" : {
+        "Metric" : {
+          "Value" : 109 ,
+          "Unit" : "m" ,
+          "UnitType" : 5
+        } ,
+        "Imperial" : {
+          "Value" : 358 ,
+          "Unit" : "ft" ,
+          "UnitType" : 0
+        }
+      }
+    } ,
+    "IsAlias" : false ,
+    "SupplementalAdminAreas" : [
+      {
+        "Level" : 2 ,
+        "LocalizedName" : "Bobigny" ,
+        "EnglishName" : "Bobigny"
+      }
+    ]
+  }
+]

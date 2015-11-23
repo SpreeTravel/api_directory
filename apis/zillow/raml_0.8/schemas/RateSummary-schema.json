@@ -1,0 +1,101 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "request" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "output" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "callback" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "message" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "text" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "code" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "response" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "today" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "thirtyYearFixed" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "thirtyYearFixedCount" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "fifteenYearFixed" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "fifteenYearFixedCount" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "fiveOneARM" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "fiveOneARMCount" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "lastWeek" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "thirtyYearFixed" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "thirtyYearFixedCount" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "fifteenYearFixed" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "fifteenYearFixedCount" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "fiveOneARM" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "fiveOneARMCount" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      }
+    }
+  }
+}

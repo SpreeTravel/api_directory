@@ -1,0 +1,10 @@
+{
+  "data": {
+    "tracking_domain_shorten_counts": 88,
+    "tz_offset": -4,
+    "unit": "day",
+    "units": -1
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

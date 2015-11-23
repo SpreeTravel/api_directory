@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="jobs">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="companyName" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="siteUrl" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="recruiterEmail" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="closeMissingReqs" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+        <xsd:element name="job" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="requiredFields" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="applyLink" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="briefDescription" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="description" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="category" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="jobId" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="jobLink" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="locationName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="locationCity" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="locationState" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="locationCountry" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="recruiterEmail" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                    <xsd:element name="title" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="customFields" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="customField1" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

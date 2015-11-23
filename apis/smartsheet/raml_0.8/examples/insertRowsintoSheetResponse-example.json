@@ -1,0 +1,45 @@
+{
+  "message" : "SUCCESS" ,
+  "result" : [
+    {
+      "cells" : [
+        {
+          "columnId" : 7960873114331012 ,
+          "type" : "CHECKBOX" ,
+          "value" : true
+        } , {
+          "columnId" : 642523719853956 ,
+          "displayValue" : "New status" ,
+          "type" : "TEXT_NUMBER" ,
+          "value" : "New status"
+        }
+      ] ,
+      "createdAt" : "2013-02-28T17:45:13-08:00" ,
+      "expanded" : true ,
+      "id" : 7670198317672324 ,
+      "modifiedAt" : "2013-02-28T17:45:13-08:00" ,
+      "rowNumber" : 1 ,
+      "sheetId" : 2331373580117892
+    } , {
+      "cells" : [
+        {
+          "columnId" : 7960873114331012 ,
+          "type" : "CHECKBOX" ,
+          "value" : true
+        } , {
+          "columnId" : 642523719853956 ,
+          "displayValue" : "New status" ,
+          "type" : "TEXT_NUMBER" ,
+          "value" : "New status"
+        }
+      ] ,
+      "createdAt" : "2013-02-28T17:45:13-08:00" ,
+      "expanded" : true ,
+      "id" : 2040698783459204 ,
+      "modifiedAt" : "2013-02-28T17:45:13-08:00" ,
+      "rowNumber" : 2 ,
+      "sheetId" : 2331373580117892
+    }
+  ] ,
+  "resultCode" : 0
+}

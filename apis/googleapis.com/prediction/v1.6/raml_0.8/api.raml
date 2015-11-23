@@ -1,0 +1,120 @@
+#%RAML 0.8
+title: Google Predicion
+version: v1.6
+baseUri: https://www.googleapis.com/prediction/{version}
+securitySchemes:
+  - oauth_2_0: !include securitySchemes/oauth_2_0.raml
+schemas:
+  - predictRequest: !include /schemas/predictRequest-schema.json
+  - predictResponse: !include /schemas/predictResponse-schema.json
+  - analyzeResponse: !include /schemas/analyzeResponse-schema.json
+  - trainedmodelResponse: !include /schemas/trainedmodelResponse-schema.json
+  - trainPredictionRequest: !include /schemas/trainPredictionRequest-schema.json
+  - trainPredictionResponse: !include /schemas/trainPredictionResponse-schema.json
+  - trainedmodelsResponse: !include /schemas/trainedmodelsResponse-schema.json
+  - trainedmodelPredictRequest: !include /schemas/trainedmodelPredictRequest-schema.json
+  - trainedmodelPredictResponse: !include /schemas/trainedmodelPredictResponse-schema.json
+  - updateModelRequest: !include /schemas/updateModelRequest-schema.json
+traits:
+  - standardQueryParameters: !include traits/standardQueryParameters.raml
+/projects/{project}: 
+  /hostedmodels/{hostedModelName}/predict: 
+    post: 
+      is: [ standardQueryParameters ]
+      description: Submit input and request an output against a hosted model.
+      body: 
+        application/json: 
+          schema: predictRequest
+          example: !include examples/predictRequest-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: predictResponse
+              example: !include examples/predictResponse-example.json
+  /trainedmodels: 
+    post: 
+      is: [ standardQueryParameters ]
+      description: Train a Prediction API model.
+      body: 
+        application/json: 
+          schema: trainPredictionRequest
+          example: !include examples/trainPredictionRequest-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: trainPredictionResponse
+              example: !include examples/trainPredictionResponse-example.json
+    /{id}: 
+      delete: 
+        is: [ standardQueryParameters ]
+        description: Delete a trained model.
+        responses: 
+          204: 
+      get: 
+        is: [ standardQueryParameters ]
+        description: Check training status of your model.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: trainedmodelResponse
+                example: !include examples/trainedmodelResponse-example.json
+      put: 
+        is: [ standardQueryParameters ]
+        description: Add new data to a trained model.
+        body: 
+          application/json: 
+            schema: updateModelRequest
+            example: !include examples/updateModelRequest-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: trainedmodelResponse
+                example: !include examples/trainedmodelResponse-example.json
+      /analyze: 
+        get: 
+          is: [ standardQueryParameters ]
+          description: Get analysis of the model and the data the model was trained on.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: analyzeResponse
+                  example: !include examples/analyzeResponse-example.json
+      /predict: 
+        post: 
+          is: [ standardQueryParameters ]
+          description: Submit model id and request a prediction.
+          body: 
+            application/json: 
+              schema: trainedmodelPredictRequest
+              example: !include examples/trainedmodelPredictRequest-example.json
+          responses: 
+            201: 
+              body: 
+                application/json: 
+                  schema: updateModelRequest
+                  example: !include examples/updateModelRequest-example.json
+    /list: 
+      get: 
+        is: [ standardQueryParameters ]
+        description: List available models.
+        queryParameters: 
+          maxResults: 
+            description: Maximum number of results to return.
+            type: integer
+            example: 10
+          pageToken: 
+            description: Pagination token.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: trainedmodelsResponse
+                example: !include examples/trainedmodelsResponse-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

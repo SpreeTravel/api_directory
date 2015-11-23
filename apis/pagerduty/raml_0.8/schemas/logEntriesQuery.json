@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "log_entries": {
+      "type": "array",
+      "required": false,
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "required": false
+            },
+            "type": {
+              "type": "string",
+              "required": false
+            },
+            "created_at": {
+              "type": "string",
+              "required": false
+            },
+            "note": {
+              "type": "string",
+              "required": false
+            },
+            "agent": {
+              "type": "object",
+              "required": false
+            },
+            "channel": {
+              "type": "object",
+              "required": false
+            }
+          }
+        }
+      }
+    },
+    "limit": {
+      "type": "number",
+      "required": false
+    },
+    "offset": {
+      "type": "number",
+      "required": false
+    },
+    "total": {
+      "type": "number",
+      "required": false
+    }
+  }
+}

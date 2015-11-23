@@ -1,0 +1,9 @@
+queryParameters: 
+  rate: 
+    description: The annual interest rate for the loan. If no rate is passed, we use the current 30 year fixed rate from Zillow Mortgage Marketplace.
+  amount: 
+    description: The requested loan amount.
+    required: true
+  terminmonths: 
+    description: The term of the loan in months. If omitted, a 360 month term is assumed.
+    default: 360

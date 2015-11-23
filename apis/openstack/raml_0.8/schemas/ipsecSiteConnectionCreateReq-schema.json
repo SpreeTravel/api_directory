@@ -1,0 +1,80 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "ipsec_site_connection" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "psk" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "initiator" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "ipsecpolicy_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "admin_state_up" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "peer_cidrs" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "string"
+            }
+          ]
+        } ,
+        "mtu" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "ikepolicy_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "dpd" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "action" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "interval" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "timeout" : {
+              "type" : "number" ,
+              "required" : false
+            }
+          }
+        } ,
+        "vpnservice_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "peer_address" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "peer_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

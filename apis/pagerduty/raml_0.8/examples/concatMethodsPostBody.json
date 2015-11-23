@@ -1,0 +1,8 @@
+{
+	"contact_method" : {
+		"type" : "phone" ,
+		"address" : "5551112222" ,
+		"label" : "Island Lair" ,
+		"country_code" : "1"
+	}
+}

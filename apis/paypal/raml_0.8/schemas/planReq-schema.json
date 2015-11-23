@@ -1,0 +1,133 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "description" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "payment_definitions" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "frequency" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "frequency_interval" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "amount" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "value" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "currency" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "cycles" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "charge_models" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "type" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "amount" : {
+                      "type" : "object" ,
+                      "required" : false ,
+                      "properties" : {
+                        "value" : {
+                          "type" : "string" ,
+                          "required" : false
+                        } ,
+                        "currency" : {
+                          "type" : "string" ,
+                          "required" : false
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    } ,
+    "merchant_preferences" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "setup_fee" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "value" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "currency" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "return_url" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "cancel_url" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "auto_bill_amount" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "initial_fail_amount_action" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "max_fail_attempts" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

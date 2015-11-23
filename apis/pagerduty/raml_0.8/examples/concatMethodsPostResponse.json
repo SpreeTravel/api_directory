@@ -1,0 +1,12 @@
+{
+	"contact_method" : {
+		"id" : "PSDKM6U" ,
+		"label" : "Island Lair" ,
+		"address" : "5551112222" ,
+		"user_id" : "PPSFHH7" ,
+		"type" : "phone" ,
+		"country_code" : 1 ,
+		"phone_number" : "5551112222" ,
+		"blacklisted" : false
+	}
+}

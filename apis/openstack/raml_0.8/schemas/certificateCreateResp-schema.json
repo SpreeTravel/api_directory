@@ -1,0 +1,21 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "certificate" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "data" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "private_key" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

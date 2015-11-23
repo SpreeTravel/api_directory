@@ -1,0 +1,15 @@
+[
+  {
+    "badge_id": 1,
+    "comment_id": 1,
+    "creation_date": 1,
+    "detail": "some string",
+    "link": "some string",
+    "post_id": 1,
+    "post_type": "some string",
+    "suggested_edit_id": 1,
+    "timeline_type": "some string",
+    "title": "some string",
+    "user_id": 1
+  }
+]

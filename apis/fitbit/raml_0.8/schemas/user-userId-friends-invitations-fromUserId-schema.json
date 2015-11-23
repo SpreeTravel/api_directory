@@ -1,0 +1,10 @@
+{
+    "": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+    	"accept": {
+    		"description": "Accept or reject an invite.",    		
+    		"type": "boolean"
+    	}
+    }
+}    

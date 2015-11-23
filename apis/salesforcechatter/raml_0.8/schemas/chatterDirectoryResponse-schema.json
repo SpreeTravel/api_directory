@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "feeds": {
+      "type": "string",
+      "required": false
+    },
+    "groups": {
+      "type": "string",
+      "required": false
+    },
+    "organization": {
+      "type": "string",
+      "required": false
+    },
+    "users": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

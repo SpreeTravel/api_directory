@@ -1,0 +1,23 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TwilioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Participant">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="CallSid"/>
+              <xs:element type="xs:string" name="ConferenceSid"/>
+              <xs:element type="xs:string" name="AccountSid"/>
+              <xs:element type="xs:string" name="Muted"/>
+              <xs:element type="xs:string" name="EndConferenceOnExit"/>
+              <xs:element type="xs:string" name="StartConferenceOnEnter"/>
+              <xs:element type="xs:string" name="DateCreated"/>
+              <xs:element type="xs:string" name="DateUpdated"/>
+              <xs:element type="xs:string" name="Uri"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

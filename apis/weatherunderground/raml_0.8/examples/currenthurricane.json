@@ -1,0 +1,320 @@
+{
+  "response": {
+    "version": "0.1",
+    "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
+    "features": {
+      "currenthurricane": 1
+    }
+  },
+  "currenthurricane": [
+    {
+      "stormInfo": {
+        "stormName": "Daniel",
+        "stormName_Nice": "Hurricane Daniel",
+        "stormNumber": "ep201204"
+      },
+      "Current": {
+        "lat": 15.4,
+        "lon": -130.7,
+        "SaffirSimpsonCategory": 1,
+        "Category": "Hurricane",
+        "Time": {
+          "hour": "17",
+          "hour_padded": "17",
+          "year": "2012",
+          "mon": "7",
+          "mon_padded": "07",
+          "mon_abbrev": "Jul",
+          "mday": "9",
+          "mday_padded": "09",
+          "yday": "190",
+          "isdst": "1",
+          "epoch": "1341867600",
+          "pretty": "5:00 PM EDT on July 09, 2012",
+          "civil": "5:00 PM",
+          "month_name": "July",
+          "month_name_abbrev": "Jul",
+          "weekday_name": "Monday",
+          "weekday_name_night": "Monday Night",
+          "weekday_name_abbrev": "Mon",
+          "weekday_name_unlang": "Monday",
+          "weekday_name_night_unlang": "Monday Night",
+          "ampm": "PM"
+        },
+        "TimeGMT": {
+          "hour": "21",
+          "hour_padded": "21",
+          "year": "2012",
+          "mon": "7",
+          "mon_padded": "07",
+          "mon_abbrev": "Jul",
+          "mday": "9",
+          "mday_padded": "09",
+          "yday": "190",
+          "epoch": "1341867600",
+          "pretty": "9:00 PM GMT on July 09, 2012",
+          "civil": "9:00 PM",
+          "month_name": "July",
+          "month_name_abbrev": "Jul",
+          "weekday_name": "Monday",
+          "weekday_name_night": "Monday Night",
+          "weekday_name_abbrev": "Mon",
+          "weekday_name_unlang": "Monday",
+          "weekday_name_night_unlang": "Monday Night",
+          "ampm": "PM"
+        },
+        "WindSpeed": {
+          "Kts": 65,
+          "Mph": 75,
+          "Kph": 120
+        },
+        "WindGust": {
+          "Kts": 80,
+          "Mph": 90,
+          "Kph": 120
+        },
+        "Fspeed": {
+          "Kts": 14,
+          "Mph": 16,
+          "Kph": 25
+        },
+        "Movement": {
+          "Degrees": "275",
+          "Text": "W"
+        },
+        "Pressure": {
+          "mb": 992,
+          "inches": 29.28
+        },
+        "WindQuadrants": {
+          "comment": "Use these keys to determine what quadrants exist in the WindRadius object they could be N S E W (representing quadrants rotated 45 degrees x) or NE SE SW NW (representing the typical + quadrant system)",
+          "quad_1": "NE",
+          "quad_2": "SE",
+          "quad_3": "SW",
+          "quad_4": "NW"
+        },
+        "WindRadius": {
+          "34": {
+            "NE": 90,
+            "SE": 60,
+            "SW": 60,
+            "NW": 90
+          },
+          "50": {
+            "NE": 40,
+            "SE": 30,
+            "SW": 30,
+            "NW": 40
+          },
+          "64": {
+            "NE": 20,
+            "SE": 0,
+            "SW": 0,
+            "NW": 20
+          }
+        },
+        "SeaQuadrants": {
+          "comment": "Use these keys to determine what quadrants exist in the SeaRadius object they could be N S E W (representing quadrants rotated 45 degrees x) or NE SE SW NW (representing the typical + quadrant system)",
+          "quad_1": "NE",
+          "quad_2": "SE",
+          "quad_3": "SW",
+          "quad_4": "NW"
+        },
+        "SeaRadius": {
+          "12": {
+            "NE": 180,
+            "SE": 75,
+            "SW": 90,
+            "NW": 150
+          }
+        }
+      },
+      "forecast": [
+        {
+          "ForecastHour": "12HR",
+          "SaffirSimpsonCategory": 0,
+          "lat": 15.5,
+          "lon": -133.0,
+          "Category": "Tropical Storm",
+          "Time": {
+            "hour": "2",
+            "hour_padded": "02",
+            "year": "2012",
+            "mon": "7",
+            "mon_padded": "07",
+            "mon_abbrev": "Jul",
+            "mday": "10",
+            "mday_padded": "10",
+            "yday": "191",
+            "isdst": "1",
+            "epoch": "1341900000",
+            "pretty": "2:00 AM EDT on July 10, 2012",
+            "civil": "2:00 AM",
+            "month_name": "July",
+            "month_name_abbrev": "Jul",
+            "weekday_name": "Tuesday",
+            "weekday_name_night": "Tuesday Night",
+            "weekday_name_abbrev": "Tue",
+            "weekday_name_unlang": "Tuesday",
+            "weekday_name_night_unlang": "Tuesday Night",
+            "ampm": "AM"
+          },
+          "TimeGMT": {
+            "hour": "6",
+            "hour_padded": "06",
+            "year": "2012",
+            "mon": "7",
+            "mon_padded": "07",
+            "mon_abbrev": "Jul",
+            "mday": "10",
+            "mday_padded": "10",
+            "yday": "191",
+            "epoch": "1341900000",
+            "pretty": "6:00 AM GMT on July 10, 2012",
+            "civil": "6:00 AM",
+            "month_name": "July",
+            "month_name_abbrev": "Jul",
+            "weekday_name": "Tuesday",
+            "weekday_name_night": "Tuesday Night",
+            "weekday_name_abbrev": "Tue",
+            "weekday_name_unlang": "Tuesday",
+            "weekday_name_night_unlang": "Tuesday Night",
+            "ampm": "AM"
+          },
+          "WindSpeed": {
+            "Kts": 55,
+            "Mph": 65,
+            "Kph": 100
+          },
+          "WindGust": {
+            "Kts": 65,
+            "Mph": 75,
+            "Kph": 120
+          },
+          "WindQuadrants": {
+            "comment": "Use these keys to determine what quadrants exist in the WindRadius object they could be N S E W (representing quadrants rotated 45 degrees x) or NE SE SW NW (representing the typical + quadrant system)",
+            "quad_1": "NE",
+            "quad_2": "SE",
+            "quad_3": "SW",
+            "quad_4": "NW"
+          },
+          "WindRadius": {
+            "34": {
+              "NE": 80,
+              "SE": 50,
+              "SW": 50,
+              "NW": 80
+            },
+            "50": {
+              "NE": 30,
+              "SE": 0,
+              "SW": 0,
+              "NW": 30
+            },
+            "64": {
+              "NE": null,
+              "SE": null,
+              "SW": null,
+              "NW": null
+            }
+          }
+        },
+        {
+          "ForecastHour": "24HR",
+          "SaffirSimpsonCategory": 0,
+          "lat": 15.5,
+          "lon": -136.0,
+          "Category": "Tropical Storm",
+          "Time": {
+            "hour": "14",
+            "hour_padded": "14",
+            "year": "2012",
+            "mon": "7",
+            "mon_padded": "07",
+            "mon_abbrev": "Jul",
+            "mday": "10",
+            "mday_padded": "10",
+            "yday": "191",
+            "isdst": "1",
+            "epoch": "1341943200",
+            "pretty": "2:00 PM EDT on July 10, 2012",
+            "civil": "2:00 PM",
+            "month_name": "July",
+            "month_name_abbrev": "Jul",
+            "weekday_name": "Tuesday",
+            "weekday_name_night": "Tuesday Night",
+            "weekday_name_abbrev": "Tue",
+            "weekday_name_unlang": "Tuesday",
+            "weekday_name_night_unlang": "Tuesday Night",
+            "ampm": "PM"
+          },
+          "TimeGMT": {
+            "hour": "18",
+            "hour_padded": "18",
+            "year": "2012",
+            "mon": "7",
+            "mon_padded": "07",
+            "mon_abbrev": "Jul",
+            "mday": "10",
+            "mday_padded": "10",
+            "yday": "191",
+            "epoch": "1341943200",
+            "pretty": "6:00 PM GMT on July 10, 2012",
+            "civil": "6:00 PM",
+            "month_name": "July",
+            "month_name_abbrev": "Jul",
+            "weekday_name": "Tuesday",
+            "weekday_name_night": "Tuesday Night",
+            "weekday_name_abbrev": "Tue",
+            "weekday_name_unlang": "Tuesday",
+            "weekday_name_night_unlang": "Tuesday Night",
+            "ampm": "PM"
+          },
+          "WindSpeed": {
+            "Kts": 45,
+            "Mph": 50,
+            "Kph": 85
+          },
+          "WindGust": {
+            "Kts": 55,
+            "Mph": 65,
+            "Kph": 100
+          },
+          "WindQuadrants": {
+            "comment": "Use these keys to determine what quadrants exist in the WindRadius object they could be N S E W (representing quadrants rotated 45 degrees x) or NE SE SW NW (representing the typical + quadrant system)",
+            "quad_1": "NE",
+            "quad_2": "SE",
+            "quad_3": "SW",
+            "quad_4": "NW"
+          },
+          "WindRadius": {
+            "34": {
+              "NE": 60,
+              "SE": 40,
+              "SW": 40,
+              "NW": 60
+            },
+            "50": {
+              "NE": null,
+              "SE": null,
+              "SW": null,
+              "NW": null
+            },
+            "64": {
+              "NE": null,
+              "SE": null,
+              "SW": null,
+              "NW": null
+            }
+          }
+        }
+      ],
+      "ExtendedForecast": [
+        {
+          "ForecastHour": "4DAY"
+        }
+      ],
+      "track": ""
+    }
+  ]
+}

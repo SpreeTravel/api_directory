@@ -1,0 +1,8 @@
+usage: Filter by any element
+description: |
+  Appending a where querystring parameter to the endpoint URL will restrict the amount of data being returned.
+queryParameters: 
+  where: 
+    description: |
+      The "where" parameter can reference any XML element in the resulting response, including all nested XML elements. It should be encoded using percent encoding before it is appended to the URL.
+    example: 'Contact.Name=="Basket Case" AND Type=="ACCREC" AND STATUS=="AUTHORISED"'

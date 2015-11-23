@@ -1,0 +1,22 @@
+{
+  "total_results" : 60 ,
+  "total_pages" : 2 ,
+  "image_set_count" : 35 ,
+  "page" : 1 ,
+  "sets" : [
+    {
+      "id" : 6009523 ,
+      "url" : "http://quizlet.com/6009523/french-animals-30-flash-cards/" ,
+      "title" : "french animals 3.0" ,
+      "created_by" : "catchdave" ,
+      "term_count" : 13 ,
+      "created_date" : 1310497102 ,
+      "modified_date" : 1310497363 ,
+      "has_images" : true ,
+      "subjects" : [
+        "french" ,
+        "animals"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="quota_set">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="cores" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="floating_ips" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="fixed_ips" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="injected_file_content_bytes" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="injected_file_path_bytes" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="injected_files" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="instances" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="key_pairs" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="metadata_items" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="ram" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="security_group_rules" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+        <xsd:element name="security_groups" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,23 @@
+[
+  {
+    "type" : "FULL" ,
+    "created_at" : "2013-01-17T01:33:23Z" ,
+    "processed_at" : "2013-01-17T01:33:23Z" ,
+    "reason" : "Returned Goods" ,
+    "refunded_money" : {
+      "currency_code" : "USD" ,
+      "amount" : 5981
+    } ,
+    "payment_id" : "Jq74mCczmFXk1tC10GB"
+  } , {
+    "type" : "FULL" ,
+    "created_at" : "2013-01-17T01:33:23Z" ,
+    "processed_at" : "2013-01-17T01:33:23Z" ,
+    "reason" : "Returned Goods" ,
+    "refunded_money" : {
+      "currency_code" : "USD" ,
+      "amount" : 5981
+    } ,
+    "payment_id" : "Jq74mCczmFXk1tC10GB"
+  }
+]

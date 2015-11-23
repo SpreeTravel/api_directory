@@ -1,0 +1,30 @@
+{
+  "data": {
+    "referring_domains": [
+      {
+        "clicks": 1129,
+        "domain": "direct"
+      },
+      {
+        "clicks": 72,
+        "domain": "twitter.com",
+        "url": "http://twitter.com/"
+      },
+      {
+        "clicks": 56,
+        "domain": "news.ycombinator.com",
+        "url": "http://news.ycombinator.com/"
+      },
+      {
+        "clicks": 26,
+        "domain": "www.facebook.com",
+        "url": "http://www.facebook.com/"
+      }
+    ],
+    "tz_offset": -5,
+    "unit": "day",
+    "units": -1
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

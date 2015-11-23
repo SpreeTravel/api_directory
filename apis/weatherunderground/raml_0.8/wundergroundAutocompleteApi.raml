@@ -1,0 +1,95 @@
+#%RAML 0.8
+---
+title: Weather Underground AutoComplete
+version: v1
+baseUri: http://autocomplete.wunderground.com
+schemas:
+  - autocomplete: !include schemas/autocomplete-schema.json
+
+/aq:
+  get:
+    description: |
+      Returns a list of locations or hurricanes which match against a partial query. For example, searching for San F will return San Francisco, California, San Fernando del Valle de Catamarca, Argentina, and San Felipe de Puerto Plata, Dominican Republic, among others.
+  
+      The request options include the ability to query for cities, hurricanes, or both. The results can be used to form Weather API queries or to link directly to wunderground resources.
+      
+      This feature does not require an API key.
+      
+      #Examples
+      http://autocomplete.wunderground.com/aq?query=San%20F
+      http://autocomplete.wunderground.com/aq?query=San%20F&c=US
+      http://autocomplete.wunderground.com/aq?query=Kat&h=1&cities=0
+      http://autocomplete.wunderground.com/aq?query=Katr&h=1
+      (See description of the response.)
+    queryParameters:
+      query:
+        description: |
+          #query
+          The search string. Usually a partial location or hurricane name.
+        required: true
+        type: string
+      format:
+        description: |
+          #format
+          Specifies response format. Possible values: JSON or XML. Default: JSON.
+          Optional.
+        required: false
+        type: string
+      c:
+        description: |
+          #c
+          Specify country code. Example: c=US.
+          Optional.
+        required: false
+        type: string
+      h:
+        description: |
+          #h
+          Include hurricanes in results: h=1.
+          Optional.
+        required: false
+        type: string
+      cities:
+        description: |
+          #cities
+          Include cities in the results. This is the default behavior. To remove cities from results, cities=0.
+          Optional.
+        required: false
+        type: string
+      cb:
+        description: |
+          #cb
+          JSONP callback method name.
+          Optional.
+        required: false
+        type: string
+    responses:
+      200:
+        description: |
+          The response will be a JSON-encoded object.
+          |name|description|
+          |-|
+          |RESULTS|Type: array. JSON type: array. The official API documentation provides no description. |
+          |RESULTS.item|Type: object. JSON type: object. The official API documentation provides no description. |
+          |RESULTS.item.c|Type: optional. JSON type: string. Specify country code. Example: c=US. |
+          |RESULTS.item.l|Type: unknown. JSON type: string. URL path and query string for result. This can be used to construct full wunderground URLs and API requests. See Using Results. |
+          |RESULTS.item.name|Type: unknown. JSON type: string. Name of city or hurricane. |
+          |RESULTS.item.type|Type: unknown. JSON type: string. hurricanes or cityIndicates if item is a hurricane or city.. |
+          |RESULTS.item.tz|Type: unknown. JSON type: string. (city only). |
+          |RESULTS.item.tzs|Type: unknown. JSON type: string. (city only). |
+          |RESULTS.item.zmw|Type: unknown. JSON type: string. (city only). |
+          |RESULTS.item.lat|Type: unknown. JSON type: string. (city only). |
+          |RESULTS.item.lon|Type: unknown. JSON type: string. (city only). |
+          |RESULTS.item.date|Type: unknown. JSON type: string. (hurricane only). |
+          |RESULTS.item.strmnum|Type: unknown. JSON type: string. (hurricane only). |
+          |RESULTS.item.basin|Type: unknown. JSON type: string. (hurricane only). |
+          |RESULTS.item.damage|Type: unknown. JSON type: string. (hurricane only). |
+          
+          Each autocomplete result object has an l field (short for link) that can be used for constructing wunderground URLs or API calls.
+        body:
+          application/json:
+            example: !include examples/autocomplete.json
+            schema: autocomplete
+documentation: 
+  - title: Headline
+    content: !include docs/wundergroundAutocompleteApi/headline.md

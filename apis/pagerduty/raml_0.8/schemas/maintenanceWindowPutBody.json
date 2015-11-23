@@ -1,0 +1,28 @@
+{
+	"type" : "object" ,
+	"required" : true ,
+	"$schema" : "http://json-schema.org/draft-03/schema" ,
+	"properties" : {
+		"start_time" : {
+			"type" : "string" ,
+			"required" : false
+		} ,
+		"end_time" : {
+			"type" : "string" ,
+			"required" : false
+		} ,
+		"description" : {
+			"type" : "string" ,
+			"required" : false
+		} ,
+		"service_ids" : {
+			"type" : "array" ,
+			"required" : false ,
+			"items" : 
+				{
+					"type" : "string"
+				}
+			
+		}
+	}
+}

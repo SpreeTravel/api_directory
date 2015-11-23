@@ -1,0 +1,17 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "add_host" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "host" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

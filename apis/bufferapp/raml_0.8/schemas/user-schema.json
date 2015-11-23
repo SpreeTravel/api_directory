@@ -1,0 +1,43 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "_id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "activity_at" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "created_at" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "plan" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "referral_link" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "referral_token" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "secret_email" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "timezone" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

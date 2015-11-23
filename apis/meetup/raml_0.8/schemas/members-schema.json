@@ -1,0 +1,221 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "results": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "bio": {
+            "required": false,
+            "type": "string"
+          },
+          "birthday": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "day": {
+                "required": false,
+                "type": "string"
+              },
+              "month": {
+                "required": false,
+                "type": "integer"
+              },
+              "year": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "country": {
+            "required": false,
+            "type": "string"
+          },
+          "city": {
+            "required": false,
+            "type": "string"
+          },
+          "state": {
+            "required": false,
+            "type": "integer"
+          },
+          "email": {
+            "required": false,
+            "type": "integer"
+          },
+          "gender": {
+            "required": false,
+            "type": "string"
+          },
+          "hometown": {
+            "required": false,
+            "type": "string"
+          },
+          "id": {
+            "required": false,
+            "type": "integer"
+          },
+          "joined": {
+            "required": false,
+            "type": "integer"
+          },
+          "lang": {
+            "required": false,
+            "type": "string"
+          },
+          "lat": {
+            "required": false,
+            "type": "number"
+          },
+          "lon": {
+            "required": false,
+            "type": "number"
+          },
+          "link": {
+            "required": false,
+            "type": "string"
+          },
+          "membership_count": {
+            "required": false,
+            "type": "integer"
+          },
+          "messagable": {
+            "required": false,
+            "type": "string"
+          },
+          "messaging_pref": {
+            "required": false,
+            "type": "string"
+          },
+          "name": {
+            "required": false,
+            "type": "string"
+          },
+          "other_services": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "[service-name]": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "required": false,
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "photo": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "highres_link": {
+                "required": false,
+                "type": "string"
+              },
+              "photo_id": {
+                "required": false,
+                "type": "integer"
+              },
+              "photo_link": {
+                "required": false,
+                "type": "string"
+              },
+              "thumb_link": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "photo_url": {
+            "required": false,
+            "type": "string"
+          },
+          "photos": {
+            "required": false,
+            "type": "string"
+          },
+          "privacy": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "bio": {
+                "required": false,
+                "type": "string"
+              },
+              "facebook": {
+                "required": false,
+                "type": "string"
+              },
+              "groups": {
+                "required": false,
+                "type": "string"
+              },
+              "photos": {
+                "required": false,
+                "type": "string"
+              },
+              "topics": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "reachable": {
+            "required": false,
+            "type": "string"
+          },
+          "self": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "common": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                  "friends": {
+                    "required": false,
+                    "type": "string"
+                  },
+                  "groups": {
+                    "required": false,
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "topics": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "id": {
+                "required": false,
+                "type": "integer"
+              },
+              "name": {
+                "required": false,
+                "type": "string"
+              },
+              "urlkey": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "visited": {
+            "required": false,
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}

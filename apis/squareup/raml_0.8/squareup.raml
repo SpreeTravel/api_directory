@@ -1,0 +1,562 @@
+#%RAML 0.8
+title: Squareup
+version: v1
+baseUri: https://connect.squareup.com/{version}
+mediaType: application/json
+securitySchemes: 
+  - oauth_2_0: !include securitySchemes/oauth_2_0.raml
+schemas:
+  - error: !include schemas/error-schema.json
+  - payments: !include schemas/payments-schema.json
+  - payment: !include schemas/payment-schema.json
+  - settlements: !include schemas/settlements-schema.json
+  - settlement: !include schemas/settlement-schema.json
+  - refundReq: !include schemas/refundReq-schema.json
+  - refund: !include schemas/refund-schema.json
+  - refunds: !include schemas/refunds-schema.json
+  - merchant: !include schemas/merchant-schema.json
+  - bankAccounts: !include schemas/bankAccounts-schema.json
+  - bankAccount: !include schemas/bankAccount-schema.json
+  - itemReq: !include schemas/itemReq-schema.json
+  - items: !include schemas/items-schema.json
+  - createImage: !include schemas/createImage-schema.json
+  - feeReq: !include schemas/feeReq-schema.json
+  - fee: !include schemas/fee-schema.json
+  - fees: !include schemas/fees-schema.json
+  - success: !include schemas/success-schema.json
+  - pageReq: !include schemas/pageReq-schema.json
+  - page: !include schemas/page-schema.json
+  - pages: !include schemas/pages-schema.json
+  - pageCellReq: !include schemas/pageCellReq-schema.json
+  - pageCell: !include schemas/pageCell-schema.json
+  - batchRequest: !include schemas/batchRequest-schema.json
+  - batchResponse: !include schemas/batchResponse-schema.json
+  - merchantBusiness: !include schemas/merchantBusiness-schema.json
+  - locations: !include schemas/locations-schema.json
+  - item: !include schemas/item-schema.json
+  - itemVariationReq: !include schemas/itemVariationReq-schema.json
+  - itemVariation: !include schemas/itemVariation-schema.json
+  - inventoryEntrys: !include schemas/inventoryEntrys-schema.json
+  - inventoryEntryReq: !include schemas/inventoryEntryReq-schema.json
+  - inventoryEntry: !include schemas/inventoryEntry-schema.json
+  - modifierListReq: !include schemas/modifierListReq-schema.json
+  - modifierList: !include schemas/modifierList-schema.json
+  - modifierLists: !include schemas/modifierLists-schema.json
+  - modifierOptionReq: !include schemas/modifierOptionReq-schema.json
+  - modifierOption: !include schemas/modifierOption-schema.json
+  - categoryReq: !include schemas/categoryReq-schema.json
+  - category: !include schemas/category-schema.json
+  - categories: !include schemas/categories-schema.json
+  - discountReq: !include schemas/discountReq-schema.json
+  - discount: !include schemas/discount-schema.json
+  - discounts: !include schemas/discounts-schema.json
+resourceTypes:
+  - basic: !include resourceTypes/basic.raml
+traits:
+  - successable: !include traits/successable.raml
+  - listable: !include traits/listable.raml
+  - dateRangeable: !include traits/dateRangeable.raml
+  - responseable: !include traits/responseable.raml
+  - paginatable: !include traits/paginatable.raml
+securedBy: [ oauth_2_0 ]
+/{merchant_id}: 
+  uriParameters: 
+    merchant_id: 
+      displayName: merchant_id
+      description: "If you haven't, specify 'me' for the Connect API to automatically determine your merchant ID based on your request's access token."
+      required: true
+  get: 
+    description: "Provides a merchant's account information, such as business name and email address."
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: merchant
+            example: !include examples/merchant-example.json
+  /payments: 
+    type: basic
+    get: 
+      is: [ dateRangeable , listable , paginatable ]
+      description: "Provides summary information for all payments taken by a merchant or any of the merchant's mobile staff during a date range."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: payments
+              example: !include examples/payments-example.json
+    /{payment_id}: 
+      get: 
+        description: Provides comprehensive information for a single payment.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: payment
+                example: !include examples/payment-example.json
+  /settlements: 
+    get: 
+      is: [ dateRangeable , listable , paginatable ]
+      description: "Provides summary information for all deposits and withdrawals initiated by Square to a merchant's bank account during a date range."
+      queryParameters: 
+        status: 
+          description: Provide this parameter to retrieve only settlements with a particular status
+          enum: [ SENT , FAILED ]
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: settlements
+              example: !include examples/settlements-example.json
+    /{settlement_id}: 
+      get: 
+        description: "Provides comprehensive information for a single settlement, including the entries that contribute to the settlement's total."
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: settlement
+                example: !include examples/settlement-example.json
+  /refunds: 
+    post: 
+      description: ""
+      body: 
+        application/json: 
+          schema: refundReq
+          example: !include examples/refundReq-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: refund
+              example: !include examples/refund-example.json
+    get: 
+      is: [ dateRangeable , listable , paginatable ]
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: refunds
+              example: !include examples/refunds-example.json
+    delete: 
+      is: [ dateRangeable , listable , paginatable ]
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: refunds
+              example: !include examples/refunds-example.json
+  /orders: 
+    get: 
+      is: [ listable , paginatable ]
+      responses: 
+        200: 
+          body: 
+            application/json: 
+    /{order_id}: 
+      get: 
+        description: "Provides comprehensive information for a single Square Market order, including the order's history."
+        responses: 
+          200: 
+            body: 
+              application/json: 
+      put: 
+        description: Updates the details of a Square Market order.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+  /bank-accounts: 
+    get: 
+      description: "Provides non-confidential details for all of a merchant's associated bank accounts."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: bankAccounts
+              example: !include examples/bankAccounts-example.json
+    /{bank_account_id}: 
+      get: 
+        description: "Provides non-confidential details for a merchant's associated bank account."
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: bankAccount
+                example: !include examples/bankAccount-example.json
+  /items: 
+    post: 
+      description: Creates an item and at least one variation for it.
+      body: 
+        application/json: 
+          schema: itemReq
+          example: !include examples/itemReq-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: item
+              example: !include examples/item-example.json
+    get: 
+      description: "Provides summary information for all of a merchant's items."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: items
+              example: !include examples/items-example.json
+    /{item_id}: 
+      get: 
+        description: Provides the details for a single item, including associated modifier lists and fees.
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: itemReq
+                example: !include examples/item-example.json
+      put: 
+        description: Modifies the core details of an existing item.
+        body: 
+          application/json: 
+            schema: itemReq
+            example: !include examples/itemReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: item
+                example: !include examples/item-example.json
+      delete: 
+        is: [ successable ]
+        description: Deletes an existing item and all item variations associated with it.
+      /image: 
+        post: 
+          description: Uploads a JPEG or PNG image and sets it as the master image for an item.
+          body: 
+            multipart/form-data: 
+              formParameters: 
+                image_data: 
+                  description: "The image's binary data."
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: createImage
+                  example: !include examples/createImage-example.json
+      /variations: 
+        post: 
+          description: Creates an item variation for an existing item.
+          body: 
+            application/json: 
+              schema: itemVariationReq
+              example: !include examples/itemVariationReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: itemVariation
+                  example: !include examples/itemVariation-example.json
+        /{variation_id}: 
+          put: 
+            description: Modifies the details of an existing item variation.
+            body: 
+              application/json: 
+                schema: itemVariationReq
+                example: !include examples/itemVariationReq-example.json
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: itemVariation
+                    example: !include examples/itemVariation-example.json
+          delete: 
+            is: [ successable ]
+      /fees/{fee_id}: 
+        put: 
+          description: Associates a fee with an item, meaning the fee is automatically applied to the item in Square Register.
+        delete: 
+          description: Removes a fee assocation from an item, meaning the fee is no longer automatically applied to the item in Square Register.
+      /modifier-lists/{modifier_list_id}: 
+        put: 
+          description: Associates a modifier list with an item, meaning modifier options from the list can be applied to the item.
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: item
+        delete: 
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: item
+  /inventory: 
+    get: 
+      description: "Provides inventory information for all of a merchant's inventory-enabled item variations."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: inventoryEntrys
+              example: !include examples/inventoryEntrys-example.json
+    /{variation_id}: 
+      post: 
+        description: "Adjusts an item variation's current available inventory."
+        body: 
+          application/json: 
+            schema: inventoryEntryReq
+            example: !include examples/inventoryEntryReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: inventoryEntry
+                example: !include examples/inventoryEntry-example.json
+  /modifier-lists: 
+    post: 
+      description: Creates an item modifier list and at least one modifier option for it.
+      body: 
+        application/json: 
+          schema: modifierListReq
+          example: !include examples/modifierListReq-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: modifierList
+              example: !include examples/modifierList-example.json
+    get: 
+      description: "Lists all of a merchant's modifier lists."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: modifierLists
+              example: !include examples/modifierLists-example.json
+    /{modifier_list_id}: 
+      put: 
+        responses: 
+          200: 
+            body: 
+              application/json: 
+      delete: 
+        is: [ successable ]
+      /modifier-options: 
+        post: 
+          description: Creates an item modifier option and adds it to a modifier list.
+          body: 
+            application/json: 
+              schema: modifierOptionReq
+              example: !include examples/modifierOptionReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: modifierOption
+                  example: !include examples/modifierOption-example.json
+        /{modifier_option_id}: 
+          put: 
+            description: Modifies the details of an existing item modifier option.
+            body: 
+              application/json: 
+                schema: modifierOptionReq
+                example: !include examples/modifierOptionReq-example.json
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: modifierOption
+                    example: !include examples/modifierOption-example.json
+          delete: 
+            is: [ successable ]
+            description: Deletes an existing item modifier option from a modifier list.
+  /categories: 
+    post: 
+      description: Creates an item category.
+      body: 
+        application/json: 
+          schema: categoryReq
+          example: !include examples/categoryReq-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: category
+              example: !include examples/category-example.json
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: categories
+              example: !include examples/categories-example.json
+    /{category_id}: 
+      put: 
+        body: 
+          application/json: 
+            schema: categoryReq
+            example: !include examples/categoryReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: category
+                example: !include examples/category-example.json
+      delete: 
+        is: [ successable ]
+  /discounts: 
+    get: 
+      description: "Lists all of a merchant's discounts."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: discounts
+              example: !include examples/discounts-example.json
+    post: 
+      description: Creates a discount.
+      body: 
+        application/json: 
+          schema: discountReq
+          example: !include examples/discountReq-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: discount
+              example: !include examples/discount-example.json
+    /{discount_id}: 
+      put: 
+        description: Modifies the details of an existing discount.
+        body: 
+          application/json: 
+            schema: discountReq
+            example: !include examples/discountReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: discount
+                example: !include examples/discount-example.json
+      delete: 
+        is: [ successable ]
+  /fees: 
+    post: 
+      description: Creates a fee (tax).
+      body: 
+        application/json: 
+          schema: feeReq
+          example: !include examples/feeReq-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: fee
+              example: !include examples/fee-example.json
+    get: 
+      is: [ paginatable ]
+      description: "Lists all of a merchant's fees (taxes)."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: fees
+              example: !include examples/fees-example.json
+    /{fee_id}: 
+      put: 
+        description: Modifies the details of an existing fee (tax).
+        body: 
+          application/json: 
+            schema: feeReq
+            example: !include examples/feeReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: fee
+                example: !include examples/fee-example.json
+      delete: 
+        is: [ successable ]
+  /pages: 
+    post: 
+      description: Creates a Favorites page in Square Register.
+      body: 
+        application/json: 
+          schema: pageReq
+          example: !include examples/pageReq-example.json
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: page
+              example: !include examples/page-example.json
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: pages
+              example: !include examples/pages-example.json
+    /{page_id}: 
+      put: 
+        description: Modifies the details of a Favorites page in Square Register.
+        body: 
+          application/json: 
+            schema: pageReq
+            example: !include examples/pageReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: page
+                example: !include examples/page-example.json
+      delete: 
+        is: [ successable ]
+      /cells: 
+        put: 
+          description: Modifies a cell of a Favorites page in Square Register.
+          body: 
+            application/json: 
+              schema: pageCellReq
+              example: !include examples/pageCellReq-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: pageCell
+                  example: !include examples/pageCell-example.json
+        delete: 
+          is: [ successable ]
+          description: Deletes a cell from a Favorites page in Square Register.
+  /business: 
+    get: 
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: merchantBusiness
+              example: !include examples/merchantBusiness-example.json
+  /locations: 
+    get: 
+      description: "Retrieve an array of Merchant objects containing profile information for the business's locations."
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: locations
+              example: !include examples/locations-example.json
+/batch: 
+  post: 
+    description: "This endpoint's response is an array that contains the response for each batched request."
+    body: 
+      application/json: 
+        schema: batchRequest
+        example: !include examples/batchRequest-example.json
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: batchResponse
+            example: !include examples/batchResponse-example.json
+documentation: 
+  - title: Headline
+    content: !include docs/headline.md

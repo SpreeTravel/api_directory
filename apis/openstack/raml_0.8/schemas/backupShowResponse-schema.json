@@ -1,0 +1,76 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "backup" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "availability_zone" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "container" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "created_at" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "description" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "fail_reason" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "links" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "object" ,
+              "properties" : {
+                "href" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "rel" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            }
+          ]
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "object_count" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "size" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "status" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "volume_id" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

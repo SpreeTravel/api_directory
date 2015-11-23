@@ -1,0 +1,23 @@
+head: 
+  description: Returns information about files posted to groups that the specified user is a member of.
+  responses: 
+    200: 
+get: 
+  description: Returns information about files posted to groups that the specified user is a member of.
+  queryParameters: 
+    page: 
+      description: An integer specifying a page of items. The default value is 0, which returns the first page.
+      default: 0
+      example: 5
+    pageSize: 
+      description: "Specifies the number of items per page. Valid values are from 1 through 100. If you don't specify a size, the default is 25."
+      type: integer
+      default: 25
+      example: 5
+    q: 
+      description: A query string to filter the results. The string must contain at least two characters, not including wildcards. For information about wildcards, see Wildcards.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: fileSummaryPageResponse

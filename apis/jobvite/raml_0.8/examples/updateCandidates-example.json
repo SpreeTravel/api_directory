@@ -1,0 +1,7 @@
+{
+  "date" : {
+    "api" : "jobvite" ,
+    "secret" : "secret",
+    "action" : "updateCandidates"
+  }
+}

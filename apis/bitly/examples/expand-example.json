@@ -1,0 +1,14 @@
+{
+  "data": {
+    "expand": [
+      {
+        "global_hash": "900913",
+        "long_url": "http://google.com/",
+        "short_url": "http://bit.ly/ze6poY",
+        "user_hash": "ze6poY"
+      }
+    ]
+  },
+  "status_code": 200,
+  "status_txt": "OK"
+}

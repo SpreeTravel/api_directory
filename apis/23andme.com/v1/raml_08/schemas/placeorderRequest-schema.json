@@ -1,0 +1,60 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "first_name" : {
+      "type" : "string" ,
+      "required" : true
+    } ,
+    "last_name" : {
+      "type" : "string" ,
+      "required" : true
+    } ,
+    "address_line1" : {
+      "type" : "string" ,
+      "required" : true
+    } ,
+    "city" : {
+      "type" : "string" ,
+      "required" : true
+    } ,
+    "state" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "country" : {
+      "type" : "string" ,
+      "required" : true
+    } ,
+    "email" : {
+      "type" : "string" ,
+      "required" : true
+    } ,
+    "phone" : {
+      "type" : "string" ,
+      "required" : true
+    } ,
+    "shipping_method" : {
+      "type" : "string" ,
+      "required" : true
+    } ,
+    "product_id" : {
+      "type" : "string" ,
+      "required" : true
+    } ,
+    "postal_code" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "personalizations" : {
+      "type" : "array" ,
+      "required" : true ,
+      "items" : [
+        {
+          "type" : "string"
+        }
+      ]
+    }
+  }
+}

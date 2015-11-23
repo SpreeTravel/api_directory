@@ -1,0 +1,32 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "http_code" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "error" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "error_title" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "error_description" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "validation_errors" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "string"
+        }
+      ]
+    }
+  }
+}

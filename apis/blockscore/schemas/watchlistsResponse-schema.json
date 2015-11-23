@@ -1,0 +1,240 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "livemode" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "searched_lists" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "string"
+        }
+      ]
+    } ,
+    "count" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "matches" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "watchlist_name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "entry_type" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "matching_info" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "string"
+                }
+              ]
+            } ,
+            "confidence" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "url" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "notes" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "title" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "name_full" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "alternate_names" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "date_of_birth" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "passport" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "ssn" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "address_street1" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "address_street2" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "address_city" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "address_state" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "address_postal_code" : {
+              "type" : "object" ,
+              "required" : false
+            } ,
+            "address_country_code" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "address_raw" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "names" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "name_primary" : {
+                      "type" : "boolean" ,
+                      "required" : false
+                    } ,
+                    "name_full" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "name_strength" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            } ,
+            "births" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "birth_day" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "birth_month" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "birth_year" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "birth_day_end" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "birth_month_end" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "birth_year_end" : {
+                      "type" : "object" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            } ,
+            "documents" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "document_type" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "document_value" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "document_country_code" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            } ,
+            "addresses" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "address_street1" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "address_street2" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "address_city" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "address_state" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "address_postal_code" : {
+                      "type" : "object" ,
+                      "required" : false
+                    } ,
+                    "address_country_code" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "address_full" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

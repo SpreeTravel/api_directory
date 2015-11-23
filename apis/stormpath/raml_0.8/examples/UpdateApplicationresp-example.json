@@ -1,0 +1,18 @@
+{
+  "href" : "https://api.stormpath.com/v1/applications/WpM9nyZ2TbaEzfbRvLk9KA" ,
+  "name" : "Best application ever" ,
+  "description" : "A new description." ,
+  "status" : "enabled" ,
+  "tenant" : {
+    "href" : "https://api.stormpath.com/v1/tenants/cJoiwcorTTmkDDBsf02AbA"
+  } ,
+  "accounts" : {
+    "href" : "https://api.stormpath.com/v1/applications/WpM9nyZ2TbaEzfbRvLk9KA/accounts"
+  } ,
+  "groups" : {
+    "href" : "https://api.stormpath.com/v1/applications/WpM9nyZ2TbaEzfbRvLk9KA/groups"
+  } ,
+  "passwordResetTokens" : {
+    "href" : "http://api.stormpath.com/v1/applications/WpM9nyZ2TbaEzfbRvLk9KA/passwordResetTokens"
+  }
+}

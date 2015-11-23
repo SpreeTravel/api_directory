@@ -1,0 +1,255 @@
+{
+  "request" : {
+    "output" : "json" ,
+    "monthlydebts" : "1500" ,
+    "terminmonths" : "360" ,
+    "monthlypayment" : "2000" ,
+    "schedule" : "yearly" ,
+    "pmi" : "1000" ,
+    "debttoincome" : "36.0" ,
+    "hazard" : "20000" ,
+    "hoa" : "10000" ,
+    "callback" : "cb" ,
+    "propertytax" : "20.0" ,
+    "estimate" : "false" ,
+    "annualincome" : "1000000" ,
+    "incometax" : "30.0" ,
+    "zip" : "91302" ,
+    "down" : "800000" ,
+    "rate" : "6.504"
+  } ,
+  "message" : {
+    "text" : "Request successfully processed" ,
+    "code" : "0"
+  } ,
+  "response" : {
+    "affordabilityAmount" : "952269" ,
+    "monthlyPrincipalAndInterest" : "963" ,
+    "monthlyPropertyTaxes" : "15871" ,
+    "monthlyHazardInsurance" : "1666" ,
+    "monthlyPmi" : "0" ,
+    "monthlyHoaDues" : "10000" ,
+    "totalMonthlyPayment" : "28500" ,
+    "totalPayments" : "10260000" ,
+    "totalInterestPayments" : "194355" ,
+    "totalPrincipal" : "152269" ,
+    "totalTaxesFeesAndInsurance" : "9913375" ,
+    "monthlyIncome" : "83333" ,
+    "monthlyDebts" : "1500" ,
+    "monthlyIncomeTax" : "25000" ,
+    "monthlyRemainingBudget" : "28333" ,
+    "annualAmortizationSchedule" : [
+      {
+        "period" : "1" ,
+        "beginningBalance" : "152269" ,
+        "amount" : "11554" ,
+        "principal" : "1701" ,
+        "interest" : "9853" ,
+        "endingBalance" : "150569"
+      } , {
+        "period" : "2" ,
+        "beginningBalance" : "150569" ,
+        "amount" : "11554" ,
+        "principal" : "1815" ,
+        "interest" : "9740" ,
+        "endingBalance" : "148754"
+      } , {
+        "period" : "3" ,
+        "beginningBalance" : "148754" ,
+        "amount" : "11554" ,
+        "principal" : "1936" ,
+        "interest" : "9618" ,
+        "endingBalance" : "146818"
+      } , {
+        "period" : "4" ,
+        "beginningBalance" : "146818" ,
+        "amount" : "11554" ,
+        "principal" : "2066" ,
+        "interest" : "9488" ,
+        "endingBalance" : "144752"
+      } , {
+        "period" : "5" ,
+        "beginningBalance" : "144752" ,
+        "amount" : "11554" ,
+        "principal" : "2204" ,
+        "interest" : "9350" ,
+        "endingBalance" : "142547"
+      } , {
+        "period" : "6" ,
+        "beginningBalance" : "142547" ,
+        "amount" : "11554" ,
+        "principal" : "2352" ,
+        "interest" : "9202" ,
+        "endingBalance" : "140195"
+      } , {
+        "period" : "7" ,
+        "beginningBalance" : "140195" ,
+        "amount" : "11554" ,
+        "principal" : "2510" ,
+        "interest" : "9044" ,
+        "endingBalance" : "137685"
+      } , {
+        "period" : "8" ,
+        "beginningBalance" : "137685" ,
+        "amount" : "11554" ,
+        "principal" : "2678" ,
+        "interest" : "8876" ,
+        "endingBalance" : "135007"
+      } , {
+        "period" : "9" ,
+        "beginningBalance" : "135007" ,
+        "amount" : "11554" ,
+        "principal" : "2857" ,
+        "interest" : "8697" ,
+        "endingBalance" : "132150"
+      } , {
+        "period" : "10" ,
+        "beginningBalance" : "132150" ,
+        "amount" : "11554" ,
+        "principal" : "3049" ,
+        "interest" : "8505" ,
+        "endingBalance" : "129101"
+      } , {
+        "period" : "11" ,
+        "beginningBalance" : "129101" ,
+        "amount" : "11554" ,
+        "principal" : "3253" ,
+        "interest" : "8301" ,
+        "endingBalance" : "125848"
+      } , {
+        "period" : "12" ,
+        "beginningBalance" : "125848" ,
+        "amount" : "11554" ,
+        "principal" : "3471" ,
+        "interest" : "8083" ,
+        "endingBalance" : "122376"
+      } , {
+        "period" : "13" ,
+        "beginningBalance" : "122376" ,
+        "amount" : "11554" ,
+        "principal" : "3704" ,
+        "interest" : "7850" ,
+        "endingBalance" : "118672"
+      } , {
+        "period" : "14" ,
+        "beginningBalance" : "118672" ,
+        "amount" : "11554" ,
+        "principal" : "3952" ,
+        "interest" : "7602" ,
+        "endingBalance" : "114720"
+      } , {
+        "period" : "15" ,
+        "beginningBalance" : "114720" ,
+        "amount" : "11554" ,
+        "principal" : "4217" ,
+        "interest" : "7337" ,
+        "endingBalance" : "110503"
+      } , {
+        "period" : "16" ,
+        "beginningBalance" : "110503" ,
+        "amount" : "11554" ,
+        "principal" : "4500" ,
+        "interest" : "7055" ,
+        "endingBalance" : "106004"
+      } , {
+        "period" : "17" ,
+        "beginningBalance" : "106004" ,
+        "amount" : "11554" ,
+        "principal" : "4801" ,
+        "interest" : "6753" ,
+        "endingBalance" : "101203"
+      } , {
+        "period" : "18" ,
+        "beginningBalance" : "101203" ,
+        "amount" : "11554" ,
+        "principal" : "5123" ,
+        "interest" : "6431" ,
+        "endingBalance" : "96080"
+      } , {
+        "period" : "19" ,
+        "beginningBalance" : "96080" ,
+        "amount" : "11554" ,
+        "principal" : "5466" ,
+        "interest" : "6088" ,
+        "endingBalance" : "90614"
+      } , {
+        "period" : "20" ,
+        "beginningBalance" : "90614" ,
+        "amount" : "11554" ,
+        "principal" : "5832" ,
+        "interest" : "5722" ,
+        "endingBalance" : "84781"
+      } , {
+        "period" : "21" ,
+        "beginningBalance" : "84781" ,
+        "amount" : "11554" ,
+        "principal" : "6223" ,
+        "interest" : "5331" ,
+        "endingBalance" : "78558"
+      } , {
+        "period" : "22" ,
+        "beginningBalance" : "78558" ,
+        "amount" : "11554" ,
+        "principal" : "6640" ,
+        "interest" : "4914" ,
+        "endingBalance" : "71917"
+      } , {
+        "period" : "23" ,
+        "beginningBalance" : "71917" ,
+        "amount" : "11554" ,
+        "principal" : "7085" ,
+        "interest" : "4469" ,
+        "endingBalance" : "64832"
+      } , {
+        "period" : "24" ,
+        "beginningBalance" : "64832" ,
+        "amount" : "11554" ,
+        "principal" : "7560" ,
+        "interest" : "3994" ,
+        "endingBalance" : "57272"
+      } , {
+        "period" : "25" ,
+        "beginningBalance" : "57272" ,
+        "amount" : "11554" ,
+        "principal" : "8067" ,
+        "interest" : "3487" ,
+        "endingBalance" : "49205"
+      } , {
+        "period" : "26" ,
+        "beginningBalance" : "49205" ,
+        "amount" : "11554" ,
+        "principal" : "8607" ,
+        "interest" : "2947" ,
+        "endingBalance" : "40598"
+      } , {
+        "period" : "27" ,
+        "beginningBalance" : "40598" ,
+        "amount" : "11554" ,
+        "principal" : "9184" ,
+        "interest" : "2370" ,
+        "endingBalance" : "31413"
+      } , {
+        "period" : "28" ,
+        "beginningBalance" : "31413" ,
+        "amount" : "11554" ,
+        "principal" : "9800" ,
+        "interest" : "1754" ,
+        "endingBalance" : "21614"
+      } , {
+        "period" : "29" ,
+        "beginningBalance" : "21614" ,
+        "amount" : "11554" ,
+        "principal" : "10456" ,
+        "interest" : "1098" ,
+        "endingBalance" : "11157"
+      } , {
+        "period" : "30" ,
+        "beginningBalance" : "11157" ,
+        "amount" : "11554" ,
+        "principal" : "11157" ,
+        "interest" : "397" ,
+        "endingBalance" : "-0"
+      }
+    ]
+  }
+}

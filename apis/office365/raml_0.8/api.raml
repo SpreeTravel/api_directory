@@ -1,0 +1,353 @@
+#%RAML 0.8
+title: Office 365
+baseUri: https://outlook.office365.com/ews/odata/Me
+schemas:
+  - getFolderById: !include schemas/getFolderById-schema.json
+  - addNewMailFolderRequest: !include schemas/addNewMailFolderRequest-schema.json
+  - updateNewMailFolderRequest: !include schemas/updateNewMailFolderRequest-schema.json
+  - moveFolder: !include schemas/moveFolder-schema.json
+  - copyFolder: !include schemas/copyFolder-schema.json
+  - specificEmailById: !include schemas/specificEmailById-schema.json
+  - newEmail: !include schemas/newEmail-schema.json
+  - updateEmail: !include schemas/updateEmail-schema.json
+  - replyComment: !include schemas/replyComment-schema.json
+  - forwardEmail: !include schemas/forwardEmail-schema.json
+  - addCalendarGroup: !include schemas/addCalendarGroup-schema.json
+  - calendarRepresentation: !include schemas/calendarRepresentation-schema.json
+  - updateCalendar: !include schemas/updateCalendar-schema.json
+  - calendar: !include schemas/calendar-schema.json
+  - event: !include schemas/event-schema.json
+  - newEvent: !include schemas/newEvent-schema.json
+  - updateEvent: !include schemas/updateEvent-schema.json
+  - contacts: !include schemas/contacts-schema.json
+  - contact: !include schemas/contact-schema.json
+  - createContact: !include schemas/createContact-schema.json
+  - updateContact: !include schemas/updateContact-schema.json
+  - newAttachment: !include schemas/newAttachment-schema.json
+resourceTypes:
+  - createReply: !include resourceTypes/createReply.raml
+  - events: !include resourceTypes/events.raml
+  - action: !include resourceTypes/action.raml
+  - reply: !include resourceTypes/reply.raml
+  - attachments: !include resourceTypes/attachments.raml
+  - calendars: !include resourceTypes/calendars.raml
+  - contacts: !include resourceTypes/contacts.raml
+/Folders{folder_id}: 
+  delete: 
+    description: To delete a folder, send a DELETE request to the URL of the folder.
+    responses: 
+      200: 
+        description: The request completed successfully.
+  patch: 
+    description: You can update a folder by sending a PATCH request with a JSON payload that contains the properties to update to the URL of the folder.
+    body: 
+      application/json: 
+        schema: updateNewMailFolderRequest
+        example: !include examples/updateNewMailFolderRequest-example.json
+    responses: 
+      200: 
+        description: The request completed successfully.
+  get: 
+    description: You can retrieve information about other folders by using the Id property on the Folder entity via the Folders property on the User entity.
+    responses: 
+      200: 
+        description: The server responds with a JSON representation of the folder.
+        body: 
+          application/json: 
+            schema: getFolderById
+            example: !include examples/getFolderById-example.json
+  post: 
+    description: "You can create a folder by sending a POST request with a JSON representation of the new folder to the parent folder's ChildFolders property."
+    body: 
+      application/json: 
+        schema: addNewMailFolderRequest
+        example: !include examples/addNewMailFolderRequest-example.json
+    responses: 
+      201: 
+        description: |
+          The request has been fulfilled and resulted in the creation of a new resource.
+          A successful response contains a JSON representation of the new folder.
+  /Move: 
+    type: action
+  /Copy: 
+    type: action
+  /Messages: 
+    description: ""
+    get: 
+      description: You can request all the emails and meeting requests in a folder (or a filtered list by using the $filter OData query parameter) via the Messages property on the Folder entity.
+      responses: 
+        200: 
+    post: 
+      description: You can create an email by sending a POST request with a JSON representation of a Message entity to the Messages property on the Folder entity for the folder that you want to create the email in. Alternatively, you can send the POST request to the Messages property on the User entity.
+      queryParameters: 
+        MessageDisposition: 
+          description: When sending a POST request to create an email, there is an optional MessageDisposition query parameter that controls what happens to the message as it is created. The behavior and the default value depends on whether you are sending the POST request to the Messages property on a Folder entity or on the User entity.
+          enum: 
+            - SaveOnly
+            - SendOnly
+            - SendAndSaveCopy
+          example: MessageDisposition=SendAndSaveCopy
+      body: 
+        application/json: 
+          schema: newEmail
+          example: !include examples/newEmail-example.json
+      responses: 
+        201: 
+          description: |
+            The request has been fulfilled and resulted in the creation of a new resource.
+            A successful response contains a JSON representation of the new email.
+/Messages{message_id}: 
+  get: 
+    description: You can request information about a specific email or meeting request by using the Id property on the Message entity.
+    responses: 
+      200: 
+        description: The request completed successfully.
+        body: 
+          application/json: 
+            schema: specificEmailById
+            example: !include examples/specificEmailById-example.json
+  patch: 
+    description: You can update an existing email by sending a PATCH request to the URL for that item. The payload of the PATCH request is a JSON representation of the properties that you want to update. Only the properties that you include in the payload are changed.
+    body: 
+      application/json: 
+        schema: updateEmail
+        example: !include examples/updateEmail-example.json
+    responses: 
+      200: 
+        description: A successful response contains a JSON representation of the updated email.
+  delete: 
+    description: You can delete email by simply sending a DELETE request to the URL of the Message entity.
+    responses: 
+      200: 
+        description: The request completed successfully.
+  /Move: 
+    type: action
+    description: You can move an email by using the Move action on the Message entity.
+  /Copy: 
+    type: action
+    description: You can copy an email by using the Copy action on the Message entity.
+  /CreateReply: 
+    type: createReply
+    description: You can create a reply to only the sender of an email by using the CreateReply action on the Message entity.
+  /CreateReplyAll: 
+    type: createReply
+    description: You can create a reply to all recipients of an email by using the CreateReplyAll action on the Message entity.
+  /CreateForward: 
+    type: createReply
+    description: You can create a forward of an email by using the CreateForward action on the Message entity.
+  /Reply: 
+    type: reply
+    description: 'The server responds with an HTTP status 200 "OK" to indicate success. A copy of the reply is saved in the Sent Items folder.'
+  /ReplyAll: 
+    type: reply
+    description: 'The server responds with an HTTP status 200 "OK" to indicate success. A copy of the reply is saved in the Sent Items folder.'
+  /Forward: 
+    description: 'The server responds with an HTTP status 200 "OK" to indicate success. A copy of the reply is saved in the Sent Items folder.'
+    post: 
+      description: You can forward an email by using the Forward action on the Message entity.
+      body: 
+        application/json: 
+          schema: forwardEmail
+          example: !include examples/forwardEmail-example.json
+      responses: 
+        201: 
+          description: 'The server responds with an HTTP status 200 "OK" to indicate success. A copy of the forward is saved in the Sent Items folder.'
+/Messages{event_id}: 
+  /Send: 
+    post: 
+      description: You can send an existing email that has the IsDraft property set to true by using the Send action on the Message entity.
+      responses: 
+        201: 
+          description: 'The server responds with an HTTP status 200 "OK" to indicate success. A copy of the email is saved in the Sent Items folder.'
+  /Attachments: 
+    type: attachments
+/CalendarGroups: 
+  get: 
+    description: You can request all the calendar groups in a mailbox (or a filtered list by using the $filter OData query parameter) via the CalendarGroups property on the User entity.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+  post: 
+    description: You can create a calendar group by sending a POST request with a JSON representation of a CalendarGroup entity to the CalendarGroups property on the User entity.
+    body: 
+      application/json: 
+        schema: addCalendarGroup
+        example: !include examples/addCalendarGroup-example.json
+    responses: 
+      201: 
+        description: A successful response contains a JSON representation of the new calendar group.
+/CalendarGroups{calendargroup_id}: 
+  get: 
+    responses: 
+      200: 
+        description: The server responds with a JSON representation of the calendar group.
+        body: 
+          application/json: 
+            schema: calendarRepresentation
+            example: !include examples/calendarRepresentation-example.json
+  post: 
+    responses: 
+      201: 
+  patch: 
+    description: You can update a calendar group by sending a PATCH request with a JSON payload that contains the properties to update. The Name property is the only writeable property on a CalendarGroup entity.
+    body: 
+      application/json: 
+        schema: updateCalendar
+        example: !include examples/updateCalendar-example.json
+    responses: 
+      200: 
+        description: A successful response contains a JSON representation of the updated calendar group.
+  delete: 
+    description: Deleting a calendar group is as simple as sending a DELETE request to the URL of the CalendarGroup entity.
+    responses: 
+      200: 
+        description: The request completed successfully.
+  /Calendars: 
+    type: calendars
+/Calendars: 
+  type: calendars
+/Calendar: 
+  get: 
+    description: Retrieve information about the default calendar by using the Calendar property on the User entity.
+    responses: 
+      200: 
+        description: The request completed successfully.
+        body: 
+          application/json: 
+            schema: calendar
+            example: !include examples/calendar-example.json
+  /Events: 
+    get: 
+      description: You can request all the events across all calendars (or a filtered list by using the $filter OData query parameter) via the Events property on the User entity, or request all events in a specific calendar via the Events property on the Calendar entity.
+      responses: 
+        200: 
+          description: The request completed successfully.
+/Calendars{calendar_id}: 
+  get: 
+    description: You can also retrieve information about a specific calendar by using the Id property of the Calendar entity.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: calendar
+            example: !include examples/calendar-example.json
+  patch: 
+    description: "You can update a calendar by sending a PATCH request with a JSON payload containing the properties to update. There's only one writeable property on a Calendar entity, the Name property."
+    body: 
+      application/json: 
+        schema: updateCalendar
+        example: !include examples/updateCalendar-example.json
+    responses: 
+      201: 
+        description: A successful response contains a JSON representation of the updated calendar.
+  delete: 
+    description: Deleting a calendar is as simple as sending a DELETE request to the URL of the Calendar entity.
+    responses: 
+      200: 
+        description: The request completed successfully.
+  /Events: 
+    type: events
+/Events: 
+  type: events
+/Events{event_id}: 
+  get: 
+    description: You can also retrieve information about a specific event by using the Id property on the Event entity.
+    responses: 
+      200: 
+        description: The request completed successfully.
+        body: 
+          application/json: 
+            schema: event
+            example: !include examples/event-example.json
+  patch: 
+    description: To update an event, send a PATCH request to the URL of the event with a JSON object that contains the properties to update. Only the properties that you include in the payload are changed.
+    body: 
+      application/json: 
+        schema: updateEvent
+        example: !include examples/updateEvent-example.json
+    responses: 
+      200: 
+        description: A successful response contains a JSON representation of the updated event. If any attendees are included in the Attendees property, and the user is the organizer, the server will send meeting updates to all attendees.
+  delete: 
+    description: "Upon success, the appointment is moved to the user's Deleted Items folder. If the appointment is a meeting, a cancellation will be sent to all attendees."
+    responses: 
+      200: 
+        description: The request has been fulfilled and resulted in the creation of a new resource.
+  /Accept: 
+    type: reply
+  /Decline: 
+    type: reply
+  /TentativelyAccept: 
+    type: reply
+  /Attachments: 
+    type: attachments
+/ContactFolders{contact_folder_id}: 
+  get: 
+    description: 'You can access the default contact folder by using the constant entity key "Contacts" to select a ContactFolder entity from the ContactsFolder property on the User entity. Alternatively, you can access a specific non-default contact folder by using the Id property of the corresponding ContactFolder entity.'
+    responses: 
+      200: 
+        description: The request completed successfully.
+        body: 
+          application/json: 
+            schema: contacts
+            example: !include examples/contacts-example.json
+  /ChildFolders: 
+    get: 
+      description: All non-default contact folders are stored as children of the default contact folder. You can query for all non-default contact folders (or a filtered list by using the $filter OData query parameter) via the ChildFolders property on the default contact folder.
+      responses: 
+        200: 
+          description: The request completed successfully.
+  /Contacts: 
+    type: contacts
+/Contacts: 
+  type: contacts
+/Contacts{contact_id}: 
+  post: 
+    description: You can create a contact by sending a POST request with a JSON representation in the payload of a Contact entity to the Contacts property on either the User entity (to create a contact in the default contact folder), or on the ContactFolder entity (to create a contact in that contact folder).
+    body: 
+      application/json: 
+        schema: createContact
+        example: !include examples/createContact-example.json
+    responses: 
+      201: 
+        description: A successful response contains a JSON representation of the new contact.
+  get: 
+    description: You can retrieve information about a specific contact by using the Id property of the Contact entity.
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: contact
+            example: !include examples/contact-example.json
+  patch: 
+    description: To update a contact, send a PATCH request to the URL of the contact with a JSON object that contains the properties to update. Only the properties that you include in the payload are changed.
+    body: 
+      application/json: 
+        schema: updateContact
+        example: !include examples/updateContact-example.json
+    responses: 
+      200: 
+        description: The request completed successfully.
+  delete: 
+    description: You can delete a contact by simply sending a DELETE request to the URL of the Contact entity.
+    responses: 
+      200: 
+        description: The request completed successfully.
+  /Attachments: 
+    type: attachments
+/FirstSignIn: 
+  get: 
+    responses: 
+      200: 
+/Services: 
+  get: 
+    responses: 
+      200: 
+/AllServices: 
+  get: 
+    responses: 
+      200: 
+documentation: 
+  - title: Headline
+    content: !include docs/api/headline.md

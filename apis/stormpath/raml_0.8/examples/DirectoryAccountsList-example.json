@@ -1,0 +1,14 @@
+{
+  "href" : "https://api.stormpath.com/v1/directories/5D1bvO5To6KQBaGFh793Zz/groups" ,
+  "offset" : 0 ,
+  "limit" : 25 ,
+  "items" : [
+    {
+      "href" : "https://api.stormpath.com/v1/groups/WpM9nyZ2TbaEzfbRvLk9KA"
+    } , {
+      "href" : "https://api.stormpath.com/v1/groups/aLlyOUrBAse34js9hjiH9j"
+    } , {
+      "href" : "https://api.stormpath.com/v1/groups/Xhf0a9HLA02djsdP90dsQ2"
+    }
+  ]
+}

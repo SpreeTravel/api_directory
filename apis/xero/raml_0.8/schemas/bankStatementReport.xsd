@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Response">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Id"/>
+    <xs:element ref="Status"/>
+    <xs:element ref="ProviderName"/>
+    <xs:element ref="DateTimeUTC"/>
+    <xs:element ref="Reports"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Id" type="xs:string"/>
+  <xs:element name="Status" type="xs:NCName"/>
+  <xs:element name="ProviderName" type="xs:string"/>
+  <xs:element name="DateTimeUTC" type="xs:dateTime"/>
+  <xs:element name="Reports">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Report"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Report">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="ReportID"/>
+    <xs:element ref="ReportName"/>
+    <xs:element ref="ReportType"/>
+    <xs:element ref="ReportTitles"/>
+    <xs:element ref="ReportDate"/>
+    <xs:element ref="UpdatedDateUTC"/>
+    <xs:element ref="Rows"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="ReportID" type="xs:NCName"/>
+  <xs:element name="ReportName" type="xs:string"/>
+  <xs:element name="ReportType" type="xs:NCName"/>
+  <xs:element name="ReportTitles">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element maxOccurs="unbounded" ref="ReportTitle"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="ReportTitle" type="xs:string"/>
+  <xs:element name="ReportDate" type="xs:string"/>
+  <xs:element name="UpdatedDateUTC" type="xs:dateTime"/>
+  <xs:element name="Rows">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element minOccurs="0" maxOccurs="unbounded" ref="Row"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Row">
+  <xs:complexType>
+    <xs:sequence minOccurs="0">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element ref="RowType"/>
+      <xs:element ref="Rows"/>
+      <xs:element ref="Cells"/>
+    </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="RowType" type="xs:NCName"/>
+  <xs:element name="Cells">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element maxOccurs="unbounded" ref="Cell"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Cell">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element minOccurs="0" ref="Value"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Value" type="xs:string"/>
+</xs:schema>

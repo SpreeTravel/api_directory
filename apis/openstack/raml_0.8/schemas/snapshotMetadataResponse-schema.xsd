@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:os-extended-snapshot-attributes="http://docs.openstack.org/volume/ext/extended_snapshot_attributes/api/v1">
+  <xsd:element name="snapshot">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="metadata" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="meta" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:extension base="xsd:normalizedString">
+                      <xsd:attribute name="key" type="xsd:normalizedString" use="required"/>
+                    </xsd:extension>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="status" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="description" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="created_at" type="xsd:string" use="required"/>
+      <xsd:attribute name="volume_id" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="size" type="xsd:int" use="required"/>
+      <xsd:attribute name="id" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="name" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="project_id" type="xsd:normalizedString" use="required"/>
+      <xsd:attribute name="progress" type="xsd:normalizedString" use="required"/>
+    </xsd:complexType>
+    <xsd:attribute name="status" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="description" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="created_at" type="xsd:string" use="required"/>
+    <xsd:attribute name="volume_id" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="size" type="xsd:int" use="required"/>
+    <xsd:attribute name="id" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="name" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="project_id" type="xsd:normalizedString" use="required"/>
+    <xsd:attribute name="progress" type="xsd:normalizedString" use="required"/>
+  </xsd:element>
+</xsd:schema>

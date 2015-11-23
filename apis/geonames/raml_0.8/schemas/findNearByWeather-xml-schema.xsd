@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="geonames">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="observation" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="observation" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="observationTime" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="stationName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+              <xsd:element name="ICAO" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="countryCode" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="elevation" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="lat" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="lng" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="temperature" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="dewPoint" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="humidity" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+              <xsd:element name="clouds" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:extension base="xsd:string">
+                      <xsd:attribute name="code" type="xsd:normalizedString" use="required"/>
+                    </xsd:extension>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="weatherCondition" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="hectoPascAltimeter" minOccurs="0" maxOccurs="1" type="xsd:decimal"/>
+              <xsd:element name="windSpeed" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Accounts>
+  <Account>
+    <AccountID>297c2dc5-cc47-4afd-8ec8-74990b8761e9</AccountID>
+    <Code/>
+    <Name>BNZ Cheque Account</Name>
+    <Type>BANK</Type>
+    <TaxType>NONE</TaxType>
+    <EnablePaymentsToAccount>false</EnablePaymentsToAccount>
+    <BankAccountNumber>3809087654321500</BankAccountNumber>
+    <CurrencyCode>NZD</CurrencyCode>
+  </Account>
+  <Account>
+    <AccountID>5040915e-8ce7-4177-8d08-fde416232f18</AccountID>
+    <Code>200</Code>
+    <Name>Sales</Name>
+    <Type>REVENUE</Type>
+    <TaxType>OUTPUT</TaxType>
+    <Description>Income from any normal business activity</Description>
+    <EnablePaymentsToAccount>false</EnablePaymentsToAccount>
+  </Account>
+</Accounts>

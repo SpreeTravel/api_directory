@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoices>
+  <Invoice>
+    <Type>ACCREC</Type>
+    <Contact>
+      <ContactID>025867f1-d741-4d6b-b1af-9ac774b59ba7</ContactID>
+      <Name>City Agency</Name>
+    </Contact>
+    <Date>2009-05-27T00:00:00</Date>
+    <DueDate>2009-06-06T00:00:00</DueDate>
+    <Status>AUTHORISED</Status>
+    <LineAmountTypes>Exclusive</LineAmountTypes>
+    <SubTotal>1800.00</SubTotal>
+    <TotalTax>225.00</TotalTax>
+    <Total>2025.00</Total>
+    <UpdatedDateUTC>2009-08-15T00:18:43.457</UpdatedDateUTC>
+    <CurrencyCode>NZD</CurrencyCode>
+    <InvoiceID>243216c5-369e-4056-ac67-05388f86dc81</InvoiceID>
+    <InvoiceNumber>OIT00546</InvoiceNumber>
+    <AmountDue>2025.00</AmountDue>
+    <AmountPaid>0.00</AmountPaid>
+    <AmountCredited>0.00</AmountCredited>
+  </Invoice>
+  <Invoice>
+    <Reference>RPT-DD</Reference>
+    <Type>ACCREC</Type>
+    <Contact>
+      <ContactID>06638157-fdfa-47f4-91d0-875b5f5c18c6</ContactID>
+      <Name>Marine Systems</Name>
+    </Contact>
+    <Date>2009-04-26T00:00:00</Date>
+    <DueDate>2009-04-26T00:00:00</DueDate>
+    <Status>AUTHORISED</Status>
+    <LineAmountTypes>Exclusive</LineAmountTypes>
+    <SubTotal>28.50</SubTotal>
+    <TotalTax>3.56</TotalTax>
+    <Total>32.06</Total>
+    <UpdatedDateUTC>2009-08-14T21:04:58.09</UpdatedDateUTC>
+    <CurrencyCode>NZD</CurrencyCode>
+    <InvoiceID>03778e72-d541-404a-ab9b-2757aeda76a3</InvoiceID>
+    <InvoiceNumber>OIT00542</InvoiceNumber>
+    <AmountDue>32.06</AmountDue>
+    <AmountPaid>0.00</AmountPaid>
+    <AmountCredited>0.00</AmountCredited>
+  </Invoice>
+</Invoices>

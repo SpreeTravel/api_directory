@@ -1,0 +1,42 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "to" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "string"
+        }
+      ]
+    } ,
+    "subject" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "message" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "ccMe" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "format" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "formatDetails" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "paperSize" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

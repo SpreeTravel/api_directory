@@ -1,0 +1,84 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "image" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "updated" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "metadata" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "_sahara_username" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "_sahara_tag_vanilla" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "_sahara_tag_2.6.0" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "minDisk" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "status" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "tags" : {
+          "type" : "array" ,
+          "required" : false ,
+          "items" : [
+            {
+              "type" : "string"
+            }
+          ]
+        } ,
+        "minRam" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "progress" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "username" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "created" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "description" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "OS-EXT-IMG-SIZE:size" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "status" : "success" ,
+  "incident_key" : "My Incident Key" ,
+  "message" : "Event processed"
+}

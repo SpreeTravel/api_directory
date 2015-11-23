@@ -1,0 +1,40 @@
+{
+  "id" : "O-3SP845109F051535C" ,
+  "create_time" : "2014-07-01T16:56:58Z" ,
+  "update_time" : "2014-07-01T17:05:41Z" ,
+  "state" : "pending" ,
+  "amount" : {
+    "total" : "41.15" ,
+    "currency" : "USD" ,
+    "details" : {
+      "subtotal" : "30.00" ,
+      "tax" : "0.15" ,
+      "shipping" : "11.00"
+    }
+  } ,
+  "pending_reason" : "order" ,
+  "parent_payment" : "PAY-9N9834337A9191208KOZOQWI" ,
+  "links" : [
+    {
+      "href" : "https://api.sandbox.paypal.com/v1/payments/orders/O-3SP845109F051535C" ,
+      "rel" : "self" ,
+      "method" : "GET"
+    } , {
+      "href" : "https://api.sandbox.paypal.com/v1/payments/payment/PAY-9N9834337A9191208KOZOQWI" ,
+      "rel" : "parent_payment" ,
+      "method" : "GET"
+    } , {
+      "href" : "https://api.sandbox.paypal.com/v1/payments/orders/O-3SP845109F051535C/void" ,
+      "rel" : "void" ,
+      "method" : "POST"
+    } , {
+      "href" : "https://api.sandbox.paypal.com/v1/payments/orders/O-3SP845109F051535C/authorize" ,
+      "rel" : "authorization" ,
+      "method" : "POST"
+    } , {
+      "href" : "https://api.sandbox.paypal.com/v1/payments/orders/O-3SP845109F051535C/capture" ,
+      "rel" : "capture" ,
+      "method" : "POST"
+    }
+  ]
+}

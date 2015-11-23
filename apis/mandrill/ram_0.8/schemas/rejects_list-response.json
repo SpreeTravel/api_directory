@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "array",
+  "items": {
+    "required": false,
+    "type": "object",
+    "properties": {
+      "created_at": {
+        "required": false,
+        "type": "string"
+      },
+      "detail": {
+        "required": false,
+        "type": "string"
+      },
+      "email": {
+        "required": false,
+        "type": "string"
+      },
+      "expired": {
+        "required": false,
+        "type": "boolean"
+      },
+      "expires_at": {
+        "required": false,
+        "type": "string"
+      },
+      "last_event_at": {
+        "required": false,
+        "type": "string"
+      },
+      "reason": {
+        "required": false,
+        "type": "string"
+      },
+      "sender": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "address": {
+            "required": false,
+            "type": "string"
+          },
+          "created_at": {
+            "required": false,
+            "type": "string"
+          },
+          "sent": {
+            "required": false,
+            "type": "integer"
+          },
+          "hard_bounces": {
+            "required": false,
+            "type": "integer"
+          },
+          "soft_bounces": {
+            "required": false,
+            "type": "integer"
+          },
+          "rejects": {
+            "required": false,
+            "type": "integer"
+          },
+          "complaints": {
+            "required": false,
+            "type": "integer"
+          },
+          "unsubs": {
+            "required": false,
+            "type": "integer"
+          },
+          "opens": {
+            "required": false,
+            "type": "integer"
+          },
+          "clicks": {
+            "required": false,
+            "type": "integer"
+          },
+          "unique_opens": {
+            "required": false,
+            "type": "integer"
+          },
+          "unique_clicks": {
+            "required": false,
+            "type": "integer"
+          }
+        }
+      },
+      "subaccount": {
+        "required": false,
+        "type": "string"
+      }
+    }
+  }
+}

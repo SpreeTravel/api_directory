@@ -1,0 +1,7 @@
+{
+	"error" : {
+		"message" : "Arguments Caused Error" ,
+		"code" : 2002 ,
+		"errors" : [ "Validation failed: Rule object can't be blank" ]
+	}
+}

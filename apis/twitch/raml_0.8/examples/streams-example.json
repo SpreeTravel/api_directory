@@ -1,0 +1,9 @@
+{
+  "_links" : {
+    "self" : "https://api.twitch.tv/kraken/streams/followed?limit=25&offset=0" ,
+    "next" : "https://api.twitch.tv/kraken/streams/followed?limit=25&offset=25"
+  } ,
+  "streams" : [
+    "..."
+  ]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <ExpenseClaims>
+    <ExpenseClaim status="OK"/>
+    <ExpenseClaim status="ERROR">
+      <ValidationErrors>
+        <ValidationError>
+          <Message>....</Message>
+        </ValidationError>
+      </ValidationErrors>
+    </ExpenseClaim>
+    <ExpenseClaim status="OK"/>
+  </ExpenseClaims>
+</Response>

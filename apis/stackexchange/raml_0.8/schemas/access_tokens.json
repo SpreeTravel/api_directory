@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "array",
+  "items": {
+    "required": false,
+    "type": "object",
+    "properties": {
+      "access_token": {
+        "required": false,
+        "type": "string"
+      },
+      "account_id": {
+        "required": false,
+        "type": "integer"
+      },
+      "expires_on_date": {
+        "required": false,
+        "type": "integer"
+      },
+      "scope": {
+        "required": false,
+        "type": "array"
+      }
+    }
+  }
+}

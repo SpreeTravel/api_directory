@@ -1,0 +1,81 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "subnets" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "allocation_pools" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "end" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "start" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            } ,
+            "cidr" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "dns_nameservers" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "enable_dhcp" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "gateway_ip" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "host_routes" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "ip_version" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "network_id" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "tenant_id" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

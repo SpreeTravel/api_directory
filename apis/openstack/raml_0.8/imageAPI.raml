@@ -1,0 +1,195 @@
+#%RAML 0.8
+title: OpenStack Image Service API
+version: v2
+baseUri: https://glance.example.com/
+schemas:
+  - imageCreateReq: !include schemas/imageCreateReq-schema.json
+  - imageCreateResponse: !include schemas/imageCreateResponse-schema.json
+  - imageDetailsResponse: !include schemas/imageDetailsResp-schema.json
+  - imageListResponse: !include schemas/imageListResponse-schema.json
+  - imageMemberCreateRequest: !include schemas/imageMemberCreateRequest-schema.json
+  - imageMemberCreateResponse: !include schemas/imageMemberCreateResponse-schema.json
+  - imageMemberDetailsResponse: !include schemas/imageMemberDetailsResponse-schema.json
+  - imageMembersListResponse: !include schemas/imageMembersListResponse-schema.json
+  - imageMemberUpdateRequest: !include schemas/imageMemberUpdateRequest-schema.json
+  - imageMemberUpdateResponse: !include schemas/imageMemberUpdateResponse-schema.json
+  - imageUpdateReq: !include schemas/imageUpdateReq-schema.json
+  - imageUpdateResponse: !include schemas/imageUpdateResponse-schema.json
+  - imageVersionsResponse: !include schemas/imageVersionsResponse-schema.json
+  - schemasImageGetResponse: !include schemas/schemasImageGetResponse-schema.json
+  - schemasImageMemberGetResponse: !include schemas/schemasImageMemberGetResponse-schema.json
+  - schemasImageMembersGetResponse: !include schemas/schemasImageMembersGetResponse-schema.json
+  - schemasImagesGetResponse: !include schemas/schemasImagesGetResponse-schema.json
+/: 
+  get: 
+    description: List API versions
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: imageVersionsResponse
+            example: !include examples/imageVersionsResponse-example.json
+/{version}: 
+  /images: 
+    post: 
+      description: Create image
+      body: 
+        application/json: 
+          schema: imageCreateReq
+          example: !include examples/imageCreateReq-example.json
+      responses: 
+        201: 
+          body: 
+            application/json: 
+              schema: imageCreateResponse
+              example: !include examples/imageCreateResponse-example.json
+    get: 
+      description: List images
+      responses: 
+        200: 
+          body: 
+            application/json: 
+              schema: imageListResponse
+              example: !include examples/imageListResponse-example.json
+    /{image_id}: 
+      get: 
+        description: Get image details
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: imageDetailsResponse
+                example: !include examples/imageDetailsResp-example.json
+      patch: 
+        description: Update image
+        body: 
+          application/json: 
+            schema: imageUpdateReq
+            example: !include examples/imageUpdateReq-example.json
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: imageUpdateResponse
+                example: !include examples/imageUpdateResponse-example.json
+      delete: 
+        description: Delete image
+        responses: 
+          204: 
+      /file: 
+        put: 
+          description: Upload binary image data
+          headers: 
+            application/octet-stream: 
+              type: file
+          responses: 
+            204: 
+        get: 
+          description: Download binary image data
+          responses: 
+            200: 
+              headers: 
+                application/octet-stream: 
+                  type: file
+      /members: 
+        post: 
+          description: Create image member
+          body: 
+            application/json: 
+              schema: imageMemberCreateRequest
+              example: !include examples/imageMemberCreateRequest-example.json
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: imageMemberCreateResponse
+                  example: !include examples/imageMemberCreateResponse-example.json
+        get: 
+          description: List image members
+          responses: 
+            200: 
+              body: 
+                application/json: 
+                  schema: imageMembersListResponse
+                  example: !include examples/imageMembersListResponse-example.json
+        /{member_id}: 
+          get: 
+            description: Show image member details
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: imageMemberDetailsResponse
+                    example: !include examples/imageMemberDetailsResponse-example.json
+          delete: 
+            description: Delete image member
+            responses: 
+              204: 
+              403: 
+                body: 
+                  application/xml: 
+                    schema: forbidden
+                  application/json: 
+                    schema: ""
+          put: 
+            description: Update image member
+            body: 
+              application/json: 
+                schema: imageMemberUpdateRequest
+                example: !include examples/imageMemberUpdateRequest-example.json
+            responses: 
+              200: 
+                body: 
+                  application/json: 
+                    schema: imageMemberUpdateResponse
+                    example: !include examples/imageMemberUpdateResponse-example.json
+      /tags: 
+        /{tag}: 
+          put: 
+            description: Add image tag
+            body: 
+              application/json: 
+                schema: ""
+            responses: 
+              204: 
+          delete: 
+            description: Delete image tag
+            responses: 
+              204: 
+  /schemas: 
+    /image: 
+      get: 
+        description: Get image schema
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: schemasImageGetResponse
+                example: !include examples/schemasImageGetResponse-example.json
+    /images: 
+      get: 
+        description: Get images schema
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: schemasImagesGetResponse
+                example: !include examples/schemasImagesGetResponse-example.json
+    /member: 
+      get: 
+        description: Get image member schema
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: schemasImageMemberGetResponse
+                example: !include examples/schemasImageMemberGetResponse-example.json
+    /members: 
+      get: 
+        description: Get image members schema
+        responses: 
+          200: 
+            body: 
+              application/json: 
+                schema: schemasImageMembersGetResponse
+                example: !include examples/schemasImageMembersGetResponse-example.json

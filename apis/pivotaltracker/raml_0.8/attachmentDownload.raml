@@ -1,0 +1,20 @@
+#%RAML 0.8
+title: PivotalTracker Attachment Download
+version: v5
+baseUri: https://www.pivotaltracker.com/
+mediaType: application/json
+securitySchemes:
+  - customSchema: !include securitySchemes/customSchema.raml
+resourceTypes:
+  - base: !include resourceTypes/base.raml
+securedBy: [ customSchema ]
+/file_attachments/{file_attachment_id}/download: 
+  type: base
+  get: 
+    queryParameters: 
+      inline: 
+        description: Determines if server should include response headers that would cause a browser to show the attachment in a new tab or window (inline=true) or show a Save dialog box (inline=false). Default is false.
+        type: boolean
+documentation: 
+  - title: Headline
+    content: !include docs/attachmentDownload/headline.md

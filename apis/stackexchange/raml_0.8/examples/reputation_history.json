@@ -1,0 +1,9 @@
+[
+  {
+    "creation_date": 1,
+    "post_id": 1,
+    "reputation_change": 1,
+    "reputation_history_type": "some string",
+    "user_id": 1
+  }
+]

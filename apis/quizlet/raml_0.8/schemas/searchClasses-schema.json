@@ -1,0 +1,62 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "total_results" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "total_pages" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "page" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "classes" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "id" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "set_count" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "user_count" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "created_date" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "is_public" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "has_access" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+queryParameters: 
+  address1: 
+    description: street address; specify an empty string if you want to prevent this from being inferred from other parameters
+  description: 
+    description: description of the event
+  link: 
+    description: Link associated with the event. Displayed on the event page, and users are prompted to follow this link after indicating interest.
+  local_time: 
+    description: "Alternative to the time parameter for applications that can not easily calculate an event's UTC time. If you know the wall-clock time and location for an event but do not know its UTC offset, you can supply a local_time and Meetup will apply the appropriate offset. The format for this parameter is milliseconds since the epoch as if the event occurred in a UTC zone."
+  short_description: 
+    description: short description of the event
+  time: 
+    description: event start time in milliseconds since the epoch. If the container has a default time value it will be used when no time is supplied, otherwise the event will be created without a time.
+  venue_name: 
+    description: Name of the place where the event will happen
+  zip: 
+    description: A US zip or Canadian postal code. May serve as the required location parameter set.

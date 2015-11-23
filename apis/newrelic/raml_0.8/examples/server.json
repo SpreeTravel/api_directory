@@ -1,0 +1,20 @@
+{
+  "server": {
+    "id": 1,
+    "account_id": 1,
+    "display_name": "some string",
+    "host": "some string",
+    "reporting": true,
+    "last_reported_at": "time",
+    "summaries": {
+      "cpu": 1.0,
+      "cpu_stolen": 1.0,
+      "disk_io": 1.0,
+      "memory": 1.0,
+      "memory_used": 1,
+      "memory_total": 1,
+      "fullest_disk": 1.0,
+      "fullest_disk_free": 1
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "account_id" : 100 ,
+  "admin" : false ,
+  "created_at" : "2014-12-30T12:00:00Z" ,
+  "id" : 19100 ,
+  "kind" : "account_membership" ,
+  "owner" : false ,
+  "person" : {
+    "kind" : "person" ,
+    "id" : 300 ,
+    "name" : "Count Dooku" ,
+    "email" : "dooku@example.com" ,
+    "initials" : "CD" ,
+    "username" : "countd"
+  } ,
+  "project_creator" : false ,
+  "time_enterer" : false ,
+  "timekeeper" : false ,
+  "updated_at" : "2014-12-30T12:00:00Z"
+}

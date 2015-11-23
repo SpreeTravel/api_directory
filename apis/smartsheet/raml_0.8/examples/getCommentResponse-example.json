@@ -1,0 +1,9 @@
+{
+  "text" : "This is a comment" ,
+  "createdBy" : {
+    "name" : "John Doe" ,
+    "email" : "john.doe@smartsheet.com"
+  },
+  "createdAt" : "2013-06-24T21:07:45Z",
+  "id" : 48569348493401200
+}

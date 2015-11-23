@@ -1,0 +1,41 @@
+{
+  "alternateNames" : [
+    {
+      "name" : "Kūh-e Zardar" ,
+      "lang" : "fa"
+    }
+  ] ,
+  "countryName" : "Iran" ,
+  "adminCode1" : "23" ,
+  "lng" : "49.13333" ,
+  "adminName2" : "" ,
+  "fcodeName" : "mountain" ,
+  "adminName3" : "" ,
+  "timezone" : {
+    "dstOffset" : 4.5 ,
+    "gmtOffset" : 3.5 ,
+    "timeZoneId" : "Asia/Tehran"
+  } ,
+  "adminName4" : "" ,
+  "adminName5" : "" ,
+  "bbox" : {
+    "south" : 42.38232782540232 ,
+    "east" : 21.740092679772783 ,
+    "north" : 42.391321474154076 ,
+    "west" : 21.727915361609018
+  } ,
+  "name" : "Kūh-e Zardar" ,
+  "fcode" : "MT" ,
+  "geonameId" : 1 ,
+  "lat" : "32.98333" ,
+  "population" : 0 ,
+  "adminName1" : "Lorestān" ,
+  "countryId" : "130758" ,
+  "adminId1" : "125605" ,
+  "fclName" : "mountain,hill,rock,... " ,
+  "countryCode" : "IR" ,
+  "srtm3" : 1473 ,
+  "toponymName" : "Kūh-e Zardar" ,
+  "fcl" : "T" ,
+  "continentCode" : "AS"
+}

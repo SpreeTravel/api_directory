@@ -1,0 +1,7 @@
+{
+	"service" : {
+		"name" : "My New Name" ,
+		"description" : "Brand New Description" ,
+		"escalation_policy_id" : "PIJ90N7"
+	}
+}

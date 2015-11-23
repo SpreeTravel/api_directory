@@ -1,0 +1,18 @@
+{
+  "selection_type" : "MULTIPLE" ,
+  "id" : "dcd7e350-c50f-421f-ada1-23a825b008b2" ,
+  "name" : "Toppings" ,
+  "modifier_options" : [
+    {
+      "id" : "39059fd0-ae9d-4eb3-b6e8-dd3198f019b8" ,
+      "price_money" : {
+        "currency_code" : "USD" ,
+        "amount" : 50
+      } ,
+      "on_by_default" : false ,
+      "name" : "Whipped Cream" ,
+      "ordinal" : 0 ,
+      "modifier_list_id" : "dcd7e350-c50f-421f-ada1-23a825b008b2"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "ID" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "Type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "MessageID" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "TypeCode" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "Details" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Email" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "BouncedAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "DumpAvailable" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "Inactive" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "CanActivate" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "Content" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "Subject" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

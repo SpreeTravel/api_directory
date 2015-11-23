@@ -1,0 +1,374 @@
+{
+  "request" : {
+    "airport" : {
+      "requestedCode" : "ORD" ,
+      "fsCode" : "ORD"
+    } ,
+    "codeType" : {
+    } ,
+    "departing" : false ,
+    "date" : {
+      "year" : "2015" ,
+      "month" : "5" ,
+      "day" : "2" ,
+      "interpreted" : "2015-05-02"
+    } ,
+    "hourOfDay" : {
+      "requested" : "8" ,
+      "interpreted" : 8
+    } ,
+    "url" : "https://api.flightstats.com/flex/schedules/rest/v1/json/to/ORD/arriving/2015/5/2/8"
+  } ,
+  "scheduledFlights" : [
+    {
+      "carrierFsCode" : "UA" ,
+      "flightNumber" : "5948" ,
+      "brand" : "United Express" ,
+      "departureAirportFsCode" : "AVP" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "arrivalTerminal" : "2" ,
+      "departureTime" : "2015-05-02T06:50:00.000" ,
+      "arrivalTime" : "2015-05-02T08:00:00.000" ,
+      "flightEquipmentIataCode" : "ERJ" ,
+      "isCodeshare" : false ,
+      "isWetlease" : true ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "CM" ,
+          "flightNumber" : "5672" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "O"
+          ] ,
+          "referenceCode" : 333219
+        }
+      ] ,
+      "wetleaseOperatorFsCode" : "EV" ,
+      "referenceCode" : "1342-333193--"
+    } , {
+      "carrierFsCode" : "CM" ,
+      "flightNumber" : "5672" ,
+      "brand" : "United Express" ,
+      "departureAirportFsCode" : "AVP" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "arrivalTerminal" : "2" ,
+      "departureTime" : "2015-05-02T06:50:00.000" ,
+      "arrivalTime" : "2015-05-02T08:00:00.000" ,
+      "flightEquipmentIataCode" : "ERJ" ,
+      "isCodeshare" : true ,
+      "isWetlease" : true ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "O"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "UA" ,
+        "flightNumber" : "5948" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "wetleaseOperatorFsCode" : "EV" ,
+      "referenceCode" : "1342-333193--333219"
+    } , {
+      "carrierFsCode" : "UA" ,
+      "flightNumber" : "3259" ,
+      "brand" : "United Express" ,
+      "departureAirportFsCode" : "HPN" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "arrivalTerminal" : "2" ,
+      "departureTime" : "2015-05-02T06:30:00.000" ,
+      "arrivalTime" : "2015-05-02T08:00:00.000" ,
+      "flightEquipmentIataCode" : "ERJ" ,
+      "isCodeshare" : false ,
+      "isWetlease" : true ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+      ] ,
+      "wetleaseOperatorFsCode" : "EV" ,
+      "referenceCode" : "1342-1510747--"
+    } , {
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "2826" ,
+      "departureAirportFsCode" : "ICT" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T06:15:00.000" ,
+      "arrivalTime" : "2015-05-02T08:03:00.000" ,
+      "flightEquipmentIataCode" : "CRJ" ,
+      "isCodeshare" : false ,
+      "isWetlease" : true ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "JL" ,
+          "flightNumber" : "7651" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1644574
+        } , {
+          "carrierFsCode" : "BA" ,
+          "flightNumber" : "6858" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 10601524
+        } , {
+          "carrierFsCode" : "EY" ,
+          "flightNumber" : "3369" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 10601525
+        } , {
+          "carrierFsCode" : "US" ,
+          "flightNumber" : "2826" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 10601526
+        } , {
+          "carrierFsCode" : "IB" ,
+          "flightNumber" : "4123" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "O"
+          ] ,
+          "referenceCode" : 10601527
+        }
+      ] ,
+      "wetleaseOperatorFsCode" : "OO" ,
+      "referenceCode" : "1342-1644280--"
+    } , {
+      "carrierFsCode" : "JL" ,
+      "flightNumber" : "7651" ,
+      "departureAirportFsCode" : "ICT" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T06:15:00.000" ,
+      "arrivalTime" : "2015-05-02T08:03:00.000" ,
+      "flightEquipmentIataCode" : "CRJ" ,
+      "isCodeshare" : true ,
+      "isWetlease" : true ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "Q"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "2826" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "wetleaseOperatorFsCode" : "OO" ,
+      "referenceCode" : "1342-1644280--1644574"
+    }
+  ] ,
+  "appendix" : {
+    "airlines" : [
+      {
+        "fs" : "RS" ,
+        "iata" : "RS" ,
+        "icao" : "SKV" ,
+        "name" : "Sky Regional" ,
+        "active" : true
+      } , {
+        "fs" : "JL" ,
+        "iata" : "JL" ,
+        "icao" : "JAL" ,
+        "name" : "JAL" ,
+        "active" : true
+      } , {
+        "fs" : "S5" ,
+        "iata" : "S5" ,
+        "icao" : "TCF" ,
+        "name" : "Shuttle America" ,
+        "active" : true
+      } , {
+        "fs" : "DL" ,
+        "iata" : "DL" ,
+        "icao" : "DAL" ,
+        "name" : "Delta Air Lines" ,
+        "phoneNumber" : "1-800-221-1212" ,
+        "active" : true
+      } 
+    ] ,
+    "airports" : [
+      {
+        "fs" : "JAX" ,
+        "iata" : "JAX" ,
+        "icao" : "KJAX" ,
+        "faa" : "JAX" ,
+        "name" : "Jacksonville International Airport" ,
+        "street1" : "2400 Yankee Clipper Drive" ,
+        "city" : "Jacksonville" ,
+        "cityCode" : "JAX" ,
+        "stateCode" : "FL" ,
+        "postalCode" : "32218" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/New_York" ,
+        "weatherZone" : "FLZ025" ,
+        "localTime" : "2015-04-28T05:32:16.486" ,
+        "utcOffsetHours" : -4 ,
+        "latitude" : 30.491254 ,
+        "longitude" : -81.683053 ,
+        "elevationFeet" : 19 ,
+        "classification" : 2 ,
+        "active" : true
+      } , {
+        "fs" : "CLT" ,
+        "iata" : "CLT" ,
+        "icao" : "KCLT" ,
+        "faa" : "CLT" ,
+        "name" : "Charlotte Douglas International Airport" ,
+        "street1" : "5501 Josh Birmingham Parkway" ,
+        "city" : "Charlotte" ,
+        "cityCode" : "CLT" ,
+        "stateCode" : "NC" ,
+        "postalCode" : "28204" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/New_York" ,
+        "weatherZone" : "NCZ071" ,
+        "localTime" : "2015-04-28T05:32:16.486" ,
+        "utcOffsetHours" : -4 ,
+        "latitude" : 35.219167 ,
+        "longitude" : -80.935833 ,
+        "elevationFeet" : 748 ,
+        "classification" : 1 ,
+        "active" : true
+      } , {
+        "fs" : "JFK" ,
+        "iata" : "JFK" ,
+        "icao" : "KJFK" ,
+        "faa" : "JFK" ,
+        "name" : "John F. Kennedy International Airport" ,
+        "street1" : "JFK Airport" ,
+        "city" : "New York" ,
+        "cityCode" : "NYC" ,
+        "stateCode" : "NY" ,
+        "postalCode" : "11430" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/New_York" ,
+        "weatherZone" : "NYZ178" ,
+        "localTime" : "2015-04-28T05:32:16.486" ,
+        "utcOffsetHours" : -4 ,
+        "latitude" : 40.642335 ,
+        "longitude" : -73.78817 ,
+        "elevationFeet" : 13 ,
+        "classification" : 1 ,
+        "active" : true
+      }
+    ] ,
+    "equipments" : [
+      {
+        "iata" : "EMJ" ,
+        "name" : "Embraer RJ170/190" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : false ,
+        "regional" : true
+      } , {
+        "iata" : "32S" ,
+        "name" : "Airbus Industrie A318/319/320/321" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : false ,
+        "regional" : false
+      } , {
+        "iata" : "777" ,
+        "name" : "Boeing 777 Passenger" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : true ,
+        "regional" : false
+      } , {
+        "iata" : "CRJ" ,
+        "name" : "Canadair (Bombardier) Regional Jet" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : false ,
+        "regional" : true
+      } , {
+        "iata" : "737" ,
+        "name" : "Boeing 737 Passenger" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : false ,
+        "regional" : false
+      } , {
+        "iata" : "ERJ" ,
+        "name" : "Embraer RJ135/RJ140/RJ145" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : false ,
+        "regional" : true
+      }
+    ]
+  }
+}

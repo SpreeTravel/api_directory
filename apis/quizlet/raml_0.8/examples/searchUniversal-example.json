@@ -1,0 +1,51 @@
+{
+  "total_results" : 8027 ,
+  "total_pages" : 268 ,
+  "page" : 1 ,
+  "items" : [
+    {
+      "id" : 2836910 ,
+      "url" : "http://local.quizlet.com/2836910/spanish-iii-h-unidad-2-flash-cards/" ,
+      "title" : "Spanish III H unidad 2" ,
+      "created_by" : "Scottie814" ,
+      "term_count" : 143 ,
+      "created_date" : 1285277716 ,
+      "modified_date" : 1349320716 ,
+      "has_images" : false ,
+      "subjects" : [
+      ] ,
+      "visibility" : "classes" ,
+      "editable" : "only_me" ,
+      "has_access" : true ,
+      "type" : "set"
+    } , {
+      "id" : 189686 ,
+      "name" : "Tampa Spanish Language Class" ,
+      "set_count" : "0" ,
+      "user_count" : "6" ,
+      "created_date" : 1338848121 ,
+      "has_access" : false ,
+      "has_discussion" : true ,
+      "description" : "Spanish Class" ,
+      "admin_only" : false ,
+      "is_public" : false ,
+      "has_password" : false ,
+      "member_add_sets" : true ,
+      "school" : {
+        "name" : "Tampa Spanish Language Class" ,
+        "id" : 47677 ,
+        "city" : "Tampa" ,
+        "state" : "FL" ,
+        "country" : "United States" ,
+        "latitude" : 0 ,
+        "longitude" : 0
+      } ,
+      "type" : "class"
+    } , {
+      "username" : "spanish_user" ,
+      "account_type" : "free" ,
+      "profile_image" : "https://local.quizlet.com/i/animals/19.jpg" ,
+      "type" : "user"
+    }
+  ]
+}

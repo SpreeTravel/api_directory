@@ -1,0 +1,8 @@
+{
+  "href" : "https://api.stormpath.com/v1/accounts/cJoiwcorTTmkDDBsf02AbA/customData" ,
+  "createdAt" : "2014-07-16T13:48:22.378Z" ,
+  "modifiedAt" : "2014-07-16T13:48:22.378Z" ,
+  "birthDate" : "1985-07-15" ,
+  "favoriteColor" : "red" ,
+  "hobby" : "Kendo"
+}

@@ -1,0 +1,264 @@
+{
+  "results": [
+    {
+      "visibility": "visibility 0",
+      "is_simplehtml": "is_simplehtml 0",
+      "self": {
+        "checked_in": "checked_in 0",
+        "watching": "watching 0",
+        "rsvp": {
+          "response": "response 0",
+          "guests": "guests 0",
+          "answers": "answers 0"
+        },
+        "role": "role 0",
+        "rated": 0,
+        "actions": "actions 0",
+        "pay_status": "pay_status 0"
+      },
+      "featured": "featured 0",
+      "rsvpable": "rsvpable 0",
+      "publish_status": "publish_status 0",
+      "email_reminders": "email_reminders 0",
+      "rsvp_rules": {
+        "open_time": "open_time 0",
+        "waitlisting": "waitlisting 0",
+        "close_time": "close_time 0",
+        "guest_limit": "guest_limit 0",
+        "closed": "closed 0",
+        "refund_policy": {
+          "days": "days 0",
+          "notes": 0,
+          "policies": "policies 0"
+        }
+      },
+      "id": 0,
+      "timezone": "timezone 0",
+      "time": 0,
+      "distance": 1.0,
+      "venue_visibility": "venue_visibility 0",
+      "yes_rsvp_count": 0,
+      "updated": 0,
+      "created": 0,
+      "description": "description 0",
+      "survey_questions": {
+        "id": 0,
+        "question": "question 0",
+        "required": "required 0"
+      },
+      "headcount": "headcount 0",
+      "name": "name 0",
+      "photo_album_id": 0,
+      "rsvp_alerts": "rsvp_alerts 0",
+      "photo_count": 0,
+      "comment_count": 0,
+      "rsvp_limit": "rsvp_limit 0",
+      "trending_rank": "trending_rank 0",
+      "status": "status 0",
+      "maybe_rsvp_count": 0,
+      "photo_url": "photo_url 0",
+      "venue": {
+        "id": 0,
+        "zip": "zip 0",
+        "phone": 0,
+        "lon": 1.0,
+        "repinned": "repinned 0",
+        "address_3": "address_3 0",
+        "name": "name 0",
+        "state": 0,
+        "address_1": "address_1 0",
+        "address_2": "address_2 0",
+        "lat": 1.0,
+        "country": "country 0",
+        "city": "city 0"
+      },
+      "short_link": "short_link 0",
+      "event_hosts": {
+        "member_name": "member_name 0",
+        "member_id": 0
+      },
+      "utc_offset": 0,
+      "fee": {
+        "amount": "amount 0",
+        "description": "description 0",
+        "label": 0,
+        "required": "required 0",
+        "accepts": "accepts 0",
+        "currency": "currency 0"
+      },
+      "duration": 0,
+      "announced": "announced 0",
+      "event_url": "event_url 0",
+      "how_to_find_us": "how_to_find_us 0",
+      "rating": {
+        "count": 0,
+        "average": "average 0"
+      },
+      "group": {
+        "id": 0,
+        "topics": {
+          "id": 0,
+          "urlkey": "urlkey 0",
+          "name": "name 0"
+        },
+        "category": {
+          "id": 0,
+          "name": "name 0",
+          "shortname": "shortname 0"
+        },
+        "group_photo": {
+          "photo_link": "photo_link 0",
+          "highres_link": "highres_link 0",
+          "thumb_link": "thumb_link 0",
+          "photo_id": 0
+        },
+        "group_lat": "group_lat 0",
+        "name": "name 0",
+        "group_lon": "group_lon 0",
+        "membership_dues": {
+          "methods": "methods 0",
+          "fee": "fee 0",
+          "required": "required 0",
+          "fee_desc": "fee_desc 0",
+          "refund_policy": "refund_policy 0",
+          "currency": "currency 0"
+        },
+        "join_mode": "join_mode 0",
+        "urlname": "urlname 0",
+        "who": "who 0"
+      },
+      "simple_html_description": "simple_html_description 0",
+      "why": "why 0"
+    },
+    {
+      "visibility": "visibility 1",
+      "is_simplehtml": "is_simplehtml 1",
+      "self": {
+        "checked_in": "checked_in 1",
+        "watching": "watching 1",
+        "rsvp": {
+          "response": "response 1",
+          "guests": "guests 1",
+          "answers": "answers 1"
+        },
+        "role": "role 1",
+        "rated": 1,
+        "actions": "actions 1",
+        "pay_status": "pay_status 1"
+      },
+      "featured": "featured 1",
+      "rsvpable": "rsvpable 1",
+      "publish_status": "publish_status 1",
+      "email_reminders": "email_reminders 1",
+      "rsvp_rules": {
+        "open_time": "open_time 1",
+        "waitlisting": "waitlisting 1",
+        "close_time": "close_time 1",
+        "guest_limit": "guest_limit 1",
+        "closed": "closed 1",
+        "refund_policy": {
+          "days": "days 1",
+          "notes": 1,
+          "policies": "policies 1"
+        }
+      },
+      "id": 1,
+      "timezone": "timezone 1",
+      "time": 1,
+      "distance": 1.0,
+      "venue_visibility": "venue_visibility 1",
+      "yes_rsvp_count": 1,
+      "updated": 1,
+      "created": 1,
+      "description": "description 1",
+      "survey_questions": {
+        "id": 1,
+        "question": "question 1",
+        "required": "required 1"
+      },
+      "headcount": "headcount 1",
+      "name": "name 1",
+      "photo_album_id": 1,
+      "rsvp_alerts": "rsvp_alerts 1",
+      "photo_count": 1,
+      "comment_count": 1,
+      "rsvp_limit": "rsvp_limit 1",
+      "trending_rank": "trending_rank 1",
+      "status": "status 1",
+      "maybe_rsvp_count": 1,
+      "photo_url": "photo_url 1",
+      "venue": {
+        "id": 1,
+        "zip": "zip 1",
+        "phone": 1,
+        "lon": 1.0,
+        "repinned": "repinned 1",
+        "address_3": "address_3 1",
+        "name": "name 1",
+        "state": 1,
+        "address_1": "address_1 1",
+        "address_2": "address_2 1",
+        "lat": 1.0,
+        "country": "country 1",
+        "city": "city 1"
+      },
+      "short_link": "short_link 1",
+      "event_hosts": {
+        "member_name": "member_name 1",
+        "member_id": 1
+      },
+      "utc_offset": 1,
+      "fee": {
+        "amount": "amount 1",
+        "description": "description 1",
+        "label": 1,
+        "required": "required 1",
+        "accepts": "accepts 1",
+        "currency": "currency 1"
+      },
+      "duration": 1,
+      "announced": "announced 1",
+      "event_url": "event_url 1",
+      "how_to_find_us": "how_to_find_us 1",
+      "rating": {
+        "count": 1,
+        "average": "average 1"
+      },
+      "group": {
+        "id": 1,
+        "topics": {
+          "id": 1,
+          "urlkey": "urlkey 1",
+          "name": "name 1"
+        },
+        "category": {
+          "id": 1,
+          "name": "name 1",
+          "shortname": "shortname 1"
+        },
+        "group_photo": {
+          "photo_link": "photo_link 1",
+          "highres_link": "highres_link 1",
+          "thumb_link": "thumb_link 1",
+          "photo_id": 1
+        },
+        "group_lat": "group_lat 1",
+        "name": "name 1",
+        "group_lon": "group_lon 1",
+        "membership_dues": {
+          "methods": "methods 1",
+          "fee": "fee 1",
+          "required": "required 1",
+          "fee_desc": "fee_desc 1",
+          "refund_policy": "refund_policy 1",
+          "currency": "currency 1"
+        },
+        "join_mode": "join_mode 1",
+        "urlname": "urlname 1",
+        "who": "who 1"
+      },
+      "simple_html_description": "simple_html_description 1",
+      "why": "why 1"
+    }
+  ]
+}

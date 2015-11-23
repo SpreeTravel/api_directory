@@ -1,0 +1,11 @@
+{
+  "calculation_phase" : "FEE_SUBTOTAL_PHASE" ,
+  "adjustment_type" : "TAX" ,
+  "applies_to_custom_amounts" : true ,
+  "enabled" : true ,
+  "inclusion_type" : "ADDITIVE" ,
+  "id" : "19498df7-3fb0-4c96-8b47-860480718abk" ,
+  "name" : "Sales tax" ,
+  "rate" : "0.06" ,
+  "type" : "US_SALES_TAX"
+}

@@ -1,0 +1,65 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="request">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:int" name="amount"/>
+        <xs:element type="xs:float" name="fixedrate"/>
+        <xs:element type="xs:float" name="adjustablerate"/>
+        <xs:element type="xs:string" name="schedule"/>
+        <xs:element type="xs:short" name="fixedterminmonths"/>
+        <xs:element type="xs:short" name="adjustableterminmonths"/>
+        <xs:element type="xs:byte" name="monthsbeforeadjustment"/>
+        <xs:element type="xs:byte" name="monthsbetweenadjustments"/>
+        <xs:element type="xs:float" name="adjustment"/>
+        <xs:element type="xs:float" name="ratecap"/>
+        <xs:element type="xs:float" name="costofmoney"/>
+        <xs:element type="xs:float" name="taxbracket"/>
+        <xs:element type="xs:byte" name="comparisonyears"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="message">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="text"/>
+        <xs:element type="xs:byte" name="code"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:int" name="monthlyprincipalandinterest"/>
+        <xs:element type="xs:int" name="monthlyprincipalandinterestadjustable"/>
+        <xs:element type="xs:int" name="fixeddiscountedpayments"/>
+        <xs:element type="xs:int" name="adjustablediscountedpayments"/>
+        <xs:element type="xs:byte" name="fixedremainingprincipal"/>
+        <xs:element type="xs:byte" name="adjustableremainingprincipal"/>
+        <xs:element type="xs:short" name="fixedtaxsavings"/>
+        <xs:element type="xs:short" name="adjustabletaxsavings"/>
+        <xs:element type="xs:int" name="fixedtotalcost"/>
+        <xs:element type="xs:int" name="adjustabletotalcost"/>
+        <xs:element type="xs:string" name="result"/>
+        <xs:element name="amortizationschedule">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="payment" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:byte" name="period"/>
+                    <xs:element type="xs:int" name="fixedpayment"/>
+                    <xs:element type="xs:int" name="fixedbalance"/>
+                    <xs:element type="xs:int" name="adjustablepayment"/>
+                    <xs:element type="xs:int" name="adjustablebalance"/>
+                    <xs:element type="xs:float" name="adjustablerate"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="frequency"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

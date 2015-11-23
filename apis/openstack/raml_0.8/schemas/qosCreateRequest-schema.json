@@ -1,0 +1,25 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "qos_specs" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "availability" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "numberOfFailures" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

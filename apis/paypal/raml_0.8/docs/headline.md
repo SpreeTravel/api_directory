@@ -1,0 +1,1 @@
+PayPal is international digital wallet based e-commerce business allowing payments and money transfers to be made through the Internet.

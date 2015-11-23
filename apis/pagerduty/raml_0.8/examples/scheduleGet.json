@@ -1,0 +1,72 @@
+{
+	"schedule" : {
+		"id" : "PWEVPB6" ,
+		"name" : "Primary" ,
+		"time_zone" : "Eastern Time (US & Canada)" ,
+		"today" : "2013-03-26" ,
+		"escalation_policies" : [ ] ,
+		"schedule_layers" : [ {
+			"name" : "Schedule Layer 2" ,
+			"rendered_schedule_entries" : [ ] ,
+			"id" : "POM1B2S" ,
+			"priority" : 1 ,
+			"start" : "2013-02-25T18:38:44-05:00" ,
+			"end" : null ,
+			"restriction_type" : "Daily" ,
+			"rotation_virtual_start" : "2013-02-24T00:00:00-05:00" ,
+			"rotation_turn_length_seconds" : 86400 ,
+			"users" : [ {
+				"member_order" : 1 ,
+				"user" : {
+					"id" : "PPSFHH7" ,
+					"name" : "Bob Smith" ,
+					"email" : "bob@acme.com" ,
+					"color" : "red"
+				}
+			} , {
+				"member_order" : 2 ,
+				"user" : {
+					"id" : "PRDFNAL" ,
+					"name" : "Sarah Jones" ,
+					"email" : "sarah@acme.com" ,
+					"color" : "green"
+				}
+			} ] ,
+			"restrictions" : [ {
+				"start_time_of_day" : "00:00:00" ,
+				"duration_seconds" : 43200
+			} ] ,
+			"rendered_coverage_percentage" : 0.0
+		} , {
+			"name" : "Schedule Layer 1" ,
+			"rendered_schedule_entries" : [ ] ,
+			"id" : "PSYPBEF" ,
+			"priority" : 0 ,
+			"start" : "2013-02-25T18:38:44-05:00" ,
+			"end" : null ,
+			"restriction_type" : null ,
+			"rotation_virtual_start" : "2013-02-24T00:00:00-05:00" ,
+			"rotation_turn_length_seconds" : 86400 ,
+			"users" : [ {
+				"member_order" : 1 ,
+				"user" : {
+					"id" : "PT23IWX" ,
+					"name" : "Tim Wright" ,
+					"email" : "tim@acme.com" ,
+					"color" : "purple"
+				}
+			} ] ,
+			"restrictions" : [ ] ,
+			"rendered_coverage_percentage" : 0.0
+		} ] ,
+		"overrides_subschedule" : {
+			"name" : "Overrides" ,
+			"rendered_schedule_entries" : [ ]
+		} ,
+		"final_schedule" : {
+			"name" : "Final Schedule" ,
+			"rendered_schedule_entries" : [ ] ,
+			"rendered_coverage_percentage" : 0.0
+		}
+	}
+}

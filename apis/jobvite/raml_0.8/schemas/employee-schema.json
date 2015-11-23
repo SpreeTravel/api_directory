@@ -1,0 +1,153 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "CompanyId" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "ImporterEmail" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "ReportEmail" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "DoNotSyncOnWarnings" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "OverwriteEmployeeNamesAndEmail" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "Employees" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "FirstName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "LastName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "Name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "DepartmentName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "LocationName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "RegionName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "SubsidiaryName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "Role" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "Title" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "EmployeeId" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "Address" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "Address2" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "City" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "State" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "PostalCode" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "Country" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "HomePhone" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "WorkPhone" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "Mobile" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "CustomFields" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "Key" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "Value" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "FirstName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "LastName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "Name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "LocationName" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

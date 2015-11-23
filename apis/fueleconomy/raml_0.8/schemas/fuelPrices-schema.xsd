@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="fuelPrices">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="cng" type="xs:double"></xs:element>
+				<xs:element name="diesel" type="xs:double"></xs:element>
+				<xs:element name="e85" type="xs:double"></xs:element>
+				<xs:element name="electric" type="xs:double"></xs:element>
+				<xs:element name="lpg" type="xs:double"></xs:element>
+				<xs:element name="midgrade" type="xs:double"></xs:element>
+				<xs:element name="premium" type="xs:double"></xs:element>
+				<xs:element name="regular" type="xs:double"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

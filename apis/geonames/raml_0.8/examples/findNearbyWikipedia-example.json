@@ -1,0 +1,68 @@
+{
+  "geonames" : [
+    {
+      "summary" : "The Linth (pronounced "lint") is a Swiss river starting near the Klausen Pass above Linthal in the mountains of Glarus. It initially flows north through the canton of Glarus, passing Schwanden, where it is joined by its main tributary the Sernf, Ennenda, the town of Glarus, Netstal, and Näfels, from (...)" ,
+      "distance" : "0.8856" ,
+      "rank" : 100 ,
+      "title" : "Linth" ,
+      "wikipediaUrl" : "en.wikipedia.org/wiki/Linth" ,
+      "elevation" : 1532 ,
+      "countryCode" : "CH" ,
+      "lng" : 9.0095 ,
+      "feature" : "river" ,
+      "lang" : "en" ,
+      "lat" : 46.983
+    } , {
+      "summary" : "Oberblegisee is a lake in the Canton of Glarus, Switzerland. It is located at an elevation of 1422 m, above Luchsingen. Its surface area is 0.17 km².  (...)" ,
+      "distance" : "1.1194" ,
+      "rank" : 100 ,
+      "title" : "Oberblegisee" ,
+      "wikipediaUrl" : "en.wikipedia.org/wiki/Oberblegisee" ,
+      "elevation" : 1410 ,
+      "countryCode" : "CH" ,
+      "lng" : 9.013333 ,
+      "feature" : "waterbody" ,
+      "lang" : "en" ,
+      "lat" : 46.980833
+    } , {
+      "summary" : "The Rüchigrat (2,657 m) is a mountain of the Glarus Alps, located west of Luchsingen in the canton of Glarus. It lies south of the Glärnisch, on the range between the valley of the Klöntalersee and the main Linth valley (...)" ,
+      "distance" : "1.6262" ,
+      "rank" : 100 ,
+      "title" : "Rüchigrat" ,
+      "wikipediaUrl" : "en.wikipedia.org/wiki/R%C3%BCchigrat" ,
+      "elevation" : 2625 ,
+      "countryCode" : "CH" ,
+      "lng" : 8.977222222222222 ,
+      "feature" : "mountain" ,
+      "geoNameId" : 6938281 ,
+      "lang" : "en" ,
+      "lat" : 46.97916666666667
+    } , {
+      "summary" : "The Glärnisch is a mountain of the Glarus Alps, overlooking the valley of the Linth in the Swiss canton of Glarus. It consists of several summits of which the highest (2,914 metres) is the Bächistock, followed by the Vrenelisgärtli--"Verena'sLittleGarden"—at 2,904 metres) and the Ruchen (2,901 (...)" ,
+      "distance" : "2.0554" ,
+      "rank" : 100 ,
+      "title" : "Glärnisch" ,
+      "wikipediaUrl" : "en.wikipedia.org/wiki/Gl%C3%A4rnisch" ,
+      "elevation" : 2880 ,
+      "countryCode" : "CH" ,
+      "lng" : 8.998611 ,
+      "feature" : "mountain" ,
+      "geoNameId" : 2660595 ,
+      "lang" : "en" ,
+      "lat" : 46.998611
+    } , {
+      "summary" : "Luchsingen is a former municipality in the canton of Glarus in Switzerland. Since 2004 the former municipalities of Hätzingen and Diesbach have been part of Luchsingen. Effective from 1 January 2011, Luchsingen is part of the municipality of Glarus Süd.  (...)" ,
+      "distance" : "3.2617" ,
+      "rank" : 100 ,
+      "title" : "Luchsingen" ,
+      "wikipediaUrl" : "en.wikipedia.org/wiki/Luchsingen" ,
+      "elevation" : 570 ,
+      "countryCode" : "CH" ,
+      "lng" : 9.037219 ,
+      "feature" : "city" ,
+      "geoNameId" : 2659839 ,
+      "lang" : "en" ,
+      "lat" : 46.967219
+    }
+  ]
+}

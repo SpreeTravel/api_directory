@@ -1,0 +1,8 @@
+[
+  {
+    "url": "http://example.com/example-page",
+    "sent": 42,
+    "clicks": 42,
+    "unique_clicks": 42
+  }
+]

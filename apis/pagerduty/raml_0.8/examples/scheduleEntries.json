@@ -1,0 +1,31 @@
+{
+	"total" : 3 ,
+	"entries" : [ {
+		"user" : {
+			"email" : "gregory_hilll@deckow.us" ,
+			"name" : "Gregory" ,
+			"color" : "chocolate" ,
+			"id" : "PRT2T0A"
+		} ,
+		"end" : "2012-08-19T12:00:00-04:00" ,
+		"start" : "2012-08-19T00:00:00-04:00"
+	} , {
+		"user" : {
+			"email" : "hailie_hansen@shieldsfarrell.biz" ,
+			"name" : "Halie" ,
+			"color" : "maroon" ,
+			"id" : "PFKNVH3"
+		} ,
+		"end" : "2012-08-20T00:00:00-04:00" ,
+		"start" : "2012-08-19T12:00:00-04:00"
+	} , {
+		"user" : {
+			"email" : "gabrielle_glover@mertz.biz" ,
+			"name" : "Gabriel" ,
+			"color" : "dark-red" ,
+			"id" : "PYBBUSQ"
+		} ,
+		"end" : "2012-08-20T00:00:00-04:00" ,
+		"start" : "2012-08-20T00:00:00-04:00"
+	} ]
+}

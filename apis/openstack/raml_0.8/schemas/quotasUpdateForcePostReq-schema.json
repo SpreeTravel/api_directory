@@ -1,0 +1,21 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "quota_set" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "force" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "instances" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

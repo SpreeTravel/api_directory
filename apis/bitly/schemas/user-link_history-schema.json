@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "result_count": {
+          "description": "The number of returned links in this user's history.",
+          "type": "integer"
+        },
+        "link_history": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "description": "The specified user's links.",
+            "properties": {
+              "link": {
+                "description": "The bitly link specific to this user and this long_url.",
+                "type": "string"
+              },
+              "aggregate_link": {
+                "description": "The global bitly identifier for this long_url.",
+                "type": "string"
+              },
+              "long_url": {
+                "description": "The original long URL.",
+                "type": "string"
+              },
+              "archived": {
+                "description": "A true/false value indicating whether the user has archived this link.",
+                "type": "boolean"
+              },
+              "private": {
+                "description": "A true/false value indicating whether the user has made this link private.",
+                "type": "boolean"
+              },
+              "created_at": {
+                "type": "string",
+                "description": "An integer unix epoch indicating when this link was shortened/encoded."
+              },
+              "user_ts": {
+                "type": "string",
+                "description": "A user-provided timestamp for when this link was shortened/encoded, used for backfilling data."
+              },
+              "modified_at": {
+                "type": "string",
+                "description": "An integer unix epoch indicating when this link's metadata was last edited."
+              },
+              "title": {
+                "description": "The title for this link.",
+                "type": "string"
+              },
+              "shares": {
+                "type": "array",
+                "items": {
+                  "description": "A list of share actions (for the authenticated user only)"
+                }
+              },
+              "client_id": {
+                "description": "the oauth client ID of the app that shortened/saved this link on behalf of the user. If expand_client_id is set to false, this will be a string corresponding to the client_id of the encoding oauth application. If expand_client_id is set to true, this will be a mapping containing the following fields:",
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "properties": {
+                      "client_id": {
+                        "description": "A string corresponding to the client_id of the encoding oauth application.",
+                        "type": "string"
+                      },
+                      "app_link": {
+                        "description": "The link for the encoding oauth application.",
+                        "type": "string"
+                      },
+                      "app_name": {
+                        "description": "The name of the encoding oauth application.",
+                        "type": "string"
+                      },
+                      "app_description": {
+                        "description": "A description of the encoding oauth application.",
+                        "type": "string"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "status_code": {
+      "type": "integer",
+      "required": true
+    },
+    "status_txt": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

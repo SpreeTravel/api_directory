@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "array",
+  "items": {
+    "required": false,
+    "type": "object",
+    "properties": {
+      "merge_date": {
+        "required": false,
+        "type": "integer"
+      },
+      "new_account_id": {
+        "required": false,
+        "type": "integer"
+      },
+      "old_account_id": {
+        "required": false,
+        "type": "integer"
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "From" : "sender@example.com" ,
+    "To" : "receiver@example.com" ,
+    "Cc" : "copied@example.com" ,
+    "Bcc" : "blank-copied@example.com" ,
+    "Subject" : "Test" ,
+    "Tag" : "Invitation" ,
+    "HtmlBody" : "<b>Hello</b>" ,
+    "TextBody" : "Hello" ,
+    "ReplyTo" : "reply@example.com" ,
+    "Headers" : [
+      {
+        "Name" : "CUSTOM-HEADER" ,
+        "Value" : "value"
+      }
+    ] ,
+    "Attachments" : [
+      {
+        "Name" : "readme.txt" ,
+        "Content" : "dGVzdCBjb250ZW50" ,
+        "ContentType" : "text/plain"
+      } , {
+        "Name" : "report.pdf" ,
+        "Content" : "dGVzdCBjb250ZW50" ,
+        "ContentType" : "application/octet-stream"
+      } , {
+        "Name" : "bacon.jpg" ,
+        "Content" : "/9j/4AAQSkZJRgABAgEAAAAAAAD/4" ,
+        "ContentType" : "image/jpeg" ,
+        "ContentID" : "cid:part1.01030607.06070005@gmail.com"
+      }
+    ]
+  }
+]

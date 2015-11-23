@@ -1,0 +1,40 @@
+[
+  {
+    "comment_id": 1,
+    "creation_date": 1,
+    "down_vote_count": 1,
+    "owner": {
+      "accept_rate": 1,
+      "badge_counts": {
+        "bronze": 1,
+        "gold": 1,
+        "silver": 1
+      },
+      "display_name": "some string",
+      "link": "some string",
+      "profile_image": "some string",
+      "reputation": 1,
+      "user_id": 1,
+      "user_type": "some string"
+    },
+    "post_id": 1,
+    "question_id": 1,
+    "revision_guid": "some string",
+    "timeline_type": "some string",
+    "up_vote_count": 1,
+    "user": {
+      "accept_rate": 1,
+      "badge_counts": {
+        "bronze": 1,
+        "gold": 1,
+        "silver": 1
+      },
+      "display_name": "some string",
+      "link": "some string",
+      "profile_image": "some string",
+      "reputation": 1,
+      "user_id": 1,
+      "user_type": "some string"
+    }
+  }
+]

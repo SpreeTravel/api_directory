@@ -1,0 +1,14 @@
+[
+	{
+		"success" : {
+			"createdAt" : "2013-12-24T18:58:41.741Z" ,
+			"objectId" : "VaUca0tRMT"
+		}
+	} ,
+	{
+		"error" : {
+			"code" : 101 ,
+			"error" : "object not found for delete"
+		}
+	}
+]

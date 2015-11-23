@@ -1,0 +1,15 @@
+{
+	"notification_rule" : {
+		"id" : "PDHDWMP" ,
+		"start_delay_in_minutes" : 4 ,
+		"contact_method" : {
+			"id" : "PNGKILZ" ,
+			"label" : "Work" ,
+			"type" : "email" ,
+			"email" : "bob@acme.com" ,
+			"address" : "bob@acme.com" ,
+			"send_short_email" : false ,
+			"user_id" : "PPSFHH7"
+		}
+	}
+}

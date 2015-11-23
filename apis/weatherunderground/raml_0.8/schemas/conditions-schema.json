@@ -1,0 +1,349 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "response": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "version": {
+          "required": false,
+          "type": "string"
+        },
+        "termsofService": {
+          "required": false,
+          "type": "string"
+        },
+        "features": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "conditions": {
+              "required": false,
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "current_observation": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "image": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "url": {
+              "required": false,
+              "type": "string"
+            },
+            "title": {
+              "required": false,
+              "type": "string"
+            },
+            "link": {
+              "required": false,
+              "type": "string"
+            }
+          }
+        },
+        "display_location": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "full": {
+              "required": false,
+              "type": "string"
+            },
+            "city": {
+              "required": false,
+              "type": "string"
+            },
+            "state": {
+              "required": false,
+              "type": "string"
+            },
+            "state_name": {
+              "required": false,
+              "type": "string"
+            },
+            "country": {
+              "required": false,
+              "type": "string"
+            },
+            "country_iso3166": {
+              "required": false,
+              "type": "string"
+            },
+            "zip": {
+              "required": false,
+              "type": "string"
+            },
+            "latitude": {
+              "required": false,
+              "type": "string"
+            },
+            "longitude": {
+              "required": false,
+              "type": "string"
+            },
+            "elevation": {
+              "required": false,
+              "type": "string"
+            }
+          }
+        },
+        "observation_location": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "full": {
+              "required": false,
+              "type": "string"
+            },
+            "city": {
+              "required": false,
+              "type": "string"
+            },
+            "state": {
+              "required": false,
+              "type": "string"
+            },
+            "country": {
+              "required": false,
+              "type": "string"
+            },
+            "country_iso3166": {
+              "required": false,
+              "type": "string"
+            },
+            "latitude": {
+              "required": false,
+              "type": "string"
+            },
+            "longitude": {
+              "required": false,
+              "type": "string"
+            },
+            "elevation": {
+              "required": false,
+              "type": "string"
+            }
+          }
+        },
+        "estimated": {
+          "required": false,
+          "type": "object",
+          "properties": {
+          }
+        },
+        "station_id": {
+          "required": false,
+          "type": "string"
+        },
+        "observation_time": {
+          "required": false,
+          "type": "string"
+        },
+        "observation_time_rfc822": {
+          "required": false,
+          "type": "string"
+        },
+        "observation_epoch": {
+          "required": false,
+          "type": "string"
+        },
+        "local_time_rfc822": {
+          "required": false,
+          "type": "string"
+        },
+        "local_epoch": {
+          "required": false,
+          "type": "string"
+        },
+        "local_tz_short": {
+          "required": false,
+          "type": "string"
+        },
+        "local_tz_long": {
+          "required": false,
+          "type": "string"
+        },
+        "local_tz_offset": {
+          "required": false,
+          "type": "string"
+        },
+        "weather": {
+          "required": false,
+          "type": "string"
+        },
+        "temperature_string": {
+          "required": false,
+          "type": "string"
+        },
+        "temp_f": {
+          "required": false,
+          "type": "number"
+        },
+        "temp_c": {
+          "required": false,
+          "type": "number"
+        },
+        "relative_humidity": {
+          "required": false,
+          "type": "string"
+        },
+        "wind_string": {
+          "required": false,
+          "type": "string"
+        },
+        "wind_dir": {
+          "required": false,
+          "type": "string"
+        },
+        "wind_degrees": {
+          "required": false,
+          "type": "integer"
+        },
+        "wind_mph": {
+          "required": false,
+          "type": "number"
+        },
+        "wind_gust_mph": {
+          "required": false,
+          "type": "string"
+        },
+        "wind_kph": {
+          "required": false,
+          "type": "number"
+        },
+        "wind_gust_kph": {
+          "required": false,
+          "type": "string"
+        },
+        "pressure_mb": {
+          "required": false,
+          "type": "string"
+        },
+        "pressure_in": {
+          "required": false,
+          "type": "string"
+        },
+        "pressure_trend": {
+          "required": false,
+          "type": "string"
+        },
+        "dewpoint_string": {
+          "required": false,
+          "type": "string"
+        },
+        "dewpoint_f": {
+          "required": false,
+          "type": "integer"
+        },
+        "dewpoint_c": {
+          "required": false,
+          "type": "integer"
+        },
+        "heat_index_string": {
+          "required": false,
+          "type": "string"
+        },
+        "heat_index_f": {
+          "required": false,
+          "type": "string"
+        },
+        "heat_index_c": {
+          "required": false,
+          "type": "string"
+        },
+        "windchill_string": {
+          "required": false,
+          "type": "string"
+        },
+        "windchill_f": {
+          "required": false,
+          "type": "string"
+        },
+        "windchill_c": {
+          "required": false,
+          "type": "string"
+        },
+        "feelslike_string": {
+          "required": false,
+          "type": "string"
+        },
+        "feelslike_f": {
+          "required": false,
+          "type": "string"
+        },
+        "feelslike_c": {
+          "required": false,
+          "type": "string"
+        },
+        "visibility_mi": {
+          "required": false,
+          "type": "string"
+        },
+        "visibility_km": {
+          "required": false,
+          "type": "string"
+        },
+        "solarradiation": {
+          "required": false,
+          "type": "string"
+        },
+        "UV": {
+          "required": false,
+          "type": "string"
+        },
+        "precip_1hr_string": {
+          "required": false,
+          "type": "string"
+        },
+        "precip_1hr_in": {
+          "required": false,
+          "type": "string"
+        },
+        "precip_1hr_metric": {
+          "required": false,
+          "type": "string"
+        },
+        "precip_today_string": {
+          "required": false,
+          "type": "string"
+        },
+        "precip_today_in": {
+          "required": false,
+          "type": "string"
+        },
+        "precip_today_metric": {
+          "required": false,
+          "type": "string"
+        },
+        "icon": {
+          "required": false,
+          "type": "string"
+        },
+        "icon_url": {
+          "required": false,
+          "type": "string"
+        },
+        "forecast_url": {
+          "required": false,
+          "type": "string"
+        },
+        "history_url": {
+          "required": false,
+          "type": "string"
+        },
+        "ob_url": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+[
+  {
+    "ErrorCode" : 0 ,
+    "Message" : "OK" ,
+    "MessageID" : "b7bc2f4a-e38e-4336-af7d-e6c392c2f817" ,
+    "SubmittedAt" : "2010-11-26T12:01:05.1794748-05:00" ,
+    "To" : "receiver1@example.com"
+  } , {
+    "ErrorCode" : 0 ,
+    "Message" : "OK" ,
+    "MessageID" : "e2ecbbfc-fe12-463d-b933-9fe22915106d" ,
+    "SubmittedAt" : "2010-11-26T12:01:05.1794748-05:00" ,
+    "To" : "receiver2@example.com"
+  }
+]

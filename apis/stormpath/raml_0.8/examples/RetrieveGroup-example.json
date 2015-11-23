@@ -1,0 +1,15 @@
+{
+  "href" : "https://api.stormpath.com/v1/groups/ZgoHUG0oSoVNeU0K4GZeVQ" ,
+  "name" : "Aquanauts" ,
+  "description" : "Sea Voyagers" ,
+  "status" : "enabled" ,
+  "directory" : {
+    "href" : "https://api.stormpath.com/v1/directories/bckhcGMXQDujIXpbCDRb2Q"
+  } ,
+  "tenant" : {
+    "href" : "https://api.stormpath.com/v1/tenants/Gh9238fksJlsieJkPkQuW"
+  } ,
+  "accounts" : {
+    "href" : "https://api.stormpath.com/v1/groups/ZgoHUG0oSoVNeU0K4GZeVQ/accounts"
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "id" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "totalRowCount" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "accessLevel" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "permalink" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "createdAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "modifiedAt" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "columns" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "virtualId" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "index" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "primary" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "title" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "sheetNameColumn" : {
+              "type" : "boolean" ,
+              "required" : false
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "virtualId" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "index" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "title" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    } ,
+    "rows" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "id" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "sheetId" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "rowNumber" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "expanded" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "accessLevel" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "createdAt" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "modifiedAt" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "cells" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "virtualColumnId" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "type" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "value" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "displayValue" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                } , {
+                  "type" : "object" ,
+                  "properties" : {
+                    "columnId" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "virtualColumnId" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "type" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "value" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "displayValue" : {
+                      "type" : "string" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

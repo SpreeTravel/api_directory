@@ -1,0 +1,28 @@
+{
+  "results": [
+    {
+      "id": 0,
+      "group_name": "group_name 0",
+      "title": 0,
+      "photo_url": "photo_url 0",
+      "link": "link 0",
+      "group_id": 0,
+      "published": "published 0",
+      "member_name": "member_name 0",
+      "member_id": 0,
+      "item_type": "item_type 0"
+    },
+    {
+      "id": 1,
+      "group_name": "group_name 1",
+      "title": 1,
+      "photo_url": "photo_url 1",
+      "link": "link 1",
+      "group_id": 1,
+      "published": "published 1",
+      "member_name": "member_name 1",
+      "member_id": 1,
+      "item_type": "item_type 1"
+    }
+  ]
+}

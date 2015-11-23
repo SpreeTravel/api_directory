@@ -1,0 +1,7 @@
+{
+  "firstName" : "John" ,
+  "lastName" : "Doe" ,
+  "email" : "NEW_USER_EMAIL" ,
+  "admin" : false ,
+  "licensedSheetCreator" : true
+}

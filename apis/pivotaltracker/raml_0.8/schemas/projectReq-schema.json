@@ -1,0 +1,85 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "account_id" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "atom_enabled" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "automatic_planning" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "bugs_and_chores_are_estimatable" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "enable_incoming_emails" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "enable_tasks" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "initial_velocity" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "iteration_length" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "number_of_done_iterations_to_show" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "point_scale" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "public" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "start_date" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "time_zone" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "kind" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "olson_name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "offset" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "velocity_averaged_over" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "week_start_day" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

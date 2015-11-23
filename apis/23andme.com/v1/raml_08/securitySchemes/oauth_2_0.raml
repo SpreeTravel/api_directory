@@ -1,0 +1,28 @@
+type: OAuth 2.0
+describedBy: 
+  queryParameters: 
+    access_token: 
+      description: |
+        Used to send a valid OAuth 2 access token. Do not use together with
+        the "Authorization" header
+settings: 
+  authorizationUri: https://api.23andme.com/authorize/
+  accessTokenUri: https://api.23andme.com/token/
+  authorizationGrants: [ code ]
+  scopes: 
+    - genomes
+    - basic
+    - names
+    - email
+    - haplogroups
+    - ancestry
+    - family_tree
+    - relatives
+    - "relatives:write"
+    - analyses
+    - "profile:read"
+    - "profile:write"
+    - publish
+    - "introduction:read"
+    - "introduction:write"
+    - "phenotypes:write:sex"

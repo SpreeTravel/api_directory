@@ -1,0 +1,59 @@
+{
+  "visibility": "visibility",
+  "is_simplehtml": "is_simplehtml",
+  "link": "link",
+  "next_event": {
+    "id": 100,
+    "time": 100,
+    "name": "name"
+  },
+  "state": 100,
+  "join_mode": "join_mode",
+  "who": "who",
+  "city": "city",
+  "id": 100,
+  "timezone": "timezone",
+  "created": 100,
+  "list_addr": "list_addr",
+  "description": "description",
+  "ga_code": "ga_code",
+  "name": "name",
+  "urlname": "urlname",
+  "lat": 1.0,
+  "members": "members",
+  "list_mode": "list_mode",
+  "lon": 1.0,
+  "join_info": {
+    "questions": {
+      "id": 100,
+      "question": "question"
+    },
+    "intro_required": "intro_required",
+    "questions_req": "questions_req",
+    "photo_required": "photo_required"
+  },
+  "organizer": {
+    "id": 100,
+    "bio": "bio",
+    "name": "name"
+  },
+  "country": "country",
+  "photos": {
+    "id": 100,
+    "photo_link": "photo_link",
+    "highres_link": "highres_link",
+    "thumb_link": "thumb_link"
+  },
+  "category": {
+    "id": 100,
+    "name": "name",
+    "shortname": "shortname"
+  },
+  "group_photo": {
+    "id": 100,
+    "photo_link": "photo_link",
+    "highres_link": "highres_link",
+    "thumb_link": "thumb_link"
+  },
+  "simple_html_description": "simple_html_description"
+}

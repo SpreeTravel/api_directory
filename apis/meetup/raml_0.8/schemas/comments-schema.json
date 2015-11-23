@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "results": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "comment": {
+            "required": false,
+            "type": "string"
+          },
+          "country": {
+            "required": false,
+            "type": "string"
+          },
+          "city": {
+            "required": false,
+            "type": "string"
+          },
+          "state": {
+            "required": false,
+            "type": "integer"
+          },
+          "created": {
+            "required": false,
+            "type": "integer"
+          },
+          "lat": {
+            "required": false,
+            "type": "number"
+          },
+          "lon": {
+            "required": false,
+            "type": "number"
+          },
+          "link": {
+            "required": false,
+            "type": "string"
+          },
+          "name": {
+            "required": false,
+            "type": "string"
+          },
+          "photo_url": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="value">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="alarm_actions" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="item" minOccurs="0" maxOccurs="1" type="xsd:anyURI"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="alarm_id" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:simpleContent>
+              <xsd:extension base="xsd:string">
+                <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+              </xsd:extension>
+            </xsd:simpleContent>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="combination_rule" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:simpleContent>
+              <xsd:extension base="xsd:string">
+                <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+              </xsd:extension>
+            </xsd:simpleContent>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="description" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+        <xsd:element name="enabled" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+        <xsd:element name="insufficient_data_actions" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="item" minOccurs="0" maxOccurs="1" type="xsd:anyURI"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="name" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="ok_actions" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="item" minOccurs="0" maxOccurs="1" type="xsd:anyURI"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="project_id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="repeat_actions" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+        <xsd:element name="state" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="state_timestamp" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="threshold_rule" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:simpleContent>
+              <xsd:extension base="xsd:string">
+                <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+              </xsd:extension>
+            </xsd:simpleContent>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="timestamp" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="type" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="user_id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

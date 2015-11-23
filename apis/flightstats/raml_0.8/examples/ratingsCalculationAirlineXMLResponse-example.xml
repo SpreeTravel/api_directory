@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+	<ratings>
+		<rating>
+			<departureAirportFsCode>LAX</departureAirportFsCode>
+			<arrivalAirportFsCode>ORD</arrivalAirportFsCode>
+			<airlineFsCode>AA</airlineFsCode>
+			<flightNumber>1113</flightNumber>
+			<codeshares>0</codeshares>
+			<directs>0</directs>
+			<observations>18</observations>
+			<ontime>16</ontime>
+			<late15>1</late15>
+			<late30>1</late30>
+			<late45>0</late45>
+			<cancelled>0</cancelled>
+			<diverted>0</diverted>
+			<ontimePercent>0.8888889</ontimePercent>
+			<delayObservations>2</delayObservations>
+			<delayMean>32.0</delayMean>
+			<delayStandardDeviation>4.2426405</delayStandardDeviation>
+			<delayMin>29</delayMin>
+			<delayMax>35</delayMax>
+			<allOntimeCumulative>0.9192</allOntimeCumulative>
+			<allOntimeStars>4.5999999</allOntimeStars>
+			<allDelayCumulative>0.42070001</allDelayCumulative>
+			<allDelayStars>2.0999999</allDelayStars>
+			<allStars>3.3499999</allStars>
+		</rating>
+		<rating>
+			<departureAirportFsCode>PIT</departureAirportFsCode>
+			<arrivalAirportFsCode>DFW</arrivalAirportFsCode>
+			<airlineFsCode>AA</airlineFsCode>
+			<flightNumber>1113</flightNumber>
+			<codeshares>0</codeshares>
+			<directs>0</directs>
+			<observations>42</observations>
+			<ontime>29</ontime>
+			<late15>1</late15>
+			<late30>4</late30>
+			<late45>5</late45>
+			<cancelled>3</cancelled>
+			<diverted>0</diverted>
+			<ontimePercent>0.69047618</ontimePercent>
+			<delayObservations>14</delayObservations>
+			<delayMean>93.0</delayMean>
+			<delayStandardDeviation>188.57184</delayStandardDeviation>
+			<delayMin>2</delayMin>
+			<delayMax>738</delayMax>
+			<allOntimeCumulative>0.1587</allOntimeCumulative>
+			<allOntimeStars>0.80000001</allOntimeStars>
+			<allDelayCumulative>0.0</allDelayCumulative>
+			<allDelayStars>0.0</allDelayStars>
+			<allStars>0.40000001</allStars>
+		</rating>
+	</ratings>
+	<appendix>
+		<airlines>
+			<airline>
+				<fs>AA</fs>
+				<iata>AA</iata>
+				<icao>AAL</icao>
+				<name>American Airlines</name>
+				<phoneNumber>1-800-433-7300</phoneNumber>
+				<active>true</active>
+			</airline>
+		</airlines>
+		<airports>
+			<airport>
+				<fs>ORD</fs>
+				<iata>ORD</iata>
+				<icao>KORD</icao>
+				<faa>ORD</faa>
+				<name>O'Hare International Airport</name>
+				<street1>10000 West O'Hare</street1>
+				<city>Chicago</city>
+				<cityCode>CHI</cityCode>
+				<stateCode>IL</stateCode>
+				<postalCode>60666</postalCode>
+				<countryCode>US</countryCode>
+				<countryName>United States</countryName>
+				<regionName>North America</regionName>
+				<timeZoneRegionName>America/Chicago</timeZoneRegionName>
+				<weatherZone>ILZ014</weatherZone>
+				<localTime>2015-04-28T01:31:10.696</localTime>
+				<utcOffsetHours>-5.0</utcOffsetHours>
+				<latitude>41.976912</latitude>
+				<longitude>-87.904876</longitude>
+				<elevationFeet>668</elevationFeet>
+				<classification>1</classification>
+				<active>true</active>
+			</airport>
+			<airport>
+				<fs>LAX</fs>
+				<iata>LAX</iata>
+				<icao>KLAX</icao>
+				<faa>LAX</faa>
+				<name>Los Angeles International Airport</name>
+				<street1>One World Way</street1>
+				<street2/>
+				<city>Los Angeles</city>
+				<cityCode>LAX</cityCode>
+				<stateCode>CA</stateCode>
+				<postalCode>90045-5803</postalCode>
+				<countryCode>US</countryCode>
+				<countryName>United States</countryName>
+				<regionName>North America</regionName>
+				<timeZoneRegionName>America/Los_Angeles</timeZoneRegionName>
+				<weatherZone>CAZ041</weatherZone>
+				<localTime>2015-04-27T23:31:10.696</localTime>
+				<utcOffsetHours>-7.0</utcOffsetHours>
+				<latitude>33.943399</latitude>
+				<longitude>-118.408279</longitude>
+				<elevationFeet>126</elevationFeet>
+				<classification>1</classification>
+				<active>true</active>
+			</airport>
+			<airport>
+				<fs>DFW</fs>
+				<iata>DFW</iata>
+				<icao>KDFW</icao>
+				<faa>DFW</faa>
+				<name>Dallas/Fort Worth International Airport</name>
+				<street1>3200 East Airfield Drive</street1>
+				<city>Dallas</city>
+				<cityCode>DFW</cityCode>
+				<stateCode>TX</stateCode>
+				<postalCode>75261</postalCode>
+				<countryCode>US</countryCode>
+				<countryName>United States</countryName>
+				<regionName>North America</regionName>
+				<timeZoneRegionName>America/Chicago</timeZoneRegionName>
+				<weatherZone>TXZ119</weatherZone>
+				<localTime>2015-04-28T01:31:10.697</localTime>
+				<utcOffsetHours>-5.0</utcOffsetHours>
+				<latitude>32.897462</latitude>
+				<longitude>-97.036128</longitude>
+				<elevationFeet>603</elevationFeet>
+				<classification>1</classification>
+				<active>true</active>
+			</airport>
+			<airport>
+				<fs>PIT</fs>
+				<iata>PIT</iata>
+				<icao>KPIT</icao>
+				<faa>PIT</faa>
+				<name>Pittsburgh International Airport</name>
+				<street1>1000 Airport Boulevard</street1>
+				<street2/>
+				<city>Pittsburgh</city>
+				<cityCode>PIT</cityCode>
+				<stateCode>PA</stateCode>
+				<postalCode>15231-0370</postalCode>
+				<countryCode>US</countryCode>
+				<countryName>United States</countryName>
+				<regionName>North America</regionName>
+				<timeZoneRegionName>America/New_York</timeZoneRegionName>
+				<weatherZone>PAZ021</weatherZone>
+				<localTime>2015-04-28T02:31:10.697</localTime>
+				<utcOffsetHours>-4.0</utcOffsetHours>
+				<latitude>40.49585</latitude>
+				<longitude>-80.25657</longitude>
+				<elevationFeet>1204</elevationFeet>
+				<classification>2</classification>
+				<active>true</active>
+			</airport>
+		</airports>
+	</appendix>
+	<request>
+		<url>https://api.flightstats.com/flex/ratings/rest/v1/xml/flight/AA/1113</url>
+		<airlineCode>
+			<requestedCode>AA</requestedCode>
+			<fsCode>AA</fsCode>
+		</airlineCode>
+		<flightNumber>
+			<requested>1113</requested>
+			<interpreted>1113</interpreted>
+		</flightNumber>
+		<departureAirport/>
+		<codeType/>
+	</request>
+</response>

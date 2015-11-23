@@ -1,0 +1,42 @@
+queryParameters: 
+  description: 
+    description: Longer description of the event, in HTML.
+  email_reminders: 
+    description: Limited to organizers and event hosts, if false, disables event reminders
+  group_id: 
+    description: Group hosting the event
+  guest_limit: 
+    description: Number of guests members may include in their RSVP, 0 or more
+  host_instructions: 
+    description: optional set of instructions to provide to hosts, only used when hosts are provided
+  hosts: 
+    description: Up to 5 comma-separated valid member ids to be hosts for the event. If hosts is not provided, the authorized member is the default host
+  how_to_find_us: 
+    description: Extra tips for locating the venue
+  name: 
+    description: Name of the event
+  publish_status: 
+    description: 'If you are an organizer of the group, you may set this to "draft" to save the event as a draft. Doing so will require a status=draft filter on /2/event queries.'
+  question_{index}: 
+    description: Those with permission may include up to 6 survey questions for the event. See the parameter notes section for more information
+  rsvp_alerts: 
+    description: Limited to organizers and event hosts, if false, disables member RSVP alerts
+  rsvp_close: 
+    description: Users with permission may set the RSVP close time for the event. The time may be specified in milliseconds since the epoch, or relative to the current time in the d/w/m format.
+  rsvp_limit: 
+    description: Total number of RSVPs available for the event
+  rsvp_open: 
+    description: Users with permission may set the RSVP open time for the event. The time may be specified in milliseconds since the epoch, or relative to the current time in the d/w/m format.
+  simple_html_description: 
+    description: Description of the event, in simple HTML format. This value is translated to HTML to update the description.
+  time: 
+    description: Event start time in milliseconds since the epoch, or relative to the current time in the d/w/m format.
+  venue_id: 
+    description: Numeric identifier of a venue
+  venue_visibility: 
+    description: 'Controls the visibility of the event venue for non members of the hosting group. May be one of "public" or "members"'
+  waitlisting: 
+    description: |
+      Waiting list status may be one of: auto, manual, off
+  why: 
+    description: We should do this because...

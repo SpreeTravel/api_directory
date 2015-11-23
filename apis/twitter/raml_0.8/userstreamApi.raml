@@ -1,0 +1,62 @@
+#%RAML 0.8
+---
+title: Twitter Streaming API
+baseUri: https://{userstream}.twitter.com/{version}
+version: 1.1
+securitySchemes:
+  - oauth_1_0: !include securitySchemes/oauth_1_0.raml
+securedBy: [ oauth_1_0 ]
+mediaType: application/json
+resourceTypes:
+  - base: !include resourceTypes/base.raml
+/user{mediaTypeExtension}: 
+  type: base
+  get:
+    description: |
+      Streams messages for a single user, as described in 'User streams'
+      ( https://dev.twitter.com/docs/streaming-apis/streams/user ).
+    queryParameters:
+      delimited:
+        description: |
+          Specifies whether messages should be length-delimited. See the delimited
+          parameter documentation for more information.
+        type: string
+      stall_warnings:
+        description: |
+          Specifies whether stall warnings should be delivered. See the stall_warnings
+          parameter documentation for more information.
+        type: boolean
+      with:
+        description: |
+          Specifies whether to return information for just the authenticating user,
+          or include messages from accounts the user follows. See the with parameter
+          documentation the with parameter documentation for more information.
+        type: boolean
+      replies:
+        description: |
+          Specifies whether to return additional @replies. See the replies parameter
+          documentation for more information.
+        type: boolean
+      track:
+        description: |
+          Includes additional Tweets matching the specified keywords. Phrases of
+          keywords are specified by a comma-separated list. See the track parameter
+          documentation the track parameter documentation for more information.
+        type: boolean
+      locations:
+        description: |
+          Includes additional Tweets falling within the specified bounding boxes.
+          See the locations parameter documentation for more information.
+        type: boolean
+      stringify_friend_ids:
+        description: |
+          Specifies whether to send the friends list preamble as an array of integers
+          or an array of strings. See the stringify_friend_ids parameter documentation
+          for more information.
+        type: boolean
+    responses:
+      200:
+          description: Example is not provided by twitter docs.
+documentation: 
+  - title: Headline
+    content: !include docs/userstreamApi/headline.md

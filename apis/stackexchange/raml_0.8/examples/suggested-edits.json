@@ -1,0 +1,29 @@
+[
+  {
+    "approval_date": 1,
+    "body": "some string",
+    "comment": "some string",
+    "creation_date": 1,
+    "post_id": 1,
+    "post_type": "some string",
+    "proposing_user": {
+      "accept_rate": 1,
+      "badge_counts": {
+        "bronze": 1,
+        "gold": 1,
+        "silver": 1
+      },
+      "display_name": "some string",
+      "link": "some string",
+      "profile_image": "some string",
+      "reputation": 1,
+      "user_id": 1,
+      "user_type": "some string"
+    },
+    "rejection_date": 1,
+    "suggested_edit_id": 1,
+    "tags": [
+    ],
+    "title": "some string"
+  }
+]

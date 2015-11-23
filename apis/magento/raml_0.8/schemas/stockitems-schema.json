@@ -1,0 +1,48 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : [
+    {
+      "type" : "object" ,
+      "properties" : {
+        "item_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "qty" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "backorders" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "min_sale_qty" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "max_sale_qty" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "low_stock_date" : {
+          "type" : "object" ,
+          "required" : false
+        } ,
+        "manage_stock" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "stock_status_changed_auto" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "enable_qty_increments" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  ]
+}

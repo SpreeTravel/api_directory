@@ -1,0 +1,22 @@
+get: 
+  description: Access the bundle capability of a feed element.
+  queryParameters: 
+    elementsPerBundle: 
+      description: The maximum number of feed elements per bundle. The default and maximum value is 10.
+      type: integer
+      default: 10
+      example: 5
+    recentCommentCount: 
+      description: The maximum number of comments to return with each feed element. The default value is 3.
+      type: integer
+      default: 3
+      example: 5
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: genericBundleCapabilityResponse
+head: 
+  description: Access the bundle capability of a feed element.
+  responses: 
+    200: 

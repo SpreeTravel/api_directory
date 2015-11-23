@@ -1,0 +1,12 @@
+{
+	"escalation_rules" : [ {
+		"escalation_delay_in_minutes" : 12 ,
+		"rule_object" : {
+			"type" : "schedule" ,
+			"id" : "PY1OL64"
+		}
+	} , {
+		"id" : "PN0ZD20" ,
+		"escalation_delay_in_minutes" : 24
+	} ]
+}

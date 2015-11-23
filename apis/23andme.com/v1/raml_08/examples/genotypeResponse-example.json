@@ -1,0 +1,12 @@
+{
+  "id" : "c4480ba411939067" ,
+  "genotypes" : [
+    {
+      "location" : "i3000001" ,
+      "call" : "II"
+    } , {
+      "location" : "rs3094315" ,
+      "call" : "AA"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "token_type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "expires_in" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "refresh_token" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "access_token" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

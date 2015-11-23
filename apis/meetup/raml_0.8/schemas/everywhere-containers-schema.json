@@ -1,0 +1,137 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": true,
+  "type": "object",
+  "properties": {
+    "results": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "countries": {
+            "required": false,
+            "type": "string"
+          },
+          "created": {
+            "required": false,
+            "type": "integer"
+          },
+          "description": {
+            "required": false,
+            "type": "string"
+          },
+          "facebook_urlname": {
+            "required": false,
+            "type": "string"
+          },
+          "founder": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "member_city": {
+                "required": false,
+                "type": "string"
+              },
+              "member_country": {
+                "required": false,
+                "type": "string"
+              },
+              "member_id": {
+                "required": false,
+                "type": "integer"
+              },
+              "member_state": {
+                "required": false,
+                "type": "string"
+              },
+              "name": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "id": {
+            "required": false,
+            "type": "integer"
+          },
+          "link": {
+            "required": false,
+            "type": "string"
+          },
+          "link_name": {
+            "required": false,
+            "type": "string"
+          },
+          "meetup_count": {
+            "required": false,
+            "type": "integer"
+          },
+          "meetup_url": {
+            "required": false,
+            "type": "string"
+          },
+          "member_count": {
+            "required": false,
+            "type": "integer"
+          },
+          "name": {
+            "required": false,
+            "type": "string"
+          },
+          "past_meetup_count": {
+            "required": false,
+            "type": "integer"
+          },
+          "theme": {
+            "required": false,
+            "type": "object",
+            "properties": {
+              "banner_height": {
+                "required": false,
+                "type": "string"
+              },
+              "banner_link": {
+                "required": false,
+                "type": "string"
+              },
+              "boxback_color": {
+                "required": false,
+                "type": "string"
+              },
+              "button_color": {
+                "required": false,
+                "type": "string"
+              },
+              "link_color": {
+                "required": false,
+                "type": "string"
+              },
+              "pageback_color": {
+                "required": false,
+                "type": "string"
+              }
+            }
+          },
+          "twitter_urlname": {
+            "required": false,
+            "type": "string"
+          },
+          "udf_{varname}": {
+            "required": false,
+            "type": "string"
+          },
+          "updated": {
+            "required": false,
+            "type": "integer"
+          },
+          "urlname": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name" : "Sprinkles" ,
+  "price_money" : {
+    "currency_code" : "USD" ,
+    "amount" : 50
+  }
+}

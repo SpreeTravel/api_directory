@@ -1,0 +1,7 @@
+{
+  "kind" : "prediction#list" ,
+  "selfLink" : "string" ,
+  "nextPageToken" : "string" ,
+  "items" : [
+  ]
+}

@@ -1,0 +1,85 @@
+{
+	"type" : "object" ,
+	"required" : true ,
+	"$schema" : "http://json-schema.org/draft-03/schema" ,
+	"properties" : {
+		"maintenance_windows" : {
+			"type" : "array" ,
+			"required" : false ,
+			"items" : 
+				{
+					"type" : "object" ,
+					"properties" : {
+						"id" : {
+							"type" : "string" ,
+							"required" : false
+						} ,
+						"sequence_number" : {
+							"type" : "number" ,
+							"required" : false
+						} ,
+						"start_time" : {
+							"type" : "string" ,
+							"required" : false
+						} ,
+						"end_time" : {
+							"type" : "string" ,
+							"required" : false
+						} ,
+						"description" : {
+							"type" : "string" ,
+							"required" : false
+						} ,
+						"created_by" : {
+							"type" : "object" ,
+							"required" : false
+						} ,
+						"services" : {
+							"type" : "array" ,
+							"required" : false ,
+							"items" : 
+								{
+									"type" : "object" ,
+									"properties" : {
+										"name" : {
+											"type" : "string" ,
+											"required" : false
+										} ,
+										"url" : {
+											"type" : "string" ,
+											"required" : false
+										} ,
+										"id" : {
+											"type" : "string" ,
+											"required" : false
+										}
+									}
+								}
+							
+						}
+					}
+				}
+			
+		} ,
+		"limit" : {
+			"type" : "number" ,
+			"required" : false
+		} ,
+		"offset" : {
+			"type" : "number" ,
+			"required" : false
+		} ,
+		"total" : {
+			"type" : "number" ,
+			"required" : false
+		} ,
+		"query" : {
+			"type" : "string" ,
+			"required" : false
+		} ,
+		"counts" : {
+			"type" : "object" ,
+			"required" : false
+		}
+	}
+}

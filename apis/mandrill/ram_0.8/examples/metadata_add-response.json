@@ -1,0 +1,5 @@
+{
+  "name": "group_id",
+  "state": "active",
+  "view_template": "<a href=http://yourapplication.com/user/{{value}}>{{value}}</a>"
+}

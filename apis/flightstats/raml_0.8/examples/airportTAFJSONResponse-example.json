@@ -1,0 +1,145 @@
+{
+  "request" : {
+    "url" : "https://api.flightstats.com/flex/weather/rest/v1/json/taf/ORD" ,
+    "airport" : {
+      "requestedCode" : "ORD" ,
+      "fsCode" : "ORD"
+    } ,
+    "codeType" : {
+    }
+  } ,
+  "taf" : {
+    "report" : "TAF KORD 280520Z 2806/2912 36003KT P6SM FEW250         FM281500 03007KT P6SM FEW250          FM282000 05011KT P6SM FEW250          FM290200 VRB03KT P6SM FEW250" ,
+    "reportTime" : "2015-04-28T06:21:00.000Z" ,
+    "observationTime" : "2015-04-28T05:20:00.000Z" ,
+    "reportType" : "Normal" ,
+    "weatherStationIcao" : "KORD" ,
+    "forecasts" : [
+      {
+        "type" : "Base" ,
+        "start" : "2015-04-28T06:00:00.000Z" ,
+        "end" : "2015-04-29T12:00:00.000Z" ,
+        "conditions" : {
+          "wind" : {
+            "direction" : 360 ,
+            "directionIsVariable" : false ,
+            "speedKnots" : "3.00"
+          } ,
+          "visibility" : {
+            "miles" : "6.00" ,
+            "lessThan" : false ,
+            "cavok" : false
+          } ,
+          "weatherConditions" : [
+          ] ,
+          "skyConditions" : [
+            {
+              "coverage" : "Few clouds" ,
+              "base" : 25000
+            }
+          ]
+        }
+      } , {
+        "type" : "From" ,
+        "start" : "2015-04-28T15:00:00.000Z" ,
+        "end" : "2015-04-29T00:00:00.000Z" ,
+        "conditions" : {
+          "wind" : {
+            "direction" : 30 ,
+            "directionIsVariable" : false ,
+            "speedKnots" : "7.00"
+          } ,
+          "visibility" : {
+            "miles" : "6.00" ,
+            "lessThan" : false ,
+            "cavok" : false
+          } ,
+          "weatherConditions" : [
+          ] ,
+          "skyConditions" : [
+            {
+              "coverage" : "Few clouds" ,
+              "base" : 25000
+            }
+          ]
+        }
+      } , {
+        "type" : "From" ,
+        "start" : "2015-04-28T20:00:00.000Z" ,
+        "end" : "2015-04-29T00:00:00.000Z" ,
+        "conditions" : {
+          "wind" : {
+            "direction" : 50 ,
+            "directionIsVariable" : false ,
+            "speedKnots" : "11.00"
+          } ,
+          "visibility" : {
+            "miles" : "6.00" ,
+            "lessThan" : false ,
+            "cavok" : false
+          } ,
+          "weatherConditions" : [
+          ] ,
+          "skyConditions" : [
+            {
+              "coverage" : "Few clouds" ,
+              "base" : 25000
+            }
+          ]
+        }
+      } , {
+        "type" : "From" ,
+        "start" : "2015-04-29T02:00:00.000Z" ,
+        "end" : "2015-04-30T00:00:00.000Z" ,
+        "conditions" : {
+          "wind" : {
+            "directionIsVariable" : true ,
+            "speedKnots" : "3.00"
+          } ,
+          "visibility" : {
+            "miles" : "6.00" ,
+            "lessThan" : false ,
+            "cavok" : false
+          } ,
+          "weatherConditions" : [
+          ] ,
+          "skyConditions" : [
+            {
+              "coverage" : "Few clouds" ,
+              "base" : 25000
+            }
+          ]
+        }
+      }
+    ]
+  } ,
+  "appendix" : {
+    "airports" : [
+      {
+        "fs" : "ORD" ,
+        "iata" : "ORD" ,
+        "icao" : "KORD" ,
+        "faa" : "ORD" ,
+        "name" : "O'Hare International Airport" ,
+        "street1" : "10000 West O'Hare" ,
+        "city" : "Chicago" ,
+        "cityCode" : "CHI" ,
+        "stateCode" : "IL" ,
+        "postalCode" : "60666" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Chicago" ,
+        "weatherZone" : "ILZ014" ,
+        "localTime" : "2015-04-28T03:16:33.443" ,
+        "utcOffsetHours" : -5 ,
+        "latitude" : 41.976912 ,
+        "longitude" : -87.904876 ,
+        "elevationFeet" : 668 ,
+        "classification" : 1 ,
+        "active" : true ,
+        "delayIndexUrl" : "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/ORD?codeType=fs"
+      }
+    ]
+  }
+}

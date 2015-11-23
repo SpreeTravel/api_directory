@@ -1,0 +1,6 @@
+{
+	"email_filter" : {
+		"body_mode" : "no-match" ,
+		"body_regex" : "sev 3"
+	}
+}

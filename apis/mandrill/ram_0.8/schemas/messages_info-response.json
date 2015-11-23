@@ -1,0 +1,143 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "ts": {
+      "required": false,
+      "type": "integer"
+    },
+    "_id": {
+      "required": false,
+      "type": "string"
+    },
+    "sender": {
+      "required": false,
+      "type": "string"
+    },
+    "template": {
+      "required": false,
+      "type": "string"
+    },
+    "subject": {
+      "required": false,
+      "type": "string"
+    },
+    "email": {
+      "required": false,
+      "type": "string"
+    },
+    "tags": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "string"
+      }
+    },
+    "opens": {
+      "required": false,
+      "type": "integer"
+    },
+    "opens_detail": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "ip": {
+            "required": false,
+            "type": "string"
+          },
+          "location": {
+            "required": false,
+            "type": "string"
+          },
+          "ts": {
+            "required": false,
+            "type": "integer"
+          },
+          "ua": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      }
+    },
+    "clicks": {
+      "required": false,
+      "type": "integer"
+    },
+    "clicks_detail": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "ip": {
+            "required": false,
+            "type": "string"
+          },
+          "location": {
+            "required": false,
+            "type": "string"
+          },
+          "ts": {
+            "required": false,
+            "type": "integer"
+          },
+          "ua": {
+            "required": false,
+            "type": "string"
+          },
+          "url": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      }
+    },
+    "state": {
+      "required": false,
+      "type": "string"
+    },
+    "metadata": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "user_id": {
+          "required": false,
+          "type": "string"
+        },
+        "website": {
+          "required": false,
+          "type": "string"
+        }
+      }
+    },
+    "smtp_events": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "object",
+        "properties": {
+          "diag": {
+            "required": false,
+            "type": "string"
+          },
+          "ts": {
+            "required": false,
+            "type": "integer"
+          },
+          "type": {
+            "required": false,
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

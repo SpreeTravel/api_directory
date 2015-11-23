@@ -1,0 +1,25 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "domain_entry" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "domain" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "scope" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "project" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

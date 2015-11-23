@@ -1,0 +1,285 @@
+{
+  "request" : {
+    "departureAirport" : {
+      "requestedCode" : "LAX" ,
+      "fsCode" : "LAX"
+    } ,
+    "arrivalAirport" : {
+      "requestedCode" : "ORD" ,
+      "fsCode" : "ORD"
+    } ,
+    "codeType" : {
+    } ,
+    "departing" : false ,
+    "date" : {
+      "year" : "2015" ,
+      "month" : "5" ,
+      "day" : "2" ,
+      "interpreted" : "2015-05-02"
+    } ,
+    "url" : "https://api.flightstats.com/flex/schedules/rest/v1/json/from/LAX/to/ORD/arriving/2015/5/2"
+  } ,
+  "scheduledFlights" : [
+    {
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "2278" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T05:00:00.000" ,
+      "arrivalTime" : "2015-05-02T11:06:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "MH" ,
+          "flightNumber" : "9346" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1922804
+        } , {
+          "carrierFsCode" : "IB" ,
+          "flightNumber" : "4308" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "O"
+          ] ,
+          "referenceCode" : 10749317
+        } , {
+          "carrierFsCode" : "US" ,
+          "flightNumber" : "2278" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 10749318
+        } , {
+          "carrierFsCode" : "EY" ,
+          "flightNumber" : "3035" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 10749319
+        } , {
+          "carrierFsCode" : "AS" ,
+          "flightNumber" : "1470" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 10749320
+        }
+      ] ,
+      "referenceCode" : "1342-1920868--"
+    } , {
+      "carrierFsCode" : "IB" ,
+      "flightNumber" : "4308" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T05:00:00.000" ,
+      "arrivalTime" : "2015-05-02T11:06:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "J" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+        "O"
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "2278" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920868--10749317"
+    } , {
+      "carrierFsCode" : "AS" ,
+      "flightNumber" : "1470" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T05:00:00.000" ,
+      "arrivalTime" : "2015-05-02T11:06:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : true ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "R" ,
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "operator" : {
+        "carrierFsCode" : "AA" ,
+        "flightNumber" : "2278" ,
+        "serviceType" : "J" ,
+        "serviceClasses" : [
+          "F" ,
+          "Y"
+        ] ,
+        "trafficRestrictions" : [
+        ]
+      } ,
+      "codeshares" : [
+      ] ,
+      "referenceCode" : "1342-1920868--10749320"
+    }
+  ] ,
+  "appendix" : {
+    "airlines" : [
+      {
+        "fs" : "JL" ,
+        "iata" : "JL" ,
+        "icao" : "JAL" ,
+        "name" : "JAL" ,
+        "active" : true
+      } , {
+        "fs" : "VX" ,
+        "iata" : "VX" ,
+        "icao" : "VRD" ,
+        "name" : "Virgin America" ,
+        "active" : true
+      } , {
+        "fs" : "LO" ,
+        "iata" : "LO" ,
+        "icao" : "LOT" ,
+        "name" : "LOT - Polish Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "FJ" ,
+        "iata" : "FJ" ,
+        "icao" : "FJI" ,
+        "name" : "Fiji Airways" ,
+        "phoneNumber" : "1-800-227-4446" ,
+        "active" : true
+      }
+    ] ,
+    "airports" : [
+      {
+        "fs" : "ORD" ,
+        "iata" : "ORD" ,
+        "icao" : "KORD" ,
+        "faa" : "ORD" ,
+        "name" : "O'Hare International Airport" ,
+        "street1" : "10000 West O'Hare" ,
+        "city" : "Chicago" ,
+        "cityCode" : "CHI" ,
+        "stateCode" : "IL" ,
+        "postalCode" : "60666" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Chicago" ,
+        "weatherZone" : "ILZ014" ,
+        "localTime" : "2015-04-28T04:02:52.055" ,
+        "utcOffsetHours" : -5 ,
+        "latitude" : 41.976912 ,
+        "longitude" : -87.904876 ,
+        "elevationFeet" : 668 ,
+        "classification" : 1 ,
+        "active" : true
+      } , {
+        "fs" : "LAX" ,
+        "iata" : "LAX" ,
+        "icao" : "KLAX" ,
+        "faa" : "LAX" ,
+        "name" : "Los Angeles International Airport" ,
+        "street1" : "One World Way" ,
+        "street2" : "" ,
+        "city" : "Los Angeles" ,
+        "cityCode" : "LAX" ,
+        "stateCode" : "CA" ,
+        "postalCode" : "90045-5803" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Los_Angeles" ,
+        "weatherZone" : "CAZ041" ,
+        "localTime" : "2015-04-28T02:02:52.055" ,
+        "utcOffsetHours" : -7 ,
+        "latitude" : 33.943399 ,
+        "longitude" : -118.408279 ,
+        "elevationFeet" : 126 ,
+        "classification" : 1 ,
+        "active" : true
+      }
+    ] ,
+    "equipments" : [
+      {
+        "iata" : "32S" ,
+        "name" : "Airbus Industrie A318/319/320/321" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : false ,
+        "regional" : false
+      } , {
+        "iata" : "757" ,
+        "name" : "Boeing 757 Passenger" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : false ,
+        "regional" : false
+      } , {
+        "iata" : "737" ,
+        "name" : "Boeing 737 Passenger" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : false ,
+        "regional" : false
+      }
+    ]
+  }
+}

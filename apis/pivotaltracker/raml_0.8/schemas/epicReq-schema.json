@@ -1,0 +1,89 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "comments" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "text" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "file_attachments" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "id" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "uploader_id" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "size" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "uploaded" : {
+                      "type" : "boolean" ,
+                      "required" : false
+                    } ,
+                    "thumbnail_url" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "download_url" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "filename" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "big_url" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "thumbnailable" : {
+                      "type" : "boolean" ,
+                      "required" : false
+                    } ,
+                    "content_type" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "created_at" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "width" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "height" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

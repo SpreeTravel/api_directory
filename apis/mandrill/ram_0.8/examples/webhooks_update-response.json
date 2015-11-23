@@ -1,0 +1,16 @@
+{
+  "id": 42,
+  "url": "http://example/webhook-url",
+  "description": "My Example Webhook",
+  "auth_key": "gplJ8yWptFTqCoq5S1SHPA",
+  "events": [
+    "send",
+    "open",
+    "click"
+  ],
+  "created_at": "2013-01-01 15:30:27",
+  "last_sent_at": "2013-01-01 15:30:49",
+  "batches_sent": 42,
+  "events_sent": 42,
+  "last_error": "example last_error"
+}

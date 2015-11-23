@@ -1,0 +1,6 @@
+{
+  "http_code" : 404 ,
+  "error" : "item_not_found" ,
+  "error_title" : "User Not Found" ,
+  "error_description" : "There is no user with username foobar"
+}

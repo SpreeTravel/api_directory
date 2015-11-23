@@ -1,0 +1,798 @@
+{
+  "response": {
+    "version": "0.1",
+    "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
+    "features": {
+      "forecast": 1,
+      "geolookup": 1,
+      "conditions": 1
+    }
+  },
+  "location": {
+    "type": "CITY",
+    "country": "US",
+    "country_iso3166": "US",
+    "country_name": "USA",
+    "state": "CA",
+    "city": "San Francisco",
+    "tz_short": "PDT",
+    "tz_long": "America/Los_Angeles",
+    "lat": "37.77500916",
+    "lon": "-122.41825867",
+    "zip": "94101",
+    "magic": "1",
+    "wmo": "99999",
+    "l": "/q/zmw:94101.1.99999",
+    "requesturl": "US/CA/San_Francisco.html",
+    "wuiurl": "http://www.wunderground.com/US/CA/San_Francisco.html",
+    "nearby_weather_stations": {
+      "airport": {
+        "station": [
+          {
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "icao": "KSFO",
+            "lat": "37.61999893",
+            "lon": "-122.37000275"
+          },
+          {
+            "city": "Oakland",
+            "state": "CA",
+            "country": "US",
+            "icao": "KOAK",
+            "lat": "37.72000122",
+            "lon": "-122.22000122"
+          },
+          {
+            "city": "Hayward",
+            "state": "CA",
+            "country": "US",
+            "icao": "KHWD",
+            "lat": "37.65999985",
+            "lon": "-122.12000275"
+          },
+          {
+            "city": "Half Moon Bay",
+            "state": "CA",
+            "country": "US",
+            "icao": "KHAF",
+            "lat": "37.50999832",
+            "lon": "-122.50000000"
+          }
+        ]
+      },
+      "pws": {
+        "station": [
+          {
+            "neighborhood": "SOMA - Near Van Ness",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR58",
+            "distance_km": 0,
+            "distance_mi": 0
+          },
+          {
+            "neighborhood": "North Mission (Valencia",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR49",
+            "distance_km": 0,
+            "distance_mi": 0
+          },
+          {
+            "neighborhood": "SOMA",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR131",
+            "distance_km": 0,
+            "distance_mi": 0
+          },
+          {
+            "neighborhood": "HADS SAN FRANCISCO DOWNTOWN CA US NWS",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "MSFOC1",
+            "distance_km": 1,
+            "distance_mi": 0
+          },
+          {
+            "neighborhood": "SoMa",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR113",
+            "distance_km": 1,
+            "distance_mi": 1
+          },
+          {
+            "neighborhood": "Mission Bay - My weather is better than yours.",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR53",
+            "distance_km": 1,
+            "distance_mi": 1
+          },
+          {
+            "neighborhood": "Castro/San Francisco",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KPCASANF2",
+            "distance_km": 2,
+            "distance_mi": 1
+          },
+          {
+            "neighborhood": "China Basin Landing",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR14",
+            "distance_km": 2,
+            "distance_mi": 1
+          },
+          {
+            "neighborhood": "The Mission: Even the weather is hip",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR79",
+            "distance_km": 2,
+            "distance_mi": 1
+          },
+          {
+            "neighborhood": "Potrero Hill",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR108",
+            "distance_km": 2,
+            "distance_mi": 1
+          },
+          {
+            "neighborhood": "Financial District",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR102",
+            "distance_km": 2,
+            "distance_mi": 1
+          },
+          {
+            "neighborhood": "Noe Valley",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR86",
+            "distance_km": 2,
+            "distance_mi": 1
+          },
+          {
+            "neighborhood": "North Beach",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR137",
+            "distance_km": 2,
+            "distance_mi": 1
+          },
+          {
+            "neighborhood": "Noe Valley",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR3",
+            "distance_km": 2,
+            "distance_mi": 1
+          },
+          {
+            "neighborhood": "Cole Valley",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR110",
+            "distance_km": 3,
+            "distance_mi": 1
+          },
+          {
+            "neighborhood": "Diamond Heights",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR76",
+            "distance_km": 3,
+            "distance_mi": 1
+          },
+          {
+            "neighborhood": "Billy Goat Hill",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR73",
+            "distance_km": 3,
+            "distance_mi": 2
+          },
+          {
+            "neighborhood": "Twin Peaks",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR34",
+            "distance_km": 4,
+            "distance_mi": 2
+          },
+          {
+            "neighborhood": "APRSWXNET San Francisco CA US",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "MC9629",
+            "distance_km": 4,
+            "distance_mi": 2
+          },
+          {
+            "neighborhood": "Mid Richmond",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR128",
+            "distance_km": 4,
+            "distance_mi": 2
+          },
+          {
+            "neighborhood": "Golden Gate Heights",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR46",
+            "distance_km": 4,
+            "distance_mi": 2
+          },
+          {
+            "neighborhood": "Portola",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR135",
+            "distance_km": 5,
+            "distance_mi": 3
+          },
+          {
+            "neighborhood": "Forest Hill",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR72",
+            "distance_km": 5,
+            "distance_mi": 3
+          },
+          {
+            "neighborhood": "Sunnyside",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR70",
+            "distance_km": 5,
+            "distance_mi": 3
+          },
+          {
+            "neighborhood": "West Portal",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR130",
+            "distance_km": 5,
+            "distance_mi": 3
+          },
+          {
+            "neighborhood": "Forest Hill",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR48",
+            "distance_km": 5,
+            "distance_mi": 3
+          },
+          {
+            "neighborhood": "Forest Hill",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR109",
+            "distance_km": 5,
+            "distance_mi": 3
+          },
+          {
+            "neighborhood": "Mid Richmond District",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR97",
+            "distance_km": 5,
+            "distance_mi": 3
+          },
+          {
+            "neighborhood": "Ocean Beach - Kellys Cove",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "KCASANFR99",
+            "distance_km": 8,
+            "distance_mi": 4
+          },
+          {
+            "neighborhood": "APRSWXNET San Francisco CA US",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "id": "MAS891",
+            "distance_km": 8,
+            "distance_mi": 4
+          }
+        ]
+      }
+    }
+  },
+  "current_observation": {
+    "image": {
+      "url": "http://icons-ak.wxug.com/graphics/wu2/logo_130x80.png",
+      "title": "Weather Underground",
+      "link": "http://www.wunderground.com"
+    },
+    "display_location": {
+      "full": "San Francisco, CA",
+      "city": "San Francisco",
+      "state": "CA",
+      "state_name": "California",
+      "country": "US",
+      "country_iso3166": "US",
+      "zip": "94101",
+      "latitude": "37.77500916",
+      "longitude": "-122.41825867",
+      "elevation": "47.00000000"
+    },
+    "observation_location": {
+      "full": "SOMA - Near Van Ness, San Francisco, California",
+      "city": "SOMA - Near Van Ness, San Francisco",
+      "state": "California",
+      "country": "US",
+      "country_iso3166": "US",
+      "latitude": "37.773285",
+      "longitude": "-122.417725",
+      "elevation": "49 ft"
+    },
+    "estimated": {
+    },
+    "station_id": "KCASANFR58",
+    "observation_time": "Last Updated on July 11, 11:36 AM PDT",
+    "observation_time_rfc822": "Wed, 11 Jul 2012 11:36:43 -0700",
+    "observation_epoch": "1342031803",
+    "local_time_rfc822": "Wed, 11 Jul 2012 11:36:53 -0700",
+    "local_epoch": "1342031813",
+    "local_tz_short": "PDT",
+    "local_tz_long": "America/Los_Angeles",
+    "local_tz_offset": "-0700",
+    "weather": "Partly Cloudy",
+    "temperature_string": "64.6 F (18.1 C)",
+    "temp_f": 64.6,
+    "temp_c": 18.1,
+    "relative_humidity": "69%",
+    "wind_string": "From the NNW at 7.0 MPH Gusting to 12.0 MPH",
+    "wind_dir": "NNW",
+    "wind_degrees": 343,
+    "wind_mph": 7.0,
+    "wind_gust_mph": "12.0",
+    "wind_kph": 11.3,
+    "wind_gust_kph": "19.3",
+    "pressure_mb": "1012",
+    "pressure_in": "29.90",
+    "pressure_trend": "+",
+    "dewpoint_string": "54 F (12 C)",
+    "dewpoint_f": 54,
+    "dewpoint_c": 12,
+    "heat_index_string": "NA",
+    "heat_index_f": "NA",
+    "heat_index_c": "NA",
+    "windchill_string": "NA",
+    "windchill_f": "NA",
+    "windchill_c": "NA",
+    "feelslike_string": "64.6 F (18.1 C)",
+    "feelslike_f": "64.6",
+    "feelslike_c": "18.1",
+    "visibility_mi": "10.0",
+    "visibility_km": "16.1",
+    "solarradiation": "",
+    "UV": "8",
+    "precip_1hr_string": "0.00 in ( 0 mm)",
+    "precip_1hr_in": "0.00",
+    "precip_1hr_metric": " 0",
+    "precip_today_string": "0.00 in (0 mm)",
+    "precip_today_in": "0.00",
+    "precip_today_metric": "0",
+    "icon": "partlycloudy",
+    "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
+    "forecast_url": "http://www.wunderground.com/US/CA/San_Francisco.html",
+    "history_url": "http://www.wunderground.com/history/airport/KCASANFR58/2012/7/11/DailyHistory.html",
+    "ob_url": "http://www.wunderground.com/cgi-bin/findweather/getForecast?query=37.773285,-122.417725"
+  },
+  "forecast": {
+    "txt_forecast": {
+      "date": "8:00 AM PDT",
+      "forecastday": [
+        {
+          "period": 0,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "Wednesday",
+          "fcttext": "Partly cloudy. Fog early. High of 81F. Winds from the WSW at 5 to 20 mph.",
+          "fcttext_metric": "Partly cloudy. Fog early. High of 27C. Windy. Winds from the WSW at 5 to 30 km/h.",
+          "pop": "0"
+        },
+        {
+          "period": 1,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "Wednesday Night",
+          "fcttext": "Partly cloudy. Low of 54F. Winds from the SW at 5 to 15 mph.",
+          "fcttext_metric": "Partly cloudy. Low of 12C. Breezy. Winds from the SW at 10 to 25 km/h.",
+          "pop": "0"
+        },
+        {
+          "period": 2,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "Thursday",
+          "fcttext": "Partly cloudy. High of 68F. Winds from the SW at 5 to 10 mph.",
+          "fcttext_metric": "Partly cloudy. High of 20C. Breezy. Winds from the SW at 10 to 20 km/h.",
+          "pop": "0"
+        },
+        {
+          "period": 3,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "Thursday Night",
+          "fcttext": "Mostly cloudy. Fog overnight. Low of 54F. Winds from the SW at 5 to 15 mph.",
+          "fcttext_metric": "Mostly cloudy. Fog overnight. Low of 12C. Breezy. Winds from the SW at 10 to 20 km/h.",
+          "pop": "0"
+        },
+        {
+          "period": 4,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "Friday",
+          "fcttext": "Mostly cloudy in the morning, then partly cloudy. Fog early. High of 70F. Breezy. Winds from the WSW at 10 to 20 mph.",
+          "fcttext_metric": "Partly cloudy. Fog early. High of 21C. Windy. Winds from the WSW at 15 to 30 km/h.",
+          "pop": "0"
+        },
+        {
+          "period": 5,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "Friday Night",
+          "fcttext": "Partly cloudy in the evening, then overcast. Fog overnight. Low of 54F. Winds from the SW at 5 to 10 mph.",
+          "fcttext_metric": "Partly cloudy in the evening, then overcast. Fog overnight. Low of 12C. Winds from the SW at 5 to 15 km/h.",
+          "pop": "0"
+        },
+        {
+          "period": 6,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "Saturday",
+          "fcttext": "Overcast in the morning, then partly cloudy. Fog early. High of 68F. Winds from the SW at 5 to 10 mph.",
+          "fcttext_metric": "Overcast in the morning, then partly cloudy. Fog early. High of 20C. Winds from the SW at 10 to 15 km/h.",
+          "pop": "0"
+        },
+        {
+          "period": 7,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "Saturday Night",
+          "fcttext": "Overcast in the evening, then mostly cloudy. Fog overnight. Low of 55F. Winds from the SW at 5 to 10 mph.",
+          "fcttext_metric": "Mostly cloudy. Fog overnight. Low of 13C. Winds from the SW at 5 to 15 km/h.",
+          "pop": "0"
+        }
+      ]
+    },
+    "simpleforecast": {
+      "forecastday": [
+        {
+          "date": {
+            "epoch": "1342072800",
+            "pretty": "11:00 PM PDT on July 11, 2012",
+            "day": 11,
+            "month": 7,
+            "year": 2012,
+            "yday": 192,
+            "hour": 23,
+            "min": "00",
+            "sec": 0,
+            "isdst": "1",
+            "monthname": "July",
+            "weekday_short": "Wed",
+            "weekday": "Wednesday",
+            "ampm": "PM",
+            "tz_short": "PDT",
+            "tz_long": "America/Los_Angeles"
+          },
+          "period": 1,
+          "high": {
+            "fahrenheit": "81",
+            "celsius": "27"
+          },
+          "low": {
+            "fahrenheit": "54",
+            "celsius": "12"
+          },
+          "conditions": "Partly Cloudy",
+          "icon": "partlycloudy",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
+          "skyicon": "sunny",
+          "pop": 0,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0.0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0.0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0.0
+          },
+          "snow_allday": {
+            "in": 0,
+            "cm": 0
+          },
+          "snow_day": {
+            "in": 0,
+            "cm": 0
+          },
+          "snow_night": {
+            "in": 0,
+            "cm": 0
+          },
+          "maxwind": {
+            "mph": 17,
+            "kph": 27,
+            "dir": "WSW",
+            "degrees": 244
+          },
+          "avewind": {
+            "mph": 12,
+            "kph": 19,
+            "dir": "WSW",
+            "degrees": 245
+          },
+          "avehumidity": 83,
+          "maxhumidity": 97,
+          "minhumidity": 68
+        },
+        {
+          "date": {
+            "epoch": "1342159200",
+            "pretty": "11:00 PM PDT on July 12, 2012",
+            "day": 12,
+            "month": 7,
+            "year": 2012,
+            "yday": 193,
+            "hour": 23,
+            "min": "00",
+            "sec": 0,
+            "isdst": "1",
+            "monthname": "July",
+            "weekday_short": "Thu",
+            "weekday": "Thursday",
+            "ampm": "PM",
+            "tz_short": "PDT",
+            "tz_long": "America/Los_Angeles"
+          },
+          "period": 2,
+          "high": {
+            "fahrenheit": "68",
+            "celsius": "20"
+          },
+          "low": {
+            "fahrenheit": "54",
+            "celsius": "12"
+          },
+          "conditions": "Partly Cloudy",
+          "icon": "partlycloudy",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
+          "skyicon": "partlycloudy",
+          "pop": 0,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0.0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0.0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0.0
+          },
+          "snow_allday": {
+            "in": 0,
+            "cm": 0
+          },
+          "snow_day": {
+            "in": 0,
+            "cm": 0
+          },
+          "snow_night": {
+            "in": 0,
+            "cm": 0
+          },
+          "maxwind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "WSW",
+            "degrees": 244
+          },
+          "avewind": {
+            "mph": 8,
+            "kph": 13,
+            "dir": "WSW",
+            "degrees": 237
+          },
+          "avehumidity": 80,
+          "maxhumidity": 89,
+          "minhumidity": 72
+        },
+        {
+          "date": {
+            "epoch": "1342245600",
+            "pretty": "11:00 PM PDT on July 13, 2012",
+            "day": 13,
+            "month": 7,
+            "year": 2012,
+            "yday": 194,
+            "hour": 23,
+            "min": "00",
+            "sec": 0,
+            "isdst": "1",
+            "monthname": "July",
+            "weekday_short": "Fri",
+            "weekday": "Friday",
+            "ampm": "PM",
+            "tz_short": "PDT",
+            "tz_long": "America/Los_Angeles"
+          },
+          "period": 3,
+          "high": {
+            "fahrenheit": "70",
+            "celsius": "21"
+          },
+          "low": {
+            "fahrenheit": "54",
+            "celsius": "12"
+          },
+          "conditions": "Partly Cloudy",
+          "icon": "partlycloudy",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
+          "skyicon": "partlycloudy",
+          "pop": 0,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0.0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0.0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0.0
+          },
+          "snow_allday": {
+            "in": 0,
+            "cm": 0
+          },
+          "snow_day": {
+            "in": 0,
+            "cm": 0
+          },
+          "snow_night": {
+            "in": 0,
+            "cm": 0
+          },
+          "maxwind": {
+            "mph": 17,
+            "kph": 27,
+            "dir": "West",
+            "degrees": 260
+          },
+          "avewind": {
+            "mph": 13,
+            "kph": 21,
+            "dir": "WSW",
+            "degrees": 247
+          },
+          "avehumidity": 86,
+          "maxhumidity": 93,
+          "minhumidity": 65
+        },
+        {
+          "date": {
+            "epoch": "1342332000",
+            "pretty": "11:00 PM PDT on July 14, 2012",
+            "day": 14,
+            "month": 7,
+            "year": 2012,
+            "yday": 195,
+            "hour": 23,
+            "min": "00",
+            "sec": 0,
+            "isdst": "1",
+            "monthname": "July",
+            "weekday_short": "Sat",
+            "weekday": "Saturday",
+            "ampm": "PM",
+            "tz_short": "PDT",
+            "tz_long": "America/Los_Angeles"
+          },
+          "period": 4,
+          "high": {
+            "fahrenheit": "68",
+            "celsius": "20"
+          },
+          "low": {
+            "fahrenheit": "55",
+            "celsius": "13"
+          },
+          "conditions": "Fog",
+          "icon": "partlycloudy",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
+          "skyicon": "partlycloudy",
+          "pop": 0,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0.0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0.0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0.0
+          },
+          "snow_allday": {
+            "in": 0,
+            "cm": 0
+          },
+          "snow_day": {
+            "in": 0,
+            "cm": 0
+          },
+          "snow_night": {
+            "in": 0,
+            "cm": 0
+          },
+          "maxwind": {
+            "mph": 9,
+            "kph": 14,
+            "dir": "WSW",
+            "degrees": 246
+          },
+          "avewind": {
+            "mph": 7,
+            "kph": 11,
+            "dir": "WSW",
+            "degrees": 238
+          },
+          "avehumidity": 84,
+          "maxhumidity": 96,
+          "minhumidity": 66
+        }
+      ]
+    }
+  }
+}

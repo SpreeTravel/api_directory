@@ -1,0 +1,151 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "swaggerVersion" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "resourcePath" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "apis" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "path" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "operations" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+                {
+                  "type" : "object" ,
+                  "properties" : {
+                    "httpMethod" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "summary" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "notes" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "responseClass" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "nickname" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "errorResponses" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "object" ,
+                          "properties" : {
+                            "code" : {
+                              "type" : "number" ,
+                              "required" : false
+                            } ,
+                            "reason" : {
+                              "type" : "string" ,
+                              "required" : false
+                            }
+                          }
+                        }
+                      ]
+                    } ,
+                    "parameters" : {
+                      "type" : "array" ,
+                      "required" : false ,
+                      "items" : [
+                        {
+                          "type" : "object" ,
+                          "properties" : {
+                            "name" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "description" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "paramType" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "required" : {
+                              "type" : "boolean" ,
+                              "required" : false
+                            } ,
+                            "allowMultiple" : {
+                              "type" : "boolean" ,
+                              "required" : false
+                            } ,
+                            "dataType" : {
+                              "type" : "string" ,
+                              "required" : false
+                            }
+                          }
+                        } , {
+                          "type" : "object" ,
+                          "properties" : {
+                            "name" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "description" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "paramType" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "defaultValue" : {
+                              "type" : "string" ,
+                              "required" : false
+                            } ,
+                            "required" : {
+                              "type" : "boolean" ,
+                              "required" : false
+                            } ,
+                            "allowMultiple" : {
+                              "type" : "boolean" ,
+                              "required" : false
+                            } ,
+                            "dataType" : {
+                              "type" : "string" ,
+                              "required" : false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

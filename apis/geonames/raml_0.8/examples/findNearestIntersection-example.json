@@ -1,0 +1,20 @@
+{
+  "intersection" : {
+    "street2" : "Curtis St" ,
+    "street1" : "Roble Ave" ,
+    "postalcode" : "94025" ,
+    "adminCode1" : "CA" ,
+    "street1Bearing" : "213" ,
+    "countryCode" : "US" ,
+    "mtfcc1" : "S1400" ,
+    "lng" : "-122.180842" ,
+    "mtfcc2" : "S1400" ,
+    "placename" : "Menlo Park" ,
+    "adminName2" : "San Mateo" ,
+    "distance" : "0.08" ,
+    "street2Bearing" : "303" ,
+    "lat" : "37.450649" ,
+    "adminName1" : "California"
+  } ,
+  "credits" : "1.0"
+}

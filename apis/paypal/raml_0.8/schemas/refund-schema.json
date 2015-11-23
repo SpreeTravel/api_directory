@@ -1,0 +1,64 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "create_time" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "update_time" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "state" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "amount" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "total" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "currency" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "parent_payment" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "links" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "href" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "rel" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "method" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

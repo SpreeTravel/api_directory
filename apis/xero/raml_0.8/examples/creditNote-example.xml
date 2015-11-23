@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreditNote>
+  <Type>ACCPAYCREDIT</Type>
+  <Status>AUTHORISED</Status>
+  <Contact>
+    <Name>Apple Computers Ltd</Name>
+  </Contact>
+  <Date>2009-03-29</Date>
+  <LineAmountTypes>Exclusive</LineAmountTypes>
+  <LineItems>
+    <LineItem>
+      <Description>MacBook - White</Description>
+      <Quantity>1.0000</Quantity>
+      <UnitAmount>1995.00</UnitAmount>
+      <AccountCode>720</AccountCode> 
+      <Tracking />
+    </LineItem>
+  </LineItems>
+</CreditNote>

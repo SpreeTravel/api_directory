@@ -1,0 +1,18 @@
+{
+  "checkin_id": 100,
+  "time": 100,
+  "lon": 1.0,
+  "group_id": 100,
+  "event_id": 100,
+  "member_name": "member_name",
+  "comment": "comment",
+  "lat": 1.0,
+  "checker": {
+    "member_state": "member_state",
+    "member_city": "member_city",
+    "name": "name",
+    "member_country": "member_country",
+    "member_id": 100
+  },
+  "member_id": 100
+}

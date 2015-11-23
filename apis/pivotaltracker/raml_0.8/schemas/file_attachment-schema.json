@@ -1,0 +1,55 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "big_url" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "content_type" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "created_at" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "download_url" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "filename" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "id" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "kind" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "size" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "thumbnail_url" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "thumbnailable" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "uploaded" : {
+      "type" : "boolean" ,
+      "required" : false
+    } ,
+    "uploader_id" : {
+      "type" : "number" ,
+      "required" : false
+    }
+  }
+}

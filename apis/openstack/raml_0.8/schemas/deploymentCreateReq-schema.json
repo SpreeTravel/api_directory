@@ -1,0 +1,31 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "status" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "server_id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "config_id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "stack_user_project_id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "action" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "status_reason" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

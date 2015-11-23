@@ -1,0 +1,12 @@
+[
+  {
+    "link": "some string",
+    "on_date": 1,
+    "post_id": 1,
+    "post_type": "some string",
+    "reputation_change": 1,
+    "title": "some string",
+    "user_id": 1,
+    "vote_type": "some string"
+  }
+]

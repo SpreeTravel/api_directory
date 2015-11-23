@@ -1,0 +1,6 @@
+{
+	"email_filter" : {
+		"from_email_mode" : "match" ,
+		"from_email_regex" : "[rR]yan"
+	}
+}

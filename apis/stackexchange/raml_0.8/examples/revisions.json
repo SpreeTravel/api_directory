@@ -1,0 +1,35 @@
+[
+  {
+    "body": "some string",
+    "comment": "some string",
+    "creation_date": 1,
+    "is_rollback": true,
+    "last_body": "some string",
+    "last_tags": [
+    ],
+    "last_title": "some string",
+    "post_id": 1,
+    "post_type": "some string",
+    "revision_guid": "some string",
+    "revision_number": 1,
+    "revision_type": "some string",
+    "set_community_wiki": true,
+    "tags": [
+    ],
+    "title": "some string",
+    "user": {
+      "accept_rate": 1,
+      "badge_counts": {
+        "bronze": 1,
+        "gold": 1,
+        "silver": 1
+      },
+      "display_name": "some string",
+      "link": "some string",
+      "profile_image": "some string",
+      "reputation": 1,
+      "user_id": 1,
+      "user_type": "some string"
+    }
+  }
+]

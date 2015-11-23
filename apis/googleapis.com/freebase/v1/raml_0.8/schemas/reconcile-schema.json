@@ -1,0 +1,62 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "candidate" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "mid" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "confidence" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "notable" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "id" : {
+                  "type" : "string" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "lang" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    } ,
+    "costs" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "ms" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "hits" : {
+          "type" : "number" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

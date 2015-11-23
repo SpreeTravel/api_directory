@@ -1,0 +1,15 @@
+{
+	"users" : [ {
+		"time_zone" : "Eastern Time (US & Canada)" ,
+		"color" : "dark-orchid" ,
+		"email" : "tierra.fritsch@example.com" ,
+		"avatar_url" :
+		"https://secure.gravatar.com/avatar/f55521919f138925499b9c62f5291aac.png?d=mm&r=PG"
+		,
+		"user_url" : "/users/PTUXL6G" ,
+		"invitation_sent" : false ,
+		"role" : "owner" ,
+		"name" : "Tierra Fritsch" ,
+		"id" : "PTUXL6G"
+	} ]
+}

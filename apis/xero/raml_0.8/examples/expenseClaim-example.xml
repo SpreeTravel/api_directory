@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExpenseClaims>
+  <ExpenseClaim>
+    <User>
+      <UserID>7cf47fe2-c3dd-4c6b-9895-7ba767ba529c</UserID>
+    </User>
+    <Receipts>
+      <Receipt>
+        <ReceiptID>06f6fd50-97e6-40ac-94b0-d5215d836905</ReceiptID>
+      </Receipt>
+      <Receipt>
+        <ReceiptID>5b7ddbb1-a0cf-4c3b-860d-a4521f3f4599</ReceiptID>
+      </Receipt>
+    </Receipts>
+  </ExpenseClaim>
+</ExpenseClaims>

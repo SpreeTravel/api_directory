@@ -1,0 +1,6 @@
+{
+  "pin_required" : false ,
+  "discount_type" : "FIXED" ,
+  "name" : "Early Bird" ,
+  "rate" : "0.1"
+}

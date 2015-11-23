@@ -1,0 +1,145 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "type": "object",
+    "properties": {
+        "best": {
+            "properties": {
+                "total": {
+                    "properties": {
+                        "caloriesOut": {
+                            "properties": {
+                                "date": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "number"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "distance": {
+                            "properties": {
+                                "date": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "number"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "floors": {
+                            "properties": {
+                                "date": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "number"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "steps": {
+                            "properties": {
+                                "date": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "number"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                },
+                "tracker": {
+                    "caloriesOut": {
+                        "properties": {
+                            "date": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "number"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "distance": {
+                        "properties": {
+                            "date": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "number"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "floors": {
+                        "properties": {
+                            "date": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "number"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "steps": {
+                        "properties": {
+                            "date": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "number"
+                            }
+                        },
+                        "type": "object"
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "lifetime": {
+            "properties": {
+                "total": {
+                    "properties": {
+                        "caloriesOut": {
+                            "type": "number"
+                        },
+                        "distance": {
+                            "type": "number"
+                        },
+                        "floors": {
+                            "type": "string"
+                        },
+                        "steps": {
+                            "type": "integer"
+                        }
+                    },
+                    "type": "object"
+                },
+                "tracker": {
+                    "properties": {
+                        "caloriesOut": {
+                            "type": "number"
+                        },
+                        "distance": {
+                            "type": "number"
+                        },
+                        "floors": {
+                            "type": "integer"
+                        },
+                        "steps": {
+                            "type": "integer"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

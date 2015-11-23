@@ -1,0 +1,11 @@
+{
+	"name" : "Escalation Policy" ,
+	"escalation_rules" : [ {
+		"escalation_delay_in_minutes" : 22 ,
+		"rule_object" : {
+			"type" : "user" ,
+			"id" : "PAD6MYW"
+		}
+	} ] ,
+	"num_loops" : 2
+}

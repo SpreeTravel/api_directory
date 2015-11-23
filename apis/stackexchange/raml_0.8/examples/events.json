@@ -1,0 +1,9 @@
+[
+  {
+    "creation_date": 1,
+    "the id of the object (answer, comment, question, or user) the event describes": 1,
+    "event_type": "some string",
+    "excerpt": "some string",
+    "link": "some string"
+  }
+]

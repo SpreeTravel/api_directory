@@ -1,0 +1,285 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "Date" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "EpochDate" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "Normals" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "Temperatures" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "Maximum" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "Metric" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "Value" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "Unit" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "UnitType" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "Imperial" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "Value" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "Unit" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "UnitType" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                }
+              }
+            } ,
+            "Minimum" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "Metric" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "Value" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "Unit" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "UnitType" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "Imperial" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "Value" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "Unit" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "UnitType" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                }
+              }
+            } ,
+            "Average" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "Metric" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "Value" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "Unit" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "UnitType" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "Imperial" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "Value" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "Unit" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "UnitType" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        } ,
+        "DegreeDays" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "Heating" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "Metric" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "Value" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "Unit" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "UnitType" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "Imperial" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "Value" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "Unit" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "UnitType" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                }
+              }
+            } ,
+            "Cooling" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "Metric" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "Value" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "Unit" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "UnitType" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "Imperial" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "Value" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "Unit" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "UnitType" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        } ,
+        "Precipitation" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "Metric" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "Value" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "Unit" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "UnitType" : {
+                  "type" : "number" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "Imperial" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "Value" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "Unit" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "UnitType" : {
+                  "type" : "number" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

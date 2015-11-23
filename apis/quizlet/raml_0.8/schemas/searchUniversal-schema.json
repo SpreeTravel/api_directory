@@ -1,0 +1,194 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "total_results" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "total_pages" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "page" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "items" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "id" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "url" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "title" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "created_by" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "term_count" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "created_date" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "modified_date" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "has_images" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "subjects" : {
+              "type" : "array" ,
+              "required" : false ,
+              "items" : [
+              ]
+            } ,
+            "visibility" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "editable" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "has_access" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "id" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "set_count" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "user_count" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "created_date" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "has_access" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "has_discussion" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "description" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "admin_only" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "is_public" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "has_password" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "member_add_sets" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "school" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "name" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "id" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "city" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "state" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "country" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "latitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "longitude" : {
+                  "type" : "number" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } , {
+          "type" : "object" ,
+          "properties" : {
+            "username" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "account_type" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "profile_image" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "type" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+    "trackerAlarms":[
+        {
+            "alarmId":8272,
+            "deleted":false,
+            "enabled":false,
+            "label":"Work!!!",
+            "recurring":true,
+            "snoozeCount":3,
+            "snoozeLength":9,
+            "syncedToDevice":true,
+            "time":"02:00+04:00",
+            "vibe":"DEFAULT",
+            "weekDays":[
+                "TUESDAY",
+                "WEDNESDAY",
+                "THURSDAY"
+            ]
+        },
+        {
+            "alarmId":8273,
+            "deleted":false,
+            "enabled":false,
+            "recurring":false,
+            "snoozeCount":3,
+            "snoozeLength":1,
+            "syncedToDevice":true,
+            "time":"10:15+04:00",
+            "vibe":"DEFAULT",
+            "weekDays":[]
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+[
+  {
+    "PhraseId" : "61" ,
+    "Text" : "Nubosidad en aumento"
+  } , {
+    "PhraseId" : "62" ,
+    "Text" : "Parcialmente nublado"
+  } , {
+    "PhraseId" : "63" ,
+    "Text" : "Parcialmente soleado"
+  } , {
+    "PhraseId" : "64" ,
+    "Text" : "Muy nublado"
+  }
+]

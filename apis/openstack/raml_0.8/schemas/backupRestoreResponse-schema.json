@@ -1,0 +1,21 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "restore" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "backup_id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "volume_id" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

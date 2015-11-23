@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:os-extended-snapshot-attributes="http://docs.openstack.org/openstack-block-storage/2.0/content/Extended_Snapshot_Attributes.html">
+  <xsd:element name="snapshots">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="snapshot" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="metadata" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+            </xsd:sequence>
+            <xsd:attribute name="status" type="xsd:normalizedString" use="required"/>
+            <xsd:attribute name="description" type="xsd:string" use="required"/>
+            <xsd:attribute name="created_at" type="xsd:string" use="required"/>
+            <xsd:attribute name="volume_id" type="xsd:normalizedString" use="required"/>
+            <xsd:attribute name="size" type="xsd:int" use="required"/>
+            <xsd:attribute name="id" type="xsd:normalizedString" use="required"/>
+            <xsd:attribute name="name" type="xsd:normalizedString" use="required"/>
+            <xsd:attribute name="project_id" type="xsd:normalizedString" use="required"/>
+            <xsd:attribute name="progress" type="xsd:normalizedString" use="required"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

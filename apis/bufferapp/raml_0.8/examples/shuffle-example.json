@@ -1,0 +1,32 @@
+{
+  "success" : true ,
+  "updates" : [
+    {
+      "id" : "4eb854340acb04e870000010" ,
+      "created_at" : 1320703582 ,
+      "day" : "Saturday 5th November" ,
+      "due_at" : 1320742680 ,
+      "due_time" : "08:01 am" ,
+      "profile_id" : "4eb854340acb04e870000010" ,
+      "profile_service" : "twitter" ,
+      "status" : "buffer" ,
+      "text" : "3 Incredible Stories Made Possible Through Twitter j.mp/u..." ,
+      "text_formatted" : "3 Incredible Stories Made Possible Through Twit..." ,
+      "user_id" : "4eb9276e0acb04bb81000067" ,
+      "via" : "safari"
+    } , {
+      "id" : "4eb854340acb04e870000010" ,
+      "created_at" : 1320703582 ,
+      "day" : "Saturday 5th November" ,
+      "due_at" : 1320742680 ,
+      "due_time" : "08:01 am" ,
+      "profile_id" : "4eb854340acb04e870000010" ,
+      "profile_service" : "twitter" ,
+      "status" : "buffer" ,
+      "text" : "3 Incredible Stories Made Possible Through Twitter j.mp/u..." ,
+      "text_formatted" : "3 Incredible Stories Made Possible Through Twit..." ,
+      "user_id" : "4eb9276e0acb04bb81000067" ,
+      "via" : "safari"
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "response": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "version": {
+          "required": false,
+          "type": "string"
+        },
+        "termsofService": {
+          "required": false,
+          "type": "string"
+        },
+        "features": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "geolookup": {
+              "required": false,
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "location": {
+      "required": false,
+      "type": "object",
+      "properties": {
+        "type": {
+          "required": false,
+          "type": "string"
+        },
+        "country": {
+          "required": false,
+          "type": "string"
+        },
+        "country_iso3166": {
+          "required": false,
+          "type": "string"
+        },
+        "country_name": {
+          "required": false,
+          "type": "string"
+        },
+        "state": {
+          "required": false,
+          "type": "string"
+        },
+        "city": {
+          "required": false,
+          "type": "string"
+        },
+        "tz_short": {
+          "required": false,
+          "type": "string"
+        },
+        "tz_long": {
+          "required": false,
+          "type": "string"
+        },
+        "lat": {
+          "required": false,
+          "type": "string"
+        },
+        "lon": {
+          "required": false,
+          "type": "string"
+        },
+        "zip": {
+          "required": false,
+          "type": "string"
+        },
+        "magic": {
+          "required": false,
+          "type": "string"
+        },
+        "wmo": {
+          "required": false,
+          "type": "string"
+        },
+        "l": {
+          "required": false,
+          "type": "string"
+        },
+        "requesturl": {
+          "required": false,
+          "type": "string"
+        },
+        "wuiurl": {
+          "required": false,
+          "type": "string"
+        },
+        "nearby_weather_stations": {
+          "required": false,
+          "type": "object",
+          "properties": {
+            "airport": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "station": {
+                  "required": false,
+                  "type": "array",
+                  "items": {
+                    "required": false,
+                    "type": "object",
+                    "properties": {
+                      "city": {
+                        "required": false,
+                        "type": "string"
+                      },
+                      "state": {
+                        "required": false,
+                        "type": "string"
+                      },
+                      "country": {
+                        "required": false,
+                        "type": "string"
+                      },
+                      "icao": {
+                        "required": false,
+                        "type": "string"
+                      },
+                      "lat": {
+                        "required": false,
+                        "type": "string"
+                      },
+                      "lon": {
+                        "required": false,
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "pws": {
+              "required": false,
+              "type": "object",
+              "properties": {
+                "station": {
+                  "required": false,
+                  "type": "array",
+                  "items": {
+                    "required": false,
+                    "type": "object",
+                    "properties": {
+                      "neighborhood": {
+                        "required": false,
+                        "type": "string"
+                      },
+                      "city": {
+                        "required": false,
+                        "type": "string"
+                      },
+                      "state": {
+                        "required": false,
+                        "type": "string"
+                      },
+                      "country": {
+                        "required": false,
+                        "type": "string"
+                      },
+                      "id": {
+                        "required": false,
+                        "type": "string"
+                      },
+                      "distance_km": {
+                        "required": false,
+                        "type": "integer"
+                      },
+                      "distance_mi": {
+                        "required": false,
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Item">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Code"/>
+    <xs:element ref="Description"/>
+    <xs:element ref="PurchaseDetails"/>
+    <xs:element ref="SalesDetails"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Code" type="xs:NCName"/>
+  <xs:element name="Description" type="xs:string"/>
+  <xs:element name="PurchaseDetails">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="UnitPrice"/>
+    <xs:element ref="AccountCode"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="SalesDetails">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="UnitPrice"/>
+    <xs:element ref="AccountCode"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="UnitPrice" type="xs:decimal"/>
+  <xs:element name="AccountCode" type="xs:integer"/>
+</xs:schema>

@@ -1,0 +1,197 @@
+{
+  "request" : {
+    "carrier" : {
+      "requestedCode" : "AA" ,
+      "fsCode" : "AA"
+    } ,
+    "codeType" : {
+    } ,
+    "flightNumber" : {
+      "requested" : "1113" ,
+      "interpreted" : "1113"
+    } ,
+    "departing" : true ,
+    "date" : {
+      "year" : "2015" ,
+      "month" : "5" ,
+      "day" : "2" ,
+      "interpreted" : "2015-05-02"
+    } ,
+    "url" : "https://api.flightstats.com/flex/schedules/rest/v1/json/flight/AA/1113/departing/2015/5/2"
+  } ,
+  "scheduledFlights" : [
+    {
+      "carrierFsCode" : "AA" ,
+      "flightNumber" : "1113" ,
+      "departureAirportFsCode" : "LAX" ,
+      "arrivalAirportFsCode" : "ORD" ,
+      "stops" : 0 ,
+      "departureTerminal" : "4" ,
+      "arrivalTerminal" : "3" ,
+      "departureTime" : "2015-05-02T01:30:00.000" ,
+      "arrivalTime" : "2015-05-02T07:38:00.000" ,
+      "flightEquipmentIataCode" : "737" ,
+      "isCodeshare" : false ,
+      "isWetlease" : false ,
+      "serviceType" : "J" ,
+      "serviceClasses" : [
+        "F" ,
+        "Y"
+      ] ,
+      "trafficRestrictions" : [
+      ] ,
+      "codeshares" : [
+        {
+          "carrierFsCode" : "MH" ,
+          "flightNumber" : "9348" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "Q"
+          ] ,
+          "referenceCode" : 1921822
+        } , {
+          "carrierFsCode" : "US" ,
+          "flightNumber" : "1113" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 1923015
+        } , {
+          "carrierFsCode" : "EY" ,
+          "flightNumber" : "3105" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "J" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+            "G"
+          ] ,
+          "referenceCode" : 1923224
+        } , {
+          "carrierFsCode" : "AS" ,
+          "flightNumber" : "1359" ,
+          "serviceType" : "J" ,
+          "serviceClasses" : [
+            "R" ,
+            "F" ,
+            "Y"
+          ] ,
+          "trafficRestrictions" : [
+          ] ,
+          "referenceCode" : 10749298
+        }
+      ] ,
+      "referenceCode" : "1342-1920750--"
+    }
+  ] ,
+  "appendix" : {
+    "airlines" : [
+      {
+        "fs" : "AA" ,
+        "iata" : "AA" ,
+        "icao" : "AAL" ,
+        "name" : "American Airlines" ,
+        "phoneNumber" : "1-800-433-7300" ,
+        "active" : true
+      } , {
+        "fs" : "AS" ,
+        "iata" : "AS" ,
+        "icao" : "ASA" ,
+        "name" : "Alaska Airlines" ,
+        "phoneNumber" : "1-800-252-7522" ,
+        "active" : true
+      } , {
+        "fs" : "EY" ,
+        "iata" : "EY" ,
+        "icao" : "ETD" ,
+        "name" : "Etihad Airways" ,
+        "active" : true
+      } , {
+        "fs" : "MH" ,
+        "iata" : "MH" ,
+        "icao" : "MAS" ,
+        "name" : "Malaysia Airlines" ,
+        "active" : true
+      } , {
+        "fs" : "US" ,
+        "iata" : "US" ,
+        "icao" : "AWE" ,
+        "name" : "US Airways" ,
+        "phoneNumber" : "1-800-943-5436" ,
+        "active" : true
+      }
+    ] ,
+    "airports" : [
+      {
+        "fs" : "ORD" ,
+        "iata" : "ORD" ,
+        "icao" : "KORD" ,
+        "faa" : "ORD" ,
+        "name" : "O'Hare International Airport" ,
+        "street1" : "10000 West O'Hare" ,
+        "city" : "Chicago" ,
+        "cityCode" : "CHI" ,
+        "stateCode" : "IL" ,
+        "postalCode" : "60666" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Chicago" ,
+        "weatherZone" : "ILZ014" ,
+        "localTime" : "2015-04-28T03:44:40.909" ,
+        "utcOffsetHours" : -5 ,
+        "latitude" : 41.976912 ,
+        "longitude" : -87.904876 ,
+        "elevationFeet" : 668 ,
+        "classification" : 1 ,
+        "active" : true
+      } , {
+        "fs" : "LAX" ,
+        "iata" : "LAX" ,
+        "icao" : "KLAX" ,
+        "faa" : "LAX" ,
+        "name" : "Los Angeles International Airport" ,
+        "street1" : "One World Way" ,
+        "street2" : "" ,
+        "city" : "Los Angeles" ,
+        "cityCode" : "LAX" ,
+        "stateCode" : "CA" ,
+        "postalCode" : "90045-5803" ,
+        "countryCode" : "US" ,
+        "countryName" : "United States" ,
+        "regionName" : "North America" ,
+        "timeZoneRegionName" : "America/Los_Angeles" ,
+        "weatherZone" : "CAZ041" ,
+        "localTime" : "2015-04-28T01:44:40.909" ,
+        "utcOffsetHours" : -7 ,
+        "latitude" : 33.943399 ,
+        "longitude" : -118.408279 ,
+        "elevationFeet" : 126 ,
+        "classification" : 1 ,
+        "active" : true
+      }
+    ] ,
+    "equipments" : [
+      {
+        "iata" : "737" ,
+        "name" : "Boeing 737 Passenger" ,
+        "turboProp" : false ,
+        "jet" : true ,
+        "widebody" : false ,
+        "regional" : false
+      }
+    ]
+  }
+}

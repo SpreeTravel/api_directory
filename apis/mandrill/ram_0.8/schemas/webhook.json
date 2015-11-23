@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "id": {
+      "required": false,
+      "type": "integer"
+    },
+    "url": {
+      "required": false,
+      "type": "string"
+    },
+    "description": {
+      "required": false,
+      "type": "string"
+    },
+    "auth_key": {
+      "required": false,
+      "type": "string"
+    },
+    "events": {
+      "required": false,
+      "type": "array",
+      "items": {
+        "required": false,
+        "type": "string"
+      }
+    },
+    "created_at": {
+      "required": false,
+      "type": "string"
+    },
+    "last_sent_at": {
+      "required": false,
+      "type": "string"
+    },
+    "batches_sent": {
+      "required": false,
+      "type": "integer"
+    },
+    "events_sent": {
+      "required": false,
+      "type": "integer"
+    },
+    "last_error": {
+      "required": false,
+      "type": "string"
+    }
+  }
+}

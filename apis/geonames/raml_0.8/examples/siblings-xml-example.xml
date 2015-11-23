@@ -1,0 +1,544 @@
+<geonames>
+<totalResultsCount>49</totalResultsCount>
+<geoname>
+<toponymName>Republic of Albania</toponymName>
+<name>Albania</name>
+<lat>41</lat>
+<lng>20</lng>
+<geonameId>783754</geonameId>
+<countryCode>AL</countryCode>
+<countryName>Albania</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Principality of Andorra</toponymName>
+<name>Andorra</name>
+<lat>42.55</lat>
+<lng>1.58333</lng>
+<geonameId>3041565</geonameId>
+<countryCode>AD</countryCode>
+<countryName>Andorra</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Republic of Austria</toponymName>
+<name>Austria</name>
+<lat>47.33333</lat>
+<lng>13.33333</lng>
+<geonameId>2782113</geonameId>
+<countryCode>AT</countryCode>
+<countryName>Austria</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Republic of Belarus</toponymName>
+<name>Belarus</name>
+<lat>53</lat>
+<lng>28</lng>
+<geonameId>630336</geonameId>
+<countryCode>BY</countryCode>
+<countryName>Belarus</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Kingdom of Belgium</toponymName>
+<name>Belgium</name>
+<lat>50.75</lat>
+<lng>4.5</lng>
+<geonameId>2802361</geonameId>
+<countryCode>BE</countryCode>
+<countryName>Belgium</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Bosnia and Herzegovina</toponymName>
+<name>Bosnia and Herzegovina</name>
+<lat>44.25</lat>
+<lng>17.83333</lng>
+<geonameId>3277605</geonameId>
+<countryCode>BA</countryCode>
+<countryName>Bosnia and Herzegovina</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Republic of Bulgaria</toponymName>
+<name>Bulgaria</name>
+<lat>42.66667</lat>
+<lng>25.25</lng>
+<geonameId>732800</geonameId>
+<countryCode>BG</countryCode>
+<countryName>Bulgaria</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Republic of Croatia</toponymName>
+<name>Croatia</name>
+<lat>45.16667</lat>
+<lng>15.5</lng>
+<geonameId>3202326</geonameId>
+<countryCode>HR</countryCode>
+<countryName>Croatia</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Republic of Cyprus</toponymName>
+<name>Cyprus</name>
+<lat>35</lat>
+<lng>33</lng>
+<geonameId>146669</geonameId>
+<countryCode>CY</countryCode>
+<countryName>Cyprus</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Czech Republic</toponymName>
+<name>Czechia</name>
+<lat>49.75</lat>
+<lng>15</lng>
+<geonameId>3077311</geonameId>
+<countryCode>CZ</countryCode>
+<countryName>Czechia</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Kingdom of Denmark</toponymName>
+<name>Denmark</name>
+<lat>56</lat>
+<lng>10</lng>
+<geonameId>2623032</geonameId>
+<countryCode>DK</countryCode>
+<countryName>Denmark</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Republic of Estonia</toponymName>
+<name>Estonia</name>
+<lat>59</lat>
+<lng>26</lng>
+<geonameId>453733</geonameId>
+<countryCode>EE</countryCode>
+<countryName>Estonia</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Faroe Islands</toponymName>
+<name>Faroe Islands</name>
+<lat>62</lat>
+<lng>-7</lng>
+<geonameId>2622320</geonameId>
+<countryCode>FO</countryCode>
+<countryName>Faroe Islands</countryName>
+<fcl>A</fcl>
+<fcode>PCLD</fcode>
+</geoname>
+<geoname>
+<toponymName>Republic of Finland</toponymName>
+<name>Finland</name>
+<lat>64</lat>
+<lng>26</lng>
+<geonameId>660013</geonameId>
+<countryCode>FI</countryCode>
+<countryName>Finland</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Federal Republic of Germany</toponymName>
+<name>Germany</name>
+<lat>51.5</lat>
+<lng>10.5</lng>
+<geonameId>2921044</geonameId>
+<countryCode>DE</countryCode>
+<countryName>Germany</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Gibraltar</toponymName>
+<name>Gibraltar</name>
+<lat>36.13333</lat>
+<lng>-5.35</lng>
+<geonameId>2411586</geonameId>
+<countryCode>GI</countryCode>
+<countryName>Gibraltar</countryName>
+<fcl>A</fcl>
+<fcode>PCLD</fcode>
+</geoname>
+<geoname>
+<toponymName>Hellenic Republic</toponymName>
+<name>Greece</name>
+<lat>39</lat>
+<lng>22</lng>
+<geonameId>390903</geonameId>
+<countryCode>GR</countryCode>
+<countryName>Greece</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Hungary</toponymName>
+<name>Hungary</name>
+<lat>47</lat>
+<lng>20</lng>
+<geonameId>719819</geonameId>
+<countryCode>HU</countryCode>
+<countryName>Hungary</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Republic of Iceland</toponymName>
+<name>Iceland</name>
+<lat>65</lat>
+<lng>-18</lng>
+<geonameId>2629691</geonameId>
+<countryCode>IS</countryCode>
+<countryName>Iceland</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Ireland</toponymName>
+<name>Ireland</name>
+<lat>53</lat>
+<lng>-8</lng>
+<geonameId>2963597</geonameId>
+<countryCode>IE</countryCode>
+<countryName>Ireland</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Repubblica Italiana</toponymName>
+<name>Italy</name>
+<lat>42.83333</lat>
+<lng>12.83333</lng>
+<geonameId>3175395</geonameId>
+<countryCode>IT</countryCode>
+<countryName>Italy</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Republic of Kosovo</toponymName>
+<name>Kosovo</name>
+<lat>42.58333</lat>
+<lng>20.91667</lng>
+<geonameId>831053</geonameId>
+<countryCode>XK</countryCode>
+<countryName>Kosovo</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Republic of Latvia</toponymName>
+<name>Latvia</name>
+<lat>57</lat>
+<lng>25</lng>
+<geonameId>458258</geonameId>
+<countryCode>LV</countryCode>
+<countryName>Latvia</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Principality of Liechtenstein</toponymName>
+<name>Liechtenstein</name>
+<lat>47.16667</lat>
+<lng>9.53333</lng>
+<geonameId>3042058</geonameId>
+<countryCode>LI</countryCode>
+<countryName>Liechtenstein</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Republic of Lithuania</toponymName>
+<name>Lithuania</name>
+<lat>55.41667</lat>
+<lng>24</lng>
+<geonameId>597427</geonameId>
+<countryCode>LT</countryCode>
+<countryName>Lithuania</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Grand Duchy of Luxembourg</toponymName>
+<name>Luxembourg</name>
+<lat>49.75</lat>
+<lng>6.16667</lng>
+<geonameId>2960313</geonameId>
+<countryCode>LU</countryCode>
+<countryName>Luxembourg</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Republic of Macedonia</toponymName>
+<name>Macedonia</name>
+<lat>41.66667</lat>
+<lng>21.75</lng>
+<geonameId>718075</geonameId>
+<countryCode>MK</countryCode>
+<countryName>Macedonia</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Republic of Malta</toponymName>
+<name>Malta</name>
+<lat>35.91667</lat>
+<lng>14.43333</lng>
+<geonameId>2562770</geonameId>
+<countryCode>MT</countryCode>
+<countryName>Malta</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Republic of Moldova</toponymName>
+<name>Moldova</name>
+<lat>47.25</lat>
+<lng>28.58333</lng>
+<geonameId>617790</geonameId>
+<countryCode>MD</countryCode>
+<countryName>Moldova</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Principality of Monaco</toponymName>
+<name>Monaco</name>
+<lat>43.73141</lat>
+<lng>7.41903</lng>
+<geonameId>2993457</geonameId>
+<countryCode>MC</countryCode>
+<countryName>Monaco</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Montenegro</toponymName>
+<name>Montenegro</name>
+<lat>42.75</lat>
+<lng>19.25</lng>
+<geonameId>3194884</geonameId>
+<countryCode>ME</countryCode>
+<countryName>Montenegro</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Kingdom of the Netherlands</toponymName>
+<name>Netherlands</name>
+<lat>52.25</lat>
+<lng>5.75</lng>
+<geonameId>2750405</geonameId>
+<countryCode>NL</countryCode>
+<countryName>Netherlands</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Kingdom of Norway</toponymName>
+<name>Norway</name>
+<lat>62</lat>
+<lng>10</lng>
+<geonameId>3144096</geonameId>
+<countryCode>NO</countryCode>
+<countryName>Norway</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Republic of Poland</toponymName>
+<name>Poland</name>
+<lat>52</lat>
+<lng>20</lng>
+<geonameId>798544</geonameId>
+<countryCode>PL</countryCode>
+<countryName>Poland</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Portuguese Republic</toponymName>
+<name>Portugal</name>
+<lat>39.6945</lat>
+<lng>-8.13057</lng>
+<geonameId>2264397</geonameId>
+<countryCode>PT</countryCode>
+<countryName>Portugal</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>România</toponymName>
+<name>Romania</name>
+<lat>46</lat>
+<lng>25</lng>
+<geonameId>798549</geonameId>
+<countryCode>RO</countryCode>
+<countryName>Romania</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Russian Federation</toponymName>
+<name>Russia</name>
+<lat>60</lat>
+<lng>100</lng>
+<geonameId>2017370</geonameId>
+<countryCode>RU</countryCode>
+<countryName>Russia</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Repubblica di San Marino</toponymName>
+<name>San Marino</name>
+<lat>43.9367</lat>
+<lng>12.4463</lng>
+<geonameId>3168068</geonameId>
+<countryCode>SM</countryCode>
+<countryName>San Marino</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Serbia</toponymName>
+<name>Serbia</name>
+<lat>44.81892</lat>
+<lng>20.45998</lng>
+<geonameId>6290252</geonameId>
+<countryCode>RS</countryCode>
+<countryName>Serbia</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Slovak Republic</toponymName>
+<name>Slovakia</name>
+<lat>48.66667</lat>
+<lng>19.5</lng>
+<geonameId>3057568</geonameId>
+<countryCode>SK</countryCode>
+<countryName>Slovakia</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Republic of Slovenia</toponymName>
+<name>Slovenia</name>
+<lat>46.08333</lat>
+<lng>15</lng>
+<geonameId>3190538</geonameId>
+<countryCode>SI</countryCode>
+<countryName>Slovenia</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Kingdom of Spain</toponymName>
+<name>Spain</name>
+<lat>40</lat>
+<lng>-4</lng>
+<geonameId>2510769</geonameId>
+<countryCode>ES</countryCode>
+<countryName>Spain</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Svalbard and Jan Mayen</toponymName>
+<name>Svalbard and Jan Mayen</name>
+<lat>78</lat>
+<lng>20</lng>
+<geonameId>607072</geonameId>
+<countryCode>SJ</countryCode>
+<countryName>Svalbard and Jan Mayen</countryName>
+<fcl>A</fcl>
+<fcode>TERR</fcode>
+</geoname>
+<geoname>
+<toponymName>Kingdom of Sweden</toponymName>
+<name>Sweden</name>
+<lat>62</lat>
+<lng>15</lng>
+<geonameId>2661886</geonameId>
+<countryCode>SE</countryCode>
+<countryName>Sweden</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Swiss Confederation</toponymName>
+<name>Switzerland</name>
+<lat>47.00016</lat>
+<lng>8.01427</lng>
+<geonameId>2658434</geonameId>
+<countryCode>CH</countryCode>
+<countryName>Switzerland</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Ukraine</toponymName>
+<name>Ukraine</name>
+<lat>49</lat>
+<lng>32</lng>
+<geonameId>690791</geonameId>
+<countryCode>UA</countryCode>
+<countryName>Ukraine</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>
+United Kingdom of Great Britain and Northern Ireland
+</toponymName>
+<name>United Kingdom</name>
+<lat>54.75844</lat>
+<lng>-2.69531</lng>
+<geonameId>2635167</geonameId>
+<countryCode>GB</countryCode>
+<countryName>United Kingdom</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>State of the Vatican City</toponymName>
+<name>Vatican City</name>
+<lat>41.90225</lat>
+<lng>12.4533</lng>
+<geonameId>3164670</geonameId>
+<countryCode>VA</countryCode>
+<countryName>Vatican City</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+</geoname>
+<geoname>
+<toponymName>Ahvenanmaan Lääni</toponymName>
+<name>Åland</name>
+<lat>60.25</lat>
+<lng>20</lng>
+<geonameId>661882</geonameId>
+<countryCode>AX</countryCode>
+<countryName>Åland</countryName>
+<fcl>A</fcl>
+<fcode>PCLD</fcode>
+</geoname>
+</geonames>

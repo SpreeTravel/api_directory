@@ -1,0 +1,29 @@
+post: 
+  description: The topics assigned to the specified record. Add and remove topics from the specified record. Administrators must enable topics for objects before users can add topics to records of that object type.
+  queryParameters: 
+    topicId: 
+      description: ID of an existing topic. Required for existing topics if the topicName parameter isn’t used.
+      required: true
+    topicName: 
+      description: Name of a new or existing topic. Required for new topics; required for existing topics if the topicId parameter isn’t used.
+      required: true
+  body: 
+    application/json: 
+      schema: topicsRecordsResourceRequest
+      example: !include examples/topicsRecordsResourceRequest-example.json
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: topicResponse
+get: 
+  description: The topics assigned to the specified record. Get information about topics assigned to the specified record.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: topicResponse
+delete: 
+  description: The topics assigned to the specified record. Remove topics from the specified record.
+  responses: 
+    204: 

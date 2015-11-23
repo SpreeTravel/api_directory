@@ -1,0 +1,97 @@
+description: |
+  Returns a summary of the weather for the next 3 days. This includes high and low temperatures, a string text forecast and the conditions.
+  
+  #Examples:
+  http://api.wunderground.com/api/Your_Key/forecast/q/CA/San_Francisco.json
+  (See description of the response.)
+responses: 
+  200: 
+    description: |
+      The response will be a JSON-encoded object.
+      |name|description|
+      |-|
+      |forecast|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday|Type: array. JSON type: array. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.avehumidity|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.avewind|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.avewind.degrees|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.avewind.dir|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.avewind.kph|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.avewind.mph|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.conditions|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.ampm|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.day|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.epoch|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.hour|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.isdst|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.min|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.month|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.monthname|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.pretty|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.sec|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.tz_long|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.tz_short|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.weekday|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.weekday_short|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.yday|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.date.year|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.high|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.high.celsius|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.high.fahrenheit|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.icon|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.icon_url|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.low|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.low.celsius|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.low.fahrenheit|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.maxhumidity|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.maxwind|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.maxwind.degrees|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.maxwind.dir|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.maxwind.kph|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.maxwind.mph|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.minhumidity|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.period|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.pop|Type: unknown. JSON type: integer. Probability of Precipitation. |
+      |forecast.simpleforecast.forecastday.item.qpf_allday|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.qpf_allday.in|Type: unknown. JSON type: number. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.qpf_allday.mm|Type: unknown. JSON type: number. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.qpf_day|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.qpf_day.in|Type: unknown. JSON type: number. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.qpf_day.mm|Type: unknown. JSON type: number. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.qpf_night|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.qpf_night.in|Type: unknown. JSON type: number. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.qpf_night.mm|Type: unknown. JSON type: number. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.skyicon|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.snow_allday|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.snow_allday.cm|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.snow_allday.in|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.snow_day|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.snow_day.cm|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.snow_day.in|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.snow_night|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.snow_night.cm|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.simpleforecast.forecastday.item.snow_night.in|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.txt_forecast|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.txt_forecast.date|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.txt_forecast.forecastday|Type: array. JSON type: array. The official API documentation provides no description. |
+      |forecast.txt_forecast.forecastday.item|Type: object. JSON type: object. The official API documentation provides no description. |
+      |forecast.txt_forecast.forecastday.item.fcttext|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.txt_forecast.forecastday.item.fcttext_metric|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.txt_forecast.forecastday.item.icon|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.txt_forecast.forecastday.item.icon_url|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |forecast.txt_forecast.forecastday.item.period|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |forecast.txt_forecast.forecastday.item.pop|Type: unknown. JSON type: string. Probability of Precipitation. |
+      |forecast.txt_forecast.forecastday.item.title|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |response|Type: object. JSON type: object. The official API documentation provides no description. |
+      |response.features|Type: object. JSON type: object. The official API documentation provides no description. |
+      |response.features.forecast|Type: unknown. JSON type: integer. The official API documentation provides no description. |
+      |response.termsofService|Type: unknown. JSON type: string. The official API documentation provides no description. |
+      |response.version|Type: unknown. JSON type: string. The official API documentation provides no description. |
+    body: 
+      application/json: 
+        schema: forecastSchema
+        example: !include ../examples/forecast.json
+      application/xml: 

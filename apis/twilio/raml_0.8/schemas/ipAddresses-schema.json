@@ -1,0 +1,86 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "first_page_uri" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "end" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "previous_page_uri" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "ip_addresses" : {
+      "type" : "array" ,
+      "required" : false ,
+      "items" : 
+        {
+          "type" : "object" ,
+          "properties" : {
+            "date_updated" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "friendly_name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "uri" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "sid" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "date_created" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "ip_address" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      
+    } ,
+    "uri" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "page_size" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "num_pages" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "start" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "next_page_uri" : {
+      "type" : "object" ,
+      "required" : false
+    } ,
+    "last_page_uri" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "total" : {
+      "type" : "number" ,
+      "required" : false
+    } ,
+    "page" : {
+      "type" : "number" ,
+      "required" : false
+    }
+  }
+}

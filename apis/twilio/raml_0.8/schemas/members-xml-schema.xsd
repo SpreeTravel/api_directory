@@ -1,0 +1,35 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TwilioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="QueueMembers">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="QueueMember">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="CallSid"/>
+                    <xs:element type="xs:string" name="DateEnqueued"/>
+                    <xs:element type="xs:byte" name="WaitTime"/>
+                    <xs:element type="xs:byte" name="Position"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="end" type="xs:int" use="required"/>
+            <xs:attribute name="firstpageuri" type="xs:string" use="required"/>
+            <xs:attribute name="nextpageuri" type="xs:string" use="required"/>
+            <xs:attribute name="page" type="xs:int" use="required"/>
+            <xs:attribute name="pagesize" type="xs:int" use="required"/>
+            <xs:attribute name="previouspageuri" type="xs:string" use="required"/>
+            <xs:attribute name="start" type="xs:int" use="required"/>
+            <xs:attribute name="uri" type="xs:string" use="required"/>
+            <xs:attribute name="lastpageuri" type="xs:string" use="required"/>
+            <xs:attribute name="numpages" type="xs:int" use="required"/>
+            <xs:attribute name="total" type="xs:int" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

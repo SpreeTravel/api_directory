@@ -1,0 +1,15 @@
+get: 
+  description: Get information about an action link group definition. Deleting an action link group definition removes all references to it from feed elements. To get or delete the action link group definition, the client must be the same connected app that created the definition and the user must either be the user who created the definition or have “View all Data” permission.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: actionLinkGroupDefinitionResponse
+delete: 
+  description: Delete an action link group definition. Deleting an action link group definition removes all references to it from feed elements. To get or delete the action link group definition, the client must be the same connected app that created the definition and the user must either be the user who created the definition or have “View all Data” permission.
+  responses: 
+    204: 
+head: 
+  description: Get information about or delete an action link group definition. Deleting an action link group definition removes all references to it from feed elements. To get or delete the action link group definition, the client must be the same connected app that created the definition and the user must either be the user who created the definition or have “View all Data” permission.
+  responses: 
+    200: 

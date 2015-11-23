@@ -1,0 +1,97 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "request" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "amount" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "callback" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "output" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "terminmonths" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "points" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "points2" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "rate2" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "rate" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "message" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "text" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "code" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    } ,
+    "response" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "monthlyPrincipalAndInterest" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthlyPrincipalAndInterest2" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "costOfPoints" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "costOfPoints2" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "monthlySavings" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "result" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "breakEven" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "totalSavings" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  }
+}

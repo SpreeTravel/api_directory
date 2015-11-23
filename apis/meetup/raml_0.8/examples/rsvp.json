@@ -1,0 +1,59 @@
+{
+  "member": {
+    "member_state": "member_state",
+    "member_city": "member_city",
+    "bio": "bio",
+    "name": "name",
+    "member_country": "member_country",
+    "other_services": {
+      "[service-name]": "[service-name]"
+    },
+    "member_id": 100
+  },
+  "host": "host",
+  "answers": "answers",
+  "guests": "guests",
+  "mtime": 100,
+  "venue": {
+    "id": 100,
+    "zip": "zip",
+    "phone": 100,
+    "lon": 1.0,
+    "repinned": "repinned",
+    "address_3": "address_3",
+    "name": "name",
+    "state": 100,
+    "address_1": "address_1",
+    "address_2": "address_2",
+    "lat": 1.0,
+    "country": "country",
+    "city": "city"
+  },
+  "pay_status": "pay_status",
+  "response": "response",
+  "member_photo": {
+    "photo_link": "photo_link",
+    "highres_link": "highres_link",
+    "thumb_link": "thumb_link",
+    "photo_id": 100
+  },
+  "watching": "watching",
+  "created": 100,
+  "event": {
+    "id": 100,
+    "time": 100,
+    "event_url": "event_url",
+    "name": "name"
+  },
+  "rsvp_id": 100,
+  "group": {
+    "id": 100,
+    "group_lat": "group_lat",
+    "name": "name",
+    "group_lon": "group_lon",
+    "join_mode": "join_mode",
+    "urlname": "urlname",
+    "who": "who"
+  },
+  "comments": "comments"
+}

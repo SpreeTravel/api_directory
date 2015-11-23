@@ -1,0 +1,763 @@
+{
+	"request": {
+		"airport": {
+			"requestedCode": "ORD",
+			"fsCode": "ORD"
+		},
+		"date": {
+			"year": "2015",
+			"month": "4",
+			"day": "29",
+			"interpreted": "2015-04-29"
+		},
+		"hourOfDay": {
+			"requested": "8",
+			"interpreted": 8
+		},
+		"numHours": {
+			"interpreted": 1
+		},
+		"utc": {
+			"interpreted": false
+		},
+		"codeType": {
+			
+		},
+		"maxFlights": {
+			
+		},
+		"extendedOptions": {
+			
+		},
+		"url": "https://api.flightstats.com/flex/flightstatus/rest/v2/json/airport/status/ORD/dep/2015/4/29/8"
+	},
+	"appendix": {
+		"airlines": [{
+			"fs": "RS",
+			"iata": "RS",
+			"icao": "SKV",
+			"name": "Sky Regional",
+			"active": true
+		},
+		{
+			"fs": "S5",
+			"iata": "S5",
+			"icao": "TCF",
+			"name": "Shuttle America",
+			"active": true
+		},
+		{
+			"fs": "VX",
+			"iata": "VX",
+			"icao": "VRD",
+			"name": "Virgin America",
+			"active": true
+		},
+		{
+			"fs": "DL",
+			"iata": "DL",
+			"icao": "DAL",
+			"name": "Delta Air Lines",
+			"phoneNumber": "1-800-221-1212",
+			"active": true
+		},
+		{
+			"fs": "UA",
+			"iata": "UA",
+			"icao": "UAL",
+			"name": "United Airlines",
+			"phoneNumber": "1-800-864-8331",
+			"active": true
+		},
+		{
+			"fs": "LX",
+			"iata": "LX",
+			"icao": "SWR",
+			"name": "SWISS",
+			"active": true
+		},
+		{
+			"fs": "NZ",
+			"iata": "NZ",
+			"icao": "ANZ",
+			"name": "Air New Zealand",
+			"phoneNumber": "1-800-262-1234",
+			"active": true
+		},
+		{
+			"fs": "LY",
+			"iata": "LY",
+			"icao": "ELY",
+			"name": "El Al",
+			"active": true
+		},
+		{
+			"fs": "SA",
+			"iata": "SA",
+			"icao": "SAA",
+			"name": "South African Airways",
+			"active": true
+		},
+		{
+			"fs": "G7",
+			"iata": "G7",
+			"icao": "GJS",
+			"name": "GoJet Airlines",
+			"active": true
+		},
+		{
+			"fs": "FX",
+			"iata": "FX",
+			"icao": "FDX",
+			"name": "FedEx",
+			"active": true
+		},
+		{
+			"fs": "QF",
+			"iata": "QF",
+			"icao": "QFA",
+			"name": "Qantas",
+			"active": true
+		},
+		{
+			"fs": "IB",
+			"iata": "IB",
+			"icao": "IBE",
+			"name": "Iberia",
+			"active": true
+		},
+		{
+			"fs": "WS",
+			"iata": "WS",
+			"icao": "WJA",
+			"name": "WestJet",
+			"active": true
+		},
+		{
+			"fs": "US",
+			"iata": "US",
+			"icao": "AWE",
+			"name": "US Airways",
+			"phoneNumber": "1-800-943-5436",
+			"active": true
+		},
+		{
+			"fs": "SQ",
+			"iata": "SQ",
+			"icao": "SIA",
+			"name": "Singapore Airlines",
+			"active": true
+		},
+		{
+			"fs": "YX",
+			"iata": "YX",
+			"icao": "RPA",
+			"name": "Republic Airlines",
+			"active": true
+		},
+		{
+			"fs": "OO",
+			"iata": "OO",
+			"icao": "SKW",
+			"name": "SkyWest Airlines",
+			"active": true
+		},
+		{
+			"fs": "AA",
+			"iata": "AA",
+			"icao": "AAL",
+			"name": "American Airlines",
+			"phoneNumber": "1-800-433-7300",
+			"active": true
+		},
+		{
+			"fs": "AB",
+			"iata": "AB",
+			"icao": "BER",
+			"name": "Air Berlin",
+			"active": true
+		},
+		{
+			"fs": "QR",
+			"iata": "QR",
+			"icao": "QTR",
+			"name": "Qatar Airways",
+			"active": true
+		},
+		{
+			"fs": "AC",
+			"iata": "AC",
+			"icao": "ACA",
+			"name": "Air Canada",
+			"phoneNumber": "1-800-247-2262",
+			"active": true
+		},
+		{
+			"fs": "MP",
+			"iata": "MP",
+			"icao": "MPH",
+			"name": "Martinair",
+			"active": true
+		},
+		{
+			"fs": "MQ",
+			"iata": "MQ",
+			"icao": "ENY",
+			"name": "Envoy Air",
+			"active": true
+		},
+		{
+			"fs": "MU",
+			"iata": "MU",
+			"icao": "CES",
+			"name": "China Eastern Airlines",
+			"active": true
+		},
+		{
+			"fs": "CM",
+			"iata": "CM",
+			"icao": "CMP",
+			"name": "Copa Airlines",
+			"active": true
+		},
+		{
+			"fs": "9E",
+			"iata": "9E",
+			"icao": "FLG",
+			"name": "Endeavor Air",
+			"active": true
+		},
+		{
+			"fs": "EV",
+			"iata": "EV",
+			"icao": "ASQ",
+			"name": "ExpressJet",
+			"active": true
+		},
+		{
+			"fs": "AS",
+			"iata": "AS",
+			"icao": "ASA",
+			"name": "Alaska Airlines",
+			"phoneNumber": "1-800-252-7522",
+			"active": true
+		},
+		{
+			"fs": "3E",
+			"iata": "3E",
+			"icao": "WBR",
+			"name": "Air Choice One",
+			"active": true
+		},
+		{
+			"fs": "F9",
+			"iata": "F9",
+			"icao": "FFT",
+			"name": "Frontier Airlines",
+			"active": true
+		},
+		{
+			"fs": "AY",
+			"iata": "AY",
+			"icao": "FIN",
+			"name": "Finnair",
+			"active": true
+		},
+		{
+			"fs": "NH",
+			"iata": "NH",
+			"icao": "ANA",
+			"name": "ANA",
+			"phoneNumber": "1-800-235-9262",
+			"active": true
+		},
+		{
+			"fs": "NK",
+			"iata": "NK",
+			"icao": "NKS",
+			"name": "Spirit Airlines",
+			"active": true
+		},
+		{
+			"fs": "BA",
+			"iata": "BA",
+			"icao": "BAW",
+			"name": "British Airways",
+			"phoneNumber": "1-800-AIRWAYS",
+			"active": true
+		}],
+		"airports": [{
+			"fs": "YOW",
+			"iata": "YOW",
+			"icao": "CYOW",
+			"name": "Ottawa/Macdonald-Cartier International Airport",
+			"street1": "50 Airport Road",
+			"city": "Ottawa",
+			"cityCode": "YOW",
+			"stateCode": "ON",
+			"countryCode": "CA",
+			"countryName": "Canada",
+			"regionName": "North America",
+			"timeZoneRegionName": "America/Toronto",
+			"localTime": "2015-04-29T07:53:18.161",
+			"utcOffsetHours": -4.0,
+			"latitude": 45.320833,
+			"longitude": -75.672778,
+			"elevationFeet": 374,
+			"classification": 2,
+			"active": true,
+			"delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/YOW?codeType=fs",
+			"weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/YOW?codeType=fs"
+		},
+		{
+			"fs": "TVC",
+			"iata": "TVC",
+			"icao": "KTVC",
+			"faa": "TVC",
+			"name": "Cherry Capital Airport",
+			"street1": "727 Fly Don't Dr",
+			"city": "Traverse City",
+			"cityCode": "TVC",
+			"stateCode": "MI",
+			"postalCode": "49686",
+			"countryCode": "US",
+			"countryName": "United States",
+			"regionName": "North America",
+			"timeZoneRegionName": "America/New_York",
+			"weatherZone": "MIZ026",
+			"localTime": "2015-04-29T07:53:18.170",
+			"utcOffsetHours": -4.0,
+			"latitude": 44.737631,
+			"longitude": -85.579631,
+			"elevationFeet": 624,
+			"classification": 4,
+			"active": true,
+			"delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/TVC?codeType=fs",
+			"weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/TVC?codeType=fs"
+		},
+		{
+			"fs": "LAX",
+			"iata": "LAX",
+			"icao": "KLAX",
+			"faa": "LAX",
+			"name": "Los Angeles International Airport",
+			"street1": "One World Way",
+			"street2": "",
+			"city": "Los Angeles",
+			"cityCode": "LAX",
+			"stateCode": "CA",
+			"postalCode": "90045-5803",
+			"countryCode": "US",
+			"countryName": "United States",
+			"regionName": "North America",
+			"timeZoneRegionName": "America/Los_Angeles",
+			"weatherZone": "CAZ041",
+			"localTime": "2015-04-29T04:53:18.162",
+			"utcOffsetHours": -7.0,
+			"latitude": 33.943399,
+			"longitude": -118.408279,
+			"elevationFeet": 126,
+			"classification": 1,
+			"active": true,
+			"delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/LAX?codeType=fs",
+			"weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/LAX?codeType=fs"
+		},
+		{
+			"fs": "CLT",
+			"iata": "CLT",
+			"icao": "KCLT",
+			"faa": "CLT",
+			"name": "Charlotte Douglas International Airport",
+			"street1": "5501 Josh Birmingham Parkway",
+			"city": "Charlotte",
+			"cityCode": "CLT",
+			"stateCode": "NC",
+			"postalCode": "28204",
+			"countryCode": "US",
+			"countryName": "United States",
+			"regionName": "North America",
+			"timeZoneRegionName": "America/New_York",
+			"weatherZone": "NCZ071",
+			"localTime": "2015-04-29T07:53:18.161",
+			"utcOffsetHours": -4.0,
+			"latitude": 35.219167,
+			"longitude": -80.935833,
+			"elevationFeet": 748,
+			"classification": 1,
+			"active": true,
+			"delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/CLT?codeType=fs",
+			"weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/CLT?codeType=fs"
+		},
+		{
+			"fs": "STL",
+			"iata": "STL",
+			"icao": "KSTL",
+			"faa": "STL",
+			"name": "Lambert-St. Louis International Airport",
+			"street1": "10701 Lambert International Blvd.",
+			"city": "Saint Louis",
+			"cityCode": "STL",
+			"stateCode": "MO",
+			"postalCode": "63145",
+			"countryCode": "US",
+			"countryName": "United States",
+			"regionName": "North America",
+			"timeZoneRegionName": "America/Chicago",
+			"weatherZone": "MOZ063",
+			"localTime": "2015-04-29T06:53:18.181",
+			"utcOffsetHours": -5.0,
+			"latitude": 38.742279,
+			"longitude": -90.365869,
+			"elevationFeet": 540,
+			"classification": 1,
+			"active": true,
+			"delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/STL?codeType=fs",
+			"weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/STL?codeType=fs"
+		}],
+		"equipments": [{
+			"iata": "E75",
+			"name": "Embraer 175",
+			"turboProp": false,
+			"jet": true,
+			"widebody": false,
+			"regional": true
+		},
+		{
+			"iata": "M1F",
+			"name": "Boeing (Douglas) MD-11 Freighter",
+			"turboProp": false,
+			"jet": true,
+			"widebody": true,
+			"regional": false
+		},
+		{
+			"iata": "M80",
+			"name": "Boeing (Douglas) MD-80",
+			"turboProp": false,
+			"jet": true,
+			"widebody": false,
+			"regional": false
+		},
+		{
+			"iata": "ER4",
+			"name": "Embraer RJ145",
+			"turboProp": false,
+			"jet": true,
+			"widebody": false,
+			"regional": true
+		}]
+	},
+	"flightStatuses": [{
+		"flightId": 534419136,
+		"carrierFsCode": "EV",
+		"flightNumber": "5870",
+		"departureAirportFsCode": "ORD",
+		"arrivalAirportFsCode": "ABE",
+		"departureDate": {
+			"dateLocal": "2015-04-29T08:34:00.000",
+			"dateUtc": "2015-04-29T13:34:00.000Z"
+		},
+		"arrivalDate": {
+			"dateLocal": "2015-04-29T11:27:00.000",
+			"dateUtc": "2015-04-29T15:27:00.000Z"
+		},
+		"status": "S",
+		"schedule": {
+			"flightType": "J",
+			"serviceClasses": "Y",
+			"restrictions": "",
+			"uplines": [{
+				"fsCode": "SAV",
+				"flightId": 534429189
+			}]
+		},
+		"operationalTimes": {
+			"publishedDeparture": {
+				"dateLocal": "2015-04-29T08:34:00.000",
+				"dateUtc": "2015-04-29T13:34:00.000Z"
+			},
+			"publishedArrival": {
+				"dateLocal": "2015-04-29T11:27:00.000",
+				"dateUtc": "2015-04-29T15:27:00.000Z"
+			},
+			"scheduledGateDeparture": {
+				"dateLocal": "2015-04-29T08:34:00.000",
+				"dateUtc": "2015-04-29T13:34:00.000Z"
+			},
+			"estimatedGateDeparture": {
+				"dateLocal": "2015-04-29T08:45:00.000",
+				"dateUtc": "2015-04-29T13:45:00.000Z"
+			},
+			"flightPlanPlannedDeparture": {
+				"dateLocal": "2015-04-29T08:42:00.000",
+				"dateUtc": "2015-04-29T13:42:00.000Z"
+			},
+			"estimatedRunwayDeparture": {
+				"dateLocal": "2015-04-29T08:50:00.000",
+				"dateUtc": "2015-04-29T13:50:00.000Z"
+			},
+			"scheduledGateArrival": {
+				"dateLocal": "2015-04-29T11:27:00.000",
+				"dateUtc": "2015-04-29T15:27:00.000Z"
+			},
+			"estimatedGateArrival": {
+				"dateLocal": "2015-04-29T11:58:00.000",
+				"dateUtc": "2015-04-29T15:58:00.000Z"
+			},
+			"flightPlanPlannedArrival": {
+				"dateLocal": "2015-04-29T11:16:00.000",
+				"dateUtc": "2015-04-29T15:16:00.000Z"
+			},
+			"estimatedRunwayArrival": {
+				"dateLocal": "2015-04-29T11:16:00.000",
+				"dateUtc": "2015-04-29T15:16:00.000Z"
+			}
+		},
+		"codeshares": [{
+			"fsCode": "UA",
+			"flightNumber": "5870",
+			"relationship": "X"
+		}],
+		"delays": {
+			"departureGateDelayMinutes": 11,
+			"departureRunwayDelayMinutes": 8,
+			"arrivalGateDelayMinutes": 31
+		},
+		"flightDurations": {
+			"scheduledBlockMinutes": 113,
+			"scheduledAirMinutes": 94,
+			"scheduledTaxiOutMinutes": 8,
+			"scheduledTaxiInMinutes": 11
+		},
+		"airportResources": {
+			"departureTerminal": "2",
+			"departureGate": "F21"
+		},
+		"flightEquipment": {
+			"scheduledEquipmentIataCode": "ERJ",
+			"tailNumber": "N11181"
+		}
+	},
+	{
+		"flightId": 534419150,
+		"carrierFsCode": "MP",
+		"flightNumber": "6022",
+		"departureAirportFsCode": "ORD",
+		"arrivalAirportFsCode": "AMS",
+		"departureDate": {
+			"dateLocal": "2015-04-29T08:55:00.000",
+			"dateUtc": "2015-04-29T13:55:00.000Z"
+		},
+		"arrivalDate": {
+			"dateLocal": "2015-04-29T23:40:00.000",
+			"dateUtc": "2015-04-29T21:40:00.000Z"
+		},
+		"status": "S",
+		"schedule": {
+			"flightType": "F",
+			"serviceClasses": "",
+			"restrictions": "",
+			"uplines": [{
+				"fsCode": "MEX",
+				"flightId": 534412005
+			}]
+		},
+		"operationalTimes": {
+			"publishedDeparture": {
+				"dateLocal": "2015-04-29T08:55:00.000",
+				"dateUtc": "2015-04-29T13:55:00.000Z"
+			},
+			"publishedArrival": {
+				"dateLocal": "2015-04-29T23:40:00.000",
+				"dateUtc": "2015-04-29T21:40:00.000Z"
+			},
+			"scheduledGateDeparture": {
+				"dateLocal": "2015-04-29T08:55:00.000",
+				"dateUtc": "2015-04-29T13:55:00.000Z"
+			},
+			"flightPlanPlannedDeparture": {
+				"dateLocal": "2015-04-29T09:05:00.000",
+				"dateUtc": "2015-04-29T14:05:00.000Z"
+			},
+			"estimatedRunwayDeparture": {
+				"dateLocal": "2015-04-29T09:05:00.000",
+				"dateUtc": "2015-04-29T14:05:00.000Z"
+			},
+			"scheduledGateArrival": {
+				"dateLocal": "2015-04-29T23:40:00.000",
+				"dateUtc": "2015-04-29T21:40:00.000Z"
+			},
+			"flightPlanPlannedArrival": {
+				"dateLocal": "2015-04-29T23:46:00.000",
+				"dateUtc": "2015-04-29T21:46:00.000Z"
+			},
+			"estimatedRunwayArrival": {
+				"dateLocal": "2015-04-29T23:46:00.000",
+				"dateUtc": "2015-04-29T21:46:00.000Z"
+			}
+		},
+		"flightDurations": {
+			"scheduledBlockMinutes": 465,
+			"scheduledAirMinutes": 461,
+			"scheduledTaxiOutMinutes": 10
+		},
+		"flightEquipment": {
+			"scheduledEquipmentIataCode": "M1F"
+		}
+	},
+	{
+		"flightId": 534419178,
+		"carrierFsCode": "OO",
+		"flightNumber": "5219",
+		"departureAirportFsCode": "ORD",
+		"arrivalAirportFsCode": "ATL",
+		"departureDate": {
+			"dateLocal": "2015-04-29T08:32:00.000",
+			"dateUtc": "2015-04-29T13:32:00.000Z"
+		},
+		"arrivalDate": {
+			"dateLocal": "2015-04-29T11:30:00.000",
+			"dateUtc": "2015-04-29T15:30:00.000Z"
+		},
+		"status": "S",
+		"schedule": {
+			"flightType": "J",
+			"serviceClasses": "FJY",
+			"restrictions": "",
+			"uplines": [{
+				"fsCode": "SBN",
+				"flightId": 534429510
+			}]
+		},
+		"operationalTimes": {
+			"publishedDeparture": {
+				"dateLocal": "2015-04-29T08:32:00.000",
+				"dateUtc": "2015-04-29T13:32:00.000Z"
+			},
+			"publishedArrival": {
+				"dateLocal": "2015-04-29T11:30:00.000",
+				"dateUtc": "2015-04-29T15:30:00.000Z"
+			},
+			"scheduledGateDeparture": {
+				"dateLocal": "2015-04-29T08:32:00.000",
+				"dateUtc": "2015-04-29T13:32:00.000Z"
+			},
+			"estimatedGateDeparture": {
+				"dateLocal": "2015-04-29T08:32:00.000",
+				"dateUtc": "2015-04-29T13:32:00.000Z"
+			},
+			"flightPlanPlannedDeparture": {
+				"dateLocal": "2015-04-29T08:38:00.000",
+				"dateUtc": "2015-04-29T13:38:00.000Z"
+			},
+			"estimatedRunwayDeparture": {
+				"dateLocal": "2015-04-29T08:38:00.000",
+				"dateUtc": "2015-04-29T13:38:00.000Z"
+			},
+			"scheduledGateArrival": {
+				"dateLocal": "2015-04-29T11:30:00.000",
+				"dateUtc": "2015-04-29T15:30:00.000Z"
+			},
+			"estimatedGateArrival": {
+				"dateLocal": "2015-04-29T11:30:00.000",
+				"dateUtc": "2015-04-29T15:30:00.000Z"
+			},
+			"flightPlanPlannedArrival": {
+				"dateLocal": "2015-04-29T11:06:00.000",
+				"dateUtc": "2015-04-29T15:06:00.000Z"
+			},
+			"estimatedRunwayArrival": {
+				"dateLocal": "2015-04-29T11:06:00.000",
+				"dateUtc": "2015-04-29T15:06:00.000Z"
+			}
+		},
+		"codeshares": [{
+			"fsCode": "UA",
+			"flightNumber": "5219",
+			"relationship": "X"
+		}],
+		"flightDurations": {
+			"scheduledBlockMinutes": 118,
+			"scheduledAirMinutes": 88,
+			"scheduledTaxiOutMinutes": 6,
+			"scheduledTaxiInMinutes": 24
+		},
+		"airportResources": {
+			"departureTerminal": "2",
+			"departureGate": "E8",
+			"arrivalTerminal": "N"
+		},
+		"flightEquipment": {
+			"scheduledEquipmentIataCode": "E75",
+			"tailNumber": "N103SY"
+		}
+	},
+	{
+		"flightId": 534419168,
+		"carrierFsCode": "DL",
+		"flightNumber": "2628",
+		"departureAirportFsCode": "ORD",
+		"arrivalAirportFsCode": "ATL",
+		"departureDate": {
+			"dateLocal": "2015-04-29T08:45:00.000",
+			"dateUtc": "2015-04-29T13:45:00.000Z"
+		},
+		"arrivalDate": {
+			"dateLocal": "2015-04-29T11:40:00.000",
+			"dateUtc": "2015-04-29T15:40:00.000Z"
+		},
+		"status": "S",
+		"schedule": {
+			"flightType": "J",
+			"serviceClasses": "FY",
+			"restrictions": ""
+		},
+		"operationalTimes": {
+			"publishedDeparture": {
+				"dateLocal": "2015-04-29T08:45:00.000",
+				"dateUtc": "2015-04-29T13:45:00.000Z"
+			},
+			"publishedArrival": {
+				"dateLocal": "2015-04-29T11:40:00.000",
+				"dateUtc": "2015-04-29T15:40:00.000Z"
+			},
+			"scheduledGateDeparture": {
+				"dateLocal": "2015-04-29T08:45:00.000",
+				"dateUtc": "2015-04-29T13:45:00.000Z"
+			},
+			"flightPlanPlannedDeparture": {
+				"dateLocal": "2015-04-29T08:51:00.000",
+				"dateUtc": "2015-04-29T13:51:00.000Z"
+			},
+			"estimatedRunwayDeparture": {
+				"dateLocal": "2015-04-29T08:51:00.000",
+				"dateUtc": "2015-04-29T13:51:00.000Z"
+			},
+			"scheduledGateArrival": {
+				"dateLocal": "2015-04-29T11:40:00.000",
+				"dateUtc": "2015-04-29T15:40:00.000Z"
+			},
+			"flightPlanPlannedArrival": {
+				"dateLocal": "2015-04-29T11:16:00.000",
+				"dateUtc": "2015-04-29T15:16:00.000Z"
+			},
+			"estimatedRunwayArrival": {
+				"dateLocal": "2015-04-29T11:16:00.000",
+				"dateUtc": "2015-04-29T15:16:00.000Z"
+			}
+		},
+		"flightDurations": {
+			"scheduledBlockMinutes": 115,
+			"scheduledAirMinutes": 85,
+			"scheduledTaxiOutMinutes": 6,
+			"scheduledTaxiInMinutes": 24
+		},
+		"airportResources": {
+			"departureTerminal": "2",
+			"arrivalTerminal": "S"
+		},
+		"flightEquipment": {
+			"scheduledEquipmentIataCode": "717"
+		}
+	}]
+}

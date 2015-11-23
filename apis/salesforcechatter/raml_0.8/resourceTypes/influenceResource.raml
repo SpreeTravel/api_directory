@@ -1,0 +1,12 @@
+head: 
+  description: List of the percentile thresholds used to categorize an organization’s users by their influence in Chatter.
+  responses: 
+    200: 
+get: 
+  description: List of the percentile thresholds used to categorize an organization’s users by their influence in Chatter.
+  responses: 
+    200: 
+      body: 
+        application/json: 
+          schema: influenceThresholdsResponse
+          example: !include examples/influenceResourceResponse-example.json

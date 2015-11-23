@@ -1,0 +1,443 @@
+{
+  "geonames" : [
+    {
+      "countryName" : "Andorra" ,
+      "numPostalCodes" : 7 ,
+      "countryCode" : "AD" ,
+      "maxPostalCode" : "AD700" ,
+      "minPostalCode" : "AD100"
+    } , {
+      "countryName" : "Argentina" ,
+      "numPostalCodes" : 20260 ,
+      "countryCode" : "AR" ,
+      "maxPostalCode" : "9431" ,
+      "minPostalCode" : "1601"
+    } , {
+      "countryName" : "American Samoa" ,
+      "numPostalCodes" : 1 ,
+      "countryCode" : "AS" ,
+      "maxPostalCode" : "96799" ,
+      "minPostalCode" : "96799"
+    } , {
+      "countryName" : "Austria" ,
+      "numPostalCodes" : 21183 ,
+      "countryCode" : "AT" ,
+      "maxPostalCode" : "9992" ,
+      "minPostalCode" : "1010"
+    } , {
+      "countryName" : "Australia" ,
+      "numPostalCodes" : 16875 ,
+      "countryCode" : "AU" ,
+      "maxPostalCode" : "9944" ,
+      "minPostalCode" : "0200"
+    } , {
+      "countryName" : "Åland" ,
+      "numPostalCodes" : 40 ,
+      "countryCode" : "AX" ,
+      "maxPostalCode" : "22999" ,
+      "minPostalCode" : "22100"
+    } , {
+      "countryName" : "Bangladesh" ,
+      "numPostalCodes" : 1323 ,
+      "countryCode" : "BD" ,
+      "maxPostalCode" : "9461" ,
+      "minPostalCode" : "1000"
+    } , {
+      "countryName" : "Belgium" ,
+      "numPostalCodes" : 3386 ,
+      "countryCode" : "BE" ,
+      "maxPostalCode" : "9992" ,
+      "minPostalCode" : "1000"
+    } , {
+      "countryName" : "Bulgaria" ,
+      "numPostalCodes" : 5304 ,
+      "countryCode" : "BG" ,
+      "maxPostalCode" : "9974" ,
+      "minPostalCode" : "1000"
+    } , {
+      "countryName" : "Brazil" ,
+      "numPostalCodes" : 5525 ,
+      "countryCode" : "BR" ,
+      "maxPostalCode" : "99990-000" ,
+      "minPostalCode" : "01000-000"
+    } , {
+      "countryName" : "Canada" ,
+      "numPostalCodes" : 1640 ,
+      "countryCode" : "CA" ,
+      "maxPostalCode" : "Y1A" ,
+      "minPostalCode" : "A0A"
+    } , {
+      "countryName" : "Switzerland" ,
+      "numPostalCodes" : 4577 ,
+      "countryCode" : "CH" ,
+      "maxPostalCode" : "9658" ,
+      "minPostalCode" : "1000"
+    } , {
+      "countryName" : "Czechia" ,
+      "numPostalCodes" : 15507 ,
+      "countryCode" : "CZ" ,
+      "maxPostalCode" : "798 62" ,
+      "minPostalCode" : "100 00"
+    } , {
+      "countryName" : "Germany" ,
+      "numPostalCodes" : 16481 ,
+      "countryCode" : "DE" ,
+      "maxPostalCode" : "99998" ,
+      "minPostalCode" : "01067"
+    } , {
+      "countryName" : "Denmark" ,
+      "numPostalCodes" : 1422 ,
+      "countryCode" : "DK" ,
+      "maxPostalCode" : "9990" ,
+      "minPostalCode" : "1000"
+    } , {
+      "countryName" : "Dominican Republic" ,
+      "numPostalCodes" : 544 ,
+      "countryCode" : "DO" ,
+      "maxPostalCode" : "11906" ,
+      "minPostalCode" : "10101"
+    } , {
+      "countryName" : "Algeria" ,
+      "numPostalCodes" : 15951 ,
+      "countryCode" : "DZ" ,
+      "maxPostalCode" : "48073" ,
+      "minPostalCode" : "01000"
+    } , {
+      "countryName" : "Spain" ,
+      "numPostalCodes" : 37866 ,
+      "countryCode" : "ES" ,
+      "maxPostalCode" : "52080" ,
+      "minPostalCode" : "01001"
+    } , {
+      "countryName" : "Finland" ,
+      "numPostalCodes" : 4597 ,
+      "countryCode" : "FI" ,
+      "maxPostalCode" : "99999" ,
+      "minPostalCode" : "00002"
+    } , {
+      "countryName" : "Faroe Islands" ,
+      "numPostalCodes" : 130 ,
+      "countryCode" : "FO" ,
+      "maxPostalCode" : "970" ,
+      "minPostalCode" : "100"
+    } , {
+      "countryName" : "France" ,
+      "numPostalCodes" : 51131 ,
+      "countryCode" : "FR" ,
+      "maxPostalCode" : "98799" ,
+      "minPostalCode" : "01000"
+    } , {
+      "countryName" : "United Kingdom" ,
+      "numPostalCodes" : 1714267 ,
+      "countryCode" : "GB" ,
+      "maxPostalCode" : "ZE3 9JZ" ,
+      "minPostalCode" : "AB10"
+    } , {
+      "countryName" : "French Guiana" ,
+      "numPostalCodes" : 77 ,
+      "countryCode" : "GF" ,
+      "maxPostalCode" : "97399 CEDEX" ,
+      "minPostalCode" : "97300"
+    } , {
+      "countryName" : "Guernsey" ,
+      "numPostalCodes" : 8 ,
+      "countryCode" : "GG" ,
+      "maxPostalCode" : "GY9" ,
+      "minPostalCode" : "GY1"
+    } , {
+      "countryName" : "Greenland" ,
+      "numPostalCodes" : 33 ,
+      "countryCode" : "GL" ,
+      "maxPostalCode" : "3992" ,
+      "minPostalCode" : "2412"
+    } , {
+      "countryName" : "Guadeloupe" ,
+      "numPostalCodes" : 105 ,
+      "countryCode" : "GP" ,
+      "maxPostalCode" : "97199 CEDEX" ,
+      "minPostalCode" : "97001 CEDEX"
+    } , {
+      "countryName" : "Greece" ,
+      "numPostalCodes" : 865 ,
+      "countryCode" : "GR" ,
+      "maxPostalCode" : "859 00" ,
+      "minPostalCode" : "104 31"
+    } , {
+      "countryName" : "Guatemala" ,
+      "numPostalCodes" : 548 ,
+      "countryCode" : "GT" ,
+      "maxPostalCode" : "22027" ,
+      "minPostalCode" : "01001"
+    } , {
+      "countryName" : "Guam" ,
+      "numPostalCodes" : 23 ,
+      "countryCode" : "GU" ,
+      "maxPostalCode" : "96932" ,
+      "minPostalCode" : "96910"
+    } , {
+      "countryName" : "Croatia" ,
+      "numPostalCodes" : 6943 ,
+      "countryCode" : "HR" ,
+      "maxPostalCode" : "53296" ,
+      "minPostalCode" : "10000"
+    } , {
+      "countryName" : "Hungary" ,
+      "numPostalCodes" : 4041 ,
+      "countryCode" : "HU" ,
+      "maxPostalCode" : "9985" ,
+      "minPostalCode" : "1011"
+    } , {
+      "countryName" : "Isle of Man" ,
+      "numPostalCodes" : 87 ,
+      "countryCode" : "IM" ,
+      "maxPostalCode" : "IM9" ,
+      "minPostalCode" : "IM1"
+    } , {
+      "countryName" : "India" ,
+      "numPostalCodes" : 15221 ,
+      "countryCode" : "IN" ,
+      "maxPostalCode" : "855126" ,
+      "minPostalCode" : "110001"
+    } , {
+      "countryName" : "Iceland" ,
+      "numPostalCodes" : 147 ,
+      "countryCode" : "IS" ,
+      "maxPostalCode" : "902" ,
+      "minPostalCode" : "101"
+    } , {
+      "countryName" : "Italy" ,
+      "numPostalCodes" : 17981 ,
+      "countryCode" : "IT" ,
+      "maxPostalCode" : "98168" ,
+      "minPostalCode" : "00010"
+    } , {
+      "countryName" : "Jersey" ,
+      "numPostalCodes" : 4 ,
+      "countryCode" : "JE" ,
+      "maxPostalCode" : "JE3" ,
+      "minPostalCode" : "JE1"
+    } , {
+      "countryName" : "Japan" ,
+      "numPostalCodes" : 94388 ,
+      "countryCode" : "JP" ,
+      "maxPostalCode" : "999-8531" ,
+      "minPostalCode" : "100-0001"
+    } , {
+      "countryName" : "Liechtenstein" ,
+      "numPostalCodes" : 13 ,
+      "countryCode" : "LI" ,
+      "maxPostalCode" : "9498" ,
+      "minPostalCode" : "9485"
+    } , {
+      "countryName" : "Sri Lanka" ,
+      "numPostalCodes" : 1838 ,
+      "countryCode" : "LK" ,
+      "maxPostalCode" : "96167" ,
+      "minPostalCode" : " *"
+    } , {
+      "countryName" : "Lithuania" ,
+      "numPostalCodes" : 20558 ,
+      "countryCode" : "LT" ,
+      "maxPostalCode" : "99069" ,
+      "minPostalCode" : "00001"
+    } , {
+      "countryName" : "Luxembourg" ,
+      "numPostalCodes" : 4334 ,
+      "countryCode" : "LU" ,
+      "maxPostalCode" : "L-9999" ,
+      "minPostalCode" : "L-1009"
+    } , {
+      "countryName" : "Monaco" ,
+      "numPostalCodes" : 29 ,
+      "countryCode" : "MC" ,
+      "maxPostalCode" : "98000" ,
+      "minPostalCode" : "98000"
+    } , {
+      "countryName" : "Moldova" ,
+      "numPostalCodes" : 1753 ,
+      "countryCode" : "MD" ,
+      "maxPostalCode" : "MD-7731" ,
+      "minPostalCode" : "MD-2000"
+    } , {
+      "countryName" : "Marshall Islands" ,
+      "numPostalCodes" : 2 ,
+      "countryCode" : "MH" ,
+      "maxPostalCode" : "96970" ,
+      "minPostalCode" : "96960"
+    } , {
+      "countryName" : "Macedonia" ,
+      "numPostalCodes" : 220 ,
+      "countryCode" : "MK" ,
+      "maxPostalCode" : "7550" ,
+      "minPostalCode" : "1000"
+    } , {
+      "countryName" : "Northern Mariana Islands" ,
+      "numPostalCodes" : 4 ,
+      "countryCode" : "MP" ,
+      "maxPostalCode" : "96952" ,
+      "minPostalCode" : "96950"
+    } , {
+      "countryName" : "Martinique" ,
+      "numPostalCodes" : 100 ,
+      "countryCode" : "MQ" ,
+      "maxPostalCode" : "97299 CEDEX" ,
+      "minPostalCode" : "97200"
+    } , {
+      "countryName" : "Mexico" ,
+      "numPostalCodes" : 75203 ,
+      "countryCode" : "MX" ,
+      "maxPostalCode" : "99998" ,
+      "minPostalCode" : "01000"
+    } , {
+      "countryName" : "Malaysia" ,
+      "numPostalCodes" : 2818 ,
+      "countryCode" : "MY" ,
+      "maxPostalCode" : "98859" ,
+      "minPostalCode" : "01000"
+    } , {
+      "countryName" : "Netherlands" ,
+      "numPostalCodes" : 5314 ,
+      "countryCode" : "NL" ,
+      "maxPostalCode" : "9999" ,
+      "minPostalCode" : "1000"
+    } , {
+      "countryName" : "Norway" ,
+      "numPostalCodes" : 4574 ,
+      "countryCode" : "NO" ,
+      "maxPostalCode" : "9991" ,
+      "minPostalCode" : "0001"
+    } , {
+      "countryName" : "New Zealand" ,
+      "numPostalCodes" : 1737 ,
+      "countryCode" : "NZ" ,
+      "maxPostalCode" : "9893" ,
+      "minPostalCode" : "0110"
+    } , {
+      "countryName" : "Philippines" ,
+      "numPostalCodes" : 2231 ,
+      "countryCode" : "PH" ,
+      "maxPostalCode" : "9811" ,
+      "minPostalCode" : "0400"
+    } , {
+      "countryName" : "Pakistan" ,
+      "numPostalCodes" : 11844 ,
+      "countryCode" : "PK" ,
+      "maxPostalCode" : "97320" ,
+      "minPostalCode" : "10010"
+    } , {
+      "countryName" : "Poland" ,
+      "numPostalCodes" : 21980 ,
+      "countryCode" : "PL" ,
+      "maxPostalCode" : "99-440" ,
+      "minPostalCode" : "00-001"
+    } , {
+      "countryName" : "Saint Pierre and Miquelon" ,
+      "numPostalCodes" : 2 ,
+      "countryCode" : "PM" ,
+      "maxPostalCode" : "97500" ,
+      "minPostalCode" : "97500"
+    } , {
+      "countryName" : "Puerto Rico" ,
+      "numPostalCodes" : 187 ,
+      "countryCode" : "PR" ,
+      "maxPostalCode" : "00988" ,
+      "minPostalCode" : "00601"
+    } , {
+      "countryName" : "Portugal" ,
+      "numPostalCodes" : 204001 ,
+      "countryCode" : "PT" ,
+      "maxPostalCode" : "9980-999" ,
+      "minPostalCode" : "1000-001"
+    } , {
+      "countryName" : "Réunion" ,
+      "numPostalCodes" : 152 ,
+      "countryCode" : "RE" ,
+      "maxPostalCode" : "97899 CEDEX" ,
+      "minPostalCode" : "97400"
+    } , {
+      "countryName" : "Romania" ,
+      "numPostalCodes" : 13695 ,
+      "countryCode" : "RO" ,
+      "maxPostalCode" : "927250" ,
+      "minPostalCode" : "105100"
+    } , {
+      "countryName" : "Russia" ,
+      "numPostalCodes" : 43538 ,
+      "countryCode" : "RU" ,
+      "maxPostalCode" : "901993" ,
+      "minPostalCode" : "101000"
+    } , {
+      "countryName" : "Sweden" ,
+      "numPostalCodes" : 16079 ,
+      "countryCode" : "SE" ,
+      "maxPostalCode" : "98499" ,
+      "minPostalCode" : "10005"
+    } , {
+      "countryName" : "Slovenia" ,
+      "numPostalCodes" : 557 ,
+      "countryCode" : "SI" ,
+      "maxPostalCode" : "9600" ,
+      "minPostalCode" : "1000"
+    } , {
+      "countryName" : "Svalbard and Jan Mayen" ,
+      "numPostalCodes" : 8 ,
+      "countryCode" : "SJ" ,
+      "maxPostalCode" : "9178" ,
+      "minPostalCode" : "8099"
+    } , {
+      "countryName" : "Slovakia" ,
+      "numPostalCodes" : 4152 ,
+      "countryCode" : "SK" ,
+      "maxPostalCode" : "992 01" ,
+      "minPostalCode" : "010 01"
+    } , {
+      "countryName" : "San Marino" ,
+      "numPostalCodes" : 26 ,
+      "countryCode" : "SM" ,
+      "maxPostalCode" : "47899" ,
+      "minPostalCode" : "47890"
+    } , {
+      "countryName" : "Thailand" ,
+      "numPostalCodes" : 902 ,
+      "countryCode" : "TH" ,
+      "maxPostalCode" : "96220" ,
+      "minPostalCode" : "10100"
+    } , {
+      "countryName" : "Turkey" ,
+      "numPostalCodes" : 51193 ,
+      "countryCode" : "TR" ,
+      "maxPostalCode" : "81950" ,
+      "minPostalCode" : "01000"
+    } , {
+      "countryName" : "United States" ,
+      "numPostalCodes" : 43628 ,
+      "countryCode" : "US" ,
+      "maxPostalCode" : "99950" ,
+      "minPostalCode" : "00210"
+    } , {
+      "countryName" : "Vatican City" ,
+      "numPostalCodes" : 2 ,
+      "countryCode" : "VA" ,
+      "maxPostalCode" : "00120" ,
+      "minPostalCode" : "00120"
+    } , {
+      "countryName" : "U.S. Virgin Islands" ,
+      "numPostalCodes" : 16 ,
+      "countryCode" : "VI" ,
+      "maxPostalCode" : "00851" ,
+      "minPostalCode" : "00801"
+    } , {
+      "countryName" : "Mayotte" ,
+      "numPostalCodes" : 14 ,
+      "countryCode" : "YT" ,
+      "maxPostalCode" : "97680" ,
+      "minPostalCode" : "97600"
+    } , {
+      "countryName" : "South Africa" ,
+      "numPostalCodes" : 3920 ,
+      "countryCode" : "ZA" ,
+      "maxPostalCode" : "9992" ,
+      "minPostalCode" : "0002"
+    }
+  ]
+}

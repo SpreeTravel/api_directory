@@ -1,0 +1,194 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "array" ,
+  "items" : [
+    {
+      "type" : "object" ,
+      "properties" : {
+        "Key" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "LocalizedName" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "EnglishName" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Country" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "ID" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "LocalizedName" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "EnglishName" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "TimeZone" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "Code" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "Name" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "GmtOffset" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "IsDaylightSaving" : {
+              "type" : "boolean" ,
+              "required" : false
+            } ,
+            "NextOffsetChange" : {
+              "type" : "object" ,
+              "required" : false
+            }
+          }
+        } ,
+        "GeoPosition" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "Latitude" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "Longitude" : {
+              "type" : "number" ,
+              "required" : false
+            } ,
+            "Elevation" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "Metric" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "Value" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "Unit" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "UnitType" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                } ,
+                "Imperial" : {
+                  "type" : "object" ,
+                  "required" : false ,
+                  "properties" : {
+                    "Value" : {
+                      "type" : "number" ,
+                      "required" : false
+                    } ,
+                    "Unit" : {
+                      "type" : "string" ,
+                      "required" : false
+                    } ,
+                    "UnitType" : {
+                      "type" : "number" ,
+                      "required" : false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        } ,
+        "LocalObservationDateTime" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "EpochTime" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "WeatherText" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "WeatherIcon" : {
+          "type" : "number" ,
+          "required" : false
+        } ,
+        "IsDayTime" : {
+          "type" : "boolean" ,
+          "required" : false
+        } ,
+        "Temperature" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "Metric" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "Value" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "Unit" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "UnitType" : {
+                  "type" : "number" ,
+                  "required" : false
+                }
+              }
+            } ,
+            "Imperial" : {
+              "type" : "object" ,
+              "required" : false ,
+              "properties" : {
+                "Value" : {
+                  "type" : "number" ,
+                  "required" : false
+                } ,
+                "Unit" : {
+                  "type" : "string" ,
+                  "required" : false
+                } ,
+                "UnitType" : {
+                  "type" : "number" ,
+                  "required" : false
+                }
+              }
+            }
+          }
+        } ,
+        "MobileLink" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "Link" : {
+          "type" : "string" ,
+          "required" : false
+        }
+      }
+    }
+  ]
+}

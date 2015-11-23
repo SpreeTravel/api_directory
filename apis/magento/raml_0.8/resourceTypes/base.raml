@@ -1,0 +1,196 @@
+get?: 
+  headers: 
+    format: 
+      description: To set the response format
+      enum: [ application/json , text/xml ]
+  responses: 
+    400: 
+      description: |
+        Value is not defined for the specified parameter in the request body.
+      body: 
+        application/xml: 
+          schema: error-xml
+          example: !include ../examples/error-xml-example.xml
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    404: 
+      description: Resource not found.
+      body: 
+        application/xml: 
+          schema: error-xml
+          example: !include ../examples/error-xml-example.xml
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    405: 
+      description: The specified method is not implemented yet.
+      body: 
+        application/xml: 
+          schema: error-xml
+          example: !include ../examples/error-xml-example.xml
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    500: 
+      description: Resource internal error.
+      body: 
+        application/xml: 
+          schema: error-xml
+          example: !include ../examples/error-xml-example.xml
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+post?: 
+  headers: 
+    format: 
+      description: To set the response format
+      enum: [ application/json , text/xml ]
+  responses: 
+    200: 
+      body: 
+        application/xml: 
+          schema: success-xml
+          example: !include ../examples/success-xml-example.xml
+        application/json: 
+          schema: success
+          example: !include ../examples/success-example.json
+    400: 
+      description: |
+        Value is not defined for the specified parameter in the request body.
+      body: 
+        application/xml: 
+          schema: error-xml
+          example: !include ../examples/error-xml-example.xml
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    404: 
+      description: Resource not found.
+      body: 
+        application/xml: 
+          schema: error-xml
+          example: !include ../examples/error-xml-example.xml
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    405: 
+      description: The specified method is not implemented yet.
+      body: 
+        application/xml: 
+          schema: error-xml
+          example: !include ../examples/error-xml-example.xml
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    500: 
+      description: Resource internal error.
+      body: 
+        application/xml: 
+          schema: error-xml
+          example: !include ../examples/error-xml-example.xml
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+put?: 
+  headers: 
+    format: 
+      description: To set the response format
+      enum: [ application/json , text/xml ]
+  responses: 
+    200: 
+      body: 
+        application/xml: 
+          schema: success-xml
+          example: !include ../examples/success-xml-example.xml
+        application/json: 
+          schema: success
+          example: !include ../examples/success-example.json
+    400: 
+      description: |
+        Value is not defined for the specified parameter in the request body.
+      body: 
+        application/xml: 
+          schema: error-xml
+          example: !include ../examples/error-xml-example.xml
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    404: 
+      description: Resource not found.
+      body: 
+        application/xml: 
+          schema: error-xml
+          example: !include ../examples/error-xml-example.xml
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    405: 
+      description: The specified method is not implemented yet.
+      body: 
+        application/xml: 
+          schema: error-xml
+          example: !include ../examples/error-xml-example.xml
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    500: 
+      description: Resource internal error.
+      body: 
+        application/xml: 
+          schema: error-xml
+          example: !include ../examples/error-xml-example.xml
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+delete?: 
+  headers: 
+    format: 
+      description: To set the response format
+      enum: [ application/json , text/xml ]
+  responses: 
+    200: 
+      body: 
+        application/xml: 
+          schema: success-xml
+          example: !include ../examples/success-xml-example.xml
+        application/json: 
+          schema: success
+          example: !include ../examples/success-example.json
+    400: 
+      description: |
+        Value is not defined for the specified parameter in the request body.
+      body: 
+        application/xml: 
+          schema: error-xml
+          example: !include ../examples/error-xml-example.xml
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    404: 
+      description: Resource not found.
+      body: 
+        application/xml: 
+          schema: error-xml
+          example: !include ../examples/error-xml-example.xml
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    405: 
+      description: The specified method is not implemented yet.
+      body: 
+        application/xml: 
+          schema: error-xml
+          example: !include ../examples/error-xml-example.xml
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json
+    500: 
+      description: Resource internal error.
+      body: 
+        application/xml: 
+          schema: error-xml
+          example: !include ../examples/error-xml-example.xml
+        application/json: 
+          schema: error
+          example: !include ../examples/error-example.json

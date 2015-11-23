@@ -1,0 +1,106 @@
+{
+  "results": [
+    {
+      "profile_url": "profile_url 0",
+      "status": "status 0",
+      "photo_url": "photo_url 0",
+      "answers": {
+        "answer": "answer 0",
+        "question": "question 0",
+        "question_id": 0
+      },
+      "member_country": "member_country 0",
+      "membership_dues": {
+        "total_amount": "total_amount 0",
+        "transaction_time": 0,
+        "period_status": "period_status 0"
+      },
+      "site_name": "site_name 0",
+      "photo": {
+        "photo_link": "photo_link 0",
+        "highres_link": "highres_link 0",
+        "thumb_link": "thumb_link 0",
+        "photo_id": 0
+      },
+      "attendance_count": 0,
+      "member_id": 0,
+      "visited": 0,
+      "title": 0,
+      "member_city": "member_city 0",
+      "member_state": "member_state 0",
+      "bio": "bio 0",
+      "additional": "additional 0",
+      "created": 0,
+      "updated": 0,
+      "name": "name 0",
+      "role": "role 0",
+      "comment": "comment 0",
+      "group": {
+        "id": 0,
+        "group_lat": "group_lat 0",
+        "name": "name 0",
+        "group_lon": "group_lon 0",
+        "join_mode": "join_mode 0",
+        "urlname": "urlname 0",
+        "who": "who 0"
+      },
+      "other_services": {
+        "[service-name]": {
+          "identifier": "identifier 0"
+        }
+      },
+      "site_url": "site_url 0"
+    },
+    {
+      "profile_url": "profile_url 1",
+      "status": "status 1",
+      "photo_url": "photo_url 1",
+      "answers": {
+        "answer": "answer 1",
+        "question": "question 1",
+        "question_id": 1
+      },
+      "member_country": "member_country 1",
+      "membership_dues": {
+        "total_amount": "total_amount 1",
+        "transaction_time": 1,
+        "period_status": "period_status 1"
+      },
+      "site_name": "site_name 1",
+      "photo": {
+        "photo_link": "photo_link 1",
+        "highres_link": "highres_link 1",
+        "thumb_link": "thumb_link 1",
+        "photo_id": 1
+      },
+      "attendance_count": 1,
+      "member_id": 1,
+      "visited": 1,
+      "title": 1,
+      "member_city": "member_city 1",
+      "member_state": "member_state 1",
+      "bio": "bio 1",
+      "additional": "additional 1",
+      "created": 1,
+      "updated": 1,
+      "name": "name 1",
+      "role": "role 1",
+      "comment": "comment 1",
+      "group": {
+        "id": 1,
+        "group_lat": "group_lat 1",
+        "name": "name 1",
+        "group_lon": "group_lon 1",
+        "join_mode": "join_mode 1",
+        "urlname": "urlname 1",
+        "who": "who 1"
+      },
+      "other_services": {
+        "[service-name]": {
+          "identifier": "identifier 1"
+        }
+      },
+      "site_url": "site_url 1"
+    }
+  ]
+}

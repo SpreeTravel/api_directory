@@ -1,0 +1,63 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "attribute_set_id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "type_id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "sku" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "name" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "meta_title" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "meta_description" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "price" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "weight" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "status" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "visibility" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "enable_googlecheckout" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "tax_class_id" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "description" : {
+      "type" : "string" ,
+      "required" : false
+    } ,
+    "meta_keyword" : {
+      "type" : "string" ,
+      "required" : false
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "key_transaction" : {
+      "type" : "object" ,
+      "required" : false ,
+      "properties" : {
+        "id" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "transaction_name" : {
+          "type" : "string" ,
+          "required" : false
+        } ,
+        "application_summaries" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "response_time" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "throughput" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "error_rate" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "apdex_target" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "apdex_score" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "end_user_summaries" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "response_time" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "throughput" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "apdex_target" : {
+              "type" : "string" ,
+              "required" : false
+            } ,
+            "apdex_score" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        } ,
+        "links" : {
+          "type" : "object" ,
+          "required" : false ,
+          "properties" : {
+            "application" : {
+              "type" : "string" ,
+              "required" : false
+            }
+          }
+        }
+      }
+    }
+  }
+}

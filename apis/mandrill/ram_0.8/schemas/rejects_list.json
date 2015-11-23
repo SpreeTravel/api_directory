@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required": false,
+  "type": "object",
+  "properties": {
+    "key": {
+      "required": false,
+      "type": "string"
+    },
+    "email": {
+      "required": false,
+      "type": "string"
+    },
+    "include_expired": {
+      "required": false,
+      "type": "boolean"
+    },
+    "subaccount": {
+      "required": false,
+      "type": "string"
+    }
+  }
+}

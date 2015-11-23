@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Employee">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="EmployeeID"/>
+    <xs:element ref="Status"/>
+    <xs:element ref="FirstName"/>
+    <xs:element ref="LastName"/>
+    <xs:element ref="ExternalLink"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="EmployeeID" type="xs:string"/>
+  <xs:element name="Status" type="xs:NCName"/>
+  <xs:element name="FirstName" type="xs:NCName"/>
+  <xs:element name="LastName" type="xs:NCName"/>
+  <xs:element name="ExternalLink">
+  <xs:complexType>
+    <xs:sequence>
+    <xs:element ref="Url"/>
+    <xs:element ref="Description"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="Url" type="xs:anyURI"/>
+  <xs:element name="Description" type="xs:string"/>
+</xs:schema>

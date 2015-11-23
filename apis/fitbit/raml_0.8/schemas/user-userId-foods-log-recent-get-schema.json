@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "accessLevel": {
+            "enum": [
+              "PRIVATE",
+              "PUBLIC",
+              "SHARED"
+            ]
+          },
+          "amount": {
+            "type": "integer"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "calories": {
+            "type": "integer"
+          },
+          "foodId": {
+            "type": "integer"
+          },
+          "mealTypeId": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "unit": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "plural": {
+                "type": "string"
+              }
+            }
+          },
+          "units": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+}

@@ -1,0 +1,80 @@
+{
+  "importInfo" : {
+    "purpose" : "undefined" ,
+    "dataImportPriorityId" : "undefined" ,
+    "sourceFieldIds" : [
+      null ,
+      null
+    ] ,
+    "fieldMappings" : [
+      {
+        "sourceFieldId" : "undefined" ,
+        "targetFieldId" : "undefined" ,
+        "isLookup" : "true" ,
+        "updateType" : "undefined"
+      }
+    ] ,
+    "notification" : {
+    } ,
+    "listId" : "undefined" ,
+    "isAutomated" : "undefined" ,
+    "lastUpdatedSourceFieldsAt" : "undefined" ,
+    "name" : "string string" ,
+    "description" : "string string" ,
+    "permissions" : "InstancePermissions InstancePermissions" ,
+    "folderId" : "string string" ,
+    "sourceTemplateId" : "string string" ,
+    "createdBy" : "string string" ,
+    "createdAt" : "dateTime dateTime" ,
+    "updatedBy" : "string string" ,
+    "updatedAt" : "dateTime dateTime" ,
+    "accessedAt" : "dateTime dateTime" ,
+    "scheduledFor" : "dateTime dateTime" ,
+    "depth" : "RequestDepth RequestDepth"
+  } ,
+  "sourceConnection" : {
+    "hostname" : "undefined" ,
+    "username" : "undefined" ,
+    "password" : "undefined" ,
+    "port" : "undefined" ,
+    "name" : "string string" ,
+    "description" : "string string" ,
+    "permissions" : "InstancePermissions InstancePermissions" ,
+    "folderId" : "string string" ,
+    "sourceTemplateId" : "string string" ,
+    "createdBy" : "string string" ,
+    "createdAt" : "dateTime dateTime" ,
+    "updatedBy" : "string string" ,
+    "updatedAt" : "dateTime dateTime" ,
+    "accessedAt" : "dateTime dateTime" ,
+    "scheduledFor" : "dateTime dateTime" ,
+    "depth" : "RequestDepth RequestDepth"
+  } ,
+  "sourcePath" : "undefined" ,
+  "executedAt" : "undefined" ,
+  "executionStatus" : "undefined" ,
+  "schedule" : {
+    "displayTimeZoneId" : "undefined" ,
+    "details" : {
+      "dailyStartTime" : "undefined" ,
+      "dailyEndTime" : "undefined" ,
+      "days" : [
+        null ,
+        null
+      ]
+    } ,
+    "executionInterval" : "undefined"
+  } ,
+  "name" : "undefined" ,
+  "description" : "Eloqua" ,
+  "permissions" : "undefined" ,
+  "folderId" : "undefined" ,
+  "sourceTemplateId" : "undefined" ,
+  "createdBy" : "undefined" ,
+  "createdAt" : "undefined" ,
+  "updatedBy" : "undefined" ,
+  "updatedAt" : "undefined" ,
+  "accessedAt" : "undefined" ,
+  "scheduledFor" : "undefined" ,
+  "depth" : "minimal"
+}

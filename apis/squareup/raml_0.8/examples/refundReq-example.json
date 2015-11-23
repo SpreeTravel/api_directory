@@ -1,0 +1,10 @@
+{
+  "payment_id" : "Jq74mCczmFXk1tC10GB" ,
+  "type" : "PARTIAL" ,
+  "reason" : "Returned Goods" ,
+  "refunded_money" : {
+    "amount" : 500 ,
+    "currency_code" : "USD"
+  } ,
+  "request_idempotence_key" : "1"
+}
